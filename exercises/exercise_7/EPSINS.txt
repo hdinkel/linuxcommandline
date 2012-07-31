@@ -1,0 +1,1673 @@
+ID   AP4AT_HUMAN             Reviewed;         525 AA.
+AC   Q96N21; Q6ZQU0; Q6ZSQ9;
+DT   15-MAY-2007, integrated into UniProtKB/Swiss-Prot.
+DT   01-DEC-2001, sequence version 1.
+DT   11-JUL-2012, entry version 73.
+DE   RecName: Full=AP-4 complex accessory subunit tepsin;
+DE   AltName: Full=Epsin for AP-4;
+DE   AltName: Full=Tetra-epsin;
+GN   Name=C17orf56;
+OS   Homo sapiens (Human).
+OC   Eukaryota; Metazoa; Chordata; Craniata; Vertebrata; Euteleostomi;
+OC   Mammalia; Eutheria; Euarchontoglires; Primates; Haplorrhini;
+OC   Catarrhini; Hominidae; Homo.
+OX   NCBI_TaxID=9606;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE MRNA] (ISOFORMS 1 AND 2).
+RC   TISSUE=Hippocampus, Teratocarcinoma, and Uterus;
+RX   PubMed=14702039; DOI=10.1038/ng1285;
+RA   Ota T., Suzuki Y., Nishikawa T., Otsuki T., Sugiyama T., Irie R.,
+RA   Wakamatsu A., Hayashi K., Sato H., Nagai K., Kimura K., Makita H.,
+RA   Sekine M., Obayashi M., Nishi T., Shibahara T., Tanaka T., Ishii S.,
+RA   Yamamoto J., Saito K., Kawai Y., Isono Y., Nakamura Y., Nagahari K.,
+RA   Murakami K., Yasuda T., Iwayanagi T., Wagatsuma M., Shiratori A.,
+RA   Sudo H., Hosoiri T., Kaku Y., Kodaira H., Kondo H., Sugawara M.,
+RA   Takahashi M., Kanda K., Yokoi T., Furuya T., Kikkawa E., Omura Y.,
+RA   Abe K., Kamihara K., Katsuta N., Sato K., Tanikawa M., Yamazaki M.,
+RA   Ninomiya K., Ishibashi T., Yamashita H., Murakawa K., Fujimori K.,
+RA   Tanai H., Kimata M., Watanabe M., Hiraoka S., Chiba Y., Ishida S.,
+RA   Ono Y., Takiguchi S., Watanabe S., Yosida M., Hotuta T., Kusano J.,
+RA   Kanehori K., Takahashi-Fujii A., Hara H., Tanase T.-O., Nomura Y.,
+RA   Togiya S., Komai F., Hara R., Takeuchi K., Arita M., Imose N.,
+RA   Musashino K., Yuuki H., Oshima A., Sasaki N., Aotsuka S.,
+RA   Yoshikawa Y., Matsunawa H., Ichihara T., Shiohata N., Sano S.,
+RA   Moriya S., Momiyama H., Satoh N., Takami S., Terashima Y., Suzuki O.,
+RA   Nakagawa S., Senoh A., Mizoguchi H., Goto Y., Shimizu F., Wakebe H.,
+RA   Hishigaki H., Watanabe T., Sugiyama A., Takemoto M., Kawakami B.,
+RA   Yamazaki M., Watanabe K., Kumagai A., Itakura S., Fukuzumi Y.,
+RA   Fujimori Y., Komiyama M., Tashiro H., Tanigami A., Fujiwara T.,
+RA   Ono T., Yamada K., Fujii Y., Ozaki K., Hirao M., Ohmori Y.,
+RA   Kawabata A., Hikiji T., Kobatake N., Inagaki H., Ikema Y., Okamoto S.,
+RA   Okitani R., Kawakami T., Noguchi S., Itoh T., Shigeta K., Senba T.,
+RA   Matsumura K., Nakajima Y., Mizuno T., Morinaga M., Sasaki M.,
+RA   Togashi T., Oyama M., Hata H., Watanabe M., Komatsu T.,
+RA   Mizushima-Sugano J., Satoh T., Shirai Y., Takahashi Y., Nakagawa K.,
+RA   Okumura K., Nagase T., Nomura N., Kikuchi H., Masuho Y., Yamashita R.,
+RA   Nakai K., Yada T., Nakamura Y., Ohara O., Isogai T., Sugano S.;
+RT   "Complete sequencing and characterization of 21,243 full-length human
+RT   cDNAs.";
+RL   Nat. Genet. 36:40-45(2004).
+RN   [2]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE MRNA] (ISOFORM 1).
+RC   TISSUE=Brain;
+RX   PubMed=15489334; DOI=10.1101/gr.2596504;
+RG   The MGC Project Team;
+RT   "The status, quality, and expansion of the NIH full-length cDNA
+RT   project: the Mammalian Gene Collection (MGC).";
+RL   Genome Res. 14:2121-2127(2004).
+RN   [3]
+RP   PHOSPHORYLATION [LARGE SCALE ANALYSIS] AT SER-356, AND MASS
+RP   SPECTROMETRY.
+RC   TISSUE=Cervix carcinoma;
+RX   PubMed=18220336; DOI=10.1021/pr0705441;
+RA   Cantin G.T., Yi W., Lu B., Park S.K., Xu T., Lee J.-D.,
+RA   Yates J.R. III;
+RT   "Combining protein-based IMAC, peptide-based IMAC, and MudPIT for
+RT   efficient phosphoproteomic analysis.";
+RL   J. Proteome Res. 7:1346-1351(2008).
+RN   [4]
+RP   PHOSPHORYLATION [LARGE SCALE ANALYSIS] AT SER-333; SER-356 AND
+RP   SER-455, PHOSPHORYLATION [LARGE SCALE ANALYSIS] AT SER-51 (ISOFORM 2),
+RP   AND MASS SPECTROMETRY.
+RC   TISSUE=Cervix carcinoma;
+RX   PubMed=18691976; DOI=10.1016/j.molcel.2008.07.007;
+RA   Daub H., Olsen J.V., Bairlein M., Gnad F., Oppermann F.S., Korner R.,
+RA   Greff Z., Keri G., Stemmann O., Mann M.;
+RT   "Kinase-selective enrichment enables quantitative phosphoproteomics of
+RT   the kinome across the cell cycle.";
+RL   Mol. Cell 31:438-448(2008).
+RN   [5]
+RP   INTERACTION WITH AP4B1, AND SUBCELLULAR LOCATION.
+RX   PubMed=22472443; DOI=10.1083/jcb.201111049;
+RA   Borner G.H., Antrobus R., Hirst J., Bhumbra G.S., Kozik P.,
+RA   Jackson L.P., Sahlender D.A., Robinson M.S.;
+RT   "Multivariate proteomic profiling identifies novel accessory proteins
+RT   of coated vesicles.";
+RL   J. Cell Biol. 197:141-160(2012).
+CC   -!- SUBUNIT: Associates with the adapter-like complex 4 (AP-4). AP-4
+CC       is a heterotetramer composed of two large adaptins (epsilon-type
+CC       subunit AP4E1 and beta-type subunit AP4B1), a medium adaptin (mu-
+CC       type subunit AP4M1) and a small adaptin (sigma-type AP4S1). Within
+CC       this complex, may directly interact with AP4B1.
+CC   -!- SUBCELLULAR LOCATION: Cytoplasm, cytosol. Cytoplasmic vesicle.
+CC       Note=Extensively colocalizes with AP-4 in a punctate juxtanuclear
+CC       pattern, which likely corresponds to trans-Golgi network. Requires
+CC       a functional AP-4 complex for recruitment to vesicle membrane.
+CC   -!- ALTERNATIVE PRODUCTS:
+CC       Event=Alternative splicing; Named isoforms=2;
+CC       Name=1;
+CC         IsoId=Q96N21-1; Sequence=Displayed;
+CC       Name=2;
+CC         IsoId=Q96N21-2; Sequence=VSP_025141, VSP_025142;
+CC         Note=Phosphorylated on Ser-51. Ref.1 (BAC87593) sequence is in
+CC         conflict in position: 22:R->H;
+CC   -!- SIMILARITY: Contains 1 ENTH (epsin N-terminal homology) domain.
+CC   -----------------------------------------------------------------------
+CC   Copyrighted by the UniProt Consortium, see http://www.uniprot.org/terms
+CC   Distributed under the Creative Commons Attribution-NoDerivs License
+CC   -----------------------------------------------------------------------
+DR   EMBL; AK056090; BAB71091.1; -; mRNA.
+DR   EMBL; AK127221; BAC86888.1; -; mRNA.
+DR   EMBL; AK128728; BAC87593.1; -; mRNA.
+DR   EMBL; BC064483; AAH64483.1; -; mRNA.
+DR   IPI; IPI00043327; -.
+DR   IPI; IPI00444617; -.
+DR   RefSeq; NP_653280.1; NM_144679.2.
+DR   UniGene; Hs.631761; -.
+DR   ProteinModelPortal; Q96N21; -.
+DR   SMR; Q96N21; 15-140.
+DR   STRING; Q96N21; -.
+DR   PhosphoSite; Q96N21; -.
+DR   DMDM; 74732479; -.
+DR   PRIDE; Q96N21; -.
+DR   Ensembl; ENST00000300714; ENSP00000300714; ENSG00000167302.
+DR   Ensembl; ENST00000374769; ENSP00000363901; ENSG00000167302.
+DR   GeneID; 146705; -.
+DR   KEGG; hsa:146705; -.
+DR   UCSC; uc002jzs.2; human.
+DR   UCSC; uc002jzu.2; human.
+DR   CTD; 146705; -.
+DR   GeneCards; GC17M079202; -.
+DR   H-InvDB; HIX0014244; -.
+DR   H-InvDB; HIX0014245; -.
+DR   HGNC; HGNC:26458; C17orf56.
+DR   neXtProt; NX_Q96N21; -.
+DR   PharmGKB; PA142672239; -.
+DR   eggNOG; NOG74274; -.
+DR   GeneTree; ENSGT00390000015076; -.
+DR   HOGENOM; HOG000049246; -.
+DR   HOVERGEN; HBG064281; -.
+DR   InParanoid; Q96N21; -.
+DR   OMA; LKRNSAF; -.
+DR   OrthoDB; EOG4CRM0G; -.
+DR   PhylomeDB; Q96N21; -.
+DR   NextBio; 85420; -.
+DR   ArrayExpress; Q96N21; -.
+DR   Bgee; Q96N21; -.
+DR   CleanEx; HS_C17orf56; -.
+DR   Genevestigator; Q96N21; -.
+DR   GO; GO:0016021; C:integral to membrane; IEA:UniProtKB-KW.
+DR   GO; GO:0015031; P:protein transport; IEA:UniProtKB-KW.
+DR   Gene3D; G3DSA:1.25.40.90; ENTH_VHS; 1.
+DR   InterPro; IPR008942; ENTH_VHS.
+DR   InterPro; IPR001026; Epsin_dom_N.
+DR   Pfam; PF01417; ENTH; 1.
+DR   SUPFAM; SSF48464; ENTH_VHS; 1.
+DR   PROSITE; PS50942; ENTH; FALSE_NEG.
+PE   1: Evidence at protein level;
+KW   Alternative splicing; Complete proteome; Cytoplasm;
+KW   Cytoplasmic vesicle; Phosphoprotein; Reference proteome.
+FT   CHAIN         1    525       AP-4 complex accessory subunit tepsin.
+FT                                /FTId=PRO_0000286678.
+FT   DOMAIN        8    141       ENTH.
+FT   COMPBIAS    193    225       Ser-rich.
+FT   COMPBIAS    365    431       Pro-rich.
+FT   MOD_RES     254    254       Phosphothreonine (By similarity).
+FT   MOD_RES     333    333       Phosphoserine.
+FT   MOD_RES     356    356       Phosphoserine.
+FT   MOD_RES     455    455       Phosphoserine.
+FT   VAR_SEQ       1     85       Missing (in isoform 2).
+FT                                /FTId=VSP_025141.
+FT   VAR_SEQ      86    175       FFLLILKRNSAFIQEAAAFAGPPDPLHGNSLYQKVRAAAQD
+FT                                LGSTLFSDTVLPLAPSQPLGTPPATGMGSQARPHSTLQGFG
+FT                                YSKEHGRT -> MGSQARPHSTLQGFGYSKEHGRTGSAGEA
+FT                                FLSTIQKAAEVVASAMRPGPESPSTRRLLPRGDTYQPAMMP
+FT                                SASHGPPTLGNLLPGAIPGPR (in isoform 2).
+FT                                /FTId=VSP_025142.
+SQ   SEQUENCE   525 AA;  55137 MW;  B79970A37B801549 CRC64;
+     MAAAPPLRDR LSFLHRLPIL LKGTSDDDVP CPGYLFEEIA KISHESPGSS QCLLEYLLSR
+     LHSSSGHGKL KVLKILLYLC SHGSSFFLLI LKRNSAFIQE AAAFAGPPDP LHGNSLYQKV
+     RAAAQDLGST LFSDTVLPLA PSQPLGTPPA TGMGSQARPH STLQGFGYSK EHGRTAVRHQ
+     PGQAGGGWDE LDSGPSSQNS SQNSDLSRVS DSGSHSGSDS HSGASREPGD LAERVEVVAL
+     SDCQQELSLV RTVTRGPRAF LSREEAQHFI KACGLLNCEA VLQLLTCHLR GTSECTQLRA
+     LCAIASLGSS DLLPQEHILL RTRPWLQELS MGSPGPVTNK ATKILRHFEA SCGQLSPARG
+     TSAEPGPTAA LPGPSDLLTD AVPLPGSQVF LQPLSSTPVS SRSPAPSSGM PSSPVPTPPP
+     DASPIPAPGD PSEAEARLAE SRRWRPERIP GGTDSPKRGP SSCAWSRDSL FAGMELVACP
+     RLVGAGAAAG ESCPDAPRAP QTSSQRTAAK EPPGSEPSAF AFLNA
+//
+ID   ENTD1_HUMAN             Reviewed;         607 AA.
+AC   Q8IYW4; B0QYD5; Q5H9F7; Q96LK3;
+DT   04-DEC-2007, integrated into UniProtKB/Swiss-Prot.
+DT   01-MAR-2003, sequence version 1.
+DT   13-JUN-2012, entry version 77.
+DE   RecName: Full=ENTH domain-containing protein 1;
+DE   AltName: Full=Epsin-2B;
+GN   Name=ENTHD1;
+OS   Homo sapiens (Human).
+OC   Eukaryota; Metazoa; Chordata; Craniata; Vertebrata; Euteleostomi;
+OC   Mammalia; Eutheria; Euarchontoglires; Primates; Haplorrhini;
+OC   Catarrhini; Hominidae; Homo.
+OX   NCBI_TaxID=9606;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE MRNA].
+RX   PubMed=15461802; DOI=10.1186/gb-2004-5-10-r84;
+RA   Collins J.E., Wright C.L., Edwards C.A., Davis M.P., Grinham J.A.,
+RA   Cole C.G., Goward M.E., Aguado B., Mallya M., Mokrab Y., Huckle E.J.,
+RA   Beare D.M., Dunham I.;
+RT   "A genome annotation-driven approach to cloning the human ORFeome.";
+RL   Genome Biol. 5:R84.1-R84.11(2004).
+RN   [2]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RX   MEDLINE=20057165; PubMed=10591208; DOI=10.1038/990031;
+RA   Dunham I., Hunt A.R., Collins J.E., Bruskiewich R., Beare D.M.,
+RA   Clamp M., Smink L.J., Ainscough R., Almeida J.P., Babbage A.K.,
+RA   Bagguley C., Bailey J., Barlow K.F., Bates K.N., Beasley O.P.,
+RA   Bird C.P., Blakey S.E., Bridgeman A.M., Buck D., Burgess J.,
+RA   Burrill W.D., Burton J., Carder C., Carter N.P., Chen Y., Clark G.,
+RA   Clegg S.M., Cobley V.E., Cole C.G., Collier R.E., Connor R.,
+RA   Conroy D., Corby N.R., Coville G.J., Cox A.V., Davis J., Dawson E.,
+RA   Dhami P.D., Dockree C., Dodsworth S.J., Durbin R.M., Ellington A.G.,
+RA   Evans K.L., Fey J.M., Fleming K., French L., Garner A.A.,
+RA   Gilbert J.G.R., Goward M.E., Grafham D.V., Griffiths M.N.D., Hall C.,
+RA   Hall R.E., Hall-Tamlyn G., Heathcott R.W., Ho S., Holmes S.,
+RA   Hunt S.E., Jones M.C., Kershaw J., Kimberley A.M., King A.,
+RA   Laird G.K., Langford C.F., Leversha M.A., Lloyd C., Lloyd D.M.,
+RA   Martyn I.D., Mashreghi-Mohammadi M., Matthews L.H., Mccann O.T.,
+RA   Mcclay J., Mclaren S., McMurray A.A., Milne S.A., Mortimore B.J.,
+RA   Odell C.N., Pavitt R., Pearce A.V., Pearson D., Phillimore B.J.C.T.,
+RA   Phillips S.H., Plumb R.W., Ramsay H., Ramsey Y., Rogers L., Ross M.T.,
+RA   Scott C.E., Sehra H.K., Skuce C.D., Smalley S., Smith M.L.,
+RA   Soderlund C., Spragon L., Steward C.A., Sulston J.E., Swann R.M.,
+RA   Vaudin M., Wall M., Wallis J.M., Whiteley M.N., Willey D.L.,
+RA   Williams L., Williams S.A., Williamson H., Wilmer T.E., Wilming L.,
+RA   Wright C.L., Hubbard T., Bentley D.R., Beck S., Rogers J., Shimizu N.,
+RA   Minoshima S., Kawasaki K., Sasaki T., Asakawa S., Kudoh J.,
+RA   Shintani A., Shibuya K., Yoshizaki Y., Aoki N., Mitsuyama S.,
+RA   Roe B.A., Chen F., Chu L., Crabtree J., Deschamps S., Do A., Do T.,
+RA   Dorman A., Fang F., Fu Y., Hu P., Hua A., Kenton S., Lai H., Lao H.I.,
+RA   Lewis J., Lewis S., Lin S.-P., Loh P., Malaj E., Nguyen T., Pan H.,
+RA   Phan S., Qi S., Qian Y., Ray L., Ren Q., Shaull S., Sloan D., Song L.,
+RA   Wang Q., Wang Y., Wang Z., White J., Willingham D., Wu H., Yao Z.,
+RA   Zhan M., Zhang G., Chissoe S., Murray J., Miller N., Minx P.,
+RA   Fulton R., Johnson D., Bemis G., Bentley D., Bradshaw H., Bourne S.,
+RA   Cordes M., Du Z., Fulton L., Goela D., Graves T., Hawkins J.,
+RA   Hinds K., Kemp K., Latreille P., Layman D., Ozersky P., Rohlfing T.,
+RA   Scheet P., Walker C., Wamsley A., Wohldmann P., Pepin K., Nelson J.,
+RA   Korf I., Bedell J.A., Hillier L.W., Mardis E., Waterston R.,
+RA   Wilson R., Emanuel B.S., Shaikh T., Kurahashi H., Saitta S.,
+RA   Budarf M.L., McDermid H.E., Johnson A., Wong A.C.C., Morrow B.E.,
+RA   Edelmann L., Kim U.J., Shizuya H., Simon M.I., Dumanski J.P.,
+RA   Peyrard M., Kedra D., Seroussi E., Fransson I., Tapia I., Bruder C.E.,
+RA   O'Brien K.P., Wilkinson P., Bodenteich A., Hartman K., Hu X.,
+RA   Khan A.S., Lane L., Tilahun Y., Wright H.;
+RT   "The DNA sequence of human chromosome 22.";
+RL   Nature 402:489-495(1999).
+RN   [3]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RA   Mural R.J., Istrail S., Sutton G.G., Florea L., Halpern A.L.,
+RA   Mobarry C.M., Lippert R., Walenz B., Shatkay H., Dew I., Miller J.R.,
+RA   Flanigan M.J., Edwards N.J., Bolanos R., Fasulo D., Halldorsson B.V.,
+RA   Hannenhalli S., Turner R., Yooseph S., Lu F., Nusskern D.R.,
+RA   Shue B.C., Zheng X.H., Zhong F., Delcher A.L., Huson D.H.,
+RA   Kravitz S.A., Mouchard L., Reinert K., Remington K.A., Clark A.G.,
+RA   Waterman M.S., Eichler E.E., Adams M.D., Hunkapiller M.W., Myers E.W.,
+RA   Venter J.C.;
+RL   Submitted (JUL-2005) to the EMBL/GenBank/DDBJ databases.
+RN   [4]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE MRNA].
+RC   TISSUE=Testis;
+RX   PubMed=15489334; DOI=10.1101/gr.2596504;
+RG   The MGC Project Team;
+RT   "The status, quality, and expansion of the NIH full-length cDNA
+RT   project: the Mammalian Gene Collection (MGC).";
+RL   Genome Res. 14:2121-2127(2004).
+RN   [5]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE MRNA] OF 357-607.
+RC   TISSUE=Testis;
+RX   PubMed=14702039; DOI=10.1038/ng1285;
+RA   Ota T., Suzuki Y., Nishikawa T., Otsuki T., Sugiyama T., Irie R.,
+RA   Wakamatsu A., Hayashi K., Sato H., Nagai K., Kimura K., Makita H.,
+RA   Sekine M., Obayashi M., Nishi T., Shibahara T., Tanaka T., Ishii S.,
+RA   Yamamoto J., Saito K., Kawai Y., Isono Y., Nakamura Y., Nagahari K.,
+RA   Murakami K., Yasuda T., Iwayanagi T., Wagatsuma M., Shiratori A.,
+RA   Sudo H., Hosoiri T., Kaku Y., Kodaira H., Kondo H., Sugawara M.,
+RA   Takahashi M., Kanda K., Yokoi T., Furuya T., Kikkawa E., Omura Y.,
+RA   Abe K., Kamihara K., Katsuta N., Sato K., Tanikawa M., Yamazaki M.,
+RA   Ninomiya K., Ishibashi T., Yamashita H., Murakawa K., Fujimori K.,
+RA   Tanai H., Kimata M., Watanabe M., Hiraoka S., Chiba Y., Ishida S.,
+RA   Ono Y., Takiguchi S., Watanabe S., Yosida M., Hotuta T., Kusano J.,
+RA   Kanehori K., Takahashi-Fujii A., Hara H., Tanase T.-O., Nomura Y.,
+RA   Togiya S., Komai F., Hara R., Takeuchi K., Arita M., Imose N.,
+RA   Musashino K., Yuuki H., Oshima A., Sasaki N., Aotsuka S.,
+RA   Yoshikawa Y., Matsunawa H., Ichihara T., Shiohata N., Sano S.,
+RA   Moriya S., Momiyama H., Satoh N., Takami S., Terashima Y., Suzuki O.,
+RA   Nakagawa S., Senoh A., Mizoguchi H., Goto Y., Shimizu F., Wakebe H.,
+RA   Hishigaki H., Watanabe T., Sugiyama A., Takemoto M., Kawakami B.,
+RA   Yamazaki M., Watanabe K., Kumagai A., Itakura S., Fukuzumi Y.,
+RA   Fujimori Y., Komiyama M., Tashiro H., Tanigami A., Fujiwara T.,
+RA   Ono T., Yamada K., Fujii Y., Ozaki K., Hirao M., Ohmori Y.,
+RA   Kawabata A., Hikiji T., Kobatake N., Inagaki H., Ikema Y., Okamoto S.,
+RA   Okitani R., Kawakami T., Noguchi S., Itoh T., Shigeta K., Senba T.,
+RA   Matsumura K., Nakajima Y., Mizuno T., Morinaga M., Sasaki M.,
+RA   Togashi T., Oyama M., Hata H., Watanabe M., Komatsu T.,
+RA   Mizushima-Sugano J., Satoh T., Shirai Y., Takahashi Y., Nakagawa K.,
+RA   Okumura K., Nagase T., Nomura N., Kikuchi H., Masuho Y., Yamashita R.,
+RA   Nakai K., Yada T., Nakamura Y., Ohara O., Isogai T., Sugano S.;
+RT   "Complete sequencing and characterization of 21,243 full-length human
+RT   cDNAs.";
+RL   Nat. Genet. 36:40-45(2004).
+CC   -!- SIMILARITY: Contains 1 ENTH (epsin N-terminal homology) domain.
+CC   -!- SEQUENCE CAUTION:
+CC       Sequence=BAB71688.1; Type=Erroneous initiation;
+CC   -----------------------------------------------------------------------
+CC   Copyrighted by the UniProt Consortium, see http://www.uniprot.org/terms
+CC   Distributed under the Creative Commons Attribution-NoDerivs License
+CC   -----------------------------------------------------------------------
+DR   EMBL; CR456452; CAG30338.1; -; mRNA.
+DR   EMBL; Z82206; CAQ07276.1; -; Genomic_DNA.
+DR   EMBL; AL022319; CAQ07276.1; JOINED; Genomic_DNA.
+DR   EMBL; AL022353; CAQ07276.1; JOINED; Genomic_DNA.
+DR   EMBL; AL022353; CAQ08616.1; -; Genomic_DNA.
+DR   EMBL; AL022319; CAQ08616.1; JOINED; Genomic_DNA.
+DR   EMBL; Z82206; CAQ08616.1; JOINED; Genomic_DNA.
+DR   EMBL; AL022319; CAQ09680.1; -; Genomic_DNA.
+DR   EMBL; AL022353; CAQ09680.1; JOINED; Genomic_DNA.
+DR   EMBL; Z82206; CAQ09680.1; JOINED; Genomic_DNA.
+DR   EMBL; CH471095; EAW60353.1; -; Genomic_DNA.
+DR   EMBL; BC033895; AAH33895.1; -; mRNA.
+DR   EMBL; AK058150; BAB71688.1; ALT_INIT; mRNA.
+DR   IPI; IPI00217897; -.
+DR   RefSeq; NP_689725.2; NM_152512.3.
+DR   UniGene; Hs.474869; -.
+DR   HSSP; Q9Y6I3; 1INZ.
+DR   ProteinModelPortal; Q8IYW4; -.
+DR   SMR; Q8IYW4; 2-141.
+DR   STRING; Q8IYW4; -.
+DR   DMDM; 74728393; -.
+DR   PRIDE; Q8IYW4; -.
+DR   DNASU; 150350; -.
+DR   Ensembl; ENST00000325157; ENSP00000317431; ENSG00000176177.
+DR   Ensembl; ENST00000381485; ENSP00000370895; ENSG00000176177.
+DR   GeneID; 150350; -.
+DR   KEGG; hsa:150350; -.
+DR   UCSC; uc003ayg.3; human.
+DR   CTD; 150350; -.
+DR   GeneCards; GC22M040139; -.
+DR   HGNC; HGNC:26352; ENTHD1.
+DR   HPA; HPA019800; -.
+DR   neXtProt; NX_Q8IYW4; -.
+DR   PharmGKB; PA145148940; -.
+DR   eggNOG; NOG115335; -.
+DR   GeneTree; ENSGT00550000074611; -.
+DR   HOGENOM; HOG000038004; -.
+DR   HOVERGEN; HBG071423; -.
+DR   InParanoid; Q8IYW4; -.
+DR   OMA; FSTQNVD; -.
+DR   OrthoDB; EOG4PZJ6G; -.
+DR   PhylomeDB; Q8IYW4; -.
+DR   NextBio; 86406; -.
+DR   ArrayExpress; Q8IYW4; -.
+DR   Bgee; Q8IYW4; -.
+DR   CleanEx; HS_ENTHD1; -.
+DR   Genevestigator; Q8IYW4; -.
+DR   Gene3D; G3DSA:1.25.40.90; ENTH_VHS; 1.
+DR   InterPro; IPR008942; ENTH_VHS.
+DR   InterPro; IPR013809; Epsin-like_N.
+DR   InterPro; IPR001026; Epsin_dom_N.
+DR   Pfam; PF01417; ENTH; 1.
+DR   SMART; SM00273; ENTH; 1.
+DR   SUPFAM; SSF48464; ENTH_VHS; 1.
+DR   PROSITE; PS50942; ENTH; 1.
+PE   2: Evidence at transcript level;
+KW   Coiled coil; Complete proteome; Polymorphism; Reference proteome.
+FT   CHAIN         1    607       ENTH domain-containing protein 1.
+FT                                /FTId=PRO_0000312179.
+FT   DOMAIN        9    141       ENTH.
+FT   COILED      543    574       Potential.
+FT   VARIANT     109    109       I -> T (in dbSNP:rs17319801).
+FT                                /FTId=VAR_037449.
+SQ   SEQUENCE   607 AA;  67538 MW;  0FB7FE674E54D4EF CRC64;
+     MAFRRQVKNF VKNYSDAEIK VREATSNDPW GPSSSLMLDI SDLTFNTISL SEIMNMLWHR
+     LNDHGKNWRH VYKSLTLMDY LIKNGSKKVI QHCREGFCNL QTLKDFQHID EAGKDQGYYI
+     REKSKQVITL LMDEPLLCKE REVACRTRQR TSHSILFSKR QLGSSNSLTA CTSAPTPDIS
+     ASEKKYKLPK FGRLHNKRNV CKAGLKQEHC QDVHLPTETM LSQETLPLKI HGWKSTEDLM
+     TFLDDDPELP LLATPPSIVS PITCLSEAEE VCNLSGADAV PTLSENSPSG QRDVSLDKRS
+     DGIFTNTVTE NLLETPLEKQ SAAEGLKTLT ILPACWSSKE EFISPDLRVS KSDSTFHNQA
+     SVETLCLSPS FKIFDRVKEI VINKAYQKPA QSSIQMDDKI LKTTTRVSTA SEGASSFSPL
+     SMSSPDLASP EKSAHLLSPI LAGPSFWTLS HQQLSSTSFK DEDKTAKLHH SFASRGPVSS
+     DVEENDSLNL LGILPNNSDS AKKNISHISS SHWGEFSTQN VDQFIPLSCS GFQSTKDFPQ
+     EPEAKNSISV LLREVKRAIA RLHEDLSTVI QELNVINNIL MSMSLNSSQI SQSSQVPQSS
+     EGSSDQI
+//
+ID   EPN1_HUMAN              Reviewed;         576 AA.
+AC   Q9Y6I3; Q86ST3; Q9HA18;
+DT   16-JAN-2004, integrated into UniProtKB/Swiss-Prot.
+DT   03-MAY-2011, sequence version 2.
+DT   11-JUL-2012, entry version 117.
+DE   RecName: Full=Epsin-1;
+DE   AltName: Full=EH domain-binding mitotic phosphoprotein;
+DE   AltName: Full=EPS-15-interacting protein 1;
+GN   Name=EPN1;
+OS   Homo sapiens (Human).
+OC   Eukaryota; Metazoa; Chordata; Craniata; Vertebrata; Euteleostomi;
+OC   Mammalia; Eutheria; Euarchontoglires; Primates; Haplorrhini;
+OC   Catarrhini; Hominidae; Homo.
+OX   NCBI_TaxID=9606;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [MRNA] (ISOFORM 2), FUNCTION, AND INTERACTION WITH
+RP   REPS2.
+RC   TISSUE=Brain;
+RX   MEDLINE=20027377; PubMed=10557078; DOI=10.1038/sj.onc.1202974;
+RA   Morinaka K., Koyama S., Nakashima S., Hinoi T., Okawa K., Iwamatsu A.,
+RA   Kikuchi A.;
+RT   "Epsin binds to the EH domain of POB1 and regulates receptor-mediated
+RT   endocytosis.";
+RL   Oncogene 18:5915-5922(1999).
+RN   [2]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE MRNA] (ISOFORM 1).
+RC   TISSUE=Mammary gland;
+RX   PubMed=14702039; DOI=10.1038/ng1285;
+RA   Ota T., Suzuki Y., Nishikawa T., Otsuki T., Sugiyama T., Irie R.,
+RA   Wakamatsu A., Hayashi K., Sato H., Nagai K., Kimura K., Makita H.,
+RA   Sekine M., Obayashi M., Nishi T., Shibahara T., Tanaka T., Ishii S.,
+RA   Yamamoto J., Saito K., Kawai Y., Isono Y., Nakamura Y., Nagahari K.,
+RA   Murakami K., Yasuda T., Iwayanagi T., Wagatsuma M., Shiratori A.,
+RA   Sudo H., Hosoiri T., Kaku Y., Kodaira H., Kondo H., Sugawara M.,
+RA   Takahashi M., Kanda K., Yokoi T., Furuya T., Kikkawa E., Omura Y.,
+RA   Abe K., Kamihara K., Katsuta N., Sato K., Tanikawa M., Yamazaki M.,
+RA   Ninomiya K., Ishibashi T., Yamashita H., Murakawa K., Fujimori K.,
+RA   Tanai H., Kimata M., Watanabe M., Hiraoka S., Chiba Y., Ishida S.,
+RA   Ono Y., Takiguchi S., Watanabe S., Yosida M., Hotuta T., Kusano J.,
+RA   Kanehori K., Takahashi-Fujii A., Hara H., Tanase T.-O., Nomura Y.,
+RA   Togiya S., Komai F., Hara R., Takeuchi K., Arita M., Imose N.,
+RA   Musashino K., Yuuki H., Oshima A., Sasaki N., Aotsuka S.,
+RA   Yoshikawa Y., Matsunawa H., Ichihara T., Shiohata N., Sano S.,
+RA   Moriya S., Momiyama H., Satoh N., Takami S., Terashima Y., Suzuki O.,
+RA   Nakagawa S., Senoh A., Mizoguchi H., Goto Y., Shimizu F., Wakebe H.,
+RA   Hishigaki H., Watanabe T., Sugiyama A., Takemoto M., Kawakami B.,
+RA   Yamazaki M., Watanabe K., Kumagai A., Itakura S., Fukuzumi Y.,
+RA   Fujimori Y., Komiyama M., Tashiro H., Tanigami A., Fujiwara T.,
+RA   Ono T., Yamada K., Fujii Y., Ozaki K., Hirao M., Ohmori Y.,
+RA   Kawabata A., Hikiji T., Kobatake N., Inagaki H., Ikema Y., Okamoto S.,
+RA   Okitani R., Kawakami T., Noguchi S., Itoh T., Shigeta K., Senba T.,
+RA   Matsumura K., Nakajima Y., Mizuno T., Morinaga M., Sasaki M.,
+RA   Togashi T., Oyama M., Hata H., Watanabe M., Komatsu T.,
+RA   Mizushima-Sugano J., Satoh T., Shirai Y., Takahashi Y., Nakagawa K.,
+RA   Okumura K., Nagase T., Nomura N., Kikuchi H., Masuho Y., Yamashita R.,
+RA   Nakai K., Yada T., Nakamura Y., Ohara O., Isogai T., Sugano S.;
+RT   "Complete sequencing and characterization of 21,243 full-length human
+RT   cDNAs.";
+RL   Nat. Genet. 36:40-45(2004).
+RN   [3]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RX   PubMed=15057824; DOI=10.1038/nature02399;
+RA   Grimwood J., Gordon L.A., Olsen A.S., Terry A., Schmutz J.,
+RA   Lamerdin J.E., Hellsten U., Goodstein D., Couronne O., Tran-Gyamfi M.,
+RA   Aerts A., Altherr M., Ashworth L., Bajorek E., Black S., Branscomb E.,
+RA   Caenepeel S., Carrano A.V., Caoile C., Chan Y.M., Christensen M.,
+RA   Cleland C.A., Copeland A., Dalin E., Dehal P., Denys M., Detter J.C.,
+RA   Escobar J., Flowers D., Fotopulos D., Garcia C., Georgescu A.M.,
+RA   Glavina T., Gomez M., Gonzales E., Groza M., Hammon N., Hawkins T.,
+RA   Haydu L., Ho I., Huang W., Israni S., Jett J., Kadner K., Kimball H.,
+RA   Kobayashi A., Larionov V., Leem S.-H., Lopez F., Lou Y., Lowry S.,
+RA   Malfatti S., Martinez D., McCready P.M., Medina C., Morgan J.,
+RA   Nelson K., Nolan M., Ovcharenko I., Pitluck S., Pollard M.,
+RA   Popkie A.P., Predki P., Quan G., Ramirez L., Rash S., Retterer J.,
+RA   Rodriguez A., Rogers S., Salamov A., Salazar A., She X., Smith D.,
+RA   Slezak T., Solovyev V., Thayer N., Tice H., Tsai M., Ustaszewska A.,
+RA   Vo N., Wagner M., Wheeler J., Wu K., Xie G., Yang J., Dubchak I.,
+RA   Furey T.S., DeJong P., Dickson M., Gordon D., Eichler E.E.,
+RA   Pennacchio L.A., Richardson P., Stubbs L., Rokhsar D.S., Myers R.M.,
+RA   Rubin E.M., Lucas S.M.;
+RT   "The DNA sequence and biology of human chromosome 19.";
+RL   Nature 428:529-535(2004).
+RN   [4]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE MRNA] (ISOFORM 3).
+RC   TISSUE=Brain;
+RX   PubMed=15489334; DOI=10.1101/gr.2596504;
+RG   The MGC Project Team;
+RT   "The status, quality, and expansion of the NIH full-length cDNA
+RT   project: the Mammalian Gene Collection (MGC).";
+RL   Genome Res. 14:2121-2127(2004).
+RN   [5]
+RP   PHOSPHORYLATION AT SER-382, MUTAGENESIS OF SER-382, AND INTERACTION
+RP   WITH REPS2; EPS15 AND AP-2 ALPHA SUBUNIT.
+RX   PubMed=10764745; DOI=10.1074/jbc.M000521200;
+RA   Kariya K., Koyama S., Nakashima S., Oshiro T., Morinaka K.,
+RA   Kikuchi A.;
+RT   "Regulation of complex formation of POB1/epsin/adaptor protein complex
+RT   2 by mitotic phosphorylation.";
+RL   J. Biol. Chem. 275:18399-18406(2000).
+RN   [6]
+RP   INTERACTION WITH RALBP1.
+RX   PubMed=12775724; DOI=10.1074/jbc.M302191200;
+RA   Rosse C., L'Hoste S., Offner N., Picard A., Camonis J.;
+RT   "RLIP, an effector of the Ral GTPases, is a platform for Cdk1 to
+RT   phosphorylate epsin during the switch off of endocytosis in mitosis.";
+RL   J. Biol. Chem. 278:30597-30604(2003).
+RN   [7]
+RP   PHOSPHORYLATION [LARGE SCALE ANALYSIS] AT THR-494, AND MASS
+RP   SPECTROMETRY.
+RC   TISSUE=Cervix carcinoma;
+RX   PubMed=17081983; DOI=10.1016/j.cell.2006.09.026;
+RA   Olsen J.V., Blagoev B., Gnad F., Macek B., Kumar C., Mortensen P.,
+RA   Mann M.;
+RT   "Global, in vivo, and site-specific phosphorylation dynamics in
+RT   signaling networks.";
+RL   Cell 127:635-648(2006).
+RN   [8]
+RP   INTERACTION WITH AP2B1, AND MUTAGENESIS OF PHE-404.
+RX   PubMed=16516836; DOI=10.1016/j.devcel.2006.01.016;
+RA   Edeling M.A., Mishra S.K., Keyel P.A., Steinhauser A.L., Collins B.M.,
+RA   Roth R., Heuser J.E., Owen D.J., Traub L.M.;
+RT   "Molecular switches involving the AP-2 beta2 appendage regulate
+RT   endocytic cargo selection and clathrin coat assembly.";
+RL   Dev. Cell 10:329-342(2006).
+RN   [9]
+RP   PHOSPHORYLATION [LARGE SCALE ANALYSIS] AT THR-494, AND MASS
+RP   SPECTROMETRY.
+RC   TISSUE=Cervix carcinoma;
+RX   PubMed=17924679; DOI=10.1021/pr070152u;
+RA   Yu L.-R., Zhu Z., Chan K.C., Issaq H.J., Dimitrov D.S., Veenstra T.D.;
+RT   "Improved titanium dioxide enrichment of phosphopeptides from HeLa
+RT   cells and high confident phosphopeptide identification by cross-
+RT   validation of MS/MS and MS/MS/MS spectra.";
+RL   J. Proteome Res. 6:4150-4162(2007).
+RN   [10]
+RP   PHOSPHORYLATION [LARGE SCALE ANALYSIS] AT SER-435; SER-454; THR-460;
+RP   THR-464 AND THR-494, AND MASS SPECTROMETRY.
+RC   TISSUE=Cervix carcinoma;
+RX   PubMed=18669648; DOI=10.1073/pnas.0805139105;
+RA   Dephoure N., Zhou C., Villen J., Beausoleil S.A., Bakalarski C.E.,
+RA   Elledge S.J., Gygi S.P.;
+RT   "A quantitative atlas of mitotic phosphorylation.";
+RL   Proc. Natl. Acad. Sci. U.S.A. 105:10762-10767(2008).
+RN   [11]
+RP   PHOSPHORYLATION [LARGE SCALE ANALYSIS] AT SER-454, AND MASS
+RP   SPECTROMETRY.
+RC   TISSUE=Embryonic kidney;
+RX   PubMed=19413330; DOI=10.1021/ac9004309;
+RA   Gauci S., Helbig A.O., Slijper M., Krijgsveld J., Heck A.J.,
+RA   Mohammed S.;
+RT   "Lys-N and trypsin cover complementary parts of the phosphoproteome in
+RT   a refined SCX-based approach.";
+RL   Anal. Chem. 81:4493-4501(2009).
+RN   [12]
+RP   PHOSPHORYLATION [LARGE SCALE ANALYSIS] AT SER-419; SER-420; SER-435;
+RP   SER-454; THR-460 AND THR-470, AND MASS SPECTROMETRY.
+RC   TISSUE=Leukemic T-cell;
+RX   PubMed=19690332; DOI=10.1126/scisignal.2000007;
+RA   Mayya V., Lundgren D.H., Hwang S.-I., Rezaul K., Wu L., Eng J.K.,
+RA   Rodionov V., Han D.K.;
+RT   "Quantitative phosphoproteomic analysis of T cell receptor signaling
+RT   reveals system-wide modulation of protein-protein interactions.";
+RL   Sci. Signal. 2:RA46-RA46(2009).
+RN   [13]
+RP   STRUCTURE BY NMR OF 1-144.
+RX   PubMed=12836669; DOI=10.1023/A:1011397007366;
+RA   Koshiba S., Kigawa T., Kikuchi A., Yokoyama S.;
+RT   "Solution structure of the epsin N-terminal homology (ENTH) domain of
+RT   human epsin.";
+RL   J. Struct. Funct. Genomics 2:1-8(2002).
+CC   -!- FUNCTION: Binds to membranes enriched in phosphatidylinositol 4,5-
+CC       bisphosphate (PtdIns(4,5)P2). Modifies membrane curvature and
+CC       facilitates the formation of clathrin-coated invaginations (By
+CC       similarity). Regulates receptor-mediated endocytosis.
+CC   -!- SUBUNIT: Monomer. Binds clathrin, ZBTB16/ZNF145 and ITSN1. Binds
+CC       ubiquitinated proteins (By similarity). Binds REPS2, EPS15, AP2A1
+CC       and AP2A2. Interacts with RALBP1 in a complex also containing NUMB
+CC       and TFAP2A during interphase and mitosis. Interacts with AP2B1.
+CC   -!- SUBCELLULAR LOCATION: Cytoplasm (By similarity). Cell membrane;
+CC       Peripheral membrane protein (By similarity). Nucleus (By
+CC       similarity). Membrane, clathrin-coated pit (By similarity).
+CC       Note=Associated with the cytoplasmic membrane at sites where
+CC       clathrin-coated pits are forming. Colocalizes with clathrin and
+CC       AP-2 in a punctate pattern on the plasma membrane. Detected in
+CC       presynaptic nerve terminals and in Golgi stacks. May shuttle to
+CC       the nucleus when associated with ZBTB16/ZNF145 (By similarity).
+CC   -!- ALTERNATIVE PRODUCTS:
+CC       Event=Alternative splicing; Named isoforms=3;
+CC       Name=1;
+CC         IsoId=Q9Y6I3-2; Sequence=Displayed;
+CC       Name=2;
+CC         IsoId=Q9Y6I3-1; Sequence=VSP_041010, VSP_041011;
+CC         Note=Ref.1 (AAD38326) sequence differs from that shown due to a
+CC         frameshift in position 98;
+CC       Name=3;
+CC         IsoId=Q9Y6I3-3; Sequence=VSP_041011, VSP_041012;
+CC         Note=May be due to a competing donor splice site. No
+CC         experimental confirmation available;
+CC   -!- DOMAIN: The NPF repeat domain is involved in EPS15 binding.
+CC   -!- DOMAIN: The DPW repeat domain is involved in AP2A2 and clathrin
+CC       binding.
+CC   -!- DOMAIN: The [DE]-X(1,2)-F-X-X-[FL]-X-X-X-R motif mediates
+CC       interaction with the AP-2 complex subunit AP2B1 (By similarity).
+CC   -!- PTM: Phosphorylated on serine and/or threonine residues in mitotic
+CC       cells. Phosphorylation reduces interaction with REPS2, AP-2 and
+CC       the membrane fraction. Depolarization of synaptosomes results in
+CC       dephosphorylation.
+CC   -!- PTM: Ubiquitinated (By similarity).
+CC   -!- SIMILARITY: Belongs to the epsin family.
+CC   -!- SIMILARITY: Contains 1 ENTH (epsin N-terminal homology) domain.
+CC   -!- SIMILARITY: Contains 3 UIM (ubiquitin-interacting motif) repeats.
+CC   -!- WEB RESOURCE: Name=Protein Spotlight; Note=The bubble's bend -
+CC       Issue 42 of January 2004;
+CC       URL="http://web.expasy.org/spotlight/back_issues/sptlt042.shtml";
+CC   -----------------------------------------------------------------------
+CC   Copyrighted by the UniProt Consortium, see http://www.uniprot.org/terms
+CC   Distributed under the Creative Commons Attribution-NoDerivs License
+CC   -----------------------------------------------------------------------
+DR   EMBL; AF073727; AAD38326.1; ALT_FRAME; mRNA.
+DR   EMBL; AK022454; BAB14041.1; -; mRNA.
+DR   EMBL; AC008735; -; NOT_ANNOTATED_CDS; Genomic_DNA.
+DR   EMBL; AC010525; -; NOT_ANNOTATED_CDS; Genomic_DNA.
+DR   EMBL; BC044651; AAH44651.1; -; mRNA.
+DR   IPI; IPI00027082; -.
+DR   IPI; IPI00397365; -.
+DR   IPI; IPI00647389; -.
+DR   RefSeq; NP_001123543.1; NM_001130071.1.
+DR   RefSeq; NP_001123544.1; NM_001130072.1.
+DR   RefSeq; NP_037465.2; NM_013333.3.
+DR   UniGene; Hs.279953; -.
+DR   PDB; 1INZ; NMR; -; A=1-144.
+DR   PDBsum; 1INZ; -.
+DR   ProteinModelPortal; Q9Y6I3; -.
+DR   SMR; Q9Y6I3; 1-158.
+DR   IntAct; Q9Y6I3; 4.
+DR   MINT; MINT-110599; -.
+DR   STRING; Q9Y6I3; -.
+DR   PhosphoSite; Q9Y6I3; -.
+DR   DMDM; 41017059; -.
+DR   PRIDE; Q9Y6I3; -.
+DR   DNASU; 29924; -.
+DR   Ensembl; ENST00000085079; ENSP00000085079; ENSG00000063245.
+DR   Ensembl; ENST00000270460; ENSP00000270460; ENSG00000063245.
+DR   Ensembl; ENST00000411543; ENSP00000406209; ENSG00000063245.
+DR   GeneID; 29924; -.
+DR   KEGG; hsa:29924; -.
+DR   UCSC; uc002qlv.3; human.
+DR   UCSC; uc002qlw.3; human.
+DR   UCSC; uc002qlx.3; human.
+DR   CTD; 29924; -.
+DR   GeneCards; GC19P056186; -.
+DR   H-InvDB; HIX0202721; -.
+DR   HGNC; HGNC:21604; EPN1.
+DR   HPA; CAB009729; -.
+DR   MIM; 607262; gene.
+DR   neXtProt; NX_Q9Y6I3; -.
+DR   PharmGKB; PA134860916; -.
+DR   eggNOG; NOG263730; -.
+DR   GeneTree; ENSGT00550000074611; -.
+DR   HOGENOM; HOG000008298; -.
+DR   HOVERGEN; HBG006690; -.
+DR   KO; K12471; -.
+DR   OMA; SASDPWT; -.
+DR   OrthoDB; EOG4SF97B; -.
+DR   PhylomeDB; Q9Y6I3; -.
+DR   Reactome; REACT_111102; Signal Transduction.
+DR   Reactome; REACT_116125; Disease.
+DR   EvolutionaryTrace; Q9Y6I3; -.
+DR   NextBio; 52535; -.
+DR   ArrayExpress; Q9Y6I3; -.
+DR   Bgee; Q9Y6I3; -.
+DR   CleanEx; HS_EPN1; -.
+DR   Genevestigator; Q9Y6I3; -.
+DR   GermOnline; ENSG00000063245; Homo sapiens.
+DR   GO; GO:0005905; C:coated pit; IEA:UniProtKB-SubCell.
+DR   GO; GO:0005737; C:cytoplasm; IEA:UniProtKB-SubCell.
+DR   GO; GO:0005634; C:nucleus; IEA:UniProtKB-SubCell.
+DR   GO; GO:0005886; C:plasma membrane; TAS:Reactome.
+DR   GO; GO:0008289; F:lipid binding; IEA:UniProtKB-KW.
+DR   GO; GO:0006897; P:endocytosis; TAS:ProtInc.
+DR   GO; GO:0007173; P:epidermal growth factor receptor signaling pathway; TAS:Reactome.
+DR   GO; GO:0042059; P:negative regulation of epidermal growth factor receptor signaling pathway; TAS:Reactome.
+DR   Gene3D; G3DSA:1.25.40.90; ENTH_VHS; 1.
+DR   InterPro; IPR008942; ENTH_VHS.
+DR   InterPro; IPR013809; Epsin-like_N.
+DR   InterPro; IPR001026; Epsin_dom_N.
+DR   InterPro; IPR003903; Ubiquitin-int_motif.
+DR   Pfam; PF01417; ENTH; 1.
+DR   Pfam; PF02809; UIM; 2.
+DR   SMART; SM00273; ENTH; 1.
+DR   SMART; SM00726; UIM; 3.
+DR   SUPFAM; SSF48464; ENTH_VHS; 1.
+DR   PROSITE; PS50942; ENTH; 1.
+DR   PROSITE; PS50330; UIM; 3.
+PE   1: Evidence at protein level;
+KW   3D-structure; Alternative splicing; Cell membrane; Coated pit;
+KW   Complete proteome; Cytoplasm; Endocytosis; Lipid-binding; Membrane;
+KW   Nucleus; Phosphoprotein; Reference proteome; Repeat; Ubl conjugation.
+FT   CHAIN         1    576       Epsin-1.
+FT                                /FTId=PRO_0000074513.
+FT   DOMAIN       12    144       ENTH.
+FT   REPEAT      183    202       UIM 1.
+FT   REPEAT      208    227       UIM 2.
+FT   REPEAT      233    252       UIM 3.
+FT   REPEAT      274    276       1.
+FT   REPEAT      294    296       2.
+FT   REPEAT      306    308       3.
+FT   REPEAT      319    321       4.
+FT   REPEAT      332    334       5.
+FT   REPEAT      349    351       6.
+FT   REPEAT      367    369       7.
+FT   REPEAT      377    379       8.
+FT   REPEAT      502    504       1.
+FT   REPEAT      518    520       2.
+FT   REPEAT      572    574       3.
+FT   REGION      274    379       8 X 3 AA repeats of [ED]-P-W.
+FT   REGION      502    574       3 X 3 AA repeats of N-P-F.
+FT   MOTIF       402    411       [DE]-X(1,2)-F-X-X-[FL]-X-X-X-R motif.
+FT   COMPBIAS    267    573       Ala/Gly/Pro-rich.
+FT   BINDING       8      8       Phosphatidylinositol lipid headgroup (By
+FT                                similarity).
+FT   BINDING      11     11       Phosphatidylinositol lipid headgroup (By
+FT                                similarity).
+FT   BINDING      25     25       Phosphatidylinositol lipid headgroup (By
+FT                                similarity).
+FT   BINDING      30     30       Phosphatidylinositol lipid headgroup (By
+FT                                similarity).
+FT   BINDING      63     63       Phosphatidylinositol lipid headgroup (By
+FT                                similarity).
+FT   BINDING      73     73       Phosphatidylinositol lipid headgroup (By
+FT                                similarity).
+FT   MOD_RES     382    382       Phosphoserine; by CDK1.
+FT   MOD_RES     419    419       Phosphoserine.
+FT   MOD_RES     420    420       Phosphoserine.
+FT   MOD_RES     435    435       Phosphoserine.
+FT   MOD_RES     454    454       Phosphoserine.
+FT   MOD_RES     460    460       Phosphothreonine.
+FT   MOD_RES     464    464       Phosphothreonine.
+FT   MOD_RES     470    470       Phosphothreonine.
+FT   MOD_RES     494    494       Phosphothreonine.
+FT   VAR_SEQ       1      1       M -> MGDQSWLWNQAAPGVRSPVFACSVEKGNVPLVLSEH
+FT                                LAHSRDPGSGAVRFLISPEPWASAILGTSGLLASPVLPAAL
+FT                                DAVTCQHLPQPSSGSRPISPRIGALCPLLLQPGTM (in
+FT                                isoform 2).
+FT                                /FTId=VSP_041010.
+FT   VAR_SEQ     202    226       Missing (in isoform 2 and isoform 3).
+FT                                /FTId=VSP_041011.
+FT   VAR_SEQ     393    393       Missing (in isoform 3).
+FT                                /FTId=VSP_041012.
+FT   MUTAGEN     382    382       S->A: Abolishes phosphorylation by CDK1.
+FT   MUTAGEN     382    382       S->D: Abolishes phosphorylation by CDK1
+FT                                and reduces REPS2 binding.
+FT   MUTAGEN     404    404       F->A: Reduces interaction with AP2B1.
+FT   HELIX        20     27
+FT   HELIX        39     47
+FT   HELIX        51     62
+FT   HELIX        63     65
+FT   HELIX        72     86
+FT   HELIX        90     98
+FT   HELIX       100    108
+FT   HELIX       121    134
+SQ   SEQUENCE   576 AA;  60293 MW;  68DD433F3168E975 CRC64;
+     MSTSSLRRQM KNIVHNYSEA EIKVREATSN DPWGPSSSLM SEIADLTYNV VAFSEIMSMI
+     WKRLNDHGKN WRHVYKAMTL MEYLIKTGSE RVSQQCKENM YAVQTLKDFQ YVDRDGKDQG
+     VNVREKAKQL VALLRDEDRL REERAHALKT KEKLAQTATA SSAAVGSGPP PEAEQAWPQS
+     SGEEELQLQL ALAMSKEEAD QPPSCGPEDD AQLQLALSLS REEHDKEERI RRGDDLRLQM
+     AIEESKRETG GKEESSLMDL ADVFTAPAPA PTTDPWGGPA PMAAAVPTAA PTSDPWGGPP
+     VPPAADPWGG PAPTPASGDP WRPAAPAGPS VDPWGGTPAP AAGEGPTPDP WGSSDGGVPV
+     SGPSASDPWT PAPAFSDPWG GSPAKPSTNG TTAAGGFDTE PDEFSDFDRL RTALPTSGSS
+     AGELELLAGE VPARSPGAFD MSGVRGSLAE AVGSPPPAAT PTPTPPTRKT PESFLGPNAA
+     LVDLDSLVSR PGPTPPGAKA SNPFLPGGGP ATGPSVTNPF QPAPPATLTL NQLRLSPVPP
+     VPGAPPTYIS PLGGGPGLPP MMPPGPPAPN TNPFLL
+//
+ID   EPN2_HUMAN              Reviewed;         641 AA.
+AC   O95208; O95207; Q9H7Z2; Q9UPT7;
+DT   16-JAN-2004, integrated into UniProtKB/Swiss-Prot.
+DT   16-DEC-2008, sequence version 3.
+DT   11-JUL-2012, entry version 102.
+DE   RecName: Full=Epsin-2;
+DE   AltName: Full=EPS-15-interacting protein 2;
+GN   Name=EPN2; Synonyms=KIAA1065;
+OS   Homo sapiens (Human).
+OC   Eukaryota; Metazoa; Chordata; Craniata; Vertebrata; Euteleostomi;
+OC   Mammalia; Eutheria; Euarchontoglires; Primates; Haplorrhini;
+OC   Catarrhini; Hominidae; Homo.
+OX   NCBI_TaxID=9606;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [MRNA] (ISOFORMS 1 AND 2), FUNCTION, INTERACTION
+RP   WITH AP-2 AND CLATHRIN, SUBCELLULAR LOCATION, TISSUE SPECIFICITY, AND
+RP   VARIANT ALA-401.
+RC   TISSUE=Brain;
+RX   MEDLINE=20036528; PubMed=10567358; DOI=10.1074/jbc.274.48.33959;
+RA   Rosenthal J.A., Chen H., Slepnev V.I., Pellegrini L., Salcini A.E.,
+RA   Di Fiore P.P., De Camilli P.;
+RT   "The epsins define a family of proteins that interact with components
+RT   of the clathrin coat and contain a new protein module.";
+RL   J. Biol. Chem. 274:33959-33965(1999).
+RN   [2]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE MRNA] (ISOFORM 1), AND VARIANT
+RP   ALA-401.
+RC   TISSUE=Brain;
+RX   MEDLINE=99397452; PubMed=10470851; DOI=10.1093/dnares/6.3.197;
+RA   Kikuno R., Nagase T., Ishikawa K., Hirosawa M., Miyajima N.,
+RA   Tanaka A., Kotani H., Nomura N., Ohara O.;
+RT   "Prediction of the coding sequences of unidentified human genes. XIV.
+RT   The complete sequences of 100 new cDNA clones from brain which code
+RT   for large proteins in vitro.";
+RL   DNA Res. 6:197-205(1999).
+RN   [3]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RX   PubMed=16625196; DOI=10.1038/nature04689;
+RA   Zody M.C., Garber M., Adams D.J., Sharpe T., Harrow J., Lupski J.R.,
+RA   Nicholson C., Searle S.M., Wilming L., Young S.K., Abouelleil A.,
+RA   Allen N.R., Bi W., Bloom T., Borowsky M.L., Bugalter B.E., Butler J.,
+RA   Chang J.L., Chen C.-K., Cook A., Corum B., Cuomo C.A., de Jong P.J.,
+RA   DeCaprio D., Dewar K., FitzGerald M., Gilbert J., Gibson R.,
+RA   Gnerre S., Goldstein S., Grafham D.V., Grocock R., Hafez N.,
+RA   Hagopian D.S., Hart E., Norman C.H., Humphray S., Jaffe D.B.,
+RA   Jones M., Kamal M., Khodiyar V.K., LaButti K., Laird G., Lehoczky J.,
+RA   Liu X., Lokyitsang T., Loveland J., Lui A., Macdonald P., Major J.E.,
+RA   Matthews L., Mauceli E., McCarroll S.A., Mihalev A.H., Mudge J.,
+RA   Nguyen C., Nicol R., O'Leary S.B., Osoegawa K., Schwartz D.C.,
+RA   Shaw-Smith C., Stankiewicz P., Steward C., Swarbreck D.,
+RA   Venkataraman V., Whittaker C.A., Yang X., Zimmer A.R., Bradley A.,
+RA   Hubbard T., Birren B.W., Rogers J., Lander E.S., Nusbaum C.;
+RT   "DNA sequence of human chromosome 17 and analysis of rearrangement in
+RT   the human lineage.";
+RL   Nature 440:1045-1049(2006).
+RN   [4]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE MRNA] OF 1-467 (ISOFORM 3), AND
+RP   VARIANT ALA-401.
+RC   TISSUE=Embryo;
+RX   PubMed=14702039; DOI=10.1038/ng1285;
+RA   Ota T., Suzuki Y., Nishikawa T., Otsuki T., Sugiyama T., Irie R.,
+RA   Wakamatsu A., Hayashi K., Sato H., Nagai K., Kimura K., Makita H.,
+RA   Sekine M., Obayashi M., Nishi T., Shibahara T., Tanaka T., Ishii S.,
+RA   Yamamoto J., Saito K., Kawai Y., Isono Y., Nakamura Y., Nagahari K.,
+RA   Murakami K., Yasuda T., Iwayanagi T., Wagatsuma M., Shiratori A.,
+RA   Sudo H., Hosoiri T., Kaku Y., Kodaira H., Kondo H., Sugawara M.,
+RA   Takahashi M., Kanda K., Yokoi T., Furuya T., Kikkawa E., Omura Y.,
+RA   Abe K., Kamihara K., Katsuta N., Sato K., Tanikawa M., Yamazaki M.,
+RA   Ninomiya K., Ishibashi T., Yamashita H., Murakawa K., Fujimori K.,
+RA   Tanai H., Kimata M., Watanabe M., Hiraoka S., Chiba Y., Ishida S.,
+RA   Ono Y., Takiguchi S., Watanabe S., Yosida M., Hotuta T., Kusano J.,
+RA   Kanehori K., Takahashi-Fujii A., Hara H., Tanase T.-O., Nomura Y.,
+RA   Togiya S., Komai F., Hara R., Takeuchi K., Arita M., Imose N.,
+RA   Musashino K., Yuuki H., Oshima A., Sasaki N., Aotsuka S.,
+RA   Yoshikawa Y., Matsunawa H., Ichihara T., Shiohata N., Sano S.,
+RA   Moriya S., Momiyama H., Satoh N., Takami S., Terashima Y., Suzuki O.,
+RA   Nakagawa S., Senoh A., Mizoguchi H., Goto Y., Shimizu F., Wakebe H.,
+RA   Hishigaki H., Watanabe T., Sugiyama A., Takemoto M., Kawakami B.,
+RA   Yamazaki M., Watanabe K., Kumagai A., Itakura S., Fukuzumi Y.,
+RA   Fujimori Y., Komiyama M., Tashiro H., Tanigami A., Fujiwara T.,
+RA   Ono T., Yamada K., Fujii Y., Ozaki K., Hirao M., Ohmori Y.,
+RA   Kawabata A., Hikiji T., Kobatake N., Inagaki H., Ikema Y., Okamoto S.,
+RA   Okitani R., Kawakami T., Noguchi S., Itoh T., Shigeta K., Senba T.,
+RA   Matsumura K., Nakajima Y., Mizuno T., Morinaga M., Sasaki M.,
+RA   Togashi T., Oyama M., Hata H., Watanabe M., Komatsu T.,
+RA   Mizushima-Sugano J., Satoh T., Shirai Y., Takahashi Y., Nakagawa K.,
+RA   Okumura K., Nagase T., Nomura N., Kikuchi H., Masuho Y., Yamashita R.,
+RA   Nakai K., Yada T., Nakamura Y., Ohara O., Isogai T., Sugano S.;
+RT   "Complete sequencing and characterization of 21,243 full-length human
+RT   cDNAs.";
+RL   Nat. Genet. 36:40-45(2004).
+RN   [5]
+RP   PHOSPHORYLATION [LARGE SCALE ANALYSIS] AT SER-192 AND SER-195, AND
+RP   MASS SPECTROMETRY.
+RC   TISSUE=Cervix carcinoma;
+RX   PubMed=17081983; DOI=10.1016/j.cell.2006.09.026;
+RA   Olsen J.V., Blagoev B., Gnad F., Macek B., Kumar C., Mortensen P.,
+RA   Mann M.;
+RT   "Global, in vivo, and site-specific phosphorylation dynamics in
+RT   signaling networks.";
+RL   Cell 127:635-648(2006).
+RN   [6]
+RP   PHOSPHORYLATION [LARGE SCALE ANALYSIS] AT SER-492, AND MASS
+RP   SPECTROMETRY.
+RC   TISSUE=Embryonic kidney;
+RX   PubMed=19413330; DOI=10.1021/ac9004309;
+RA   Gauci S., Helbig A.O., Slijper M., Krijgsveld J., Heck A.J.,
+RA   Mohammed S.;
+RT   "Lys-N and trypsin cover complementary parts of the phosphoproteome in
+RT   a refined SCX-based approach.";
+RL   Anal. Chem. 81:4493-4501(2009).
+CC   -!- FUNCTION: Plays a role in the formation of clathrin-coated
+CC       invaginations and endocytosis.
+CC   -!- SUBUNIT: Binds EPS15 (By similarity). Binds AP-2 and clathrin.
+CC   -!- SUBCELLULAR LOCATION: Cytoplasm. Cytoplasmic vesicle, clathrin-
+CC       coated vesicle. Note=In punctate structures throughout the cell,
+CC       associated with clathrin-coated vesicles, and particularly
+CC       concentrated in the region of the Golgi complex.
+CC   -!- ALTERNATIVE PRODUCTS:
+CC       Event=Alternative splicing; Named isoforms=3;
+CC       Name=1; Synonyms=2b;
+CC         IsoId=O95208-1; Sequence=Displayed;
+CC       Name=2; Synonyms=2a;
+CC         IsoId=O95208-2; Sequence=VSP_009155;
+CC       Name=3;
+CC         IsoId=O95208-3; Sequence=VSP_009154, VSP_009155;
+CC         Note=No experimental confirmation available;
+CC   -!- TISSUE SPECIFICITY: Highest expression is found in brain. Detected
+CC       at lower levels in lung and liver.
+CC   -!- DOMAIN: The NPF repeat domain is involved in EPS15 binding.
+CC   -!- DOMAIN: The DPW repeat domain is involved in AP-2 and clathrin
+CC       binding.
+CC   -!- PTM: Ubiquitinated (By similarity).
+CC   -!- SIMILARITY: Belongs to the epsin family.
+CC   -!- SIMILARITY: Contains 1 ENTH (epsin N-terminal homology) domain.
+CC   -!- SIMILARITY: Contains 2 UIM (ubiquitin-interacting motif) repeats.
+CC   -!- SEQUENCE CAUTION:
+CC       Sequence=BAA83017.2; Type=Erroneous initiation;
+CC   -----------------------------------------------------------------------
+CC   Copyrighted by the UniProt Consortium, see http://www.uniprot.org/terms
+CC   Distributed under the Creative Commons Attribution-NoDerivs License
+CC   -----------------------------------------------------------------------
+DR   EMBL; AF062084; AAC78608.1; -; mRNA.
+DR   EMBL; AF062085; AAC78609.1; -; mRNA.
+DR   EMBL; AB028988; BAA83017.2; ALT_INIT; mRNA.
+DR   EMBL; AC106017; -; NOT_ANNOTATED_CDS; Genomic_DNA.
+DR   EMBL; AC124066; -; NOT_ANNOTATED_CDS; Genomic_DNA.
+DR   EMBL; AK024115; BAB14831.1; -; mRNA.
+DR   IPI; IPI00397379; -.
+DR   IPI; IPI00397381; -.
+DR   IPI; IPI00915293; -.
+DR   RefSeq; NP_055779.2; NM_014964.4.
+DR   UniGene; Hs.730624; -.
+DR   ProteinModelPortal; O95208; -.
+DR   SMR; O95208; 1-144.
+DR   STRING; O95208; -.
+DR   PhosphoSite; O95208; -.
+DR   PRIDE; O95208; -.
+DR   Ensembl; ENST00000314728; ENSP00000320543; ENSG00000072134.
+DR   GeneID; 22905; -.
+DR   KEGG; hsa:22905; -.
+DR   UCSC; uc002gvd.4; human.
+DR   CTD; 22905; -.
+DR   GeneCards; GC17P019140; -.
+DR   H-InvDB; HIX0013614; -.
+DR   HGNC; HGNC:18639; EPN2.
+DR   MIM; 607263; gene.
+DR   neXtProt; NX_O95208; -.
+DR   PharmGKB; PA38615; -.
+DR   eggNOG; NOG263730; -.
+DR   GeneTree; ENSGT00550000074611; -.
+DR   HOGENOM; HOG000008298; -.
+DR   HOVERGEN; HBG006690; -.
+DR   InParanoid; O95208; -.
+DR   KO; K12471; -.
+DR   OMA; NGDWSQP; -.
+DR   OrthoDB; EOG4HMJ9P; -.
+DR   PhylomeDB; O95208; -.
+DR   NextBio; 43557; -.
+DR   PMAP-CutDB; O95208; -.
+DR   ArrayExpress; O95208; -.
+DR   Bgee; O95208; -.
+DR   CleanEx; HS_EPN2; -.
+DR   Genevestigator; O95208; -.
+DR   GermOnline; ENSG00000072134; Homo sapiens.
+DR   GO; GO:0030128; C:clathrin coat of endocytic vesicle; IEA:Compara.
+DR   GO; GO:0008289; F:lipid binding; IEA:UniProtKB-KW.
+DR   GO; GO:0006897; P:endocytosis; IEA:UniProtKB-KW.
+DR   GO; GO:0030100; P:regulation of endocytosis; IEA:Compara.
+DR   Gene3D; G3DSA:1.25.40.90; ENTH_VHS; 1.
+DR   InterPro; IPR008942; ENTH_VHS.
+DR   InterPro; IPR013809; Epsin-like_N.
+DR   InterPro; IPR001026; Epsin_dom_N.
+DR   InterPro; IPR003903; Ubiquitin-int_motif.
+DR   Pfam; PF01417; ENTH; 1.
+DR   SMART; SM00273; ENTH; 1.
+DR   SMART; SM00726; UIM; 2.
+DR   SUPFAM; SSF48464; ENTH_VHS; 1.
+DR   PROSITE; PS50942; ENTH; 1.
+DR   PROSITE; PS50330; UIM; 2.
+PE   1: Evidence at protein level;
+KW   Alternative splicing; Complete proteome; Cytoplasm;
+KW   Cytoplasmic vesicle; Endocytosis; Lipid-binding; Phosphoprotein;
+KW   Polymorphism; Reference proteome; Repeat; Ubl conjugation.
+FT   CHAIN         1    641       Epsin-2.
+FT                                /FTId=PRO_0000074516.
+FT   DOMAIN       12    144       ENTH.
+FT   REPEAT      275    294       UIM 1.
+FT   REPEAT      300    319       UIM 2.
+FT   REPEAT      352    354       1.
+FT   REPEAT      364    366       2.
+FT   REPEAT      377    379       3.
+FT   REPEAT      391    393       4.
+FT   REPEAT      409    411       5.
+FT   REPEAT      427    429       6.
+FT   REPEAT      537    539       1.
+FT   REPEAT      552    554       2.
+FT   REPEAT      637    639       3.
+FT   REGION      352    639       6 X 3 AA repeats of [DE]-P-W.
+FT   REGION      537    639       3 X 3 AA repeats of N-P-F.
+FT   BINDING       8      8       Phosphatidylinositol lipid headgroup (By
+FT                                similarity).
+FT   BINDING      11     11       Phosphatidylinositol lipid headgroup (By
+FT                                similarity).
+FT   BINDING      25     25       Phosphatidylinositol lipid headgroup (By
+FT                                similarity).
+FT   BINDING      30     30       Phosphatidylinositol lipid headgroup (By
+FT                                similarity).
+FT   BINDING      63     63       Phosphatidylinositol lipid headgroup (By
+FT                                similarity).
+FT   BINDING      73     73       Phosphatidylinositol lipid headgroup (By
+FT                                similarity).
+FT   MOD_RES     173    173       Phosphoserine (By similarity).
+FT   MOD_RES     182    182       Phosphoserine (By similarity).
+FT   MOD_RES     192    192       Phosphoserine.
+FT   MOD_RES     195    195       Phosphoserine.
+FT   MOD_RES     485    485       Phosphothreonine (By similarity).
+FT   MOD_RES     486    486       Phosphoserine (By similarity).
+FT   MOD_RES     492    492       Phosphoserine.
+FT   VAR_SEQ       1     39       Missing (in isoform 3).
+FT                                /FTId=VSP_009154.
+FT   VAR_SEQ     199    256       Missing (in isoform 2 and isoform 3).
+FT                                /FTId=VSP_009155.
+FT   VARIANT     401    401       V -> A (in dbSNP:rs6587220).
+FT                                /FTId=VAR_053080.
+FT   VARIANT     531    531       P -> T (in dbSNP:rs1062727).
+FT                                /FTId=VAR_047923.
+FT   VARIANT     532    532       P -> T (in dbSNP:rs1062727).
+FT                                /FTId=VAR_053081.
+FT   CONFLICT    256    256       A -> AS (in Ref. 1; AAC78609).
+FT   CONFLICT    547    547       T -> N (in Ref. 1; AAC78608/AAC78609).
+SQ   SEQUENCE   641 AA;  68482 MW;  0BE24CBD824F357A CRC64;
+     MTTSSIRRQM KNIVNNYSEA EIKVREATSN DPWGPSSSLM TEIADLTYNV VAFSEIMSMV
+     WKRLNDHGKN WRHVYKALTL LDYLIKTGSE RVAQQCRENI FAIQTLKDFQ YIDRDGKDQG
+     INVREKSKQL VALLKDEERL KAERAQALKT KERMAQVATG MGSNQITFGR GSSQPNLSTS
+     HSEQEYGKAG GSPASYHGSP EASLCPQHRT GAPLGQSEEL QPLSQRHPFL PHLGLASRPN
+     GDWSQPCLTC DRAARATSPR VSSELEQARP QTSGEEELQL QLALAMSREV AEQEERLRRG
+     DDLRLQMALE ESRRDTVKIP KKKEHGSLPQ QTTLLDLMDA LPSSGPAAQK AEPWGPSAST
+     NQTNPWGGPA APASTSDPWP SFGTKPAASI DPWGVPTGAT VQSVPKNSDP WAASQQPASS
+     AGKRASDAWG AVSTTKPVSV SGSFELFSNL NGTIKDDFSE FDNLRTSKKT AESVTSLPSQ
+     NNGTTSPDPF ESQPLTVASS KPSSARKTPE SFLGPNAALV NLDSLVTRPA PPAQSLNPFL
+     APGAPATSAP VNPFQVNQPQ PLTLNQLRGS PVLGTSTSFG PGPGVESMAV ASMTSAAPQP
+     ALGATGSSLT PLGPAMMNMV GSVGIPPSAA QATGTTNPFL L
+//
+ID   EPN3_HUMAN              Reviewed;         632 AA.
+AC   Q9H201; A8K6J3; A8KAB2; Q9BVN6; Q9NWK2;
+DT   16-JAN-2004, integrated into UniProtKB/Swiss-Prot.
+DT   01-MAR-2001, sequence version 1.
+DT   13-JUN-2012, entry version 97.
+DE   RecName: Full=Epsin-3;
+DE   AltName: Full=EPS-15-interacting protein 3;
+GN   Name=EPN3;
+OS   Homo sapiens (Human).
+OC   Eukaryota; Metazoa; Chordata; Craniata; Vertebrata; Euteleostomi;
+OC   Mammalia; Eutheria; Euarchontoglires; Primates; Haplorrhini;
+OC   Catarrhini; Hominidae; Homo.
+OX   NCBI_TaxID=9606;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [MRNA] (ISOFORM 1), INDUCTION, TISSUE SPECIFICITY,
+RP   AND SUBCELLULAR LOCATION.
+RC   TISSUE=Keratinocyte;
+RX   MEDLINE=21369897; PubMed=11359770; DOI=10.1074/jbc.M101663200;
+RA   Spradling K.D., McDaniel A.E., Lohi J., Pilcher B.K.;
+RT   "Epsin 3 is a novel extracellular matrix-induced transcript specific
+RT   to wounded epithelia.";
+RL   J. Biol. Chem. 276:29257-29267(2001).
+RN   [2]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE MRNA] (ISOFORM 1), AND VARIANT
+RP   THR-544.
+RC   TISSUE=Colon, Placenta, and Trachea;
+RX   PubMed=14702039; DOI=10.1038/ng1285;
+RA   Ota T., Suzuki Y., Nishikawa T., Otsuki T., Sugiyama T., Irie R.,
+RA   Wakamatsu A., Hayashi K., Sato H., Nagai K., Kimura K., Makita H.,
+RA   Sekine M., Obayashi M., Nishi T., Shibahara T., Tanaka T., Ishii S.,
+RA   Yamamoto J., Saito K., Kawai Y., Isono Y., Nakamura Y., Nagahari K.,
+RA   Murakami K., Yasuda T., Iwayanagi T., Wagatsuma M., Shiratori A.,
+RA   Sudo H., Hosoiri T., Kaku Y., Kodaira H., Kondo H., Sugawara M.,
+RA   Takahashi M., Kanda K., Yokoi T., Furuya T., Kikkawa E., Omura Y.,
+RA   Abe K., Kamihara K., Katsuta N., Sato K., Tanikawa M., Yamazaki M.,
+RA   Ninomiya K., Ishibashi T., Yamashita H., Murakawa K., Fujimori K.,
+RA   Tanai H., Kimata M., Watanabe M., Hiraoka S., Chiba Y., Ishida S.,
+RA   Ono Y., Takiguchi S., Watanabe S., Yosida M., Hotuta T., Kusano J.,
+RA   Kanehori K., Takahashi-Fujii A., Hara H., Tanase T.-O., Nomura Y.,
+RA   Togiya S., Komai F., Hara R., Takeuchi K., Arita M., Imose N.,
+RA   Musashino K., Yuuki H., Oshima A., Sasaki N., Aotsuka S.,
+RA   Yoshikawa Y., Matsunawa H., Ichihara T., Shiohata N., Sano S.,
+RA   Moriya S., Momiyama H., Satoh N., Takami S., Terashima Y., Suzuki O.,
+RA   Nakagawa S., Senoh A., Mizoguchi H., Goto Y., Shimizu F., Wakebe H.,
+RA   Hishigaki H., Watanabe T., Sugiyama A., Takemoto M., Kawakami B.,
+RA   Yamazaki M., Watanabe K., Kumagai A., Itakura S., Fukuzumi Y.,
+RA   Fujimori Y., Komiyama M., Tashiro H., Tanigami A., Fujiwara T.,
+RA   Ono T., Yamada K., Fujii Y., Ozaki K., Hirao M., Ohmori Y.,
+RA   Kawabata A., Hikiji T., Kobatake N., Inagaki H., Ikema Y., Okamoto S.,
+RA   Okitani R., Kawakami T., Noguchi S., Itoh T., Shigeta K., Senba T.,
+RA   Matsumura K., Nakajima Y., Mizuno T., Morinaga M., Sasaki M.,
+RA   Togashi T., Oyama M., Hata H., Watanabe M., Komatsu T.,
+RA   Mizushima-Sugano J., Satoh T., Shirai Y., Takahashi Y., Nakagawa K.,
+RA   Okumura K., Nagase T., Nomura N., Kikuchi H., Masuho Y., Yamashita R.,
+RA   Nakai K., Yada T., Nakamura Y., Ohara O., Isogai T., Sugano S.;
+RT   "Complete sequencing and characterization of 21,243 full-length human
+RT   cDNAs.";
+RL   Nat. Genet. 36:40-45(2004).
+RN   [3]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RA   Mural R.J., Istrail S., Sutton G.G., Florea L., Halpern A.L.,
+RA   Mobarry C.M., Lippert R., Walenz B., Shatkay H., Dew I., Miller J.R.,
+RA   Flanigan M.J., Edwards N.J., Bolanos R., Fasulo D., Halldorsson B.V.,
+RA   Hannenhalli S., Turner R., Yooseph S., Lu F., Nusskern D.R.,
+RA   Shue B.C., Zheng X.H., Zhong F., Delcher A.L., Huson D.H.,
+RA   Kravitz S.A., Mouchard L., Reinert K., Remington K.A., Clark A.G.,
+RA   Waterman M.S., Eichler E.E., Adams M.D., Hunkapiller M.W., Myers E.W.,
+RA   Venter J.C.;
+RL   Submitted (SEP-2005) to the EMBL/GenBank/DDBJ databases.
+RN   [4]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE MRNA] (ISOFORM 2).
+RC   TISSUE=Placenta;
+RX   PubMed=15489334; DOI=10.1101/gr.2596504;
+RG   The MGC Project Team;
+RT   "The status, quality, and expansion of the NIH full-length cDNA
+RT   project: the Mammalian Gene Collection (MGC).";
+RL   Genome Res. 14:2121-2127(2004).
+RN   [5]
+RP   PHOSPHORYLATION [LARGE SCALE ANALYSIS] AT TYR-17; TYR-176 AND TYR-186,
+RP   AND MASS SPECTROMETRY.
+RC   TISSUE=Mammary epithelium;
+RX   PubMed=19534553; DOI=10.1021/pr900044c;
+RA   Heibeck T.H., Ding S.-J., Opresko L.K., Zhao R., Schepmoes A.A.,
+RA   Yang F., Tolmachev A.V., Monroe M.E., Camp D.G. II, Smith R.D.,
+RA   Wiley H.S., Qian W.-J.;
+RT   "An extensive survey of tyrosine phosphorylation revealing new sites
+RT   in human mammary epithelial cells.";
+RL   J. Proteome Res. 8:3852-3861(2009).
+CC   -!- SUBCELLULAR LOCATION: Cytoplasm. Cytoplasm, perinuclear region.
+CC       Cytoplasmic vesicle, clathrin-coated vesicle. Nucleus (Probable).
+CC       Note=Concentrated in the perinuclear region and associated with
+CC       clathrin-coated vesicles close to the cell periphery. May shuttle
+CC       to the nucleus.
+CC   -!- ALTERNATIVE PRODUCTS:
+CC       Event=Alternative splicing; Named isoforms=2;
+CC       Name=1;
+CC         IsoId=Q9H201-1; Sequence=Displayed;
+CC       Name=2;
+CC         IsoId=Q9H201-2; Sequence=VSP_009158, VSP_009159;
+CC         Note=No experimental confirmation available. May be produced at
+CC         very low levels due to a premature stop codon in the mRNA,
+CC         leading to nonsense-mediated mRNA decay;
+CC   -!- TISSUE SPECIFICITY: Detected in migrating keratinocytes from
+CC       wounded skin, but not in differentiating keratinocytes or in
+CC       normal skin. Detected in chronic wounds, basal cell carcinoma and
+CC       ulcerative colitis.
+CC   -!- INDUCTION: In keratinocytes, by wounding or contact with collagen.
+CC   -!- SIMILARITY: Belongs to the epsin family.
+CC   -!- SIMILARITY: Contains 1 ENTH (epsin N-terminal homology) domain.
+CC   -!- SIMILARITY: Contains 2 UIM (ubiquitin-interacting motif) repeats.
+CC   -----------------------------------------------------------------------
+CC   Copyrighted by the UniProt Consortium, see http://www.uniprot.org/terms
+CC   Distributed under the Creative Commons Attribution-NoDerivs License
+CC   -----------------------------------------------------------------------
+DR   EMBL; AF324241; AAG45223.1; -; mRNA.
+DR   EMBL; AK000785; BAA91378.1; -; mRNA.
+DR   EMBL; AK291658; BAF84347.1; -; mRNA.
+DR   EMBL; AK292977; BAF85666.1; -; mRNA.
+DR   EMBL; CH471109; EAW94607.1; -; Genomic_DNA.
+DR   EMBL; BC001038; -; NOT_ANNOTATED_CDS; mRNA.
+DR   EMBL; BC051365; -; NOT_ANNOTATED_CDS; mRNA.
+DR   EMBL; BC077722; -; NOT_ANNOTATED_CDS; mRNA.
+DR   IPI; IPI00300584; -.
+DR   IPI; IPI00386833; -.
+DR   RefSeq; NP_060427.2; NM_017957.2.
+DR   UniGene; Hs.670090; -.
+DR   ProteinModelPortal; Q9H201; -.
+DR   SMR; Q9H201; 12-155.
+DR   MINT; MINT-1199053; -.
+DR   STRING; Q9H201; -.
+DR   PhosphoSite; Q9H201; -.
+DR   DMDM; 41017054; -.
+DR   PRIDE; Q9H201; -.
+DR   Ensembl; ENST00000268933; ENSP00000268933; ENSG00000049283.
+DR   Ensembl; ENST00000510045; ENSP00000421933; ENSG00000049283.
+DR   GeneID; 55040; -.
+DR   KEGG; hsa:55040; -.
+DR   UCSC; uc002ira.4; human.
+DR   CTD; 55040; -.
+DR   GeneCards; GC17P048610; -.
+DR   HGNC; HGNC:18235; EPN3.
+DR   MIM; 607264; gene.
+DR   neXtProt; NX_Q9H201; -.
+DR   PharmGKB; PA38513; -.
+DR   eggNOG; NOG263730; -.
+DR   GeneTree; ENSGT00550000074611; -.
+DR   HOGENOM; HOG000008298; -.
+DR   HOVERGEN; HBG006690; -.
+DR   InParanoid; Q9H201; -.
+DR   KO; K12471; -.
+DR   OrthoDB; EOG4SF97B; -.
+DR   PhylomeDB; Q9H201; -.
+DR   NextBio; 58495; -.
+DR   ArrayExpress; Q9H201; -.
+DR   Bgee; Q9H201; -.
+DR   CleanEx; HS_EPN3; -.
+DR   Genevestigator; Q9H201; -.
+DR   GermOnline; ENSG00000049283; Homo sapiens.
+DR   GO; GO:0030136; C:clathrin-coated vesicle; IEA:UniProtKB-SubCell.
+DR   GO; GO:0005634; C:nucleus; IEA:UniProtKB-SubCell.
+DR   GO; GO:0048471; C:perinuclear region of cytoplasm; IEA:UniProtKB-SubCell.
+DR   GO; GO:0008289; F:lipid binding; IEA:UniProtKB-KW.
+DR   Gene3D; G3DSA:1.25.40.90; ENTH_VHS; 1.
+DR   InterPro; IPR008942; ENTH_VHS.
+DR   InterPro; IPR013809; Epsin-like_N.
+DR   InterPro; IPR001026; Epsin_dom_N.
+DR   InterPro; IPR003903; Ubiquitin-int_motif.
+DR   Pfam; PF01417; ENTH; 1.
+DR   Pfam; PF02809; UIM; 2.
+DR   SMART; SM00273; ENTH; 1.
+DR   SMART; SM00726; UIM; 2.
+DR   SUPFAM; SSF48464; ENTH_VHS; 1.
+DR   PROSITE; PS50942; ENTH; 1.
+DR   PROSITE; PS50330; UIM; 2.
+PE   1: Evidence at protein level;
+KW   Alternative splicing; Complete proteome; Cytoplasm;
+KW   Cytoplasmic vesicle; Lipid-binding; Nucleus; Phosphoprotein;
+KW   Polymorphism; Reference proteome; Repeat.
+FT   CHAIN         1    632       Epsin-3.
+FT                                /FTId=PRO_0000074519.
+FT   DOMAIN       12    144       ENTH.
+FT   REPEAT      209    228       UIM 1.
+FT   REPEAT      236    255       UIM 2.
+FT   REPEAT      321    323       1.
+FT   REPEAT      344    346       2.
+FT   REPEAT      371    373       3.
+FT   REPEAT      387    389       4.
+FT   REPEAT      404    406       5.
+FT   REPEAT      524    526       1.
+FT   REPEAT      537    539       2.
+FT   REPEAT      629    631       3.
+FT   REGION      321    406       5 X 3 AA repeats of [DE]-P-W.
+FT   REGION      524    631       3 X 3 AA repeats of N-P-F.
+FT   BINDING       8      8       Phosphatidylinositol lipid headgroup (By
+FT                                similarity).
+FT   BINDING      11     11       Phosphatidylinositol lipid headgroup (By
+FT                                similarity).
+FT   BINDING      25     25       Phosphatidylinositol lipid headgroup (By
+FT                                similarity).
+FT   BINDING      30     30       Phosphatidylinositol lipid headgroup (By
+FT                                similarity).
+FT   BINDING      63     63       Phosphatidylinositol lipid headgroup (By
+FT                                similarity).
+FT   BINDING      73     73       Phosphatidylinositol lipid headgroup (By
+FT                                similarity).
+FT   MOD_RES      17     17       Phosphotyrosine.
+FT   MOD_RES     176    176       Phosphotyrosine.
+FT   MOD_RES     182    182       Phosphoserine (By similarity).
+FT   MOD_RES     186    186       Phosphotyrosine.
+FT   MOD_RES     393    393       Phosphoserine (By similarity).
+FT   VAR_SEQ     188    208       SSSSSPRYTSDLEQARPQTSG -> CPASDVRGRGTAAAAG
+FT                                PRHEP (in isoform 2).
+FT                                /FTId=VSP_009158.
+FT   VAR_SEQ     209    632       Missing (in isoform 2).
+FT                                /FTId=VSP_009159.
+FT   VARIANT     544    544       P -> T (in dbSNP:rs4794159).
+FT                                /FTId=VAR_059973.
+FT   CONFLICT    375    375       R -> K (in Ref. 2; BAF85666).
+FT   CONFLICT    396    396       H -> Y (in Ref. 2; BAA91378).
+FT   CONFLICT    417    417       G -> S (in Ref. 2; BAF85666).
+SQ   SEQUENCE   632 AA;  68222 MW;  13940F2FBD6215D0 CRC64;
+     MTTSALRRQV KNIVHNYSEA EIKVREATSN DPWGPPSSLM SEIADLTFNT VAFTEVMGML
+     WRRLNDSGKN WRHVYKALTL LDYLLKTGSE RVAHQCRENL YTIQTLKDFQ YIDRDGKDQG
+     VNVREKVKQV MALLKDEERL RQERTHALKT KERMALEGIG IGSGQLGFSR RYGEDYSRSR
+     GSPSSYNSSS SSPRYTSDLE QARPQTSGEE ELQLQLALAM SREEAEKPVP PASHRDEDLQ
+     LQLALRLSRQ EHEKEVRSWQ GDGSPMANGA GAVVHHQRDR EPEREERKEE EKLKTSQSSI
+     LDLADIFVPA LAPPSTHCSA DPWDIPGFRP NTEASGSSWG PSADPWSPIP SGTVLSRSQP
+     WDLTPMLSSS EPWGRTPVLP AGPPTTDPWA LNSPHHKLPS TGADPWGASL ETSDTPGGAS
+     TFDPFAKPPE STETKEGLEQ ALPSGKPSSP VELDLFGDPS PSSKQNGTKE PDALDLGILG
+     EALTQPSKEA RACRTPESFL GPSASSLVNL DSLVKAPQVA KTRNPFLTGL SAPSPTNPFG
+     AGEPGRPTLN QMRTGSPALG LAGGPVGAPL GSMTYSASLP LPLSSVPAGL TLPASVSVFP
+     QAGAFAPQPL LPTPSSAGPR PPPPQTGTNP FL
+//
+ID   EPN4_HUMAN              Reviewed;         625 AA.
+AC   Q14677; B7Z6F8; D3DQJ6; Q8NAF1; Q96E05;
+DT   16-JAN-2004, integrated into UniProtKB/Swiss-Prot.
+DT   01-NOV-1996, sequence version 1.
+DT   11-JUL-2012, entry version 122.
+DE   RecName: Full=Clathrin interactor 1;
+DE   AltName: Full=Clathrin-interacting protein localized in the trans-Golgi region;
+DE            Short=Clint;
+DE   AltName: Full=Enthoprotin;
+DE   AltName: Full=Epsin-4;
+DE   AltName: Full=Epsin-related protein;
+DE            Short=EpsinR;
+GN   Name=CLINT1; Synonyms=ENTH, EPN4, EPNR, KIAA0171;
+OS   Homo sapiens (Human).
+OC   Eukaryota; Metazoa; Chordata; Craniata; Vertebrata; Euteleostomi;
+OC   Mammalia; Eutheria; Euarchontoglires; Primates; Haplorrhini;
+OC   Catarrhini; Hominidae; Homo.
+OX   NCBI_TaxID=9606;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [GENOMIC DNA], PROTEIN SEQUENCE OF 14-27; 30-49;
+RP   110-129; 134-146; 157-171; 201-218; 248-274 AND 284-297 (ISOFORM 1),
+RP   MASS SPECTROMETRY, INTERACTION WITH CLATHRIN; AP1G1 AND GGA2, AND
+RP   SUBCELLULAR LOCATION.
+RX   MEDLINE=22202360; PubMed=12213833; DOI=10.1083/jcb.200205078;
+RA   Wasiak S., Legendre-Guillemin V., Puertollano R., Blondeau F.,
+RA   Girard M., de Heuvel E., Boismenu D., Bell A.W., Bonifacino J.S.,
+RA   McPherson P.S.;
+RT   "Enthoprotin: a novel clathrin-associated protein identified through
+RT   subcellular proteomics.";
+RL   J. Cell Biol. 158:855-862(2002).
+RN   [2]
+RP   NUCLEOTIDE SEQUENCE [MRNA] (ISOFORM 1).
+RA   Hong W.;
+RT   "KIAA0171 as a new member (epsin 4) of the epsin family.";
+RL   Submitted (OCT-2001) to the EMBL/GenBank/DDBJ databases.
+RN   [3]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE MRNA] (ISOFORM 1).
+RC   TISSUE=Bone marrow;
+RX   MEDLINE=96281124; PubMed=8724849; DOI=10.1093/dnares/3.1.17;
+RA   Nagase T., Seki N., Ishikawa K., Tanaka A., Nomura N.;
+RT   "Prediction of the coding sequences of unidentified human genes. V.
+RT   The coding sequences of 40 new genes (KIAA0161-KIAA0200) deduced by
+RT   analysis of cDNA clones from human cell line KG-1.";
+RL   DNA Res. 3:17-24(1996).
+RN   [4]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE MRNA] (ISOFORMS 2 AND 3).
+RC   TISSUE=Placenta, and Small intestine;
+RX   PubMed=14702039; DOI=10.1038/ng1285;
+RA   Ota T., Suzuki Y., Nishikawa T., Otsuki T., Sugiyama T., Irie R.,
+RA   Wakamatsu A., Hayashi K., Sato H., Nagai K., Kimura K., Makita H.,
+RA   Sekine M., Obayashi M., Nishi T., Shibahara T., Tanaka T., Ishii S.,
+RA   Yamamoto J., Saito K., Kawai Y., Isono Y., Nakamura Y., Nagahari K.,
+RA   Murakami K., Yasuda T., Iwayanagi T., Wagatsuma M., Shiratori A.,
+RA   Sudo H., Hosoiri T., Kaku Y., Kodaira H., Kondo H., Sugawara M.,
+RA   Takahashi M., Kanda K., Yokoi T., Furuya T., Kikkawa E., Omura Y.,
+RA   Abe K., Kamihara K., Katsuta N., Sato K., Tanikawa M., Yamazaki M.,
+RA   Ninomiya K., Ishibashi T., Yamashita H., Murakawa K., Fujimori K.,
+RA   Tanai H., Kimata M., Watanabe M., Hiraoka S., Chiba Y., Ishida S.,
+RA   Ono Y., Takiguchi S., Watanabe S., Yosida M., Hotuta T., Kusano J.,
+RA   Kanehori K., Takahashi-Fujii A., Hara H., Tanase T.-O., Nomura Y.,
+RA   Togiya S., Komai F., Hara R., Takeuchi K., Arita M., Imose N.,
+RA   Musashino K., Yuuki H., Oshima A., Sasaki N., Aotsuka S.,
+RA   Yoshikawa Y., Matsunawa H., Ichihara T., Shiohata N., Sano S.,
+RA   Moriya S., Momiyama H., Satoh N., Takami S., Terashima Y., Suzuki O.,
+RA   Nakagawa S., Senoh A., Mizoguchi H., Goto Y., Shimizu F., Wakebe H.,
+RA   Hishigaki H., Watanabe T., Sugiyama A., Takemoto M., Kawakami B.,
+RA   Yamazaki M., Watanabe K., Kumagai A., Itakura S., Fukuzumi Y.,
+RA   Fujimori Y., Komiyama M., Tashiro H., Tanigami A., Fujiwara T.,
+RA   Ono T., Yamada K., Fujii Y., Ozaki K., Hirao M., Ohmori Y.,
+RA   Kawabata A., Hikiji T., Kobatake N., Inagaki H., Ikema Y., Okamoto S.,
+RA   Okitani R., Kawakami T., Noguchi S., Itoh T., Shigeta K., Senba T.,
+RA   Matsumura K., Nakajima Y., Mizuno T., Morinaga M., Sasaki M.,
+RA   Togashi T., Oyama M., Hata H., Watanabe M., Komatsu T.,
+RA   Mizushima-Sugano J., Satoh T., Shirai Y., Takahashi Y., Nakagawa K.,
+RA   Okumura K., Nagase T., Nomura N., Kikuchi H., Masuho Y., Yamashita R.,
+RA   Nakai K., Yada T., Nakamura Y., Ohara O., Isogai T., Sugano S.;
+RT   "Complete sequencing and characterization of 21,243 full-length human
+RT   cDNAs.";
+RL   Nat. Genet. 36:40-45(2004).
+RN   [5]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RX   PubMed=15372022; DOI=10.1038/nature02919;
+RA   Schmutz J., Martin J., Terry A., Couronne O., Grimwood J., Lowry S.,
+RA   Gordon L.A., Scott D., Xie G., Huang W., Hellsten U., Tran-Gyamfi M.,
+RA   She X., Prabhakar S., Aerts A., Altherr M., Bajorek E., Black S.,
+RA   Branscomb E., Caoile C., Challacombe J.F., Chan Y.M., Denys M.,
+RA   Detter J.C., Escobar J., Flowers D., Fotopulos D., Glavina T.,
+RA   Gomez M., Gonzales E., Goodstein D., Grigoriev I., Groza M.,
+RA   Hammon N., Hawkins T., Haydu L., Israni S., Jett J., Kadner K.,
+RA   Kimball H., Kobayashi A., Lopez F., Lou Y., Martinez D., Medina C.,
+RA   Morgan J., Nandkeshwar R., Noonan J.P., Pitluck S., Pollard M.,
+RA   Predki P., Priest J., Ramirez L., Retterer J., Rodriguez A.,
+RA   Rogers S., Salamov A., Salazar A., Thayer N., Tice H., Tsai M.,
+RA   Ustaszewska A., Vo N., Wheeler J., Wu K., Yang J., Dickson M.,
+RA   Cheng J.-F., Eichler E.E., Olsen A., Pennacchio L.A., Rokhsar D.S.,
+RA   Richardson P., Lucas S.M., Myers R.M., Rubin E.M.;
+RT   "The DNA sequence and comparative analysis of human chromosome 5.";
+RL   Nature 431:268-274(2004).
+RN   [6]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RA   Mural R.J., Istrail S., Sutton G.G., Florea L., Halpern A.L.,
+RA   Mobarry C.M., Lippert R., Walenz B., Shatkay H., Dew I., Miller J.R.,
+RA   Flanigan M.J., Edwards N.J., Bolanos R., Fasulo D., Halldorsson B.V.,
+RA   Hannenhalli S., Turner R., Yooseph S., Lu F., Nusskern D.R.,
+RA   Shue B.C., Zheng X.H., Zhong F., Delcher A.L., Huson D.H.,
+RA   Kravitz S.A., Mouchard L., Reinert K., Remington K.A., Clark A.G.,
+RA   Waterman M.S., Eichler E.E., Adams M.D., Hunkapiller M.W., Myers E.W.,
+RA   Venter J.C.;
+RL   Submitted (SEP-2005) to the EMBL/GenBank/DDBJ databases.
+RN   [7]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE MRNA] (ISOFORMS 1 AND 2).
+RC   TISSUE=Lung, and Skin;
+RX   PubMed=15489334; DOI=10.1101/gr.2596504;
+RG   The MGC Project Team;
+RT   "The status, quality, and expansion of the NIH full-length cDNA
+RT   project: the Mammalian Gene Collection (MGC).";
+RL   Genome Res. 14:2121-2127(2004).
+RN   [8]
+RP   FUNCTION, MUTAGENESIS OF 423-LEU--LEU-426, INTERACTION WITH CLATHRIN;
+RP   AP1G1 AND AP-2, TISSUE SPECIFICITY, AND SUBCELLULAR LOCATION.
+RX   PubMed=12429846; DOI=10.1091/mbc.E02-03-0171;
+RA   Kalthoff C., Groos S., Kohl R., Mahrhold S., Ungewickell E.J.;
+RT   "Clint: a novel clathrin-binding ENTH-domain protein at the Golgi.";
+RL   Mol. Biol. Cell 13:4060-4073(2002).
+RN   [9]
+RP   FUNCTION, TISSUE SPECIFICITY, SUBCELLULAR LOCATION, MUTAGENESIS OF
+RP   ASP-34; ASP-349; ASP-371 AND ASP-422, AND INTERACTION WITH AP1G1; AP-2
+RP   AND CLATHRIN.
+RX   PubMed=12538641; DOI=10.1083/jcb.200208023;
+RA   Mills I.G., Praefcke G.J.K., Vallis Y., Peter B.J., Olesen L.E.,
+RA   Gallop J.L., Butler P.J.G., Evans P.R., McMahon H.T.;
+RT   "EpsinR: an AP1/clathrin interacting protein involved in vesicle
+RT   trafficking.";
+RL   J. Cell Biol. 160:213-222(2003).
+RN   [10]
+RP   PHOSPHORYLATION [LARGE SCALE ANALYSIS] AT SER-227; SER-232; SER-234
+RP   AND SER-299, AND MASS SPECTROMETRY.
+RC   TISSUE=Cervix carcinoma;
+RX   PubMed=17081983; DOI=10.1016/j.cell.2006.09.026;
+RA   Olsen J.V., Blagoev B., Gnad F., Macek B., Kumar C., Mortensen P.,
+RA   Mann M.;
+RT   "Global, in vivo, and site-specific phosphorylation dynamics in
+RT   signaling networks.";
+RL   Cell 127:635-648(2006).
+RN   [11]
+RP   PHOSPHORYLATION [LARGE SCALE ANALYSIS] AT SER-22 AND SER-26, AND MASS
+RP   SPECTROMETRY.
+RC   TISSUE=Cervix carcinoma;
+RX   PubMed=17924679; DOI=10.1021/pr070152u;
+RA   Yu L.-R., Zhu Z., Chan K.C., Issaq H.J., Dimitrov D.S., Veenstra T.D.;
+RT   "Improved titanium dioxide enrichment of phosphopeptides from HeLa
+RT   cells and high confident phosphopeptide identification by cross-
+RT   validation of MS/MS and MS/MS/MS spectra.";
+RL   J. Proteome Res. 6:4150-4162(2007).
+RN   [12]
+RP   PHOSPHORYLATION [LARGE SCALE ANALYSIS] AT SER-245 AND THR-272, AND
+RP   MASS SPECTROMETRY.
+RC   TISSUE=Embryonic kidney;
+RX   PubMed=17287340; DOI=10.1073/pnas.0611217104;
+RA   Molina H., Horn D.M., Tang N., Mathivanan S., Pandey A.;
+RT   "Global proteomic profiling of phosphopeptides using electron transfer
+RT   dissociation tandem mass spectrometry.";
+RL   Proc. Natl. Acad. Sci. U.S.A. 104:2199-2204(2007).
+RN   [13]
+RP   POSSIBLE INVOLVEMENT IN SCZD1.
+RX   PubMed=15793701; DOI=10.1086/430095;
+RA   Pimm J., McQuillin A., Thirumalai S., Lawrence J., Quested D.,
+RA   Bass N., Lamb G., Moorey H., Datta S.R., Kalsi G., Badacsonyi A.,
+RA   Kelly K., Morgan J., Punukollu B., Curtis D., Gurling H.;
+RT   "The Epsin 4 gene on chromosome 5q, which encodes the clathrin-
+RT   associated protein enthoprotin, is involved in the genetic
+RT   susceptibility to schizophrenia.";
+RL   Am. J. Hum. Genet. 76:902-907(2005).
+RN   [14]
+RP   PHOSPHORYLATION [LARGE SCALE ANALYSIS] AT SER-245 AND SER-299, AND
+RP   MASS SPECTROMETRY.
+RC   TISSUE=Cervix carcinoma;
+RX   PubMed=18691976; DOI=10.1016/j.molcel.2008.07.007;
+RA   Daub H., Olsen J.V., Bairlein M., Gnad F., Oppermann F.S., Korner R.,
+RA   Greff Z., Keri G., Stemmann O., Mann M.;
+RT   "Kinase-selective enrichment enables quantitative phosphoproteomics of
+RT   the kinome across the cell cycle.";
+RL   Mol. Cell 31:438-448(2008).
+RN   [15]
+RP   PHOSPHORYLATION [LARGE SCALE ANALYSIS] AT SER-245 AND SER-299, AND
+RP   MASS SPECTROMETRY.
+RC   TISSUE=Cervix carcinoma;
+RX   PubMed=18669648; DOI=10.1073/pnas.0805139105;
+RA   Dephoure N., Zhou C., Villen J., Beausoleil S.A., Bakalarski C.E.,
+RA   Elledge S.J., Gygi S.P.;
+RT   "A quantitative atlas of mitotic phosphorylation.";
+RL   Proc. Natl. Acad. Sci. U.S.A. 105:10762-10767(2008).
+RN   [16]
+RP   PHOSPHORYLATION [LARGE SCALE ANALYSIS] AT SER-227, AND MASS
+RP   SPECTROMETRY.
+RC   TISSUE=Liver;
+RX   PubMed=18318008; DOI=10.1002/pmic.200700884;
+RA   Han G., Ye M., Zhou H., Jiang X., Feng S., Jiang X., Tian R., Wan D.,
+RA   Zou H., Gu J.;
+RT   "Large-scale phosphoproteome analysis of human liver tissue by
+RT   enrichment and fractionation of phosphopeptides with strong anion
+RT   exchange chromatography.";
+RL   Proteomics 8:1346-1361(2008).
+RN   [17]
+RP   PHOSPHORYLATION [LARGE SCALE ANALYSIS] AT SER-299; SER-305 AND
+RP   SER-312, AND MASS SPECTROMETRY.
+RC   TISSUE=Embryonic kidney;
+RX   PubMed=19413330; DOI=10.1021/ac9004309;
+RA   Gauci S., Helbig A.O., Slijper M., Krijgsveld J., Heck A.J.,
+RA   Mohammed S.;
+RT   "Lys-N and trypsin cover complementary parts of the phosphoproteome in
+RT   a refined SCX-based approach.";
+RL   Anal. Chem. 81:4493-4501(2009).
+RN   [18]
+RP   PHOSPHORYLATION [LARGE SCALE ANALYSIS] AT SER-166 AND SER-299, AND
+RP   MASS SPECTROMETRY.
+RC   TISSUE=Leukemic T-cell;
+RX   PubMed=19690332; DOI=10.1126/scisignal.2000007;
+RA   Mayya V., Lundgren D.H., Hwang S.-I., Rezaul K., Wu L., Eng J.K.,
+RA   Rodionov V., Han D.K.;
+RT   "Quantitative phosphoproteomic analysis of T cell receptor signaling
+RT   reveals system-wide modulation of protein-protein interactions.";
+RL   Sci. Signal. 2:RA46-RA46(2009).
+RN   [19]
+RP   IDENTIFICATION BY MASS SPECTROMETRY [LARGE SCALE ANALYSIS].
+RX   PubMed=21269460; DOI=10.1186/1752-0509-5-17;
+RA   Burkard T.R., Planyavsky M., Kaupe I., Breitwieser F.P.,
+RA   Buerckstuemmer T., Bennett K.L., Superti-Furga G., Colinge J.;
+RT   "Initial characterization of the human central proteome.";
+RL   BMC Syst. Biol. 5:17-17(2011).
+CC   -!- FUNCTION: Binds to membranes enriched in phosphatidylinositol 4,5-
+CC       bisphosphate (PtdIns(4,5)P2). May have a role in transport via
+CC       clathrin-coated vesicles from the trans-Golgi network to
+CC       endosomes. Stimulates clathrin assembly.
+CC   -!- SUBUNIT: Binds clathrin heavy chain, GGA2, AP-2 and AP1G1.
+CC   -!- INTERACTION:
+CC       Q9H0R8:GABARAPL1; NbExp=2; IntAct=EBI-1171113, EBI-746969;
+CC       Q9GZQ8:MAP1LC3B; NbExp=2; IntAct=EBI-1171113, EBI-373144;
+CC   -!- SUBCELLULAR LOCATION: Cytoplasm. Cytoplasm, perinuclear region.
+CC       Membrane; Peripheral membrane protein. Cytoplasmic vesicle,
+CC       clathrin-coated vesicle. Note=Found throughout the cell, with the
+CC       exception of the cell surface. Concentrated in the perinuclear
+CC       region and associated with clathrin-coated vesicles close to the
+CC       trans-Golgi network.
+CC   -!- ALTERNATIVE PRODUCTS:
+CC       Event=Alternative splicing; Named isoforms=3;
+CC       Name=1;
+CC         IsoId=Q14677-1; Sequence=Displayed;
+CC       Name=2;
+CC         IsoId=Q14677-2; Sequence=VSP_009160, VSP_009161;
+CC       Name=3;
+CC         IsoId=Q14677-3; Sequence=VSP_043302;
+CC         Note=No experimental confirmation available;
+CC   -!- TISSUE SPECIFICITY: Ubiquitously expressed at low to intermediate
+CC       levels.
+CC   -!- POLYMORPHISM: Genetic variations in CLINT1 may contribute to
+CC       susceptibility to schizophrenia and psychotic disorders in some
+CC       populations.
+CC   -!- SIMILARITY: Belongs to the epsin family.
+CC   -!- SIMILARITY: Contains 1 ENTH (epsin N-terminal homology) domain.
+CC   -!- SEQUENCE CAUTION:
+CC       Sequence=BAA11488.2; Type=Erroneous initiation;
+CC   -----------------------------------------------------------------------
+CC   Copyrighted by the UniProt Consortium, see http://www.uniprot.org/terms
+CC   Distributed under the Creative Commons Attribution-NoDerivs License
+CC   -----------------------------------------------------------------------
+DR   EMBL; BK000414; DAA00062.1; -; Genomic_DNA.
+DR   EMBL; AF434813; AAL30768.1; -; mRNA.
+DR   EMBL; D79993; BAA11488.2; ALT_INIT; mRNA.
+DR   EMBL; AK092765; BAC03971.1; -; mRNA.
+DR   EMBL; AK300257; BAH13244.1; -; mRNA.
+DR   EMBL; AC011394; -; NOT_ANNOTATED_CDS; Genomic_DNA.
+DR   EMBL; AC026407; -; NOT_ANNOTATED_CDS; Genomic_DNA.
+DR   EMBL; CH471062; EAW61585.1; -; Genomic_DNA.
+DR   EMBL; CH471062; EAW61588.1; -; Genomic_DNA.
+DR   EMBL; BC004467; AAH04467.1; -; mRNA.
+DR   EMBL; BC013091; AAH13091.1; -; mRNA.
+DR   IPI; IPI00291930; -.
+DR   IPI; IPI00397519; -.
+DR   IPI; IPI00975549; -.
+DR   RefSeq; NP_001182484.1; NM_001195555.1.
+DR   RefSeq; NP_001182485.1; NM_001195556.1.
+DR   RefSeq; NP_055481.1; NM_014666.3.
+DR   UniGene; Hs.644000; -.
+DR   PDB; 1XGW; X-ray; 1.90 A; A=1-165.
+DR   PDB; 2QY7; X-ray; 2.00 A; A/B/C=20-166.
+DR   PDB; 2V8S; X-ray; 2.22 A; E=20-166.
+DR   PDBsum; 1XGW; -.
+DR   PDBsum; 2QY7; -.
+DR   PDBsum; 2V8S; -.
+DR   ProteinModelPortal; Q14677; -.
+DR   SMR; Q14677; 17-152.
+DR   IntAct; Q14677; 17.
+DR   STRING; Q14677; -.
+DR   PhosphoSite; Q14677; -.
+DR   DMDM; 41016993; -.
+DR   PRIDE; Q14677; -.
+DR   Ensembl; ENST00000296951; ENSP00000296951; ENSG00000113282.
+DR   Ensembl; ENST00000411809; ENSP00000388340; ENSG00000113282.
+DR   Ensembl; ENST00000523094; ENSP00000429345; ENSG00000113282.
+DR   Ensembl; ENST00000523908; ENSP00000429824; ENSG00000113282.
+DR   Ensembl; ENST00000530742; ENSP00000433419; ENSG00000113282.
+DR   GeneID; 9685; -.
+DR   KEGG; hsa:9685; -.
+DR   UCSC; uc003lxi.2; human.
+DR   UCSC; uc003lxj.2; human.
+DR   CTD; 9685; -.
+DR   GeneCards; GC05M157212; -.
+DR   HGNC; HGNC:23186; CLINT1.
+DR   HPA; HPA043280; -.
+DR   MIM; 607265; gene.
+DR   neXtProt; NX_Q14677; -.
+DR   Orphanet; 3140; Schizophrenia.
+DR   PharmGKB; PA145149115; -.
+DR   eggNOG; NOG290795; -.
+DR   GeneTree; ENSGT00550000074611; -.
+DR   HOGENOM; HOG000082415; -.
+DR   HOVERGEN; HBG048921; -.
+DR   InParanoid; Q14677; -.
+DR   OMA; GMPNLAM; -.
+DR   OrthoDB; EOG4BK53R; -.
+DR   PhylomeDB; Q14677; -.
+DR   Reactome; REACT_11123; Membrane Trafficking.
+DR   EvolutionaryTrace; Q14677; -.
+DR   NextBio; 36372; -.
+DR   ArrayExpress; Q14677; -.
+DR   Bgee; Q14677; -.
+DR   CleanEx; HS_CLINT1; -.
+DR   Genevestigator; Q14677; -.
+DR   GermOnline; ENSG00000113282; Homo sapiens.
+DR   GO; GO:0030136; C:clathrin-coated vesicle; IEA:UniProtKB-SubCell.
+DR   GO; GO:0005829; C:cytosol; TAS:Reactome.
+DR   GO; GO:0005794; C:Golgi apparatus; IDA:UniProtKB.
+DR   GO; GO:0016020; C:membrane; IEA:UniProtKB-SubCell.
+DR   GO; GO:0048471; C:perinuclear region of cytoplasm; IEA:UniProtKB-SubCell.
+DR   GO; GO:0008289; F:lipid binding; IEA:UniProtKB-KW.
+DR   GO; GO:0016044; P:cellular membrane organization; TAS:Reactome.
+DR   GO; GO:0006897; P:endocytosis; IEA:UniProtKB-KW.
+DR   GO; GO:0006892; P:post-Golgi vesicle-mediated transport; TAS:Reactome.
+DR   Gene3D; G3DSA:1.25.40.90; ENTH_VHS; 1.
+DR   InterPro; IPR008942; ENTH_VHS.
+DR   InterPro; IPR013809; Epsin-like_N.
+DR   InterPro; IPR001026; Epsin_dom_N.
+DR   Pfam; PF01417; ENTH; 1.
+DR   SMART; SM00273; ENTH; 1.
+DR   SUPFAM; SSF48464; ENTH_VHS; 1.
+DR   PROSITE; PS50942; ENTH; 1.
+PE   1: Evidence at protein level;
+KW   3D-structure; Alternative splicing; Complete proteome; Cytoplasm;
+KW   Cytoplasmic vesicle; Direct protein sequencing; Endocytosis;
+KW   Lipid-binding; Membrane; Phosphoprotein; Reference proteome.
+FT   CHAIN         1    625       Clathrin interactor 1.
+FT                                /FTId=PRO_0000074521.
+FT   DOMAIN       16    149       ENTH.
+FT   COMPBIAS    549    605       Met-rich.
+FT   BINDING      29     29       Phosphatidylinositol lipid headgroup (By
+FT                                similarity).
+FT   BINDING      67     67       Phosphatidylinositol lipid headgroup (By
+FT                                similarity).
+FT   MOD_RES      22     22       Phosphoserine.
+FT   MOD_RES      26     26       Phosphoserine.
+FT   MOD_RES     163    163       Phosphoserine (By similarity).
+FT   MOD_RES     166    166       Phosphoserine.
+FT   MOD_RES     227    227       Phosphoserine.
+FT   MOD_RES     232    232       Phosphoserine.
+FT   MOD_RES     234    234       Phosphoserine.
+FT   MOD_RES     245    245       Phosphoserine.
+FT   MOD_RES     272    272       Phosphothreonine.
+FT   MOD_RES     299    299       Phosphoserine.
+FT   MOD_RES     305    305       Phosphoserine.
+FT   MOD_RES     312    312       Phosphoserine.
+FT   VAR_SEQ       1     18       Missing (in isoform 2).
+FT                                /FTId=VSP_009160.
+FT   VAR_SEQ     459    459       S -> SQPLQNVSTVLQKPNPLYN (in isoform 3).
+FT                                /FTId=VSP_043302.
+FT   VAR_SEQ     460    460       Q -> QPLQNVSTVLQKPNPLYNQ (in isoform 2).
+FT                                /FTId=VSP_009161.
+FT   MUTAGEN      29     29       R->L: Reduces lipid binding. Abolishes
+FT                                lipid binding; when associated with G-34.
+FT   MUTAGEN      34     34       D->G: Abolishes lipid binding; when
+FT                                associated with L-29.
+FT   MUTAGEN     349    349       D->R: Decreases AP-1 and AP-2 binding.
+FT   MUTAGEN     371    371       D->R: Slightly decreases AP-1 binding.
+FT   MUTAGEN     422    422       D->R: Strongly decreases clathrin
+FT                                binding.
+FT   MUTAGEN     423    426       LFDL->AFAA: Strongly reduces clathrin
+FT                                binding.
+FT   CONFLICT    476    476       T -> A (in Ref. 4; BAC03971).
+FT   HELIX        23     31
+FT   STRAND       33     37
+FT   HELIX        41     50
+FT   TURN         54     56
+FT   HELIX        57     69
+FT   HELIX        76     92
+FT   HELIX        95    103
+FT   HELIX       105    109
+FT   HELIX       110    113
+FT   HELIX       125    139
+FT   HELIX       142    151
+SQ   SEQUENCE   625 AA;  68259 MW;  6C8C6689861E9F0D CRC64;
+     MLNMWKVREL VDKATNVVMN YSEIESKVRE ATNDDPWGPS GQLMGEIAKA TFMYEQFPEL
+     MNMLWSRMLK DNKKNWRRVY KSLLLLAYLI RNGSERVVTS AREHIYDLRS LENYHFVDEH
+     GKDQGINIRQ KVKELVEFAQ DDDRLREERK KAKKNKDKYV GVSSDSVGGF RYSERYDPEP
+     KSKWDEEWDK NKSAFPFSDK LGELSDKIGS TIDDTISKFR RKDREDSPER CSDSDEEKKA
+     RRGRSPKGEF KDEEETVTTK HIHITQATET TTTRHKRTAN PSKTIDLGAA AHYTGDKASP
+     DQNASTHTPQ SSVKTSVPSS KSSGDLVDLF DGTSQSTGGS ADLFGGFADF GSAAASGSFP
+     SQVTATSGNG DFGDWSAFNQ APSGPVASSG EFFGSASQPA VELVSGSQSA LGPPPAASNS
+     SDLFDLMGSS QATMTSSQSM NFSMMSTNTV GLGLPMSRSQ NTDMVQKSVS KTLPSTWSDP
+     SVNISLDNLL PGMQPSKPQQ PSLNTMIQQQ NMQQPMNVMT QSFGAVNLSS PSNMLPVRPQ
+     TNALIGGPMP MSMPNVMTGT MGMAPLGNTP MMNQSMMGMN MNIGMSAAGM GLTGTMGMGM
+     PNIAMTSGTV QPKQDAFANF ANFSK
+//
