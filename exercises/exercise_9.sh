@@ -1,28 +1,24 @@
 
-
-
 ################################################################################
-# ssh has a LOT OF options/parameters:
-ssh --help
-################################################################################
-
-################################################################################
-# We want to ssh into our own machine
-# Let's find out the machine name 
-uname -n
-#
-# Let's find out our username
-whoami
-#
-echo ssh $(whoami)@$(uname -n)
-################################################################################
-
-################################################################################
-# execute a program 'remotely'
-ssh $(whoami)@$(uname -n) uptime
+# Login to machine sub-master.embl.de (first without specifying a username, 
+# then try the same providing a username).
+# Use the following commands locally as well as on the remote machine to get 
+# a feeling for the different machines:
+# hostname
+# whoami
+# cat /etc/hostname
+# ls -lah ~/
 ################################################################################
 
 
 ################################################################################
-# Deal with "WARNING: HOST IDENTIFICATION HAS CHANGED!" ???
+# copy the file /etc/motd from machine sub-master.embl.de  into your local home directory
 ################################################################################
+scp sub-master.embl.de:/etc/motd ~/
+
+################################################################################
+# determine the filetype and the permissions of the file that you just copied
+################################################################################
+file ~/motd
+ls -la ~/motd
+

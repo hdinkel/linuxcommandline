@@ -28,7 +28,7 @@ cp /bin/date adir/
 
 
 ################################################################################
-# check the permissions of the program date
+# Check the permissions of the program date
 ################################################################################
 ls -la adir/date
 -rwxr-xr-x 1 dinkel gibson 54916 Sep 17 13:40 adir/date
@@ -39,7 +39,7 @@ ls -la adir/date
 chmod -x adir/date
 
 ################################################################################
-# check the permissions of the program date
+# Check the permissions of the program date
 ################################################################################
 ls -la adir/date
 -rw-r--r-- 1 dinkel gibson 54916 Sep 17 13:40 adir/date
@@ -48,7 +48,7 @@ ls -la adir/date
 # Try running it as ./date or adir/date (depending on your current working directory)
 ################################################################################
 adir/date
-exercise_10.sh: 47: exercise_10.sh: adir/date: Permission denied
+adir/date: Permission denied
 
 ################################################################################
 # Change the permissions back so that the file is executable.
