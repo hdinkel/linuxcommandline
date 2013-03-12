@@ -1,0 +1,34 @@
+Deoxyribonucleic acid (DNA) molecules are informational molecules encoding the
+genetic instructions used in the development and functioning of all known
+living organisms and many viruses. Along with RNA and proteins, DNA is one of
+the three major macromolecules that are essential for all known forms of life.
+Genetic information is encoded as a sequence of nucleotides (guanine, adenine,
+thymine, and cytosine) recorded using the letters G, A, T, and C. Most DNA
+molecules are double-stranded helices, consisting of two long polymers of
+simple units called nucleotides, molecules with backbones made of alternating
+sugars (deoxyribose) and phosphate groups, with the nucleobases (G, A, T, C)
+attached to the sugars. DNA is well-suited for biological information storage,
+since the DNA backbone is resistant to cleavage and the double-stranded
+structure provides the molecule with a built-in duplicate of the encoded
+information.
+
+These two strands run in opposite directions to each other and are therefore
+anti-parallel, one backbone being 3' (three prime) and the other 5' (five
+prime). This refers to the direction the 3rd and 5th carbon on the sugar
+molecule is facing. Attached to each sugar is one of four types of molecules
+called nucleobases (informally, bases). It is the sequence of these four
+nucleobases along the backbone that encodes information. This information is
+read using the genetic code, which specifies the sequence of the amino acids
+within proteins. The code is read by copying stretches of DNA into the related
+nucleic acid RNA in a process called transcription.
+
+Within cells, DNA is organized into long structures called chromosomes. During
+cell division these chromosomes are duplicated in the process of DNA
+replication, providing each cell its own complete set of chromosomes.
+Eukaryotic organisms (animals, plants, fungi, and protists) store most of
+their DNA inside the cell nucleus and some of their DNA in organelles, such as
+mitochondria or chloroplasts.[1] In contrast, prokaryotes (bacteria and
+archaea) store their DNA only in the cytoplasm. Within the chromosomes,
+chromatin proteins such as histones compact and organize DNA. These compact
+structures guide the interactions between DNA and other proteins, helping
+control which parts of the DNA are transcribed.

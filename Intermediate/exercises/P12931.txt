@@ -1,0 +1,1089 @@
+ID   SRC_HUMAN               Reviewed;         536 AA.
+AC   P12931; E1P5V4; Q76P87; Q86VB9; Q9H5A8;
+DT   01-OCT-1989, integrated into UniProtKB/Swiss-Prot.
+DT   23-JAN-2007, sequence version 3.
+DT   31-OCT-2012, entry version 166.
+DE   RecName: Full=Proto-oncogene tyrosine-protein kinase Src;
+DE            EC=2.7.10.2;
+DE   AltName: Full=Proto-oncogene c-Src;
+DE   AltName: Full=pp60c-src;
+DE            Short=p60-Src;
+GN   Name=SRC; Synonyms=SRC1;
+OS   Homo sapiens (Human).
+OC   Eukaryota; Metazoa; Chordata; Craniata; Vertebrata; Euteleostomi;
+OC   Mammalia; Eutheria; Euarchontoglires; Primates; Haplorrhini;
+OC   Catarrhini; Hominidae; Homo.
+OX   NCBI_TaxID=9606;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RX   MEDLINE=21638749; PubMed=11780052; DOI=10.1038/414865a;
+RA   Deloukas P., Matthews L.H., Ashurst J.L., Burton J., Gilbert J.G.R.,
+RA   Jones M., Stavrides G., Almeida J.P., Babbage A.K., Bagguley C.L.,
+RA   Bailey J., Barlow K.F., Bates K.N., Beard L.M., Beare D.M.,
+RA   Beasley O.P., Bird C.P., Blakey S.E., Bridgeman A.M., Brown A.J.,
+RA   Buck D., Burrill W.D., Butler A.P., Carder C., Carter N.P.,
+RA   Chapman J.C., Clamp M., Clark G., Clark L.N., Clark S.Y., Clee C.M.,
+RA   Clegg S., Cobley V.E., Collier R.E., Connor R.E., Corby N.R.,
+RA   Coulson A., Coville G.J., Deadman R., Dhami P.D., Dunn M.,
+RA   Ellington A.G., Frankland J.A., Fraser A., French L., Garner P.,
+RA   Grafham D.V., Griffiths C., Griffiths M.N.D., Gwilliam R., Hall R.E.,
+RA   Hammond S., Harley J.L., Heath P.D., Ho S., Holden J.L., Howden P.J.,
+RA   Huckle E., Hunt A.R., Hunt S.E., Jekosch K., Johnson C.M., Johnson D.,
+RA   Kay M.P., Kimberley A.M., King A., Knights A., Laird G.K., Lawlor S.,
+RA   Lehvaeslaiho M.H., Leversha M.A., Lloyd C., Lloyd D.M., Lovell J.D.,
+RA   Marsh V.L., Martin S.L., McConnachie L.J., McLay K., McMurray A.A.,
+RA   Milne S.A., Mistry D., Moore M.J.F., Mullikin J.C., Nickerson T.,
+RA   Oliver K., Parker A., Patel R., Pearce T.A.V., Peck A.I.,
+RA   Phillimore B.J.C.T., Prathalingam S.R., Plumb R.W., Ramsay H.,
+RA   Rice C.M., Ross M.T., Scott C.E., Sehra H.K., Shownkeen R., Sims S.,
+RA   Skuce C.D., Smith M.L., Soderlund C., Steward C.A., Sulston J.E.,
+RA   Swann R.M., Sycamore N., Taylor R., Tee L., Thomas D.W., Thorpe A.,
+RA   Tracey A., Tromans A.C., Vaudin M., Wall M., Wallis J.M.,
+RA   Whitehead S.L., Whittaker P., Willey D.L., Williams L., Williams S.A.,
+RA   Wilming L., Wray P.W., Hubbard T., Durbin R.M., Bentley D.R., Beck S.,
+RA   Rogers J.;
+RT   "The DNA sequence and comparative analysis of human chromosome 20.";
+RL   Nature 414:865-871(2001).
+RN   [2]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RA   Mural R.J., Istrail S., Sutton G.G., Florea L., Halpern A.L.,
+RA   Mobarry C.M., Lippert R., Walenz B., Shatkay H., Dew I., Miller J.R.,
+RA   Flanigan M.J., Edwards N.J., Bolanos R., Fasulo D., Halldorsson B.V.,
+RA   Hannenhalli S., Turner R., Yooseph S., Lu F., Nusskern D.R.,
+RA   Shue B.C., Zheng X.H., Zhong F., Delcher A.L., Huson D.H.,
+RA   Kravitz S.A., Mouchard L., Reinert K., Remington K.A., Clark A.G.,
+RA   Waterman M.S., Eichler E.E., Adams M.D., Hunkapiller M.W., Myers E.W.,
+RA   Venter J.C.;
+RL   Submitted (SEP-2005) to the EMBL/GenBank/DDBJ databases.
+RN   [3]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE MRNA] (ISOFORM 1).
+RC   TISSUE=Lung, and Skin;
+RX   PubMed=15489334; DOI=10.1101/gr.2596504;
+RG   The MGC Project Team;
+RT   "The status, quality, and expansion of the NIH full-length cDNA
+RT   project: the Mammalian Gene Collection (MGC).";
+RL   Genome Res. 14:2121-2127(2004).
+RN   [4]
+RP   NUCLEOTIDE SEQUENCE [GENOMIC DNA] OF 1-185 (ISOFORM 1).
+RX   MEDLINE=87257903; PubMed=3299057;
+RA   Tanaka A., Gibbs C.P., Arthur R.R., Anderson S.K., Kung H.-J.,
+RA   Fujita D.J.;
+RT   "DNA sequence encoding the amino-terminal region of the human c-src
+RT   protein: implications of sequence divergence among src-type kinase
+RT   oncogenes.";
+RL   Mol. Cell. Biol. 7:1978-1983(1987).
+RN   [5]
+RP   NUCLEOTIDE SEQUENCE [GENOMIC DNA] OF 186-536 (ISOFORM 1).
+RX   MEDLINE=85213483; PubMed=2582238;
+RA   Anderson S.K., Gibbs C.P., Tanaka A., Kung H.-J., Fujita D.J.;
+RT   "Human cellular src gene: nucleotide sequence and derived amino acid
+RT   sequence of the region coding for the carboxy-terminal two-thirds of
+RT   pp60c-src.";
+RL   Mol. Cell. Biol. 5:1122-1129(1985).
+RN   [6]
+RP   NUCLEOTIDE SEQUENCE [MRNA] OF 98-139 (ISOFORM 2).
+RX   MEDLINE=90040822; PubMed=2681803; DOI=10.1002/jnr.490240113;
+RA   Pyper J.M., Bolen J.B.;
+RT   "Neuron-specific splicing of C-SRC RNA in human brain.";
+RL   J. Neurosci. Res. 24:89-96(1989).
+RN   [7]
+RP   NUCLEOTIDE SEQUENCE [GENOMIC DNA] OF 376-536 (ISOFORM 1).
+RX   MEDLINE=85187981; PubMed=2581127;
+RA   Parker R.C., Mardon G., Lebo R.V., Varmus H.E., Bishop J.M.;
+RT   "Isolation of duplicated human c-src genes located on chromosomes 1
+RT   and 20.";
+RL   Mol. Cell. Biol. 5:831-838(1985).
+RN   [8]
+RP   PHOSPHORYLATION AT TYR-419.
+RX   MEDLINE=82082387; PubMed=6273838; DOI=10.1073/pnas.78.10.6013;
+RA   Smart J.E., Oppermann H., Czernilofsky A.P., Purchio A.F.,
+RA   Erikson R.L., Bishop J.M.;
+RT   "Characterization of sites for tyrosine phosphorylation in the
+RT   transforming protein of Rous sarcoma virus (pp60v-src) and its normal
+RT   cellular homologue (pp60c-src).";
+RL   Proc. Natl. Acad. Sci. U.S.A. 78:6013-6017(1981).
+RN   [9]
+RP   ROLE IN TUMOR TISSUES.
+RX   PubMed=3093483;
+RA   Rosen N., Bolen J.B., Schwartz A.M., Cohen P., DeSeau V., Israel M.A.;
+RT   "Analysis of pp60c-src protein kinase activity in human tumor cell
+RT   lines and tissues.";
+RL   J. Biol. Chem. 261:13754-13759(1986).
+RN   [10]
+RP   ROLE IN COLON CARCINOMA.
+RX   PubMed=2498394; DOI=10.1172/JCI114113;
+RA   Cartwright C.A., Kamps M.P., Meisler A.I., Pipas J.M., Eckhart W.;
+RT   "pp60c-src activation in human colon carcinoma.";
+RL   J. Clin. Invest. 83:2025-2033(1989).
+RN   [11]
+RP   ALTERNATIVE SPLICING.
+RX   PubMed=1691439;
+RA   Pyper J.M., Bolen J.B.;
+RT   "Identification of a novel neuronal C-SRC exon expressed in human
+RT   brain.";
+RL   Mol. Cell. Biol. 10:2035-2040(1990).
+RN   [12]
+RP   SUBCELLULAR LOCATION, AND PHOSPHORYLATION AT TYR-530.
+RX   PubMed=7525268;
+RA   Kaplan K.B., Bibbins K.B., Swedlow J.R., Arnaud M., Morgan D.O.,
+RA   Varmus H.E.;
+RT   "Association of the amino-terminal half of c-Src with focal adhesions
+RT   alters their properties and is regulated by phosphorylation of
+RT   tyrosine 527.";
+RL   EMBO J. 13:4745-4756(1994).
+RN   [13]
+RP   PHOSPHORYLATION, AND ENZYME REGULATION.
+RX   PubMed=7929427;
+RA   Stover D.R., Liebetanz J., Lydon N.B.;
+RT   "Cdc2-mediated modulation of pp60c-src activity.";
+RL   J. Biol. Chem. 269:26885-26889(1994).
+RN   [14]
+RP   SUBCELLULAR LOCATION, AND FUNCTION.
+RX   PubMed=7853507;
+RA   David-Pfeuty T., Nouvian-Dooghe Y.;
+RT   "Highly specific antibody to Rous sarcoma virus src gene product
+RT   recognizes nuclear and nucleolar antigens in human cells.";
+RL   J. Virol. 69:1699-1713(1995).
+RN   [15]
+RP   INTERACTION WITH FCAMR, ENZYME REGULATION, AND FUNCTION.
+RX   PubMed=8759729;
+RA   Rabinowich H., Manciulea M., Metes D., Sulica A., Herberman R.B.,
+RA   Corey S.J., Whiteside T.L.;
+RT   "Physical and functional association of Fc mu receptor on human
+RT   natural killer cells with the zeta- and Fc epsilon RI gamma-chains and
+RT   with src family protein tyrosine kinases.";
+RL   J. Immunol. 157:1485-1491(1996).
+RN   [16]
+RP   FUNCTION IN HGF SIGNALING PATHWAY.
+RX   PubMed=8755529; DOI=10.1073/pnas.93.15.7644;
+RA   Grano M., Galimi F., Zambonin G., Colucci S., Cottone E.,
+RA   Zallone A.Z., Comoglio P.M.;
+RT   "Hepatocyte growth factor is a coupling factor for osteoclasts and
+RT   osteoblasts in vitro.";
+RL   Proc. Natl. Acad. Sci. U.S.A. 93:7644-7648(1996).
+RN   [17]
+RP   ENZYME REGULATION.
+RX   PubMed=9571170; DOI=10.1006/bbrc.1998.8452;
+RA   Yang E.B., Zhang K., Cheng L.Y., Mack P.;
+RT   "Butein, a specific protein tyrosine kinase inhibitor.";
+RL   Biochem. Biophys. Res. Commun. 245:435-438(1998).
+RN   [18]
+RP   INTERACTION WITH GNB2L1.
+RX   PubMed=9584165;
+RA   Chang B.Y., Conroy K.B., Machleder E.M., Cartwright C.A.;
+RT   "RACK1, a receptor for activated C kinase and a homolog of the beta
+RT   subunit of G proteins, inhibits activity of src tyrosine kinases and
+RT   growth of NIH 3T3 cells.";
+RL   Mol. Cell. Biol. 18:3245-3256(1998).
+RN   [19]
+RP   INTERACTION WITH ADRB2 AND ARRB1.
+RX   PubMed=9924018; DOI=10.1126/science.283.5402.655;
+RA   Luttrell L.M., Ferguson S.S.G., Daaka Y., Miller W.E., Maudsley S.,
+RA   Della Rocca G.J., Lin F.-T., Kawakatsu H., Owada K., Luttrell D.K.,
+RA   Caron M.G., Lefkowitz R.J.;
+RT   "Beta-arrestin-dependent formation of beta2 adrenergic receptor-Src
+RT   protein kinase complexes.";
+RL   Science 283:655-661(1999).
+RN   [20]
+RP   INTERACTION WITH ARRB1 AND ARRB2.
+RX   PubMed=10753943; DOI=10.1074/jbc.275.15.11312;
+RA   Miller W.E., Maudsley S., Ahn S., Khan K.D., Luttrell L.M.,
+RA   Lefkowitz R.J.;
+RT   "beta-arrestin1 interacts with the catalytic domain of the tyrosine
+RT   kinase c-SRC. Role of beta-arrestin1-dependent targeting of c-SRC in
+RT   receptor endocytosis.";
+RL   J. Biol. Chem. 275:11312-11319(2000).
+RN   [21]
+RP   INTERACTION WITH RALGPS1.
+RX   MEDLINE=20250892; PubMed=10747847; DOI=10.1074/jbc.C000085200;
+RA   Rebhun J.F., Chen H., Quilliam L.A.;
+RT   "Identification and characterization of a new family of guanine
+RT   nucleotide exchange factors for the ras-related GTPase Ral.";
+RL   J. Biol. Chem. 275:13406-13410(2000).
+RN   [22]
+RP   FUNCTION IN PHOSPHORYLATION OF RASA1 AND RASGRF1.
+RX   PubMed=11389730; DOI=10.1046/j.1432-1327.2001.02230.x;
+RA   Giglione C., Gonfloni S., Parmeggiani A.;
+RT   "Differential actions of p60c-Src and Lck kinases on the Ras
+RT   regulators p120-GAP and GDP/GTP exchange factor CDC25Mm.";
+RL   Eur. J. Biochem. 268:3275-3283(2001).
+RN   [23]
+RP   INTERACTION WITH MUC1.
+RX   PubMed=11152665; DOI=10.1074/jbc.C000754200;
+RA   Li Y., Kuwahara H., Ren J., Wen G., Kufe D.;
+RT   "The c-Src tyrosine kinase regulates signaling of the human DF3/MUC1
+RT   carcinoma-associated antigen with GSK3 beta and beta-catenin.";
+RL   J. Biol. Chem. 276:6061-6064(2001).
+RN   [24]
+RP   INTERACTION WITH GNB2L1.
+RX   PubMed=11279199; DOI=10.1074/jbc.M101375200;
+RA   Chang B.Y., Chiang M., Cartwright C.A.;
+RT   "The interaction of Src and RACK1 is enhanced by activation of protein
+RT   kinase C and tyrosine phosphorylation of RACK1.";
+RL   J. Biol. Chem. 276:20346-20356(2001).
+RN   [25]
+RP   INTERACTION WITH HEV ORF3 PROTEIN.
+RX   PubMed=11518702; DOI=10.1074/jbc.M101546200;
+RA   Korkaya H., Jameel S., Gupta D., Tyagi S., Kumar R., Zafrullah M.,
+RA   Mazumdar M., Lal S.K., Xiaofang L., Sehgal D., Das S.R., Sahal D.;
+RT   "The ORF3 protein of hepatitis E virus binds to Src homology 3 domains
+RT   and activates MAPK.";
+RL   J. Biol. Chem. 276:42389-42400(2001).
+RN   [26]
+RP   INTERACTION WITH CAV2.
+RX   MEDLINE=22206546; PubMed=12091389; DOI=10.1074/jbc.M204367200;
+RA   Lee H., Park D.S., Wang X.B., Scherer P.E., Schwartz P.E.,
+RA   Lisanti M.P.;
+RT   "Src-induced phosphorylation of caveolin-2 on tyrosine 19. Phospho-
+RT   caveolin-2 (Tyr(P)19) is localized near focal adhesions, remains
+RT   associated with lipid rafts/caveolae, but no longer forms a high
+RT   molecular mass hetero-oligomer with caveolin-1.";
+RL   J. Biol. Chem. 277:34556-34567(2002).
+RN   [27]
+RP   INTERACTION WITH PELP1.
+RX   MEDLINE=22317447; PubMed=12415108; DOI=10.1073/pnas.192569699;
+RA   Wong C.-W., McNally C., Nickbarg E., Komm B.S., Cheskis B.J.;
+RT   "Estrogen receptor-interacting protein that modulates its nongenomic
+RT   activity-crosstalk with Src/Erk phosphorylation cascade.";
+RL   Proc. Natl. Acad. Sci. U.S.A. 99:14783-14788(2002).
+RN   [28]
+RP   FUNCTION, AND SUBCELLULAR LOCATION.
+RX   PubMed=12615910; DOI=10.1083/jcb.200209098;
+RA   Miyazaki T., Neff L., Tanaka S., Horne W.C., Baron R.;
+RT   "Regulation of cytochrome c oxidase activity by c-Src in
+RT   osteoclasts.";
+RL   J. Cell Biol. 160:709-718(2003).
+RN   [29]
+RP   INTERACTION WITH EPHB1.
+RX   PubMed=12925710; DOI=10.1083/jcb.200302073;
+RA   Vindis C., Cerretti D.P., Daniel T.O., Huynh-Do U.;
+RT   "EphB1 recruits c-Src and p52Shc to activate MAPK/ERK and promote
+RT   chemotaxis.";
+RL   J. Cell Biol. 162:661-671(2003).
+RN   [30]
+RP   ENZYME REGULATION.
+RX   PubMed=14632929; DOI=10.1046/j.1399-3011.2003.00094.x;
+RA   Kamath J.R., Liu R., Enstrom A.M., Lou Q., Lam K.S.;
+RT   "Development and characterization of potent and specific peptide
+RT   inhibitors of p60c-src protein tyrosine kinase using pseudosubstrate-
+RT   based inhibitor design approach.";
+RL   J. Pept. Res. 62:260-268(2003).
+RN   [31]
+RP   FUNCTION IN PHOSPHORYLATION OF PDPK1, AND INTERACTION WITH PTK2B/PYK2.
+RX   PubMed=14585963; DOI=10.1128/MCB.23.22.8019-8029.2003;
+RA   Taniyama Y., Weber D.S., Rocic P., Hilenski L., Akers M.L., Park J.,
+RA   Hemmings B.A., Alexander R.W., Griendling K.K.;
+RT   "Pyk2- and Src-dependent tyrosine phosphorylation of PDK1 regulates
+RT   focal adhesions.";
+RL   Mol. Cell. Biol. 23:8019-8029(2003).
+RN   [32]
+RP   INTERACTION WITH CAV2.
+RX   PubMed=15504032; DOI=10.1021/bi049295+;
+RA   Wang X.B., Lee H., Capozza F., Marmon S., Sotgia F., Brooks J.W.,
+RA   Campos-Gonzalez R., Lisanti M.P.;
+RT   "Tyrosine phosphorylation of caveolin-2 at residue 27: differences in
+RT   the spatial and temporal behavior of phospho-Cav-2 (pY19 and pY27).";
+RL   Biochemistry 43:13694-13706(2004).
+RN   [33]
+RP   INTERACTION WITH CDCP1.
+RX   PubMed=15851033; DOI=10.1016/j.cell.2005.02.019;
+RA   Benes C.H., Wu N., Elia A.E.H., Dharia T., Cantley L.C., Soltoff S.P.;
+RT   "The C2 domain of PKCdelta is a phosphotyrosine binding domain.";
+RL   Cell 121:271-280(2005).
+RN   [34]
+RP   FUNCTION IN PHOSPHORYLATION OF DDR2.
+RX   PubMed=16186108; DOI=10.1074/jbc.M506921200;
+RA   Yang K., Kim J.H., Kim H.J., Park I.S., Kim I.Y., Yang B.S.;
+RT   "Tyrosine 740 phosphorylation of discoidin domain receptor 2 by Src
+RT   stimulates intramolecular autophosphorylation and Shc signaling
+RT   complex formation.";
+RL   J. Biol. Chem. 280:39058-39066(2005).
+RN   [35]
+RP   INTERACTION WITH TOM1L2.
+RX   PubMed=16479011; DOI=10.1128/MCB.26.5.1932-1947.2006;
+RA   Franco M., Furstoss O., Simon V., Benistant C., Hong W.J., Roche S.;
+RT   "The adaptor protein Tom1L1 is a negative regulator of Src mitogenic
+RT   signaling induced by growth factors.";
+RL   Mol. Cell. Biol. 26:1932-1947(2006).
+RN   [36]
+RP   INTERACTION WITH TGFB1I1.
+RX   PubMed=17202804; DOI=10.1159/000098402;
+RA   Maudsley S., Davidson L., Pawson A.J., Freestone S.H.,
+RA   Lopez de Maturana R., Thomson A.A., Millar R.P.;
+RT   "Gonadotropin-releasing hormone functionally antagonizes testosterone
+RT   activation of the human androgen receptor in prostate cells through
+RT   focal adhesion complexes involving Hic-5.";
+RL   Neuroendocrinology 84:285-300(2006).
+RN   [37]
+RP   PHOSPHORYLATION [LARGE SCALE ANALYSIS] AT TYR-439, AND MASS
+RP   SPECTROMETRY.
+RC   TISSUE=Lung carcinoma;
+RX   PubMed=18083107; DOI=10.1016/j.cell.2007.11.025;
+RA   Rikova K., Guo A., Zeng Q., Possemato A., Yu J., Haack H., Nardone J.,
+RA   Lee K., Reeves C., Li Y., Hu Y., Tan Z., Stokes M., Sullivan L.,
+RA   Mitchell J., Wetzel R., Macneill J., Ren J.M., Yuan J.,
+RA   Bakalarski C.E., Villen J., Kornhauser J.M., Smith B., Li D., Zhou X.,
+RA   Gygi S.P., Gu T.-L., Polakiewicz R.D., Rush J., Comb M.J.;
+RT   "Global survey of phosphotyrosine signaling identifies oncogenic
+RT   kinases in lung cancer.";
+RL   Cell 131:1190-1203(2007).
+RN   [38]
+RP   INTERACTION WITH AMOTL2.
+RX   PubMed=17293535; DOI=10.1242/dev.02782;
+RA   Huang H., Lu F.I., Jia S., Meng S., Cao Y., Wang Y., Ma W., Yin K.,
+RA   Wen Z., Peng J., Thisse C., Thisse B., Meng A.;
+RT   "Amotl2 is essential for cell movements in zebrafish embryo and
+RT   regulates c-Src translocation.";
+RL   Development 134:979-988(2007).
+RN   [39]
+RP   INTERACTION WITH SRCIN1.
+RX   PubMed=17525734; DOI=10.1038/sj.emboj.7601724;
+RA   Di Stefano P., Damiano L., Cabodi S., Aramu S., Tordella L.,
+RA   Praduroux A., Piva R., Cavallo F., Forni G., Silengo L., Tarone G.,
+RA   Turco E., Defilippi P.;
+RT   "p140Cap protein suppresses tumour cell properties, regulating Csk and
+RT   Src kinase activity.";
+RL   EMBO J. 26:2843-2855(2007).
+RN   [40]
+RP   PHOSPHORYLATION [LARGE SCALE ANALYSIS] AT SER-17; SER-69; SER-75 AND
+RP   TYR-419, AND MASS SPECTROMETRY.
+RC   TISSUE=Leukemic T-cell;
+RX   PubMed=17192257; DOI=10.1074/mcp.T600062-MCP200;
+RA   Wissing J., Jaensch L., Nimtz M., Dieterich G., Hornberger R.,
+RA   Keri G., Wehland J., Daub H.;
+RT   "Proteomics analysis of protein kinases by target class-selective
+RT   prefractionation and tandem mass spectrometry.";
+RL   Mol. Cell. Proteomics 6:537-547(2007).
+RN   [41]
+RP   FUNCTION.
+RX   PubMed=18586953; DOI=10.1152/ajplung.90282.2008;
+RA   Jeulin C., Seltzer V., Bailbe D., Andreau K., Marano F.;
+RT   "EGF mediates calcium-activated chloride channel activation in the
+RT   human bronchial epithelial cell line 16HBE14o-: involvement of
+RT   tyrosine kinase p60c-src.";
+RL   Am. J. Physiol. 295:L489-L496(2008).
+RN   [42]
+RP   INTERACTION WITH PDPK1.
+RX   PubMed=18024423; DOI=10.1074/jbc.M706361200;
+RA   Yang K.J., Shin S., Piao L., Shin E., Li Y., Park K.A., Byun H.S.,
+RA   Won M., Hong J., Kweon G.R., Hur G.M., Seok J.H., Chun T.,
+RA   Brazil D.P., Hemmings B.A., Park J.;
+RT   "Regulation of 3-phosphoinositide-dependent protein kinase-1 (PDK1) by
+RT   Src involves tyrosine phosphorylation of PDK1 and Src homology 2
+RT   domain binding.";
+RL   J. Biol. Chem. 283:1480-1491(2008).
+RN   [43]
+RP   PHOSPHORYLATION [LARGE SCALE ANALYSIS] AT SER-17; THR-74 AND TYR-419,
+RP   AND MASS SPECTROMETRY.
+RC   TISSUE=Platelet;
+RX   PubMed=18088087; DOI=10.1021/pr0704130;
+RA   Zahedi R.P., Lewandrowski U., Wiesner J., Wortelkamp S., Moebius J.,
+RA   Schuetz C., Walter U., Gambaryan S., Sickmann A.;
+RT   "Phosphoproteome of resting human platelets.";
+RL   J. Proteome Res. 7:526-534(2008).
+RN   [44]
+RP   INTERACTION WITH PTK2/FAK1; PI3KR1/2 AND ESR1.
+RX   PubMed=18657504; DOI=10.1016/j.molcel.2008.05.025;
+RA   Le Romancer M., Treilleux I., Leconte N., Robin-Lespinasse Y.,
+RA   Sentis S., Bouchekioua-Bouzaghou K., Goddard S., Gobert-Gosse S.,
+RA   Corbo L.;
+RT   "Regulation of estrogen rapid signaling through arginine methylation
+RT   by PRMT1.";
+RL   Mol. Cell 31:212-221(2008).
+RN   [45]
+RP   PHOSPHORYLATION [LARGE SCALE ANALYSIS] AT SER-75, AND MASS
+RP   SPECTROMETRY.
+RC   TISSUE=Cervix carcinoma;
+RX   PubMed=18691976; DOI=10.1016/j.molcel.2008.07.007;
+RA   Daub H., Olsen J.V., Bairlein M., Gnad F., Oppermann F.S., Korner R.,
+RA   Greff Z., Keri G., Stemmann O., Mann M.;
+RT   "Kinase-selective enrichment enables quantitative phosphoproteomics of
+RT   the kinome across the cell cycle.";
+RL   Mol. Cell 31:438-448(2008).
+RN   [46]
+RP   INTERACTION WITH FASLG.
+RX   PubMed=19807924; DOI=10.1186/1471-2172-10-53;
+RA   Voss M., Lettau M., Janssen O.;
+RT   "Identification of SH3 domain interaction partners of human FasL
+RT   (CD178) by phage display screening.";
+RL   BMC Immunol. 10:53-53(2009).
+RN   [47]
+RP   FUNCTION, AND INTERACTION WITH TRAF3; MAVS; DDX58 AND TBK1.
+RX   PubMed=19419966; DOI=10.1074/jbc.M808233200;
+RA   Johnsen I.B., Nguyen T.T., Bergstroem B., Fitzgerald K.A.,
+RA   Anthonsen M.W.;
+RT   "The tyrosine kinase c-Src enhances RIG-I (retinoic acid-inducible
+RT   gene I)-elicited antiviral signaling.";
+RL   J. Biol. Chem. 284:19122-19131(2009).
+RN   [48]
+RP   PHOSPHORYLATION [LARGE SCALE ANALYSIS] AT TYR-530, AND MASS
+RP   SPECTROMETRY.
+RC   TISSUE=Mammary epithelium;
+RX   PubMed=19534553; DOI=10.1021/pr900044c;
+RA   Heibeck T.H., Ding S.-J., Opresko L.K., Zhao R., Schepmoes A.A.,
+RA   Yang F., Tolmachev A.V., Monroe M.E., Camp D.G. II, Smith R.D.,
+RA   Wiley H.S., Qian W.-J.;
+RT   "An extensive survey of tyrosine phosphorylation revealing new sites
+RT   in human mammary epithelial cells.";
+RL   J. Proteome Res. 8:3852-3861(2009).
+RN   [49]
+RP   PHOSPHORYLATION AT TYR-419, AND DEPHOSPHORYLATION BY PTPRJ AT TYR-419.
+RX   PubMed=18936167; DOI=10.1128/MCB.01374-08;
+RA   Chabot C., Spring K., Gratton J.P., Elchebly M., Royal I.;
+RT   "New role for the protein tyrosine phosphatase DEP-1 in Akt activation
+RT   and endothelial cell survival.";
+RL   Mol. Cell. Biol. 29:241-253(2009).
+RN   [50]
+RP   PHOSPHORYLATION [LARGE SCALE ANALYSIS] AT SER-17; SER-35; SER-69;
+RP   THR-74; SER-75; THR-511; TYR-522 AND TYR-530, AND MASS SPECTROMETRY.
+RX   PubMed=19369195; DOI=10.1074/mcp.M800588-MCP200;
+RA   Oppermann F.S., Gnad F., Olsen J.V., Hornberger R., Greff Z., Keri G.,
+RA   Mann M., Daub H.;
+RT   "Large-scale proteomics analysis of the human kinome.";
+RL   Mol. Cell. Proteomics 8:1751-1764(2009).
+RN   [51]
+RP   ENZYME REGULATION.
+RX   PubMed=21036157; DOI=10.1016/j.bbrc.2010.10.101;
+RA   Yao X., Balamurugan P., Arvey A., Leslie C., Zhang L.;
+RT   "Heme controls the regulation of protein tyrosine kinases Jak2 and
+RT   Src.";
+RL   Biochem. Biophys. Res. Commun. 403:30-35(2010).
+RN   [52]
+RP   FUNCTION, AND INTERACTION WITH RUNX3.
+RX   PubMed=20100835; DOI=10.1074/jbc.M109.071381;
+RA   Goh Y.M., Cinghu S., Hong E.T., Lee Y.S., Kim J.H., Jang J.W.,
+RA   Li Y.H., Chi X.Z., Lee K.S., Wee H., Ito Y., Oh B.C., Bae S.C.;
+RT   "Src kinase phosphorylates RUNX3 at tyrosine residues and localizes
+RT   the protein in the cytoplasm.";
+RL   J. Biol. Chem. 285:10122-10129(2010).
+RN   [53]
+RP   INTERACTION WITH NDFIP1 AND NDFIP2.
+RX   PubMed=20534535; DOI=10.1073/pnas.0911714107;
+RA   Mund T., Pelham H.R.;
+RT   "Regulation of PTEN/Akt and MAP kinase signaling pathways by the
+RT   ubiquitin ligase activators Ndfip1 and Ndfip2.";
+RL   Proc. Natl. Acad. Sci. U.S.A. 107:11429-11434(2010).
+RN   [54]
+RP   FUNCTION, AND INTERACTION WITH TNK2.
+RX   PubMed=21309750; DOI=10.1042/BJ20102156;
+RA   Chan W., Sit S.T., Manser E.;
+RT   "The Cdc42-associated kinase ACK1 is not auto-inhibited but requires
+RT   Src for activation.";
+RL   Biochem. J. 435:355-364(2011).
+RN   [55]
+RP   PHOSPHORYLATION AT SER-75.
+RX   PubMed=21442427; DOI=10.1007/s00018-011-0638-1;
+RA   Pan Q., Qiao F., Gao C., Norman B., Optican L., Zelenka P.S.;
+RT   "Cdk5 targets active Src for ubiquitin-dependent degradation by
+RT   phosphorylating Src(S75).";
+RL   Cell. Mol. Life Sci. 68:3425-3436(2011).
+RN   [56]
+RP   REVIEW ON FUNCTION.
+RX   PubMed=8672527; DOI=10.1016/0304-419X(96)00003-0;
+RA   Brown M.T., Cooper J.A.;
+RT   "Regulation, substrates and functions of src.";
+RL   Biochim. Biophys. Acta 1287:121-149(1996).
+RN   [57]
+RP   REVIEW ON FUNCTION.
+RX   PubMed=9442882; DOI=10.1146/annurev.cellbio.13.1.513;
+RA   Thomas S.M., Brugge J.S.;
+RT   "Cellular functions regulated by Src family kinases.";
+RL   Annu. Rev. Cell Dev. Biol. 13:513-609(1997).
+RN   [58]
+RP   REVIEW ON FUNCTION.
+RX   PubMed=11964124; DOI=10.1007/s00018-002-8438-2;
+RA   Ma Y.C., Huang X.Y.;
+RT   "Novel regulation and function of Src tyrosine kinase.";
+RL   Cell. Mol. Life Sci. 59:456-462(2002).
+RN   [59]
+RP   FUNCTION IN FOCAL ADHESION DYNAMICS, AND INTERACTION WITH PTK2/FAK1
+RP   AND DNM2.
+RX   PubMed=21411625; DOI=10.1091/mbc.E10-09-0785;
+RA   Wang Y., Cao H., Chen J., McNiven M.A.;
+RT   "A direct interaction between the large GTPase dynamin-2 and FAK
+RT   regulates focal adhesion dynamics in response to active Src.";
+RL   Mol. Biol. Cell 22:1529-1538(2011).
+RN   [60]
+RP   X-RAY CRYSTALLOGRAPHY (1.7 ANGSTROMS) OF 86-536.
+RX   MEDLINE=97177105; PubMed=9024657; DOI=10.1038/385595a0;
+RA   Xu W., Harrison S.C., Eck M.J.;
+RT   "Three-dimensional structure of the tyrosine kinase c-Src.";
+RL   Nature 385:595-602(1997).
+RN   [61]
+RP   X-RAY CRYSTALLOGRAPHY (2.2 ANGSTROMS) OF 145-249.
+RX   MEDLINE=97317069; PubMed=9174343; DOI=10.1021/bi970019n;
+RA   Charifson P.S., Shewchuk L.M., Rocque W., Hummel C.W., Jordan S.R.,
+RA   Mohr C., Pacofsky G.J., Peel M.R., Rodriguez M., Sternbach D.D.,
+RA   Consler T.G.;
+RT   "Peptide ligands of pp60(c-src) SH2 domains: a thermodynamic and
+RT   structural study.";
+RL   Biochemistry 36:6283-6293(1997).
+RN   [62]
+RP   STRUCTURE BY NMR OF 204-249.
+RX   MEDLINE=95161382; PubMed=7532003; DOI=10.1021/bi00007a003;
+RA   Xu R.X., Word J.M., Davis D.G., Rink M.J., Willard D.H. Jr.,
+RA   Gampe R.T. Jr.;
+RT   "Solution structure of the human pp60c-src SH2 domain complexed with a
+RT   phosphorylated tyrosine pentapeptide.";
+RL   Biochemistry 34:2107-2121(1995).
+RN   [63]
+RP   VARIANT [LARGE SCALE ANALYSIS] THR-237.
+RX   PubMed=17344846; DOI=10.1038/nature05610;
+RA   Greenman C., Stephens P., Smith R., Dalgliesh G.L., Hunter C.,
+RA   Bignell G., Davies H., Teague J., Butler A., Stevens C., Edkins S.,
+RA   O'Meara S., Vastrik I., Schmidt E.E., Avis T., Barthorpe S.,
+RA   Bhamra G., Buck G., Choudhury B., Clements J., Cole J., Dicks E.,
+RA   Forbes S., Gray K., Halliday K., Harrison R., Hills K., Hinton J.,
+RA   Jenkinson A., Jones D., Menzies A., Mironenko T., Perry J., Raine K.,
+RA   Richardson D., Shepherd R., Small A., Tofts C., Varian J., Webb T.,
+RA   West S., Widaa S., Yates A., Cahill D.P., Louis D.N., Goldstraw P.,
+RA   Nicholson A.G., Brasseur F., Looijenga L., Weber B.L., Chiew Y.-E.,
+RA   DeFazio A., Greaves M.F., Green A.R., Campbell P., Birney E.,
+RA   Easton D.F., Chenevix-Trench G., Tan M.-H., Khoo S.K., Teh B.T.,
+RA   Yuen S.T., Leung S.Y., Wooster R., Futreal P.A., Stratton M.R.;
+RT   "Patterns of somatic mutation in human cancer genomes.";
+RL   Nature 446:153-158(2007).
+CC   -!- FUNCTION: Non-receptor protein tyrosine kinase which is activated
+CC       following engagement of many different classes of cellular
+CC       receptors including immune response receptors, integrins and other
+CC       adhesion receptors, receptor protein tyrosine kinases, G protein-
+CC       coupled receptors as well as cytokine receptors. Participates in
+CC       signaling pathways that control a diverse spectrum of biological
+CC       activities including gene transcription, immune response, cell
+CC       adhesion, cell cycle progression, apoptosis, migration, and
+CC       transformation. Due to functional redundancy between members of
+CC       the SRC kinase family, identification of the specific role of each
+CC       SRC kinase is very difficult. SRC appears to be one of the primary
+CC       kinases activated following engagement of receptors and plays a
+CC       role in the activation of other protein tyrosine kinase (PTK)
+CC       families. Receptor clustering or dimerization leads to recruitment
+CC       of SRC to the receptor complexes where it phosphorylates the
+CC       tyrosine residues within the receptor cytoplasmic domains. Plays
+CC       an important role in the regulation of cytoskeletal organization
+CC       through phosphorylation of specific substrates such as AFAP1.
+CC       Phosphorylation of AFAP1 allows the SRC SH2 domain to bind AFAP1
+CC       and to localize to actin filaments. Cytoskeletal reorganization is
+CC       also controlled through the phosphorylation of cortactin (CTTN).
+CC       When cells adhere via focal adhesions to the extracellular matrix,
+CC       signals are transmitted by integrins into the cell resulting in
+CC       tyrosine phosphorylation of a number of focal adhesion proteins,
+CC       including PTK2/FAK1 and paxillin (PXN). In addition to
+CC       phosphorylating focal adhesion proteins, SRC is also active at the
+CC       sites of cell-cell contact adherens junctions and phosphorylates
+CC       substrates such as beta-catenin (CTNNB1), delta-catenin (CTNND1),
+CC       and plakoglobin (JUP). Another type of cell-cell junction, the gap
+CC       junction, is also a target for SRC, which phosphorylates connexin-
+CC       43 (GJA1). SRC is implicated in regulation of pre-mRNA-processing
+CC       and phosphorylates RNA-binding proteins such as KHDRBS1. Also
+CC       plays a role in PDGF-mediated tyrosine phosphorylation of both
+CC       STAT1 and STAT3, leading to increased DNA binding activity of
+CC       these transcription factors. Involved in the RAS pathway through
+CC       phosphorylation of RASA1 and RASGRF1. Plays a role in EGF-mediated
+CC       calcium-activated chloride channel activation. Required for
+CC       epidermal growth factor receptor (EGFR) internalization through
+CC       phosphorylation of clathrin heavy chain (CLTC and CLTCL1) at 'Tyr-
+CC       1477'. Involved in beta-arrestin (ARRB1 and ARRB2) desensitization
+CC       through phosphorylation and activation of ADRBK1, leading to beta-
+CC       arrestin phosphorylation and internalization. Has a critical role
+CC       in the stimulation of the CDK20/MAPK3 mitogen-activated protein
+CC       kinase cascade by epidermal growth factor. Might be involved not
+CC       only in mediating the transduction of mitogenic signals at the
+CC       level of the plasma membrane but also in controlling progression
+CC       through the cell cycle via interaction with regulatory proteins in
+CC       the nucleus. Plays an important role in osteoclastic bone
+CC       resorption in conjunction with PTK2B/PYK2. Both the formation of a
+CC       SRC-PTK2B/PYK2 complex and SRC kinase activity are necessary for
+CC       this function. Recruited to activated integrins by PTK2B/PYK2,
+CC       thereby phosphorylating CBL, which in turn induces the activation
+CC       and recruitment of phosphatidylinositol 3-kinase to the cell
+CC       membrane in a signaling pathway that is critical for osteoclast
+CC       function. Promotes energy production in osteoclasts by activating
+CC       mitochondrial cytochrome C oxidase. Phosphorylates DDR2 on
+CC       tyrosine residues, thereby promoting its subsequent
+CC       autophosphorylation. Phosphorylates RUNX3 and COX2 on tyrosine
+CC       residues, TNK2 on 'Tyr-284' and CBL on 'Tyr-731'. Enhances
+CC       DDX58/RIG-I-elicited antiviral signaling. Phosphorylates PDPK1 at
+CC       'Tyr-9', 'Tyr-373' and 'Tyr-376'.
+CC   -!- CATALYTIC ACTIVITY: ATP + a [protein]-L-tyrosine = ADP + a
+CC       [protein]-L-tyrosine phosphate.
+CC   -!- ENZYME REGULATION: Phosphorylation by CSK at Tyr-530 inhibits
+CC       kinase activity. Inhibitory phosphorylation at Tyr-530 is enhanced
+CC       by heme. Further phosphorylation by CDK1 partially reactivates
+CC       CSK-inactivated SRC and facilitates complete reactivation by
+CC       protein tyrosine phosphatase PTPRC. Integrin engagement stimulates
+CC       kinase activity. Phosphorylation by PTK2/FAK1 enhances kinase
+CC       activity. Butein and pseudosubstrate-based peptide inhibitors like
+CC       CIYKYYF act as inhibitors. Phosphorylation at Tyr-419 increases
+CC       kinase activity.
+CC   -!- SUBUNIT: Interacts with DDEF1/ASAP1; via the SH3 domain. Interacts
+CC       with CCPG1. Identified in a complex containing FGFR4, NCAM1, CDH2,
+CC       PLCG1, FRS2, SRC, SHC1, GAP43 and CTTN. Interacts with ERBB2,
+CC       STAT1 and PNN. Interacts with DDR1, DDR2 and DAB2. Interacts with
+CC       CDCP1, PELP1, TGFB1I1 and TOM1L2. Interacts with the cytoplasmic
+CC       domain of MUC1, phosphorylates it and increases binding of MUC1
+CC       with beta-catenin. Interacts with RALGPS1; via the SH3 domain.
+CC       Interacts with HEV ORF3 protein; via the SH3 domain. Interacts
+CC       with CAV2 (tyrosine phosphorylated form). Interacts (via the SH3
+CC       domain and the protein kinase domain) with ARRB1; the interaction
+CC       is independent of the phosphorylation state of SRC C-terminus.
+CC       Interacts with ARRB1 and ARRB2. Interacts with SRCIN1. Interacts
+CC       with NDFIP2 and more weakly with NDFIP1. Interacts with PIK3CA
+CC       and/or PIK3C2B, PTK2/FAK1 and ESR1 (dimethylated on arginine).
+CC       Interacts with FASLG. Interacts (via SH2 domain) with the 'Tyr-
+CC       402' phosphorylated form of PTK2B/PYK2. Interacts (via SH2 domain)
+CC       with FLT3 (tyrosine phosphorylated). Interacts with PDGFRA
+CC       (tyrosine phosphorylated). Interacts with CSF1R. Interacts (via
+CC       SH2 and SH3 domain) with TNK2. Interacts (via protein kinase
+CC       domin) with the tyrosine phosphorylated form of RUNX3 (via runt
+CC       domain). Interacts with TRAF3 (via RING-type zinc finger domain).
+CC       Interacts with DDX58, MAVS and TBK1. Interacts (via SH2 domain)
+CC       with GNB2L1/RACK1; the interaction is enhanced by tyrosine
+CC       phosphorylation of GNB2L1 and inhibits SRC activity. Interacts
+CC       with EPHB1; activates the MAPK/ERK cascade to regulate cell
+CC       migration. Interacts with FCAMR. Interacts (via SH2 domain) with
+CC       the 'Tyr-9' phosphorylated form of PDPK1. Interacts with AMOTL2;
+CC       this interaction regulates the translocation of phosphorylated SRC
+CC       to peripheral cell-matrix adhesion sites.
+CC   -!- INTERACTION:
+CC       P42684:ABL2; NbExp=2; IntAct=EBI-621482, EBI-1102694;
+CC       P12814:ACTN1; NbExp=2; IntAct=EBI-621482, EBI-351710;
+CC       Q8R5G7:Arap3 (xeno); NbExp=3; IntAct=EBI-621482, EBI-621463;
+CC       Q9ULH1:ASAP1; NbExp=2; IntAct=EBI-621482, EBI-346622;
+CC       P12830:CDH1; NbExp=2; IntAct=EBI-621482, EBI-727477;
+CC       P00533:EGFR; NbExp=5; IntAct=EBI-621482, EBI-297353;
+CC       P04626:ERBB2; NbExp=10; IntAct=EBI-621482, EBI-641062;
+CC       P03372-4:ESR1; NbExp=2; IntAct=EBI-621482, EBI-4309277;
+CC       P25445:FAS; NbExp=2; IntAct=EBI-621482, EBI-494743;
+CC       Q9Y6K9:IKBKG; NbExp=3; IntAct=EBI-621482, EBI-81279;
+CC       P35968:KDR; NbExp=2; IntAct=EBI-621482, EBI-1005487;
+CC       Q07666:KHDRBS1; NbExp=3; IntAct=EBI-621482, EBI-1364;
+CC       Q05397:PTK2; NbExp=4; IntAct=EBI-621482, EBI-702142;
+CC       Q13905:RAPGEF1; NbExp=2; IntAct=EBI-621482, EBI-976876;
+CC       Q01973:ROR1; NbExp=9; IntAct=EBI-621482, EBI-6082337;
+CC       Q9C0H9:SRCIN1; NbExp=3; IntAct=EBI-621482, EBI-1393949;
+CC       Q68CZ2:TNS3; NbExp=13; IntAct=EBI-621482, EBI-1220488;
+CC   -!- SUBCELLULAR LOCATION: Cell membrane. Mitochondrion inner membrane.
+CC       Nucleus. Cytoplasm, cytoskeleton. Note=Localizes to focal adhesion
+CC       sites following integrin engagement. Localization to focal
+CC       adhesion sites requires myristoylation and the SH3 domain.
+CC   -!- ALTERNATIVE PRODUCTS:
+CC       Event=Alternative splicing; Named isoforms=2;
+CC       Name=1;
+CC         IsoId=P12931-1; Sequence=Displayed;
+CC       Name=2;
+CC         IsoId=P12931-2; Sequence=VSP_012134;
+CC   -!- TISSUE SPECIFICITY: Expressed ubiquitously. Platelets, neurons and
+CC       osteoclasts express 5-fold to 200-fold higher levels than most
+CC       other tissues.
+CC   -!- DOMAIN: The SH2 and SH3 domains are important for the
+CC       intramolecular and intermolecular interactions that regulate
+CC       catalytic activity, localization, and substrate recruitment.
+CC   -!- PTM: Myristoylated at Gly-2, and this is essential for targeting
+CC       to membranes.
+CC   -!- PTM: Dephosphorylated at Tyr-530 by PTPRJ (By similarity).
+CC       Phosphorylated on Tyr-530 by c-Src kinase (CSK). The
+CC       phosphorylated form is termed pp60c-src. Dephosphorylated by PTPRJ
+CC       at Tyr-419. Normally maintained in an inactive conformation with
+CC       the SH2 domain engaged with Tyr-530, the SH3 domain engaged with
+CC       the SH2-kinase linker, and Tyr-419 dephosphorylated.
+CC       Dephosphorylation of Tyr-530 as a result of protein tyrosine
+CC       phosphatase (PTP) action disrupts the intramolecular interaction
+CC       between the SH2 domain and Tyr-530, Tyr-419 can then become
+CC       autophosphorylated, resulting in SRC activation. Phosphorylation
+CC       of Tyr-530 by CSK allows this interaction to reform, resulting in
+CC       SRC inactivation. CDK5-mediated phosphorylation at Ser-75 targets
+CC       SRC to ubiquitin-dependent degradation and thus leads to
+CC       cytoskeletal reorganization. Phosphorylated by PTK2/FAK1; this
+CC       enhances kinase activity. Phosphorylated by PTK2B/PYK2; this
+CC       enhances kinase activity.
+CC   -!- PTM: S-nitrosylation is important for activation of its kinase
+CC       activity (By similarity).
+CC   -!- PTM: Ubiquitinated in response to CDK5-mediated phosphorylation.
+CC   -!- DISEASE: Note=SRC kinase activity has been shown to be increased
+CC       in several tumor tissues and tumor cell lines such as colon
+CC       carcinoma cells.
+CC   -!- SIMILARITY: Belongs to the protein kinase superfamily. Tyr protein
+CC       kinase family. SRC subfamily.
+CC   -!- SIMILARITY: Contains 1 protein kinase domain.
+CC   -!- SIMILARITY: Contains 1 SH2 domain.
+CC   -!- SIMILARITY: Contains 1 SH3 domain.
+CC   -----------------------------------------------------------------------
+CC   Copyrighted by the UniProt Consortium, see http://www.uniprot.org/terms
+CC   Distributed under the Creative Commons Attribution-NoDerivs License
+CC   -----------------------------------------------------------------------
+DR   EMBL; AL133293; CAC10573.1; -; Genomic_DNA.
+DR   EMBL; AL133293; CAC34523.1; -; Genomic_DNA.
+DR   EMBL; CH471077; EAW76065.1; -; Genomic_DNA.
+DR   EMBL; CH471077; EAW76064.1; -; Genomic_DNA.
+DR   EMBL; CH471077; EAW76066.1; -; Genomic_DNA.
+DR   EMBL; CH471077; EAW76067.1; -; Genomic_DNA.
+DR   EMBL; BC011566; AAH11566.1; -; mRNA.
+DR   EMBL; BC051270; AAH51270.2; -; mRNA.
+DR   EMBL; K03218; AAA60584.1; -; Genomic_DNA.
+DR   EMBL; M16237; AAA60584.1; JOINED; Genomic_DNA.
+DR   EMBL; M16243; AAA60584.1; JOINED; Genomic_DNA.
+DR   EMBL; M16244; AAA60584.1; JOINED; Genomic_DNA.
+DR   EMBL; M16245; AAA60584.1; JOINED; Genomic_DNA.
+DR   EMBL; K03212; AAA60584.1; JOINED; Genomic_DNA.
+DR   EMBL; K03213; AAA60584.1; JOINED; Genomic_DNA.
+DR   EMBL; K03214; AAA60584.1; JOINED; Genomic_DNA.
+DR   EMBL; K03215; AAA60584.1; JOINED; Genomic_DNA.
+DR   EMBL; K03216; AAA60584.1; JOINED; Genomic_DNA.
+DR   EMBL; K03217; AAA60584.1; JOINED; Genomic_DNA.
+DR   EMBL; X02647; CAA26485.1; -; Genomic_DNA.
+DR   EMBL; X03995; CAA26485.1; JOINED; Genomic_DNA.
+DR   EMBL; X03996; CAA26485.1; JOINED; Genomic_DNA.
+DR   EMBL; X03997; CAA26485.1; JOINED; Genomic_DNA.
+DR   EMBL; X03998; CAA26485.1; JOINED; Genomic_DNA.
+DR   EMBL; X03999; CAA26485.1; JOINED; Genomic_DNA.
+DR   EMBL; X04000; CAA26485.1; JOINED; Genomic_DNA.
+DR   IPI; IPI00328867; -.
+DR   IPI; IPI00641230; -.
+DR   PIR; A26891; TVHUSC.
+DR   RefSeq; NP_005408.1; NM_005417.3.
+DR   RefSeq; NP_938033.1; NM_198291.1.
+DR   UniGene; Hs.195659; -.
+DR   PDB; 1A07; X-ray; 2.20 A; A/B=144-249.
+DR   PDB; 1A08; X-ray; 2.20 A; A/B=144-249.
+DR   PDB; 1A09; X-ray; 2.00 A; A/B=144-249.
+DR   PDB; 1A1A; X-ray; 2.00 A; A/B=144-249.
+DR   PDB; 1A1B; X-ray; 2.20 A; A/B=144-249.
+DR   PDB; 1A1C; X-ray; 2.40 A; A/B=144-249.
+DR   PDB; 1A1E; X-ray; 2.20 A; A/B=144-249.
+DR   PDB; 1FMK; X-ray; 1.50 A; A=86-536.
+DR   PDB; 1HCS; NMR; -; B=144-249.
+DR   PDB; 1HCT; NMR; -; B=144-249.
+DR   PDB; 1KSW; X-ray; 2.80 A; A=86-535.
+DR   PDB; 1O41; X-ray; 1.70 A; A=145-251.
+DR   PDB; 1O42; X-ray; 1.70 A; A=145-251.
+DR   PDB; 1O43; X-ray; 1.50 A; A=145-251.
+DR   PDB; 1O44; X-ray; 1.70 A; A=145-251.
+DR   PDB; 1O45; X-ray; 1.80 A; A=145-251.
+DR   PDB; 1O46; X-ray; 2.00 A; A=145-251.
+DR   PDB; 1O47; X-ray; 1.80 A; A=145-251.
+DR   PDB; 1O48; X-ray; 1.55 A; A=145-251.
+DR   PDB; 1O49; X-ray; 1.70 A; A=145-251.
+DR   PDB; 1O4A; X-ray; 1.50 A; A=145-251.
+DR   PDB; 1O4B; X-ray; 1.85 A; A=145-251.
+DR   PDB; 1O4C; X-ray; 1.80 A; A=145-251.
+DR   PDB; 1O4D; X-ray; 1.85 A; A=145-251.
+DR   PDB; 1O4E; X-ray; 2.00 A; A=145-251.
+DR   PDB; 1O4F; X-ray; 2.00 A; A=145-251.
+DR   PDB; 1O4G; X-ray; 1.55 A; A=145-251.
+DR   PDB; 1O4H; X-ray; 2.25 A; A=145-251.
+DR   PDB; 1O4I; X-ray; 1.75 A; A=145-251.
+DR   PDB; 1O4J; X-ray; 1.70 A; A=145-251.
+DR   PDB; 1O4K; X-ray; 1.57 A; A=145-251.
+DR   PDB; 1O4L; X-ray; 1.65 A; A=145-251.
+DR   PDB; 1O4M; X-ray; 1.60 A; A=145-251.
+DR   PDB; 1O4N; X-ray; 1.60 A; A=145-251.
+DR   PDB; 1O4O; X-ray; 1.70 A; A=145-251.
+DR   PDB; 1O4P; X-ray; 1.90 A; A=145-251.
+DR   PDB; 1O4Q; X-ray; 1.70 A; A=145-251.
+DR   PDB; 1O4R; X-ray; 1.50 A; A=145-251.
+DR   PDB; 1SHD; X-ray; 2.00 A; A=144-249.
+DR   PDB; 1Y57; X-ray; 1.91 A; A=86-535.
+DR   PDB; 1YI6; X-ray; 2.00 A; A/B=261-535.
+DR   PDB; 1YOJ; X-ray; 1.95 A; A/B=254-535.
+DR   PDB; 1YOL; X-ray; 2.30 A; A/B=254-535.
+DR   PDB; 1YOM; X-ray; 2.90 A; A/B=254-535.
+DR   PDB; 2BDF; X-ray; 2.10 A; A/B=258-535.
+DR   PDB; 2BDJ; X-ray; 2.50 A; A=258-535.
+DR   PDB; 2H8H; X-ray; 2.20 A; A=2-535.
+DR   PDB; 2SRC; X-ray; 1.50 A; A=86-535.
+DR   PDBsum; 1A07; -.
+DR   PDBsum; 1A08; -.
+DR   PDBsum; 1A09; -.
+DR   PDBsum; 1A1A; -.
+DR   PDBsum; 1A1B; -.
+DR   PDBsum; 1A1C; -.
+DR   PDBsum; 1A1E; -.
+DR   PDBsum; 1FMK; -.
+DR   PDBsum; 1HCS; -.
+DR   PDBsum; 1HCT; -.
+DR   PDBsum; 1KSW; -.
+DR   PDBsum; 1O41; -.
+DR   PDBsum; 1O42; -.
+DR   PDBsum; 1O43; -.
+DR   PDBsum; 1O44; -.
+DR   PDBsum; 1O45; -.
+DR   PDBsum; 1O46; -.
+DR   PDBsum; 1O47; -.
+DR   PDBsum; 1O48; -.
+DR   PDBsum; 1O49; -.
+DR   PDBsum; 1O4A; -.
+DR   PDBsum; 1O4B; -.
+DR   PDBsum; 1O4C; -.
+DR   PDBsum; 1O4D; -.
+DR   PDBsum; 1O4E; -.
+DR   PDBsum; 1O4F; -.
+DR   PDBsum; 1O4G; -.
+DR   PDBsum; 1O4H; -.
+DR   PDBsum; 1O4I; -.
+DR   PDBsum; 1O4J; -.
+DR   PDBsum; 1O4K; -.
+DR   PDBsum; 1O4L; -.
+DR   PDBsum; 1O4M; -.
+DR   PDBsum; 1O4N; -.
+DR   PDBsum; 1O4O; -.
+DR   PDBsum; 1O4P; -.
+DR   PDBsum; 1O4Q; -.
+DR   PDBsum; 1O4R; -.
+DR   PDBsum; 1SHD; -.
+DR   PDBsum; 1Y57; -.
+DR   PDBsum; 1YI6; -.
+DR   PDBsum; 1YOJ; -.
+DR   PDBsum; 1YOL; -.
+DR   PDBsum; 1YOM; -.
+DR   PDBsum; 2BDF; -.
+DR   PDBsum; 2BDJ; -.
+DR   PDBsum; 2H8H; -.
+DR   PDBsum; 2SRC; -.
+DR   ProteinModelPortal; P12931; -.
+DR   SMR; P12931; 86-536.
+DR   DIP; DIP-1059N; -.
+DR   IntAct; P12931; 109.
+DR   MINT; MINT-93621; -.
+DR   STRING; P12931; -.
+DR   PhosphoSite; P12931; -.
+DR   DMDM; 125711; -.
+DR   OGP; P12931; -.
+DR   PRIDE; P12931; -.
+DR   DNASU; 6714; -.
+DR   Ensembl; ENST00000358208; ENSP00000350941; ENSG00000197122.
+DR   Ensembl; ENST00000360723; ENSP00000353950; ENSG00000197122.
+DR   Ensembl; ENST00000373558; ENSP00000362659; ENSG00000197122.
+DR   Ensembl; ENST00000373567; ENSP00000362668; ENSG00000197122.
+DR   Ensembl; ENST00000373578; ENSP00000362680; ENSG00000197122.
+DR   Ensembl; ENST00000445403; ENSP00000408503; ENSG00000197122.
+DR   GeneID; 6714; -.
+DR   KEGG; hsa:6714; -.
+DR   UCSC; uc002xgx.3; human.
+DR   CTD; 6714; -.
+DR   GeneCards; GC20P035973; -.
+DR   HGNC; HGNC:11283; SRC.
+DR   HPA; CAB004023; -.
+DR   MIM; 190090; gene.
+DR   neXtProt; NX_P12931; -.
+DR   PharmGKB; PA36111; -.
+DR   eggNOG; COG0515; -.
+DR   HOGENOM; HOG000233858; -.
+DR   HOVERGEN; HBG008761; -.
+DR   KO; K05704; -.
+DR   OMA; CQCWRKD; -.
+DR   BRENDA; 2.7.10.2; 2681.
+DR   Pathway_Interaction_DB; alphasynuclein_pathway; Alpha-synuclein signaling.
+DR   Pathway_Interaction_DB; amb2_neutrophils_pathway; amb2 Integrin signaling.
+DR   Pathway_Interaction_DB; arf6cyclingpathway; Arf6 signaling events.
+DR   Pathway_Interaction_DB; nfkappabatypicalpathway; Atypical NF-kappaB pathway.
+DR   Pathway_Interaction_DB; pi3kcipathway; Class I PI3K signaling events.
+DR   Pathway_Interaction_DB; pi3kciaktpathway; Class I PI3K signaling events mediated by Akt.
+DR   Pathway_Interaction_DB; endothelinpathway; Endothelins.
+DR   Pathway_Interaction_DB; epha_fwdpathway; EPHA forward signaling.
+DR   Pathway_Interaction_DB; epha2_fwdpathway; EPHA2 forward signaling.
+DR   Pathway_Interaction_DB; ephbfwdpathway; EPHB forward signaling.
+DR   Pathway_Interaction_DB; ephrinbrevpathway; Ephrin B reverse signaling.
+DR   Pathway_Interaction_DB; fgf_pathway; FGF signaling pathway.
+DR   Pathway_Interaction_DB; glypican_1pathway; Glypican 1 network.
+DR   Pathway_Interaction_DB; avb3_integrin_pathway; Integrins in angiogenesis.
+DR   Pathway_Interaction_DB; lysophospholipid_pathway; LPA receptor mediated events.
+DR   Pathway_Interaction_DB; a4b1_paxindep_pathway; Paxillin-independent events mediated by a4b1 and a4b7.
+DR   Pathway_Interaction_DB; pdgfrbpathway; PDGFR-beta signaling pathway.
+DR   Pathway_Interaction_DB; er_nongenomic_pathway; Plasma membrane estrogen receptor signaling.
+DR   Pathway_Interaction_DB; ar_tf_pathway; Regulation of Androgen receptor activity.
+DR   Pathway_Interaction_DB; p38alphabetapathway; Regulation of p38-alpha and p38-beta.
+DR   Pathway_Interaction_DB; s1p_s1p3_pathway; S1P3 pathway.
+DR   Pathway_Interaction_DB; met_pathway; Signaling events activated by Hepatocyte Growth Factor Receptor (c-Met).
+DR   Pathway_Interaction_DB; prlsignalingeventspathway; Signaling events mediated by PRL.
+DR   Pathway_Interaction_DB; ptp1bpathway; Signaling events mediated by PTP1B.
+DR   Pathway_Interaction_DB; vegfr1_2_pathway; Signaling events mediated by VEGFR1 and VEGFR2.
+DR   Pathway_Interaction_DB; ret_pathway; Signaling events regulated by Ret tyrosine kinase.
+DR   Pathway_Interaction_DB; syndecan_2_pathway; Syndecan-2-mediated signaling events.
+DR   Pathway_Interaction_DB; syndecan_3_pathway; Syndecan-3-mediated signaling events.
+DR   Pathway_Interaction_DB; txa2pathway; Thromboxane A2 receptor signaling.
+DR   Pathway_Interaction_DB; pi3kplctrkpathway; Trk receptor signaling mediated by PI3K and PLC-gamma.
+DR   Reactome; REACT_111045; Developmental Biology.
+DR   Reactome; REACT_111102; Signal Transduction.
+DR   Reactome; REACT_111155; Cell-Cell communication.
+DR   Reactome; REACT_11123; Membrane Trafficking.
+DR   Reactome; REACT_116125; Disease.
+DR   Reactome; REACT_604; Hemostasis.
+DR   Reactome; REACT_6900; Immune System.
+DR   DrugBank; DB01254; Dasatinib.
+DR   EvolutionaryTrace; P12931; -.
+DR   GenomeRNAi; 6714; -.
+DR   NextBio; 26186; -.
+DR   PMAP-CutDB; P12931; -.
+DR   ArrayExpress; P12931; -.
+DR   Bgee; P12931; -.
+DR   CleanEx; HS_SRC; -.
+DR   Genevestigator; P12931; -.
+DR   GermOnline; ENSG00000197122; Homo sapiens.
+DR   GO; GO:0005901; C:caveola; IDA:BHF-UCL.
+DR   GO; GO:0005856; C:cytoskeleton; IEA:UniProtKB-SubCell.
+DR   GO; GO:0005829; C:cytosol; TAS:Reactome.
+DR   GO; GO:0005770; C:late endosome; IDA:UniProtKB.
+DR   GO; GO:0005764; C:lysosome; IDA:UniProtKB.
+DR   GO; GO:0005743; C:mitochondrial inner membrane; IDA:UniProtKB.
+DR   GO; GO:0005634; C:nucleus; IEA:UniProtKB-SubCell.
+DR   GO; GO:0005524; F:ATP binding; IEA:UniProtKB-KW.
+DR   GO; GO:0020037; F:heme binding; IDA:UniProtKB.
+DR   GO; GO:0004715; F:non-membrane spanning protein tyrosine kinase activity; TAS:BHF-UCL.
+DR   GO; GO:0007411; P:axon guidance; TAS:Reactome.
+DR   GO; GO:0045453; P:bone resorption; ISS:UniProtKB.
+DR   GO; GO:0060444; P:branching involved in mammary gland duct morphogenesis; IEA:Compara.
+DR   GO; GO:0007155; P:cell adhesion; IEA:UniProtKB-KW.
+DR   GO; GO:0007049; P:cell cycle; IEA:UniProtKB-KW.
+DR   GO; GO:0016044; P:cellular membrane organization; TAS:Reactome.
+DR   GO; GO:0071393; P:cellular response to progesterone stimulus; ISS:BHF-UCL.
+DR   GO; GO:0007173; P:epidermal growth factor receptor signaling pathway; TAS:Reactome.
+DR   GO; GO:0008543; P:fibroblast growth factor receptor signaling pathway; TAS:Reactome.
+DR   GO; GO:0030900; P:forebrain development; IEA:Compara.
+DR   GO; GO:0007243; P:intracellular protein kinase cascade; IDA:BHF-UCL.
+DR   GO; GO:0050900; P:leukocyte migration; TAS:Reactome.
+DR   GO; GO:2000811; P:negative regulation of anoikis; IMP:UniProtKB.
+DR   GO; GO:2001237; P:negative regulation of extrinsic apoptotic signaling pathway; IMP:UniProtKB.
+DR   GO; GO:0051895; P:negative regulation of focal adhesion assembly; ISS:BHF-UCL.
+DR   GO; GO:2001243; P:negative regulation of intrinsic apoptotic signaling pathway; IMP:UniProtKB.
+DR   GO; GO:0048011; P:nerve growth factor receptor signaling pathway; TAS:Reactome.
+DR   GO; GO:0048477; P:oogenesis; IEA:Compara.
+DR   GO; GO:0018108; P:peptidyl-tyrosine phosphorylation; IEA:Compara.
+DR   GO; GO:0030168; P:platelet activation; TAS:Reactome.
+DR   GO; GO:0090263; P:positive regulation of canonical Wnt receptor signaling pathway; IEA:Compara.
+DR   GO; GO:0033625; P:positive regulation of integrin activation; TAS:BHF-UCL.
+DR   GO; GO:0050847; P:progesterone receptor signaling pathway; ISS:BHF-UCL.
+DR   GO; GO:0007265; P:Ras protein signal transduction; TAS:Reactome.
+DR   GO; GO:0045124; P:regulation of bone resorption; TAS:BHF-UCL.
+DR   GO; GO:0033146; P:regulation of intracellular estrogen receptor signaling pathway; IEA:Compara.
+DR   GO; GO:0043114; P:regulation of vascular permeability; TAS:BHF-UCL.
+DR   GO; GO:0070555; P:response to interleukin-1; IMP:BHF-UCL.
+DR   GO; GO:0007172; P:signal complex assembly; TAS:ProtInc.
+DR   GO; GO:0031295; P:T cell costimulation; TAS:Reactome.
+DR   GO; GO:0060065; P:uterus development; IEA:Compara.
+DR   GO; GO:0019048; P:virus-host interaction; IEA:UniProtKB-KW.
+DR   Gene3D; G3DSA:3.30.505.10; SH2; 1.
+DR   InterPro; IPR011009; Kinase-like_dom.
+DR   InterPro; IPR000719; Prot_kinase_cat_dom.
+DR   InterPro; IPR017441; Protein_kinase_ATP_BS.
+DR   InterPro; IPR001245; Ser-Thr/Tyr_kinase_cat_dom.
+DR   InterPro; IPR000980; SH2.
+DR   InterPro; IPR001452; SH3_domain.
+DR   InterPro; IPR008266; Tyr_kinase_AS.
+DR   InterPro; IPR020635; Tyr_kinase_cat_dom.
+DR   Pfam; PF07714; Pkinase_Tyr; 1.
+DR   Pfam; PF00017; SH2; 1.
+DR   Pfam; PF00018; SH3_1; 1.
+DR   PRINTS; PR00401; SH2DOMAIN.
+DR   PRINTS; PR00452; SH3DOMAIN.
+DR   PRINTS; PR00109; TYRKINASE.
+DR   SMART; SM00252; SH2; 1.
+DR   SMART; SM00326; SH3; 1.
+DR   SMART; SM00219; TyrKc; 1.
+DR   SUPFAM; SSF56112; Kinase_like; 1.
+DR   SUPFAM; SSF50044; SH3; 1.
+DR   PROSITE; PS00107; PROTEIN_KINASE_ATP; 1.
+DR   PROSITE; PS50011; PROTEIN_KINASE_DOM; 1.
+DR   PROSITE; PS00109; PROTEIN_KINASE_TYR; 1.
+DR   PROSITE; PS50001; SH2; 1.
+DR   PROSITE; PS50002; SH3; 1.
+PE   1: Evidence at protein level;
+KW   3D-structure; Alternative splicing; ATP-binding; Cell adhesion;
+KW   Cell cycle; Cell membrane; Complete proteome; Cytoplasm; Cytoskeleton;
+KW   Host-virus interaction; Immunity; Kinase; Lipoprotein; Membrane;
+KW   Mitochondrion; Mitochondrion inner membrane; Myristate;
+KW   Nucleotide-binding; Nucleus; Phosphoprotein; Polymorphism;
+KW   Proto-oncogene; Reference proteome; S-nitrosylation; SH2 domain;
+KW   SH3 domain; Transferase; Tyrosine-protein kinase; Ubl conjugation.
+FT   INIT_MET      1      1       Removed (By similarity).
+FT   CHAIN         2    536       Proto-oncogene tyrosine-protein kinase
+FT                                Src.
+FT                                /FTId=PRO_0000088141.
+FT   DOMAIN       84    145       SH3.
+FT   DOMAIN      151    248       SH2.
+FT   DOMAIN      270    523       Protein kinase.
+FT   NP_BIND     276    284       ATP.
+FT   ACT_SITE    389    389       Proton acceptor.
+FT   BINDING     298    298       ATP.
+FT   MOD_RES      17     17       Phosphoserine.
+FT   MOD_RES      35     35       Phosphoserine.
+FT   MOD_RES      69     69       Phosphoserine.
+FT   MOD_RES      74     74       Phosphothreonine.
+FT   MOD_RES      75     75       Phosphoserine; by CDK5.
+FT   MOD_RES     187    187       Phosphotyrosine (By similarity).
+FT   MOD_RES     419    419       Phosphotyrosine; by autocatalysis.
+FT   MOD_RES     419    419       Phosphotyrosine; by FAK2 (By similarity).
+FT   MOD_RES     439    439       Phosphotyrosine.
+FT   MOD_RES     501    501       S-nitrosocysteine (By similarity).
+FT   MOD_RES     511    511       Phosphothreonine.
+FT   MOD_RES     522    522       Phosphotyrosine.
+FT   MOD_RES     530    530       Phosphotyrosine; by CSK.
+FT   LIPID         2      2       N-myristoyl glycine.
+FT   VAR_SEQ     117    117       T -> TRKVDVR (in isoform 2).
+FT                                /FTId=VSP_012134.
+FT   VARIANT     176    176       L -> F (in dbSNP:rs6018260).
+FT                                /FTId=VAR_051699.
+FT   VARIANT     237    237       A -> T (in dbSNP:rs34881773).
+FT                                /FTId=VAR_041830.
+FT   STRAND       87     93
+FT   STRAND       99    102
+FT   STRAND      110    114
+FT   STRAND      118    126
+FT   TURN        127    129
+FT   STRAND      132    136
+FT   HELIX       137    139
+FT   STRAND      140    142
+FT   HELIX       146    148
+FT   STRAND      152    154
+FT   HELIX       158    165
+FT   STRAND      167    170
+FT   STRAND      174    179
+FT   STRAND      181    183
+FT   STRAND      187    195
+FT   TURN        196    198
+FT   STRAND      199    209
+FT   STRAND      211    213
+FT   STRAND      215    218
+FT   STRAND      221    225
+FT   HELIX       226    233
+FT   STRAND      240    242
+FT   STRAND      256    259
+FT   HELIX       267    269
+FT   STRAND      270    278
+FT   STRAND      283    289
+FT   TURN        290    292
+FT   STRAND      293    299
+FT   TURN        302    304
+FT   HELIX       307    319
+FT   STRAND      328    332
+FT   STRAND      334    336
+FT   STRAND      338    341
+FT   HELIX       349    353
+FT   HELIX       355    358
+FT   HELIX       363    382
+FT   HELIX       392    394
+FT   STRAND      395    397
+FT   HELIX       399    401
+FT   STRAND      403    405
+FT   HELIX       410    413
+FT   HELIX       417    420
+FT   TURN        423    426
+FT   HELIX       429    431
+FT   HELIX       434    439
+FT   HELIX       444    459
+FT   TURN        460    462
+FT   HELIX       471    479
+FT   HELIX       492    501
+FT   HELIX       506    508
+FT   HELIX       512    520
+FT   TURN        521    523
+SQ   SEQUENCE   536 AA;  59835 MW;  C1908084683E5DE8 CRC64;
+     MGSNKSKPKD ASQRRRSLEP AENVHGAGGG AFPASQTPSK PASADGHRGP SAAFAPAAAE
+     PKLFGGFNSS DTVTSPQRAG PLAGGVTTFV ALYDYESRTE TDLSFKKGER LQIVNNTEGD
+     WWLAHSLSTG QTGYIPSNYV APSDSIQAEE WYFGKITRRE SERLLLNAEN PRGTFLVRES
+     ETTKGAYCLS VSDFDNAKGL NVKHYKIRKL DSGGFYITSR TQFNSLQQLV AYYSKHADGL
+     CHRLTTVCPT SKPQTQGLAK DAWEIPRESL RLEVKLGQGC FGEVWMGTWN GTTRVAIKTL
+     KPGTMSPEAF LQEAQVMKKL RHEKLVQLYA VVSEEPIYIV TEYMSKGSLL DFLKGETGKY
+     LRLPQLVDMA AQIASGMAYV ERMNYVHRDL RAANILVGEN LVCKVADFGL ARLIEDNEYT
+     ARQGAKFPIK WTAPEAALYG RFTIKSDVWS FGILLTELTT KGRVPYPGMV NREVLDQVER
+     GYRMPCPPEC PESLHDLMCQ CWRKEPEERP TFEYLQAFLE DYFTSTEPQY QPGENL
+//
