@@ -1,0 +1,7 @@
+
+
+moegliche Verbesserungen:
+ - mehr Uebungen! z.B. Verzeichniss erstellen, Dateien kopieren etc.
+ - Am Anfang CTRL-D / exit erklaeren 
+
+
