@@ -1,0 +1,6 @@
+
+ToDo:
+-----
+
+- Make sure Dan adds /g/software/bin to $PATH
+
