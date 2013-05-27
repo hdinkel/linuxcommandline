@@ -3,4 +3,5 @@ ToDo:
 -----
 
 - Make sure Dan adds /g/software/bin to $PATH
+- Add a file with simple text to show each command (sed, awk, grep)
 
