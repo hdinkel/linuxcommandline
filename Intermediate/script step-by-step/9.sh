@@ -24,7 +24,7 @@ while [ "$#" -gt 0 ]; do
       ;;
   *)
       IDS=$*
-      shift
+      break
       ;;
   esac
 done

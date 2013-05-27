@@ -24,7 +24,7 @@ while [ "$#" -gt 0 ]; do
       ;;
   *)
       IDS=$*
-      shift
+      shift $#
       ;;
   esac
 done
@@ -39,7 +39,7 @@ for ID in $IDS; do
     echo "Sorry, file $ID.pdb not found"
   else
     bsub -o out.$ID.txt -e error.$ID.txt "cat pymol-var.pml | sed "s/PDBID/$ID/" | pymol -c -p" > /dev/null
-    [ $? -ne 0 ] && MYSTATUS=1
+    [ $? -ne 0 ] && EXITSTATUS=1
   fi
 done
 
@@ -60,10 +60,10 @@ until test $ALLDONE -eq 1; do
     done
 done
 
-if [ $MYSTATUS -ne 0 ]; then
+if [ $EXITSTATUS -ne 0 ]; then
   echo "An error occured..."
 else
   echo "All done successfully"
 fi
 
-exit $MYSTATUS
+exit $EXITSTATUS
