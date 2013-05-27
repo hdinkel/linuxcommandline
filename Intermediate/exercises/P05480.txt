@@ -1,0 +1,10 @@
+ID   SRC_MOUSE               Reviewed;         541 AA.
+AC   P05480; Q2M4I4;
+DT   01-NOV-1988, integrated into UniProtKB/Swiss-Prot.
+DT   27-JUL-2011, sequence version 4.
+DT   01-MAY-2013, entry version 147.
+DE   RecName: Full=Neuronal proto-oncogene tyrosine-protein kinase Src;
+DE            EC=2.7.10.2;
+DE   AltName: Full=Proto-oncogene c-Src;
+DE   AltName: Full=pp60c-src;
+DE            Short=p60-Src;
