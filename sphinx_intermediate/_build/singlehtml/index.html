@@ -1,0 +1,722 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Intermediate Linux Course 1.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/nature.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '',
+        VERSION:     '1.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="None" href="index.html#document-index" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li><a href="index.html#document-index">Intermediate Linux Course 1.1 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="welcome-to-the-course-intermediate-linux-course-commandline-and-basic-scripting">
+<h1>Welcome to the Course &#8220;Intermediate Linux Course: Commandline and Basic Scripting&#8221;<a class="headerlink" href="#welcome-to-the-course-intermediate-linux-course-commandline-and-basic-scripting" title="Permalink to this headline">¶</a></h1>
+<div class="toctree-wrapper compound">
+<span id="document-commandlinetools"></span><div class="section" id="more-commandline-tools">
+<h2>More Commandline Tools<a class="headerlink" href="#more-commandline-tools" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="command-line-tools">
+<h3>Command-line Tools<a class="headerlink" href="#command-line-tools" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="gzip">
+<h4>GZIP<a class="headerlink" href="#gzip" title="Permalink to this headline">¶</a></h4>
+<p><em>gzip</em> is a compression/decompression tool.
+When used on a file (without any parameters) it will compress it and replace the
+file by a compressed version with the extension ‘.gz’ attached:</p>
+<blockquote>
+<div><div class="highlight-python"><pre>ls textfile*
+ textfile
+gzip textfile
+ls textfile*
+ textfile.gz</pre>
+</div>
+</div></blockquote>
+<p>To revert this / to uncompress, use the parameter <tt class="docutils literal"><span class="pre">-d</span></tt>:</p>
+<blockquote>
+<div><div class="highlight-python"><pre>ls textfile*
+ textfile.gz
+gzip -d textfile
+ls textfile*
+ textfile</pre>
+</div>
+</div></blockquote>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">As a convenience, on most Linux systems, a shellscript named <tt class="docutils literal"><span class="pre">gunzip</span></tt> exists which simply calls <tt class="docutils literal"><span class="pre">gzip</span> <span class="pre">–d</span></tt></p>
+</div>
+</div>
+<div class="section" id="tar">
+<h4>TAR<a class="headerlink" href="#tar" title="Permalink to this headline">¶</a></h4>
+<p><tt class="docutils literal"><span class="pre">tar</span></tt> (tape archive) is a tool to handle archives. Initially it was created to combine
+multiple files/directories to be written onto tape, it is now the standard tool to
+collect files for distribution or archiving.</p>
+<p><tt class="docutils literal"><span class="pre">tar</span></tt> stores the permissions of the files within an archive and also copies special files
+(such as symlinks etc.), which makes it an ideal tool for archiving...
+Usually tar is used in conjunction with a compression tool such as gzip to create a
+compressed archive:</p>
+<div class="figure">
+<img alt="_images/targzip.png" src="_images/targzip.png" />
+<p class="caption">source: Th0msn80 (Wikipedia)</p>
+</div>
+<p>The most common command-line switches are:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="17%" />
+<col width="83%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Option:</th>
+<th class="head">Effect:</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>-c</td>
+<td>create an archive</td>
+</tr>
+<tr class="row-odd"><td>-t</td>
+<td>test an archive</td>
+</tr>
+<tr class="row-even"><td>-x</td>
+<td>extract an archive</td>
+</tr>
+<tr class="row-odd"><td>-z</td>
+<td>use gzip compression</td>
+</tr>
+<tr class="row-even"><td>-f</td>
+<td>filename filename of the archive</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Don’t forget to specify the target filename.
+It needs to follow the <tt class="docutils literal"><span class="pre">–f</span></tt> parameter. Although you can combine options like such: <tt class="docutils literal"><span class="pre">tar</span> <span class="pre">–czf</span> <span class="pre">archive.tar</span></tt>
+the order matters, so <tt class="docutils literal"><span class="pre">tar</span> <span class="pre">–cfz</span> <span class="pre">archive.tar</span></tt> will <em>not</em> do what you want...</p>
+</div>
+<p>Creating an archive containing two files:</p>
+<blockquote>
+<div><div class="highlight-python"><pre>tar -cf archive.tar textfile1 textfile2</pre>
+</div>
+</div></blockquote>
+<p>Listing the contents of an archive:</p>
+<blockquote>
+<div><div class="highlight-python"><pre>tar -tf archive.tar
+ textfile1
+ textfile2</pre>
+</div>
+</div></blockquote>
+<p>Extracting an archive:</p>
+<blockquote>
+<div><div class="highlight-python"><pre>tar -xf archive.tar</pre>
+</div>
+</div></blockquote>
+<p>Creating and extracting a compressed archive containing two files:</p>
+<blockquote>
+<div><div class="highlight-python"><pre>tar -czf archive.tar.gz textfile1 textfile2
+tar -xzf archive.tar.gz</pre>
+</div>
+</div></blockquote>
+<p>GREP
+Find lines matching a pattern in textfiles
+Usage: grep [options] pattern file(s)</p>
+<blockquote>
+<div><div class="highlight-python"><pre>grep -i ensembl P04637.txt
+
+ DR Ensembl; ENST00000269305; ENSP00000269305; ENSG00000141510.
+ DR Ensembl; ENST00000359597; ENSP00000352610; ENSG00000141510.
+ DR Ensembl; ENST00000419024; ENSP00000402130; ENSG00000141510.
+ DR Ensembl; ENST00000420246; ENSP00000391127; ENSG00000141510.
+ DR Ensembl; ENST00000445888; ENSP00000391478; ENSG00000141510.
+ DR Ensembl; ENST00000455263; ENSP00000398846; ENSG00000141510.</pre>
+</div>
+</div></blockquote>
+<p>Useful options:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="12%" />
+<col width="88%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Option:</th>
+<th class="head">Effect:</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>-v</td>
+<td>Print lines that do not match</td>
+</tr>
+<tr class="row-odd"><td>-i</td>
+<td>Search case-insensitive</td>
+</tr>
+<tr class="row-even"><td>-l</td>
+<td>List files with matching lines, not the lines itself</td>
+</tr>
+<tr class="row-odd"><td>-L</td>
+<td>List files without matches</td>
+</tr>
+<tr class="row-even"><td>-c</td>
+<td>Print count of matching lines for each file</td>
+</tr>
+</tbody>
+</table>
+<p>Count the number of fasta sequences (they start with a “&gt;”) in a file:</p>
+<blockquote>
+<div><div class="highlight-python"><pre>grep –c '&gt;' twofiles.fasta
+grep –c &gt; twofiles.fasta
+grep –c \&gt; twofiles.fasta
+grep –c \\&gt; twofiles.fasta
+ 2</pre>
+</div>
+</div></blockquote>
+<p>List all files containing the term “Ensembl”:</p>
+<blockquote>
+<div><div class="highlight-python"><pre>grep –l Ensembl *.txt
+ P04062.txt
+ P12931.txt</pre>
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="sed">
+<h4>SED<a class="headerlink" href="#sed" title="Permalink to this headline">¶</a></h4>
+<p><tt class="docutils literal"><span class="pre">sed</span></tt> is a Stream EDitor, it modifies text (text can be a file or a pipe) on the fly.</p>
+<p><em>Usage</em>: ‘<tt class="docutils literal"><span class="pre">sed</span> <span class="pre">command</span> <span class="pre">file</span></tt>’,</p>
+<p>The most common usecases are:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="67%" />
+<col width="33%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Usecase</th>
+<th class="head">Command:</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Substitute TEXT by REPLACEMENT:</td>
+<td>‘s/TEXT/REPLACEMENT/’</td>
+</tr>
+<tr class="row-odd"><td>Transliterate the characters x a, and y b:</td>
+<td>‘y/xy/ab/’</td>
+</tr>
+<tr class="row-even"><td>Print lines containing PATTERN:</td>
+<td>‘/PATTERN/p’</td>
+</tr>
+<tr class="row-odd"><td>Delete lines containing PATTERN:</td>
+<td>‘/PATTERN/d’</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<div><div class="highlight-python"><pre>echo “This is text.” | sed 's/text/replaced stuff/’
+
+ This is replaced stuff.</pre>
+</div>
+</div></blockquote>
+<p>By default, text substitution are performed only once per line. You need to add a
+trailing ‘g’ option, to make the substitution ‘global’ (‘s/TEXT/REPLACEMENT/g’),
+meaning all occurrences in a line are substituted (not just the first in each line).
+Note the difference:</p>
+<blockquote>
+<div><div class="highlight-python"><pre>echo “ACCAAGCATTGGAGGAATATCGTAGGTAAA” | sed ‘s/A/_/’
+
+ _CCAAGCATTGGAGGAATATCGTAGGTAAA
+
+echo “ACCAAGCATTGGAGGAATATCGTAGGTAAA” | sed ‘s/A/_/g’
+ _CC__GC_TTGG_GG__T_TCGT_GGT___</pre>
+</div>
+</div></blockquote>
+<p>When used on a file, sed prints the file to standard output, replacing text as it goes
+along:</p>
+<blockquote>
+<div><div class="highlight-python"><pre>echo “This is text” &gt; textfile
+echo “This is even more text” &gt;&gt; textfile
+sed 's/text/stuff/' textfile
+ This is stuff
+ This is even more stuff</pre>
+</div>
+</div></blockquote>
+<p>sed can also be used to print certain lines (not replacing text) that match a pattern.
+For this you leave out the leading ‘s’ and just provide a pattern: ‘/PATTERN/p’. The
+trailing letter determines, what sed should do with the text that matches the pattern
+(‘p’: print, ‘d’: delete)</p>
+<blockquote>
+<div><div class="highlight-python"><pre>sed '/more/p' textfile
+
+ This is text
+ This is even more text
+ This is even more text</pre>
+</div>
+</div></blockquote>
+<p>As sed by default prints each line, you see the line that matched the pattern,
+printed twice. Use option ‘-n’ to suppress default printing of lines.</p>
+<blockquote>
+<div><div class="highlight-python"><pre>sed -n '/more/p' textfile
+
+ This is even more text</pre>
+</div>
+</div></blockquote>
+<p>Delete lines matching the pattern:</p>
+<blockquote>
+<div><div class="highlight-python"><pre>sed '/more/d' textfile
+
+ This is text</pre>
+</div>
+</div></blockquote>
+<p>Multiple sed statements can be applied to the same input stream by prepending
+each by option ‘-e’ (edit):</p>
+<blockquote>
+<div><div class="highlight-python"><pre>sed -e 's/text/good stuff/' -e ’s/This/That/’ textfile
+
+ That is good stuff
+ That is even more good stuff</pre>
+</div>
+</div></blockquote>
+<p>Normally, sed prints the text from a file to standard output. But you can also edit
+files in place. Be careful - this will change the file! The ‘-i’ (in-place editing) won’t
+print the output. As a safety measure, this option will ask for an extension that will
+be used to rename the original file to. For instance, the following option ‘-i.bak’
+will edit the file and rename the original file to textfile.bak:</p>
+<blockquote>
+<div><div class="highlight-python"><pre>sed –i.bak 's/text/stuff/' textfile
+cat textfile
+ This is stuff
+ This is even more stuff
+cat textfile.bak
+ This is text
+ This is even more text</pre>
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="awk">
+<h4>AWK<a class="headerlink" href="#awk" title="Permalink to this headline">¶</a></h4>
+<p>awk is more than just a command, it is a complete text processing language (the
+name is an abbreviation of the author’s names).
+Each line of the input (file or pipe) is treated as a record and is broken into fields.
+Generally, awk commands are of the form: &#8216;condition { action }’, where:</p>
+<p># condition is typically an expression
+# action is a series of commands</p>
+<p>If no condition is given, the action is applied to each line, otherwise just to the
+lines that match the condition.</p>
+<blockquote>
+<div><div class="highlight-python"><pre>awk '{print}' textfile
+
+ This is text
+ This is even more text
+
+awk '/more/ {print}' textfile</pre>
+</div>
+</div></blockquote>
+<p>This is even more text</p>
+<p>awk reads each line of input and automatically splits the line into columns. These
+columns can be addressed via $1, $2 and so on ($0 represents the whole line).
+So an easy way to print or rearrange columns of text is:</p>
+<blockquote>
+<div><div class="highlight-python"><pre>echo “Bob likes Sue“ | awk ‘{print $3, $2, $1}’
+
+ Sue likes Bob
+
+echo “Master Obi-Wan has lost a planet“ | awk ‘{print $4,$5,$6,$1,$2,$3}’
+ lost a planet Master Obi-Wan has</pre>
+</div>
+</div></blockquote>
+<p>awk splits text by default on whitespace (spaces or tabs), which might not be ideal in all situations. To change the field separator (FS), use option ‘-F’
+(remember to quote the field separator):</p>
+<blockquote>
+<div><div class="highlight-python"><pre>echo “field1,field2,field2“ | awk -F’,’ ‘{print $2, $1}’
+ field2 field1</pre>
+</div>
+</div></blockquote>
+<p>Note two things here: First, the field separator is not printed, and second, if you
+want to have space between the output fields, you actually need to separate them
+by a comma or they will be catenated together...</p>
+<blockquote>
+<div><div class="highlight-python"><pre>echo “field1,field2,field2“ | awk -F’,’ ‘{print $1 $2 $3}’
+ field1field2field3</pre>
+</div>
+</div></blockquote>
+<p>You can also combine the pattern matching and the column selection techniques:</p>
+<blockquote>
+<div><div class="highlight-python"><pre>awk '/more/ {print $3}' textfile
+
+ even</pre>
+</div>
+</div></blockquote>
+<p>awk really is powerful in filtering out columns, you can for instance print only
+certain columns of certain lines. Here we print the third column of those lines
+where the fourth column is ‘more’:</p>
+<blockquote>
+<div><div class="highlight-python"><pre>awk '$4==”more” {print $3}' textfile
+
+ even</pre>
+</div>
+</div></blockquote>
+<p>Note the double equal signs “==” to check for equality and note the quotes around
+“more”.
+If you want to match a field, but not exactly, you can use ‘~’ instead of ‘==’:</p>
+<blockquote>
+<div><div class="highlight-python"><pre>awk '$4~”ore” {print $3}' textfile
+
+ even</pre>
+</div>
+</div></blockquote>
+</div>
+</div>
+<div class="section" id="hints">
+<h3>Hints<a class="headerlink" href="#hints" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="quoting">
+<h4>Quoting<a class="headerlink" href="#quoting" title="Permalink to this headline">¶</a></h4>
+<p>In Programming it is often necessary to &#8220;glue together&#8221; certain words. Usually, a program or
+the shell splits sentences by whitespace (space or tabulators) and treats each word
+individually. In order to tell the computer that certain words belong together, you need to
+&#8220;quote&#8221; them, using either single (&#8216;) or double (&#8221;) quotes. The difference between these two is
+generally that within double quotes, variables will be expanded, while everything within
+single quotes is treated as string literal.
+When setting a variable, it doesn’t matter which quotes you use:</p>
+<blockquote>
+<div><div class="highlight-python"><pre>MYVAR=This is set
+ -bash: is: command not found
+
+MYVAR='This is set'
+echo $MYVAR
+ This is set
+MYVAR="This is set"
+echo $MYVAR
+ This is set</pre>
+</div>
+</div></blockquote>
+<p>However, it does matter, when using (expanding) the variable:
+Double quotes:</p>
+<blockquote>
+<div><div class="highlight-python"><pre>export MYVAR=123
+
+echo "the variable is $MYVAR"
+ the variable is 123
+echo "the variable is set" | sed "s/set/$MYVAR/"
+ the variable is 123</pre>
+</div>
+</div></blockquote>
+<p>Single quotes:</p>
+<blockquote>
+<div><div class="highlight-python"><pre>export MYVAR=123
+echo 'the variable is $MYVAR'
+ the variable is $MYVAR
+echo "the variable is set" | sed 's/set/$MYVAR/'
+ the variable is $MYVAR</pre>
+</div>
+</div></blockquote>
+<p>Weird things can happen when parsing data/text that contains quote characters:</p>
+<blockquote>
+<div><div class="highlight-python"><pre>MYVAR='Don't worry'; echo $MYVAR
+ &gt;
+# you need to press Ctrl-C to abort
+MYVAR="Don't worry"; echo $MYVAR
+ Don't worry</pre>
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="expanding-and-escaping">
+<h4>Expanding and Escaping<a class="headerlink" href="#expanding-and-escaping" title="Permalink to this headline">¶</a></h4>
+<p>You already learned how to expand a variable such that its value is used instead of its name:</p>
+<blockquote>
+<div><div class="highlight-python"><pre>export MYVAR=123
+
+echo "the variable is $MYVAR"
+ the variable is 123</pre>
+</div>
+</div></blockquote>
+<p>&#8220;Escaping&#8221; a variable is the opposite, ensuring that the literal variable name is used instead of its value:</p>
+<blockquote>
+<div><div class="highlight-python"><pre>export MYVAR=123
+
+echo "the \$MYVAR variable is $MYVAR"
+ the $MYVAR variable is 123</pre>
+</div>
+</div></blockquote>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The “escape character” is usually the backslash &#8220;<tt class="docutils literal"><span class="pre">\</span></tt>&#8221;.</p>
+</div>
+</div>
+</div>
+</div>
+<span id="document-solutions"></span><div class="section" id="solutions-to-the-exercises">
+<h2>Solutions to the Exercises<a class="headerlink" href="#solutions-to-the-exercises" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="commandline-tools">
+<h3>Commandline tools<a class="headerlink" href="#commandline-tools" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="tar-gzip">
+<h4>TAR &amp; GZIP<a class="headerlink" href="#tar-gzip" title="Permalink to this headline">¶</a></h4>
+<ol class="arabic">
+<li><p class="first">Use gzip to compress the file P12931.txt</p>
+<div class="highlight-python"><pre>gzip P12931.txt</pre>
+</div>
+</li>
+<li><p class="first">Decompress the resulting file P12931.txt.gz (revert previous command)</p>
+<div class="highlight-python"><pre>gunzip P12931.txt.gz</pre>
+</div>
+<p>or</p>
+<div class="highlight-python"><pre>gzip –d P12931.txt.gz</pre>
+</div>
+</li>
+<li><p class="first">Use tar to create an archive containing all fasta files in the current directory into an archive called “fastafiles.tar”</p>
+<div class="highlight-python"><pre>tar –c -f fastafiles.tar *.fasta</pre>
+</div>
+</li>
+<li><p class="first">Use gzip to compress the archive “fastafiles.tar”.</p>
+<div class="highlight-python"><pre>gzip fastafiles.tar</pre>
+</div>
+</li>
+<li><p class="first">How can you achieve the two previous steps “using tar to create archive” and “gzip the archive” in one command?</p>
+<div class="highlight-python"><pre>tar –c –z -f fastafiles.tar.gz *.fasta</pre>
+</div>
+</li>
+</ol>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Note the <tt class="docutils literal"><span class="pre">-z</span></tt></p>
+</div>
+<ol class="arabic" start="6">
+<li><p class="first">Test (list the contents of) the compressed archive “fastafiles.tar.gz”</p>
+<div class="highlight-python"><pre>tar –tf fastafiles.tar.gz</pre>
+</div>
+</li>
+<li><p class="first">Download the compressed PDB file for entry 1Y57 from rcsb.org (eg. “wget <a class="reference external" href="http://www.rcsb.org/pdb/files/1Y57.pdb.gz">http://www.rcsb.org/pdb/files/1Y57.pdb.gz</a>&#8221;) and decompress it.</p>
+<div class="highlight-python"><pre>wget "http://www.rcsb.org/pdb/files/1Y57.pdb.gz"
+gunzip 1Y57.pdb.gz</pre>
+</div>
+</li>
+</ol>
+</div>
+<div class="section" id="grep">
+<h4>GREP<a class="headerlink" href="#grep" title="Permalink to this headline">¶</a></h4>
+<ol class="arabic">
+<li><p class="first">Which of the DNA files ENST* contains ‘TATATCTAA’ as part of the sequence?</p>
+<div class="highlight-python"><pre>grep TATATCTAA ENST0*
+ENST00000380152.fasta:ACGGAAGAATGTGAGAAAAATAAGCAGGACACAATTACAACTAAAAAATATATCTAA
+ENST00000544455.fasta:ACGGAAGAATGTGAGAAAAATAAGCAGGACACAATTACAACTAAAAAATATATCTAA</pre>
+</div>
+</li>
+<li><p class="first">List only the names of the DNA files ENST* that contain ‘CAACAAA’ as part of the sequence.</p>
+<div class="highlight-python"><pre>grep –l CAACAAA ENST0*
+ENST00000380152.fasta
+ENST00000544455.fasta</pre>
+</div>
+</li>
+<li><p class="first">Considering the previous example, would you consider grep a suitable tool to perform motif searches? Why not? Try to find the pattern ‘CAACAAA’ by manual inspection of the first two lines of each sequence.</p>
+</li>
+</ol>
+<ol class="arabic" start="4">
+<li><p class="first">Count the number of ATOMs (lines starting with ‘ATOM’) in the file 1Y57.pdb.</p>
+</li>
+<li><p class="first">Does this number agree with the annotated number of atoms (Search the REMARKs for ‘protein atoms’)</p>
+<div class="highlight-python"><pre>grep –c “ATOM” 1Y57.pdb
+3632
+grep –i “protein atoms” 1Y57.pdb
+REMARK   3   PROTEIN ATOMS            : 3600</pre>
+</div>
+</li>
+</ol>
+<p>This means there are 3600 atoms annotated in this PDB file, however we counted 3632. This is because grep also counted any occurrence of “ATOM” within REMARKS. We can avoid this by either filtering out the remarks:</p>
+<blockquote>
+<div><div class="highlight-python"><pre>grep –v “REMARK” 1Y57.pdb | grep –c “ATOM”
+3600</pre>
+</div>
+</div></blockquote>
+<p>...or by telling grep to only count those lines that start with “ATOM”:</p>
+<blockquote>
+<div><div class="highlight-python"><pre>grep –c “^ATOM” 1Y57.pdb
+3600</pre>
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="sed">
+<h4>SED<a class="headerlink" href="#sed" title="Permalink to this headline">¶</a></h4>
+<ol class="arabic">
+<li><p class="first">Use sed to print only those lines that contain “version” in the files P05480.txt and P04062.txt</p>
+<div class="highlight-python"><pre>sed –n ‘/version/p’ P05480.txt P04062.txt</pre>
+</div>
+</li>
+<li><p class="first">Use sed to change the text ‘sequence version 3’ to ‘sequence version 4’ in the files P05480.txt and P04062.txt (without actually changing the files, just printing)</p>
+<div class="highlight-python"><pre>sed ‘s/sequence version 3/sequence version 4/’ P05480.txt P04062.txt</pre>
+</div>
+</li>
+<li><p class="first">Use sed to update the text ‘sequence version 3’ to ‘sequence version 4’ in the files P05480.txt and P04062.txt (this time, make the changes directly in the files)</p>
+<div class="highlight-python"><pre>sed –i.bak ‘s/sequence version 3/sequence version 4/’ P05480.txt P04062.txt</pre>
+</div>
+</li>
+<li><p class="first">Replace (transliterate) all occurrences of ‘r’ by ‘l’ and ‘l’ by ‘r’ (at the same time) in the file PROTEINS.txt (so that ‘structural’ becomes ‘stluctular’)</p>
+<div class="highlight-python"><pre>sed ‘y/rRlL/lLrR/’ PROTEINS.txt</pre>
+</div>
+</li>
+</ol>
+</div>
+<div class="section" id="awk">
+<h4>AWK<a class="headerlink" href="#awk" title="Permalink to this headline">¶</a></h4>
+<ol class="arabic">
+<li><p class="first">Use awk to print only those lines that contain “version” in the files P12931.txt and P05480.txt and think about how this procedure is different to sed.</p>
+<div class="highlight-python"><pre>awk ‘/version/ {print}’ P12931.txt P05480.txt</pre>
+</div>
+</li>
+</ol>
+<p>This is very similar to sed, you also have to use the slashes ‘/’ to define the search pattern. However the sed notation is a little more concise…</p>
+<ol class="arabic" start="2">
+<li><p class="first">For all FASTA files that begin with “P” (“P*.fasta”) print only the second item of the header (split on “|”) eg. for “&gt;sp|P12931|SRC_HUMAN Proto-oncogene”, print only “P12931”</p>
+<div class="highlight-python"><pre>awk –F"|" ‘/&gt;/ {print $2}’ P*.fasta</pre>
+</div>
+</li>
+<li><p class="first">The file ‘P12931.csv contains phosphorylation sites in the protein P12931. (If the file ‘P12931.csv’ does not exist, use ‘wget’ to download it from “<a class="reference external" href="http://phospho.elm.eu.org/byAccession/P12931.csv">http://phospho.elm.eu.org/byAccession/P12931.csv</a>”).</p>
+</li>
+</ol>
+<blockquote>
+<div><ol class="loweralpha simple">
+<li>Column three of this file lists the amino acid position of the phosphorylation site. You are only interested in position 17 of the protein. Try to use ‘grep’ to filter out all these lines containing ‘17’.</li>
+</ol>
+<blockquote>
+<div><div class="highlight-python"><pre>grep 17 P12931.csv</pre>
+</div>
+</div></blockquote>
+<ol class="loweralpha simple" start="2">
+<li>Now use awk to show all lines containing ‘17’.</li>
+</ol>
+<blockquote>
+<div><div class="highlight-python"><pre>awk ‘/17/ {print}’ P12931.csv</pre>
+</div>
+</div></blockquote>
+<ol class="loweralpha simple" start="3">
+<li>Next try show only those lines where column three equals 17 (Hint: The file is semicolon-separated…).</li>
+</ol>
+<blockquote>
+<div><div class="highlight-python"><pre>awk –F";" ‘$3==17 {print}’ P12931.csv</pre>
+</div>
+</div></blockquote>
+<ol class="loweralpha simple" start="4">
+<li>Finally print the PMIDs (column 6) of all lines that contain ‘17’ in column 3.</li>
+</ol>
+<blockquote>
+<div><div class="highlight-python"><pre>awk –F";" ‘$3==17 {print $6}’ P12931.csv</pre>
+</div>
+</div></blockquote>
+</div></blockquote>
+</div>
+<div class="section" id="quoting-and-escaping">
+<h4>Quoting and Escaping<a class="headerlink" href="#quoting-and-escaping" title="Permalink to this headline">¶</a></h4>
+<dl class="docutils">
+<dt>Familiarize yourself with quoting and escaping.</dt>
+<dd><ol class="first loweralpha simple">
+<li>Run the following commands to see the difference between single and double quotes when expanding variables:</li>
+</ol>
+<blockquote>
+<div><div class="highlight-python"><pre>echo "$HOSTNAME"
+...
+echo '$HOSTNAME'</pre>
+</div>
+</div></blockquote>
+<ol class="loweralpha simple" start="2">
+<li>Next, use ssh to login to a different machine to run the same command there, again using both quoting methods:</li>
+</ol>
+<blockquote class="last">
+<div><div class="highlight-python"><pre>ssh pc-atcteach01 'echo $HOSTNAME'
+...
+ssh pc-atcteach01 "echo $HOSTNAME"</pre>
+</div>
+</div></blockquote>
+</dd>
+</dl>
+<p>Closely inspect the results; is that what you were expecting? Discuss this with your neighbour.</p>
+</div>
+</div>
+</div>
+<span id="document-Comments"></span><div class="section" id="comments">
+<h2>Comments<a class="headerlink" href="#comments" title="Permalink to this headline">¶</a></h2>
+<p>useful Links:</p>
+<ul class="simple">
+<li><a class="reference external" href="http://openalea.gforge.inria.fr/doc/openalea/doc/_build/html/source/sphinx/rest_syntax.html">ReST Cheat Sheet</a></li>
+<li><a class="reference external" href="http://doughellmann.com/2009/02/writing-technical-documentation-with-sphinx-paver-and-cog.html">Writing Technical Documentation with Sphinx, Paver, and Cog</a></li>
+<li><a class="reference external" href="http://sphinx.pocoo.org/extensions.htmlhttp://www.goer.org/Journal/2011/01/publishing_with_sphinx_rest_and_sffms_latex.html">using the sffms latex class in sphinx</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="section" id="indices-and-tables">
+<h1>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><a class="reference internal" href="genindex.html"><em>Index</em></a></li>
+</ul>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html#document-index">Table Of Contents</a></h3>
+  <ul>
+<li class="toctree-l1"><a class="reference internal" href="index.html#document-commandlinetools">Commandline Tools</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="index.html#command-line-tools">Command-line Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#hints">Hints</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="index.html#document-solutions">Solutions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="index.html#commandline-tools">Commandline tools</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="index.html#document-Comments">Internal Comments</a></li>
+</ul>
+
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li><a href="index.html#document-index">Intermediate Linux Course 1.1 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2013, Holger Dinkel &amp; Frank Thommen.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+    </div>
+  </body>
+</html>
