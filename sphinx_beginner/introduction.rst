@@ -648,8 +648,6 @@ Permissions are set using the ``chmod`` (change mode) command.
 
 The mode is composed of
 
-.. tabularcolumns:: |cc|cc|cp{5cm}|
-
 +-----+---------------+------+------------------------------+-----+--------------+
 | Who                 | What                                |  Which permission  |
 +=====+===============+======+==============================+=====+==============+

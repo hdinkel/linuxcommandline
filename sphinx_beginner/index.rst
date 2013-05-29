@@ -10,9 +10,8 @@ Contents:
 
 .. toctree::
 
-   Commandline Tools <commandlinetools>
    Introduction <introduction>
-   Solutions to the Exercises <solutions>
+..   Solutions to the Exercises <solutions>
    Links <links>
    About Bio-IT <about_bioit>
    Acknowlegments <acknowledgments>

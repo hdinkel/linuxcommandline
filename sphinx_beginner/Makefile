@@ -104,6 +104,7 @@ latex:
 
 latexpdf:
 	$(SPHINXBUILD) -b latex $(ALLSPHINXOPTS) $(BUILDDIR)/latex
+	sed -i.bak 's|begin{Verbatim}\[|begin{Verbatim}\[frame=single, rulecolor=\\color{gray!20}, fontfamily=courier, |' $(BUILDDIR)/latex/*.tex
 	@echo "Running LaTeX files through pdflatex..."
 	$(MAKE) -C $(BUILDDIR)/latex all-pdf
 	@echo "pdflatex finished; the PDF files are in $(BUILDDIR)/latex."
