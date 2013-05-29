@@ -11,6 +11,7 @@ Welcome to the Course "Intermediate Linux Course: Commandline and Basic Scriptin
    :maxdepth: 2
 
    Commandline Tools <commandlinetools>
+   Basic Scripting <basic_scripting>
    Solutions <solutions>
    Internal Comments <Comments>
 
@@ -18,8 +19,8 @@ Welcome to the Course "Intermediate Linux Course: Commandline and Basic Scriptin
 
 Indices and tables
 ==================
-
+.. 
 * :ref:`genindex`
-.. * :ref:`modindex`
-.. * :ref:`search`
+* :ref:`modindex`
+* :ref:`search`
 

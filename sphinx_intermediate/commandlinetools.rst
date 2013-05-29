@@ -3,28 +3,30 @@ More Commandline Tools
 
 Command-line Tools
 ------------------
+
 GZIP
 ^^^^
+
 *gzip* is a compression/decompression tool.
 When used on a file (without any parameters) it will compress it and replace the
 file by a compressed version with the extension ‘.gz’ attached:
 
  ::
 
-  ls textfile*
+  % ls textfile*
    textfile
-  gzip textfile
-  ls textfile*
+  % gzip textfile
+  % ls textfile*
    textfile.gz
  
 To revert this / to uncompress, use the parameter ``-d``:
 
  ::
 
-  ls textfile*
+  % ls textfile*
    textfile.gz
-  gzip -d textfile
-  ls textfile*
+  % gzip -d textfile
+  % ls textfile*
    textfile
  
 .. note:: As a convenience, on most Linux systems, a shellscript named ``gunzip`` exists which simply calls ``gzip –d``
@@ -67,14 +69,14 @@ Option:  Effect:
 Creating an archive containing two files:
 
  ::
-  
-  tar -cf archive.tar textfile1 textfile2
+
+  % tar -cf archive.tar textfile1 textfile2
 
 Listing the contents of an archive:
 
  ::
 
-  tar -tf archive.tar
+  % tar -tf archive.tar
    textfile1
    textfile2
 
@@ -82,23 +84,26 @@ Extracting an archive:
 
  ::
 
-  tar -xf archive.tar
-
+  % tar -xf archive.tar
 
 Creating and extracting a compressed archive containing two files:
 
  ::
 
-  tar -czf archive.tar.gz textfile1 textfile2
-  tar -xzf archive.tar.gz
+  % tar -czf archive.tar.gz textfile1 textfile2
+  % tar -xzf archive.tar.gz
+
 
 GREP
-Find lines matching a pattern in textfiles
-Usage: grep [options] pattern file(s)
+^^^^
+
+Find lines matching a pattern in textfiles.
+
+**Usage**: grep [options] pattern file(s)
 
  ::
 
-  grep -i ensembl P04637.txt
+  % grep -i ensembl P04637.txt
 
    DR Ensembl; ENST00000269305; ENSP00000269305; ENSG00000141510.
    DR Ensembl; ENST00000359597; ENSP00000352610; ENSG00000141510.
@@ -124,17 +129,14 @@ Count the number of fasta sequences (they start with a “>”) in a file:
 
  ::
 
-  grep –c '>' twofiles.fasta
-  grep –c > twofiles.fasta
-  grep –c \> twofiles.fasta
-  grep –c \\> twofiles.fasta
+  % grep –c '>' twofiles.fasta
    2
 
 List all files containing the term “Ensembl”:
 
  ::
 
-  grep –l Ensembl *.txt
+  % grep –l Ensembl *.txt
    P04062.txt
    P12931.txt
 
@@ -160,8 +162,7 @@ Delete lines containing PATTERN:             ‘/PATTERN/d’
 
  ::
 
-  echo “This is text.” | sed 's/text/replaced stuff/’
-
+  % echo “This is text.” | sed 's/text/replaced stuff/’
    This is replaced stuff.
 
 By default, text substitution are performed only once per line. You need to add a
@@ -171,11 +172,10 @@ Note the difference:
 
  ::
 
-  echo “ACCAAGCATTGGAGGAATATCGTAGGTAAA” | sed ‘s/A/_/’
-
+  % echo “ACCAAGCATTGGAGGAATATCGTAGGTAAA” | sed ‘s/A/_/’
    _CCAAGCATTGGAGGAATATCGTAGGTAAA
 
-  echo “ACCAAGCATTGGAGGAATATCGTAGGTAAA” | sed ‘s/A/_/g’
+  % echo “ACCAAGCATTGGAGGAATATCGTAGGTAAA” | sed ‘s/A/_/g’
    _CC__GC_TTGG_GG__T_TCGT_GGT___
  
 When used on a file, sed prints the file to standard output, replacing text as it goes
@@ -183,9 +183,9 @@ along:
 
  ::
 
-  echo “This is text” > textfile
-  echo “This is even more text” >> textfile
-  sed 's/text/stuff/' textfile
+  % echo “This is text” > textfile
+  % echo “This is even more text” >> textfile
+  % sed 's/text/stuff/' textfile
    This is stuff
    This is even more stuff
 
@@ -196,8 +196,7 @@ trailing letter determines, what sed should do with the text that matches the pa
 
  ::
 
-  sed '/more/p' textfile
-
+  % sed '/more/p' textfile
    This is text
    This is even more text
    This is even more text
@@ -207,17 +206,14 @@ printed twice. Use option ‘-n’ to suppress default printing of lines.
 
  ::
 
-  sed -n '/more/p' textfile
-
+  % sed -n '/more/p' textfile
    This is even more text
-
 
 Delete lines matching the pattern:
 
  ::
 
-  sed '/more/d' textfile
-
+  % sed '/more/d' textfile
    This is text
 
 Multiple sed statements can be applied to the same input stream by prepending
@@ -225,8 +221,7 @@ each by option ‘-e’ (edit):
 
  ::
 
-  sed -e 's/text/good stuff/' -e ’s/This/That/’ textfile
-
+  % sed -e 's/text/good stuff/' -e ’s/This/That/’ textfile
    That is good stuff
    That is even more good stuff
 
@@ -238,11 +233,11 @@ will edit the file and rename the original file to textfile.bak:
 
  ::
 
-  sed –i.bak 's/text/stuff/' textfile
-  cat textfile
+  % sed –i.bak 's/text/stuff/' textfile
+  % cat textfile
    This is stuff
    This is even more stuff
-  cat textfile.bak
+  % cat textfile.bak
    This is text
    This is even more text
 
@@ -253,24 +248,22 @@ AWK
 awk is more than just a command, it is a complete text processing language (the
 name is an abbreviation of the author’s names).
 Each line of the input (file or pipe) is treated as a record and is broken into fields.
-Generally, awk commands are of the form: 'condition { action }’, where:
+Generally, awk commands are of the form: `` awk condition { action }``, where:
 
-# condition is typically an expression
-# action is a series of commands
+- condition is typically an expression
+- action is a series of commands
 
 If no condition is given, the action is applied to each line, otherwise just to the
 lines that match the condition.
 
  ::
 
-  awk '{print}' textfile
-
+  % awk '{print}' textfile
    This is text
    This is even more text
 
-  awk '/more/ {print}' textfile
-
-This is even more text
+  % awk '/more/ {print}' textfile
+   This is even more text
 
 awk reads each line of input and automatically splits the line into columns. These
 columns can be addressed via $1, $2 and so on ($0 represents the whole line).
@@ -278,11 +271,10 @@ So an easy way to print or rearrange columns of text is:
 
  ::
 
-  echo “Bob likes Sue“ | awk ‘{print $3, $2, $1}’
-
+  % echo “Bob likes Sue“ | awk ‘{print $3, $2, $1}’
    Sue likes Bob
 
-  echo “Master Obi-Wan has lost a planet“ | awk ‘{print $4,$5,$6,$1,$2,$3}’
+  % echo “Master Obi-Wan has lost a planet“ | awk ‘{print $4,$5,$6,$1,$2,$3}’
    lost a planet Master Obi-Wan has
 
 awk splits text by default on whitespace (spaces or tabs), which might not be ideal in all situations. To change the field separator (FS), use option ‘-F’
@@ -290,7 +282,7 @@ awk splits text by default on whitespace (spaces or tabs), which might not be id
 
  ::
 
-  echo “field1,field2,field2“ | awk -F’,’ ‘{print $2, $1}’
+  % echo “field1,field2,field2“ | awk -F’,’ ‘{print $2, $1}’
    field2 field1
 
 Note two things here: First, the field separator is not printed, and second, if you
@@ -299,15 +291,14 @@ by a comma or they will be catenated together...
 
  ::
 
-  echo “field1,field2,field2“ | awk -F’,’ ‘{print $1 $2 $3}’
+  % echo “field1,field2,field2“ | awk -F’,’ ‘{print $1 $2 $3}’
    field1field2field3
 
 You can also combine the pattern matching and the column selection techniques:
 
  ::
 
-  awk '/more/ {print $3}' textfile
-
+  % awk '/more/ {print $3}' textfile
    even
 
 awk really is powerful in filtering out columns, you can for instance print only
@@ -316,8 +307,7 @@ where the fourth column is ‘more’:
 
  ::
 
-  awk '$4==”more” {print $3}' textfile
-
+  % awk '$4==”more” {print $3}' textfile
    even
 
 Note the double equal signs “==” to check for equality and note the quotes around
@@ -326,9 +316,9 @@ If you want to match a field, but not exactly, you can use ‘~’ instead of �
 
  ::
 
-  awk '$4~”ore” {print $3}' textfile
-
+  % awk '$4~”ore” {print $3}' textfile
    even
+
 
 Hints
 -----
@@ -347,14 +337,14 @@ When setting a variable, it doesn’t matter which quotes you use:
 
  ::
 
-  MYVAR=This is set
+  % MYVAR=This is set
    -bash: is: command not found
 
-  MYVAR='This is set'
-  echo $MYVAR
+  % MYVAR='This is set'
+  % echo $MYVAR
    This is set
-  MYVAR="This is set"
-  echo $MYVAR
+  % MYVAR="This is set"
+  % echo $MYVAR
    This is set
 
 However, it does matter, when using (expanding) the variable:
@@ -362,31 +352,30 @@ Double quotes:
 
  ::
 
-  export MYVAR=123
-
-  echo "the variable is $MYVAR"
+  % export MYVAR=123
+  % echo "the variable is $MYVAR"
    the variable is 123
-  echo "the variable is set" | sed "s/set/$MYVAR/"
+  % echo "the variable is set" | sed "s/set/$MYVAR/"
    the variable is 123
 
 Single quotes:
 
  ::
 
-  export MYVAR=123
-  echo 'the variable is $MYVAR'
+  % export MYVAR=123
+  % echo 'the variable is $MYVAR'
    the variable is $MYVAR
-  echo "the variable is set" | sed 's/set/$MYVAR/'
+  % echo "the variable is set" | sed 's/set/$MYVAR/'
    the variable is $MYVAR
 
 Weird things can happen when parsing data/text that contains quote characters:
 
  ::
 
-  MYVAR='Don't worry'; echo $MYVAR
+  % MYVAR='Don't worry'; echo $MYVAR
    >
   # you need to press Ctrl-C to abort
-  MYVAR="Don't worry"; echo $MYVAR
+  % MYVAR="Don't worry"; echo $MYVAR
    Don't worry
 
 Expanding and Escaping
@@ -396,9 +385,8 @@ You already learned how to expand a variable such that its value is used instead
 
  ::
 
-  export MYVAR=123
-
-  echo "the variable is $MYVAR"
+  % export MYVAR=123
+  % echo "the variable is $MYVAR"
    the variable is 123
 
 "Escaping" a variable is the opposite, ensuring that the literal variable name is used instead of its value:
