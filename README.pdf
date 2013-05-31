@@ -1,0 +1,459 @@
+%PDF-1.4
+%“Œ‹ž ReportLab Generated PDF document http://www.reportlab.com
+% 'BasicFonts': class PDFDictionary 
+1 0 obj
+% The standard fonts dictionary
+<< /F1 2 0 R
+ /F2 3 0 R
+ /F3 6 0 R >>
+endobj
+% 'F1': class PDFType1Font 
+2 0 obj
+% Font Helvetica
+<< /BaseFont /Helvetica
+ /Encoding /WinAnsiEncoding
+ /Name /F1
+ /Subtype /Type1
+ /Type /Font >>
+endobj
+% 'F2': class PDFType1Font 
+3 0 obj
+% Font Helvetica-Bold
+<< /BaseFont /Helvetica-Bold
+ /Encoding /WinAnsiEncoding
+ /Name /F2
+ /Subtype /Type1
+ /Type /Font >>
+endobj
+% 'Annot.NUMBER1': class PDFDictionary 
+4 0 obj
+<< /A << /S /URI
+ /Type /Action
+ /URI (http://docutils.sourceforge.net/rst.html) >>
+ /Border [ 0
+ 0
+ 0 ]
+ /Rect [ 146.7469
+ 689.7736
+ 229.1482
+ 701.7736 ]
+ /Subtype /Link
+ /Type /Annot >>
+endobj
+% 'Annot.NUMBER2': class PDFDictionary 
+5 0 obj
+<< /A << /S /URI
+ /Type /Action
+ /URI (http://sphinx-doc.org/) >>
+ /Border [ 0
+ 0
+ 0 ]
+ /Rect [ 301.2921
+ 689.7736
+ 335.9035
+ 701.7736 ]
+ /Subtype /Link
+ /Type /Annot >>
+endobj
+% 'F3': class PDFType1Font 
+6 0 obj
+% Font Courier
+<< /BaseFont /Courier
+ /Encoding /WinAnsiEncoding
+ /Name /F3
+ /Subtype /Type1
+ /Type /Font >>
+endobj
+% 'Annot.NUMBER3': class PDFDictionary 
+7 0 obj
+<< /A << /S /URI
+ /Type /Action
+ /URI (https://en.wikipedia.org/wiki/ReStructuredText) >>
+ /Border [ 0
+ 0
+ 0 ]
+ /Rect [ 166.8329
+ 590.7736
+ 369.6829
+ 602.7736 ]
+ /Subtype /Link
+ /Type /Annot >>
+endobj
+% 'Annot.NUMBER4': class PDFDictionary 
+8 0 obj
+<< /A << /S /URI
+ /Type /Action
+ /URI (http://sphinx-doc.org/) >>
+ /Border [ 0
+ 0
+ 0 ]
+ /Rect [ 141.5629
+ 572.7736
+ 234.9429
+ 584.7736 ]
+ /Subtype /Link
+ /Type /Annot >>
+endobj
+% 'Annot.NUMBER5': class PDFDictionary 
+9 0 obj
+<< /A << /S /URI
+ /Type /Action
+ /URI (http://pygments.org/) >>
+ /Border [ 0
+ 0
+ 0 ]
+ /Rect [ 155.4529
+ 554.7736
+ 243.8329
+ 566.7736 ]
+ /Subtype /Link
+ /Type /Annot >>
+endobj
+% 'Annot.NUMBER6': class PDFDictionary 
+10 0 obj
+<< /A << /S /URI
+ /Type /Action
+ /URI (http://openalea.gforge.inria.fr/doc/openalea/doc/_build/html/source/sphinx/rest_syntax.html) >>
+ /Border [ 0
+ 0
+ 0 ]
+ /Rect [ 85.69291
+ 536.7736
+ 169.6229
+ 548.7736 ]
+ /Subtype /Link
+ /Type /Annot >>
+endobj
+% 'Annot.NUMBER7': class PDFDictionary 
+11 0 obj
+<< /A << /S /URI
+ /Type /Action
+ /URI (http://doughellmann.com/2009/02/writing-technical-documentation-with-sphinx-paver-and-cog.html) >>
+ /Border [ 0
+ 0
+ 0 ]
+ /Rect [ 85.69291
+ 518.7736
+ 361.3529
+ 530.7736 ]
+ /Subtype /Link
+ /Type /Annot >>
+endobj
+% 'Annot.NUMBER8': class PDFDictionary 
+12 0 obj
+<< /A << /S /URI
+ /Type /Action
+ /URI (http://sphinx.pocoo.org/extensions.htmlhttp://www.goer.org/Journal/2011/01/publishing_with_sphinx_rest_and_sffms_latex.html) >>
+ /Border [ 0
+ 0
+ 0 ]
+ /Rect [ 85.69291
+ 500.7736
+ 244.6429
+ 512.7736 ]
+ /Subtype /Link
+ /Type /Annot >>
+endobj
+% 'Page1': class PDFPage 
+13 0 obj
+% Page dictionary
+<< /Annots [ 4 0 R
+ 5 0 R
+ 7 0 R
+ 8 0 R
+ 9 0 R
+ 10 0 R
+ 11 0 R
+ 12 0 R ]
+ /Contents 17 0 R
+ /MediaBox [ 0
+ 0
+ 595.2756
+ 841.8898 ]
+ /Parent 16 0 R
+ /Resources << /Font 1 0 R
+ /ProcSet [ /PDF
+ /Text
+ /ImageB
+ /ImageC
+ /ImageI ] >>
+ /Rotate 0
+ /Trans <<  >>
+ /Type /Page >>
+endobj
+% 'R14': class PDFCatalog 
+14 0 obj
+% Document Root
+<< /Outlines 18 0 R
+ /PageLabels 19 0 R
+ /PageMode /UseNone
+ /Pages 16 0 R
+ /Type /Catalog >>
+endobj
+% 'R15': class PDFInfo 
+15 0 obj
+<< /Author ()
+ /CreationDate (D:20130531113721-01'00')
+ /Creator (\(unspecified\))
+ /Keywords ()
+ /Producer (ReportLab PDF Library - www.reportlab.com)
+ /Subject (\(unspecified\))
+ /Title (Documentation Howto) >>
+endobj
+% 'R16': class PDFPages 
+16 0 obj
+% page tree
+<< /Count 1
+ /Kids [ 13 0 R ]
+ /Type /Pages >>
+endobj
+% 'R17': class PDFStream 
+17 0 obj
+% page stream
+<< /Length 4006 >>
+stream
+1 0 0 1 0 0 cm  BT /F1 12 Tf 14.4 TL ET
+q
+1 0 0 1 62.69291 741.0236 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 4 Tm /F2 20 Tf 24 TL 128.8349 0 Td (Documentation Howto) Tj T* -128.8349 0 Td ET
+Q
+Q
+q
+1 0 0 1 62.69291 707.0236 cm
+q
+BT 1 0 0 1 0 14 Tm .654524 Tw 12 TL /F1 10 Tf 0 0 0 rg (The folders ''sphinx_beginner'' and ''sphinx_intermediate'' are Re-Writes of the documentation which was) Tj T* 0 Tw (originally done in Word, converted to ReStructuredText.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 677.0236 cm
+q
+BT 1 0 0 1 0 14 Tm 1.261318 Tw 12 TL /F1 10 Tf 0 0 0 rg (Here, we're using ) Tj 0 0 .501961 rg (ReStructuredText ) Tj 0 0 0 rg (for writing, and ) Tj 0 0 .501961 rg (Sphinx ) Tj 0 0 0 rg (to convert the Markup into HTML and PDF) Tj T* 0 Tw (\("Sphinx is a tool that makes it easy to create intelligent and beautiful documentation"\)) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 647.0236 cm
+q
+BT 1 0 0 1 0 14 Tm 2.01229 Tw 12 TL /F1 10 Tf 0 0 0 rg (Sphinx uses ) Tj /F3 10 Tf (conf.py ) Tj /F1 10 Tf (for configuration and provides a convenient Makefile for conversion. Just call) Tj T* 0 Tw /F3 10 Tf (make) Tj ( ) Tj (html ) Tj /F1 10 Tf (\() Tj /F3 10 Tf (make) Tj ( ) Tj (singlehtml ) Tj /F1 10 Tf (creates one single HTML file\), or ) Tj /F3 10 Tf (make) Tj ( ) Tj (latexpdf ) Tj /F1 10 Tf (to run it.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 629.0236 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (Currently, we do not include the HTML output into git, just the PDF and maybe the singlehtml page.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 611.0236 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (Links/Requirements:) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 605.0236 cm
+Q
+q
+1 0 0 1 62.69291 605.0236 cm
+Q
+q
+1 0 0 1 62.69291 593.0236 cm
+0 0 0 rg
+BT /F1 10 Tf 12 TL ET
+q
+1 0 0 1 6 -3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL 10.5 0 Td (\177) Tj T* -10.5 0 Td ET
+Q
+Q
+q
+1 0 0 1 23 -3 cm
+q
+BT 1 0 0 1 0 2 Tm 12 TL /F1 10 Tf 0 0 0 rg (ReStructuredText ) Tj 0 0 .501961 rg (https://en.wikipedia.org/wiki/ReStructuredText) Tj T* ET
+Q
+Q
+q
+Q
+Q
+q
+1 0 0 1 62.69291 587.0236 cm
+Q
+q
+1 0 0 1 62.69291 575.0236 cm
+0 0 0 rg
+BT /F1 10 Tf 12 TL ET
+q
+1 0 0 1 6 -3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL 10.5 0 Td (\177) Tj T* -10.5 0 Td ET
+Q
+Q
+q
+1 0 0 1 23 -3 cm
+q
+BT 1 0 0 1 0 2 Tm 12 TL /F1 10 Tf 0 0 0 rg (Sphinx >) Tj (1.1 ) Tj 0 0 .501961 rg (http://sphinx-doc.org/) Tj T* ET
+Q
+Q
+q
+Q
+Q
+q
+1 0 0 1 62.69291 569.0236 cm
+Q
+q
+1 0 0 1 62.69291 557.0236 cm
+0 0 0 rg
+BT /F1 10 Tf 12 TL ET
+q
+1 0 0 1 6 -3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL 10.5 0 Td (\177) Tj T* -10.5 0 Td ET
+Q
+Q
+q
+1 0 0 1 23 -3 cm
+q
+BT 1 0 0 1 0 2 Tm 12 TL /F1 10 Tf 0 0 0 rg (Pygments >) Tj (1.5 ) Tj 0 0 .501961 rg (http://pygments.org/) Tj T* ET
+Q
+Q
+q
+Q
+Q
+q
+1 0 0 1 62.69291 551.0236 cm
+Q
+q
+1 0 0 1 62.69291 539.0236 cm
+0 0 0 rg
+BT /F1 10 Tf 12 TL ET
+q
+1 0 0 1 6 -3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL 10.5 0 Td (\177) Tj T* -10.5 0 Td ET
+Q
+Q
+q
+1 0 0 1 23 -3 cm
+q
+BT 1 0 0 1 0 2 Tm 12 TL /F1 10 Tf 0 0 .501961 rg (ReST Cheat Sheet) Tj  T* ET
+Q
+Q
+q
+Q
+Q
+q
+1 0 0 1 62.69291 533.0236 cm
+Q
+q
+1 0 0 1 62.69291 521.0236 cm
+0 0 0 rg
+BT /F1 10 Tf 12 TL ET
+q
+1 0 0 1 6 -3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL 10.5 0 Td (\177) Tj T* -10.5 0 Td ET
+Q
+Q
+q
+1 0 0 1 23 -3 cm
+q
+BT 1 0 0 1 0 2 Tm 12 TL /F1 10 Tf 0 0 .501961 rg (Writing Technical Documentation with Sphinx, Paver, and Cog) Tj  T* ET
+Q
+Q
+q
+Q
+Q
+q
+1 0 0 1 62.69291 515.0236 cm
+Q
+q
+1 0 0 1 62.69291 503.0236 cm
+0 0 0 rg
+BT /F1 10 Tf 12 TL ET
+q
+1 0 0 1 6 -3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL 10.5 0 Td (\177) Tj T* -10.5 0 Td ET
+Q
+Q
+q
+1 0 0 1 23 -3 cm
+q
+BT 1 0 0 1 0 2 Tm 12 TL /F1 10 Tf 0 0 .501961 rg (using the sffms latex class in sphinx) Tj  T* ET
+Q
+Q
+q
+Q
+Q
+q
+1 0 0 1 62.69291 503.0236 cm
+Q
+q
+1 0 0 1 62.69291 485.0236 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (Holger) Tj T* ET
+Q
+Q
+ 
+endstream
+endobj
+% 'R18': class PDFOutlines 
+18 0 obj
+<< /Count 0
+ /Type /Outlines >>
+endobj
+% 'R19': class PDFPageLabels 
+19 0 obj
+% Document Root
+<< /Nums [ 0
+ 20 0 R ] >>
+endobj
+% 'R20': class PDFPageLabel 
+20 0 obj
+% None
+<< /S /D
+ /St 1 >>
+endobj
+xref
+0 21
+0000000000 65535 f
+0000000113 00000 n
+0000000233 00000 n
+0000000398 00000 n
+0000000585 00000 n
+0000000843 00000 n
+0000001071 00000 n
+0000001244 00000 n
+0000001508 00000 n
+0000001748 00000 n
+0000001986 00000 n
+0000002296 00000 n
+0000002609 00000 n
+0000002937 00000 n
+0000003297 00000 n
+0000003456 00000 n
+0000003720 00000 n
+0000003828 00000 n
+0000007935 00000 n
+0000008018 00000 n
+0000008111 00000 n
+trailer
+<< /ID 
+ % ReportLab generated PDF document -- digest (http://www.reportlab.com) 
+ [(\275N$\316\355\322\014\301z,\216v\267ZP\307) (\275N$\316\355\322\014\301z,\216v\267ZP\307)] 
+
+ /Info 15 0 R
+ /Root 14 0 R
+ /Size 21 >>
+startxref
+8158
+%%EOF
