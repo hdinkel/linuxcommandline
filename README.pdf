@@ -73,9 +73,9 @@ endobj
  0
  0 ]
  /Rect [ 166.8329
- 590.7736
+ 578.7736
  369.6829
- 602.7736 ]
+ 590.7736 ]
  /Subtype /Link
  /Type /Annot >>
 endobj
@@ -88,9 +88,9 @@ endobj
  0
  0 ]
  /Rect [ 141.5629
- 572.7736
+ 560.7736
  234.9429
- 584.7736 ]
+ 572.7736 ]
  /Subtype /Link
  /Type /Annot >>
 endobj
@@ -103,9 +103,9 @@ endobj
  0
  0 ]
  /Rect [ 155.4529
- 554.7736
+ 542.7736
  243.8329
- 566.7736 ]
+ 554.7736 ]
  /Subtype /Link
  /Type /Annot >>
 endobj
@@ -113,14 +113,14 @@ endobj
 10 0 obj
 << /A << /S /URI
  /Type /Action
- /URI (http://openalea.gforge.inria.fr/doc/openalea/doc/_build/html/source/sphinx/rest_syntax.html) >>
+ /URI (http://www.tug.org/texlive/) >>
  /Border [ 0
  0
  0 ]
- /Rect [ 85.69291
- 536.7736
- 169.6229
- 548.7736 ]
+ /Rect [ 154.3429
+ 524.7736
+ 268.8329
+ 536.7736 ]
  /Subtype /Link
  /Type /Annot >>
 endobj
@@ -128,14 +128,14 @@ endobj
 11 0 obj
 << /A << /S /URI
  /Type /Action
- /URI (http://doughellmann.com/2009/02/writing-technical-documentation-with-sphinx-paver-and-cog.html) >>
+ /URI (http://openalea.gforge.inria.fr/doc/openalea/doc/_build/html/source/sphinx/rest_syntax.html) >>
  /Border [ 0
  0
  0 ]
  /Rect [ 85.69291
- 518.7736
- 361.3529
- 530.7736 ]
+ 488.7736
+ 169.6229
+ 500.7736 ]
  /Subtype /Link
  /Type /Annot >>
 endobj
@@ -143,19 +143,49 @@ endobj
 12 0 obj
 << /A << /S /URI
  /Type /Action
- /URI (http://sphinx.pocoo.org/extensions.htmlhttp://www.goer.org/Journal/2011/01/publishing_with_sphinx_rest_and_sffms_latex.html) >>
+ /URI (http://openmdao.org/dev_docs/documenting/sphinx.html) >>
  /Border [ 0
  0
  0 ]
  /Rect [ 85.69291
- 500.7736
- 244.6429
- 512.7736 ]
+ 470.7736
+ 196.2829
+ 482.7736 ]
+ /Subtype /Link
+ /Type /Annot >>
+endobj
+% 'Annot.NUMBER9': class PDFDictionary 
+13 0 obj
+<< /A << /S /URI
+ /Type /Action
+ /URI (http://doughellmann.com/2009/02/writing-technical-documentation-with-sphinx-paver-and-cog.html) >>
+ /Border [ 0
+ 0
+ 0 ]
+ /Rect [ 85.69291
+ 452.7736
+ 361.3529
+ 464.7736 ]
+ /Subtype /Link
+ /Type /Annot >>
+endobj
+% 'Annot.NUMBER10': class PDFDictionary 
+14 0 obj
+<< /A << /S /URI
+ /Type /Action
+ /URI (http://www.ctan.org/pkg/fancyvrb) >>
+ /Border [ 0
+ 0
+ 0 ]
+ /Rect [ 62.69291
+ 425.7736
+ 103.2629
+ 437.7736 ]
  /Subtype /Link
  /Type /Annot >>
 endobj
 % 'Page1': class PDFPage 
-13 0 obj
+15 0 obj
 % Page dictionary
 << /Annots [ 4 0 R
  5 0 R
@@ -164,13 +194,15 @@ endobj
  9 0 R
  10 0 R
  11 0 R
- 12 0 R ]
- /Contents 17 0 R
+ 12 0 R
+ 13 0 R
+ 14 0 R ]
+ /Contents 19 0 R
  /MediaBox [ 0
  0
  595.2756
  841.8898 ]
- /Parent 16 0 R
+ /Parent 18 0 R
  /Resources << /Font 1 0 R
  /ProcSet [ /PDF
  /Text
@@ -181,36 +213,36 @@ endobj
  /Trans <<  >>
  /Type /Page >>
 endobj
-% 'R14': class PDFCatalog 
-14 0 obj
+% 'R16': class PDFCatalog 
+16 0 obj
 % Document Root
-<< /Outlines 18 0 R
- /PageLabels 19 0 R
+<< /Outlines 20 0 R
+ /PageLabels 21 0 R
  /PageMode /UseNone
- /Pages 16 0 R
+ /Pages 18 0 R
  /Type /Catalog >>
 endobj
-% 'R15': class PDFInfo 
-15 0 obj
+% 'R17': class PDFInfo 
+17 0 obj
 << /Author ()
- /CreationDate (D:20130531113721-01'00')
+ /CreationDate (D:20130531124347-01'00')
  /Creator (\(unspecified\))
  /Keywords ()
  /Producer (ReportLab PDF Library - www.reportlab.com)
  /Subject (\(unspecified\))
  /Title (Documentation Howto) >>
 endobj
-% 'R16': class PDFPages 
-16 0 obj
+% 'R18': class PDFPages 
+18 0 obj
 % page tree
 << /Count 1
- /Kids [ 13 0 R ]
+ /Kids [ 15 0 R ]
  /Type /Pages >>
 endobj
-% 'R17': class PDFStream 
-17 0 obj
+% 'R19': class PDFStream 
+19 0 obj
 % page stream
-<< /Length 4006 >>
+<< /Length 5090 >>
 stream
 1 0 0 1 0 0 cm  BT /F1 12 Tf 14.4 TL ET
 q
@@ -233,33 +265,33 @@ BT 1 0 0 1 0 14 Tm 1.261318 Tw 12 TL /F1 10 Tf 0 0 0 rg (Here, we're using ) Tj 
 Q
 Q
 q
-1 0 0 1 62.69291 647.0236 cm
+1 0 0 1 62.69291 635.0236 cm
 q
-BT 1 0 0 1 0 14 Tm 2.01229 Tw 12 TL /F1 10 Tf 0 0 0 rg (Sphinx uses ) Tj /F3 10 Tf (conf.py ) Tj /F1 10 Tf (for configuration and provides a convenient Makefile for conversion. Just call) Tj T* 0 Tw /F3 10 Tf (make) Tj ( ) Tj (html ) Tj /F1 10 Tf (\() Tj /F3 10 Tf (make) Tj ( ) Tj (singlehtml ) Tj /F1 10 Tf (creates one single HTML file\), or ) Tj /F3 10 Tf (make) Tj ( ) Tj (latexpdf ) Tj /F1 10 Tf (to run it.) Tj T* ET
+BT 1 0 0 1 0 26 Tm 2.01229 Tw 12 TL /F1 10 Tf 0 0 0 rg (Sphinx uses ) Tj /F3 10 Tf (conf.py ) Tj /F1 10 Tf (for configuration and provides a convenient Makefile for conversion. Just call) Tj T* 0 Tw 1.757984 Tw /F3 10 Tf (make) Tj ( ) Tj (html ) Tj /F1 10 Tf (\() Tj /F3 10 Tf (make) Tj ( ) Tj (singlehtml ) Tj /F1 10 Tf (creates one single HTML file\), or ) Tj /F3 10 Tf (make) Tj ( ) Tj (latexpdf ) Tj /F1 10 Tf (to run it. The) Tj T* 0 Tw (resulting documents will be in ) Tj /F3 10 Tf (_build/html/ ) Tj /F1 10 Tf (or ) Tj /F3 10 Tf (_build/latex/) Tj /F1 10 Tf (, respectively.) Tj T* ET
 Q
 Q
 q
-1 0 0 1 62.69291 629.0236 cm
+1 0 0 1 62.69291 617.0236 cm
 q
 0 0 0 rg
 BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (Currently, we do not include the HTML output into git, just the PDF and maybe the singlehtml page.) Tj T* ET
 Q
 Q
 q
-1 0 0 1 62.69291 611.0236 cm
+1 0 0 1 62.69291 599.0236 cm
 q
 0 0 0 rg
-BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (Links/Requirements:) Tj T* ET
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (Requirements:) Tj T* ET
 Q
-Q
-q
-1 0 0 1 62.69291 605.0236 cm
-Q
-q
-1 0 0 1 62.69291 605.0236 cm
 Q
 q
 1 0 0 1 62.69291 593.0236 cm
+Q
+q
+1 0 0 1 62.69291 593.0236 cm
+Q
+q
+1 0 0 1 62.69291 581.0236 cm
 0 0 0 rg
 BT /F1 10 Tf 12 TL ET
 q
@@ -279,10 +311,10 @@ q
 Q
 Q
 q
-1 0 0 1 62.69291 587.0236 cm
+1 0 0 1 62.69291 575.0236 cm
 Q
 q
-1 0 0 1 62.69291 575.0236 cm
+1 0 0 1 62.69291 563.0236 cm
 0 0 0 rg
 BT /F1 10 Tf 12 TL ET
 q
@@ -302,10 +334,10 @@ q
 Q
 Q
 q
-1 0 0 1 62.69291 569.0236 cm
+1 0 0 1 62.69291 557.0236 cm
 Q
 q
-1 0 0 1 62.69291 557.0236 cm
+1 0 0 1 62.69291 545.0236 cm
 0 0 0 rg
 BT /F1 10 Tf 12 TL ET
 q
@@ -325,10 +357,46 @@ q
 Q
 Q
 q
-1 0 0 1 62.69291 551.0236 cm
+1 0 0 1 62.69291 539.0236 cm
 Q
 q
-1 0 0 1 62.69291 539.0236 cm
+1 0 0 1 62.69291 527.0236 cm
+0 0 0 rg
+BT /F1 10 Tf 12 TL ET
+q
+1 0 0 1 6 -3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL 10.5 0 Td (\177) Tj T* -10.5 0 Td ET
+Q
+Q
+q
+1 0 0 1 23 -3 cm
+q
+BT 1 0 0 1 0 2 Tm 12 TL /F1 10 Tf 0 0 0 rg (TexLive >) Tj (2011 ) Tj 0 0 .501961 rg (http://www.tug.org/texlive/) Tj T* ET
+Q
+Q
+q
+Q
+Q
+q
+1 0 0 1 62.69291 527.0236 cm
+Q
+q
+1 0 0 1 62.69291 509.0236 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (Links:) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 503.0236 cm
+Q
+q
+1 0 0 1 62.69291 503.0236 cm
+Q
+q
+1 0 0 1 62.69291 491.0236 cm
 0 0 0 rg
 BT /F1 10 Tf 12 TL ET
 q
@@ -348,10 +416,33 @@ q
 Q
 Q
 q
-1 0 0 1 62.69291 533.0236 cm
+1 0 0 1 62.69291 485.0236 cm
 Q
 q
-1 0 0 1 62.69291 521.0236 cm
+1 0 0 1 62.69291 473.0236 cm
+0 0 0 rg
+BT /F1 10 Tf 12 TL ET
+q
+1 0 0 1 6 -3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL 10.5 0 Td (\177) Tj T* -10.5 0 Td ET
+Q
+Q
+q
+1 0 0 1 23 -3 cm
+q
+BT 1 0 0 1 0 2 Tm 12 TL /F1 10 Tf 0 0 .501961 rg (ReST and Sphinx Primer) Tj  T* ET
+Q
+Q
+q
+Q
+Q
+q
+1 0 0 1 62.69291 467.0236 cm
+Q
+q
+1 0 0 1 62.69291 455.0236 cm
 0 0 0 rg
 BT /F1 10 Tf 12 TL ET
 q
@@ -371,33 +462,16 @@ q
 Q
 Q
 q
-1 0 0 1 62.69291 515.0236 cm
+1 0 0 1 62.69291 455.0236 cm
 Q
 q
-1 0 0 1 62.69291 503.0236 cm
-0 0 0 rg
-BT /F1 10 Tf 12 TL ET
+1 0 0 1 62.69291 425.0236 cm
 q
-1 0 0 1 6 -3 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL 10.5 0 Td (\177) Tj T* -10.5 0 Td ET
+BT 1 0 0 1 0 14 Tm .68686 Tw 12 TL /F1 10 Tf 0 0 0 rg (PS: I've manually updated the Makefiles to do some minor ) Tj /F3 10 Tf (sed ) Tj /F1 10 Tf (replacement to use the LaTeX package) Tj T* 0 Tw 0 0 .501961 rg (fancyvrb ) Tj 0 0 0 rg (for styling the verbatim boxes; this package should be included in the TeXLive distribution.) Tj T* ET
 Q
 Q
 q
-1 0 0 1 23 -3 cm
-q
-BT 1 0 0 1 0 2 Tm 12 TL /F1 10 Tf 0 0 .501961 rg (using the sffms latex class in sphinx) Tj  T* ET
-Q
-Q
-q
-Q
-Q
-q
-1 0 0 1 62.69291 503.0236 cm
-Q
-q
-1 0 0 1 62.69291 485.0236 cm
+1 0 0 1 62.69291 407.0236 cm
 q
 0 0 0 rg
 BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (Holger) Tj T* ET
@@ -406,25 +480,25 @@ Q
  
 endstream
 endobj
-% 'R18': class PDFOutlines 
-18 0 obj
+% 'R20': class PDFOutlines 
+20 0 obj
 << /Count 0
  /Type /Outlines >>
 endobj
-% 'R19': class PDFPageLabels 
-19 0 obj
+% 'R21': class PDFPageLabels 
+21 0 obj
 % Document Root
 << /Nums [ 0
- 20 0 R ] >>
+ 22 0 R ] >>
 endobj
-% 'R20': class PDFPageLabel 
-20 0 obj
+% 'R22': class PDFPageLabel 
+22 0 obj
 % None
 << /S /D
  /St 1 >>
 endobj
 xref
-0 21
+0 23
 0000000000 65535 f
 0000000113 00000 n
 0000000233 00000 n
@@ -436,24 +510,26 @@ xref
 0000001508 00000 n
 0000001748 00000 n
 0000001986 00000 n
-0000002296 00000 n
-0000002609 00000 n
-0000002937 00000 n
-0000003297 00000 n
-0000003456 00000 n
-0000003720 00000 n
-0000003828 00000 n
-0000007935 00000 n
-0000008018 00000 n
-0000008111 00000 n
+0000002232 00000 n
+0000002542 00000 n
+0000002813 00000 n
+0000003127 00000 n
+0000003364 00000 n
+0000003742 00000 n
+0000003901 00000 n
+0000004165 00000 n
+0000004273 00000 n
+0000009464 00000 n
+0000009547 00000 n
+0000009640 00000 n
 trailer
 << /ID 
  % ReportLab generated PDF document -- digest (http://www.reportlab.com) 
- [(\275N$\316\355\322\014\301z,\216v\267ZP\307) (\275N$\316\355\322\014\301z,\216v\267ZP\307)] 
+ [(\224\336\007^-\240\276!\001\261"tc\376\235\210) (\224\336\007^-\240\276!\001\261"tc\376\235\210)] 
 
- /Info 15 0 R
- /Root 14 0 R
- /Size 21 >>
+ /Info 17 0 R
+ /Root 16 0 R
+ /Size 23 >>
 startxref
-8158
+9687
 %%EOF
