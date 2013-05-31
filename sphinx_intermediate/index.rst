@@ -3,7 +3,7 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to the Course "Intermediate Linux Course: Commandline and Basic Scripting"
+Intermediate Linux Course: Commandline and Basic Scripting
 ===================================================================================
 
 
@@ -13,14 +13,10 @@ Welcome to the Course "Intermediate Linux Course: Commandline and Basic Scriptin
    Commandline Tools <commandlinetools>
    Basic Scripting <basic_scripting>
    Solutions <solutions>
-   Internal Comments <Comments>
-
 
 
 Indices and tables
 ==================
-.. 
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
 
+* :ref:`genindex`
+* :ref:`search`

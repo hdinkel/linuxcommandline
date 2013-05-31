@@ -42,7 +42,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'Intermediate Linux Course'
-copyright = u'2013, Holger Dinkel & Frank Thommen'
+copyright = u'2012,2013, Holger Dinkel, Frank Thommen & Thomas Zichner'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -217,7 +217,7 @@ latex_show_pagerefs = True
 # (source start file, name, description, authors, manual section).
 man_pages = [
     ('index', 'intermediatelinuxcourse', u'Intermediate Linux Course Documentation',
-     [u'Holger Dinkel & Frank Thommen'], 1)
+     [u'Holger Dinkel, Frank Thommen, and Thomas Zichner'], 1)
 ]
 
 # If true, show URL addresses after external links.

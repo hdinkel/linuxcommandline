@@ -1,6 +1,7 @@
 sphinx_beginner/_static/1280px-Unix_history-simple.svg.png
 sphinx_beginner/_static/File-permissions-in-Linux-2.png
 sphinx_beginner/_static/Unix_history-simple.svg
+sphinx_beginner/_build/
 sphinx_intermediate/_build/doctrees/
 sphinx_intermediate/_build/html/
 sphinx_intermediate/_build/latex/IntermediateLinuxCourse.aux
@@ -21,3 +22,4 @@ sphinx_intermediate/_build/latex/sphinxhowto.cls
 sphinx_intermediate/_build/latex/sphinxmanual.cls
 sphinx_intermediate/_build/latex/tabulary.sty
 sphinx_intermediate/_build/latex/targzip.png
+sphinx_intermediate/_build/singlehtml/

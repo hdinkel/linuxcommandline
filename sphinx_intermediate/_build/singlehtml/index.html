@@ -39,8 +39,8 @@
         <div class="bodywrapper">
           <div class="body">
             
-  <div class="section" id="welcome-to-the-course-intermediate-linux-course-commandline-and-basic-scripting">
-<h1>Welcome to the Course &#8220;Intermediate Linux Course: Commandline and Basic Scripting&#8221;<a class="headerlink" href="#welcome-to-the-course-intermediate-linux-course-commandline-and-basic-scripting" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="intermediate-linux-course-commandline-and-basic-scripting">
+<h1>Intermediate Linux Course: Commandline and Basic Scripting<a class="headerlink" href="#intermediate-linux-course-commandline-and-basic-scripting" title="Permalink to this headline">¶</a></h1>
 <div class="toctree-wrapper compound">
 <span id="document-commandlinetools"></span><div class="section" id="more-commandline-tools">
 <h2>More Commandline Tools<a class="headerlink" href="#more-commandline-tools" title="Permalink to this headline">¶</a></h2>
@@ -48,23 +48,23 @@
 <h3>Command-line Tools<a class="headerlink" href="#command-line-tools" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="gzip">
 <h4>GZIP<a class="headerlink" href="#gzip" title="Permalink to this headline">¶</a></h4>
-<p><em>gzip</em> is a compression/decompression tool.
+<p><span class="target" id="index-0"></span>gzip is a compression/decompression tool.
 When used on a file (without any parameters) it will compress it and replace the
 file by a compressed version with the extension ‘.gz’ attached:</p>
 <blockquote>
-<div><div class="highlight-python"><pre>ls textfile*
+<div><div class="highlight-python"><pre>% ls textfile*
  textfile
-gzip textfile
-ls textfile*
+% gzip textfile
+% ls textfile*
  textfile.gz</pre>
 </div>
 </div></blockquote>
 <p>To revert this / to uncompress, use the parameter <tt class="docutils literal"><span class="pre">-d</span></tt>:</p>
 <blockquote>
-<div><div class="highlight-python"><pre>ls textfile*
+<div><div class="highlight-python"><pre>% ls textfile*
  textfile.gz
-gzip -d textfile
-ls textfile*
+% gzip -d textfile
+% ls textfile*
  textfile</pre>
 </div>
 </div></blockquote>
@@ -75,7 +75,7 @@ ls textfile*
 </div>
 <div class="section" id="tar">
 <h4>TAR<a class="headerlink" href="#tar" title="Permalink to this headline">¶</a></h4>
-<p><tt class="docutils literal"><span class="pre">tar</span></tt> (tape archive) is a tool to handle archives. Initially it was created to combine
+<p><span class="target" id="index-1"></span>tar (tape archive) is a tool to handle archives. Initially it was created to combine
 multiple files/directories to be written onto tape, it is now the standard tool to
 collect files for distribution or archiving.</p>
 <p><tt class="docutils literal"><span class="pre">tar</span></tt> stores the permissions of the files within an archive and also copies special files
@@ -123,32 +123,34 @@ the order matters, so <tt class="docutils literal"><span class="pre">tar</span> 
 </div>
 <p>Creating an archive containing two files:</p>
 <blockquote>
-<div><div class="highlight-python"><pre>tar -cf archive.tar textfile1 textfile2</pre>
+<div><div class="highlight-python"><pre>% tar -cf archive.tar textfile1 textfile2</pre>
 </div>
 </div></blockquote>
 <p>Listing the contents of an archive:</p>
 <blockquote>
-<div><div class="highlight-python"><pre>tar -tf archive.tar
+<div><div class="highlight-python"><pre>% tar -tf archive.tar
  textfile1
  textfile2</pre>
 </div>
 </div></blockquote>
 <p>Extracting an archive:</p>
 <blockquote>
-<div><div class="highlight-python"><pre>tar -xf archive.tar</pre>
+<div><div class="highlight-python"><pre>% tar -xf archive.tar</pre>
 </div>
 </div></blockquote>
 <p>Creating and extracting a compressed archive containing two files:</p>
 <blockquote>
-<div><div class="highlight-python"><pre>tar -czf archive.tar.gz textfile1 textfile2
-tar -xzf archive.tar.gz</pre>
+<div><div class="highlight-python"><pre>% tar -czf archive.tar.gz textfile1 textfile2
+% tar -xzf archive.tar.gz</pre>
 </div>
 </div></blockquote>
-<p>GREP
-Find lines matching a pattern in textfiles
-Usage: grep [options] pattern file(s)</p>
+</div>
+<div class="section" id="grep">
+<h4>GREP<a class="headerlink" href="#grep" title="Permalink to this headline">¶</a></h4>
+<p>Find lines matching a pattern in textfiles.</p>
+<p><strong>Usage</strong>: grep [options] pattern file(s)</p>
 <blockquote>
-<div><div class="highlight-python"><pre>grep -i ensembl P04637.txt
+<div><div class="highlight-python"><pre>% grep -i ensembl P04637.txt
 
  DR Ensembl; ENST00000269305; ENSP00000269305; ENSG00000141510.
  DR Ensembl; ENST00000359597; ENSP00000352610; ENSG00000141510.
@@ -189,16 +191,13 @@ Usage: grep [options] pattern file(s)</p>
 </table>
 <p>Count the number of fasta sequences (they start with a “&gt;”) in a file:</p>
 <blockquote>
-<div><div class="highlight-python"><pre>grep –c '&gt;' twofiles.fasta
-grep –c &gt; twofiles.fasta
-grep –c \&gt; twofiles.fasta
-grep –c \\&gt; twofiles.fasta
+<div><div class="highlight-python"><pre>% grep –c '&gt;' twofiles.fasta
  2</pre>
 </div>
 </div></blockquote>
 <p>List all files containing the term “Ensembl”:</p>
 <blockquote>
-<div><div class="highlight-python"><pre>grep –l Ensembl *.txt
+<div><div class="highlight-python"><pre>% grep –l Ensembl *.txt
  P04062.txt
  P12931.txt</pre>
 </div>
@@ -235,8 +234,7 @@ grep –c \\&gt; twofiles.fasta
 </tbody>
 </table>
 <blockquote>
-<div><div class="highlight-python"><pre>echo “This is text.” | sed 's/text/replaced stuff/’
-
+<div><div class="highlight-python"><pre>% echo “This is text.” | sed 's/text/replaced stuff/’
  This is replaced stuff.</pre>
 </div>
 </div></blockquote>
@@ -245,20 +243,19 @@ trailing ‘g’ option, to make the substitution ‘global’ (‘s/TEXT/REPLAC
 meaning all occurrences in a line are substituted (not just the first in each line).
 Note the difference:</p>
 <blockquote>
-<div><div class="highlight-python"><pre>echo “ACCAAGCATTGGAGGAATATCGTAGGTAAA” | sed ‘s/A/_/’
-
+<div><div class="highlight-python"><pre>% echo “ACCAAGCATTGGAGGAATATCGTAGGTAAA” | sed ‘s/A/_/’
  _CCAAGCATTGGAGGAATATCGTAGGTAAA
 
-echo “ACCAAGCATTGGAGGAATATCGTAGGTAAA” | sed ‘s/A/_/g’
+% echo “ACCAAGCATTGGAGGAATATCGTAGGTAAA” | sed ‘s/A/_/g’
  _CC__GC_TTGG_GG__T_TCGT_GGT___</pre>
 </div>
 </div></blockquote>
 <p>When used on a file, sed prints the file to standard output, replacing text as it goes
 along:</p>
 <blockquote>
-<div><div class="highlight-python"><pre>echo “This is text” &gt; textfile
-echo “This is even more text” &gt;&gt; textfile
-sed 's/text/stuff/' textfile
+<div><div class="highlight-python"><pre>% echo “This is text” &gt; textfile
+% echo “This is even more text” &gt;&gt; textfile
+% sed 's/text/stuff/' textfile
  This is stuff
  This is even more stuff</pre>
 </div>
@@ -268,8 +265,7 @@ For this you leave out the leading ‘s’ and just provide a pattern: ‘/PATTE
 trailing letter determines, what sed should do with the text that matches the pattern
 (‘p’: print, ‘d’: delete)</p>
 <blockquote>
-<div><div class="highlight-python"><pre>sed '/more/p' textfile
-
+<div><div class="highlight-python"><pre>% sed '/more/p' textfile
  This is text
  This is even more text
  This is even more text</pre>
@@ -278,23 +274,20 @@ trailing letter determines, what sed should do with the text that matches the pa
 <p>As sed by default prints each line, you see the line that matched the pattern,
 printed twice. Use option ‘-n’ to suppress default printing of lines.</p>
 <blockquote>
-<div><div class="highlight-python"><pre>sed -n '/more/p' textfile
-
+<div><div class="highlight-python"><pre>% sed -n '/more/p' textfile
  This is even more text</pre>
 </div>
 </div></blockquote>
 <p>Delete lines matching the pattern:</p>
 <blockquote>
-<div><div class="highlight-python"><pre>sed '/more/d' textfile
-
+<div><div class="highlight-python"><pre>% sed '/more/d' textfile
  This is text</pre>
 </div>
 </div></blockquote>
 <p>Multiple sed statements can be applied to the same input stream by prepending
 each by option ‘-e’ (edit):</p>
 <blockquote>
-<div><div class="highlight-python"><pre>sed -e 's/text/good stuff/' -e ’s/This/That/’ textfile
-
+<div><div class="highlight-python"><pre>% sed -e 's/text/good stuff/' -e ’s/This/That/’ textfile
  That is good stuff
  That is even more good stuff</pre>
 </div>
@@ -305,11 +298,11 @@ print the output. As a safety measure, this option will ask for an extension tha
 be used to rename the original file to. For instance, the following option ‘-i.bak’
 will edit the file and rename the original file to textfile.bak:</p>
 <blockquote>
-<div><div class="highlight-python"><pre>sed –i.bak 's/text/stuff/' textfile
-cat textfile
+<div><div class="highlight-python"><pre>% sed –i.bak 's/text/stuff/' textfile
+% cat textfile
  This is stuff
  This is even more stuff
-cat textfile.bak
+% cat textfile.bak
  This is text
  This is even more text</pre>
 </div>
@@ -320,37 +313,37 @@ cat textfile.bak
 <p>awk is more than just a command, it is a complete text processing language (the
 name is an abbreviation of the author’s names).
 Each line of the input (file or pipe) is treated as a record and is broken into fields.
-Generally, awk commands are of the form: &#8216;condition { action }’, where:</p>
-<p># condition is typically an expression
-# action is a series of commands</p>
+Generally, awk commands are of the form: `` awk condition { action }``, where:</p>
+<ul class="simple">
+<li>condition is typically an expression</li>
+<li>action is a series of commands</li>
+</ul>
 <p>If no condition is given, the action is applied to each line, otherwise just to the
 lines that match the condition.</p>
 <blockquote>
-<div><div class="highlight-python"><pre>awk '{print}' textfile
-
+<div><div class="highlight-python"><pre>% awk '{print}' textfile
  This is text
  This is even more text
 
-awk '/more/ {print}' textfile</pre>
+% awk '/more/ {print}' textfile
+ This is even more text</pre>
 </div>
 </div></blockquote>
-<p>This is even more text</p>
 <p>awk reads each line of input and automatically splits the line into columns. These
 columns can be addressed via $1, $2 and so on ($0 represents the whole line).
 So an easy way to print or rearrange columns of text is:</p>
 <blockquote>
-<div><div class="highlight-python"><pre>echo “Bob likes Sue“ | awk ‘{print $3, $2, $1}’
-
+<div><div class="highlight-python"><pre>% echo “Bob likes Sue“ | awk ‘{print $3, $2, $1}’
  Sue likes Bob
 
-echo “Master Obi-Wan has lost a planet“ | awk ‘{print $4,$5,$6,$1,$2,$3}’
+% echo “Master Obi-Wan has lost a planet“ | awk ‘{print $4,$5,$6,$1,$2,$3}’
  lost a planet Master Obi-Wan has</pre>
 </div>
 </div></blockquote>
 <p>awk splits text by default on whitespace (spaces or tabs), which might not be ideal in all situations. To change the field separator (FS), use option ‘-F’
 (remember to quote the field separator):</p>
 <blockquote>
-<div><div class="highlight-python"><pre>echo “field1,field2,field2“ | awk -F’,’ ‘{print $2, $1}’
+<div><div class="highlight-python"><pre>% echo “field1,field2,field2“ | awk -F’,’ ‘{print $2, $1}’
  field2 field1</pre>
 </div>
 </div></blockquote>
@@ -358,14 +351,13 @@ echo “Master Obi-Wan has lost a planet“ | awk ‘{print $4,$5,$6,$1,$2,$3}�
 want to have space between the output fields, you actually need to separate them
 by a comma or they will be catenated together...</p>
 <blockquote>
-<div><div class="highlight-python"><pre>echo “field1,field2,field2“ | awk -F’,’ ‘{print $1 $2 $3}’
+<div><div class="highlight-python"><pre>% echo “field1,field2,field2“ | awk -F’,’ ‘{print $1 $2 $3}’
  field1field2field3</pre>
 </div>
 </div></blockquote>
 <p>You can also combine the pattern matching and the column selection techniques:</p>
 <blockquote>
-<div><div class="highlight-python"><pre>awk '/more/ {print $3}' textfile
-
+<div><div class="highlight-python"><pre>% awk '/more/ {print $3}' textfile
  even</pre>
 </div>
 </div></blockquote>
@@ -373,8 +365,7 @@ by a comma or they will be catenated together...</p>
 certain columns of certain lines. Here we print the third column of those lines
 where the fourth column is ‘more’:</p>
 <blockquote>
-<div><div class="highlight-python"><pre>awk '$4==”more” {print $3}' textfile
-
+<div><div class="highlight-python"><pre>% awk '$4==”more” {print $3}' textfile
  even</pre>
 </div>
 </div></blockquote>
@@ -382,8 +373,7 @@ where the fourth column is ‘more’:</p>
 “more”.
 If you want to match a field, but not exactly, you can use ‘~’ instead of ‘==’:</p>
 <blockquote>
-<div><div class="highlight-python"><pre>awk '$4~”ore” {print $3}' textfile
-
+<div><div class="highlight-python"><pre>% awk '$4~”ore” {print $3}' textfile
  even</pre>
 </div>
 </div></blockquote>
@@ -401,43 +391,42 @@ generally that within double quotes, variables will be expanded, while everythin
 single quotes is treated as string literal.
 When setting a variable, it doesn’t matter which quotes you use:</p>
 <blockquote>
-<div><div class="highlight-python"><pre>MYVAR=This is set
+<div><div class="highlight-python"><pre>% MYVAR=This is set
  -bash: is: command not found
 
-MYVAR='This is set'
-echo $MYVAR
+% MYVAR='This is set'
+% echo $MYVAR
  This is set
-MYVAR="This is set"
-echo $MYVAR
+% MYVAR="This is set"
+% echo $MYVAR
  This is set</pre>
 </div>
 </div></blockquote>
 <p>However, it does matter, when using (expanding) the variable:
 Double quotes:</p>
 <blockquote>
-<div><div class="highlight-python"><pre>export MYVAR=123
-
-echo "the variable is $MYVAR"
+<div><div class="highlight-python"><pre>% export MYVAR=123
+% echo "the variable is $MYVAR"
  the variable is 123
-echo "the variable is set" | sed "s/set/$MYVAR/"
+% echo "the variable is set" | sed "s/set/$MYVAR/"
  the variable is 123</pre>
 </div>
 </div></blockquote>
 <p>Single quotes:</p>
 <blockquote>
-<div><div class="highlight-python"><pre>export MYVAR=123
-echo 'the variable is $MYVAR'
+<div><div class="highlight-python"><pre>% export MYVAR=123
+% echo 'the variable is $MYVAR'
  the variable is $MYVAR
-echo "the variable is set" | sed 's/set/$MYVAR/'
+% echo "the variable is set" | sed 's/set/$MYVAR/'
  the variable is $MYVAR</pre>
 </div>
 </div></blockquote>
 <p>Weird things can happen when parsing data/text that contains quote characters:</p>
 <blockquote>
-<div><div class="highlight-python"><pre>MYVAR='Don't worry'; echo $MYVAR
+<div><div class="highlight-python"><pre>% MYVAR='Don't worry'; echo $MYVAR
  &gt;
 # you need to press Ctrl-C to abort
-MYVAR="Don't worry"; echo $MYVAR
+% MYVAR="Don't worry"; echo $MYVAR
  Don't worry</pre>
 </div>
 </div></blockquote>
@@ -446,9 +435,8 @@ MYVAR="Don't worry"; echo $MYVAR
 <h4>Expanding and Escaping<a class="headerlink" href="#expanding-and-escaping" title="Permalink to this headline">¶</a></h4>
 <p>You already learned how to expand a variable such that its value is used instead of its name:</p>
 <blockquote>
-<div><div class="highlight-python"><pre>export MYVAR=123
-
-echo "the variable is $MYVAR"
+<div><div class="highlight-python"><pre>% export MYVAR=123
+% echo "the variable is $MYVAR"
  the variable is 123</pre>
 </div>
 </div></blockquote>
@@ -467,6 +455,217 @@ echo "the \$MYVAR variable is $MYVAR"
 </div>
 </div>
 </div>
+<span id="document-basic_scripting"></span><div class="section" id="basic-shell-scripting">
+<h2>Basic Shell Scripting<a class="headerlink" href="#basic-shell-scripting" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="what-is-a-script">
+<h3>What is a Script?<a class="headerlink" href="#what-is-a-script" title="Permalink to this headline">¶</a></h3>
+<p>A script is nothing else than a number of shell command place together in a file. The sim-
+plest script is maybe just a complex oneliner that you don’t want to type each time again.
+More complex scripts are seasoned with control elements (conditions and loops) which
+allow for a sophisticated command flow. scripts might allow for configuration and customi-
+zation, thus allowing one script to be flexibly used in several different environments.
+Whatever you do in a script, you can also do on the commandline. This is
+also the first way to test your scripts step by step!
+Script Naming and Organization
+It is good practice – though not technically required – to give your scripts an extension
+which specifies their type. I.e. “.sh” for Bourne Shell and Bourne Again Shell scripts, “.csh”
+for C-Shell scripts. Sometimes “.bash” for Bourne Again Shell scripts is used.
+We recommend to either store all scripts in one location (e.g. ~/bin) and add this location to
+your $PATH variable or to store the scripts together with the files that are processed by the
+script.
+If you use scripts to process data, then the scripts should probably be
+archived together with the data files
+Running a Script
+There are basically three ways to run a script:
+a) the location to your script is not in your $PATH variable, then you have to specify the
+full path to the script:</p>
+<blockquote>
+<div><div class="highlight-python"><pre>/here/is/my/script.sh
+ [...]</pre>
+</div>
+</div></blockquote>
+<ol class="loweralpha simple" start="2">
+<li>the location to the script is in the $PATH variable, then you can simply type its name:</li>
+</ol>
+<blockquote>
+<div><div class="highlight-python"><pre>script.sh
+ [...]</pre>
+</div>
+</div></blockquote>
+<p>In both situations, the script will need to have execute permissions to be run. If for some
+reason you can only read but not execute the script, then it can still be run by
+c) specifying the interpreter. The full path (relative or absolute) to script has to be provi-
+ded in this case, no matter wether the script location is already contained in $PATH or
+not:</p>
+<blockquote>
+<div><div class="highlight-python"><pre>/bin/sh /here/is/my/script.sh
+ [...]</pre>
+</div>
+</div></blockquote>
+<div class="section" id="basic-structure-of-a-shellscript">
+<h4>Basic Structure of a Shellscript<a class="headerlink" href="#basic-structure-of-a-shellscript" title="Permalink to this headline">¶</a></h4>
+<p>Shellscripts have the following general structure:</p>
+<ol class="arabic simple">
+<li>A line starting with “<tt class="docutils literal"><span class="pre">#!</span></tt>” which defines the interpreter (i.e. the program used to run the script). This line is called the “shebang line” and must be the first line in a script</li>
+<li>A section where the configuration takes place, e.g. paths, options and commands are defined and it is made sure, that all prerequisites are met</li>
+<li>A section where the actual processing is done. This includes error handling</li>
+<li>A controlled exit sequence, which includes cleaning up all temporary files and returning a sensible exit status</li>
+</ol>
+<p>This is merely a recommendation to keep your scripts well structured. None of these sections are mandatory.</p>
+</div>
+<div class="section" id="readability-and-documentation">
+<h4>Readability and Documentation<a class="headerlink" href="#readability-and-documentation" title="Permalink to this headline">¶</a></h4>
+<p>Make your script easily readable. Use comments and whitespace and avoid super compact
+but hardly understandable commandlines. Always take into account, that not only the shell,
+also human beings will probably have to read and understand your script.
+Even if your script is very simple – document it! This helps others understand what you did,
+but – most important – it helps you remember what you did, when you have to reuse the
+script in the future.</p>
+<p>Documentation is done either by writing comments into the script or by creating a special documentation file (README.txt or similar). Documenting in the script can be done in several ways:
+#. A preamble in the script, outlining the purpose, parameters and variables of the script as well as some information about authorship and and perhaps changes
+#. Within the script as blocks of text or “End of line” comments</p>
+<p>To write a comments use the hash sign (“<tt class="docutils literal"><span class="pre">#</span></tt>”). Everything after a “<tt class="docutils literal"><span class="pre">#</span></tt>” is ignored when executing a script.</p>
+<p>Shebang line:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="hll"><span class="c">#!/bin/sh </span>
+</span><span class="c"># </span>
+<span class="c"># myscript.sh</span>
+</pre></div>
+</div>
+<p>Preamble with a short description, usage information, authorship etc.:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="c"># myscript.sh</span>
+<span class="c"># General purpose script for extracting Glycine</span>
+<span class="c"># occurrences in a datafile.</span>
+<span class="c"># Usage: myscript.sh datafile</span>
+<span class="c"># Exit values: </span>
+<span class="c">#    1: No datafile given or file doesn’t exist</span>
+<span class="c">#    2: No Glycine found</span>
+<span class="c">#</span>
+<span class="c"># Author: Me, myself and I</span>
+<span class="c"># Date: Heidelberg, December 12., 2012</span>
+<span class="c"># </span>
+</pre></div>
+</div>
+<p>Configuration:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="c"># --- Configuration ---</span>
+<span class="nv">GREPCMD</span><span class="o">=</span>/bin/grep
+<span class="nv">DATAFILE</span><span class="o">=</span><span class="nv">$1</span>
+</pre></div>
+</div>
+<p>Checking prerequisites and sane environment:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="c"># --- Check prerequisites ---</span>
+<span class="c"># first check for $1</span>
+<span class="k">if</span> <span class="o">[</span> -z <span class="nv">$DATAFILE</span> <span class="o">]</span>
+<span class="k">then</span>
+<span class="k">    </span><span class="nb">echo</span> “No datafile given” 1&gt;&amp;2 <span class="c"># print on STDERR</span>
+    <span class="nb">echo</span> “USAGE: <span class="nv">$0</span> datafile”
+    <span class="nb">exit </span>1
+<span class="k">fi</span>
+<span class="c"># then check if the file exists</span>
+<span class="k">if</span> <span class="o">[</span> ! -f <span class="nv">$DATAFILE</span> <span class="o">]</span>
+<span class="k">then</span>
+<span class="k">    </span><span class="nb">echo</span> “Datafile <span class="nv">$DATAFILE</span> does not exist!” 1&gt;&amp;2
+    <span class="nb">exit</span>
+<span class="k">fi</span>
+</pre></div>
+</div>
+<p>This is what you actually wanted to do:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="c"># --- Now processing---</span>
+<span class="nv">$GREPCMD</span> –q Glycine <span class="nv">$DATAFILE</span> <span class="c"># Where is Glycine?</span>
+<span class="c"># --- Exit ---</span>
+</pre></div>
+</div>
+<p>Ensure a valid and meaningful exit status:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="k">if</span> <span class="o">[</span> <span class="nv">$?</span> –eq 0 <span class="o">]</span>
+<span class="k">then</span>
+<span class="k">    </span><span class="nb">exit </span>0
+<span class="k">else</span>
+<span class="k">    </span><span class="nb">exit </span>2
+<span class="k">fi</span>
+</pre></div>
+</div>
+<p>Full script:</p>
+<div class="highlight-bash"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39</pre></div></td><td class="code"><div class="highlight"><pre><span class="c">#!/bin/sh </span>
+<span class="c"># </span>
+<span class="c"># myscript.sh</span>
+<span class="c"># General purpose script for extracting Glycine</span>
+<span class="c"># occurrences in a datafile.</span>
+<span class="c"># Usage: myscript.sh datafile</span>
+<span class="c"># Exit values: </span>
+<span class="c">#    1: No datafile given or file doesn’t exist</span>
+<span class="c">#    2: No Glycine found</span>
+<span class="c">#</span>
+<span class="c"># Author: Me, myself and I</span>
+<span class="c"># Date: Heidelberg, December 12., 2012</span>
+<span class="c"># </span>
+<span class="c"># --- Configuration ---</span>
+<span class="nv">GREPCMD</span><span class="o">=</span>/bin/grep
+<span class="nv">DATAFILE</span><span class="o">=</span><span class="nv">$1</span>
+<span class="c"># --- Check prerequisites ---</span>
+<span class="c"># first check for $1</span>
+<span class="k">if</span> <span class="o">[</span> -z <span class="nv">$DATAFILE</span> <span class="o">]</span>
+<span class="k">then</span>
+<span class="k">    </span><span class="nb">echo</span> “No datafile given” 1&gt;&amp;2 <span class="c"># print on STDERR</span>
+    <span class="nb">echo</span> “USAGE: <span class="nv">$0</span> datafile”
+    <span class="nb">exit </span>1
+<span class="k">fi</span>
+<span class="c"># then check if the file exists</span>
+<span class="k">if</span> <span class="o">[</span> ! -f <span class="nv">$DATAFILE</span> <span class="o">]</span>
+<span class="k">then</span>
+<span class="k">    </span><span class="nb">echo</span> “Datafile <span class="nv">$DATAFILE</span> does not exist!” 1&gt;&amp;2
+    <span class="nb">exit</span>
+<span class="k">fi</span>
+<span class="c"># --- Now processing---</span>
+<span class="nv">$GREPCMD</span> –q Glycine <span class="nv">$DATAFILE</span> <span class="c"># Where is Glycine?</span>
+<span class="c"># --- Exit ---</span>
+<span class="k">if</span> <span class="o">[</span> <span class="nv">$?</span> –eq 0 <span class="o">]</span>
+<span class="k">then</span>
+<span class="k">    </span><span class="nb">exit </span>0
+<span class="k">else</span>
+<span class="k">    </span><span class="nb">exit </span>2
+<span class="k">fi</span>
+</pre></div>
+</td></tr></table></div>
+</div>
+</div>
+</div>
 <span id="document-solutions"></span><div class="section" id="solutions-to-the-exercises">
 <h2>Solutions to the Exercises<a class="headerlink" href="#solutions-to-the-exercises" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="commandline-tools">
@@ -474,7 +673,7 @@ echo "the \$MYVAR variable is $MYVAR"
 <div class="section" id="tar-gzip">
 <h4>TAR &amp; GZIP<a class="headerlink" href="#tar-gzip" title="Permalink to this headline">¶</a></h4>
 <ol class="arabic">
-<li><p class="first">Use gzip to compress the file P12931.txt</p>
+<li><p class="first">Use <span class="target" id="index-0"></span>gzip to compress the file P12931.txt</p>
 <div class="highlight-python"><pre>gzip P12931.txt</pre>
 </div>
 </li>
@@ -485,7 +684,7 @@ echo "the \$MYVAR variable is $MYVAR"
 <div class="highlight-python"><pre>gzip –d P12931.txt.gz</pre>
 </div>
 </li>
-<li><p class="first">Use tar to create an archive containing all fasta files in the current directory into an archive called “fastafiles.tar”</p>
+<li><p class="first">Use <span class="target" id="index-1"></span>tar to create an archive containing all fasta files in the current directory into an archive called “fastafiles.tar”</p>
 <div class="highlight-python"><pre>tar –c -f fastafiles.tar *.fasta</pre>
 </div>
 </li>
@@ -653,21 +852,15 @@ ssh pc-atcteach01 "echo $HOSTNAME"</pre>
 </div>
 </div>
 </div>
-<span id="document-Comments"></span><div class="section" id="comments">
-<h2>Comments<a class="headerlink" href="#comments" title="Permalink to this headline">¶</a></h2>
-<p>useful Links:</p>
-<ul class="simple">
-<li><a class="reference external" href="http://openalea.gforge.inria.fr/doc/openalea/doc/_build/html/source/sphinx/rest_syntax.html">ReST Cheat Sheet</a></li>
-<li><a class="reference external" href="http://doughellmann.com/2009/02/writing-technical-documentation-with-sphinx-paver-and-cog.html">Writing Technical Documentation with Sphinx, Paver, and Cog</a></li>
-<li><a class="reference external" href="http://sphinx.pocoo.org/extensions.htmlhttp://www.goer.org/Journal/2011/01/publishing_with_sphinx_rest_and_sffms_latex.html">using the sffms latex class in sphinx</a></li>
-</ul>
-</div>
 </div>
 </div>
 <div class="section" id="indices-and-tables">
 <h1>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this headline">¶</a></h1>
 <ul class="simple">
 <li><a class="reference internal" href="genindex.html"><em>Index</em></a></li>
+</ul>
+<ul class="simple">
+<li><a class="reference internal" href="search.html"><em>Search Page</em></a></li>
 </ul>
 </div>
 
@@ -684,11 +877,14 @@ ssh pc-atcteach01 "echo $HOSTNAME"</pre>
 <li class="toctree-l2"><a class="reference internal" href="index.html#hints">Hints</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="index.html#document-basic_scripting">Basic Scripting</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="index.html#what-is-a-script">What is a Script?</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="index.html#document-solutions">Solutions</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="index.html#commandline-tools">Commandline tools</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="index.html#document-Comments">Internal Comments</a></li>
 </ul>
 
 <div id="searchbox" style="display: none">
@@ -715,7 +911,7 @@ ssh pc-atcteach01 "echo $HOSTNAME"</pre>
       </ul>
     </div>
     <div class="footer">
-        &copy; Copyright 2013, Holger Dinkel &amp; Frank Thommen.
+        &copy; Copyright 2012,2013, Holger Dinkel, Frank Thommen &amp; Thomas Zichner.
       Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
     </div>
   </body>

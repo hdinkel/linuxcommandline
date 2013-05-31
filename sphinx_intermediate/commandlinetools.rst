@@ -4,10 +4,10 @@ More Commandline Tools
 Command-line Tools
 ------------------
 
+
 GZIP
 ^^^^
-
-*gzip* is a compression/decompression tool.
+:index:`gzip <gzip>` is a compression/decompression tool.
 When used on a file (without any parameters) it will compress it and replace the
 file by a compressed version with the extension ‘.gz’ attached:
 
@@ -32,10 +32,11 @@ To revert this / to uncompress, use the parameter ``-d``:
 .. note:: As a convenience, on most Linux systems, a shellscript named ``gunzip`` exists which simply calls ``gzip –d``
 
 
+
 TAR
 ^^^^
 
-``tar`` (tape archive) is a tool to handle archives. Initially it was created to combine
+:index:`tar <tar>` (tape archive) is a tool to handle archives. Initially it was created to combine
 multiple files/directories to be written onto tape, it is now the standard tool to
 collect files for distribution or archiving.
 

@@ -8,7 +8,7 @@ Commandline tools
 TAR & GZIP
 ^^^^^^^^^^
 
-1. Use gzip to compress the file P12931.txt
+1. Use :index:`gzip <gzip>` to compress the file P12931.txt
 
    ::
 
@@ -26,7 +26,7 @@ TAR & GZIP
 
     gzip –d P12931.txt.gz
 
-3. Use tar to create an archive containing all fasta files in the current directory into an archive called “fastafiles.tar”
+3. Use :index:`tar <tar>` to create an archive containing all fasta files in the current directory into an archive called “fastafiles.tar”
 
    ::
 
