@@ -14,6 +14,7 @@ The resulting documents will be in ``_build/html/`` or ``_build/latex/``, respec
 Currently, we do not include the HTML output into git, just the PDF and maybe the singlehtml page.
 
 Requirements:
+^^^^^^^^^^^^^
 
 - ReStructuredText https://en.wikipedia.org/wiki/ReStructuredText
 - Sphinx >1.1 http://sphinx-doc.org/
@@ -21,6 +22,7 @@ Requirements:
 - TexLive >2011 http://www.tug.org/texlive/
 
 Links:
+^^^^^^
 
 - `ReST Cheat Sheet <http://openalea.gforge.inria.fr/doc/openalea/doc/_build/html/source/sphinx/rest_syntax.html>`_
 - `ReST and Sphinx Primer <http://openmdao.org/dev_docs/documenting/sphinx.html>`_
@@ -30,5 +32,13 @@ Links:
 PS: I've manually updated the Makefiles to do some minor ``sed`` replacement to use the LaTeX package `fancyvrb <http://www.ctan.org/pkg/fancyvrb>`_ for styling
 the verbatim boxes; this package should be included in the TeXLive distribution.
 
+ToDos:
+^^^^^^
 
-Holger
+- get rid of ``xcolor`` error message in latexpdf
+- change Fonts
+- Better control of verbatim code-blocks:
+
+  - distinguish user input from output (boldface?)
+  - syntax highlight
+

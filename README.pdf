@@ -73,9 +73,9 @@ endobj
  0
  0 ]
  /Rect [ 166.8329
- 578.7736
+ 557.7736
  369.6829
- 590.7736 ]
+ 569.7736 ]
  /Subtype /Link
  /Type /Annot >>
 endobj
@@ -88,9 +88,9 @@ endobj
  0
  0 ]
  /Rect [ 141.5629
- 560.7736
+ 539.7736
  234.9429
- 572.7736 ]
+ 551.7736 ]
  /Subtype /Link
  /Type /Annot >>
 endobj
@@ -103,9 +103,9 @@ endobj
  0
  0 ]
  /Rect [ 155.4529
- 542.7736
+ 521.7736
  243.8329
- 554.7736 ]
+ 533.7736 ]
  /Subtype /Link
  /Type /Annot >>
 endobj
@@ -118,9 +118,9 @@ endobj
  0
  0 ]
  /Rect [ 154.3429
- 524.7736
+ 503.7736
  268.8329
- 536.7736 ]
+ 515.7736 ]
  /Subtype /Link
  /Type /Annot >>
 endobj
@@ -133,9 +133,9 @@ endobj
  0
  0 ]
  /Rect [ 85.69291
- 488.7736
+ 446.7736
  169.6229
- 500.7736 ]
+ 458.7736 ]
  /Subtype /Link
  /Type /Annot >>
 endobj
@@ -148,9 +148,9 @@ endobj
  0
  0 ]
  /Rect [ 85.69291
- 470.7736
+ 428.7736
  196.2829
- 482.7736 ]
+ 440.7736 ]
  /Subtype /Link
  /Type /Annot >>
 endobj
@@ -163,9 +163,9 @@ endobj
  0
  0 ]
  /Rect [ 85.69291
- 452.7736
+ 410.7736
  361.3529
- 464.7736 ]
+ 422.7736 ]
  /Subtype /Link
  /Type /Annot >>
 endobj
@@ -178,9 +178,9 @@ endobj
  0
  0 ]
  /Rect [ 62.69291
- 425.7736
+ 383.7736
  103.2629
- 437.7736 ]
+ 395.7736 ]
  /Subtype /Link
  /Type /Annot >>
 endobj
@@ -197,12 +197,12 @@ endobj
  12 0 R
  13 0 R
  14 0 R ]
- /Contents 19 0 R
+ /Contents 23 0 R
  /MediaBox [ 0
  0
  595.2756
  841.8898 ]
- /Parent 18 0 R
+ /Parent 22 0 R
  /Resources << /Font 1 0 R
  /ProcSet [ /PDF
  /Text
@@ -216,33 +216,74 @@ endobj
 % 'R16': class PDFCatalog 
 16 0 obj
 % Document Root
-<< /Outlines 20 0 R
- /PageLabels 21 0 R
+<< /Outlines 18 0 R
+ /PageLabels 24 0 R
  /PageMode /UseNone
- /Pages 18 0 R
+ /Pages 22 0 R
  /Type /Catalog >>
 endobj
 % 'R17': class PDFInfo 
 17 0 obj
 << /Author ()
- /CreationDate (D:20130531124347-01'00')
+ /CreationDate (D:20130603171929-01'00')
  /Creator (\(unspecified\))
  /Keywords ()
  /Producer (ReportLab PDF Library - www.reportlab.com)
  /Subject (\(unspecified\))
  /Title (Documentation Howto) >>
 endobj
-% 'R18': class PDFPages 
+% 'R18': class PDFOutlines 
 18 0 obj
+<< /Count 3
+ /First 19 0 R
+ /Last 21 0 R
+ /Type /Outlines >>
+endobj
+% 'Outline.0': class OutlineEntryObject 
+19 0 obj
+<< /Dest [ 15 0 R
+ /XYZ
+ 62.69291
+ 605.0236
+ 0 ]
+ /Next 20 0 R
+ /Parent 18 0 R
+ /Title (Requirements:) >>
+endobj
+% 'Outline.1': class OutlineEntryObject 
+20 0 obj
+<< /Dest [ 15 0 R
+ /XYZ
+ 62.69291
+ 494.0236
+ 0 ]
+ /Next 21 0 R
+ /Parent 18 0 R
+ /Prev 19 0 R
+ /Title (Links:) >>
+endobj
+% 'Outline.2': class OutlineEntryObject 
+21 0 obj
+<< /Dest [ 15 0 R
+ /XYZ
+ 62.69291
+ 371.0236
+ 0 ]
+ /Parent 18 0 R
+ /Prev 20 0 R
+ /Title (ToDos:) >>
+endobj
+% 'R22': class PDFPages 
+22 0 obj
 % page tree
 << /Count 1
  /Kids [ 15 0 R ]
  /Type /Pages >>
 endobj
-% 'R19': class PDFStream 
-19 0 obj
+% 'R23': class PDFStream 
+23 0 obj
 % page stream
-<< /Length 5090 >>
+<< /Length 6904 >>
 stream
 1 0 0 1 0 0 cm  BT /F1 12 Tf 14.4 TL ET
 q
@@ -278,20 +319,19 @@ BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (Currently, we do not include the HTML output 
 Q
 Q
 q
-1 0 0 1 62.69291 599.0236 cm
+1 0 0 1 62.69291 584.0236 cm
 q
-0 0 0 rg
-BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (Requirements:) Tj T* ET
+BT 1 0 0 1 0 3.5 Tm 21 TL /F2 17.5 Tf 0 0 0 rg (Requirements:) Tj T* ET
 Q
 Q
 q
-1 0 0 1 62.69291 593.0236 cm
+1 0 0 1 62.69291 572.0236 cm
 Q
 q
-1 0 0 1 62.69291 593.0236 cm
+1 0 0 1 62.69291 572.0236 cm
 Q
 q
-1 0 0 1 62.69291 581.0236 cm
+1 0 0 1 62.69291 560.0236 cm
 0 0 0 rg
 BT /F1 10 Tf 12 TL ET
 q
@@ -311,10 +351,10 @@ q
 Q
 Q
 q
-1 0 0 1 62.69291 575.0236 cm
+1 0 0 1 62.69291 554.0236 cm
 Q
 q
-1 0 0 1 62.69291 563.0236 cm
+1 0 0 1 62.69291 542.0236 cm
 0 0 0 rg
 BT /F1 10 Tf 12 TL ET
 q
@@ -334,10 +374,10 @@ q
 Q
 Q
 q
-1 0 0 1 62.69291 557.0236 cm
+1 0 0 1 62.69291 536.0236 cm
 Q
 q
-1 0 0 1 62.69291 545.0236 cm
+1 0 0 1 62.69291 524.0236 cm
 0 0 0 rg
 BT /F1 10 Tf 12 TL ET
 q
@@ -357,10 +397,10 @@ q
 Q
 Q
 q
-1 0 0 1 62.69291 539.0236 cm
+1 0 0 1 62.69291 518.0236 cm
 Q
 q
-1 0 0 1 62.69291 527.0236 cm
+1 0 0 1 62.69291 506.0236 cm
 0 0 0 rg
 BT /F1 10 Tf 12 TL ET
 q
@@ -380,23 +420,22 @@ q
 Q
 Q
 q
-1 0 0 1 62.69291 527.0236 cm
+1 0 0 1 62.69291 506.0236 cm
 Q
 q
-1 0 0 1 62.69291 509.0236 cm
+1 0 0 1 62.69291 473.0236 cm
 q
-0 0 0 rg
-BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (Links:) Tj T* ET
+BT 1 0 0 1 0 3.5 Tm 21 TL /F2 17.5 Tf 0 0 0 rg (Links:) Tj T* ET
 Q
 Q
 q
-1 0 0 1 62.69291 503.0236 cm
+1 0 0 1 62.69291 461.0236 cm
 Q
 q
-1 0 0 1 62.69291 503.0236 cm
+1 0 0 1 62.69291 461.0236 cm
 Q
 q
-1 0 0 1 62.69291 491.0236 cm
+1 0 0 1 62.69291 449.0236 cm
 0 0 0 rg
 BT /F1 10 Tf 12 TL ET
 q
@@ -416,10 +455,10 @@ q
 Q
 Q
 q
-1 0 0 1 62.69291 485.0236 cm
+1 0 0 1 62.69291 443.0236 cm
 Q
 q
-1 0 0 1 62.69291 473.0236 cm
+1 0 0 1 62.69291 431.0236 cm
 0 0 0 rg
 BT /F1 10 Tf 12 TL ET
 q
@@ -439,10 +478,10 @@ q
 Q
 Q
 q
-1 0 0 1 62.69291 467.0236 cm
+1 0 0 1 62.69291 425.0236 cm
 Q
 q
-1 0 0 1 62.69291 455.0236 cm
+1 0 0 1 62.69291 413.0236 cm
 0 0 0 rg
 BT /F1 10 Tf 12 TL ET
 q
@@ -462,43 +501,168 @@ q
 Q
 Q
 q
-1 0 0 1 62.69291 455.0236 cm
+1 0 0 1 62.69291 413.0236 cm
 Q
 q
-1 0 0 1 62.69291 425.0236 cm
+1 0 0 1 62.69291 383.0236 cm
 q
 BT 1 0 0 1 0 14 Tm .68686 Tw 12 TL /F1 10 Tf 0 0 0 rg (PS: I've manually updated the Makefiles to do some minor ) Tj /F3 10 Tf (sed ) Tj /F1 10 Tf (replacement to use the LaTeX package) Tj T* 0 Tw 0 0 .501961 rg (fancyvrb ) Tj 0 0 0 rg (for styling the verbatim boxes; this package should be included in the TeXLive distribution.) Tj T* ET
 Q
 Q
 q
-1 0 0 1 62.69291 407.0236 cm
+1 0 0 1 62.69291 350.0236 cm
+q
+BT 1 0 0 1 0 3.5 Tm 21 TL /F2 17.5 Tf 0 0 0 rg (ToDos:) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 338.0236 cm
+Q
+q
+1 0 0 1 62.69291 338.0236 cm
+Q
+q
+1 0 0 1 62.69291 326.0236 cm
+0 0 0 rg
+BT /F1 10 Tf 12 TL ET
+q
+1 0 0 1 6 -3 cm
 q
 0 0 0 rg
-BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (Holger) Tj T* ET
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL 10.5 0 Td (\177) Tj T* -10.5 0 Td ET
 Q
+Q
+q
+1 0 0 1 23 -3 cm
+q
+BT 1 0 0 1 0 2 Tm 12 TL /F1 10 Tf 0 0 0 rg (get rid of ) Tj /F3 10 Tf (xcolor ) Tj /F1 10 Tf (error message in latexpdf) Tj T* ET
+Q
+Q
+q
+Q
+Q
+q
+1 0 0 1 62.69291 320.0236 cm
+Q
+q
+1 0 0 1 62.69291 308.0236 cm
+0 0 0 rg
+BT /F1 10 Tf 12 TL ET
+q
+1 0 0 1 6 -3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL 10.5 0 Td (\177) Tj T* -10.5 0 Td ET
+Q
+Q
+q
+1 0 0 1 23 -3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (change Fonts) Tj T* ET
+Q
+Q
+q
+Q
+Q
+q
+1 0 0 1 62.69291 302.0236 cm
+Q
+q
+1 0 0 1 62.69291 254.0236 cm
+0 0 0 rg
+BT /F1 10 Tf 12 TL ET
+q
+1 0 0 1 6 33 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL 10.5 0 Td (\177) Tj T* -10.5 0 Td ET
+Q
+Q
+q
+1 0 0 1 23 33 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (Better control of verbatim code-blocks:) Tj T* ET
+Q
+Q
+q
+1 0 0 1 23 27 cm
+Q
+q
+1 0 0 1 23 27 cm
+Q
+q
+1 0 0 1 23 15 cm
+0 0 0 rg
+BT /F1 10 Tf 12 TL ET
+q
+1 0 0 1 6 -3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL 10.5 0 Td (\177) Tj T* -10.5 0 Td ET
+Q
+Q
+q
+1 0 0 1 23 -3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (distinguish user input from output \(boldface?\)) Tj T* ET
+Q
+Q
+q
+Q
+Q
+q
+1 0 0 1 23 9 cm
+Q
+q
+1 0 0 1 23 -3 cm
+0 0 0 rg
+BT /F1 10 Tf 12 TL ET
+q
+1 0 0 1 6 -3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL 10.5 0 Td (\177) Tj T* -10.5 0 Td ET
+Q
+Q
+q
+1 0 0 1 23 -3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (syntax highlight) Tj T* ET
+Q
+Q
+q
+Q
+Q
+q
+1 0 0 1 23 -3 cm
+Q
+q
+Q
+Q
+q
+1 0 0 1 62.69291 254.0236 cm
 Q
  
 endstream
 endobj
-% 'R20': class PDFOutlines 
-20 0 obj
-<< /Count 0
- /Type /Outlines >>
-endobj
-% 'R21': class PDFPageLabels 
-21 0 obj
+% 'R24': class PDFPageLabels 
+24 0 obj
 % Document Root
 << /Nums [ 0
- 22 0 R ] >>
+ 25 0 R ] >>
 endobj
-% 'R22': class PDFPageLabel 
-22 0 obj
+% 'R25': class PDFPageLabel 
+25 0 obj
 % None
 << /S /D
  /St 1 >>
 endobj
 xref
-0 23
+0 26
 0000000000 65535 f
 0000000113 00000 n
 0000000233 00000 n
@@ -517,19 +681,22 @@ xref
 0000003364 00000 n
 0000003742 00000 n
 0000003901 00000 n
-0000004165 00000 n
-0000004273 00000 n
-0000009464 00000 n
-0000009547 00000 n
-0000009640 00000 n
+0000004168 00000 n
+0000004293 00000 n
+0000004467 00000 n
+0000004649 00000 n
+0000004800 00000 n
+0000004908 00000 n
+0000011915 00000 n
+0000012008 00000 n
 trailer
 << /ID 
  % ReportLab generated PDF document -- digest (http://www.reportlab.com) 
- [(\224\336\007^-\240\276!\001\261"tc\376\235\210) (\224\336\007^-\240\276!\001\261"tc\376\235\210)] 
+ [(\372\0173\301\2301\013*\201*\3170\274]\330 ) (\372\0173\301\2301\013*\201*\3170\274]\330 )] 
 
  /Info 17 0 R
  /Root 16 0 R
- /Size 23 >>
+ /Size 26 >>
 startxref
-9687
+12055
 %%EOF
