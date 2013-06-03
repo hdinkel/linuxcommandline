@@ -11,16 +11,13 @@ Contents:
 .. toctree::
 
    Introduction <introduction>
-..   Solutions to the Exercises <solutions>
    Links <links>
    About Bio-IT <about_bioit>
    Acknowlegments <acknowledgments>
 
 
-.. Indices and tables
-.. ==================
-.. 
-.. * :ref:`genindex`
-.. * :ref:`modindex`
-.. * :ref:`search`
-.. 
+Indices and tables
+==================
+
+* :ref:`genindex`
+* :ref:`search`

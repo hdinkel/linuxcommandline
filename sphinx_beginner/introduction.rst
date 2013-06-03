@@ -79,6 +79,7 @@ Other commands will show a help page or at least a short usage overview if you p
 man – show the manual page of a command
 """""""""""""""""""""""""""""""""""""""
 
+
 **Usage**: 
 ``man command or file``
 
@@ -94,7 +95,7 @@ man – show the manual page of a command
          man  [-acdfFhkKtwW]  [--path]  [-m system] [-p string] [-C config_file]
   [...]
 
-For the navigation within a manpage see the chapter regarding less below.
+For the navigation within a :index:`man <man>`-page see the chapter regarding less below.
 
 .. note:: The behaviour of man is dependent of the $PAGER environment variable
 
