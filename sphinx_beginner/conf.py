@@ -179,7 +179,7 @@ latex_elements = {
 'pointsize': '11pt',
 
 # Additional stuff for the LaTeX preamble.
-'preamble': '\\usepackage{fancyvrb} \\usepackage[usenames,dvipsnames,svgnames,table]{xcolor}',
+'preamble': ' \\usepackage{fancyvrb}',
 }
 
 # Grouping the document tree into LaTeX files. List of tuples

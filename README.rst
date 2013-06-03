@@ -35,7 +35,6 @@ the verbatim boxes; this package should be included in the TeXLive distribution.
 ToDos:
 ^^^^^^
 
-- get rid of ``xcolor`` error message in latexpdf
 - change Fonts
 - Better control of verbatim code-blocks:
 

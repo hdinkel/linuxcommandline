@@ -108,7 +108,8 @@ latexpdf:
 #	sed -i 's/usepackage{fancyvrb}/usepackage{fancyvrb}\\renewcommand\\FancyVerbFormatLine\[1\]{\\colorbox{gray!10}{\\makebox\[.95\\linewidth\]\[l\]{#1}}}/' $(BUILDDIR)/latex/*.tex
 #	sed -i.bak 's|begin{Verbatim}\[|begin{Verbatim}\[frame=single, rulecolor=\\color{gray!20}, framerule=3mm, framesep=0mm, |' $(BUILDDIR)/latex/*.tex
 #	sed -i.bak 's|begin{Verbatim}\[|begin{Verbatim}\[frame=single, rulecolor=\\color{gray}, fillcolor=\\color{gray}, fontfamily=courier, |' $(BUILDDIR)/latex/*.tex
-	sed -i.bak 's|begin{Verbatim}\[|begin{Verbatim}\[frame=single, rulecolor=\\color{gray!20}, fontfamily=courier, |' $(BUILDDIR)/latex/*.tex
+#	sed -i.bak 's|begin{Verbatim}\[|begin{Verbatim}\[frame=single, rulecolor=\\color{gray!20}, fontfamily=courier, |' $(BUILDDIR)/latex/*.tex
+	sed -i.bak -e 's/\\usepackage\[utf8\]{inputenc}/\\usepackage[utf8]{inputenc}\n\\usepackage[usenames,dvipsnames,svgnames,table]{xcolor}/g'  -e 's|begin{Verbatim}\[|begin{Verbatim}\[frame=single, rulecolor=\\color{lightgray}, fontfamily=courier, |' $(BUILDDIR)/latex/*.tex
 	@echo "Running LaTeX files through pdflatex..."
 	$(MAKE) -C $(BUILDDIR)/latex all-pdf
 	@echo "pdflatex finished; the PDF files are in $(BUILDDIR)/latex."

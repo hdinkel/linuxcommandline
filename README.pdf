@@ -225,7 +225,7 @@ endobj
 % 'R17': class PDFInfo 
 17 0 obj
 << /Author ()
- /CreationDate (D:20130603171929-01'00')
+ /CreationDate (D:20130603174316-01'00')
  /Creator (\(unspecified\))
  /Keywords ()
  /Producer (ReportLab PDF Library - www.reportlab.com)
@@ -283,7 +283,7 @@ endobj
 % 'R23': class PDFStream 
 23 0 obj
 % page stream
-<< /Length 6904 >>
+<< /Length 6521 >>
 stream
 1 0 0 1 0 0 cm  BT /F1 12 Tf 14.4 TL ET
 q
@@ -535,7 +535,8 @@ Q
 q
 1 0 0 1 23 -3 cm
 q
-BT 1 0 0 1 0 2 Tm 12 TL /F1 10 Tf 0 0 0 rg (get rid of ) Tj /F3 10 Tf (xcolor ) Tj /F1 10 Tf (error message in latexpdf) Tj T* ET
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (change Fonts) Tj T* ET
 Q
 Q
 q
@@ -545,31 +546,7 @@ q
 1 0 0 1 62.69291 320.0236 cm
 Q
 q
-1 0 0 1 62.69291 308.0236 cm
-0 0 0 rg
-BT /F1 10 Tf 12 TL ET
-q
-1 0 0 1 6 -3 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL 10.5 0 Td (\177) Tj T* -10.5 0 Td ET
-Q
-Q
-q
-1 0 0 1 23 -3 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (change Fonts) Tj T* ET
-Q
-Q
-q
-Q
-Q
-q
-1 0 0 1 62.69291 302.0236 cm
-Q
-q
-1 0 0 1 62.69291 254.0236 cm
+1 0 0 1 62.69291 272.0236 cm
 0 0 0 rg
 BT /F1 10 Tf 12 TL ET
 q
@@ -644,7 +621,7 @@ q
 Q
 Q
 q
-1 0 0 1 62.69291 254.0236 cm
+1 0 0 1 62.69291 272.0236 cm
 Q
  
 endstream
@@ -687,16 +664,16 @@ xref
 0000004649 00000 n
 0000004800 00000 n
 0000004908 00000 n
-0000011915 00000 n
-0000012008 00000 n
+0000011532 00000 n
+0000011625 00000 n
 trailer
 << /ID 
  % ReportLab generated PDF document -- digest (http://www.reportlab.com) 
- [(\372\0173\301\2301\013*\201*\3170\274]\330 ) (\372\0173\301\2301\013*\201*\3170\274]\330 )] 
+ [(\267v\032bg\327\362^\370\323\256\364:z\273\017) (\267v\032bg\327\362^\370\323\256\364:z\273\017)] 
 
  /Info 17 0 R
  /Root 16 0 R
  /Size 26 >>
 startxref
-12055
+11672
 %%EOF
