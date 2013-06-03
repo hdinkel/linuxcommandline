@@ -52,20 +52,22 @@
 When used on a file (without any parameters) it will compress it and replace the
 file by a compressed version with the extension ‘.gz’ attached:</p>
 <blockquote>
-<div><div class="highlight-python"><pre>% ls textfile*
+<div><div class="highlight-bash"><div class="highlight"><pre>% ls textfile*
  textfile
 % gzip textfile
 % ls textfile*
- textfile.gz</pre>
+ textfile.gz
+</pre></div>
 </div>
 </div></blockquote>
 <p>To revert this / to uncompress, use the parameter <tt class="docutils literal"><span class="pre">-d</span></tt>:</p>
 <blockquote>
-<div><div class="highlight-python"><pre>% ls textfile*
+<div><div class="highlight-bash"><div class="highlight"><pre>% ls textfile*
  textfile.gz
 % gzip -d textfile
 % ls textfile*
- textfile</pre>
+ textfile
+</pre></div>
 </div>
 </div></blockquote>
 <div class="admonition note">
@@ -123,25 +125,29 @@ the order matters, so <tt class="docutils literal"><span class="pre">tar</span> 
 </div>
 <p>Creating an archive containing two files:</p>
 <blockquote>
-<div><div class="highlight-python"><pre>% tar -cf archive.tar textfile1 textfile2</pre>
+<div><div class="highlight-bash"><div class="highlight"><pre>% tar -cf archive.tar textfile1 textfile2
+</pre></div>
 </div>
 </div></blockquote>
 <p>Listing the contents of an archive:</p>
 <blockquote>
-<div><div class="highlight-python"><pre>% tar -tf archive.tar
+<div><div class="highlight-bash"><div class="highlight"><pre>% tar -tf archive.tar
  textfile1
- textfile2</pre>
+ textfile2
+</pre></div>
 </div>
 </div></blockquote>
 <p>Extracting an archive:</p>
 <blockquote>
-<div><div class="highlight-python"><pre>% tar -xf archive.tar</pre>
+<div><div class="highlight-bash"><div class="highlight"><pre>% tar -xf archive.tar
+</pre></div>
 </div>
 </div></blockquote>
 <p>Creating and extracting a compressed archive containing two files:</p>
 <blockquote>
-<div><div class="highlight-python"><pre>% tar -czf archive.tar.gz textfile1 textfile2
-% tar -xzf archive.tar.gz</pre>
+<div><div class="highlight-bash"><div class="highlight"><pre>% tar -czf archive.tar.gz textfile1 textfile2
+% tar -xzf archive.tar.gz
+</pre></div>
 </div>
 </div></blockquote>
 </div>
@@ -150,14 +156,15 @@ the order matters, so <tt class="docutils literal"><span class="pre">tar</span> 
 <p>Find lines matching a pattern in textfiles.</p>
 <p><strong>Usage</strong>: grep [options] pattern file(s)</p>
 <blockquote>
-<div><div class="highlight-python"><pre>% grep -i ensembl P04637.txt
+<div><div class="highlight-bash"><div class="highlight"><pre>% grep -i ensembl P04637.txt
 
  DR Ensembl; ENST00000269305; ENSP00000269305; ENSG00000141510.
  DR Ensembl; ENST00000359597; ENSP00000352610; ENSG00000141510.
  DR Ensembl; ENST00000419024; ENSP00000402130; ENSG00000141510.
  DR Ensembl; ENST00000420246; ENSP00000391127; ENSG00000141510.
  DR Ensembl; ENST00000445888; ENSP00000391478; ENSG00000141510.
- DR Ensembl; ENST00000455263; ENSP00000398846; ENSG00000141510.</pre>
+ DR Ensembl; ENST00000455263; ENSP00000398846; ENSG00000141510.
+</pre></div>
 </div>
 </div></blockquote>
 <p>Useful options:</p>
@@ -191,15 +198,17 @@ the order matters, so <tt class="docutils literal"><span class="pre">tar</span> 
 </table>
 <p>Count the number of fasta sequences (they start with a “&gt;”) in a file:</p>
 <blockquote>
-<div><div class="highlight-python"><pre>% grep –c '&gt;' twofiles.fasta
- 2</pre>
+<div><div class="highlight-bash"><div class="highlight"><pre>% grep –c <span class="s1">&#39;&gt;&#39;</span> twofiles.fasta
+ 2
+</pre></div>
 </div>
 </div></blockquote>
 <p>List all files containing the term “Ensembl”:</p>
 <blockquote>
-<div><div class="highlight-python"><pre>% grep –l Ensembl *.txt
+<div><div class="highlight-bash"><div class="highlight"><pre>% grep –l Ensembl *.txt
  P04062.txt
- P12931.txt</pre>
+ P12931.txt
+</pre></div>
 </div>
 </div></blockquote>
 </div>
@@ -234,7 +243,7 @@ the order matters, so <tt class="docutils literal"><span class="pre">tar</span> 
 </tbody>
 </table>
 <blockquote>
-<div><div class="highlight-python"><pre>% echo “This is text.” | sed 's/text/replaced stuff/’
+<div><div class="highlight-bash"><pre>% echo “This is text.” | sed 's/text/replaced stuff/’
  This is replaced stuff.</pre>
 </div>
 </div></blockquote>
@@ -243,21 +252,23 @@ trailing ‘g’ option, to make the substitution ‘global’ (‘s/TEXT/REPLAC
 meaning all occurrences in a line are substituted (not just the first in each line).
 Note the difference:</p>
 <blockquote>
-<div><div class="highlight-python"><pre>% echo “ACCAAGCATTGGAGGAATATCGTAGGTAAA” | sed ‘s/A/_/’
+<div><div class="highlight-bash"><div class="highlight"><pre>% <span class="nb">echo</span> “ACCAAGCATTGGAGGAATATCGTAGGTAAA” | sed ‘s/A/_/’
  _CCAAGCATTGGAGGAATATCGTAGGTAAA
 
-% echo “ACCAAGCATTGGAGGAATATCGTAGGTAAA” | sed ‘s/A/_/g’
- _CC__GC_TTGG_GG__T_TCGT_GGT___</pre>
+% <span class="nb">echo</span> “ACCAAGCATTGGAGGAATATCGTAGGTAAA” | sed ‘s/A/_/g’
+ _CC__GC_TTGG_GG__T_TCGT_GGT___
+</pre></div>
 </div>
 </div></blockquote>
 <p>When used on a file, sed prints the file to standard output, replacing text as it goes
 along:</p>
 <blockquote>
-<div><div class="highlight-python"><pre>% echo “This is text” &gt; textfile
-% echo “This is even more text” &gt;&gt; textfile
-% sed 's/text/stuff/' textfile
+<div><div class="highlight-bash"><div class="highlight"><pre>% <span class="nb">echo</span> “This is text” &gt; textfile
+% <span class="nb">echo</span> “This is even more text” &gt;&gt; textfile
+% sed <span class="s1">&#39;s/text/stuff/&#39;</span> textfile
  This is stuff
- This is even more stuff</pre>
+ This is even more stuff
+</pre></div>
 </div>
 </div></blockquote>
 <p>sed can also be used to print certain lines (not replacing text) that match a pattern.
@@ -265,31 +276,35 @@ For this you leave out the leading ‘s’ and just provide a pattern: ‘/PATTE
 trailing letter determines, what sed should do with the text that matches the pattern
 (‘p’: print, ‘d’: delete)</p>
 <blockquote>
-<div><div class="highlight-python"><pre>% sed '/more/p' textfile
+<div><div class="highlight-bash"><div class="highlight"><pre>% sed <span class="s1">&#39;/more/p&#39;</span> textfile
  This is text
  This is even more text
- This is even more text</pre>
+ This is even more text
+</pre></div>
 </div>
 </div></blockquote>
 <p>As sed by default prints each line, you see the line that matched the pattern,
 printed twice. Use option ‘-n’ to suppress default printing of lines.</p>
 <blockquote>
-<div><div class="highlight-python"><pre>% sed -n '/more/p' textfile
- This is even more text</pre>
+<div><div class="highlight-bash"><div class="highlight"><pre>% sed -n <span class="s1">&#39;/more/p&#39;</span> textfile
+ This is even more text
+</pre></div>
 </div>
 </div></blockquote>
 <p>Delete lines matching the pattern:</p>
 <blockquote>
-<div><div class="highlight-python"><pre>% sed '/more/d' textfile
- This is text</pre>
+<div><div class="highlight-bash"><div class="highlight"><pre>% sed <span class="s1">&#39;/more/d&#39;</span> textfile
+ This is text
+</pre></div>
 </div>
 </div></blockquote>
 <p>Multiple sed statements can be applied to the same input stream by prepending
 each by option ‘-e’ (edit):</p>
 <blockquote>
-<div><div class="highlight-python"><pre>% sed -e 's/text/good stuff/' -e ’s/This/That/’ textfile
+<div><div class="highlight-bash"><div class="highlight"><pre>% sed -e <span class="s1">&#39;s/text/good stuff/&#39;</span> -e ’s/This/That/’ textfile
  That is good stuff
- That is even more good stuff</pre>
+ That is even more good stuff
+</pre></div>
 </div>
 </div></blockquote>
 <p>Normally, sed prints the text from a file to standard output. But you can also edit
@@ -298,13 +313,14 @@ print the output. As a safety measure, this option will ask for an extension tha
 be used to rename the original file to. For instance, the following option ‘-i.bak’
 will edit the file and rename the original file to textfile.bak:</p>
 <blockquote>
-<div><div class="highlight-python"><pre>% sed –i.bak 's/text/stuff/' textfile
+<div><div class="highlight-bash"><div class="highlight"><pre>% sed –i.bak <span class="s1">&#39;s/text/stuff/&#39;</span> textfile
 % cat textfile
  This is stuff
  This is even more stuff
 % cat textfile.bak
  This is text
- This is even more text</pre>
+ This is even more text
+</pre></div>
 </div>
 </div></blockquote>
 </div>
@@ -321,60 +337,67 @@ Generally, awk commands are of the form: `` awk condition { action }``, where:</
 <p>If no condition is given, the action is applied to each line, otherwise just to the
 lines that match the condition.</p>
 <blockquote>
-<div><div class="highlight-python"><pre>% awk '{print}' textfile
+<div><div class="highlight-bash"><div class="highlight"><pre>% awk <span class="s1">&#39;{print}&#39;</span> textfile
  This is text
  This is even more text
 
-% awk '/more/ {print}' textfile
- This is even more text</pre>
+% awk <span class="s1">&#39;/more/ {print}&#39;</span> textfile
+ This is even more text
+</pre></div>
 </div>
 </div></blockquote>
 <p>awk reads each line of input and automatically splits the line into columns. These
 columns can be addressed via $1, $2 and so on ($0 represents the whole line).
 So an easy way to print or rearrange columns of text is:</p>
 <blockquote>
-<div><div class="highlight-python"><pre>% echo “Bob likes Sue“ | awk ‘{print $3, $2, $1}’
+<div><div class="highlight-bash"><div class="highlight"><pre>% <span class="nb">echo</span> “Bob likes Sue“ | awk ‘<span class="o">{</span>print <span class="nv">$3</span>, <span class="nv">$2</span>, <span class="nv">$1</span><span class="o">}</span>’
  Sue likes Bob
 
-% echo “Master Obi-Wan has lost a planet“ | awk ‘{print $4,$5,$6,$1,$2,$3}’
- lost a planet Master Obi-Wan has</pre>
+% <span class="nb">echo</span> “Master Obi-Wan has lost a planet“ | awk ‘<span class="o">{</span>print <span class="nv">$4</span>,<span class="nv">$5</span>,<span class="nv">$6</span>,<span class="nv">$1</span>,<span class="nv">$2</span>,<span class="nv">$3</span><span class="o">}</span>’
+ lost a planet Master Obi-Wan has
+</pre></div>
 </div>
 </div></blockquote>
 <p>awk splits text by default on whitespace (spaces or tabs), which might not be ideal in all situations. To change the field separator (FS), use option ‘-F’
 (remember to quote the field separator):</p>
 <blockquote>
-<div><div class="highlight-python"><pre>% echo “field1,field2,field2“ | awk -F’,’ ‘{print $2, $1}’
- field2 field1</pre>
+<div><div class="highlight-bash"><div class="highlight"><pre>% <span class="nb">echo</span> “field1,field2,field2“ | awk -F’,’ ‘<span class="o">{</span>print <span class="nv">$2</span>, <span class="nv">$1</span><span class="o">}</span>’
+ field2 field1
+</pre></div>
 </div>
 </div></blockquote>
 <p>Note two things here: First, the field separator is not printed, and second, if you
 want to have space between the output fields, you actually need to separate them
 by a comma or they will be catenated together...</p>
 <blockquote>
-<div><div class="highlight-python"><pre>% echo “field1,field2,field2“ | awk -F’,’ ‘{print $1 $2 $3}’
- field1field2field3</pre>
+<div><div class="highlight-bash"><div class="highlight"><pre>% <span class="nb">echo</span> “field1,field2,field2“ | awk -F’,’ ‘<span class="o">{</span>print <span class="nv">$1</span> <span class="nv">$2</span> <span class="nv">$3</span><span class="o">}</span>’
+ field1field2field3
+</pre></div>
 </div>
 </div></blockquote>
 <p>You can also combine the pattern matching and the column selection techniques:</p>
 <blockquote>
-<div><div class="highlight-python"><pre>% awk '/more/ {print $3}' textfile
- even</pre>
+<div><div class="highlight-bash"><div class="highlight"><pre>% awk <span class="s1">&#39;/more/ {print $3}&#39;</span> textfile
+ even
+</pre></div>
 </div>
 </div></blockquote>
 <p>awk really is powerful in filtering out columns, you can for instance print only
 certain columns of certain lines. Here we print the third column of those lines
 where the fourth column is ‘more’:</p>
 <blockquote>
-<div><div class="highlight-python"><pre>% awk '$4==”more” {print $3}' textfile
- even</pre>
+<div><div class="highlight-bash"><div class="highlight"><pre>% awk <span class="s1">&#39;$4==”more” {print $3}&#39;</span> textfile
+ even
+</pre></div>
 </div>
 </div></blockquote>
 <p>Note the double equal signs “==” to check for equality and note the quotes around
 “more”.
 If you want to match a field, but not exactly, you can use ‘~’ instead of ‘==’:</p>
 <blockquote>
-<div><div class="highlight-python"><pre>% awk '$4~”ore” {print $3}' textfile
- even</pre>
+<div><div class="highlight-bash"><div class="highlight"><pre>% awk <span class="s1">&#39;$4~”ore” {print $3}&#39;</span> textfile
+ even
+</pre></div>
 </div>
 </div></blockquote>
 </div>
@@ -391,39 +414,42 @@ generally that within double quotes, variables will be expanded, while everythin
 single quotes is treated as string literal.
 When setting a variable, it doesn’t matter which quotes you use:</p>
 <blockquote>
-<div><div class="highlight-python"><pre>% MYVAR=This is set
- -bash: is: command not found
+<div><div class="highlight-bash"><div class="highlight"><pre>% <span class="nv">MYVAR</span><span class="o">=</span>This is <span class="nb">set</span>
+ -bash: is: <span class="nb">command </span>not found
 
-% MYVAR='This is set'
-% echo $MYVAR
- This is set
-% MYVAR="This is set"
-% echo $MYVAR
- This is set</pre>
+% <span class="nv">MYVAR</span><span class="o">=</span><span class="s1">&#39;This is set&#39;</span>
+% <span class="nb">echo</span> <span class="nv">$MYVAR</span>
+ This is <span class="nb">set</span>
+% <span class="nv">MYVAR</span><span class="o">=</span><span class="s2">&quot;This is set&quot;</span>
+% <span class="nb">echo</span> <span class="nv">$MYVAR</span>
+ This is <span class="nb">set</span>
+</pre></div>
 </div>
 </div></blockquote>
 <p>However, it does matter, when using (expanding) the variable:
 Double quotes:</p>
 <blockquote>
-<div><div class="highlight-python"><pre>% export MYVAR=123
-% echo "the variable is $MYVAR"
+<div><div class="highlight-bash"><div class="highlight"><pre>% <span class="nb">export </span><span class="nv">MYVAR</span><span class="o">=</span>123
+% <span class="nb">echo</span> <span class="s2">&quot;the variable is $MYVAR&quot;</span>
  the variable is 123
-% echo "the variable is set" | sed "s/set/$MYVAR/"
- the variable is 123</pre>
+% <span class="nb">echo</span> <span class="s2">&quot;the variable is set&quot;</span> | sed <span class="s2">&quot;s/set/$MYVAR/&quot;</span>
+ the variable is 123
+</pre></div>
 </div>
 </div></blockquote>
 <p>Single quotes:</p>
 <blockquote>
-<div><div class="highlight-python"><pre>% export MYVAR=123
-% echo 'the variable is $MYVAR'
- the variable is $MYVAR
-% echo "the variable is set" | sed 's/set/$MYVAR/'
- the variable is $MYVAR</pre>
+<div><div class="highlight-bash"><div class="highlight"><pre>% <span class="nb">export </span><span class="nv">MYVAR</span><span class="o">=</span>123
+% <span class="nb">echo</span> <span class="s1">&#39;the variable is $MYVAR&#39;</span>
+ the variable is <span class="nv">$MYVAR</span>
+% <span class="nb">echo</span> <span class="s2">&quot;the variable is set&quot;</span> | sed <span class="s1">&#39;s/set/$MYVAR/&#39;</span>
+ the variable is <span class="nv">$MYVAR</span>
+</pre></div>
 </div>
 </div></blockquote>
 <p>Weird things can happen when parsing data/text that contains quote characters:</p>
 <blockquote>
-<div><div class="highlight-python"><pre>% MYVAR='Don't worry'; echo $MYVAR
+<div><div class="highlight-bash"><pre>% MYVAR='Don't worry'; echo $MYVAR
  &gt;
 # you need to press Ctrl-C to abort
 % MYVAR="Don't worry"; echo $MYVAR
@@ -435,17 +461,19 @@ Double quotes:</p>
 <h4>Expanding and Escaping<a class="headerlink" href="#expanding-and-escaping" title="Permalink to this headline">¶</a></h4>
 <p>You already learned how to expand a variable such that its value is used instead of its name:</p>
 <blockquote>
-<div><div class="highlight-python"><pre>% export MYVAR=123
-% echo "the variable is $MYVAR"
- the variable is 123</pre>
+<div><div class="highlight-bash"><div class="highlight"><pre>% <span class="nb">export </span><span class="nv">MYVAR</span><span class="o">=</span>123
+% <span class="nb">echo</span> <span class="s2">&quot;the variable is $MYVAR&quot;</span>
+ the variable is 123
+</pre></div>
 </div>
 </div></blockquote>
 <p>&#8220;Escaping&#8221; a variable is the opposite, ensuring that the literal variable name is used instead of its value:</p>
 <blockquote>
-<div><div class="highlight-python"><pre>export MYVAR=123
+<div><div class="highlight-bash"><div class="highlight"><pre><span class="nb">export </span><span class="nv">MYVAR</span><span class="o">=</span>123
 
-echo "the \$MYVAR variable is $MYVAR"
- the $MYVAR variable is 123</pre>
+<span class="nb">echo</span> <span class="s2">&quot;the \$MYVAR variable is $MYVAR&quot;</span>
+ the <span class="nv">$MYVAR</span> variable is 123
+</pre></div>
 </div>
 </div></blockquote>
 <div class="admonition note">
@@ -480,16 +508,18 @@ There are basically three ways to run a script:
 a) the location to your script is not in your $PATH variable, then you have to specify the
 full path to the script:</p>
 <blockquote>
-<div><div class="highlight-python"><pre>/here/is/my/script.sh
- [...]</pre>
+<div><div class="highlight-bash"><div class="highlight"><pre>/here/is/my/script.sh
+ <span class="o">[</span>...<span class="o">]</span>
+</pre></div>
 </div>
 </div></blockquote>
 <ol class="loweralpha simple" start="2">
 <li>the location to the script is in the $PATH variable, then you can simply type its name:</li>
 </ol>
 <blockquote>
-<div><div class="highlight-python"><pre>script.sh
- [...]</pre>
+<div><div class="highlight-bash"><div class="highlight"><pre>script.sh
+ <span class="o">[</span>...<span class="o">]</span>
+</pre></div>
 </div>
 </div></blockquote>
 <p>In both situations, the script will need to have execute permissions to be run. If for some
@@ -498,8 +528,9 @@ c) specifying the interpreter. The full path (relative or absolute) to script ha
 ded in this case, no matter wether the script location is already contained in $PATH or
 not:</p>
 <blockquote>
-<div><div class="highlight-python"><pre>/bin/sh /here/is/my/script.sh
- [...]</pre>
+<div><div class="highlight-bash"><div class="highlight"><pre>/bin/sh /here/is/my/script.sh
+ <span class="o">[</span>...<span class="o">]</span>
+</pre></div>
 </div>
 </div></blockquote>
 <div class="section" id="basic-structure-of-a-shellscript">
@@ -674,26 +705,32 @@ script in the future.</p>
 <h4>TAR &amp; GZIP<a class="headerlink" href="#tar-gzip" title="Permalink to this headline">¶</a></h4>
 <ol class="arabic">
 <li><p class="first">Use <span class="target" id="index-0"></span>gzip to compress the file P12931.txt</p>
-<div class="highlight-python"><pre>gzip P12931.txt</pre>
+<div class="highlight-bash"><div class="highlight"><pre>gzip P12931.txt
+</pre></div>
 </div>
 </li>
 <li><p class="first">Decompress the resulting file P12931.txt.gz (revert previous command)</p>
-<div class="highlight-python"><pre>gunzip P12931.txt.gz</pre>
+<div class="highlight-bash"><div class="highlight"><pre>gunzip P12931.txt.gz
+</pre></div>
 </div>
 <p>or</p>
-<div class="highlight-python"><pre>gzip –d P12931.txt.gz</pre>
+<div class="highlight-bash"><div class="highlight"><pre>gzip –d P12931.txt.gz
+</pre></div>
 </div>
 </li>
 <li><p class="first">Use <span class="target" id="index-1"></span>tar to create an archive containing all fasta files in the current directory into an archive called “fastafiles.tar”</p>
-<div class="highlight-python"><pre>tar –c -f fastafiles.tar *.fasta</pre>
+<div class="highlight-bash"><div class="highlight"><pre>tar –c -f fastafiles.tar *.fasta
+</pre></div>
 </div>
 </li>
 <li><p class="first">Use gzip to compress the archive “fastafiles.tar”.</p>
-<div class="highlight-python"><pre>gzip fastafiles.tar</pre>
+<div class="highlight-bash"><div class="highlight"><pre>gzip fastafiles.tar
+</pre></div>
 </div>
 </li>
 <li><p class="first">How can you achieve the two previous steps “using tar to create archive” and “gzip the archive” in one command?</p>
-<div class="highlight-python"><pre>tar –c –z -f fastafiles.tar.gz *.fasta</pre>
+<div class="highlight-bash"><div class="highlight"><pre>tar –c –z -f fastafiles.tar.gz *.fasta
+</pre></div>
 </div>
 </li>
 </ol>
@@ -703,12 +740,14 @@ script in the future.</p>
 </div>
 <ol class="arabic" start="6">
 <li><p class="first">Test (list the contents of) the compressed archive “fastafiles.tar.gz”</p>
-<div class="highlight-python"><pre>tar –tf fastafiles.tar.gz</pre>
+<div class="highlight-bash"><div class="highlight"><pre>tar –tf fastafiles.tar.gz
+</pre></div>
 </div>
 </li>
 <li><p class="first">Download the compressed PDB file for entry 1Y57 from rcsb.org (eg. “wget <a class="reference external" href="http://www.rcsb.org/pdb/files/1Y57.pdb.gz">http://www.rcsb.org/pdb/files/1Y57.pdb.gz</a>&#8221;) and decompress it.</p>
-<div class="highlight-python"><pre>wget "http://www.rcsb.org/pdb/files/1Y57.pdb.gz"
-gunzip 1Y57.pdb.gz</pre>
+<div class="highlight-bash"><div class="highlight"><pre>wget <span class="s2">&quot;http://www.rcsb.org/pdb/files/1Y57.pdb.gz&quot;</span>
+gunzip 1Y57.pdb.gz
+</pre></div>
 </div>
 </li>
 </ol>
@@ -717,15 +756,17 @@ gunzip 1Y57.pdb.gz</pre>
 <h4>GREP<a class="headerlink" href="#grep" title="Permalink to this headline">¶</a></h4>
 <ol class="arabic">
 <li><p class="first">Which of the DNA files ENST* contains ‘TATATCTAA’ as part of the sequence?</p>
-<div class="highlight-python"><pre>grep TATATCTAA ENST0*
+<div class="highlight-bash"><div class="highlight"><pre>grep TATATCTAA ENST0*
 ENST00000380152.fasta:ACGGAAGAATGTGAGAAAAATAAGCAGGACACAATTACAACTAAAAAATATATCTAA
-ENST00000544455.fasta:ACGGAAGAATGTGAGAAAAATAAGCAGGACACAATTACAACTAAAAAATATATCTAA</pre>
+ENST00000544455.fasta:ACGGAAGAATGTGAGAAAAATAAGCAGGACACAATTACAACTAAAAAATATATCTAA
+</pre></div>
 </div>
 </li>
 <li><p class="first">List only the names of the DNA files ENST* that contain ‘CAACAAA’ as part of the sequence.</p>
-<div class="highlight-python"><pre>grep –l CAACAAA ENST0*
+<div class="highlight-bash"><div class="highlight"><pre>grep –l CAACAAA ENST0*
 ENST00000380152.fasta
-ENST00000544455.fasta</pre>
+ENST00000544455.fasta
+</pre></div>
 </div>
 </li>
 <li><p class="first">Considering the previous example, would you consider grep a suitable tool to perform motif searches? Why not? Try to find the pattern ‘CAACAAA’ by manual inspection of the first two lines of each sequence.</p>
@@ -735,23 +776,26 @@ ENST00000544455.fasta</pre>
 <li><p class="first">Count the number of ATOMs (lines starting with ‘ATOM’) in the file 1Y57.pdb.</p>
 </li>
 <li><p class="first">Does this number agree with the annotated number of atoms (Search the REMARKs for ‘protein atoms’)</p>
-<div class="highlight-python"><pre>grep –c “ATOM” 1Y57.pdb
+<div class="highlight-bash"><div class="highlight"><pre>grep –c “ATOM” 1Y57.pdb
 3632
 grep –i “protein atoms” 1Y57.pdb
-REMARK   3   PROTEIN ATOMS            : 3600</pre>
+REMARK   3   PROTEIN ATOMS            : 3600
+</pre></div>
 </div>
 </li>
 </ol>
 <p>This means there are 3600 atoms annotated in this PDB file, however we counted 3632. This is because grep also counted any occurrence of “ATOM” within REMARKS. We can avoid this by either filtering out the remarks:</p>
 <blockquote>
-<div><div class="highlight-python"><pre>grep –v “REMARK” 1Y57.pdb | grep –c “ATOM”
-3600</pre>
+<div><div class="highlight-bash"><div class="highlight"><pre>grep –v “REMARK” 1Y57.pdb | grep –c “ATOM”
+3600
+</pre></div>
 </div>
 </div></blockquote>
 <p>...or by telling grep to only count those lines that start with “ATOM”:</p>
 <blockquote>
-<div><div class="highlight-python"><pre>grep –c “^ATOM” 1Y57.pdb
-3600</pre>
+<div><div class="highlight-bash"><div class="highlight"><pre>grep –c “^ATOM” 1Y57.pdb
+3600
+</pre></div>
 </div>
 </div></blockquote>
 </div>
@@ -759,19 +803,23 @@ REMARK   3   PROTEIN ATOMS            : 3600</pre>
 <h4>SED<a class="headerlink" href="#sed" title="Permalink to this headline">¶</a></h4>
 <ol class="arabic">
 <li><p class="first">Use sed to print only those lines that contain “version” in the files P05480.txt and P04062.txt</p>
-<div class="highlight-python"><pre>sed –n ‘/version/p’ P05480.txt P04062.txt</pre>
+<div class="highlight-bash"><div class="highlight"><pre>sed –n ‘/version/p’ P05480.txt P04062.txt
+</pre></div>
 </div>
 </li>
 <li><p class="first">Use sed to change the text ‘sequence version 3’ to ‘sequence version 4’ in the files P05480.txt and P04062.txt (without actually changing the files, just printing)</p>
-<div class="highlight-python"><pre>sed ‘s/sequence version 3/sequence version 4/’ P05480.txt P04062.txt</pre>
+<div class="highlight-bash"><div class="highlight"><pre>sed ‘s/sequence version 3/sequence version 4/’ P05480.txt P04062.txt
+</pre></div>
 </div>
 </li>
 <li><p class="first">Use sed to update the text ‘sequence version 3’ to ‘sequence version 4’ in the files P05480.txt and P04062.txt (this time, make the changes directly in the files)</p>
-<div class="highlight-python"><pre>sed –i.bak ‘s/sequence version 3/sequence version 4/’ P05480.txt P04062.txt</pre>
+<div class="highlight-bash"><div class="highlight"><pre>sed –i.bak ‘s/sequence version 3/sequence version 4/’ P05480.txt P04062.txt
+</pre></div>
 </div>
 </li>
 <li><p class="first">Replace (transliterate) all occurrences of ‘r’ by ‘l’ and ‘l’ by ‘r’ (at the same time) in the file PROTEINS.txt (so that ‘structural’ becomes ‘stluctular’)</p>
-<div class="highlight-python"><pre>sed ‘y/rRlL/lLrR/’ PROTEINS.txt</pre>
+<div class="highlight-bash"><div class="highlight"><pre>sed ‘y/rRlL/lLrR/’ PROTEINS.txt
+</pre></div>
 </div>
 </li>
 </ol>
@@ -780,14 +828,16 @@ REMARK   3   PROTEIN ATOMS            : 3600</pre>
 <h4>AWK<a class="headerlink" href="#awk" title="Permalink to this headline">¶</a></h4>
 <ol class="arabic">
 <li><p class="first">Use awk to print only those lines that contain “version” in the files P12931.txt and P05480.txt and think about how this procedure is different to sed.</p>
-<div class="highlight-python"><pre>awk ‘/version/ {print}’ P12931.txt P05480.txt</pre>
+<div class="highlight-bash"><div class="highlight"><pre>awk ‘/version/ <span class="o">{</span>print<span class="o">}</span>’ P12931.txt P05480.txt
+</pre></div>
 </div>
 </li>
 </ol>
 <p>This is very similar to sed, you also have to use the slashes ‘/’ to define the search pattern. However the sed notation is a little more concise…</p>
 <ol class="arabic" start="2">
 <li><p class="first">For all FASTA files that begin with “P” (“P*.fasta”) print only the second item of the header (split on “|”) eg. for “&gt;sp|P12931|SRC_HUMAN Proto-oncogene”, print only “P12931”</p>
-<div class="highlight-python"><pre>awk –F"|" ‘/&gt;/ {print $2}’ P*.fasta</pre>
+<div class="highlight-bash"><div class="highlight"><pre>awk –F<span class="s2">&quot;|&quot;</span> ‘/&gt;/ <span class="o">{</span>print <span class="nv">$2</span><span class="o">}</span>’ P*.fasta
+</pre></div>
 </div>
 </li>
 <li><p class="first">The file ‘P12931.csv contains phosphorylation sites in the protein P12931. (If the file ‘P12931.csv’ does not exist, use ‘wget’ to download it from “<a class="reference external" href="http://phospho.elm.eu.org/byAccession/P12931.csv">http://phospho.elm.eu.org/byAccession/P12931.csv</a>”).</p>
@@ -798,28 +848,32 @@ REMARK   3   PROTEIN ATOMS            : 3600</pre>
 <li>Column three of this file lists the amino acid position of the phosphorylation site. You are only interested in position 17 of the protein. Try to use ‘grep’ to filter out all these lines containing ‘17’.</li>
 </ol>
 <blockquote>
-<div><div class="highlight-python"><pre>grep 17 P12931.csv</pre>
+<div><div class="highlight-bash"><div class="highlight"><pre>grep 17 P12931.csv
+</pre></div>
 </div>
 </div></blockquote>
 <ol class="loweralpha simple" start="2">
 <li>Now use awk to show all lines containing ‘17’.</li>
 </ol>
 <blockquote>
-<div><div class="highlight-python"><pre>awk ‘/17/ {print}’ P12931.csv</pre>
+<div><div class="highlight-bash"><div class="highlight"><pre>awk ‘/17/ <span class="o">{</span>print<span class="o">}</span>’ P12931.csv
+</pre></div>
 </div>
 </div></blockquote>
 <ol class="loweralpha simple" start="3">
 <li>Next try show only those lines where column three equals 17 (Hint: The file is semicolon-separated…).</li>
 </ol>
 <blockquote>
-<div><div class="highlight-python"><pre>awk –F";" ‘$3==17 {print}’ P12931.csv</pre>
+<div><div class="highlight-bash"><div class="highlight"><pre>awk –F<span class="s2">&quot;;&quot;</span> ‘<span class="nv">$3</span><span class="o">==</span>17 <span class="o">{</span>print<span class="o">}</span>’ P12931.csv
+</pre></div>
 </div>
 </div></blockquote>
 <ol class="loweralpha simple" start="4">
 <li>Finally print the PMIDs (column 6) of all lines that contain ‘17’ in column 3.</li>
 </ol>
 <blockquote>
-<div><div class="highlight-python"><pre>awk –F";" ‘$3==17 {print $6}’ P12931.csv</pre>
+<div><div class="highlight-bash"><div class="highlight"><pre>awk –F<span class="s2">&quot;;&quot;</span> ‘<span class="nv">$3</span><span class="o">==</span>17 <span class="o">{</span>print <span class="nv">$6</span><span class="o">}</span>’ P12931.csv
+</pre></div>
 </div>
 </div></blockquote>
 </div></blockquote>
@@ -832,18 +886,20 @@ REMARK   3   PROTEIN ATOMS            : 3600</pre>
 <li>Run the following commands to see the difference between single and double quotes when expanding variables:</li>
 </ol>
 <blockquote>
-<div><div class="highlight-python"><pre>echo "$HOSTNAME"
+<div><div class="highlight-bash"><div class="highlight"><pre><span class="nb">echo</span> <span class="s2">&quot;$HOSTNAME&quot;</span>
 ...
-echo '$HOSTNAME'</pre>
+<span class="nb">echo</span> <span class="s1">&#39;$HOSTNAME&#39;</span>
+</pre></div>
 </div>
 </div></blockquote>
 <ol class="loweralpha simple" start="2">
 <li>Next, use ssh to login to a different machine to run the same command there, again using both quoting methods:</li>
 </ol>
 <blockquote class="last">
-<div><div class="highlight-python"><pre>ssh pc-atcteach01 'echo $HOSTNAME'
+<div><div class="highlight-bash"><div class="highlight"><pre>ssh pc-atcteach01 <span class="s1">&#39;echo $HOSTNAME&#39;</span>
 ...
-ssh pc-atcteach01 "echo $HOSTNAME"</pre>
+ssh pc-atcteach01 <span class="s2">&quot;echo $HOSTNAME&quot;</span>
+</pre></div>
 </div>
 </div></blockquote>
 </dd>
@@ -858,8 +914,6 @@ ssh pc-atcteach01 "echo $HOSTNAME"</pre>
 <h1>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this headline">¶</a></h1>
 <ul class="simple">
 <li><a class="reference internal" href="genindex.html"><em>Index</em></a></li>
-</ul>
-<ul class="simple">
 <li><a class="reference internal" href="search.html"><em>Search Page</em></a></li>
 </ul>
 </div>
