@@ -39,5 +39,32 @@ ToDos:
 - Better control of verbatim code-blocks:
 
   - distinguish user input from output (boldface?)
-  - syntax highlight
+
+syntax highlight styling
+^^^^^^^^^^^^^^^^^^^^^^^^
+To change the formatting of verbatim code blocks (which are highlighted using Pygments), you can create a style file and reference this 
+in 'conf.py':
+
+  :: 
+
+    pygments_style = 'lsi.lsiClass'
+
+This is the content of the file lsi.py:
+  :: 
+
+    from pygments.style import Style
+    from pygments.token import Keyword, Name, Comment, String, Error, Number, Operator, Generic
+
+    class lsiClass(Style):
+        default_style = "sphinx"
+        styles = {
+            Comment:                'bold #800',
+            Keyword:                'bold #005',
+            Name:                   '#f00',
+            Name.Function:          '#0f0',
+            Name.Class:             'bold #0f0',
+            String:                 'bg:#eee #111'
+        }
+
+For details, see the `Pygments Docu <http://pygments.org/docs/styles/>`_
 

@@ -82,7 +82,11 @@ exclude_patterns = ['_build']
 #show_authors = False
 
 # The name of the Pygments (syntax highlighting) style to use.
-pygments_style = 'sphinx'
+#pygments_style = 'sphinx'
+#pygments_style = 'murphy'
+#pygments_style = 'vim'
+pygments_style = 'lsi.lsiClass'
+
 
 # The default language to highlight source code in. The default is 'python'. The value should be a valid Pygments lexer name, see Showing code examples for more details.
 highlight_language = 'bash'
@@ -250,3 +254,4 @@ texinfo_documents = [
 
 # Example configuration for intersphinx: refer to the Python standard library.
 intersphinx_mapping = {'http://docs.python.org/': None}
+
