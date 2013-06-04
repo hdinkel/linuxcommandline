@@ -5,5 +5,6 @@ ToDo:
 - Make sure Dan adds /g/software/bin to $PATH
 - Make sure Dan adds an editor (gedit)
 - Add a file with simple text to show each command (sed, awk, grep)
+- Use more "interesting" examples for trivial things such as "sed 's/text/stuff/'"
 - as scripting example: Write a script which can extract multiple archive formats, depending on the file ending
 

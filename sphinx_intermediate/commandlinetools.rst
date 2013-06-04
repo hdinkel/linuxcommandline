@@ -373,11 +373,12 @@ Weird things can happen when parsing data/text that contains quote characters:
 
  ::
 
-  # MYVAR='Don't worry'; echo $MYVAR
+  # MYVAR='Don't worry. It's ok.'; echo $MYVAR
    >
   # you need to press Ctrl-C to abort
-  # MYVAR="Don't worry"; echo $MYVAR
-   Don't worry
+  # MYVAR="Don't worry. It's ok."; echo $MYVAR
+   Don't worry. It's ok.
+
 
 Expanding and Escaping
 ^^^^^^^^^^^^^^^^^^^^^^
@@ -394,9 +395,9 @@ You already learned how to expand a variable such that its value is used instead
 
  ::
 
-  export MYVAR=123
+  # export MYVAR=123
 
-  echo "the \$MYVAR variable is $MYVAR"
+  # echo "the \$MYVAR variable is $MYVAR"
    the $MYVAR variable is 123
 
 .. note:: The “escape character” is usually the backslash "``\``".

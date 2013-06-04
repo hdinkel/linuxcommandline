@@ -35,10 +35,26 @@ the verbatim boxes; this package should be included in the TeXLive distribution.
 ToDos:
 ^^^^^^
 
-- change Fonts
 - Better control of verbatim code-blocks:
 
   - distinguish user input from output (boldface?)
+
+Change Fonts
+^^^^^^^^^^^^
+To change the font of the (latex) output, add the respective package to the preamble in conf.py:
+For Tex Gyre Termes font:
+
+  ::
+
+    \\usepackage{tgtermes}
+
+For Palatino:
+
+  ::
+
+    \\usepackage[sc]{mathpazo}
+
+For full list of Tex Fonts see the `LaTeX Font Catalog <http://www.tug.dk/FontCatalogue/seriffonts.html>`_ ...
 
 syntax highlight styling
 ^^^^^^^^^^^^^^^^^^^^^^^^
