@@ -83,6 +83,7 @@ exclude_patterns = ['_build']
 
 # The name of the Pygments (syntax highlighting) style to use.
 pygments_style = 'sphinx'
+pygments_style = 'lsi.lsiClass'
 
 # The default language to highlight source code in. The default is 'python'. The value should be a valid Pygments lexer name, see Showing code examples for more details.
 highlight_language = 'bash'
@@ -200,7 +201,7 @@ latex_logo = '_static/bio-it_logo.png'
 
 # For "manual" documents, if this is true, then toplevel headings are parts,
 # not chapters.
-latex_use_parts = True
+latex_use_parts = False
 
 # If true, show page references after internal links.
 latex_show_pagerefs = True

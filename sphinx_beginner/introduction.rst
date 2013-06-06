@@ -89,10 +89,10 @@ man – show the manual page of a command
   man(1)
   
   NAME
-         man - format and display the on-line manual pages
+   man - format and display the on-line manual pages
   
   SYNOPSIS
-         man  [-acdfFhkKtwW]  [--path]  [-m system] [-p string] [-C config_file]
+   man [-acdfFhkKtwW] [--path] [-m system] [-p string] [-C config_file]
   [...]
 
 For the navigation within a :index:`man <man>`-page see the chapter regarding less below.
@@ -113,7 +113,7 @@ apropos – list manpages containing a keyword in their description
   whoami               (1)  - print effective userid
   #
 
-Use this to find candidates for specific tasks
+Use :index:`apropos` to find candidates for specific tasks
 
 
 /usr/share/doc
@@ -164,7 +164,7 @@ date – Print current date and time
   # date
   Tue Sep 25 19:57:50 CEST 2012
 
-.. note:: The command time does something completely different and is not used to show the current time.
+.. note:: The command time does something completely different than :index:`date` and is not used to show the current time.
 
 Moving Around
 ^^^^^^^^^^^^^
@@ -188,11 +188,11 @@ Special directories:
 - “``..``”: The parent directory of the current working directory
 - “``~``”:  Your homedirectory
 
-.. note:: Using cd without a directory is equivalent to “``cd ~``” and changes into the users’s homedirectory
+.. note:: Using :index:`cd` without a directory is equivalent to “``cd ~``” and changes into the users’s homedirectory
 .. note:: Please note the difference between absolute pathes (starting with “``/``”) and relative pathes (starting with a directory name)
 
 
- :: 
+::
 
   # pwd
   /usr
@@ -200,13 +200,14 @@ Special directories:
   # pwd
   /bin
 
- :: 
+::
 
   # pwd
   /usr
   # cd bin
   # pwd
   /usr/bin
+
 
 
 See What’s Around
@@ -375,7 +376,7 @@ cp – Copy files and folders
 """""""""""""""""""""""""""
 
 **Usage**:  ``cp [options] sourcefile destinationfile``
-.. note:: cp [options] sourcefile(s) destinationdirectory
+.. note:: :index:`cp` [options] sourcefile(s) destinationdirectory
 
  :: 
 
@@ -408,7 +409,7 @@ cat – Print files on terminal (concatenate)
   # cat  P12931.fasta backup_of_P12931.fasta
   [...]
 
-.. note:: cat only makes sense for short files or for e.g. combining several files into one.  See the redirection examples later
+.. note:: :index:`cat` only makes sense for short files or for e.g. combining several files into one.  See the redirection examples later
 
 less – View and navigate files
 """"""""""""""""""""""""""""""
@@ -443,6 +444,8 @@ Extracting Informations from Files
 grep – Find lines matching a pattern in textfiles
 """""""""""""""""""""""""""""""""""""""""""""""""
 
+:index:`Grep <grep>` is a command-line utility for searching plain-text data sets for lines matching a regular expression. 
+
 **Usage**:  ``grep [options] pattern file(s)``
 
  :: 
@@ -469,6 +472,8 @@ Option:  Effect:
 
 head – Print first lines of a textfile
 """"""""""""""""""""""""""""""""""""""
+
+:index:`Head <head>` is a program on Unix and Unix-like systems used to display the beginning of a text file or piped data.
 
 **Usage**:  ``head [options] file(s)``
 
@@ -532,7 +537,7 @@ file – determine the filetype
   # file SRC_HUMAN.fasta
   SRC_HUMAN.fasta: ASCII text
 
-.. note:: The command file uses certain tests and some magic to determine the type of a file
+.. note:: The command :index:`file` uses certain tests and some magic to determine the type of a file
 
 which – find a (executable) command
 """""""""""""""""""""""""""""""""""
@@ -563,7 +568,7 @@ find – search/find files in any given directory
   [...]
   #
 
-``find`` is a powerful command with lots of possible search filters.  Refer to the manpage for a complete list.  
+``find`` :index:`is <find>` a powerful command with lots of possible search filters.  Refer to the manpage for a complete list.  
 
 **Examples**:
 
@@ -606,7 +611,7 @@ clear – Clear the “screen”
 
   # clear
 
-In case the output of the terminal/screen gets cluttered, you can use ``clear`` to clear the screen... 
+In case the output of the terminal/screen gets cluttered, you can use ``clear`` to :index:`clear` the screen... 
 
 If this doesn't work, you can use ``reset`` to perform a re-initialization of the terminal:
 
@@ -636,7 +641,7 @@ using ls -l to view entries of current directory:
 Changing Permissions
 """"""""""""""""""""
 
-Permissions are set using the ``chmod`` (change mode) command. 
+Permissions are set using the ``chmod`` (:index:`change mode<chmod>` ) command. 
 **Usage**:  ``chmod [options] mode(s) files(s)``
 
  :: 
@@ -691,7 +696,7 @@ In its simplest form, it takes just the machinename as parameter (assuming the u
 
   # ssh remote_server
 
-.. note:: Once logged in, use ``hostname,`` ``whoami,`` etc. to determine on which machine you are currently working!
+.. note:: Once logged in, :index:`use <hostname, whoami>` ``hostname,`` ``whoami,`` etc. to determine on which machine you are currently working!
 
 To use a different username, you can use either: 
 
@@ -711,11 +716,14 @@ When connecting to a machine for the first time, it might display a warning:
  :: 
 
   # ssh sub-master
-  The authenticity of host 'sub-master (10.11.4.84)' can't be established. RSA key fingerprint is 47:a4:0f:7b:c2:0f:ef:91:8e:65:fc:3c:f7:0c:53:8d. Are you sure you want to continue connecting (yes/no)?
-  Type yes here.
-    If this message appears a second time, you should contact your IT specialist...
+  The authenticity of host 'sub-master (10.11.4.84)' can't be established. 
+  RSA key fingerprint is 47:a4:0f:7b:c2:0f:ef:91:8e:65:fc:3c:f7:0c:53:8d. 
+  Are you sure you want to continue connecting (yes/no)?
 
-To disconnect from the remote machine, type: 
+Type *yes* here.
+If this message appears a second time, you should contact your IT specialist...
+
+To :index:`disconnect <exit, disconnect>` from the remote machine, type: 
  :: 
 
   # exit
@@ -742,14 +750,14 @@ IO and Redirections
 Redirect
 """"""""
 
-Redirect the output of one program into e.g. a file: (Caution: you can easily overwrite files by this!) 
+:index:`Redirect <redirect>` the output of one program into e.g. a file: (Caution: you can easily overwrite files by this!) 
 Inserting the current date into a new file: 
 
  :: 
 
   # date > file_containing_date
 
-Filtering lines containing the term “src” from FASTA files and inserting them into the file lines_with_src.txt: 
+:index:`Filtering <grep>` lines containing the term “src” from FASTA files and inserting them into the file lines_with_src.txt: 
 
  :: 
 
@@ -759,7 +767,7 @@ Filtering lines containing the term “src” from FASTA files and inserting the
 Append
 """"""
 
-Append something to a file (rather than overwriting it): 
+:index:`Append <append>` something to a file (rather than overwriting it): 
 
  :: 
 
@@ -768,8 +776,8 @@ Append something to a file (rather than overwriting it):
 Pipe
 """"
 
-Use the pipe symbol (``|``) to feed the output of one program into the next program. 
-Here: use ``ls`` to show the directory contents and then use ``grep`` to only show those that contain fasta in their name: 
+Use the :index:`| <|, pipe>` pipe symbol (``|``) to feed the output of one program into the next program. 
+Here: use ``ls`` to show the directory contents and then :index:`use <grep>` ``grep`` to only show those that contain fasta in their name: 
 
  :: 
 
@@ -783,32 +791,36 @@ Here: use ``ls`` to show the directory contents and then use ``grep`` to only sh
 Environment Variables
 ^^^^^^^^^^^^^^^^^^^^^
 
-Environment variables are a set of dynamic named values that can affect the way running processes will behave on a computer.
+:index:`Environment variables <environment variables>` are a set of dynamic named values that can affect the way running processes will behave on a computer.
 
 $HOME
 """""
+
 Contains the location of the user's home directory. Although the current user's home directory can also be found out through the 
-C functions ``getpwuid`` and ``getuid,`` ``$HOME`` is often used for convenience in various shell scripts (and other contexts).
+C functions ``getpwuid`` and ``getuid,`` ``$``:index:`$HOME` is often used for convenience in various shell scripts (and other contexts).
 
 .. note:: Do not change this variable unless you have a good reason and you know what you are doing!
 
 $PATH
 """""
-Contains a colon-separated list of directories that the shell searches for commands that do not contain a slash in their name 
+
+``$``:index:`$PATH` contains a colon-separated list of directories that the shell searches for commands that do not contain a slash in their name 
 (commands with slashes are interpreted as file names to execute, and the shell attempts to execute the files directly).
 
 $PAGER
 """"""
-This variable contains the path to the program used to list the contents of files through (such as less or more).
+
+``$``:index:`$PAGER` is variable contains the path to the program used to list the contents of files through (such as less or more).
 
 $PWD
 """"
-This variable points to the current directory. Equivalent to the output of the command ``pwd`` when called without arguments.
+
+The ``$``:index:`$PWD` variable points to the current directory. Equivalent to the output of the command ``pwd`` when called without arguments.
 
 Displaying environment variables:
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Use ``echo`` to display individual variables or ``set`` or ``env`` to view all at once:
+:index:`Use <environment variables; display>` ``echo`` to :index:`display <echo>` individual variables `set`` :index:`or <env>` ``env`` to view all at once:
 
  :: 
 
@@ -822,7 +834,7 @@ Use ``echo`` to display individual variables or ``set`` or ``env`` to view all a
 Setting an environment variable:
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Use ``export`` followed by the variable name and the value of the variable (separated by the equal sign) to set an environment variable:
+Use ``export`` followed by the variable name and the value of the variable (separated by the equal sign) to :index:`set <environment variables; set, set, export>` an environment variable:
 
  :: 
 
