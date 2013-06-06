@@ -1,8 +1,8 @@
 Basic Shell Scripting
-=====================
+#####################
 
 What is a Script?
------------------
+*****************
 
 A script is nothing else than a number of shell command place together in a file. The sim-
 plest script is maybe just a complex oneliner that you don’t want to type each time again.

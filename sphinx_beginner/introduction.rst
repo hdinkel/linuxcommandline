@@ -1,5 +1,5 @@
 Introduction to the Linux Commandline
-=====================================
+#####################################
 
 Why Use the Commandline
 -----------------------
@@ -797,25 +797,25 @@ $HOME
 """""
 
 Contains the location of the user's home directory. Although the current user's home directory can also be found out through the 
-C functions ``getpwuid`` and ``getuid,`` ``$``:index:`$HOME` is often used for convenience in various shell scripts (and other contexts).
+C functions ``getpwuid`` and ``getuid,`` :index:`$HOME` is often used for convenience in various shell scripts (and other contexts).
 
 .. note:: Do not change this variable unless you have a good reason and you know what you are doing!
 
 $PATH
 """""
 
-``$``:index:`$PATH` contains a colon-separated list of directories that the shell searches for commands that do not contain a slash in their name 
+:index:`$PATH` contains a colon-separated list of directories that the shell searches for commands that do not contain a slash in their name 
 (commands with slashes are interpreted as file names to execute, and the shell attempts to execute the files directly).
 
 $PAGER
 """"""
 
-``$``:index:`$PAGER` is variable contains the path to the program used to list the contents of files through (such as less or more).
+The :index:`$PAGER` variable contains the path to the program used to list the contents of files through (such :index:`as <less>` ``less`` :index:`or <more>` ``more``).
 
 $PWD
 """"
 
-The ``$``:index:`$PWD` variable points to the current directory. Equivalent to the output of the command ``pwd`` when called without arguments.
+The :index:`$PWD` variable points to the current directory. Equivalent to the output of the command ``pwd`` when called without arguments.
 
 Displaying environment variables:
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
