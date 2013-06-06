@@ -11,6 +11,8 @@ Intermediate Linux Course: Commandline and Basic Scripting
    :maxdepth: 2
 
    Commandline Tools <commandlinetools>
+   I/O Redirection <redirection>
+   Variables <variables>
    Basic Scripting <basic_scripting>
    Solutions <solutions>
 

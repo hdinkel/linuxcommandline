@@ -65,16 +65,16 @@ TAR & GZIP
 GREP
 ^^^^
 
-1. Which of the DNA files ENST* contains "TATATCTAA" as part of the sequence? 
+1. Which of the DNA files ENST0* contains "TATATCTAA" as part of the sequence? 
 
    ::
 
-    $ grep "TATATCTAA" ENST*
+    $ grep "TATATCTAA" ENST0*
 
     ENST00000380152.fasta:ACGGAAGAATGTGAGAAAAATAAGCAGGACACAATTACAACTAAAAAATATATCTAA
     ENST00000544455.fasta:ACGGAAGAATGTGAGAAAAATAAGCAGGACACAATTACAACTAAAAAATATATCTAA
 
-2. List only the names of the DNA files ENST* that contain "CAACAAA" as part of the sequence.
+2. List only the names of the DNA files ENST0* that contain "CAACAAA" as part of the sequence.
 
    ::
 
@@ -85,7 +85,7 @@ GREP
 
 3. Considering the previous example, would you consider grep a suitable tool to perform motif searches? Why not? Try to find the pattern "CAACAAA" by manual inspection of the first two lines of each sequence.
 
-.. note: Answer: When using grep as a motif searching tool, you need to keep in mind that grep (like sed and awk) is line-oriented, meaning that by default it only searches for a given motif in a single line. In the given example, upon manual inspection you will find the given motif also in the file ENST00000530893.fasta, which grep missed. 
+.. note:: Answer: When using grep as a motif searching tool, you need to keep in mind that grep (like sed and awk) is line-oriented, meaning that by default it only searches for a given motif in a single line. In the given example, upon manual inspection you will find the given motif also in the file ENST00000530893.fasta, which grep missed. 
    You would need to think about how to do multi-line searches (eg. Removing line-breaks etc.)
 
 4. Count the number of ATOMs (lines starting with "ATOM") in the file 1Y57.pdb. 
