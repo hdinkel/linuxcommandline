@@ -2,7 +2,7 @@ Variables
 =========
 
 The shell knows two types of variables: “Local” shell variables and “global”
-exported environment variables. By convention, environment variables are
+exported :index:`environment variables`. By convention, environment variables are
 written in uppercase letters.
 
 Shell variables are only available to the current shell and not inherited when
@@ -34,7 +34,7 @@ separate step. Both of the following procedures are equivalent:
   # MYGLOBALVAR=”something else” 
   # export MYGLOBALVAR
 
-.. note:: No “$” in front of the variable!
+.. note:: There is no ``$`` in front of the variable!
 
 Variables are removed with unset:
 
@@ -42,14 +42,14 @@ Variables are removed with unset:
 
   # unset MYVAR
 
-.. note:: Assigning a variable an empty value (MYVAR=) will not remove it but simply set
+.. note:: Assigning a variable an empty value (``MYVAR=``) will *not* remove it but simply set
           its value to the empty string! 
 
 Listing Variables 
 ------------------
 
 You can list all your current
-environment variables with env and all shell variables with set. The list of
+environment variables :index:`with <env>` ``env`` and all shell variables :index:`with <set>` ``set``. The list of
 shell variables will also contain all environment variables 
 
 Variable Inheritance 
@@ -65,8 +65,9 @@ Examples
 
 Consider the following small shellscript `vartest.sh`: ::
 
-  #!/bin/sh echo $MYLOCALVAR 
-  echo $MYGLOBALVAR 
+  #!/bin/sh 
+  echo $MYLOCALVAR
+  echo $MYGLOBALVAR
   echo -----
 
 We will use it in the following examples to illustrate the various variable inheritances:
@@ -87,7 +88,7 @@ Set the variables and run the script i.e. in a new shell ::
   I am global 
   ----- 
 
-# Access the variables in a subshell
+# Access the variables in a subshell::
 
     # (echo $MYGLOBALVAR; echo $MYLOCALVAR) 
     I am global 
