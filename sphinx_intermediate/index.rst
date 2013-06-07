@@ -15,6 +15,7 @@ Intermediate Linux Course: Commandline and Basic Scripting
    Variables <variables>
    Basic Scripting <basic_scripting>
    Solutions <solutions>
+   appendix
 
 
 Indices and tables

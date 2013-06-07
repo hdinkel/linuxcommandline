@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 #
-# IntermediateLinuxCourse documentation build configuration file, created by
-# sphinx-quickstart on Mon May 27 17:11:16 2013.
+# Linux Course documentation build configuration file, created by
+# sphinx-quickstart on Thu Jun  6 12:28:51 2013.
 #
 # This file is execfile()d with the current directory set to its containing dir.
 #
@@ -25,7 +25,7 @@ import sys, os
 
 # Add any Sphinx extension module names here, as strings. They can be extensions
 # coming with Sphinx (named 'sphinx.ext.*') or your custom ones.
-extensions = ['sphinx.ext.intersphinx', 'sphinx.ext.ifconfig', 'sphinx.ext.graphviz']
+extensions = []
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
@@ -35,14 +35,13 @@ source_suffix = '.rst'
 
 # The encoding of source files.
 #source_encoding = 'utf-8-sig'
-source_encoding = 'utf-8'
 
 # The master toctree document.
 master_doc = 'index'
 
 # General information about the project.
-project = u'Intermediate Linux Course'
-copyright = u'2012,2013, Holger Dinkel, Frank Thommen & Thomas Zichner'
+project = u'Linux Course'
+copyright = u'2013, Holger Dinkel, Frank Thommen and Thomas Zichner'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -82,11 +81,8 @@ exclude_patterns = ['_build']
 #show_authors = False
 
 # The name of the Pygments (syntax highlighting) style to use.
-#pygments_style = 'sphinx'
-#pygments_style = 'murphy'
-#pygments_style = 'vim'
-pygments_style = 'lsi.lsiClass'
-
+pygments_style = 'sphinx'
+#pygments_style = 'lsi.lsiClass'
 
 # The default language to highlight source code in. The default is 'python'. The value should be a valid Pygments lexer name, see Showing code examples for more details.
 highlight_language = 'bash'
@@ -99,8 +95,7 @@ highlight_language = 'bash'
 
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
-#html_theme = 'default'
-html_theme = 'nature'
+html_theme = 'default'
 
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
@@ -173,47 +168,29 @@ html_static_path = ['_static']
 #html_file_suffix = None
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'IntermediateLinuxCoursedoc'
+htmlhelp_basename = 'LinuxCoursedoc'
 
 
 # -- Options for LaTeX output --------------------------------------------------
-latex_custom = r'''
-\definecolor{Admonition}{RGB}{251,223,229}
-
-\makeatletter
-  \newenvironment{admonitionbox}{ \begin{lrbox}{\@tempboxa}\begin{minipage}{\columnwidth} }{
-    \end{minipage}\end{lrbox}
-    \colorbox{Admonition}{\usebox{\@tempboxa}}
-  }
-  \renewenvironment{notice}[2]{ \begin{admonitionbox} }{ \end{admonitionbox} }
-\makeatother
-'''
-
-latex_custom += '''
-\\usepackage[sc]{mathpazo}
-'''
-
 
 latex_elements = {
 # The paper size ('letterpaper' or 'a4paper').
 'papersize': 'a4paper',
 
-'preamble': latex_custom,
-
 # The font size ('10pt', '11pt' or '12pt').
 'pointsize': '11pt',
 
-# Fancy chapter Headers:
-'fncychap': '\\usepackage[Glenn]{fncychap}',
+'fontpkg': '\\usepackage{tgbonum}',
+
 # Additional stuff for the LaTeX preamble.
-#'preamble': ' \\usepackage{fancyvrb}',
+#'preamble': '',
 }
 
 # Grouping the document tree into LaTeX files. List of tuples
 # (source start file, target name, title, author, documentclass [howto/manual]).
 latex_documents = [
-  ('index', 'IntermediateLinuxCourse.tex', u'Intermediate Linux Course',
-   u'Holger Dinkel \\& Frank Thommen', 'manual'),
+  ('index', 'LinuxCourse.tex', u'Linux Course Documentation',
+   u'Holger Dinkel, Frank Thommen and Thomas Zichner', 'manual'),
 ]
 
 # The name of an image file (relative to this directory) to place at the top of
@@ -225,7 +202,7 @@ latex_logo = '_static/bio-it_logo.png'
 latex_use_parts = False
 
 # If true, show page references after internal links.
-latex_show_pagerefs = True
+#latex_show_pagerefs = False
 
 # If true, show URL addresses after external links.
 #latex_show_urls = False
@@ -242,8 +219,8 @@ latex_show_pagerefs = True
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    ('index', 'intermediatelinuxcourse', u'Intermediate Linux Course Documentation',
-     [u'Holger Dinkel, Frank Thommen, and Thomas Zichner'], 1)
+    ('index', 'linuxcourse', u'Linux Course Documentation',
+     [u'Holger Dinkel, Frank Thommen and Thomas Zichner'], 1)
 ]
 
 # If true, show URL addresses after external links.
@@ -256,8 +233,8 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-  ('index', 'IntermediateLinuxCourse', u'Intermediate Linux Course Documentation',
-   u'Holger Dinkel & Frank Thommen', 'Intermediate Linux Course', 'Skript:Intermediate Linux Course.',
+  ('index', 'LinuxCourse', u'Linux Course Documentation',
+   u'Holger Dinkel, Frank Thommen and Thomas Zichner', 'LinuxCourse', 'One line description of project.',
    'Miscellaneous'),
 ]
 
@@ -269,8 +246,3 @@ texinfo_documents = [
 
 # How to display URL addresses: 'footnote', 'no', or 'inline'.
 #texinfo_show_urls = 'footnote'
-
-
-# Example configuration for intersphinx: refer to the Python standard library.
-intersphinx_mapping = {'http://docs.python.org/': None}
-

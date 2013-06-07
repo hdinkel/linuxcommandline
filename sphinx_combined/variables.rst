@@ -1,0 +1,1 @@
+../sphinx_intermediate/variables.rst
