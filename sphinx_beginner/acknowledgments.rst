@@ -1,5 +1,5 @@
 Acknowledgements
-================
+----------------
 
 EMBL Logo © EMBL Heidelberg
 

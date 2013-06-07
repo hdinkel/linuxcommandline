@@ -1,6 +1,6 @@
 
 About Bio-IT 
-=============
+-------------
 
 Bio-IT is a community project aiming to develop and strengthen the
 bioinformatics user community at EMBL Heidelberg. It is made up of members
