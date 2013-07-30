@@ -83,7 +83,8 @@ exclude_patterns = ['_build']
 
 # The name of the Pygments (syntax highlighting) style to use.
 pygments_style = 'sphinx'
-pygments_style = 'lsi.lsiClass'
+pygments_style = 'colorful'
+#pygments_style = 'lsi.lsiClass'
 
 # The default language to highlight source code in. The default is 'python'. The value should be a valid Pygments lexer name, see Showing code examples for more details.
 highlight_language = 'bash'
