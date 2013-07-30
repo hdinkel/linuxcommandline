@@ -121,3 +121,166 @@ Full script:
    :language: bash
    :linenos:
 
+
+Reporting Success or Failure - The Exit Status
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Commands report their success or failure by their exit status. An exit status
+of 0 (zero) indicates success, while any exit status greater then 0 indicates
+an error.  Some commands report more than one error status.  Refer to the
+respective manpages to see the meanings of the different exit stati. The exit
+status of a script is usually the exit status of the last executed command,
+which is reported by the environment variable `$?`:
+
+`$?`:
+        The exit status of the last run command
+
+.. TODO:link
+.. seealso:: Ensuring a Sensible Exit Status about how to control the exit status of your script.
+
+
+Command Grouping and Sequences
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Execute commands in sequence:
+    Commands can be concatenated to be executed one after the other unconditionally
+    or based on the success of the respective previous command:
+
+     ::
+
+      cmd1; cmd2 
+
+    Example:
+        Create a directory and change into it:
+        ::
+
+         > pwd
+         /home/fthommen
+         > mkdir a; cd a
+         > pwd
+         /home/fthommen/a
+
+Execute cmd2 only if cmd1 was successful:
+     ::
+
+      cmd1 && cmd2 
+
+    Example: 
+        Confirm that /etc exists:::
+
+         > cd /etc && echo "/etc exists"
+         /etc/exists
+
+
+Execute cmd3 only if cmd1 was not successful:
+     ::
+
+      cmd1 || cmd2 
+
+    Example: 
+        Warn if a directory doesn't exist::
+
+        > cd /etc || echo "/etc is missing!"
+        > cd /nowhere >&/dev/null || echo "/nowhere does not exist"
+        /nowhere does not exist
+
+Group commands to create one single output stream:
+    The commands are run in a subshell (i.e. a new shell is opened to run them) ::
+
+     ( cmds ) 
+
+    Example: 
+        Change into /etc and list content. You are still in the same directory as you were before:::
+
+         > pwd
+         /home/fthommen
+         > (cd /etc; ls)
+         [... directory listing here ...]
+         > pwd
+         /home/fthommen
+
+Group commands to create one single output stream:
+    The commands are run in the current (!) shell. The opening "{" must be followed by a blank and the last command must be succeeded by a ";". ::
+
+      { cmds; }
+
+    Example: 
+        Change into /etc and list content. You are still in /etc after the bracketed expression (compare to the example above): ::
+
+         > pwd
+         /home/fthommen
+         > { cd /etc; ls; }
+         [... directory listing here ...]
+         > pwd
+         /etc
+
+Control Structures
+^^^^^^^^^^^^^^^^^^
+
+The following syntax elements will be described for sh/bash and for csh/tcsh.
+However since this course is mainly about sh/bash, examples will only be given
+for sh/bash. Some notes about csh/tcsh specialities might be given in the text.
+This is only a selection of the most useful or most common elements. There are
+much more in the manpages. All shells offer myriads of possibilities which
+cannot possibly be demonstrated in this course. Some of the described
+features might be specific to bash and not be available in a classical Bourne
+Shell on other systems.
+
+Conditional Statements
+""""""""""""""""""""""
+
+if - then - else:
+
+ This is the most basic conditional statement: Do something depending on certain conditions. The basic syntax is:
+
+  sh/bash: ::
+  
+   if condition1
+   then
+     commands
+   elif condition2
+     more commands
+   [...]
+   else
+     even more commands
+   fi
+
+  csh/tcsh: ::
+
+    if (condition) then
+      commands
+    else if (condition2) then
+      more commands
+    [...]
+    else
+      even more commands
+    endif
+  
+
+Conditions can be a) the exit status of a command or b) the evaluation of a logical or arithmetic expression:
+
+a) Evaluating the exit status of a command: Simply use the command as condition
+    Example: ::
+
+     if grep -q root /etc/passwd
+     then
+       echo root user found
+     else
+       echo No root user found
+     fi
+
+.. Note:: To evaluate the exit status of a command in csh/tcsh, it must be placed within curly brackets with blanks separating the brackets from the command: ::
+
+    if ({ grep -q root /etc/passwd }) then [...]
+
+.. Note:: Redirect the output of the command to be evaluated to /dev/null if you are only interested in the exit status and if the command doesn't have a "quiet" option.
+
+.. Note:: Redirection of commands in conditions does not work for csh/tcsh
+
+b) Evaluating of conditions or comparisons: Conditions and comparisons are
+evaluated using a special command test which is usually written as "[" (no
+joke!). As "[" is a command, it must be followed by a blank. As a speciality
+the "[" command must be ended with " ]" (note the preceding blank here)
+
+In csh/tcsh the test (or [) command is not needed. Conditions and comparisons are directly placed within the round braces.
+

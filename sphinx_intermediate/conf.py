@@ -86,6 +86,7 @@ exclude_patterns = ['_build']
 #pygments_style = 'murphy'
 #pygments_style = 'vim'
 pygments_style = 'lsi.lsiClass'
+#pygments_style = 'colorful'
 
 
 # The default language to highlight source code in. The default is 'python'. The value should be a valid Pygments lexer name, see Showing code examples for more details.
@@ -204,7 +205,8 @@ latex_elements = {
 'pointsize': '11pt',
 
 # Fancy chapter Headers:
-'fncychap': '\\usepackage[Glenn]{fncychap}',
+'fncychap': '\\usepackage[Sonny]{fncychap}',
+#'fncychap': '\\usepackage[Glenn]{fncychap}',
 # Additional stuff for the LaTeX preamble.
 #'preamble': ' \\usepackage{fancyvrb}',
 }
