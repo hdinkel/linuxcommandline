@@ -16,6 +16,7 @@ Intermediate Linux Course: Commandline and Basic Scripting
    Basic Scripting <basic_scripting>
    Solutions <solutions>
    appendix
+..   Exercises <exercises>
 
 
 Indices and tables

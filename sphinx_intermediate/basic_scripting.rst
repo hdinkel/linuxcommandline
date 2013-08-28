@@ -122,6 +122,8 @@ Full script:
    :linenos:
 
 
+.. _reporting_success_or_failure:
+
 Reporting Success or Failure - The Exit Status
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -177,8 +179,8 @@ Execute cmd3 only if cmd1 was not successful:
 
       cmd1 || cmd2 
 
-    Example: 
-        Warn if a directory doesn't exist::
+Example: 
+    Warn if a directory doesn't exist: ::
 
         > cd /etc || echo "/etc is missing!"
         > cd /nowhere >&/dev/null || echo "/nowhere does not exist"
@@ -230,8 +232,9 @@ Conditional Statements
 """"""""""""""""""""""
 
 if - then - else:
+'''''''''''''''''
 
- This is the most basic conditional statement: Do something depending on certain conditions. The basic syntax is:
+This is the most basic conditional statement: Do something depending on certain conditions. The basic syntax is:
 
   sh/bash: ::
   
@@ -269,18 +272,546 @@ a) Evaluating the exit status of a command: Simply use the command as condition
        echo No root user found
      fi
 
-.. Note:: To evaluate the exit status of a command in csh/tcsh, it must be placed within curly brackets with blanks separating the brackets from the command: ::
-
-    if ({ grep -q root /etc/passwd }) then [...]
+.. Note:: To evaluate the exit status of a command in csh/tcsh, it must be
+            placed within curly brackets with blanks separating the brackets from the
+            command: ``if ({ grep -q root /etc/passwd }) then [...]``
 
 .. Note:: Redirect the output of the command to be evaluated to /dev/null if you are only interested in the exit status and if the command doesn't have a "quiet" option.
 
 .. Note:: Redirection of commands in conditions does not work for csh/tcsh
 
-b) Evaluating of conditions or comparisons: Conditions and comparisons are
-evaluated using a special command test which is usually written as "[" (no
-joke!). As "[" is a command, it must be followed by a blank. As a speciality
-the "[" command must be ended with " ]" (note the preceding blank here)
+b) Evaluating of conditions or comparisons: 
 
-In csh/tcsh the test (or [) command is not needed. Conditions and comparisons are directly placed within the round braces.
+Conditions and comparisons are evaluated using a special command test which is
+usually written as "[" (no joke!). As "[" is a command, it must be followed by
+a blank. As a speciality the "[" command must be ended with " ]" (note the
+preceding blank here)
 
+.. Note:: In csh/tcsh the test (or [) command is not needed. Conditions and comparisons are directly placed within the round braces.
+
++------------+---------------------------------------+-----------+
+|  sh/bash   | File condition                        | csh/tcsh  |
++============+=======================================+===========+
+|  -e *file* | *file* exists                         | -e *file* |
++------------+---------------------------------------+-----------+
+|  -f *file* | *file* exists and is a regular *file* | -f *file* |
++------------+---------------------------------------+-----------+
+|  -d *file* | *file* exists and is a directory      | -d *file* |
++------------+---------------------------------------+-----------+
+|  -r *file* | *file* exists and is readable         | -r *file* |
++------------+---------------------------------------+-----------+
+|  -w *file* | *file* exists and is writeable        | -w *file* |
++------------+---------------------------------------+-----------+
+|  -x *file* | *file* exists and is executable       | -x *file* |
++------------+---------------------------------------+-----------+
+|  -s *file* | *file* exists and has a size > 0      |           |
++------------+---------------------------------------+-----------+
+|            | *file* exists and has zero size       | -z *file* |
++------------+---------------------------------------+-----------+
+
+
++-----------+---------------------------------+----------------+
+|  sh/bash  | String Comparison               | csh/tcsh  test |
++===========+=================================+================+
+|  -n s1    | String s1 has non-zero length   |                |
++-----------+---------------------------------+----------------+
+|  -z s1    | String s1 has zero length       |                |
++-----------+---------------------------------+----------------+
+|  s1 = s2  | Strings s1 and s2 are identical | s1 == s2       |
++-----------+---------------------------------+----------------+
+|  s1 != s2 | Strings s1 and s2 differ        | s1 != s2       |
++-----------+---------------------------------+----------------+
+|  string   | String string is not null       |                |
++-----------+---------------------------------+----------------+
+
+
++-----------+-----------------------------------+----------+
+|  sh/bash  | Integer Comparison                | csh/tcsh |
++===========+===================================+==========+
+| n1 –eq n2 | n1 equals n2                      | n1 == n2 |
++-----------+-----------------------------------+----------+
+| n1 –ge n2 | n1 is greater than or equal to n2 | n1 >= n2 |
++-----------+-----------------------------------+----------+
+| n1 –gt n2 | n1 is greater than n2             | n1 > n2  |
++-----------+-----------------------------------+----------+
+| n1 –le n2 | n1 is less than or equal to n2    | n1 <= n2 |
++-----------+-----------------------------------+----------+
+| n1 –lt n2 | n1 is less than n2                | n1 < n2  |
++-----------+-----------------------------------+----------+
+| n1 –ne n2 | n1 it not equal to n2             | n1 != n2 |
++-----------+-----------------------------------+----------+
+
+
++--------------------+------------------------------------------------------+--------------------+
+|  sh/bash           | Combination of conditions                            | csh/tcsh           |
++====================+======================================================+====================+
+| ! *cond*           | True if condition *cond* is not true                 | ! *cond*           |
++--------------------+------------------------------------------------------+--------------------+
+| *cond1* –a *cond2* | True if conditions *cond1* and *cond2* are both true | *cond1* && *cond2* |
++--------------------+------------------------------------------------------+--------------------+
+| *cond1* –o *cond2* | True if conditions *cond1* or *cond2* is true        | *cond1* || *cond2* |
++--------------------+------------------------------------------------------+--------------------+
+
+
+
+Examples: Test for the existence of /etc/passwd::
+
+    if [ -e /etc/passwd ]
+    then
+      echo /etc/passwd exists
+    else
+      echo /etc/passwd does NOT exist
+    fi
+
+or::
+
+    if test -e /etc/passwd
+    then
+      echo /etc/passwd exists
+    else
+      echo /etc/passwd does NOT exist
+    fi
+
+
+.. Note:: Bash supports an additional way of evaluating conditional expressions
+          with [[ expression ]]. This syntax element allows for more readable expression
+          combination and handles empty variables better. However it is not backwards
+          compatible with the original Bourne Shell. See the bash manpage for more
+          information
+
+case
+''''
+
+The case statement implements a more compact and better readable form of if –
+elif – elif – elif etc. Use this if your variable (and you can only check for
+variables with case) can have a distinct number of valid values. A typical
+usage of case will follow later. 
+
+The basic syntax is:
+
+sh/bash: ::
+  
+   case variable in
+     pattern1)
+       commands
+       ;;
+     pattern2)
+       commands
+       ;;
+     […]
+     *)
+       commands
+       ;;
+   esac
+
+
+csh/tcsh: ::
+
+   switch (variable)
+     case pattern1:
+       commands
+       breaksw
+     case pattern2:
+       commands
+       breaksw
+     default:
+       commands
+   endsw
+
+.. Note:: “*”, “?” and “[...]” can be used for the patterns
+
+.. Note:: The \*) (sh/bash) and default: (csh/tcsh) patterns are ”catch-all” patterns which match everything not matched above. It is often used to detect invalid values of variable.
+
+.. Note:: Multiple patterns can be handled by separating them with “|” in sh/bash or by successive case statements in csh/tcsh.
+
+
+
+Example: 
+Check if /opt/ or /usr/ paths are contained in ``$PATH``:::
+
+     case $PATH in
+      */opt/* | */usr/* )
+         echo /opt/ or /usr/ paths found in \$PATH
+         ;;
+      *)
+         echo ‘/opt and /usr are not contained in $PATH’
+         ;;
+     esac
+
+
+Loops
+"""""
+
+for / foreach
+'''''''''''''
+
+The for and foreach statements respectively will loop through a list of given values and run the given statements for reach run:
+
+ sh/bash: ::
+
+     for variable in list
+     do
+       commands
+     done
+
+
+ csh/tcsh: ::
+
+     foreach variable (list)
+       commands
+     end
+
+*list* is a list of strings, separated by whitespaces
+
+Examples: 
+ List all files in /tmp in a bulleted list: ::
+
+     for FILE in /tmp/*
+     do
+       echo “ * $FILE”
+     done
+     or
+     for FILE in `ls /tmp`
+     do
+       echo “ * $FILE”
+     done
+
+while / until
+'''''''''''''
+
+The while and until loops execute your commands while (or until respectively) a certain condition is met
+
+
+ sh/bash: ::
+
+   while condition
+   do
+     commands
+   done
+  
+  
+   until condition
+   do
+     commands
+   done
+  
+
+ csh/tcsh: ::
+
+   while (condition)
+     commands
+   end
+
+
+The conditions are constructed the same way as those used in if statements.
+
+.. Note:: ``until`` is not available in csh/tcsh
+
+“Manual” loop control
+'''''''''''''''''''''
+
+Instead of (or additionally to) the built-in loop control in for/foreach, while and until loops, you can control exiting and continuing them with “``break``” and “``continue``”:
+break “``breaks out``” of the innermost loop (loops can be nested!) and continues after the end of the loop.
+``continue`` skips the rest of the current (innermost) loop and starts the next iteration
+
+
+Making Scripts Flexible
+***********************
+
+Scripts are most useful, if they can be reused. Copying scripts and changing
+them to fit the new situation is time-consuming and error-prone. Additionally
+if you add an improvement to the current script, then all previous versions
+will stay without it. Having one script with the possibility to configure it,
+is usually the better way. Customization of scripts can be achieved by either
+using variables or by adding the possibility to use your own commandline
+options and arguments.
+
+Configurable Scripts
+^^^^^^^^^^^^^^^^^^^^
+
+Any value – be it paths, commands or options – that is specific to individual
+applications or your script, should not be “hardcoded” (i.e. used literally
+within the script) but assigned to variables:
+
+Using Variables
+"""""""""""""""
+
+Any value – be it paths, commands or options – that is specific to individual
+applications or your script, should not be “hardcoded” (i.e. used literally
+within the script) but assigned to variables:
+
+Bad example: 
+You have to change two instances of the path each time you want to list an other directory: ::
+
+    #!/bin/sh
+
+    echo “The directory /etc contains the following files:”
+    ls /etc
+
+Good example: 
+The path is now in a variable and only one instance has to be changed each time (less work, less errors): ::
+
+    #!/bin/sh
+
+    MYDIR=/etc
+
+    echo “The directory $MYDIR contains the following files:”
+    ls $MYDIR
+
+Of course, you’ll still have to modify the script each time you want to list the content of an other directory. A more flexible way of customization would be to use a settings file.
+
+Using a Settings File
+^^^^^^^^^^^^^^^^^^^^^
+
+Instead of having your configurable section within the script, it can be
+“outsourced” in its own file. This file is basically a shellscript which is run
+within the primary script. To run commands from a file within the current
+environment, the commands source (bash, csh/tcsh) or . (dot) (sh/bash) are
+used:
+
+The settings file, e.g. settings.ini: ::
+
+    MYDIR=/etc
+
+The script: ::
+
+    #!/bin/sh
+
+    . ./settings.ini
+
+    echo “The directory $MYDIR contains the following files:”
+    ls $MYDIR
+
+
+Defining your own Commandline Options and Arguments
+"""""""""""""""""""""""""""""""""""""""""""""""""""
+
+The best way to configure a script is to allow for your own commandline options
+and arguments. Commandline arguments are available the script as so-called
+positional parameters $1, $2, $3: etc. $0: contains the name of the script. The
+variables important when dealing with commandline parameters are:
+
+$0:
+        path to the script.  Either the path as you specified it or the full path if the script was executed through $PATH
+$1, $2, $3, etc:
+        Positional parameters (i.e. commandline arguments)
+$#:
+        Current number of positional parameters
+$*:
+        All positional parameters. If used within double quotes (“$*”), then it will expand to the list of all positional parameters, where the complete list is quoted
+$@:
+        All positional parameters. If used within double quotes (“$@”), then it will expand to the list of all positional parameters, where each parameter is individually quoted
+
+.. image:: _static/arguments.png
+
+
+If you run the script ::
+
+    #!/bin/sh
+    echo The script is $0
+    echo The first commandline option is $1
+    echo The second commandline option is $2
+
+with two arguments, you’ll get the following output: ::
+
+    # ./script.sh ABC DEF
+    The script is ./script.sh
+    The first commandline option is ABC
+    The second commandline option is DEF
+    #
+
+In many cases you’ll not know how many parameters are given on the commandline.
+In these cases you can use shift to loop through them. shift removes $1 and
+moves all other positional parameters one position to the right: $2 becomes $1,
+$3 becomes $2 etc.:
+
+.. image:: _static/shift_arguments.png
+
+With the help of $#, shift, case and the positional parameters we can now check
+all the commandline parameters: ::
+
+    while [ "$#" -gt 0 ]
+    do
+      case $1 in
+        -h) echo “Sorry, no help available!”  # not very helpful, is it?
+            exit 1                            # exit with error
+            ;;
+
+        -v) VERBOSE=1                         # we may use $VERBOSE later
+            ;;
+
+        -f) shift
+            FILE=$1                           # Aha, -f requires an
+                                              # additional argument
+            ;;
+
+        *)  echo “Wrong parameter!”
+            exit 1                            # exit with error
+      esac
+      shift
+    done
+
+
+Ensuring a Sensible Exit Status
+*******************************
+
+If you don’t provide your own exit status, then the script will return the exit
+status of the last executed command (See :ref:`Reporting Success or Failure - The Exit Status<reporting_success_or_failure>`). 
+In many cases this might be what you want, but very
+often it isn’t. Consider the following script which is a real example from real
+life and happened to me personally: ::
+
+    #!/bin/sh
+
+    [... do something that fails ...]
+
+    echo "End of the script"
+
+This script will *always* succeed, as the echo command hardly ever fails. You
+will – from the exit status of the script – never be able to detect that
+something went wrong. Instead in such cases you should manually handle the exit
+codes of the commands that are run within the script.
+
+With it’s help we can keep track of the exit stati of all our important
+processing steps and finally return a sensible value: ::
+
+    #!/bin/sh 
+    mystatus=0;
+
+    [... do something that might fail ...]
+    if [ $? -ne 0 ]
+    then
+      mystatus=1
+    fi
+
+    [... do something else that might fail, too ...]
+    [ $? -ne 0 ] && mystatus=1         # same as above.  Do you understand
+                                       # this?
+
+    echo "End of the script"
+    exit $mystatus
+
+Why is the exit status important after all?
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+First when you use your script within other scripts, you’ll probably need to be
+able to check, if it has succeeded.  There might be other ways (e.g. checking
+outputfiles for certain strings, checking directly the textual output of the
+script etc.), but these ways are usually cumbersome and require lots of coding.
+Exit values are easy to check.
+Second: Other tools and systems might also use the exit status of your script.
+E.g. the cluster system uses your job’s exit status to assess, if it has run
+successfully or not.  Returning success even in case of failure will result in
+lots of complications in case a problem occurs. It took me several days to
+realize the bug above.
+
+Tips and Tricks
+***************
+
+Combining Variables with other Strings
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+When combining variables with other strings, then in some situations the
+variable name must be placed in curly brackets (“{}”): ::
+
+    # A=Heidel
+    # echo $Aberg
+
+    # echo ${A}berg
+    Heidelberg
+    #
+
+Filenames and Paths
+^^^^^^^^^^^^^^^^^^^
+
+If possible, try to avoid any special characters (blanks, semicolons (“;”),
+colons (“:”), backslashes (“\”) etc.) in file and directory names.  All these
+special characters can lead to problems in scripted processing.  Instead, stick
+to alphanumeric characters (a-z, 0-9), dots (“.”), dashes (“-“) and underscores
+(“_”).  Additionally sticking to lowercase characters helps avoiding mistypes
+and makes the automatic filename expansion easier.
+
+Breaking up Long Code Lines
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Code lines can become pretty long and unreadable, wrapping onto the next line
+etc.  You can use the escape character (backslash, “\”) to break them up and
+enhance readability of your script.  The excape character must immediately be
+followed by a newline (no intermediate blanks or other is allowed): ::
+
+    # bsub -o output.log -e error.log -q clngnew -M 150000 –R "select[(mem > 15000)]" /g/software/bin/pymol-1.4 –r –p < pymol.pml
+
+becomes: ::
+
+    # bsub -o output.log \
+           -e error.log \
+           -q clngnew \
+           -M 150000 \
+           –R "select[(mem > 15000)]" \
+        /g/software/bin/pymol-1.4 –r –p < pymol.pml
+
+Which is way better to read and to maintain
+
+Script Debugging
+^^^^^^^^^^^^^^^^
+
+sh/bash and csh/tcsh have both an option “-x” which helps debugging a script by
+echoing each command before executing it.  This option can be set and unset
+during runtime with set –x / set +x (sh/bash) and set echo / unset echo
+(csh/tcsh).
+
+Command Substitution
+^^^^^^^^^^^^^^^^^^^^
+
+You can use the output of a command and assign it to a variable or use it right
+away as text string, by using the command substitution operators “`”
+(backticks, backquotes) or “$(…)”. The backtick operator works in all shells,
+while $(…) only works in bash.
+
+Three variants for the same (print out who you are in English text): ::
+
+    # ME=`whoami`
+    # echo I am $ME
+    I am fthommen
+    #
+
+    # ME=$(whoami)
+    # echo I am $ME
+    I am fthommen
+    #
+
+    # echo I am `whoami`
+    I am fthommen
+    #
+
+Create Temporary Files
+^^^^^^^^^^^^^^^^^^^^^^
+
+You can create temporary files with mktemp. By default it will create a new
+file in /tmp and print its name: ::
+
+    # mktemp
+    /tmp/tmp.Yaafh19370
+    #
+
+Cleaning up Temporary Files
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+It is considered good practice and sometimes even important, to clean up
+temporary data before ending a script. A simple way – which will not cover all
+cases, though – could be to store all created temporary files in a variable and
+remove them all before exiting the script: ::
+
+    #! /bin/sh
+    ALL_TEMPFILES=””     # store a list of all temporary files here
+
+    TEMPFILE1=`mktemp`
+    ALL_TEMPFILES=”$ALL_TEMPFILES $TEMPFILE1”
+
+    TEMPFILE2=`mktemp`
+    ALL_TEMPFILES=”$ALL_TEMPFILES $TEMPFILE2”
+
+    [... process, process, process ...]
+
+    rm –f $ALL_TEMPFILES
+    exit
