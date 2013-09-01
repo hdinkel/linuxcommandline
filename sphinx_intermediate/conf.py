@@ -82,10 +82,10 @@ exclude_patterns = ['_build']
 #show_authors = False
 
 # The name of the Pygments (syntax highlighting) style to use.
-#pygments_style = 'sphinx'
+pygments_style = 'sphinx'
 #pygments_style = 'murphy'
 #pygments_style = 'vim'
-pygments_style = 'lsi.lsiClass'
+#pygments_style = 'lsi.lsiClass'
 #pygments_style = 'colorful'
 
 
@@ -178,17 +178,18 @@ htmlhelp_basename = 'IntermediateLinuxCoursedoc'
 
 
 # -- Options for LaTeX output --------------------------------------------------
-latex_custom = r'''
-\definecolor{Admonition}{RGB}{251,223,229}
-
-\makeatletter
-  \newenvironment{admonitionbox}{ \begin{lrbox}{\@tempboxa}\begin{minipage}{\columnwidth} }{
-    \end{minipage}\end{lrbox}
-    \colorbox{Admonition}{\usebox{\@tempboxa}}
-  }
-  \renewenvironment{notice}[2]{ \begin{admonitionbox} }{ \end{admonitionbox} }
-\makeatother
-'''
+latex_custom = r''
+#latex_custom += r'''
+# \definecolor{Admonition}{RGB}{251,223,229}
+# 
+# \makeatletter
+#   \newenvironment{admonitionbox}{ \begin{lrbox}{\@tempboxa}\begin{minipage}{\columnwidth} }{
+#     \end{minipage}\end{lrbox}
+#     \colorbox{Admonition}{\usebox{\@tempboxa}}
+#   }
+#   \renewenvironment{notice}[2]{ \begin{admonitionbox} }{ \end{admonitionbox} }
+# \makeatother
+# '''
 
 latex_custom += '''
 \\usepackage[sc]{mathpazo}
@@ -203,6 +204,8 @@ latex_elements = {
 
 # The font size ('10pt', '11pt' or '12pt').
 'pointsize': '11pt',
+
+'fontpkg': '\\usepackage{tgbonum}',
 
 # Fancy chapter Headers:
 'fncychap': '\\usepackage[Sonny]{fncychap}',
