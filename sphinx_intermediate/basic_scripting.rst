@@ -4,24 +4,29 @@ Basic Shell Scripting
 What is a Script?
 *****************
 
-A script is nothing else than a number of shell command place together in a file. The sim-
-plest script is maybe just a complex oneliner that you don’t want to type each time again.
-More complex scripts are seasoned with control elements (conditions and loops) which
-allow for a sophisticated command flow. scripts might allow for configuration and customi-
-zation, thus allowing one script to be flexibly used in several different environments.
-Whatever you do in a script, you can also do on the commandline. This is
-also the first way to test your scripts step by step!
+A script is nothing else than a number of shell command place together in a file. The simplest
+script is maybe just a complex oneliner that you don't want to type each time again. More
+complex scripts are seasoned with control elements (conditions and loops) which allow for a
+sophisticated command flow. scripts might allow for configuration and customization, thus allowing
+one script to be flexibly used in several different environments. Whatever you do in a script, you
+can also do on the commandline. This is also the first way to test your scripts step by step!
+
 Script Naming and Organization
-It is good practice – though not technically required – to give your scripts an extension
-which specifies their type. I.e. “.sh” for Bourne Shell and Bourne Again Shell scripts, “.csh”
-for C-Shell scripts. Sometimes “.bash” for Bourne Again Shell scripts is used.
+""""""""""""""""""""""""""""""
+
+It is good practice - though not technically required - to give your scripts an extension
+which specifies their type. I.e. "`.sh`" for Bourne Shell and Bourne Again Shell scripts, "`.csh`"
+for C-Shell scripts. Sometimes "`.bash`" for Bourne Again Shell scripts is used.
 We recommend to either store all scripts in one location (e.g. ~/bin) and add this location to
 your $PATH variable or to store the scripts together with the files that are processed by the
 script.
-If you use scripts to process data, then the scripts should probably be
-archived together with the data files
+If you use scripts to process data, then the scripts should probably be archived together with the data files...
+
 Running a Script
+""""""""""""""""
+
 There are basically three ways to run a script:
+
 a) the location to your script is not in your $PATH variable, then you have to specify the
 full path to the script:
 
@@ -32,16 +37,16 @@ full path to the script:
 
 b) the location to the script is in the $PATH variable, then you can simply type its name:
 
- ::
+  ::
 
-  script.sh
-   [...]
+   script.sh
+    [...]
 
 In both situations, the script will need to have execute permissions to be run. If for some
-reason you can only read but not execute the script, then it can still be run by
-c) specifying the interpreter. The full path (relative or absolute) to script has to be provi-
-ded in this case, no matter wether the script location is already contained in $PATH or
-not:
+reason you can only read but not execute the script, then it can still be run in the following way:
+
+c) specifying the interpreter. The full path (relative or absolute) to the script has to be provided in
+this case, no matter whether the script location is already contained in $PATH or not:
 
  ::
 
@@ -54,10 +59,14 @@ Basic Structure of a Shellscript
 
 Shellscripts have the following general structure:
 
-#. A line starting with “``#!``” which defines the interpreter (i.e. the program used to run the script). This line is called the “shebang line” and must be the first line in a script
-#. A section where the configuration takes place, e.g. paths, options and commands are defined and it is made sure, that all prerequisites are met
-#. A section where the actual processing is done. This includes error handling
-#. A controlled exit sequence, which includes cleaning up all temporary files and returning a sensible exit status
+#. A line starting with "`#!`! which defines the interpreter (i.e. the program used to run the
+   script). This line is called the "`shebang line` and must be the first line in a script.
+
+#. A section where the configuration takes place, e.g. paths, options and commands are defined and it is made sure, that all prerequisites are met.
+
+#. A section where the actual processing is done. This includes error handling.
+
+#. A controlled exit sequence, which includes cleaning up all temporary files and returning a sensible exit status.
 
 This is merely a recommendation to keep your scripts well structured. None of these sections are mandatory.
 
@@ -65,38 +74,50 @@ Readability and Documentation
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Make your script easily readable. Use comments and whitespace and avoid super compact
-but hardly understandable commandlines. Always take into account, that not only the shell,
-also human beings will probably have to read and understand your script.
+but hard to understand command lines. Always take into account that not only the shell,
+but also human beings will probably have to read and understand your script.
+(see :ref:`Breaking up long lines<breaking_up_long_lines>`)
 Even if your script is very simple – document it! This helps others understand what you did,
 but – most important – it helps you remember what you did, when you have to reuse the
 script in the future.
 
 Documentation is done either by writing comments into the script or by creating a special documentation file (README.txt or similar). Documenting in the script can be done in several ways:
-#. A preamble in the script, outlining the purpose, parameters and variables of the script as well as some information about authorship and and perhaps changes
-#. Within the script as blocks of text or “End of line” comments
 
-To write a comments use the hash sign (“``#``”). Everything after a “``#``” is ignored when executing a script.
+#. A preamble in the script, outlining the purpose, parameters and variables of the script as well
+   as some information about authorship and and perhaps changes.
 
-Shebang line:
+#. Within the script as blocks of text or “End of line” comments.
+
+To write a comments use the hash sign (“`#`”). Everything after a “`#`” is ignored when executing a script.
+
+Let's have a look at the following script, breaking it down into individual parts.
+First, the full script:
+
+.. literalinclude:: _static/myscript.sh
+   :language: bash
+   :linenos:
+
+
+It starts with the "shebang line":
 
 .. literalinclude:: _static/myscript.sh
    :language: bash
    :lines: 1-3
    :emphasize-lines: 1
 
-Preamble with a short description, usage information, authorship etc.:
+Next is the preamble with a short description, usage information, authorship etc.:
 
 .. literalinclude:: _static/myscript.sh
    :language: bash
    :lines: 3-13
 
-Configuration:
+Followed by the configuration:
 
 .. literalinclude:: _static/myscript.sh
    :language: bash
    :lines: 14-16
 
-Checking prerequisites and sane environment:
+Next, checking prerequisites and sane environment:
 
 .. literalinclude:: _static/myscript.sh
    :language: bash
@@ -108,18 +129,12 @@ This is what you actually wanted to do:
    :language: bash
    :lines: 31-33
 
-Ensure a valid and meaningful exit status:
+Finally, ensure a valid and meaningful exit status:
 
 .. literalinclude:: _static/myscript.sh
    :language: bash
    :lines: 34-
 
-
-Full script:
-
-.. literalinclude:: _static/myscript.sh
-   :language: bash
-   :linenos:
 
 
 .. _reporting_success_or_failure:
@@ -137,8 +152,8 @@ which is reported by the environment variable `$?`:
 `$?`:
         The exit status of the last run command
 
-.. TODO:link
-.. seealso:: Ensuring a Sensible Exit Status about how to control the exit status of your script.
+See :ref:`Ensuring a Sensible Exit Status<ensuring_sensible_exit_status>` about 
+how to control the exit status of your script.
 
 
 Command Grouping and Sequences
@@ -150,7 +165,7 @@ Execute commands in sequence:
 
      ::
 
-      cmd1; cmd2 
+      cmd1; cmd2
 
     Example:
         Create a directory and change into it:
@@ -165,9 +180,9 @@ Execute commands in sequence:
 Execute cmd2 only if cmd1 was successful:
      ::
 
-      cmd1 && cmd2 
+      cmd1 && cmd2
 
-    Example: 
+    Example:
         Confirm that /etc exists:::
 
          > cd /etc && echo "/etc exists"
@@ -177,9 +192,9 @@ Execute cmd2 only if cmd1 was successful:
 Execute cmd3 only if cmd1 was not successful:
      ::
 
-      cmd1 || cmd2 
+      cmd1 || cmd2
 
-Example: 
+Example:
     Warn if a directory doesn't exist: ::
 
         > cd /etc || echo "/etc is missing!"
@@ -189,9 +204,9 @@ Example:
 Group commands to create one single output stream:
     The commands are run in a subshell (i.e. a new shell is opened to run them) ::
 
-     ( cmds ) 
+     ( cmds )
 
-    Example: 
+    Example:
         Change into /etc and list content. You are still in the same directory as you were before:::
 
          > pwd
@@ -206,7 +221,7 @@ Group commands to create one single output stream:
 
       { cmds; }
 
-    Example: 
+    Example:
         Change into /etc and list content. You are still in /etc after the bracketed expression (compare to the example above): ::
 
          > pwd
@@ -237,7 +252,7 @@ if - then - else:
 This is the most basic conditional statement: Do something depending on certain conditions. The basic syntax is:
 
   sh/bash: ::
-  
+
    if condition1
    then
      commands
@@ -258,9 +273,11 @@ This is the most basic conditional statement: Do something depending on certain 
     else
       even more commands
     endif
-  
 
-Conditions can be a) the exit status of a command or b) the evaluation of a logical or arithmetic expression:
+
+Conditions can be 
+a) the exit status of a command or 
+b) the evaluation of a logical or arithmetic expression:
 
 a) Evaluating the exit status of a command: Simply use the command as condition
     Example: ::
@@ -280,7 +297,7 @@ a) Evaluating the exit status of a command: Simply use the command as condition
 
 .. Note:: Redirection of commands in conditions does not work for csh/tcsh
 
-b) Evaluating of conditions or comparisons: 
+b) Evaluating of conditions or comparisons:
 
 Conditions and comparisons are evaluated using a special command test which is
 usually written as "[" (no joke!). As "[" is a command, it must be followed by
@@ -382,15 +399,15 @@ or::
 case
 ''''
 
-The case statement implements a more compact and better readable form of if –
-elif – elif – elif etc. Use this if your variable (and you can only check for
+The `:index:case <case>`  statement implements a more compact and better readable form of if –
+`:index:elif <elif>`  – elif – elif etc. Use this if your variable (and you can only check for
 variables with case) can have a distinct number of valid values. A typical
-usage of case will follow later. 
+usage of case will follow later.
 
 The basic syntax is:
 
 sh/bash: ::
-  
+
    case variable in
      pattern1)
        commands
@@ -405,7 +422,7 @@ sh/bash: ::
    esac
 
 
-csh/tcsh: ::
+:index:`csh/tcsh <breaskw>`: ::
 
    switch (variable)
      case pattern1:
@@ -418,7 +435,7 @@ csh/tcsh: ::
        commands
    endsw
 
-.. Note:: “*”, “?” and “[...]” can be used for the patterns
+.. Note:: “*”, “?” and “[...]” can be used for the :index:`patterns <pattern>`
 
 .. Note:: The \*) (sh/bash) and default: (csh/tcsh) patterns are ”catch-all” patterns which match everything not matched above. It is often used to detect invalid values of variable.
 
@@ -426,8 +443,8 @@ csh/tcsh: ::
 
 
 
-Example: 
-Check if /opt/ or /usr/ paths are contained in ``$PATH``:::
+Example:
+  Check if /opt/ or /usr/ paths are contained in ``$PATH``:::
 
      case $PATH in
       */opt/* | */usr/* )
@@ -445,7 +462,8 @@ Loops
 for / foreach
 '''''''''''''
 
-The for and foreach statements respectively will loop through a list of given values and run the given statements for reach run:
+The :index:`for <for>`  and :index:`foreach <foreach>`  statements respectively will loop through a
+list of given values and run the given statements for reach run:
 
  sh/bash: ::
 
@@ -463,7 +481,7 @@ The for and foreach statements respectively will loop through a list of given va
 
 *list* is a list of strings, separated by whitespaces
 
-Examples: 
+Examples:
  List all files in /tmp in a bulleted list: ::
 
      for FILE in /tmp/*
@@ -479,7 +497,7 @@ Examples:
 while / until
 '''''''''''''
 
-The while and until loops execute your commands while (or until respectively) a certain condition is met
+The :index:`while <while>` and :index:`until <until>` loops execute your commands while (or :index:`until <until>` respectively) a certain condition is met
 
 
  sh/bash: ::
@@ -488,13 +506,13 @@ The while and until loops execute your commands while (or until respectively) a 
    do
      commands
    done
-  
-  
+
+
    until condition
    do
      commands
    done
-  
+
 
  csh/tcsh: ::
 
@@ -505,14 +523,16 @@ The while and until loops execute your commands while (or until respectively) a 
 
 The conditions are constructed the same way as those used in if statements.
 
-.. Note:: ``until`` is not available in csh/tcsh
+.. Note:: :index:`until <until>` is not available in csh/tcsh
 
 “Manual” loop control
 '''''''''''''''''''''
 
-Instead of (or additionally to) the built-in loop control in for/foreach, while and until loops, you can control exiting and continuing them with “``break``” and “``continue``”:
-break “``breaks out``” of the innermost loop (loops can be nested!) and continues after the end of the loop.
-``continue`` skips the rest of the current (innermost) loop and starts the next iteration
+Instead of (or additionally to) the built-in loop control in for/foreach, :index:`while <while>` and
+:index:`until <until>`  loops, you can control exiting and continuing them with “``break``” and
+“``continue``”: break “``breaks out``” of the innermost loop (loops can be nested!) and continues
+after the end of the loop. ``continue`` skips the rest of the current (innermost) loop and starts
+the next iteration
 
 
 Making Scripts Flexible
@@ -540,7 +560,7 @@ Any value – be it paths, commands or options – that is specific to individua
 applications or your script, should not be “hardcoded” (i.e. used literally
 within the script) but assigned to variables:
 
-Bad example: 
+Bad example:
 You have to change two instances of the path each time you want to list an other directory: ::
 
     #!/bin/sh
@@ -548,7 +568,7 @@ You have to change two instances of the path each time you want to list an other
     echo “The directory /etc contains the following files:”
     ls /etc
 
-Good example: 
+Good example:
 The path is now in a variable and only one instance has to be changed each time (less work, less errors): ::
 
     #!/bin/sh
@@ -627,7 +647,7 @@ $3 becomes $2 etc.:
 
 .. image:: _static/shift_arguments.png
 
-With the help of $#, shift, case and the positional parameters we can now check
+With the help of $#, :index:`shift <shift>`, `:index:case <case>`  and the positional parameters we can now check
 all the commandline parameters: ::
 
     while [ "$#" -gt 0 ]
@@ -651,12 +671,12 @@ all the commandline parameters: ::
       shift
     done
 
-
+.. _ensuring_sensible_exit_status:
 Ensuring a Sensible Exit Status
 *******************************
 
 If you don’t provide your own exit status, then the script will return the exit
-status of the last executed command (See :ref:`Reporting Success or Failure - The Exit Status<reporting_success_or_failure>`). 
+status of the last executed command (See :ref:`Reporting Success or Failure - The Exit Status<reporting_success_or_failure>`).
 In many cases this might be what you want, but very
 often it isn’t. Consider the following script which is a real example from real
 life and happened to me personally: ::
@@ -675,7 +695,7 @@ codes of the commands that are run within the script.
 With it’s help we can keep track of the exit stati of all our important
 processing steps and finally return a sensible value: ::
 
-    #!/bin/sh 
+    #!/bin/sh
     mystatus=0;
 
     [... do something that might fail ...]
@@ -731,6 +751,7 @@ to alphanumeric characters (a-z, 0-9), dots (“.”), dashes (“-“) and unde
 (“_”).  Additionally sticking to lowercase characters helps avoiding mistypes
 and makes the automatic filename expansion easier.
 
+.. _breaking_up_long_lines:
 Breaking up Long Code Lines
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -766,7 +787,7 @@ Command Substitution
 You can use the output of a command and assign it to a variable or use it right
 away as text string, by using the command substitution operators “`”
 (backticks, backquotes) or “$(…)”. The backtick operator works in all shells,
-while $(…) only works in bash.
+while $(...) only works in bash.
 
 Three variants for the same (print out who you are in English text): ::
 
