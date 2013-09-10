@@ -2,7 +2,7 @@ Introduction to the Linux Commandline
 #####################################
 
 Why Use the Commandline
------------------------
+=======================
 
 -   It's **fast**. Productivity is a word that gets tossed around a lot by so-called power users, but the command line can really streamline your computer use, assuming you learn to use it right.
 -   It's **easier to get help**. The command line may not be the easiest thing to use, but it makes life a whole lot easier for people trying to help you and for yourself when looking for help, especially over the internet. Many times it's as simple as the helper posting a few commands and some instructions and the recipient copying and pasting those commands. Anyone who has spent hours listening to someone from tech support say something like, “OK, now click this, then this, then select this menu command” knows how frustrating the GUI alternative can be. 
@@ -10,7 +10,7 @@ Why Use the Commandline
 -   It's **powerful**. The companies behind those other operating systems try their best to stop a user from accidentally screwing up their computer. Doing this involves hiding a lot of the components and tools that could harm a computer away from novices. Linux is more of an open book, which is due in part to its prominent use of the command line.
 
 General Remarks Regarding Using UNIX/Linux Systems
---------------------------------------------------
+==================================================
 -   **Test before run**. Anything written here has to be taken with a grain of salt. On another system – be it a different Linux distribution or another UNIXoid operating system – you might find the same command but without the support of some of the options tought here. It is even possible, that the same option has a different meaning on another system. With this in mind always make sure to test your commands (specially the “dangerous” ones which remove or modify files) when switching from one system to the other.
 -   **The Linux/UNIX environment**. The behaviour of many commands is influenced or controlled by the so-called “environment”. This environment is the sum of all your environment variables. Some of these environment variables will be shown towards the end of this course.
 -   **UPPERCASE, lowercase**. Don’t forget that everything is case-sensitive.
@@ -25,10 +25,10 @@ General Remarks Regarding Using UNIX/Linux Systems
   usually contains the users’ homedirectories and ``/tmp`` which can be used to store
   temporary data (beware: Its content is regularly removed!).
 
-..note:: The terms “directory” and “folder” are used interchangeably in this document.
+.. note:: The terms “directory” and “folder” are used interchangeably in this document.
 
 General Structure of Linux Commands
------------------------------------
+===================================
 
 Linux commands have the following general structure:
 
@@ -133,7 +133,7 @@ whoami – Print your username
   fthommen
 
 hostname – Print the name of the computer
-"""""""""""""""""""""""""""""""""""""""""
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 **Usage**: ``hostname``
 
@@ -143,7 +143,7 @@ hostname – Print the name of the computer
   pc-teach01
 
 pwd – Print the current working directory
-"""""""""""""""""""""""""""""""""""""""""
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 **Usage**: ``pwd`` 
 
@@ -153,7 +153,7 @@ pwd – Print the current working directory
   /home/fthommen
 
 date – Print current date and time
-""""""""""""""""""""""""""""""""""
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 **Usage**: ``date``
 
@@ -165,10 +165,10 @@ date – Print current date and time
 .. note:: The command time does something completely different than :index:`date` and is not used to show the current time.
 
 Moving Around
-^^^^^^^^^^^^^
+-------------
 
 cd – Change the working directory
-"""""""""""""""""""""""""""""""""
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 **Usage**: ``cd [new_directory]``
 
@@ -207,10 +207,10 @@ Special directories:
 
 
 See What’s Around
-^^^^^^^^^^^^^^^^^
+-----------------
 
 ls - List directory contents
-""""""""""""""""""""""""""""
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 **Usage**:  
   ``ls [options] [file(s) or directory/ies]``
@@ -258,10 +258,10 @@ Examples:
 .. note:: The special directory “``~``” mentioned above is a shell glob, too.
 
 Organize Files and Folders
-^^^^^^^^^^^^^^^^^^^^^^^^^^
+--------------------------
 
 touch – Create a file or change last modification date of an existing file
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 **Usage**:  ``touch file(s) or directory/ies``
 
@@ -282,7 +282,7 @@ touch – Create a file or change last modification date of an existing file
   -rw-r--r-- 1 fthommen cmueller 0 Sep 25 22:01 aa.pdf
 
 rm – Remove files and directories
-"""""""""""""""""""""""""""""""""
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 **Usage**:  ``rm [options] file(s)``
 
@@ -304,7 +304,7 @@ rm – Remove files and directories
 .. note:: rm without the –i option will usually not ask you if you really want to remove the file or directory
 
 mv – Move and rename files and folders
-""""""""""""""""""""""""""""""""""""""
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 **Usage**:  ``mv [options] sourcefile destinationfile``
 
@@ -324,7 +324,7 @@ mv – Move and rename files and folders
 .. note:: You cannot overwrite an existing directory by another one with mv
 
 mkdir – Create a new directory
-""""""""""""""""""""""""""""""
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 **Usage**:  ``mkdir [options] directory``
 
