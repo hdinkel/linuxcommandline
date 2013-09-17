@@ -20,6 +20,7 @@ General Remarks Regarding Using UNIX/Linux Systems
 -   **The Filesystem**. Linux filesystems start on top at the root directory (sic!) “/” which hierarchically broadens towards the ground.  The separator between directories or directories and files in Linux is the slash (“/”).
 
 
+.. _figure-filesystem:
 .. figure:: _static/filesystem.png
 
   Depending on the Linux distribution you might or might not find all of above
