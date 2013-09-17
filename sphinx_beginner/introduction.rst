@@ -1,16 +1,19 @@
+#####################################
 Introduction to the Linux Commandline
 #####################################
 
+***********************
 Why Use the Commandline
-=======================
+***********************
 
 -   It's **fast**. Productivity is a word that gets tossed around a lot by so-called power users, but the command line can really streamline your computer use, assuming you learn to use it right.
 -   It's **easier to get help**. The command line may not be the easiest thing to use, but it makes life a whole lot easier for people trying to help you and for yourself when looking for help, especially over the internet. Many times it's as simple as the helper posting a few commands and some instructions and the recipient copying and pasting those commands. Anyone who has spent hours listening to someone from tech support say something like, “OK, now click this, then this, then select this menu command” knows how frustrating the GUI alternative can be. 
 -   It's nearly **universal**. There are hundreds of Linux distros out there, each with a slightly different graphical environment. Thankfully, the various distros do have one common element: the command line. There are distro-specific commands, but the bulk of commands will work on any Linux system.
 -   It's **powerful**. The companies behind those other operating systems try their best to stop a user from accidentally screwing up their computer. Doing this involves hiding a lot of the components and tools that could harm a computer away from novices. Linux is more of an open book, which is due in part to its prominent use of the command line.
 
+**************************************************
 General Remarks Regarding Using UNIX/Linux Systems
-==================================================
+**************************************************
 -   **Test before run**. Anything written here has to be taken with a grain of salt. On another system – be it a different Linux distribution or another UNIXoid operating system – you might find the same command but without the support of some of the options tought here. It is even possible, that the same option has a different meaning on another system. With this in mind always make sure to test your commands (specially the “dangerous” ones which remove or modify files) when switching from one system to the other.
 -   **The Linux/UNIX environment**. The behaviour of many commands is influenced or controlled by the so-called “environment”. This environment is the sum of all your environment variables. Some of these environment variables will be shown towards the end of this course.
 -   **UPPERCASE, lowercase**. Don’t forget that everything is case-sensitive.
@@ -27,14 +30,19 @@ General Remarks Regarding Using UNIX/Linux Systems
 
 .. note:: The terms “directory” and “folder” are used interchangeably in this document.
 
+***********************************
 General Structure of Linux Commands
-===================================
+***********************************
 
-Linux commands have the following general structure:
+Many linux commands have options and accept arguments. Options are a set of switch-like parameters
+while arguments are usually free text input (such as a filename).
 
 .. figure:: _static/LinuxCommandStructure.png
 
-commandline options (sometimes called comandline switches) commonly have one of the two following forms: The short form ``-character`` or the long form ``--string.`` E.g.
+   General structure of Linux commands.
+
+Commandline options (sometimes called comandline switches) commonly have one of the two following
+forms: The short form ``-s`` (just a single character) or the long form ``--string.`` E.g.
 
  :: 
 
@@ -62,14 +70,15 @@ Since Linux incorporates commands from different sources, options can be availab
   > tar cf file.tar -C .. file/
   > ps auxgww
 
+******************************
 A Journey Through the Commands
-==============================
+******************************
 
 Please note that all examples and usage instructions below are just a glimpse of what you can do and reflect our opinion on what’s important and what’s not. Most of these commands support many more options and different usages. Consult the manpages to find them.
 Typographical conventions: Commands and examples are written in Courier.  User Input is written in Courier bold and placeholders are generally written in italic.
 
 Getting Help
-------------
+============
 
 ``-h/--help`` option, no parameters
 
@@ -77,7 +86,7 @@ Many commands support a “help” option, either through ``-h`` or through ``--
 Other commands will show a help page or at least a short usage overview if you provide wrong commandline options
 
 man - show the manual page of a command
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+---------------------------------------
 
 **Usage**: 
 ``man command or file``
@@ -108,7 +117,7 @@ apropos – list manpages containing a keyword in their description
   > apropos who
   [...]
   > who                  (1)  - show who is logged on
-  > who                  (1p)  - display who is on the system
+  > who                  (1)  - display who is on the system
   > whoami               (1)  - print effective userid
 
 Use :index:`apropos` to find candidates for specific tasks
@@ -120,10 +129,10 @@ Use :index:`apropos` to find candidates for specific tasks
 The ``/usr/share/doc`` directory in some Linux distributions contains additional documentation of installed software packages 
 
 Who am I, where am I
---------------------
+====================
 
 whoami – Print your username
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+----------------------------
 
 **Usage**: ``whoami``
 
@@ -133,7 +142,7 @@ whoami – Print your username
   fthommen
 
 hostname – Print the name of the computer
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-----------------------------------------
 
 **Usage**: ``hostname``
 
@@ -143,7 +152,7 @@ hostname – Print the name of the computer
   pc-teach01
 
 pwd – Print the current working directory
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-----------------------------------------
 
 **Usage**: ``pwd`` 
 
@@ -153,7 +162,7 @@ pwd – Print the current working directory
   /home/fthommen
 
 date – Print current date and time
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+----------------------------------
 
 **Usage**: ``date``
 
@@ -165,10 +174,10 @@ date – Print current date and time
 .. note:: The command time does something completely different than :index:`date` and is not used to show the current time.
 
 Moving Around
--------------
+=============
 
 cd – Change the working directory
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+---------------------------------
 
 **Usage**: ``cd [new_directory]``
 
@@ -207,10 +216,10 @@ Special directories:
 
 
 See What’s Around
------------------
+=================
 
 ls - List directory contents
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+----------------------------
 
 **Usage**:  
   ``ls [options] [file(s) or directory/ies]``
@@ -240,7 +249,7 @@ Useful options:
 ----------
  
 Digression: Shell globs
-^^^^^^^^^^^^^^^^^^^^^^^
+-----------------------
 
 Files and folders can’t only be referred to with their full name, but also with so-called “Shell Globs”, which are a kind of simple pattern to address groups of files and folders.  Instead of explicit names you can use the following placeholders:
 
@@ -258,10 +267,10 @@ Examples:
 .. note:: The special directory “``~``” mentioned above is a shell glob, too.
 
 Organize Files and Folders
---------------------------
+==========================
 
 touch – Create a file or change last modification date of an existing file
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+--------------------------------------------------------------------------
 
 **Usage**:  ``touch file(s) or directory/ies``
 
@@ -282,7 +291,7 @@ touch – Create a file or change last modification date of an existing file
   -rw-r--r-- 1 fthommen cmueller 0 Sep 25 22:01 aa.pdf
 
 rm – Remove files and directories
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+---------------------------------
 
 **Usage**:  ``rm [options] file(s)``
 
@@ -304,7 +313,7 @@ rm – Remove files and directories
 .. note:: rm without the –i option will usually not ask you if you really want to remove the file or directory
 
 mv – Move and rename files and folders
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+--------------------------------------
 
 **Usage**:  ``mv [options] sourcefile destinationfile``
 
@@ -324,7 +333,7 @@ mv – Move and rename files and folders
 .. note:: You cannot overwrite an existing directory by another one with mv
 
 mkdir – Create a new directory
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+------------------------------
 
 **Usage**:  ``mkdir [options] directory``
 
@@ -339,15 +348,14 @@ mkdir – Create a new directory
 
 -p   Create parent directories (when creating nested directories)
 
-
- :: 
+:: 
 
   > mkdir adir/bdir
   mkdir: cannot create directory `adir/bdir': No such file or directory
   > mkdir –p adir/bdir
 
 rmdir – Remove an empty directory
-"""""""""""""""""""""""""""""""""
+---------------------------------
 
 **Usage**:  ``rmdir directory``
 
@@ -358,10 +366,10 @@ rmdir – Remove an empty directory
 .. note:: If the directory is not empty, rmdir will complain and not remove it
 
 cp – Copy files and folders
-"""""""""""""""""""""""""""
+---------------------------
 
 **Usage**:  ``cp [options] sourcefile destinationfile``
-.. note:: :index:`cp` [options] sourcefile(s) destinationdirectory
+
 
  :: 
 
@@ -374,10 +382,10 @@ cp – Copy files and folders
 -p      Preserve owner, permissions and timestamp 
 
 View Files
-^^^^^^^^^^
+==========
 
 cat – Print files on terminal (concatenate)
-"""""""""""""""""""""""""""""""""""""""""""
+-------------------------------------------
 
 **Usage**:  ``cat [options] file(s)``
 
@@ -386,10 +394,12 @@ cat – Print files on terminal (concatenate)
   > cat  P12931.fasta backup_of_P12931.fasta
   [...]
 
-.. note:: :index:`cat` only makes sense for short files or for e.g. combining several files into one.  See the redirection examples later
+
+.. note:: :index:`cat` only makes sense for short files or for e.g. combining several files into one.  See the redirection examples later.
+
 
 less – View and navigate files
-""""""""""""""""""""""""""""""
+------------------------------
 
 **Usage**:  ``less [options] file(s)``
 
@@ -416,10 +426,10 @@ quit:                                   q
 
 
 Extracting Informations from Files
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+==================================
 
 grep – Find lines matching a pattern in textfiles
-"""""""""""""""""""""""""""""""""""""""""""""""""
+-------------------------------------------------
 
 :index:`Grep <grep>` is a command-line utility for searching plain-text data sets for lines matching a regular expression. 
 
@@ -444,7 +454,7 @@ grep – Find lines matching a pattern in textfiles
 -c      Print count of matching lines for each file
 
 head – Print first lines of a textfile
-""""""""""""""""""""""""""""""""""""""
+--------------------------------------
 
 :index:`Head <head>` is a program on Unix and Unix-like systems used to display the beginning of a text file or piped data.
 
@@ -469,7 +479,7 @@ head – Print first lines of a textfile
 -n num  Print num lines (default is 10)
 
 tail – Print last lines of a textfile
-"""""""""""""""""""""""""""""""""""""
+-------------------------------------
 
 **Usage**:  ``tail [options] file(s)``
 
@@ -486,10 +496,10 @@ tail – Print last lines of a textfile
 -f      "Follow" a file (print new lines as they are written to the file)
 
 Useful Filetools
-^^^^^^^^^^^^^^^^
+================
 
 file – determine the filetype
-"""""""""""""""""""""""""""""
+-----------------------------
 
 **Usage**:  ``file [options] file(s)``
 
@@ -505,7 +515,7 @@ file – determine the filetype
 .. note:: The command :index:`file` uses certain tests and some magic to determine the type of a file
 
 which – find a (executable) command
-"""""""""""""""""""""""""""""""""""
+-----------------------------------
 
 **Usage**:  ``which [options] command(s)``
 
@@ -518,7 +528,7 @@ which – find a (executable) command
   >
 
 find – search/find files in any given directory
-"""""""""""""""""""""""""""""""""""""""""""""""
+-----------------------------------------------
 
 **Usage**:  ``find [starting path(es)] [search filter]``
 
@@ -565,10 +575,10 @@ find – search/find files in any given directory
   ./adir
 
 Useful Terminal Tools
-^^^^^^^^^^^^^^^^^^^^^
+=====================
 
 clear – Clear the “screen”
-""""""""""""""""""""""""""
+--------------------------
 
 **Usage**:  ``clear``
 
@@ -581,7 +591,7 @@ In case the output of the terminal/screen gets cluttered, you can use ``clear`` 
 If this doesn't work, you can use ``reset`` to perform a re-initialization of the terminal:
 
 reset – Reset your terminal
-"""""""""""""""""""""""""""
+---------------------------
 
 **Usage**:  ``reset [options]``
 
@@ -590,7 +600,7 @@ reset – Reset your terminal
   > reset
 
 Permissions
-^^^^^^^^^^^
+===========
 
 using ls -l to view entries of current directory: 
 
@@ -604,9 +614,10 @@ using ls -l to view entries of current directory:
 .. figure:: _static/LinuxPermissions.png
 
 Changing Permissions
-""""""""""""""""""""
+--------------------
 
 Permissions are set using the ``chmod`` (:index:`change mode<chmod>` ) command. 
+
 **Usage**:  ``chmod [options] mode(s) files(s)``
 
  :: 
@@ -628,8 +639,8 @@ The mode is composed of
 +-----+---------------+------+------------------------------+-----+--------------+
 | o:  |  other        |  =:  | set exactly this permission  |  x: | execute      |
 +-----+---------------+------+------------------------------+-----+--------------+
-| a:  |  all          |  xx  | xx                           | xx  |  xx          |
-+-----+----------------+-----+------------------------------+-----+--------------+
+| a:  |  all          |      |                              |     |              |
++-----+---------------+------+------------------------------+-----+--------------+
 
 
 Add executable permission to the group: 
@@ -651,30 +662,33 @@ Allow all to read a directory:
   > chmod a+rx adir/
 
 Remote access
-^^^^^^^^^^^^^
+=============
 
-To execute commands at a remote machine/server, you need to log in to this machine. This is done using the ``ssh`` command (secure shell). 
-In its simplest form, it takes just the machinename as parameter (assuming the username on the local machine and remote machine are identical): 
+To execute commands at a remote machine/server, you need to log in to this machine. This is done
+using the ``ssh`` command (secure shell). In its simplest form, it takes just the machinename as
+parameter (assuming the username on the local machine and remote machine are identical): 
 
 
  :: 
 
   > ssh remote_server
 
-.. note:: Once logged in, :index:`use <hostname, whoami>` ``hostname,`` ``whoami,`` etc. to determine on which machine you are currently working!
+.. note:: Once logged in, :index:`use <hostname, whoami>` ``hostname,`` ``whoami,`` etc. to
+          determine on which machine you are currently working and to get a feeling for your 
+          environment!
 
 To use a different username, you can use either: 
 
  :: 
 
-  > ssh username@remote_server
+  > ssh -l username remote_server
 
 or 
 
 
  :: 
 
-  > ssh -l username remote_server
+  > ssh username@remote_server
 
 When connecting to a machine for the first time, it might display a warning: 
 
@@ -693,6 +707,14 @@ To :index:`disconnect <exit, disconnect>` from the remote machine, type:
 
   > exit
 
+
+If setup correctly, you can even use **graphical tools** from the remote server on the local machine. 
+For this to work, you need to start the ssh session with the ``-X`` parameter:
+
+ :: 
+
+  > ssh -X remote_server
+
 Copying files to and from remote computers can be done using ``scp``  (secure copy). 
 The order of parameters is the same as in ``cp``: first the name of the source, then the name of the destination. Either one can be the remote part.
 
@@ -709,11 +731,12 @@ An alternative username can be provided just as in ssh:
 
   > scp username@server:/remotefile localfile
 
+
 IO and Redirections
-^^^^^^^^^^^^^^^^^^^
+===================
 
 Redirect
-""""""""
+--------
 
 :index:`Redirect <redirect>` the output of one program into e.g. a file: (Caution: you can easily overwrite files by this!) 
 Inserting the current date into a new file: 
@@ -730,7 +753,7 @@ Inserting the current date into a new file:
   > grep -i "src" *.fasta > lines_with_src.txt
 
 Append
-""""""
+------
 
 :index:`Append <append>` something to a file (rather than overwriting it): 
 
@@ -739,7 +762,7 @@ Append
   > date >> file_containing_date
 
 Pipe
-""""
+----
 
 Use the :index:`| <|, pipe>` pipe symbol (``|``) to feed the output of one program into the next program. 
 Here: use ``ls`` to show the directory contents and then :index:`use <grep>` ``grep`` to only show those that contain fasta in their name: 
@@ -754,12 +777,12 @@ Here: use ``ls`` to show the directory contents and then :index:`use <grep>` ``g
   SRC_HUMAN.fasta
 
 Environment Variables
-^^^^^^^^^^^^^^^^^^^^^
+=====================
 
 :index:`Environment variables <environment variables>` are a set of dynamic named values that can affect the way running processes will behave on a computer.
 
 $HOME
-"""""
+-----
 
 Contains the location of the user's home directory. Although the current user's home directory can also be found out through the 
 C functions ``getpwuid`` and ``getuid,`` :index:`$HOME` is often used for convenience in various shell scripts (and other contexts).
@@ -767,23 +790,23 @@ C functions ``getpwuid`` and ``getuid,`` :index:`$HOME` is often used for conven
 .. note:: Do not change this variable unless you have a good reason and you know what you are doing!
 
 $PATH
-"""""
+-----
 
 :index:`$PATH` contains a colon-separated list of directories that the shell searches for commands that do not contain a slash in their name 
 (commands with slashes are interpreted as file names to execute, and the shell attempts to execute the files directly).
 
 $PAGER
-""""""
+------
 
 The :index:`$PAGER` variable contains the path to the program used to list the contents of files through (such :index:`as <less>` ``less`` :index:`or <more>` ``more``).
 
 $PWD
-""""
+----
 
 The :index:`$PWD` variable points to the current directory. Equivalent to the output of the command ``pwd`` when called without arguments.
 
-Displaying environment variables:
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Displaying environment variables
+--------------------------------
 
 :index:`Use <environment variables; display>` ``echo`` to :index:`display <echo>` individual variables `set`` :index:`or <env>` ``env`` to view all at once:
 
@@ -796,8 +819,8 @@ Displaying environment variables:
   > env
   ...
 
-Setting an environment variable:
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Setting an environment variable
+-------------------------------
 
 Use ``export`` followed by the variable name and the value of the variable (separated by the equal sign) to :index:`set <environment variables; set, set, export>` an environment variable:
 
