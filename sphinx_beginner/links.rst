@@ -15,6 +15,8 @@ Links
   `Linux Standard Base <http://www.linuxfoundation.org/collaborate/workgroups/lsb>`_ [#l7]_
 - `Unix commands applied to bioinformatics <http://rous.mit.edu/index.php/Unix_commands_applied_to_bioinformatic>`_ [#l8]_
 - `BioPieces <http://code.google.com/p/biopieces>`_ [#l9]_
+- `Google shell style guide <http://google-styleguide.googlecode.com/svn/trunk/shell.xml>`_ [#20]_
+- `Bioinformatics One-Liners <https://github.com/stephenturner/oneliners>`_ [#21]_
 
 
 
@@ -82,6 +84,8 @@ of the BioInformatics Center (BIC), National University of Singapore (NUS).
  .. [#l7] `http://www.linuxfoundation.org/collaborate/workgroups/lsb <http://www.linuxfoundation.org/collaborate/workgroups/lsb>`_
  .. [#l8] `http://rous.mit.edu/index.php/Unix_commands_applied_to_bioinformatic <http://rous.mit.edu/index.php/Unix_commands_applied_to_bioinformatic>`_
  .. [#l9] `http://code.google.com/p/biopieces <http://code.google.com/p/biopieces>`_
+ .. [#20] `http://google-styleguide.googlecode.com/svn/trunk/shell.xml <http://google-styleguide.googlecode.com/svn/trunk/shell.xml>`_
+ .. [#21] `https://github.com/stephenturner/oneliners <https://github.com/stephenturner/oneliners>`_
 
  .. [#c1] `http://fedoraproject.org/wiki/FedoraLiveCD <http://fedoraproject.org/wiki/FedoraLiveCD>`_
  .. [#c2] `http://knopper.net/knoppix  <http://knopper.net/knoppix>`_
