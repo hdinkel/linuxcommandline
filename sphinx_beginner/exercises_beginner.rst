@@ -27,7 +27,7 @@ Permissions
 #. Create a directory called testpermissions
 #. Change your working directory to testpermissions
 #. Create a directory called adir.
-#. Use the command “which date” to find out where the date program is located.
+#. Use the command ``which date`` to find out where the date program is located.
 #. Copy this date program into the directory adir.
 #. Check the permissions of the copied program date
 #. Change the permissions on date to remove the executable permissions.
@@ -46,10 +46,12 @@ Remote access
 #. Use exit to quit the remote shell (Beware to not exit your local shell)
 #. Use clear to empty the screen after logout from the remote server
 #. Use the following commands locally as well as on the remote machine to get a feeling for the different machines:
-   a) ``hostname``
-   b) ``whoami``
-   c) ``cat /etc/hostname``
-   d) ``ls -la ~/``
+
+  a) ``hostname``
+  b) ``whoami``
+  c) ``cat /etc/hostname``
+  d) ``ls -la ~/``
+
 #. Copy the file ``/etc/motd`` from machine sub-master.embl.de into your local home directory
 #. Determine the filetype and the permissions of the file that you just copied
 #. Login to your neighbor's machine (ask him for the hostname) using the username ``teach01`` (password will be given by teacher)
@@ -60,9 +62,9 @@ IO and Redirections
 #. Inspect the file to make sure it contains (only a single line with) the date.
 #. Use ``date`` again to append the current date into the same file.
 #. Again, check that this file now contains two lines with dates.
-#. Use ``grep`` to filter out lines containing the term “TITLE” from all PDB files in the exercises directory and use redirection to insert them into a new file pdb_titles.txt.
+#. Use ``grep`` to filter out lines containing the term "TITLE" from all PDB files in the exercises directory and use redirection to insert them into a new file pdb_titles.txt.
 #. (OPTIONAL) Upon inspection of the file pdb_titles.txt, you see that it also contains the names of the files in which the term was found. 
-   Use either the grep manpage or ``grep –help`` to find out how you can suppress this behaviour. 
+   Use either the grep manpage or ``grep --help`` to find out how you can suppress this behaviour. 
    Redo the previous exercise such that the output file pdb_titles.txt only contains lines starting with TITLE.
 
  
