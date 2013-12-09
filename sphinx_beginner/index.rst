@@ -6,18 +6,14 @@
 Welcome to Introduction to the Linux Commandline's documentation!
 =================================================================
 
-Contents:
 
 .. toctree::
 
    Introduction <introduction>
+   Exercises <exercises_beginner>
+   Solutions <solutions_beginner>
    Links <links>
    About Bio-IT <about_bioit>
    Acknowlegments <acknowledgments>
 
 
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`search`

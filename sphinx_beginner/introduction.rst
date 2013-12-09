@@ -482,6 +482,8 @@ head – Print first lines of a textfile
 tail – Print last lines of a textfile
 -------------------------------------
 
+The :index:`tail` utility displays the contents of file or, by default, its standard input, to the standard output.
+
 **Usage**:  ``tail [options] file(s)``
 
  :: 
