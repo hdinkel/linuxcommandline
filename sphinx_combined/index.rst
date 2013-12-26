@@ -6,12 +6,13 @@
 EMBL Linux Course 
 ==================
 
-Contents:
+.. Contents:
 
 .. toctree::
 
    Introduction <introduction>
    Exercises Beginner <exercises_beginner>
+   Solutions Beginner <solutions_beginner>
    Commandline Tools <commandlinetools>
    I/O Redirection <redirection>
    Variables <variables>  

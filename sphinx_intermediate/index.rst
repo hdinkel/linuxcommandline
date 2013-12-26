@@ -19,8 +19,8 @@ Intermediate Linux Course: Commandline and Basic Scripting
 ..   Exercises <exercises>
 
 
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`search`
+.. Indices and tables
+.. ==================
+.. 
+.. * :ref:`genindex`
+.. * :ref:`search`

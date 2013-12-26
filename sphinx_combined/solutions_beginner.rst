@@ -1,0 +1,1 @@
+../sphinx_beginner/solutions_beginner.rst
