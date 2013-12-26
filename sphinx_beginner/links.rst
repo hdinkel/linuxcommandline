@@ -1,5 +1,5 @@
 
-Links and Further Informations
+Links and Further Information
 ------------------------------
 
 Links 

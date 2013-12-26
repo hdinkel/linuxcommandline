@@ -10,7 +10,7 @@ GZIP
 ^^^^
 :index:`gzip <gzip>` is a compression/decompression tool.
 When used on a file (without any parameters) it will compress it and replace the
-file by a compressed version with the extension ‘.gz’ attached:
+file by a compressed version with the extension '.gz' attached:
 
  ::
 
@@ -30,7 +30,7 @@ To revert this / to uncompress, use the parameter ``-d``:
   # ls textfile*
    textfile
  
-.. note:: As a convenience, on most Linux systems, a shellscript named ``gunzip`` exists which simply calls ``gzip –d``
+.. note:: As a convenience, on most Linux systems, a shellscript named ``gunzip`` exists which simply calls ``gzip -d``
 
 
 
@@ -62,9 +62,9 @@ Option:  Effect:
 -f       filename filename of the archive
 =======  ===================================
 
-.. note:: Don’t forget to specify the target filename. 
-          It needs to follow the ``–f`` parameter. Although you can combine options like such: ``tar –czf archive.tar`` 
-          the order matters, so ``tar –cfz archive.tar`` will *not* do what you want...
+.. note:: Don't forget to specify the target filename. 
+          It needs to follow the ``-f`` parameter. Although you can combine options like such: ``tar -czf archive.tar`` 
+          the order matters, so ``tar -cfz archive.tar`` will *not* do what you want...
 
 
 
@@ -127,18 +127,18 @@ Option:  Effect:
 -c       Print count of matching lines for each file
 =======  ===================================
 
-Count the number of fasta sequences (they start with a “>”) in a file:
+Count the number of fasta sequences (they start with a ">") in a file:
 
  ::
 
-  # grep –c '>' twofiles.fasta
+  # grep -c '>' twofiles.fasta
    2
 
-List all files containing the term “Ensembl”:
+List all files containing the term "Ensembl":
 
  ::
 
-  # grep –l Ensembl *.txt
+  # grep -l Ensembl *.txt
    P04062.txt
    P12931.txt
 
@@ -147,37 +147,37 @@ SED
 
 ``sed`` is a Stream EDitor, it modifies text (text can be a file or a pipe) on the fly.
 
-*Usage*: ‘``sed command file``’,
+*Usage*: '``sed command file``',
 
 The most common usecases are:
 
 ===========================================  =====================
 Usecase                                      Command:
 ===========================================  =====================
-Substitute TEXT by REPLACEMENT:              ‘s/TEXT/REPLACEMENT/’
-Transliterate the characters x a, and y b:   ‘y/xy/ab/’
-Print lines containing PATTERN:              ‘/PATTERN/p’
-Delete lines containing PATTERN:             ‘/PATTERN/d’
+Substitute TEXT by REPLACEMENT:              's/TEXT/REPLACEMENT/'
+Transliterate the characters x a, and y b:   'y/xy/ab/'
+Print lines containing PATTERN:              '/PATTERN/p'
+Delete lines containing PATTERN:             '/PATTERN/d'
 ===========================================  =====================
 
 
 
  ::
 
-  # echo “This is text.” | sed 's/text/replaced stuff/’
+  # echo "This is text." | sed 's/text/replaced stuff/'
    This is replaced stuff.
 
 By default, text substitution are performed only once per line. You need to add a
-trailing ‘g’ option, to make the substitution ‘global’ (‘s/TEXT/REPLACEMENT/g’),
+trailing 'g' option, to make the substitution 'global' ('s/TEXT/REPLACEMENT/g'),
 meaning all occurrences in a line are substituted (not just the first in each line).
 Note the difference:
 
  ::
 
-  # echo “ACCAAGCATTGGAGGAATATCGTAGGTAAA” | sed ‘s/A/_/’
+  # echo "ACCAAGCATTGGAGGAATATCGTAGGTAAA" | sed 's/A/_/'
    _CCAAGCATTGGAGGAATATCGTAGGTAAA
 
-  # echo “ACCAAGCATTGGAGGAATATCGTAGGTAAA” | sed ‘s/A/_/g’
+  # echo "ACCAAGCATTGGAGGAATATCGTAGGTAAA" | sed 's/A/_/g'
    _CC__GC_TTGG_GG__T_TCGT_GGT___
  
 When used on a file, sed prints the file to standard output, replacing text as it goes
@@ -185,16 +185,16 @@ along:
 
  ::
 
-  # echo “This is text” > textfile
-  # echo “This is even more text” >> textfile
+  # echo "This is text" > textfile
+  # echo "This is even more text" >> textfile
   # sed 's/text/stuff/' textfile
    This is stuff
    This is even more stuff
 
 sed can also be used to print certain lines (not replacing text) that match a pattern.
-For this you leave out the leading ‘s’ and just provide a pattern: ‘/PATTERN/p’. The
+For this you leave out the leading 's' and just provide a pattern: '/PATTERN/p'. The
 trailing letter determines, what sed should do with the text that matches the pattern
-(‘p’: print, ‘d’: delete)
+('p': print, 'd': delete)
 
  ::
 
@@ -204,7 +204,7 @@ trailing letter determines, what sed should do with the text that matches the pa
    This is even more text
 
 As sed by default prints each line, you see the line that matched the pattern,
-printed twice. Use option ‘-n’ to suppress default printing of lines.
+printed twice. Use option '-n' to suppress default printing of lines.
 
  ::
 
@@ -219,23 +219,23 @@ Delete lines matching the pattern:
    This is text
 
 Multiple sed statements can be applied to the same input stream by prepending
-each by option ‘-e’ (edit):
+each by option '-e' (edit):
 
  ::
 
-  # sed -e 's/text/good stuff/' -e ’s/This/That/’ textfile
+  # sed -e 's/text/good stuff/' -e 's/This/That/' textfile
    That is good stuff
    That is even more good stuff
 
 Normally, sed prints the text from a file to standard output. But you can also edit
-files in place. Be careful - this will change the file! The ‘-i’ (in-place editing) won’t
+files in place. Be careful - this will change the file! The '-i' (in-place editing) won't
 print the output. As a safety measure, this option will ask for an extension that will
-be used to rename the original file to. For instance, the following option ‘-i.bak’
+be used to rename the original file to. For instance, the following option '-i.bak'
 will edit the file and rename the original file to textfile.bak:
 
  ::
 
-  # sed –i.bak 's/text/stuff/' textfile
+  # sed -i.bak 's/text/stuff/' textfile
   # cat textfile
    This is stuff
    This is even more stuff
@@ -248,7 +248,7 @@ AWK
 ^^^
 
 awk is more than just a command, it is a complete text processing language (the
-name is an abbreviation of the author’s names).
+name is an abbreviation of the author's names).
 Each line of the input (file or pipe) is treated as a record and is broken into fields.
 Generally, awk commands are of the form: `` awk condition { action }``, where:
 
@@ -273,18 +273,18 @@ So an easy way to print or rearrange columns of text is:
 
  ::
 
-  # echo “Bob likes Sue“ | awk ‘{print $3, $2, $1}’
+  # echo "Bob likes Sue" | awk '{print $3, $2, $1}'
    Sue likes Bob
 
-  # echo “Master Obi-Wan has lost a planet“ | awk ‘{print $4,$5,$6,$1,$2,$3}’
+  # echo "Master Obi-Wan has lost a planet" | awk '{print $4,$5,$6,$1,$2,$3}'
    lost a planet Master Obi-Wan has
 
-awk splits text by default on whitespace (spaces or tabs), which might not be ideal in all situations. To change the field separator (FS), use option ‘-F’
+awk splits text by default on whitespace (spaces or tabs), which might not be ideal in all situations. To change the field separator (FS), use option '-F'
 (remember to quote the field separator):
 
  ::
 
-  # echo “field1,field2,field2“ | awk -F’,’ ‘{print $2, $1}’
+  # echo "field1,field2,field2" | awk -F',' '{print $2, $1}'
    field2 field1
 
 Note two things here: First, the field separator is not printed, and second, if you
@@ -293,7 +293,7 @@ by a comma or they will be catenated together...
 
  ::
 
-  # echo “field1,field2,field2“ | awk -F’,’ ‘{print $1 $2 $3}’
+  # echo "field1,field2,field2" | awk -F',' '{print $1 $2 $3}'
    field1field2field3
 
 You can also combine the pattern matching and the column selection techniques:
@@ -305,20 +305,20 @@ You can also combine the pattern matching and the column selection techniques:
 
 awk really is powerful in filtering out columns, you can for instance print only
 certain columns of certain lines. Here we print the third column of those lines
-where the fourth column is ‘more’:
+where the fourth column is 'more':
 
  ::
 
-  # awk '$4==”more” {print $3}' textfile
+  # awk '$4=="more" {print $3}' textfile
    even
 
-Note the double equal signs “==” to check for equality and note the quotes around
-“more”.
-If you want to match a field, but not exactly, you can use ‘~’ instead of ‘==’:
+Note the double equal signs "==" to check for equality and note the quotes around
+"more".
+If you want to match a field, but not exactly, you can use '~' instead of '==':
 
  ::
 
-  # awk '$4~”ore” {print $3}' textfile
+  # awk '$4~"ore" {print $3}' textfile
    even
 
 
@@ -334,7 +334,7 @@ individually. In order to tell the computer that certain words belong together, 
 "quote" them, using either single (') or double (") quotes. The difference between these two is
 generally that within double quotes, variables will be expanded, while everything within
 single quotes is treated as string literal.
-When setting a variable, it doesn’t matter which quotes you use:
+When setting a variable, it doesn't matter which quotes you use:
 
 
  ::
@@ -401,5 +401,5 @@ You already learned how to expand a variable such that its value is used instead
   # echo "the \$MYVAR variable is $MYVAR"
    the $MYVAR variable is 123
 
-.. note:: The “escape character” is usually the backslash "``\``".
+.. note:: The "escape character" is usually the backslash "``\``".
 

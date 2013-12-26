@@ -77,8 +77,8 @@ Make your script easily readable. Use comments and whitespace and avoid super co
 but hard to understand command lines. Always take into account that not only the shell,
 but also human beings will probably have to read and understand your script.
 (see :ref:`Breaking up long lines<breaking_up_long_lines>`)
-Even if your script is very simple – document it! This helps others understand what you did,
-but – most important – it helps you remember what you did, when you have to reuse the
+Even if your script is very simple - document it! This helps others understand what you did,
+but - most important - it helps you remember what you did, when you have to reuse the
 script in the future.
 
 Documentation is done either by writing comments into the script or by creating a special documentation file (README.txt or similar). Documenting in the script can be done in several ways:
@@ -86,9 +86,9 @@ Documentation is done either by writing comments into the script or by creating 
 #. A preamble in the script, outlining the purpose, parameters and variables of the script as well
    as some information about authorship and and perhaps changes.
 
-#. Within the script as blocks of text or “End of line” comments.
+#. Within the script as blocks of text or "End of line" comments.
 
-To write a comments use the hash sign (“`#`”). Everything after a “`#`” is ignored when executing a script.
+To write a comments use the hash sign ("`#`"). Everything after a "`#`" is ignored when executing a script.
 
 Let's have a look at the following script, breaking it down into individual parts.
 First, the full script:
@@ -399,8 +399,8 @@ or::
 case
 ''''
 
-The `:index:case <case>`  statement implements a more compact and better readable form of if –
-`:index:elif <elif>`  – elif – elif etc. Use this if your variable (and you can only check for
+The :index:`case <case>`  statement implements a more compact and better readable form of if -
+:index:`elif <elif>`  - elif - elif etc. Use this if your variable (and you can only check for
 variables with case) can have a distinct number of valid values. A typical
 usage of case will follow later.
 
@@ -415,7 +415,7 @@ sh/bash: ::
      pattern2)
        commands
        ;;
-     […]
+     [...]
      *)
        commands
        ;;
@@ -435,11 +435,11 @@ sh/bash: ::
        commands
    endsw
 
-.. Note:: “*”, “?” and “[...]” can be used for the :index:`patterns <pattern>`
+.. Note:: "*", "?" and "[...]" can be used for the :index:`patterns <pattern>`
 
-.. Note:: The \*) (sh/bash) and default: (csh/tcsh) patterns are ”catch-all” patterns which match everything not matched above. It is often used to detect invalid values of variable.
+.. Note:: The \*) (sh/bash) and default: (csh/tcsh) patterns are "catch-all" patterns which match everything not matched above. It is often used to detect invalid values of variable.
 
-.. Note:: Multiple patterns can be handled by separating them with “|” in sh/bash or by successive case statements in csh/tcsh.
+.. Note:: Multiple patterns can be handled by separating them with "|" in sh/bash or by successive case statements in csh/tcsh.
 
 
 
@@ -451,7 +451,7 @@ Example:
          echo /opt/ or /usr/ paths found in \$PATH
          ;;
       *)
-         echo ‘/opt and /usr are not contained in $PATH’
+         echo '/opt and /usr are not contained in $PATH'
          ;;
      esac
 
@@ -486,12 +486,12 @@ Examples:
 
      for FILE in /tmp/*
      do
-       echo “ * $FILE”
+       echo " * $FILE"
      done
      or
      for FILE in `ls /tmp`
      do
-       echo “ * $FILE”
+       echo " * $FILE"
      done
 
 while / until
@@ -525,12 +525,12 @@ The conditions are constructed the same way as those used in if statements.
 
 .. Note:: :index:`until <until>` is not available in csh/tcsh
 
-“Manual” loop control
+"Manual" loop control
 '''''''''''''''''''''
 
 Instead of (or additionally to) the built-in loop control in for/foreach, :index:`while <while>` and
-:index:`until <until>`  loops, you can control exiting and continuing them with “``break``” and
-“``continue``”: break “``breaks out``” of the innermost loop (loops can be nested!) and continues
+:index:`until <until>`  loops, you can control exiting and continuing them with "``break``" and
+"``continue``": break "``breaks out``" of the innermost loop (loops can be nested!) and continues
 after the end of the loop. ``continue`` skips the rest of the current (innermost) loop and starts
 the next iteration
 
@@ -549,15 +549,15 @@ options and arguments.
 Configurable Scripts
 ^^^^^^^^^^^^^^^^^^^^
 
-Any value – be it paths, commands or options – that is specific to individual
-applications or your script, should not be “hardcoded” (i.e. used literally
+Any value - be it paths, commands or options - that is specific to individual
+applications or your script, should not be "hardcoded" (i.e. used literally
 within the script) but assigned to variables:
 
 Using Variables
 """""""""""""""
 
-Any value – be it paths, commands or options – that is specific to individual
-applications or your script, should not be “hardcoded” (i.e. used literally
+Any value - be it paths, commands or options - that is specific to individual
+applications or your script, should not be "hardcoded" (i.e. used literally
 within the script) but assigned to variables:
 
 Bad example:
@@ -565,7 +565,7 @@ You have to change two instances of the path each time you want to list an other
 
     #!/bin/sh
 
-    echo “The directory /etc contains the following files:”
+    echo "The directory /etc contains the following files:"
     ls /etc
 
 Good example:
@@ -575,16 +575,16 @@ The path is now in a variable and only one instance has to be changed each time 
 
     MYDIR=/etc
 
-    echo “The directory $MYDIR contains the following files:”
+    echo "The directory $MYDIR contains the following files:"
     ls $MYDIR
 
-Of course, you’ll still have to modify the script each time you want to list the content of an other directory. A more flexible way of customization would be to use a settings file.
+Of course, you'll still have to modify the script each time you want to list the content of an other directory. A more flexible way of customization would be to use a settings file.
 
 Using a Settings File
 ^^^^^^^^^^^^^^^^^^^^^
 
 Instead of having your configurable section within the script, it can be
-“outsourced” in its own file. This file is basically a shellscript which is run
+"outsourced" in its own file. This file is basically a shellscript which is run
 within the primary script. To run commands from a file within the current
 environment, the commands source (bash, csh/tcsh) or . (dot) (sh/bash) are
 used:
@@ -599,7 +599,7 @@ The script: ::
 
     . ./settings.ini
 
-    echo “The directory $MYDIR contains the following files:”
+    echo "The directory $MYDIR contains the following files:"
     ls $MYDIR
 
 
@@ -618,9 +618,9 @@ $1, $2, $3, etc:
 $#:
         Current number of positional parameters
 $*:
-        All positional parameters. If used within double quotes (“$*”), then it will expand to the list of all positional parameters, where the complete list is quoted
+        All positional parameters. If used within double quotes ("$*"), then it will expand to the list of all positional parameters, where the complete list is quoted
 $@:
-        All positional parameters. If used within double quotes (“$@”), then it will expand to the list of all positional parameters, where each parameter is individually quoted
+        All positional parameters. If used within double quotes ("$@"), then it will expand to the list of all positional parameters, where each parameter is individually quoted
 
 .. image:: _static/arguments.png
 
@@ -632,7 +632,7 @@ If you run the script ::
     echo The first commandline option is $1
     echo The second commandline option is $2
 
-with two arguments, you’ll get the following output: ::
+with two arguments, you'll get the following output: ::
 
     # ./script.sh ABC DEF
     The script is ./script.sh
@@ -640,20 +640,20 @@ with two arguments, you’ll get the following output: ::
     The second commandline option is DEF
     #
 
-In many cases you’ll not know how many parameters are given on the commandline.
+In many cases you'll not know how many parameters are given on the commandline.
 In these cases you can use shift to loop through them. shift removes $1 and
 moves all other positional parameters one position to the right: $2 becomes $1,
 $3 becomes $2 etc.:
 
 .. image:: _static/shift_arguments.png
 
-With the help of $#, :index:`shift <shift>`, `:index:case <case>`  and the positional parameters we can now check
+With the help of $#, :index:`shift <shift>`, :index:`case <case>`  and the positional parameters we can now check
 all the commandline parameters: ::
 
     while [ "$#" -gt 0 ]
     do
       case $1 in
-        -h) echo “Sorry, no help available!”  # not very helpful, is it?
+        -h) echo "Sorry, no help available!"  # not very helpful, is it?
             exit 1                            # exit with error
             ;;
 
@@ -665,7 +665,7 @@ all the commandline parameters: ::
                                               # additional argument
             ;;
 
-        *)  echo “Wrong parameter!”
+        *)  echo "Wrong parameter!"
             exit 1                            # exit with error
       esac
       shift
@@ -675,10 +675,10 @@ all the commandline parameters: ::
 Ensuring a Sensible Exit Status
 *******************************
 
-If you don’t provide your own exit status, then the script will return the exit
+If you don't provide your own exit status, then the script will return the exit
 status of the last executed command (See :ref:`Reporting Success or Failure - The Exit Status<reporting_success_or_failure>`).
 In many cases this might be what you want, but very
-often it isn’t. Consider the following script which is a real example from real
+often it isn't. Consider the following script which is a real example from real
 life and happened to me personally: ::
 
     #!/bin/sh
@@ -688,11 +688,11 @@ life and happened to me personally: ::
     echo "End of the script"
 
 This script will *always* succeed, as the echo command hardly ever fails. You
-will – from the exit status of the script – never be able to detect that
+will - from the exit status of the script - never be able to detect that
 something went wrong. Instead in such cases you should manually handle the exit
 codes of the commands that are run within the script.
 
-With it’s help we can keep track of the exit stati of all our important
+With it's help we can keep track of the exit stati of all our important
 processing steps and finally return a sensible value: ::
 
     #!/bin/sh
@@ -714,13 +714,13 @@ processing steps and finally return a sensible value: ::
 Why is the exit status important after all?
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-First when you use your script within other scripts, you’ll probably need to be
+First when you use your script within other scripts, you'll probably need to be
 able to check, if it has succeeded.  There might be other ways (e.g. checking
 outputfiles for certain strings, checking directly the textual output of the
 script etc.), but these ways are usually cumbersome and require lots of coding.
 Exit values are easy to check.
 Second: Other tools and systems might also use the exit status of your script.
-E.g. the cluster system uses your job’s exit status to assess, if it has run
+E.g. the cluster system uses your job's exit status to assess, if it has run
 successfully or not.  Returning success even in case of failure will result in
 lots of complications in case a problem occurs. It took me several days to
 realize the bug above.
@@ -732,7 +732,7 @@ Combining Variables with other Strings
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 When combining variables with other strings, then in some situations the
-variable name must be placed in curly brackets (“{}”): ::
+variable name must be placed in curly brackets ("{}"): ::
 
     # A=Heidel
     # echo $Aberg
@@ -744,11 +744,11 @@ variable name must be placed in curly brackets (“{}”): ::
 Filenames and Paths
 ^^^^^^^^^^^^^^^^^^^
 
-If possible, try to avoid any special characters (blanks, semicolons (“;”),
-colons (“:”), backslashes (“\”) etc.) in file and directory names.  All these
+If possible, try to avoid any special characters (blanks, semicolons (";"),
+colons (":"), backslashes ("\") etc.) in file and directory names.  All these
 special characters can lead to problems in scripted processing.  Instead, stick
-to alphanumeric characters (a-z, 0-9), dots (“.”), dashes (“-“) and underscores
-(“_”).  Additionally sticking to lowercase characters helps avoiding mistypes
+to alphanumeric characters (a-z, 0-9), dots ("."), dashes ("-") and underscores
+("_").  Additionally sticking to lowercase characters helps avoiding mistypes
 and makes the automatic filename expansion easier.
 
 .. _breaking_up_long_lines:
@@ -756,11 +756,11 @@ Breaking up Long Code Lines
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Code lines can become pretty long and unreadable, wrapping onto the next line
-etc.  You can use the escape character (backslash, “\”) to break them up and
+etc.  You can use the escape character (backslash, "\") to break them up and
 enhance readability of your script.  The excape character must immediately be
 followed by a newline (no intermediate blanks or other is allowed): ::
 
-    # bsub -o output.log -e error.log -q clngnew -M 150000 –R "select[(mem > 15000)]" /g/software/bin/pymol-1.4 –r –p < pymol.pml
+    # bsub -o output.log -e error.log -q clngnew -M 150000 -R "select[(mem > 15000)]" /g/software/bin/pymol-1.4 -r -p < pymol.pml
 
 becomes: ::
 
@@ -768,25 +768,25 @@ becomes: ::
            -e error.log \
            -q clngnew \
            -M 150000 \
-           –R "select[(mem > 15000)]" \
-        /g/software/bin/pymol-1.4 –r –p < pymol.pml
+           -R "select[(mem > 15000)]" \
+        /g/software/bin/pymol-1.4 -r -p < pymol.pml
 
 Which is way better to read and to maintain
 
 Script Debugging
 ^^^^^^^^^^^^^^^^
 
-sh/bash and csh/tcsh have both an option “-x” which helps debugging a script by
+sh/bash and csh/tcsh have both an option "-x" which helps debugging a script by
 echoing each command before executing it.  This option can be set and unset
-during runtime with set –x / set +x (sh/bash) and set echo / unset echo
+during runtime with set -x / set +x (sh/bash) and set echo / unset echo
 (csh/tcsh).
 
 Command Substitution
 ^^^^^^^^^^^^^^^^^^^^
 
 You can use the output of a command and assign it to a variable or use it right
-away as text string, by using the command substitution operators “`”
-(backticks, backquotes) or “$(…)”. The backtick operator works in all shells,
+away as text string, by using the command substitution operators "`"
+(backticks, backquotes) or "$(...)". The backtick operator works in all shells,
 while $(...) only works in bash.
 
 Three variants for the same (print out who you are in English text): ::
@@ -819,20 +819,20 @@ Cleaning up Temporary Files
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 It is considered good practice and sometimes even important, to clean up
-temporary data before ending a script. A simple way – which will not cover all
-cases, though – could be to store all created temporary files in a variable and
+temporary data before ending a script. A simple way - which will not cover all
+cases, though - could be to store all created temporary files in a variable and
 remove them all before exiting the script: ::
 
     #! /bin/sh
-    ALL_TEMPFILES=””     # store a list of all temporary files here
+    ALL_TEMPFILES=""     # store a list of all temporary files here
 
     TEMPFILE1=`mktemp`
-    ALL_TEMPFILES=”$ALL_TEMPFILES $TEMPFILE1”
+    ALL_TEMPFILES="$ALL_TEMPFILES $TEMPFILE1"
 
     TEMPFILE2=`mktemp`
-    ALL_TEMPFILES=”$ALL_TEMPFILES $TEMPFILE2”
+    ALL_TEMPFILES="$ALL_TEMPFILES $TEMPFILE2"
 
     [... process, process, process ...]
 
-    rm –f $ALL_TEMPFILES
+    rm -f $ALL_TEMPFILES
     exit

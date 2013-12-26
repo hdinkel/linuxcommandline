@@ -1,13 +1,13 @@
 I/O Redirection 
 ================
 
-Three IO “channels” are available by default:
+Three IO "channels" are available by default:
 
 - **Standard input (STDIN, Number: 0)**: The input for your program, normally your keyboard but can be an other program (when using pipes or IO redirection)
 - **Standard output (STDOUT, Number: 1)**: Where your program writes its regular output to. Normally your terminal
 - **Standard error (STDERR, Number: 2)**: Where your programs normally write their error message to. Normally your terminal
 
-Input, output and error messages can be redirected from their default “targets” to others.  If using the file descriptor numbers (0, 1, 2) in redirections, then
+Input, output and error messages can be redirected from their default "targets" to others.  If using the file descriptor numbers (0, 1, 2) in redirections, then
 there must be no whitespace between the numbers and the redirection operators.
 
 .. note:: Redirect to ``/dev/null`` to discard the output of any command

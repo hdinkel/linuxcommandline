@@ -67,3 +67,4 @@ sphinx_combined/_build/latex/sphinxhowto.cls
 sphinx_combined/_build/latex/sphinxmanual.cls
 sphinx_combined/_build/latex/tabulary.sty
 sphinx_combined/_build/latex/*.png
+Intermediate/sphinx_intermediate/_build
