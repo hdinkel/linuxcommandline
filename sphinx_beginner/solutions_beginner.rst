@@ -71,31 +71,31 @@ Permissions
 
 #. Use the command ``which date`` to find out where the date program is located. ::
 
-   $ which date
-   /bin/date
+    $ which date
+    /bin/date
 
 #. Copy this date program into the directory adir. ::
 
-   $ cp /bin/date adir/
+    $ cp /bin/date adir/
 
 #. Check the permissions of the copied program date ::
 
-   $ ls -lh adir/date
-   -r-xr-xr-x  1 dinkel  staff    79K  9 Dec 13:47 date*
+    $ ls -lh adir/date
+    -r-xr-xr-x  1 dinkel  staff    79K  9 Dec 13:47 date*
 
 #. Change the permissions on date to remove the executable permissions. ::
 
-   $ chmod a-x adir/date
+    $ chmod a-x adir/date
 
 #. Check the permissions of the program date ::
-
-   $ ls -lh adir/date
-   -r--r--r--  1 dinkel  staff    79K  9 Dec 13:47 date*
+ 
+    $ ls -lh adir/date
+    -r--r--r--  1 dinkel  staff    79K  9 Dec 13:47 date*
 
 #. Try running it as ``./date`` or ``adir/date`` (depending on your current working directory) ::
 
-   $ adir/date
-   permission denied
+    $ adir/date
+    permission denied
 
 #. Change the permissions back so that the file is executable. ::
 
@@ -103,13 +103,13 @@ Permissions
 
 #. Try running it as ``./date`` or ``adir/date`` (depending on your current working directory) ::
 
-   $ adir/date
-   Mon Dec  9 13:50:12 CET 2013
+    $ adir/date
+    Mon Dec  9 13:50:12 CET 2013
 
 #. Copy a textfile from a previos exercise into adir, then change the permissions, so you are not allowed to write to it. ::
 
-   $ cp /exercises/SRC_HUMAN.fasta adir
-   $ chmod u-w adir/SRC_HUMAN.fasta
+    $ cp /exercises/SRC_HUMAN.fasta adir
+    $ chmod u-w adir/SRC_HUMAN.fasta
 
 #. Then change the permissions so you can't read/cat it either. ::
 
@@ -117,8 +117,8 @@ Permissions
 
 #. Change your working directory to testpermissions, and then try changing the permissions on the directory adir to non-executable. ::
 
-   $ # we don't need to change directory, because we still are in the directory testpermissions
-   $ chmod a-x adir
+    $ # we don't need to change directory, because we still are in the directory testpermissions
+    $ chmod a-x adir
 
 #. What are the minimum permissions (on the directory) necessary for you to be able to execute ``adir/date``? ::
 
@@ -141,25 +141,28 @@ Remote access
 
 #. Use the following commands locally as well as on the remote machine to get a feeling for the different machines: ::
 
-  a) ``hostname``
-  b) ``whoami``
-  c) ``cat /etc/hostname``
-  d) ``ls -la ~/``
+    A) ``hostname``
+ 
+    B) ``whoami``
+ 
+    C) ``cat /etc/hostname``
+ 
+    D) ``ls -la ~/``
 
 #. Copy the file ``/etc/motd`` from machine sub-master.embl.de into your local home directory (using scp) ::
 
-   $ scp sub-master.embl.de:/etc/motd ~/
+    $ scp sub-master.embl.de:/etc/motd ~/
 
 #. Determine the filetype and the permissions of the file that you just copied ::
 
-   $ file ~/motd
-   ~/motd: ASCII text
+    $ file ~/motd
+    ~/motd: ASCII text
 
    $ ls -l ~/motd
 
 #. Login to your neighbor's machine (ask him for the hostname) using the username ``teach01`` (password will be given by your teacher) ::
 
-   $ ssh teach01@hostname
+    $ ssh teach01@hostname
 
 
 IO and Redirections
@@ -185,11 +188,12 @@ IO and Redirections
    $ grep TITLE /exercises/*.pdb > pdb_titles.txt
 
 #. (OPTIONAL) Upon inspection of the file pdb_titles.txt, you see that it also contains the names of the files in which the term was found. 
-   a) Use either the grep manpage or ``grep --help`` to find out how you can suppress this behaviour.  ::
+
+   A. Use either the grep manpage or ``grep --help`` to find out how you can suppress this behaviour.  ::
 
       $ grep -h TITLE /exercises/*.pdb > pdb_titles.txt
 
-   b) Redo the previous exercise such that the output file pdb_titles.txt only contains lines starting with TITLE. ::
+   B. Redo the previous exercise such that the output file pdb_titles.txt only contains lines starting with TITLE. ::
 
       $ grep -h "^TITLE" /exercises/*.pdb > pdb_titles.txt
 

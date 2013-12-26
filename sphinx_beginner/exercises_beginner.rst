@@ -10,9 +10,12 @@ Misc. file tools
 
 #. Which tool can be used to determine the type of a file? 
 #. Use it on the following files/directories and compare the results:
-   a) ``/usr/bin/tail`` 
-   b) ``~`` 
-   c) ``/exercises/SRC_HUMAN.fasta`` 
+
+   A. ``/usr/bin/tail`` 
+
+   B. ``~`` 
+
+   C. ``/exercises/SRC_HUMAN.fasta`` 
 
 
 Searching
@@ -55,10 +58,10 @@ Remote access
 #. Use clear to empty the screen after logout from the remote server 
 #. Use the following commands locally as well as on the remote machine to get a feeling for the different machines: 
 
-  a) ``hostname``
-  b) ``whoami``
-  c) ``cat /etc/hostname``
-  d) ``ls -la ~/``
+   A. ``hostname``
+   B. ``whoami``
+   C. ``cat /etc/hostname``
+   D. ``ls -la ~/``
 
 #. Copy the file ``/etc/motd`` from machine sub-master.embl.de into your local home directory (using scp) 
 #. Determine the filetype and the permissions of the file that you just copied 
@@ -73,6 +76,8 @@ IO and Redirections
 #. Again, check that this file now contains two lines with dates. 
 #. Use ``grep`` to filter out lines containing the term "TITLE" from all PDB files in the exercises directory and use redirection to insert them into a new file pdb_titles.txt. 
 #. (OPTIONAL) Upon inspection of the file pdb_titles.txt, you see that it also contains the names of the files in which the term was found. 
-   a) Use either the grep manpage or ``grep --help`` to find out how you can suppress this behaviour.  
-   b) Redo the previous exercise such that the output file pdb_titles.txt only contains lines starting with TITLE. 
+
+   A. Use either the grep manpage or ``grep --help`` to find out how you can suppress this behaviour.  
+
+   B. Redo the previous exercise such that the output file pdb_titles.txt only contains lines starting with TITLE. 
 

@@ -396,7 +396,7 @@ cat - Print files on terminal (concatenate)
   [...]
 
 
-.. note:: :index:`cat` only makes sense for short files or for e.g. combining several files into one.  See the redirection examples later.
+.. note:: The command :index:`cat` only makes sense for short files or for e.g. combining several files into one.  See the redirection examples later.
 
 
 less - View and navigate files
