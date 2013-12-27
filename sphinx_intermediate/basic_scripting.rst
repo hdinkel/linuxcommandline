@@ -1,6 +1,8 @@
+#####################
 Basic Shell Scripting
 #####################
 
+*****************
 What is a Script?
 *****************
 
@@ -523,7 +525,7 @@ The :index:`while <while>` and :index:`until <until>` loops execute your command
 
 The conditions are constructed the same way as those used in if statements.
 
-.. Note:: :index:`until <until>` is not available in csh/tcsh
+.. Note:: The :index:`until <until>` statement is not available in csh/tcsh.
 
 "Manual" loop control
 '''''''''''''''''''''
@@ -672,6 +674,7 @@ all the commandline parameters: ::
     done
 
 .. _ensuring_sensible_exit_status:
+
 Ensuring a Sensible Exit Status
 *******************************
 
@@ -752,6 +755,7 @@ to alphanumeric characters (a-z, 0-9), dots ("."), dashes ("-") and underscores
 and makes the automatic filename expansion easier.
 
 .. _breaking_up_long_lines:
+
 Breaking up Long Code Lines
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 

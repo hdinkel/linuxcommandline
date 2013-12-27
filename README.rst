@@ -35,6 +35,14 @@ the verbatim boxes; this package should be included in the TeXLive distribution.
 ToDos:
 ^^^^^^
 
+- Proper Use of sectioning:
+  # with overline, for parts
+  * with overline, for chapters
+  =, for sections
+  -, for subsections
+  ^, for subsubsections
+  ", for paragraphs
+
 - Better control of verbatim code-blocks:
 
   - distinguish user input from output (boldface?)
