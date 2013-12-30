@@ -1,10 +1,9 @@
-#####################
+*********************
 Basic Shell Scripting
-#####################
+*********************
 
-*****************
 What is a Script?
-*****************
+==================
 
 A script is nothing else than a number of shell command place together in a file. The simplest
 script is maybe just a complex oneliner that you don't want to type each time again. More
@@ -14,7 +13,7 @@ one script to be flexibly used in several different environments. Whatever you d
 can also do on the commandline. This is also the first way to test your scripts step by step!
 
 Script Naming and Organization
-""""""""""""""""""""""""""""""
+==============================
 
 It is good practice - though not technically required - to give your scripts an extension
 which specifies their type. I.e. "`.sh`" for Bourne Shell and Bourne Again Shell scripts, "`.csh`"
@@ -25,7 +24,7 @@ script.
 If you use scripts to process data, then the scripts should probably be archived together with the data files...
 
 Running a Script
-""""""""""""""""
+================
 
 There are basically three ways to run a script:
 
@@ -57,7 +56,7 @@ this case, no matter whether the script location is already contained in $PATH o
 
 
 Basic Structure of a Shellscript
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+--------------------------------
 
 Shellscripts have the following general structure:
 
@@ -73,7 +72,7 @@ Shellscripts have the following general structure:
 This is merely a recommendation to keep your scripts well structured. None of these sections are mandatory.
 
 Readability and Documentation
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-----------------------------
 
 Make your script easily readable. Use comments and whitespace and avoid super compact
 but hard to understand command lines. Always take into account that not only the shell,
@@ -142,7 +141,7 @@ Finally, ensure a valid and meaningful exit status:
 .. _reporting_success_or_failure:
 
 Reporting Success or Failure - The Exit Status
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+----------------------------------------------
 
 Commands report their success or failure by their exit status. An exit status
 of 0 (zero) indicates success, while any exit status greater then 0 indicates
@@ -159,7 +158,7 @@ how to control the exit status of your script.
 
 
 Command Grouping and Sequences
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+------------------------------
 
 Execute commands in sequence:
     Commands can be concatenated to be executed one after the other unconditionally
@@ -234,7 +233,7 @@ Group commands to create one single output stream:
          /etc
 
 Control Structures
-^^^^^^^^^^^^^^^^^^
+==================
 
 The following syntax elements will be described for sh/bash and for csh/tcsh.
 However since this course is mainly about sh/bash, examples will only be given
@@ -246,10 +245,10 @@ features might be specific to bash and not be available in a classical Bourne
 Shell on other systems.
 
 Conditional Statements
-""""""""""""""""""""""
+----------------------
 
 if - then - else:
-'''''''''''''''''
+^^^^^^^^^^^^^^^^^
 
 This is the most basic conditional statement: Do something depending on certain conditions. The basic syntax is:
 
@@ -278,11 +277,10 @@ This is the most basic conditional statement: Do something depending on certain 
 
 
 Conditions can be 
-a) the exit status of a command or 
-b) the evaluation of a logical or arithmetic expression:
+either the **exit status of a command** or 
+the **evaluation of a logical or arithmetic expression**:
 
-a) Evaluating the exit status of a command: Simply use the command as condition
-    Example: ::
+A) Evaluating the exit status of a command: Simply use the command as condition. For example: ::
 
      if grep -q root /etc/passwd
      then
@@ -294,12 +292,13 @@ a) Evaluating the exit status of a command: Simply use the command as condition
 .. Note:: To evaluate the exit status of a command in csh/tcsh, it must be
             placed within curly brackets with blanks separating the brackets from the
             command: ``if ({ grep -q root /etc/passwd }) then [...]``
-
+     
 .. Note:: Redirect the output of the command to be evaluated to /dev/null if you are only interested in the exit status and if the command doesn't have a "quiet" option.
-
+     
 .. Note:: Redirection of commands in conditions does not work for csh/tcsh
 
-b) Evaluating of conditions or comparisons:
+
+B) Evaluating of conditions or comparisons:
 
 Conditions and comparisons are evaluated using a special command test which is
 usually written as "[" (no joke!). As "[" is a command, it must be followed by
@@ -399,7 +398,7 @@ or::
           information
 
 case
-''''
+^^^^
 
 The :index:`case <case>`  statement implements a more compact and better readable form of if -
 :index:`elif <elif>`  - elif - elif etc. Use this if your variable (and you can only check for
@@ -437,9 +436,9 @@ sh/bash: ::
        commands
    endsw
 
-.. Note:: "*", "?" and "[...]" can be used for the :index:`patterns <pattern>`
+.. Note:: "``*``", "``?``" and "``[...]``" can be used for the :index:`patterns <pattern>`
 
-.. Note:: The \*) (sh/bash) and default: (csh/tcsh) patterns are "catch-all" patterns which match everything not matched above. It is often used to detect invalid values of variable.
+.. Note:: The "``*)``" (sh/bash) and "``default:``" (csh/tcsh) patterns are "catch-all" patterns which match everything not matched above. It is often used to detect invalid values of variable.
 
 .. Note:: Multiple patterns can be handled by separating them with "|" in sh/bash or by successive case statements in csh/tcsh.
 
@@ -459,10 +458,10 @@ Example:
 
 
 Loops
-"""""
+-----
 
 for / foreach
-'''''''''''''
+^^^^^^^^^^^^^
 
 The :index:`for <for>`  and :index:`foreach <foreach>`  statements respectively will loop through a
 list of given values and run the given statements for reach run:
@@ -497,7 +496,7 @@ Examples:
      done
 
 while / until
-'''''''''''''
+^^^^^^^^^^^^^
 
 The :index:`while <while>` and :index:`until <until>` loops execute your commands while (or :index:`until <until>` respectively) a certain condition is met
 
@@ -528,7 +527,7 @@ The conditions are constructed the same way as those used in if statements.
 .. Note:: The :index:`until <until>` statement is not available in csh/tcsh.
 
 "Manual" loop control
-'''''''''''''''''''''
+^^^^^^^^^^^^^^^^^^^^^
 
 Instead of (or additionally to) the built-in loop control in for/foreach, :index:`while <while>` and
 :index:`until <until>`  loops, you can control exiting and continuing them with "``break``" and
@@ -537,8 +536,11 @@ after the end of the loop. ``continue`` skips the rest of the current (innermost
 the next iteration
 
 
+
+
+
 Making Scripts Flexible
-***********************
+=======================
 
 Scripts are most useful, if they can be reused. Copying scripts and changing
 them to fit the new situation is time-consuming and error-prone. Additionally
@@ -549,14 +551,14 @@ using variables or by adding the possibility to use your own commandline
 options and arguments.
 
 Configurable Scripts
-^^^^^^^^^^^^^^^^^^^^
+--------------------
 
 Any value - be it paths, commands or options - that is specific to individual
 applications or your script, should not be "hardcoded" (i.e. used literally
 within the script) but assigned to variables:
 
 Using Variables
-"""""""""""""""
+^^^^^^^^^^^^^^^
 
 Any value - be it paths, commands or options - that is specific to individual
 applications or your script, should not be "hardcoded" (i.e. used literally
@@ -606,7 +608,7 @@ The script: ::
 
 
 Defining your own Commandline Options and Arguments
-"""""""""""""""""""""""""""""""""""""""""""""""""""
+---------------------------------------------------
 
 The best way to configure a script is to allow for your own commandline options
 and arguments. Commandline arguments are available the script as so-called
@@ -676,7 +678,7 @@ all the commandline parameters: ::
 .. _ensuring_sensible_exit_status:
 
 Ensuring a Sensible Exit Status
-*******************************
+===============================
 
 If you don't provide your own exit status, then the script will return the exit
 status of the last executed command (See :ref:`Reporting Success or Failure - The Exit Status<reporting_success_or_failure>`).
@@ -715,7 +717,7 @@ processing steps and finally return a sensible value: ::
     exit $mystatus
 
 Why is the exit status important after all?
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------
 
 First when you use your script within other scripts, you'll probably need to be
 able to check, if it has succeeded.  There might be other ways (e.g. checking
@@ -729,10 +731,10 @@ lots of complications in case a problem occurs. It took me several days to
 realize the bug above.
 
 Tips and Tricks
-***************
+===============
 
 Combining Variables with other Strings
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+--------------------------------------
 
 When combining variables with other strings, then in some situations the
 variable name must be placed in curly brackets ("{}"): ::
@@ -745,7 +747,7 @@ variable name must be placed in curly brackets ("{}"): ::
     #
 
 Filenames and Paths
-^^^^^^^^^^^^^^^^^^^
+-------------------
 
 If possible, try to avoid any special characters (blanks, semicolons (";"),
 colons (":"), backslashes ("\") etc.) in file and directory names.  All these
@@ -757,7 +759,7 @@ and makes the automatic filename expansion easier.
 .. _breaking_up_long_lines:
 
 Breaking up Long Code Lines
-^^^^^^^^^^^^^^^^^^^^^^^^^^^
+---------------------------
 
 Code lines can become pretty long and unreadable, wrapping onto the next line
 etc.  You can use the escape character (backslash, "\") to break them up and
@@ -778,7 +780,7 @@ becomes: ::
 Which is way better to read and to maintain
 
 Script Debugging
-^^^^^^^^^^^^^^^^
+----------------
 
 sh/bash and csh/tcsh have both an option "-x" which helps debugging a script by
 echoing each command before executing it.  This option can be set and unset
@@ -786,7 +788,7 @@ during runtime with set -x / set +x (sh/bash) and set echo / unset echo
 (csh/tcsh).
 
 Command Substitution
-^^^^^^^^^^^^^^^^^^^^
+--------------------
 
 You can use the output of a command and assign it to a variable or use it right
 away as text string, by using the command substitution operators "`"
@@ -810,7 +812,7 @@ Three variants for the same (print out who you are in English text): ::
     #
 
 Create Temporary Files
-^^^^^^^^^^^^^^^^^^^^^^
+----------------------
 
 You can create temporary files with mktemp. By default it will create a new
 file in /tmp and print its name: ::
@@ -820,7 +822,7 @@ file in /tmp and print its name: ::
     #
 
 Cleaning up Temporary Files
-^^^^^^^^^^^^^^^^^^^^^^^^^^^
+---------------------------
 
 It is considered good practice and sometimes even important, to clean up
 temporary data before ending a script. A simple way - which will not cover all

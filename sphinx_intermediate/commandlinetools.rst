@@ -1,13 +1,14 @@
 
+**********************
 More Commandline Tools
-######################
+**********************
 
 Command-line Tools
-------------------
+==================
 
 
 GZIP
-^^^^
+----
 :index:`gzip <gzip>` is a compression/decompression tool.
 When used on a file (without any parameters) it will compress it and replace the
 file by a compressed version with the extension '.gz' attached:
@@ -35,7 +36,7 @@ To revert this / to uncompress, use the parameter ``-d``:
 
 
 TAR
-^^^^
+----
 
 :index:`tar <tar>` (tape archive) is a tool to handle archives. Initially it was created to combine
 multiple files/directories to be written onto tape, it is now the standard tool to
@@ -97,7 +98,7 @@ Creating and extracting a compressed archive containing two files:
 
 
 GREP
-^^^^
+----
 
 Find lines matching a pattern in textfiles.
 
@@ -143,7 +144,7 @@ List all files containing the term "Ensembl":
    P12931.txt
 
 SED
-^^^
+---
 
 ``sed`` is a Stream EDitor, it modifies text (text can be a file or a pipe) on the fly.
 
@@ -245,7 +246,7 @@ will edit the file and rename the original file to textfile.bak:
 
 
 AWK
-^^^
+---
 
 awk is more than just a command, it is a complete text processing language (the
 name is an abbreviation of the author's names).
