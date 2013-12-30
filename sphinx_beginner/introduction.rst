@@ -6,18 +6,41 @@ Introduction to the Linux Commandline
 Why Use the Commandline
 ***********************
 
--   It's **fast**. Productivity is a word that gets tossed around a lot by so-called power users, but the command line can really streamline your computer use, assuming you learn to use it right.
--   It's **easier to get help**. The command line may not be the easiest thing to use, but it makes life a whole lot easier for people trying to help you and for yourself when looking for help, especially over the internet. Many times it's as simple as the helper posting a few commands and some instructions and the recipient copying and pasting those commands. Anyone who has spent hours listening to someone from tech support say something like, "OK, now click this, then this, then select this menu command" knows how frustrating the GUI alternative can be. 
--   It's nearly **universal**. There are hundreds of Linux distros out there, each with a slightly different graphical environment. Thankfully, the various distros do have one common element: the command line. There are distro-specific commands, but the bulk of commands will work on any Linux system.
--   It's **powerful**. The companies behind those other operating systems try their best to stop a user from accidentally screwing up their computer. Doing this involves hiding a lot of the components and tools that could harm a computer away from novices. Linux is more of an open book, which is due in part to its prominent use of the command line.
+- It's **fast**. Productivity is a word that gets tossed around a lot by so-called power users, but the command line can
+  really streamline your computer use, assuming you learn to use it right.
+
+- It's **easier to get help**. The command line may not be the easiest thing to use, but it makes life a whole lot
+  easier for people trying to help you and for yourself when looking for help, especially over the internet. Many times
+  it's as simple as the helper posting a few commands and some instructions and the recipient copying and pasting those
+  commands. Anyone who has spent hours listening to someone from tech support say something like, "OK, now click this,
+  then this, then select this menu command" knows how frustrating the GUI alternative can be. 
+
+- It's nearly **universal**. There are hundreds of Linux distros out there, each with a slightly different graphical
+  environment. Thankfully, the various distros do have one common element: the command line. There are distro-specific
+  commands, but the bulk of commands will work on any Linux system.
+
+- It's **powerful**. The companies behind those other operating systems try their best to stop a user from accidentally
+  screwing up their computer. Doing this involves hiding a lot of the components and tools that could harm a computer
+  away from novices. Linux is more of an open book, which is due in part to its prominent use of the command line.
 
 **************************************************
 General Remarks Regarding Using UNIX/Linux Systems
 **************************************************
--   **Test before run**. Anything written here has to be taken with a grain of salt. On another system - be it a different Linux distribution or another UNIXoid operating system - you might find the same command but without the support of some of the options tought here. It is even possible, that the same option has a different meaning on another system. With this in mind always make sure to test your commands (specially the "dangerous" ones which remove or modify files) when switching from one system to the other.
--   **The Linux/UNIX environment**. The behaviour of many commands is influenced or controlled by the so-called "environment". This environment is the sum of all your environment variables. Some of these environment variables will be shown towards the end of this course.
--   **UPPERCASE, lowercase**. Don't forget that everything is case-sensitive.
--   **The Filesystem**. Linux filesystems start on top at the root directory (sic!) "/" which hierarchically broadens towards the ground.  The separator between directories or directories and files in Linux is the slash ("/").
+
+- **Test before run**. Anything written here has to be taken with a grain of salt. On another system - be it a different
+  Linux distribution or another UNIXoid operating system - you might find the same command but without the support of
+  some of the options tought here. It is even possible, that the same option has a different meaning on another system.
+  With this in mind always make sure to test your commands (specially the "dangerous" ones which remove or modify files)
+  when switching from one system to the other.
+
+- **The Linux/UNIX environment**. The behaviour of many commands is influenced or controlled by the so-called
+  "environment". This environment is the sum of all your environment variables. Some of these environment variables will
+  be shown towards the end of this course.
+
+- **UPPERCASE, lowercase**. Don't forget that everything is case-sensitive.
+
+- **The Filesystem**. Linux filesystems start on top at the root directory (sic!) "/" which hierarchically broadens
+  towards the ground.  The separator between directories or directories and files in Linux is the slash ("/").
 
 
 .. _figure-filesystem:
@@ -41,6 +64,8 @@ while arguments are usually free text input (such as a filename).
 .. figure:: _static/LinuxCommandStructure.png
 
    General structure of Linux commands.
+
+For example, in the commandline ``ls -l /usr/bin``, ``ls`` is the command, ``-l`` is an option and ``/usr/bin`` qualifies as an argument.
 
 Commandline options (sometimes called comandline switches) commonly have one of the two following
 forms: The short form ``-s`` (just a single character) or the long form ``--string.`` E.g.
@@ -71,6 +96,57 @@ Since Linux incorporates commands from different sources, options can be availab
   > tar cf file.tar -C .. file/
   > ps auxgww
 
+
+
+
+******************************************
+Useful Terminal Tools & Keyboard Shortcuts
+******************************************
+
+Navigationg previous commands
+=============================
+
+.. TODO: use unicode character of up/down
+
+You can use the "up" and "down" arrow keys to navigate previously entered command and the "left" and
+"right" keys to modify it before re-executing it.
+
+Copying / Pasting using the mouse
+=================================
+
+On most Linux systems you can use the mouse to select text and then press the middle mouse button to
+paste that text at the position where your cursor is. This is especially useful for long directory
+or filenames.
+
+Interrupting commands
+====================
+
+Whenever a program gets stuck or takes too long to finish, you can *interrupt* it with the shortcut
+:kbd:`CONTROL-C`.
+
+clear – Clear the “screen”
+==========================
+
+**Usage**:  ``clear``
+
+ :: 
+
+  > clear
+
+In case the output of the terminal/screen gets cluttered, you can use ``clear`` to :index:`redraw <clear>` the screen... 
+
+If this doesn't work, you can use ``reset`` to perform a re-initialization of the terminal:
+
+reset – Reset your terminal
+===========================
+
+**Usage**:  ``reset [options]``
+
+ :: 
+
+  > reset
+
+
 ******************************
 A Journey Through the Commands
 ******************************
@@ -78,13 +154,15 @@ A Journey Through the Commands
 Please note that all examples and usage instructions below are just a glimpse of what you can do and reflect our opinion on what's important and what's not. Most of these commands support many more options and different usages. Consult the manpages to find them.
 Typographical conventions: Commands and examples are written in Courier.  User Input is written in Courier bold and placeholders are generally written in italic.
 
+.. _help:
+
 Getting Help
 ============
 
 ``-h/--help`` option, no parameters
 
 Many commands support a "help" option, either through ``-h`` or through ``--help``. 
-Other commands will show a help page or at least a short usage overview if you provide wrong commandline options
+Other commands will show a help page or at least a short usage overview if you provide incorrect commandline options
 
 man - show the manual page of a command
 ---------------------------------------
@@ -172,7 +250,7 @@ date - Print current date and time
   > date
   Tue Sep 25 19:57:50 CEST 2012
 
-.. note:: The command time does something completely different than :index:`date` and is not used to show the current time.
+.. note:: The command *time* does something completely different than :index:`date` and is not used to show the current time.
 
 Moving Around
 =============
@@ -270,7 +348,30 @@ Examples:
 Organize Files and Folders
 ==========================
 
-touch - Create a file or change last modification date of an existing file
+cp – Copy files and folders
+---------------------------
+
+**Usage**:  ``cp [options] sourcefile destinationfile``
+
+
+ :: 
+
+  > cp /usr/bin/less /tmp/backup_of_less
+
+
+**Useful options**:
+
+-r      Copy recursively 
+-i      Interactive operation, ask before overwriting an existing file 
+-p      Preserve owner, permissions and timestamp 
+
+
+We copy a set of exercise files from the network share into our home directory:
+ :: 
+
+  > cp -r /net/netfile1/ds-russell/linuxForNGS/data/linux/exercises  ~/exercises
+
+touch – Create a file or change last modification date of an existing file
 --------------------------------------------------------------------------
 
 **Usage**:  ``touch file(s) or directory/ies``
@@ -333,6 +434,8 @@ mv - Move and rename files and folders
 
 .. note:: You cannot overwrite an existing directory by another one with mv
 
+.. _mkdir:
+
 mkdir - Create a new directory
 ------------------------------
 
@@ -364,23 +467,8 @@ rmdir - Remove an empty directory
 
   > rmdir adir/
 
-.. note:: If the directory is not empty, rmdir will complain and not remove it
+.. note:: If the directory is not empty, rmdir will complain and not remove it.
 
-cp - Copy files and folders
----------------------------
-
-**Usage**:  ``cp [options] sourcefile destinationfile``
-
-
- :: 
-
-  > cp P12931.fasta backup_of_P12931.fasta
-
-**Useful options**:
-
--r      Copy recursively 
--i      Interactive operation, ask before overwriting an existing file 
--p      Preserve owner, permissions and timestamp 
 
 View Files
 ==========
@@ -533,7 +621,7 @@ which - find a (executable) command
 find - search/find files in any given directory
 -----------------------------------------------
 
-**Usage**:  ``find [starting path(es)] [search filter]``
+**Usage**:  ``find [starting path(s)] [search filter]``
 
  :: 
 
@@ -558,7 +646,7 @@ find - search/find files in any given directory
   ./SRC_HUMAN.fasta
 
 
-- Find by size: (List those entries in the directory /usr/bin that are bigger than 500kBytes)
+- Find by size: (List those entries in the directory ``/usr/bin`` that are bigger than 500kBytes)
 
  :: 
 
@@ -577,30 +665,6 @@ find - search/find files in any given directory
   .
   ./adir
 
-Useful Terminal Tools
-=====================
-
-clear - Clear the "screen"
---------------------------
-
-**Usage**:  ``clear``
-
- :: 
-
-  > clear
-
-In case the output of the terminal/screen gets cluttered, you can use ``clear`` to :index:`clear` the screen... 
-
-If this doesn't work, you can use ``reset`` to perform a re-initialization of the terminal:
-
-reset - Reset your terminal
----------------------------
-
-**Usage**:  ``reset [options]``
-
- :: 
-
-  > reset
 
 Permissions
 ===========
@@ -741,12 +805,16 @@ IO and Redirections
 Redirect
 --------
 
-:index:`Redirect <redirect>` the output of one program into e.g. a file: (Caution: you can easily overwrite files by this!) 
+:index:`Redirect <redirect>` the output of one program into e.g. a file: 
+
+
 Inserting the current date into a new file: 
 
  :: 
 
   > date > file_containing_date
+
+.. Warning:: You can easily overwrite files by this! 
 
 :index:`Filtering <grep>` lines containing the term "src" from FASTA files and inserting them into the file lines_with_src.txt: 
 
@@ -763,6 +831,8 @@ Append
  :: 
 
   > date >> file_containing_date
+
+.. _pipe:
 
 Pipe
 ----
@@ -792,11 +862,22 @@ C functions ``getpwuid`` and ``getuid,`` :index:`$HOME` is often used for conven
 
 .. note:: Do not change this variable unless you have a good reason and you know what you are doing!
 
+.. _path:
+
 $PATH
 -----
 
-:index:`$PATH` contains a colon-separated list of directories that the shell searches for commands that do not contain a slash in their name 
+:index:`$PATH` contains a colon-separated (':') list of directories that the shell searches for commands that do not contain a slash in their name 
 (commands with slashes are interpreted as file names to execute, and the shell attempts to execute the files directly).
+So if the directory */usr/bin/* is in `$PATH` (which it should), then the command ``/usr/bin/less`` can be accessed by simply typing ``less`` instead of
+``/usr/bin/less``. How convenient!
+
+.. Warning:: If you ever need to change this variable, you should always **append** to it, rather
+   than overwriting it: 
+
+   Overwriting (bad): ``export PATH=/my/new/path``; 
+
+   Appending (good): ``export PATH=$PATH:/my/new/path``
 
 $PAGER
 ------
