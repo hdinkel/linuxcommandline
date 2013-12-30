@@ -35,13 +35,22 @@ the verbatim boxes; this package should be included in the TeXLive distribution.
 ToDos:
 ^^^^^^
 
+- Features to try out:
+
+  - centered
+  - hlist
+  - glossary
+
+- Include examples from "Bioinformatics One-Liners"
+
 - Proper Use of sectioning:
-  # with overline, for parts
-  * with overline, for chapters
-  =, for sections
-  -, for subsections
-  ^, for subsubsections
-  ", for paragraphs
+
+  - '#' with overline, for parts
+  - '*' with overline, for chapters
+  - '=', for sections
+  - '-', for subsections
+  - '^', for subsubsections
+  - '"', for paragraphs
 
 - Better control of verbatim code-blocks:
 
