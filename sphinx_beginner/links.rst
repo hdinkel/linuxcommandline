@@ -7,27 +7,28 @@ Links
 
 - A full 500 page book about the Linux commandline for free(!): `LinuxCommand.org <http://linuxcommand.org/>`_ [#l1]_
 - Another nice introduction: `"A beginner's guide to UNIX/Linux" <http://www.mn.uio.no/astro/english/services/it/help/basic-services/linux/guide.html>`_ [#l2]_
-- The "commandline starter" chapter of an O'Reilly book: `Learning Debian GNU/Linux - Issuing Linux Commands <http://oreilly.com/openbook/debian/book/ch04_01.html>`_ [#l3]_
-- A nice introduction to Linux/UNIX file permissions: `"chmod Tutorial" <http://catcode.com/teachmod/>`_ [#l4]_
+- The "*commandline starter*" chapter of an O'Reilly book: `Learning Debian GNU/Linux - Issuing Linux Commands <http://oreilly.com/openbook/debian/book/ch04_01.html>`_ [#l3]_
+- A nice introduction to Linux/UNIX file permissions: `"chmod Tutorial" <http://www.catcode.com/teachmod/>`_ [#l4]_
 - `Linux Cheatsheets <http://www.cheat-sheets.org/#Linux>`_ [#l5]_
 - For the technically interested:
   `Linux Filesystem Hierarchy Standard <http://www.pathname.com/fhs/>`_ [#l6]_ and 
   `Linux Standard Base <http://www.linuxfoundation.org/collaborate/workgroups/lsb>`_ [#l7]_
-- `Unix commands applied to bioinformatics <http://rous.mit.edu/index.php/Unix_commands_applied_to_bioinformatic>`_ [#l8]_
-- `BioPieces <http://code.google.com/p/biopieces>`_ [#l9]_
-- `Google shell style guide <http://google-styleguide.googlecode.com/svn/trunk/shell.xml>`_ [#20]_
-- `Bioinformatics One-Liners <https://github.com/stephenturner/oneliners>`_ [#21]_
+- `Unix commands applied to bioinformatics <http://rous.mit.edu/index.php/Unix_commands_applied_to_bioinformatics>`_ [#l8]_
+- `BioPieces <http://code.google.com/p/biopieces>`_ [#l9]_ are a collection of bioinformatics tools that can be pieced together in a very easy and flexible manner to perform both simple and complex tasks.
+- `Google shell style guide <https://code.google.com/p/google-styleguide>`_ [#20]_
+- `Useful bash one-liners for bioinformatics <https://github.com/stephenturner/oneliners>`_ [#21]_
+- Interactive explanation of your commandline: `Explain Shell <http://www.explainshell.com>`_ [#22]_
 
 
 
 Real printed paper books:
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
-- Dietz, M., "Praxiskurs Unix-Shell", O'Reilly (highly recommended!)
-- Herold, H., "awk & sed", Addison-Wesley
-- Robbins, A., "sed & awk Pocket Reference", O'Reilly
-- Robbins, A. and Beebe, N., "Classic Shell Scripting", O'Reilly
-- Siever, E. et al., "Linux in a Nutshell", O'Reilly
+- Dietz, M., "*Praxiskurs Unix-Shell*", O'Reilly (highly recommended!)
+- Herold, H., "*awk & sed*", Addison-Wesley
+- Robbins, A., "*sed & awk Pocket Reference*", O'Reilly
+- Robbins, A. and Beebe, N., "*Classic Shell Scripting*", O'Reilly
+- Siever, E. et al., "*Linux in a Nutshell*", O'Reilly
 
 
 Live - CDs
@@ -44,7 +45,7 @@ your computer with Linux!
 Fedora Live CD 
 """""""""""""""
 This Live CD contains everything the `Fedora <http://fedoraproject.org/wiki/FedoraLiveCD>`_ [#c1]_ Linux operating system has to offer and it's everything
-you need to try out Fedora — you don't have to erase anything on your current system to try it out,
+you need to try out Fedora - you don't have to erase anything on your current system to try it out,
 and it won't put your files at risk. Take Fedora for a test drive, and if you like it, you can install
 Fedora directly to your hard drive straight from the Live Media desktop.
 
@@ -78,14 +79,15 @@ of the BioInformatics Center (BIC), National University of Singapore (NUS).
  .. [#l1] `http://linuxcommand.org/ <http://linuxcommand.org/>`_
  .. [#l2] `http://www.mn.uio.no/astro/english/services/it/help/basic-services/linux/guide.html <http://www.mn.uio.no/astro/english/services/it/help/basic-services/linux/guide.html>`_
  .. [#l3] `http://oreilly.com/openbook/debian/book/ch04_01.html <http://oreilly.com/openbook/debian/book/ch04_01.html>`_
- .. [#l4] `http://catcode.com/teachmod/ <http://catcode.com/teachmod/>`_
+ .. [#l4] `http://www.catcode.com/teachmod/ <http://www.catcode.com/teachmod/>`_
  .. [#l5] `http://www.cheat-sheets.org/#Linux <http://www.cheat-sheets.org/#Linux>`_
  .. [#l6] `http://www.pathname.com/fhs/ <http://www.pathname.com/fhs/>`_
  .. [#l7] `http://www.linuxfoundation.org/collaborate/workgroups/lsb <http://www.linuxfoundation.org/collaborate/workgroups/lsb>`_
- .. [#l8] `http://rous.mit.edu/index.php/Unix_commands_applied_to_bioinformatic <http://rous.mit.edu/index.php/Unix_commands_applied_to_bioinformatic>`_
+ .. [#l8] `http://rous.mit.edu/index.php/Unix_commands_applied_to_bioinformatics <http://rous.mit.edu/index.php/Unix_commands_applied_to_bioinformatics>`_
  .. [#l9] `http://code.google.com/p/biopieces <http://code.google.com/p/biopieces>`_
- .. [#20] `http://google-styleguide.googlecode.com/svn/trunk/shell.xml <http://google-styleguide.googlecode.com/svn/trunk/shell.xml>`_
+ .. [#20] `https://code.google.com/p/google-styleguide <https://code.google.com/p/google-styleguide>`_
  .. [#21] `https://github.com/stephenturner/oneliners <https://github.com/stephenturner/oneliners>`_
+ .. [#22] `http://www.explainshell.com <http://www.explainshell.com>`_
 
  .. [#c1] `http://fedoraproject.org/wiki/FedoraLiveCD <http://fedoraproject.org/wiki/FedoraLiveCD>`_
  .. [#c2] `http://knopper.net/knoppix  <http://knopper.net/knoppix>`_

@@ -424,7 +424,7 @@ sh/bash: ::
    esac
 
 
-:index:`csh/tcsh <breaskw>`: ::
+:index:`csh/tcsh <breaksw>`: ::
 
    switch (variable)
      case pattern1:
