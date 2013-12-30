@@ -651,7 +651,7 @@ $3 becomes $2 etc.:
 
 .. image:: _static/shift_arguments.png
 
-With the help of $#, :index:`shift <shift>`, :index:`case <case>`  and the positional parameters we can now check
+With the help of "$#", ":index:`shift <shift>`", ":index:`case <case>`"  and the positional parameters we can now check
 all the commandline parameters: ::
 
     while [ "$#" -gt 0 ]

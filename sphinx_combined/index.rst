@@ -9,6 +9,7 @@ EMBL Linux Course
 .. Contents:
 
 .. toctree::
+   :maxdepth: 2
 
    Introduction <introduction>
    Exercises Beginner <exercises_beginner>

@@ -19,7 +19,7 @@ Variables are set (created) by assigning them a value
 
 ::
 
-  # MYVAR=something::
+  # MYVAR=something
 
 There must be no whitespace around the equal sign. To create an environment
 variable, export is used. You can either export while assigning a value or in a

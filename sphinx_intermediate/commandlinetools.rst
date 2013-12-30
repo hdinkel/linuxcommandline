@@ -100,7 +100,7 @@ Creating and extracting a compressed archive containing two files:
 GREP
 ----
 
-Find lines matching a pattern in textfiles.
+index:`grep` finds lines matching a pattern in textfiles.
 
 **Usage**: grep [options] pattern file(s)
 
@@ -146,7 +146,7 @@ List all files containing the term "Ensembl":
 SED
 ---
 
-``sed`` is a Stream EDitor, it modifies text (text can be a file or a pipe) on the fly.
+index:`sed` is a Stream EDitor, it modifies text (text can be a file or a pipe) on the fly.
 
 *Usage*: '``sed command file``',
 
@@ -248,10 +248,14 @@ will edit the file and rename the original file to textfile.bak:
 AWK
 ---
 
-awk is more than just a command, it is a complete text processing language (the
+:index:`awk` is more than just a command, it is a complete text processing language (the
 name is an abbreviation of the author's names).
 Each line of the input (file or pipe) is treated as a record and is broken into fields.
-Generally, awk commands are of the form: `` awk condition { action }``, where:
+Generally, awk commands are of the form: ::
+
+    awk condition { action }
+
+where:
 
 - condition is typically an expression
 - action is a series of commands
@@ -280,8 +284,8 @@ So an easy way to print or rearrange columns of text is:
   # echo "Master Obi-Wan has lost a planet" | awk '{print $4,$5,$6,$1,$2,$3}'
    lost a planet Master Obi-Wan has
 
-awk splits text by default on whitespace (spaces or tabs), which might not be ideal in all situations. To change the field separator (FS), use option '-F'
-(remember to quote the field separator):
+awk splits text by default on whitespace (spaces or tabs), which might not be ideal in all situations. To change the
+field separator (FS), use option '-F' (remember to quote the field separator):
 
  ::
 
