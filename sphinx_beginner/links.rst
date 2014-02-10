@@ -9,22 +9,38 @@ Links
 - Another nice introduction: `"A beginner's guide to UNIX/Linux" <http://www.mn.uio.no/astro/english/services/it/help/basic-services/linux/guide.html>`_ [#l2]_
 - The "*commandline starter*" chapter of an O'Reilly book: `Learning Debian GNU/Linux - Issuing Linux Commands <http://oreilly.com/openbook/debian/book/ch04_01.html>`_ [#l3]_
 - A nice introduction to Linux/UNIX file permissions: `"chmod Tutorial" <http://www.catcode.com/teachmod/>`_ [#l4]_
-- `Linux Cheatsheets <http://www.cheat-sheets.org/#Linux>`_ [#l5]_
+- `Linux Cheatsheets <http://www.cheat-sheets.org/#linux>`_ [#l5]_
 - For the technically interested:
   `Linux Filesystem Hierarchy Standard <http://www.pathname.com/fhs/>`_ [#l6]_ and 
   `Linux Standard Base <http://www.linuxfoundation.org/collaborate/workgroups/lsb>`_ [#l7]_
 - `Unix commands applied to bioinformatics <http://rous.mit.edu/index.php/Unix_commands_applied_to_bioinformatics>`_ [#l8]_
 - `BioPieces <http://code.google.com/p/biopieces>`_ [#l9]_ are a collection of bioinformatics tools that can be pieced together in a very easy and flexible manner to perform both simple and complex tasks.
-- `Google shell style guide <https://code.google.com/p/google-styleguide>`_ [#20]_
-- `Useful bash one-liners for bioinformatics <https://github.com/stephenturner/oneliners>`_ [#21]_
-- Interactive explanation of your commandline: `Explain Shell <http://www.explainshell.com>`_ [#22]_
+- `Google shell style guide <https://code.google.com/p/google-styleguide>`_ [#l10]_
+- `Useful bash one-liners for bioinformatics <https://github.com/stephenturner/oneliners>`_ [#l11]_
+- Interactive explanation of your commandline: `Explain Shell <http://www.explainshell.com>`_ [#l12]_
 
 
-
-Real printed paper books:
+Command Line Mystery Game
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
-- Dietz, M., "*Praxiskurs Unix-Shell*", O'Reilly (highly recommended!)
+
+`CLMystery <https://github.com/veltman/clmystery>`_ [#l13]_ is a game that you play on the commandline: There's been a murder in Terminal City, and TCPD needs your help to solve this crime
+*by using commandline tools only*!
+
+To play the game, get the files from github and read the instructions:
+
+ :: 
+
+  wget https://github.com/veltman/clmystery/archive/master.zip
+  unzip master.zip
+  cd clmystery-master/
+  cat instructions
+
+
+Real printed paper books
+^^^^^^^^^^^^^^^^^^^^^^^^
+
+- Dietz, M., "*Praxiskurs Unix-Shell*", O'Reilly (highly recommended!, german language only)
 - Herold, H., "*awk & sed*", Addison-Wesley
 - Robbins, A., "*sed & awk Pocket Reference*", O'Reilly
 - Robbins, A. and Beebe, N., "*Classic Shell Scripting*", O'Reilly
@@ -80,17 +96,19 @@ of the BioInformatics Center (BIC), National University of Singapore (NUS).
  .. [#l2] `http://www.mn.uio.no/astro/english/services/it/help/basic-services/linux/guide.html <http://www.mn.uio.no/astro/english/services/it/help/basic-services/linux/guide.html>`_
  .. [#l3] `http://oreilly.com/openbook/debian/book/ch04_01.html <http://oreilly.com/openbook/debian/book/ch04_01.html>`_
  .. [#l4] `http://www.catcode.com/teachmod/ <http://www.catcode.com/teachmod/>`_
- .. [#l5] `http://www.cheat-sheets.org/#Linux <http://www.cheat-sheets.org/#Linux>`_
+ .. [#l5] `http://www.cheat-sheets.org/#linux <http://www.cheat-sheets.org/#linux>`_
  .. [#l6] `http://www.pathname.com/fhs/ <http://www.pathname.com/fhs/>`_
  .. [#l7] `http://www.linuxfoundation.org/collaborate/workgroups/lsb <http://www.linuxfoundation.org/collaborate/workgroups/lsb>`_
  .. [#l8] `http://rous.mit.edu/index.php/Unix_commands_applied_to_bioinformatics <http://rous.mit.edu/index.php/Unix_commands_applied_to_bioinformatics>`_
  .. [#l9] `http://code.google.com/p/biopieces <http://code.google.com/p/biopieces>`_
- .. [#20] `https://code.google.com/p/google-styleguide <https://code.google.com/p/google-styleguide>`_
- .. [#21] `https://github.com/stephenturner/oneliners <https://github.com/stephenturner/oneliners>`_
- .. [#22] `http://www.explainshell.com <http://www.explainshell.com>`_
+ .. [#l10] `https://code.google.com/p/google-styleguide <https://code.google.com/p/google-styleguide>`_
+ .. [#l11] `https://github.com/stephenturner/oneliners <https://github.com/stephenturner/oneliners>`_
+ .. [#l12] `http://www.explainshell.com <http://www.explainshell.com>`_
+ .. [#l13] `https://github.com/veltman/clmystery <https://github.com/veltman/clmystery>`_
 
  .. [#c1] `http://fedoraproject.org/wiki/FedoraLiveCD <http://fedoraproject.org/wiki/FedoraLiveCD>`_
  .. [#c2] `http://knopper.net/knoppix  <http://knopper.net/knoppix>`_
  .. [#c3] `http://bioknoppix.hpcf.upr.edu <http://bioknoppix.hpcf.upr.edu>`_
  .. [#c4] `http://www.vigyaancd.org  <http://www.vigyaancd.org>`_
  .. [#c5] `http://www.bioslax.com <http://www.bioslax.com>`_
+

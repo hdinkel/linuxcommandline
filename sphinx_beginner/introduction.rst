@@ -330,11 +330,12 @@ Useful options:
 Digression: Shell globs
 -----------------------
 
-Files and folders can't only be referred to with their full name, but also with so-called "Shell Globs", which are a kind of simple pattern to address groups of files and folders.  Instead of explicit names you can use the following placeholders:
+Files and folders can't only be referred to with their full name, but also with so-called "Shell Globs", which are a kind of simple pattern to address groups of files and folders. Instead of explicit names you can use the following placeholders:
 
 - ``?:``  Any single character
 - ``*:``  Any number of any character (including no character at all)
 - ``[...]:``    One of the characters included in the brackets.  Use "-" to define ranges  of characters
+- ``{word1,word2}:``    Each individual word is expanded
 
 Examples:
 
@@ -342,6 +343,7 @@ Examples:
 - ``?.jpg:``  Jpeg file consisting of only one character
 - ``[0-9]*.txt:`` All files starting with a number and having the extension ".txt"
 - ``*.???:``  All files having a three-character extension
+- ``photo.{jpg,png}:``  "photo.jpg" and "photo.png"
 
 .. note:: The special directory "``~``" mentioned above is a shell glob, too.
 
