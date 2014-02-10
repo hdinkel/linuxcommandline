@@ -145,9 +145,7 @@ Remote access
  
     B) ``whoami``
  
-    C) ``cat /etc/hostname``
- 
-    D) ``ls -la ~/``
+    C) ``ls -la ~/``
 
 #. Copy the file ``/etc/motd`` from machine sub-master.embl.de into your local home directory (using scp) ::
 
@@ -160,9 +158,9 @@ Remote access
 
    $ ls -l ~/motd
 
-#. Login to your neighbor's machine (ask him for the hostname) using the username ``teach01`` (password will be given by your teacher) ::
+#. Login to your neighbor's machine (ask him for the hostname) using your own username ::
 
-    $ ssh teach01@hostname
+    $ ssh hostname
 
 
 IO and Redirections

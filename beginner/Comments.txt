@@ -1,7 +1,5 @@
 
 
 Verbesserungen:
- - cat /etc/hostname rausnehmen. File existiert nicht
- - ssh: login / pw stimmen nicht. Eigenen Namen verwenden
  - mehr Uebungen! z.B. Verzeichniss erstellen, Dateien kopieren etc.
  - environment variables ueberarbeiten; PAGER herausnehmen?
