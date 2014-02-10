@@ -183,7 +183,9 @@ latex_elements = {
 'fontpkg': '\\usepackage{tgbonum}',
 
 # Additional stuff for the LaTeX preamble.
-'preamble': '\setcounter{tocdepth}{2}\usepackage{fancyvrb}',
+'preamble': """\setcounter{tocdepth}{2}\usepackage{fancyvrb}
+      \usepackage{sectsty}\sectionfont{\LARGE}\subsectionfont{\Large}\subsubsectionfont{\large\underline}\paragraphfont{\large}
+""",
 }
 
 # Grouping the document tree into LaTeX files. List of tuples

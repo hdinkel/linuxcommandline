@@ -106,10 +106,7 @@ Useful Terminal Tools & Keyboard Shortcuts
 Navigationg previous commands
 =============================
 
-.. TODO: use unicode character of up/down
-
-You can use the "up" and "down" arrow keys to navigate previously entered command and the "left" and
-"right" keys to modify it before re-executing it.
+You can use the ↑/↓ (up/down) arrow keys to navigate previously entered command and the ←/→ (left/right) keys to modify it before re-executing it.
 
 Copying / Pasting using the mouse
 =================================
@@ -119,7 +116,7 @@ paste that text at the position where your cursor is. This is especially useful 
 or filenames.
 
 Interrupting commands
-====================
+======================
 
 Whenever a program gets stuck or takes too long to finish, you can *interrupt* it with the shortcut
 :kbd:`CONTROL-C`.
@@ -145,6 +142,12 @@ reset – Reset your terminal
  :: 
 
   > reset
+
+Leave the shell
+=================
+
+To exit the shell/terminal, just type `exit` or press :kbd:`CONTROL-D`.
+
 
 
 ******************************
@@ -371,7 +374,8 @@ cp – Copy files and folders
 We copy a set of exercise files from the network share into our home directory:
  :: 
 
-  > cp -r /net/netfile1/ds-russell/linuxForNGS/data/linux/exercises  ~/exercises
+  > cp -r /g/bio-it/courses/LSB/exercises  ~/exercises
+
 
 touch – Create a file or change last modification date of an existing file
 --------------------------------------------------------------------------
@@ -489,6 +493,52 @@ cat - Print files on terminal (concatenate)
 .. note:: The command :index:`cat` only makes sense for short files or for e.g. combining several files into one.  See the redirection examples later.
 
 
+head - Print first lines of a textfile
+--------------------------------------
+
+:index:`Head <head>` is a program on Unix and Unix-like systems used to display the beginning of a text file or piped data.
+
+**Usage**:  ``head [options] file(s)``
+
+ :: 
+
+  > head /etc/passwd
+  root:x:0:0:root:/root:/bin/bash
+  bin:x:1:1:bin:/bin:/sbin/nologin
+  daemon:x:2:2:daemon:/sbin:/sbin/nologin
+  adm:x:3:4:adm:/var/adm:/sbin/nologin
+  lp:x:4:7:lp:/var/spool/lpd:/sbin/nologin
+  sync:x:5:0:sync:/sbin:/bin/sync
+  shutdown:x:6:0:shutdown:/sbin:/sbin/shutdown
+  halt:x:7:0:halt:/sbin:/sbin/halt
+  mail:x:8:12:mail:/var/spool/mail:/sbin/nologin
+  news:x:9:13:news:/etc/news:
+
+**Useful options**:
+
+-n num  Print num lines (default is 10)
+
+
+tail - Print last lines of a textfile
+-------------------------------------
+
+The :index:`tail` utility displays the contents of file or, by default, its standard input, to the standard output.
+
+**Usage**:  ``tail [options] file(s)``
+
+ :: 
+
+  > tail -n 3 /etc/passwd
+  xfs:x:43:43:X Font Server:/etc/X11/fs:/sbin/nologin
+  gdm:x:42:42::/var/gdm:/sbin/nologin
+  sabayon:x:86:86:Sabayon user:/home/sabayon:/sbin/nologin
+
+**Useful options**:
+
+-n num  Print num lines (default is 10)
+-f      "Follow" a file (print new lines as they are written to the file)
+
+
 less - View and navigate files
 ------------------------------
 
@@ -499,7 +549,8 @@ less - View and navigate files
   > less  P12931.fasta backup_of_P12931.fasta
   [...]
 
-.. note:: This is the default "pager" for manpages under Linux unless you redefine your $PAGER environment variable
+.. note:: This is the default "pager" for manpages under Linux unless you redefine your $PAGER :ref:`environment variable <environment_variables>` 
+
 
 **Navigation within less**:
 
@@ -544,49 +595,27 @@ grep - Find lines matching a pattern in textfiles
 -L      List files without matches
 -c      Print count of matching lines for each file
 
-head - Print first lines of a textfile
---------------------------------------
 
-:index:`Head <head>` is a program on Unix and Unix-like systems used to display the beginning of a text file or piped data.
 
-**Usage**:  ``head [options] file(s)``
+sort - sort a textfile
+----------------------
 
- :: 
+The :index:`sort` utility is used to sort a textfile (alphabetically or numerically).
 
-  > head /etc/passwd
-  root:x:0:0:root:/root:/bin/bash
-  bin:x:1:1:bin:/bin:/sbin/nologin
-  daemon:x:2:2:daemon:/sbin:/sbin/nologin
-  adm:x:3:4:adm:/var/adm:/sbin/nologin
-  lp:x:4:7:lp:/var/spool/lpd:/sbin/nologin
-  sync:x:5:0:sync:/sbin:/bin/sync
-  shutdown:x:6:0:shutdown:/sbin:/sbin/shutdown
-  halt:x:7:0:halt:/sbin:/sbin/halt
-  mail:x:8:12:mail:/var/spool/mail:/sbin/nologin
-  news:x:9:13:news:/etc/news:
-
-**Useful options**:
-
--n num  Print num lines (default is 10)
-
-tail - Print last lines of a textfile
--------------------------------------
-
-The :index:`tail` utility displays the contents of file or, by default, its standard input, to the standard output.
-
-**Usage**:  ``tail [options] file(s)``
+**Usage**:  ``sort [options] file(s)``
 
  :: 
 
-  > tail -n 3 /etc/passwd
-  xfs:x:43:43:X Font Server:/etc/X11/fs:/sbin/nologin
-  gdm:x:42:42::/var/gdm:/sbin/nologin
-  sabayon:x:86:86:Sabayon user:/home/sabayon:/sbin/nologin
+  > sort /etc/passwd
 
 **Useful options**:
 
--n num  Print num lines (default is 10)
--f      "Follow" a file (print new lines as they are written to the file)
+-f, --ignore-case           fold lower case to upper case characters
+-n, --numeric-sort          compare according to string numerical value
+-b, --ignore-leading-blanks  ignore leading blanks
+-r, --reverse               reverse the result of comparisons
+
+
 
 Useful Filetools
 ================
@@ -850,6 +879,9 @@ Here: use ``ls`` to show the directory contents and then :index:`use <grep>` ``g
   FYN_HUMAN.fasta
   P12931.fasta
   SRC_HUMAN.fasta
+
+
+.. _environment_variables:
 
 Environment Variables
 =====================

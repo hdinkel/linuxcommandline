@@ -2,11 +2,7 @@
 
 Verbesserungen:
  - echo aufnehmen ins Handout
- - Handout umstrukturieren: head/tail zu cat schieben
  - cat /etc/hostname rausnehmen. File existiert nicht
  - ssh: login / pw stimmen nicht. Eigenen Namen verwenden
  - mehr Uebungen! z.B. Verzeichniss erstellen, Dateien kopieren etc.
- - am Anfang CTRL-D / exit erklaeren 
  - environment variables ueberarbeiten; PAGER herausnehmen?
-
-
