@@ -611,6 +611,39 @@ grep - Find lines matching a pattern in textfiles
 -L      List files without matches
 -c      Print count of matching lines for each file
 
+cut - extracting columns from textfiles
+---------------------------------------
+
+:index:`Cut <cut>` allows to get at individual columns in structured textfiles (for instance CSV files).
+By default, `cut` assumes the columns are TAB-separated.
+
+**Usage**:  ``cut [options] file(s)``
+
+
+**Useful options**:
+
+-d    use DELIM instead of TAB for field delimiter  
+-f    select only these fields; this can either be a single field, 
+      multiple individual fields separated by comma or a range of startfield and endfield separated by dash '-'
+
+**Examples**:
+
+ extract column six from the file */exercises/P12931.csv* (which is separated by semicolon ';'):: 
+
+  > cut -d';' -f6 /exercises/P12931.csv
+  PMID 
+  2136766 
+  11804588 
+  ...
+
+ extract columns two, three, eight, nine and ten from the same file::
+
+  > cut -d';' -f2,3,8-10 /exercises/P12931.csv
+  S; 12; 0.21; ; - 
+  S; 17; 0.24; MOD_PKA_1; - 
+  S; 17; 0.24; MOD_PKA_1; - 
+  S; 17; 0.24; MOD_PKA_1; -
+  ...
 
 
 sort - sort a textfile
@@ -626,10 +659,10 @@ The :index:`sort` utility is used to sort a textfile (alphabetically or numerica
 
 **Useful options**:
 
--f, --ignore-case           fold lower case to upper case characters
--n, --numeric-sort          compare according to string numerical value
--b, --ignore-leading-blanks  ignore leading blanks
--r, --reverse               reverse the result of comparisons
+-f    fold lower case to upper case characters
+-n    compare according to string numerical value
+-b    ignore leading blanks
+-r    reverse the result of comparisons
 
 
 
