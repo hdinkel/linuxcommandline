@@ -197,5 +197,14 @@ IO and Redirections
 
       $ grep -h "^TITLE" /exercises/*.pdb > pdb_titles.txt
 
+#. The *third* column of the file /etc/passwd/ contains user IDs (numbers)
+
+   A. Use `cut` to extract just the third column of this file (remember to specify the delimiter ':')::
+
+      $ cut -f3 -d':' /etc/passwd 
+
+   B. Next, use the :ref:`pipe <pipe>` symbol (`|`) and `sort` to sort this output *numerically*::
+
+      $ cut -f3 -d':' /etc/passwd | sort -n
 
 

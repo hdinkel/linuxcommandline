@@ -115,6 +115,22 @@ On most Linux systems you can use the mouse to select text and then press the mi
 paste that text at the position where your cursor is. This is especially useful for long directory
 or filenames.
 
+
+Printing some text
+==================
+
+To simply print some text in the console, use :index:`echo`:
+
+**Usage**:  ``echo``
+
+ :: 
+
+  > echo 'this is some text'
+  'this is some text'
+
+It can also be used to print the content of a variable, see section :ref:`environment_variables`...
+
+
 Interrupting commands
 ======================
 

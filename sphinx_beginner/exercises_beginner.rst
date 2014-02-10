@@ -81,3 +81,10 @@ IO and Redirections
 
    B. Redo the previous exercise such that the output file pdb_titles.txt only contains lines starting with TITLE. 
 
+#. The *third* column of the file /etc/passwd/ contains user IDs (numbers)
+
+   A. Use `cut` to extract just the third column of this file (remember to specify the delimiter ':'):
+
+   B. Next, use the :ref:`pipe <pipe>` symbol (`|`) and `sort` to sort this output *numerically*:
+
+
