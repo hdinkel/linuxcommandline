@@ -326,6 +326,12 @@ If you want to match a field, but not exactly, you can use '~' instead of '==':
   # awk '$4~"ore" {print $3}' textfile
    even
 
+..
+.. Sum column 1 of file.txt:
+.. 
+.. awk '{sum+=$1} END {print sum}' file.txt
+
+
 
 Hints
 -----

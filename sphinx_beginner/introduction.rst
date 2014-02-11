@@ -23,6 +23,9 @@ Why Use the Commandline
   screwing up their computer. Doing this involves hiding a lot of the components and tools that could harm a computer
   away from novices. Linux is more of an open book, which is due in part to its prominent use of the command line.
 
+- Many 'modern' bioinformatics tools (samtools, bamtools, ...) are written for the commandline in order to be run on
+  clusters and to be incorporated in scripts.
+
 **************************************************
 General Remarks Regarding Using UNIX/Linux Systems
 **************************************************
@@ -99,17 +102,24 @@ Since Linux incorporates commands from different sources, options can be availab
 
 
 
-******************************************
-Useful Terminal Tools & Keyboard Shortcuts
-******************************************
 
-Navigationg previous commands
-=============================
+******************************
+A Journey Through the Commands
+******************************
+
+Please note that all examples and usage instructions below are just a glimpse of what you can do and reflect our opinion on what's important and what's not. Most of these commands support many more options and different usages. Consult the manpages to find them.
+Typographical conventions: Commands and examples are written in Courier.  User Input is written in Courier bold and placeholders are generally written in italic.
+
+Useful Terminal Tools & Keyboard Shortcuts
+==========================================
+
+Navigating previous commands
+-----------------------------
 
 You can use the ↑/↓ (up/down) arrow keys to navigate previously entered command and the ←/→ (left/right) keys to modify it before re-executing it.
 
 Copying / Pasting using the mouse
-=================================
+---------------------------------
 
 On most Linux systems you can use the mouse to select text and then press the middle mouse button to
 paste that text at the position where your cursor is. This is especially useful for long directory
@@ -117,7 +127,7 @@ or filenames.
 
 
 Printing some text
-==================
+------------------
 
 To simply print some text in the console, use :index:`echo`:
 
@@ -132,13 +142,13 @@ It can also be used to print the content of a variable, see section :ref:`enviro
 
 
 Interrupting commands
-======================
+----------------------
 
 Whenever a program gets stuck or takes too long to finish, you can *interrupt* it with the shortcut
 :kbd:`CONTROL-C`.
 
 clear – Clear the “screen”
-==========================
+--------------------------
 
 **Usage**:  ``clear``
 
@@ -151,7 +161,7 @@ In case the output of the terminal/screen gets cluttered, you can use ``clear`` 
 If this doesn't work, you can use ``reset`` to perform a re-initialization of the terminal:
 
 reset – Reset your terminal
-===========================
+---------------------------
 
 **Usage**:  ``reset [options]``
 
@@ -160,18 +170,10 @@ reset – Reset your terminal
   > reset
 
 Leave the shell
-=================
+-----------------
 
 To exit the shell/terminal, just type `exit` or press :kbd:`CONTROL-D`.
 
-
-
-******************************
-A Journey Through the Commands
-******************************
-
-Please note that all examples and usage instructions below are just a glimpse of what you can do and reflect our opinion on what's important and what's not. Most of these commands support many more options and different usages. Consult the manpages to find them.
-Typographical conventions: Commands and examples are written in Courier.  User Input is written in Courier bold and placeholders are generally written in italic.
 
 .. _help:
 
