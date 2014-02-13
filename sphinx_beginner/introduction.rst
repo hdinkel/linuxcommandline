@@ -75,29 +75,29 @@ forms: The short form ``-s`` (just a single character) or the long form ``--stri
 
  :: 
 
-  > man -h
-  > man --help
+  $ man -h
+  $ man --help
 
 Short options are usually - though not always - concatenable:
 
  ::
 
-  > ls -l -A -h
-  > ls -lAh
+  $ ls -l -A -h
+  $ ls -lAh
 
 Some options require an additional argument, which is added with a blank to the short form and with an equal sign to the long form:
 
  :: 
 
-  > ls -I "*.pdf"
-  > ls --ignore="*.pdf"
+  $ ls -I "*.pdf"
+  $ ls --ignore="*.pdf"
 
 Since Linux incorporates commands from different sources, options can be available in one or both forms and you'll also encounter options with no dash at all and all kinds of mixtures:
 
  :: 
 
-  > tar cf file.tar -C .. file/
-  > ps auxgww
+  $ tar cf file.tar -C .. file/
+  $ ps auxgww
 
 
 
@@ -108,6 +108,7 @@ A Journey Through the Commands
 ******************************
 
 Please note that all examples and usage instructions below are just a glimpse of what you can do and reflect our opinion on what's important and what's not. Most of these commands support many more options and different usages. Consult the manpages to find them.
+
 Typographical conventions: Commands and examples are written in Courier.  User Input is written in Courier bold and placeholders are generally written in italic.
 
 Useful Terminal Tools & Keyboard Shortcuts
@@ -135,8 +136,9 @@ To simply print some text in the console, use :index:`echo`:
 
  :: 
 
-  > echo 'this is some text'
-  'this is some text'
+  $ echo "this is some text"
+  this is some text
+  $
 
 It can also be used to print the content of a variable, see section :ref:`environment_variables`...
 
@@ -154,7 +156,8 @@ clear – Clear the “screen”
 
  :: 
 
-  > clear
+  $ clear
+  $
 
 In case the output of the terminal/screen gets cluttered, you can use ``clear`` to :index:`redraw <clear>` the screen... 
 
@@ -167,12 +170,13 @@ reset – Reset your terminal
 
  :: 
 
-  > reset
+  $ reset
+  $
 
 Leave the shell
 -----------------
 
-To exit the shell/terminal, just type `exit` or press :kbd:`CONTROL-D`.
+To exit the shell/terminal, just type ``exit`` or press :kbd:`CONTROL-D`.
 
 
 .. _help:
@@ -193,7 +197,7 @@ man - show the manual page of a command
 
  :: 
 
-  > man man
+  $ man man
   man(1)
   
   NAME
@@ -201,11 +205,12 @@ man - show the manual page of a command
   
   SYNOPSIS
    man [-acdfFhkKtwW] [--path] [-m system] [-p string] [-C config_file]
-  [...]
+  ...
+  $
 
-For the navigation within a :index:`man <man>`-page see the chapter regarding less below.
+For the navigation within a :index:`man <man>`page see the :ref:`chapter regarding less <less>`.
 
-.. note:: The behaviour of man is dependent of the $PAGER environment variable
+.. note:: The behaviour of ``man`` is dependent of the ``$PAGER`` environment variable
 
 apropos - list manpages containing a keyword in their description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -214,19 +219,20 @@ apropos - list manpages containing a keyword in their description
 
  :: 
 
-  > apropos who
-  [...]
-  > who                  (1)  - show who is logged on
-  > who                  (1)  - display who is on the system
-  > whoami               (1)  - print effective userid
+  $ apropos who
+  ...
+  who                  (1)  - show who is logged on
+  who                  (1)  - display who is on the system
+  whoami               (1)  - print effective userid
+  $
 
-Use :index:`apropos` to find candidates for specific tasks
+Use :index:```apropos``` to find candidates for specific tasks
 
 
-/usr/share/doc
-^^^^^^^^^^^^^^
+/usr/share/doc/
+^^^^^^^^^^^^^^^
 
-The ``/usr/share/doc`` directory in some Linux distributions contains additional documentation of installed software packages 
+The ``/usr/share/doc/`` directory in some Linux distributions contains additional documentation of installed software packages 
 
 Who am I, where am I
 ====================
@@ -238,8 +244,9 @@ whoami - Print your username
 
  :: 
 
-  > whoami
+  $ whoami
   fthommen
+  $
 
 hostname - Print the name of the computer
 -----------------------------------------
@@ -248,8 +255,9 @@ hostname - Print the name of the computer
 
  :: 
 
-  > hostname
+  $ hostname
   pc-teach01
+  $
 
 pwd - Print the current working directory
 -----------------------------------------
@@ -258,8 +266,9 @@ pwd - Print the current working directory
 
  :: 
 
-  > pwd
+  $ pwd
   /home/fthommen
+  $
 
 date - Print current date and time
 ----------------------------------
@@ -268,10 +277,11 @@ date - Print current date and time
 
  :: 
 
-  > date
+  $ date
   Tue Sep 25 19:57:50 CEST 2012
+  $
 
-.. note:: The command *time* does something completely different than :index:`date` and is not used to show the current time.
+.. note:: The command ``time`` does something completely different than :index:```date``` and is not used to show the current time.
 
 Moving Around
 =============
@@ -283,11 +293,12 @@ cd - Change the working directory
 
  :: 
 
-  # pwd
+  $ pwd
   /home/fthommen
-  # cd /usr/bin
-  # pwd
+  $ cd /usr/bin
+  $ pwd
   /usr/bin
+  $
 
 Special directories:
 
@@ -295,7 +306,7 @@ Special directories:
 - "``..``": The parent directory of the current working directory
 - "``~``":  Your homedirectory
 
-.. note:: Using :index:`cd` without a directory is equivalent to "``cd ~``" and changes into the users's homedirectory
+.. note:: Using :index:```cd``` without a directory is equivalent to "``cd ~``" and changes into the users's homedirectory
 .. note:: Please note the difference between absolute pathes (starting with "``/``") and relative pathes (starting with a directory name)
 
 ::
@@ -308,11 +319,12 @@ Special directories:
 
 ::
 
-  > pwd
+  $ pwd
   /usr
-  > cd bin
-  > pwd
+  $ cd bin
+  $ pwd
   /usr/bin
+  $
 
 
 See What's Around
@@ -326,10 +338,11 @@ ls - List directory contents
 
 :: 
 
-  > ls
+  $ ls
   /home/fthommen
-  > ls -l aa.pdf
+  $ ls -l aa.pdf
   -rw-r--r-- 1 fthommen cmueller 0 Sep 24 10:59 aa.pdf
+  $
 
 
 Useful options:
@@ -354,7 +367,7 @@ Digression: Shell globs
 Files and folders can't only be referred to with their full name, but also with so-called "Shell Globs", which are a kind of simple pattern to address groups of files and folders. Instead of explicit names you can use the following placeholders:
 
 - ``?:``  Any single character
-- ``*:``  Any number of any character (including no character at all)
+- ``*:``  Any number of any character (including no character at all, but **not** matching a starting "."))
 - ``[...]:``    One of the characters included in the brackets.  Use "-" to define ranges  of characters
 - ``{word1,word2}:``    Each individual word is expanded
 
@@ -379,7 +392,8 @@ cp – Copy files and folders
 
  :: 
 
-  > cp /usr/bin/less /tmp/backup_of_less
+  $ cp /usr/bin/less /tmp/backup_of_less
+  $
 
 
 **Useful options**:
@@ -392,8 +406,31 @@ cp – Copy files and folders
 We copy a set of exercise files from the network share into our home directory:
  :: 
 
-  > cp -r /g/bio-it/courses/LSB/exercises  ~/exercises
+  $ cp -r /g/bio-it/courses/LSB/exercises  ~/exercises
+  $
 
+rsync - intelligently copying files and folders
+-----------------------------------------------
+
+**Usage**: ``rsync [options] source target
+
+ ::
+
+  $ rsync -av /etc/ root@taperobot:/etc-backup
+  ...
+  $
+
+``rsync`` allows to copy files or folders locally or to wherever you have ``ssh`` access.  You can have ``rsync`` have copying only newer files or only older files.  If copy operation is interrupted, you can rerun ``rsync`` and it will only copy the missing files (in contrast to ``cp`` which will just copy everything again).
+
+``source`` and ``target`` can be local directories or have the form user@remotehost:directory, in which case you'll have to give your password for the remote host.  This latter version will copy over the network.
+
+.. note:: ``rsync`` is one of the few cases, where it matters if a directory is written with an ending slash ("/") or nor: If the source is a directory and ends with a slash, then the **content** of this directory will be copied.  If the source doesn't have an ending slash, then a directory with the same name will be created within the target directory
+
+
+**Useful option combinations**:
+
+-av  Verbosely copies all source files wich are different (different size, different age) or missing from the source.  **Beware**: This will also copy files which are older on the source side
+-au  Silently copies all source files wich are different (different size, different age) or missing from the source.  This combination will not overwrite newer files by older ones
 
 touch – Create a file or change last modification date of an existing file
 --------------------------------------------------------------------------
@@ -402,33 +439,36 @@ touch – Create a file or change last modification date of an existing file
 
  :: 
 
-  > ls afile
+  $ ls afile
   ls: afile: No such file or directory
-  > touch afile
-  > ls afile
+  $ touch afile
+  $ ls afile
   afile
+  $
 
  :: 
 
-  > ls -l aa.pdf
+  $ ls -l aa.pdf
   -rw-r--r-- 1 fthommen cmueller 0 Sep 24 10:59 aa.pdf
-  > touch aa.pdf
-  > ls -l aa.pdf
+  $ touch aa.pdf
+  $ ls -l aa.pdf
   -rw-r--r-- 1 fthommen cmueller 0 Sep 25 22:01 aa.pdf
+  $
 
 rm - Remove files and directories
 ---------------------------------
 
 **Usage**:  ``rm [options] file(s)``
+            ``rm -r [options] directory/ies``
 
  :: 
 
-  rm -r [options] directory/ies
-  > ls afile
+  $ ls afile
   afile
-  > rm afile
-  > ls afile
+  $ rm afile
+  $ ls afile
   ls: afile: No such file or directory
+  $
 
 **Useful options**: 
 
@@ -442,15 +482,16 @@ mv - Move and rename files and folders
 --------------------------------------
 
 **Usage**:  ``mv [options] sourcefile destinationfile``
+            ``mv [options] sourcefile(s) destinationdirectory``
 
  :: 
 
-  mv [options] sourcefile(s) destinationdirectory
-  > ls *.txt
+  $ ls *.txt
   a.txt
-  > mv a.txt b.txt
-  > ls *.txt
+  $ mv a.txt b.txt
+  $ ls *.txt
   b.txt
+  $
 
 **Useful options**: 
 
@@ -467,10 +508,11 @@ mkdir - Create a new directory
 
  :: 
 
-  > ls adir/
+  $ ls adir/
   ls: adir/: No such file or directory
-  > mkdir adir
-  > ls adir
+  $ mkdir adir
+  $ ls adir
+  $
 
 **Useful options**: 
 
@@ -478,9 +520,10 @@ mkdir - Create a new directory
 
 :: 
 
-  > mkdir adir/bdir
+  $ mkdir adir/bdir
   mkdir: cannot create directory 'adir/bdir': No such file or directory
-  > mkdir –p adir/bdir
+  $ mkdir –p adir/bdir
+  $
 
 rmdir - Remove an empty directory
 ---------------------------------
@@ -489,7 +532,8 @@ rmdir - Remove an empty directory
 
  :: 
 
-  > rmdir adir/
+  $ rmdir adir/
+  $
 
 .. note:: If the directory is not empty, rmdir will complain and not remove it.
 
@@ -504,8 +548,9 @@ cat - Print files on terminal (concatenate)
 
  :: 
 
-  > cat  P12931.fasta backup_of_P12931.fasta
-  [...]
+  $ cat  P12931.fasta backup_of_P12931.fasta
+  ...
+  $
 
 
 .. note:: The command :index:`cat` only makes sense for short files or for e.g. combining several files into one.  See the redirection examples later.
@@ -520,7 +565,7 @@ head - Print first lines of a textfile
 
  :: 
 
-  > head /etc/passwd
+  $ head /etc/passwd
   root:x:0:0:root:/root:/bin/bash
   bin:x:1:1:bin:/bin:/sbin/nologin
   daemon:x:2:2:daemon:/sbin:/sbin/nologin
@@ -531,6 +576,7 @@ head - Print first lines of a textfile
   halt:x:7:0:halt:/sbin:/sbin/halt
   mail:x:8:12:mail:/var/spool/mail:/sbin/nologin
   news:x:9:13:news:/etc/news:
+  $
 
 **Useful options**:
 
@@ -546,16 +592,18 @@ The :index:`tail` utility displays the contents of file or, by default, its stan
 
  :: 
 
-  > tail -n 3 /etc/passwd
+  $ tail -n 3 /etc/passwd
   xfs:x:43:43:X Font Server:/etc/X11/fs:/sbin/nologin
   gdm:x:42:42::/var/gdm:/sbin/nologin
   sabayon:x:86:86:Sabayon user:/home/sabayon:/sbin/nologin
+  $
 
 **Useful options**:
 
 -n num  Print num lines (default is 10)
 -f      "Follow" a file (print new lines as they are written to the file)
 
+.. _less:
 
 less - View and navigate files
 ------------------------------
@@ -564,10 +612,11 @@ less - View and navigate files
 
  :: 
 
-  > less  P12931.fasta backup_of_P12931.fasta
-  [...]
+  $ less  P12931.fasta backup_of_P12931.fasta
+  ...
+  $
 
-.. note:: This is the default "pager" for manpages under Linux unless you redefine your $PAGER :ref:`environment variable <environment_variables>` 
+.. note:: This is the default "pager" for manpages under Linux unless you redefine your ``$PAGER`` :ref:`environment variable <environment_variables>` 
 
 
 **Navigation within less**:
@@ -591,19 +640,20 @@ Extracting Informations from Files
 grep - Find lines matching a pattern in textfiles
 -------------------------------------------------
 
-:index:`Grep <grep>` is a command-line utility for searching plain-text data sets for lines matching a regular expression. 
+:index:```grep`` <grep>` is a command-line utility for searching plain-text data sets for lines matching a regular expression. 
 
 **Usage**:  ``grep [options] pattern file(s)``
 
  :: 
 
-  > grep -i ensembl P04637.txt
+  $ grep -i ensembl P04637.txt
   DR   Ensembl; ENST00000269305; ENSP00000269305; ENSG00000141510. 
   DR   Ensembl; ENST00000359597; ENSP00000352610; ENSG00000141510. 
   DR   Ensembl; ENST00000419024; ENSP00000402130; ENSG00000141510. 
   DR   Ensembl; ENST00000420246; ENSP00000391127; ENSG00000141510. 
   DR   Ensembl; ENST00000445888; ENSP00000391478; ENSG00000141510. 
   DR   Ensembl; ENST00000455263; ENSP00000398846; ENSG00000141510. 
+  $
 
 **Useful options**:
 
@@ -616,15 +666,15 @@ grep - Find lines matching a pattern in textfiles
 cut - extracting columns from textfiles
 ---------------------------------------
 
-:index:`Cut <cut>` allows to get at individual columns in structured textfiles (for instance CSV files).
-By default, `cut` assumes the columns are TAB-separated.
+:index:```cut`` <cut>` allows to get at individual columns in structured textfiles (for instance CSV files).
+By default, ``cut`` assumes the columns are TAB-separated.
 
 **Usage**:  ``cut [options] file(s)``
 
 
 **Useful options**:
 
--d    use DELIM instead of TAB for field delimiter  
+-d DELIM   use DELIM instead of TAB for field delimiter  
 -f    select only these fields; this can either be a single field, 
       multiple individual fields separated by comma or a range of startfield and endfield separated by dash '-'
 
@@ -632,32 +682,36 @@ By default, `cut` assumes the columns are TAB-separated.
 
  extract column six from the file */exercises/P12931.csv* (which is separated by semicolon ';'):: 
 
-  > cut -d';' -f6 /exercises/P12931.csv
+  $ cut -d';' -f6 /exercises/P12931.csv
   PMID 
   2136766 
   11804588 
   ...
+  $
 
  extract columns two, three, eight, nine and ten from the same file::
 
-  > cut -d';' -f2,3,8-10 /exercises/P12931.csv
+  $ cut -d';' -f2,3,8-10 /exercises/P12931.csv
   S; 12; 0.21; ; - 
   S; 17; 0.24; MOD_PKA_1; - 
   S; 17; 0.24; MOD_PKA_1; - 
   S; 17; 0.24; MOD_PKA_1; -
   ...
+  $
 
 
 sort - sort a textfile
 ----------------------
 
-The :index:`sort` utility is used to sort a textfile (alphabetically or numerically).
+The :index:```sort``` utility is used to sort a textfile (alphabetically or numerically).
 
 **Usage**:  ``sort [options] file(s)``
 
  :: 
 
-  > sort /etc/passwd
+  $ sort /etc/passwd
+  ...
+  $
 
 **Useful options**:
 
@@ -678,14 +732,15 @@ file - determine the filetype
 
  :: 
 
-  > file /bin/date
+  $ file /bin/date
   /bin/date: ELF 32-bit LSB executable
-  > file /bin
+  $ file /bin
   /bin: directory
-  > file SRC_HUMAN.fasta
+  $ file SRC_HUMAN.fasta
   SRC_HUMAN.fasta: ASCII text
+  $
 
-.. note:: The command :index:`file` uses certain tests and some magic to determine the type of a file
+.. note:: The command :index:```file``` uses certain tests and some magic to determine the type of a file
 
 which - find a (executable) command
 -----------------------------------
@@ -694,11 +749,11 @@ which - find a (executable) command
 
  :: 
 
-  > which date
+  $ which date
   /bin/date
-  > which eclipse
+  $ which eclipse
   /usr/bin/eclipse
-  >
+  $
 
 find - search/find files in any given directory
 -----------------------------------------------
@@ -707,14 +762,14 @@ find - search/find files in any given directory
 
  :: 
 
-  > find /etc
+  $ find /etc
   /etc
   /etc/printcap
   /etc/protocols
   /etc/xinetd.d
   /etc/xinetd.d/ktalk
-  [...]
-  >
+  ...
+  $
 
 ``find`` :index:`is <find>` a powerful command with lots of possible search filters.  Refer to the manpage for a complete list.  
 
@@ -724,41 +779,45 @@ find - search/find files in any given directory
 
  :: 
 
-  > find . -name SRC_HUMAN.fasta
+  $ find . -name SRC_HUMAN.fasta
   ./SRC_HUMAN.fasta
+  $
 
 
 - Find by size: (List those entries in the directory ``/usr/bin`` that are bigger than 500kBytes)
 
  :: 
 
-  > find /usr/bin -size +500k
+  $ find /usr/bin -size +500k
   /usr/bin/oparchive
   /usr/bin/kiconedit
   /usr/bin/opjitconv
-  [...]
+  ...
+  $
 
 
 - Find by type (d=directory, f=file, l=link) 
 
  :: 
 
-  > find . -type d
+  $ find . -type d
   .
   ./adir
+  $
 
 
 Permissions
 ===========
 
-using ls -l to view entries of current directory: 
+using ``ls -l`` to view entries of current directory: 
 
  :: 
 
-  > ls -l
+  $ ls -l
   drwxr-xr-x 2 dinkel gibson 4096 Sep 17 10:46 adir
   lrwxrwxrwx 1 dinkel gibson   15 Sep 17 10:45 H1.fasta -> H2.fasta
   -rw-r--r-- 1 dinkel gibson  643 Sep 17 10:45 H2.fasta
+  $
 
 .. figure:: _static/LinuxPermissions.png
 
@@ -771,11 +830,12 @@ Permissions are set using the ``chmod`` (:index:`change mode<chmod>` ) command.
 
  :: 
 
-  > ls -l adir
+  $ ls -l adir
   drwxr-xr-x 2 dinkel gibson 4096 Sep 17 10:46 adir
-  > chmod u-w,o=w adir
-  > ls -l adir
+  $ chmod u-w,o=w adir
+  $ ls -l adir
   dr-xr-x-w- 2 dinkel gibson 4096 Sep 17 10:46 adir
+  $
 
 The mode is composed of
 
@@ -796,19 +856,22 @@ Add executable permission to the group:
 
  :: 
 
-  > chmod g+x file
+  $ chmod g+x file
+  $
 
 Revoke this permission: 
 
  :: 
 
-  > chmod g-x file
+  $ chmod g-x file
+  $
 
 Allow all to read a directory: 
 
  :: 
 
-  > chmod a+rx adir/
+  $ chmod a+rx adir/
+  $
 
 Remote access
 =============
@@ -820,7 +883,9 @@ parameter (assuming the username on the local machine and remote machine are ide
 
  :: 
 
-  > ssh remote_server
+  $ ssh remote_server
+  ...
+  $
 
 .. note:: Once logged in, :index:`use <hostname, whoami>` ``hostname,`` ``whoami,`` etc. to
           determine on which machine you are currently working and to get a feeling for your 
@@ -830,23 +895,29 @@ To use a different username, you can use either:
 
  :: 
 
-  > ssh -l username remote_server
+  $ ssh -l username remote_server
+  ...
+  $
 
 or 
 
 
  :: 
 
-  > ssh username@remote_server
+  $ ssh username@remote_server
+  ...
+  $
 
 When connecting to a machine for the first time, it might display a warning: 
 
  :: 
 
-  > ssh sub-master
+  $ ssh sub-master
   The authenticity of host 'sub-master (10.11.4.84)' can't be established. 
   RSA key fingerprint is 47:a4:0f:7b:c2:0f:ef:91:8e:65:fc:3c:f7:0c:53:8d. 
   Are you sure you want to continue connecting (yes/no)?
+  ...
+  $
 
 Type *yes* here.
 If this message appears a second time, you should contact your IT specialist...
@@ -854,7 +925,7 @@ If this message appears a second time, you should contact your IT specialist...
 To :index:`disconnect <exit, disconnect>` from the remote machine, type: 
  :: 
 
-  > exit
+  $ exit
 
 
 If setup correctly, you can even use **graphical tools** from the remote server on the local machine. 
@@ -862,7 +933,9 @@ For this to work, you need to start the ssh session with the ``-X`` parameter:
 
  :: 
 
-  > ssh -X remote_server
+  $ ssh -X remote_server
+  ...
+  $
 
 Copying files to and from remote computers can be done using ``scp``  (secure copy). 
 The order of parameters is the same as in ``cp``: first the name of the source, then the name of the destination. Either one can be the remote part.
@@ -870,15 +943,15 @@ The order of parameters is the same as in ``cp``: first the name of the source, 
 
  :: 
 
-  > scp localfile server:/remotefile
+  $ scp localfile server:/remotefile
 
-  > scp server:/remotefile localfile
+  $ scp server:/remotefile localfile
 
 An alternative username can be provided just as in ssh:
 
  :: 
 
-  > scp username@server:/remotefile localfile
+  $ scp username@server:/remotefile localfile
 
 
 IO and Redirections
@@ -894,7 +967,8 @@ Inserting the current date into a new file:
 
  :: 
 
-  > date > file_containing_date
+  $ date > file_containing_date
+  $
 
 .. Warning:: You can easily overwrite files by this! 
 
@@ -902,8 +976,9 @@ Inserting the current date into a new file:
 
  :: 
 
-  > cd /exercises/
-  > grep -i "src" *.fasta > lines_with_src.txt
+  $ cd /exercises/
+  $ grep -i "src" *.fasta > lines_with_src.txt
+  $
 
 Append
 ------
@@ -912,7 +987,8 @@ Append
 
  :: 
 
-  > date >> file_containing_date
+  $ date >> file_containing_date
+  $
 
 .. _pipe:
 
@@ -924,12 +1000,13 @@ Here: use ``ls`` to show the directory contents and then :index:`use <grep>` ``g
 
  :: 
 
-  > cd /exercises
-  > ls | grep fasta
+  $ cd /exercises
+  $ ls | grep fasta
   EPSINS.fasta
   FYN_HUMAN.fasta
   P12931.fasta
   SRC_HUMAN.fasta
+  $
 
 
 .. _environment_variables:
@@ -939,7 +1016,7 @@ Environment Variables
 
 :index:`Environment variables <environment variables>` are a set of dynamic named values that can affect the way running processes will behave on a computer.
 
-$HOME
+``$HOME``
 -----
 
 Contains the location of the user's home directory. Although the current user's home directory can also be found out through the 
@@ -949,7 +1026,7 @@ C functions ``getpwuid`` and ``getuid,`` :index:`$HOME` is often used for conven
 
 .. _path:
 
-$PATH
+``$PATH``
 -----
 
 :index:`$PATH` contains a colon-separated (':') list of directories that the shell searches for commands that do not contain a slash in their name 
@@ -964,12 +1041,12 @@ So if the directory */usr/bin/* is in `$PATH` (which it should), then the comman
 
    Appending (good): ``export PATH=$PATH:/my/new/path``
 
-$PAGER
+``$PAGER``
 ------
 
 The :index:`$PAGER` variable contains the path to the program used to list the contents of files through (such :index:`as <less>` ``less`` :index:`or <more>` ``more``).
 
-$PWD
+``$PWD``
 ----
 
 The :index:`$PWD` variable points to the current directory. Equivalent to the output of the command ``pwd`` when called without arguments.
@@ -981,12 +1058,13 @@ Displaying environment variables
 
  :: 
 
-  > echo $HOME
+  $ echo $HOME
   /localhome/teach01
-  > set
+  $ set
   ...
-  > env
+  $ env
   ...
+  $
 
 Setting an environment variable
 -------------------------------
@@ -995,7 +1073,8 @@ Use ``export`` followed by the variable name and the value of the variable (sepa
 
  :: 
 
-  > export PAGER=/usr/bin/less
+  $ export PAGER=/usr/bin/less
+  $
 
 .. note:: An environment variable is only valid for your current session. Once you logout of your current session, it is lost or reset.
 
