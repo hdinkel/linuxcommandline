@@ -57,7 +57,7 @@ class lsiClassStyle(Style):
         Generic.Strong:            "bold",
         Generic.Prompt:            "bold",
 #        Generic.Prompt:            "bold #c65d09",
-        Generic.Output:            "#888",
+        Generic.Output:            "#222",
         Generic.Traceback:         "#04D",
 
         Error:                     "#F00 bg:#FAA",
