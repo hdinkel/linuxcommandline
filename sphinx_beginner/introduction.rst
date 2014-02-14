@@ -185,6 +185,7 @@ Getting Help
 ============
 
 ``-h/--help`` option, no parameters
+-----------------------------------
 
 Many commands support a "help" option, either through ``-h`` or through ``--help``. 
 Other commands will show a help page or at least a short usage overview if you provide incorrect commandline options
@@ -208,7 +209,7 @@ man - show the manual page of a command
   ...
   $
 
-For the navigation within a :index:`man <man>`page see the :ref:`chapter regarding less <less>`.
+For the navigation within a :index:`manpage <man>` see the :ref:`chapter regarding less <less>`.
 
 .. note:: The behaviour of ``man`` is dependent of the ``$PAGER`` environment variable
 
@@ -357,7 +358,7 @@ Useful options:
 
 ----------
 
-.. figure:: _static/LongListingDeconstructed.png
+.. image:: _static/LongListingDeconstructed.png
 
 ----------
  
@@ -459,7 +460,7 @@ rm - Remove files and directories
 ---------------------------------
 
 **Usage**:  ``rm [options] file(s)``
-            ``rm -r [options] directory/ies``
+        ``rm -r [options] directory/ies``
 
  :: 
 
@@ -674,9 +675,9 @@ By default, ``cut`` assumes the columns are TAB-separated.
 
 **Useful options**:
 
--d DELIM   use DELIM instead of TAB for field delimiter  
--f    select only these fields; this can either be a single field, 
-      multiple individual fields separated by comma or a range of startfield and endfield separated by dash '-'
+-d DELIM   use DELIM instead of TAB for field delimiter. Make sure to use quotes here!
+-f         select only these fields; this can either be a single field, 
+           multiple individual fields separated by comma or a range of startfield and endfield separated by dash '-'
 
 **Examples**:
 
@@ -995,7 +996,7 @@ Append
 Pipe
 ----
 
-Use the :index:`| <|, pipe>` pipe symbol (``|``) to feed the output of one program into the next program. 
+Use the :index:`pipe <|, pipe>` symbol (``|``) to feed the output of one program into the next program. 
 Here: use ``ls`` to show the directory contents and then :index:`use <grep>` ``grep`` to only show those that contain fasta in their name: 
 
  :: 
@@ -1016,8 +1017,8 @@ Environment Variables
 
 :index:`Environment variables <environment variables>` are a set of dynamic named values that can affect the way running processes will behave on a computer.
 
-``$HOME``
----------
+$HOME
+-----
 
 Contains the location of the user's home directory. Although the current user's home directory can also be found out through the 
 C functions ``getpwuid`` and ``getuid,`` :index:`$HOME` is often used for convenience in various shell scripts (and other contexts).
@@ -1026,8 +1027,8 @@ C functions ``getpwuid`` and ``getuid,`` :index:`$HOME` is often used for conven
 
 .. _path:
 
-``$PATH``
----------
+$PATH
+-----
 
 :index:`$PATH` contains a colon-separated (':') list of directories that the shell searches for commands that do not contain a slash in their name 
 (commands with slashes are interpreted as file names to execute, and the shell attempts to execute the files directly).
@@ -1041,13 +1042,13 @@ So if the directory */usr/bin/* is in `$PATH` (which it should), then the comman
 
    Appending (good): ``export PATH=$PATH:/my/new/path``
 
-``$PAGER``
-----------
+$PAGER
+------
 
 The :index:`$PAGER` variable contains the path to the program used to list the contents of files through (such :index:`as <less>` ``less`` :index:`or <more>` ``more``).
 
-``$PWD``
---------
+$PWD
+----
 
 The :index:`$PWD` variable points to the current directory. Equivalent to the output of the command ``pwd`` when called without arguments.
 

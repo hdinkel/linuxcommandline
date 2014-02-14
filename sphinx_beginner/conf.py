@@ -180,7 +180,7 @@ latex_elements = {
 # The font size ('10pt', '11pt' or '12pt').
 'pointsize': '11pt',
 
-'fontpkg': '\\usepackage{tgbonum}',
+'fontpkg': '',
 
 # Additional stuff for the LaTeX preamble.
 'preamble': """\setcounter{tocdepth}{2}\usepackage{fancyvrb}
