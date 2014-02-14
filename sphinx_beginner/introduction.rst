@@ -130,7 +130,7 @@ or filenames.
 Printing some text
 ------------------
 
-To simply print some text in the console, use :index:`echo`:
+To simply print some text in the console, :index:`use <echo>` ``echo``:
 
 **Usage**:  ``echo``
 
@@ -209,12 +209,12 @@ man - show the manual page of a command
   ...
   $
 
-For the navigation within a :index:`manpage <man>` see the :ref:`chapter regarding less <less>`.
+For the navigation within a :index:`manpage <man>` see the :ref:`paragraph regarding less <less>`.
 
 .. note:: The behaviour of ``man`` is dependent of the ``$PAGER`` environment variable
 
 apropos - list manpages containing a keyword in their description
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-----------------------------------------------------------------
 
 **Usage**: ``apropos keyword``
 
@@ -227,11 +227,11 @@ apropos - list manpages containing a keyword in their description
   whoami               (1)  - print effective userid
   $
 
-Use :index:```apropos``` to find candidates for specific tasks
+:index:`Use <apropos>` ``apropos`` to find candidates for specific tasks
 
 
 /usr/share/doc/
-^^^^^^^^^^^^^^^
+---------------
 
 The ``/usr/share/doc/`` directory in some Linux distributions contains additional documentation of installed software packages 
 
@@ -282,7 +282,7 @@ date - Print current date and time
   Tue Sep 25 19:57:50 CEST 2012
   $
 
-.. note:: The command ``time`` does something completely different than :index:```date``` and is not used to show the current time.
+.. note:: The :index:`command <time>` ``time`` does something completely different :index:`from <date>` ``date`` and is *not* used to show the current time.
 
 Moving Around
 =============
@@ -307,7 +307,7 @@ Special directories:
 - "``..``": The parent directory of the current working directory
 - "``~``":  Your homedirectory
 
-.. note:: Using :index:```cd``` without a directory is equivalent to "``cd ~``" and changes into the users's homedirectory
+.. note:: :index:`Using <cd>` ``cd`` without a directory is equivalent to "``cd ~``" and changes into the users's homedirectory
 .. note:: Please note the difference between absolute pathes (starting with "``/``") and relative pathes (starting with a directory name)
 
 ::
@@ -410,7 +410,7 @@ We copy a set of exercise files from the network share into our home directory:
   $ cp -r /g/bio-it/courses/LSB/exercises  ~/exercises
   $
 
-rsync - intelligently copying files and folders
+:index:`rsync` - intelligently copying files and folders
 -----------------------------------------------
 
 **Usage**: ``rsync [options] source target``
@@ -425,15 +425,15 @@ rsync - intelligently copying files and folders
 
 ``source`` and ``target`` can be local directories or have the form user@remotehost:directory, in which case you'll have to give your password for the remote host.  This latter version will copy over the network.
 
-.. note:: ``rsync`` is one of the few cases, where it matters if a directory is written with an ending slash ("/") or nor: If the source is a directory and ends with a slash, then the **content** of this directory will be copied.  If the source doesn't have an ending slash, then a directory with the same name will be created within the target directory
+.. note:: ``rsync`` is one of the few cases, where it effectively matters if a directory is written with an ending slash ("/") or nor: If the source is a directory and ends with a slash, then the *content* of this directory will be copied.  If the source doesn't have an ending slash, then *a directory with the same name* will be created *within the target directory*
 
 
 **Useful option combinations**:
 
 -av  Verbosely copies all source files wich are different (different size, different age) or missing from the source.  **Beware**: This will also copy files which are older on the source side
--au  Silently copies all source files wich are different (different size, different age) or missing from the source.  This combination will not overwrite newer files by older ones
+-au  Silently copies all source files wich are different (different size, different age) or missing from the source.  This combination will *not* overwrite newer files by older ones
 
-touch – Create a file or change last modification date of an existing file
+:index:`touch` – Create a file or change last modification date of an existing file
 --------------------------------------------------------------------------
 
 **Usage**:  ``touch file(s) or directory/ies``
@@ -456,7 +456,7 @@ touch – Create a file or change last modification date of an existing file
   -rw-r--r-- 1 fthommen cmueller 0 Sep 25 22:01 aa.pdf
   $
 
-rm - Remove files and directories
+:index:`rm` - Remove files and directories
 ---------------------------------
 
 **Usage**:  ``rm [options] file(s)``
@@ -479,7 +479,7 @@ rm - Remove files and directories
 
 .. note:: rm without the -i option will usually not ask you if you really want to remove the file or directory
 
-mv - Move and rename files and folders
+:index:`mv` - Move and rename files and folders
 --------------------------------------
 
 **Usage**:  ``mv [options] sourcefile destinationfile``
@@ -502,7 +502,7 @@ mv - Move and rename files and folders
 
 .. _mkdir:
 
-mkdir - Create a new directory
+:index:`mkdir` - Create a new directory
 ------------------------------
 
 **Usage**:  ``mkdir [options] directory``
@@ -526,7 +526,7 @@ mkdir - Create a new directory
   $ mkdir –p adir/bdir
   $
 
-rmdir - Remove an empty directory
+:index:`rmdir` - Remove an empty directory
 ---------------------------------
 
 **Usage**:  ``rmdir directory``
@@ -536,13 +536,13 @@ rmdir - Remove an empty directory
   $ rmdir adir/
   $
 
-.. note:: If the directory is not empty, rmdir will complain and not remove it.
+.. note:: If the directory is not empty, ``rmdir`` will complain and not remove it.
 
 
 View Files
 ==========
 
-cat - Print files on terminal (concatenate)
+:index:`cat` - Print files on terminal (concatenate)
 -------------------------------------------
 
 **Usage**:  ``cat [options] file(s)``
@@ -554,13 +554,13 @@ cat - Print files on terminal (concatenate)
   $
 
 
-.. note:: The command :index:`cat` only makes sense for short files or for e.g. combining several files into one.  See the redirection examples later.
+.. note:: The :index:`command <cat>` ``cat`` only makes sense for short files or for e.g. combining several files into one.  See the redirection examples later.
 
 
-head - Print first lines of a textfile
+:index:`head` - Print first lines of a textfile
 --------------------------------------
 
-:index:`Head <head>` is a program on Unix and Unix-like systems used to display the beginning of a text file or piped data.
+``head`` is a program on Unix and Unix-like systems used to display the beginning of a text file or piped data.
 
 **Usage**:  ``head [options] file(s)``
 
@@ -584,10 +584,10 @@ head - Print first lines of a textfile
 -n num  Print num lines (default is 10)
 
 
-tail - Print last lines of a textfile
+:index:`tail` - Print last lines of a textfile
 -------------------------------------
 
-The :index:`tail` utility displays the contents of file or, by default, its standard input, to the standard output.
+The ``tail`` utility displays the contents of file or, by default, its standard input, to the standard output.
 
 **Usage**:  ``tail [options] file(s)``
 
@@ -606,7 +606,7 @@ The :index:`tail` utility displays the contents of file or, by default, its stan
 
 .. _less:
 
-less - View and navigate files
+:index:`less` - View and navigate files
 ------------------------------
 
 **Usage**:  ``less [options] file(s)``
@@ -638,10 +638,10 @@ quit:                                   q
 Extracting Informations from Files
 ==================================
 
-grep - Find lines matching a pattern in textfiles
+:index:`grep` - Find lines matching a pattern in textfiles
 -------------------------------------------------
 
-:index:```grep`` <grep>` is a command-line utility for searching plain-text data sets for lines matching a regular expression. 
+``grep`` is a command-line utility for searching plain-text data sets for lines matching a regular expression. 
 
 **Usage**:  ``grep [options] pattern file(s)``
 
@@ -664,10 +664,10 @@ grep - Find lines matching a pattern in textfiles
 -L      List files without matches
 -c      Print count of matching lines for each file
 
-cut - extracting columns from textfiles
+:index:`cut` - extracting columns from textfiles
 ---------------------------------------
 
-:index:```cut`` <cut>` allows to get at individual columns in structured textfiles (for instance CSV files).
+``cut`` allows to get at individual columns in structured textfiles (for instance CSV files).
 By default, ``cut`` assumes the columns are TAB-separated.
 
 **Usage**:  ``cut [options] file(s)``
@@ -701,10 +701,10 @@ By default, ``cut`` assumes the columns are TAB-separated.
   $
 
 
-sort - sort a textfile
+:index:`sort` - sort a textfile
 ----------------------
 
-The :index:```sort``` utility is used to sort a textfile (alphabetically or numerically).
+The ``sort`` utility is used to sort a textfile (alphabetically or numerically).
 
 **Usage**:  ``sort [options] file(s)``
 
@@ -726,7 +726,7 @@ The :index:```sort``` utility is used to sort a textfile (alphabetically or nume
 Useful Filetools
 ================
 
-file - determine the filetype
+:index:`file` - determine the filetype
 -----------------------------
 
 **Usage**:  ``file [options] file(s)``
@@ -741,9 +741,9 @@ file - determine the filetype
   SRC_HUMAN.fasta: ASCII text
   $
 
-.. note:: The command :index:```file``` uses certain tests and some magic to determine the type of a file
+.. note:: The command ``file`` uses certain tests and some magic to determine the type of a file
 
-which - find a (executable) command
+:index:`which` - find a (executable) command
 -----------------------------------
 
 **Usage**:  ``which [options] command(s)``
@@ -756,7 +756,7 @@ which - find a (executable) command
   /usr/bin/eclipse
   $
 
-find - search/find files in any given directory
+:index:`find` - search/find files in any given directory
 -----------------------------------------------
 
 **Usage**:  ``find [starting path(s)] [search filter]``
@@ -772,7 +772,7 @@ find - search/find files in any given directory
   ...
   $
 
-``find`` :index:`is <find>` a powerful command with lots of possible search filters.  Refer to the manpage for a complete list.  
+``find`` is a powerful command with lots of possible search filters.  Refer to the manpage for a complete list.  
 
 **Examples**:
 
@@ -807,7 +807,7 @@ find - search/find files in any given directory
   $
 
 
-Permissions
+:index:`Permissions`
 ===========
 
 using ``ls -l`` to view entries of current directory: 
@@ -825,7 +825,7 @@ using ``ls -l`` to view entries of current directory:
 Changing Permissions
 --------------------
 
-Permissions are set using the ``chmod`` (:index:`change mode<chmod>` ) command. 
+Permissions are set using the ``chmod`` (:index:`change mode <chmod>` ) command. 
 
 **Usage**:  ``chmod [options] mode(s) files(s)``
 
@@ -874,11 +874,11 @@ Allow all to read a directory:
   $ chmod a+rx adir/
   $
 
-Remote access
+:index:`Remote access`
 =============
 
 To execute commands at a remote machine/server, you need to log in to this machine. This is done
-using the ``ssh`` command (secure shell). In its simplest form, it takes just the machinename as
+using the ``ssh`` :index:`command <ssh>` (:index:`secure shell`). In its simplest form, it takes just the machinename as
 parameter (assuming the username on the local machine and remote machine are identical): 
 
 
@@ -913,10 +913,11 @@ When connecting to a machine for the first time, it might display a warning:
 
  :: 
 
-  $ ssh sub-master
-  The authenticity of host 'sub-master (10.11.4.84)' can't be established. 
-  RSA key fingerprint is 47:a4:0f:7b:c2:0f:ef:91:8e:65:fc:3c:f7:0c:53:8d. 
-  Are you sure you want to continue connecting (yes/no)?
+  $ ssh submaster
+  The authenticity of host 'submaster (10.11.4.219)' can't be established.
+  RSA key fingerprint is a4:2c:c1:a6:34:49:a3:a9:b2:c3:52:f5:37:94:69:f5.
+  Are you sure you want to continue connecting (yes/no)? 
+
   ...
   $
 
@@ -938,7 +939,7 @@ For this to work, you need to start the ssh session with the ``-X`` parameter:
   ...
   $
 
-Copying files to and from remote computers can be done using ``scp``  (secure copy). 
+Copying files to and from remote computers can be done using ``scp``  (:index:`secure copy <scp, secure copy>`). 
 The order of parameters is the same as in ``cp``: first the name of the source, then the name of the destination. Either one can be the remote part.
 
 
@@ -981,10 +982,10 @@ Inserting the current date into a new file:
   $ grep -i "src" *.fasta > lines_with_src.txt
   $
 
-Append
+:index:`Append <append, File; append>`
 ------
 
-:index:`Append <append>` something to a file (rather than overwriting it): 
+Append something to a file (rather than overwriting it): 
 
  :: 
 
@@ -1017,40 +1018,40 @@ Environment Variables
 
 :index:`Environment variables <environment variables>` are a set of dynamic named values that can affect the way running processes will behave on a computer.
 
-$HOME
+:index:`$HOME`
 -----
 
 Contains the location of the user's home directory. Although the current user's home directory can also be found out through the 
-C functions ``getpwuid`` and ``getuid,`` :index:`$HOME` is often used for convenience in various shell scripts (and other contexts).
+C functions ``getpwuid`` and ``getuid,`` ``$HOME`` is often used for convenience in various shell scripts (and other contexts).
 
 .. note:: Do not change this variable unless you have a good reason and you know what you are doing!
 
 .. _path:
 
-$PATH
+:index:`$PATH`
 -----
 
-:index:`$PATH` contains a colon-separated (':') list of directories that the shell searches for commands that do not contain a slash in their name 
+``$PATH`` contains a colon-separated (':') list of directories that the shell searches for commands that do not contain a slash in their name 
 (commands with slashes are interpreted as file names to execute, and the shell attempts to execute the files directly).
-So if the directory */usr/bin/* is in `$PATH` (which it should), then the command ``/usr/bin/less`` can be accessed by simply typing ``less`` instead of
+So if the directory ``/usr/bin`` is in ``$PATH`` (which it should), then the command ``/usr/bin/less`` can be accessed by simply typing ``less`` instead of
 ``/usr/bin/less``. How convenient!
 
-.. Warning:: If you ever need to change this variable, you should always **append** to it, rather
+.. Warning:: If you ever need to change this variable, you should always *append* to it, rather
    than overwriting it: 
 
    Overwriting (bad): ``export PATH=/my/new/path``; 
 
    Appending (good): ``export PATH=$PATH:/my/new/path``
 
-$PAGER
+:index:`$PAGER`
 ------
 
-The :index:`$PAGER` variable contains the path to the program used to list the contents of files through (such :index:`as <less>` ``less`` :index:`or <more>` ``more``).
+The ``$PAGER`` variable contains the path to the program used to list the contents of files through (such :index:`as <less>` ``less`` :index:`or <more>` ``more``).
 
-$PWD
+:index:`$PWD`
 ----
 
-The :index:`$PWD` variable points to the current directory. Equivalent to the output of the command ``pwd`` when called without arguments.
+The ``$PWD`` variable points to the current directory. Equivalent to the output of the command ``pwd`` when called without arguments.
 
 Displaying environment variables
 --------------------------------
