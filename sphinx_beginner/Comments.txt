@@ -1,8 +1,6 @@
 
 
 Verbesserungen:
- - Index: Seitenzahlen am rechten Spaltenrand, mot oder ohne Punkte als
-   Verbindungslinien  [ft]
  - Codebloecke: Zeilenweise Formattierung, grauer Hintergrund  [ft]
  - subsectiontitle prominenter / farbig
  - Titlepage: Datum ganz unten, font wie titel

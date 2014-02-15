@@ -105,6 +105,7 @@ latex:
 latexpdf:
 	$(SPHINXBUILD) -b latex $(ALLSPHINXOPTS) $(BUILDDIR)/latex
 	sed -i.bak -e 's/\\usepackage\[utf8\]{inputenc}/\\usepackage[utf8]{inputenc}\\usepackage[usenames,dvipsnames,svgnames,table]{xcolor}/g'  -e 's|begin{Verbatim}\[|begin{Verbatim}\[frame=single, rulecolor=\\color{lightgray}, fontfamily=courier, |' $(BUILDDIR)/latex/*.tex
+	echo 'delim_0 "\\\dotfill"\n delim_1 "\\\dotfill"\n delim_2 "\\\dotfill"\n' >> $(BUILDDIR)/latex/python.ist
 	@echo "Running LaTeX files through pdflatex..."
 	$(MAKE) -C $(BUILDDIR)/latex all-pdf
 	@echo "pdflatex finished; the PDF files are in $(BUILDDIR)/latex."
