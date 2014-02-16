@@ -61,16 +61,16 @@ General Remarks Regarding Using UNIX/Linux Systems
 General Structure of Linux Commands
 ***********************************
 
-:index:`Many<command; general structure>` linux commands have options and accept arguments. Options are a set of switch-like parameters
+Many linux commands have options and accept arguments. Options are a set of switch-like parameters
 while arguments are usually free text input (such as a filename).
 
 .. figure:: _static/LinuxCommandStructure.png
 
-  General structure of Linux commands.
+   General structure of Linux commands.
 
 For example, in the commandline ``ls -l /usr/bin``, ``ls`` is the command, ``-l`` is an option and ``/usr/bin`` qualifies as an argument.
 
-:index;`Commandline options <command; options, command; switches>` (sometimes called comandline switches) commonly have one of the two following
+Commandline options (sometimes called comandline switches) commonly have one of the two following
 forms: The short form ``-s`` (just a single character) or the long form ``--string.`` E.g.
 
  :: 
@@ -143,13 +143,13 @@ To simply print some text in the console, :index:`use <echo>` ``echo``:
 It can also be used to print the content of a variable, see section :ref:`environment_variables`...
 
 
-:index:`Interrupting commands <command; interrupt>`
+Interrupting commands
 ----------------------
 
 Whenever a program gets stuck or takes too long to finish, you can *interrupt* it with the shortcut
 :kbd:`CONTROL-C`.
 
-:index:`clear` – Clear the “screen”
+clear – Clear the “screen”
 --------------------------
 
 **Usage**:  ``clear``
@@ -159,11 +159,11 @@ Whenever a program gets stuck or takes too long to finish, you can *interrupt* i
   $ clear
   $
 
-In case the output of the terminal/screen gets cluttered, you can use ``clear`` to redraw the screen... 
+In case the output of the terminal/screen gets cluttered, you can use ``clear`` to :index:`redraw <clear>` the screen... 
 
 If this doesn't work, you can use ``reset`` to perform a re-initialization of the terminal:
 
-:index:`reset` – Reset your terminal
+reset – Reset your terminal
 ---------------------------
 
 **Usage**:  ``reset [options]``
@@ -176,7 +176,7 @@ If this doesn't work, you can use ``reset`` to perform a re-initialization of th
 Leave the shell
 -----------------
 
-To :index:`exit` the shell/terminal, just type ``exit`` or press :kbd:`CONTROL-D`.
+To exit the shell/terminal, just type ``exit`` or press :kbd:`CONTROL-D`.
 
 
 .. _help:
@@ -190,7 +190,7 @@ Getting Help
 Many commands support a "help" option, either through ``-h`` or through ``--help``. 
 Other commands will show a help page or at least a short usage overview if you provide incorrect commandline options
 
-:index:`man` - show the manual page of a command
+man - show the manual page of a command
 ---------------------------------------
 
 **Usage**: 
@@ -209,11 +209,11 @@ Other commands will show a help page or at least a short usage overview if you p
   ...
   $
 
-For the navigation within a manpage see the :ref:`paragraph regarding less <less>`.
+For the navigation within a :index:`manpage <man>` see the :ref:`paragraph regarding less <less>`.
 
 .. note:: The behaviour of ``man`` is dependent of the ``$PAGER`` environment variable
 
-:index:`apropos` - list manpages containing a keyword in their description
+apropos - list manpages containing a keyword in their description
 -----------------------------------------------------------------
 
 **Usage**: ``apropos keyword``
@@ -227,7 +227,7 @@ For the navigation within a manpage see the :ref:`paragraph regarding less <less
   whoami               (1)  - print effective userid
   $
 
-Use ``apropos`` to find candidates for specific tasks
+:index:`Use <apropos>` ``apropos`` to find candidates for specific tasks
 
 
 /usr/share/doc/
@@ -238,7 +238,7 @@ The ``/usr/share/doc/`` directory in some Linux distributions contains additiona
 Who am I, where am I
 ====================
 
-:index:`whoami` - Print your username
+whoami - Print your username
 ----------------------------
 
 **Usage**: ``whoami``
@@ -249,7 +249,7 @@ Who am I, where am I
   fthommen
   $
 
-:index:`hostname` - Print the name of the computer
+hostname - Print the name of the computer
 -----------------------------------------
 
 **Usage**: ``hostname``
@@ -260,7 +260,7 @@ Who am I, where am I
   pc-teach01
   $
 
-:index:`pwd` - Print the current working directory
+pwd - Print the current working directory
 -----------------------------------------
 
 **Usage**: ``pwd`` 
@@ -271,7 +271,7 @@ Who am I, where am I
   /home/fthommen
   $
 
-:index:`date` - Print current date and time
+date - Print current date and time
 ----------------------------------
 
 **Usage**: ``date``
@@ -282,12 +282,12 @@ Who am I, where am I
   Tue Sep 25 19:57:50 CEST 2012
   $
 
-.. note:: The :index:`command <time>` ``time`` does something completely different from ``date`` and is *not* used to show the current time.
+.. note:: The :index:`command <time>` ``time`` does something completely different :index:`from <date>` ``date`` and is *not* used to show the current time.
 
 Moving Around
 =============
 
-:index:`cd` - Change the working directory
+cd - Change the working directory
 ---------------------------------
 
 **Usage**: ``cd [new_directory]``
@@ -307,7 +307,7 @@ Special directories:
 - "``..``": The parent directory of the current working directory
 - "``~``":  Your homedirectory
 
-.. note:: Using ``cd`` without a directory is equivalent to "``cd ~``" and changes into the users's homedirectory
+.. note:: :index:`Using <cd>` ``cd`` without a directory is equivalent to "``cd ~``" and changes into the users's homedirectory
 .. note:: Please note the difference between absolute pathes (starting with "``/``") and relative pathes (starting with a directory name)
 
 ::
@@ -331,7 +331,7 @@ Special directories:
 See What's Around
 =================
 
-:index:`ls` - List directory contents
+ls - List directory contents
 ----------------------------
 
 **Usage**:  
@@ -356,11 +356,11 @@ Useful options:
 -d      Show directory information instead of  directory content
 -t      Sort listing by modification time (most recent on top)
 
+----------
 
-.. figure:: _static/LongListingDeconstructed.png
+.. image:: _static/LongListingDeconstructed.png
 
-  Elements of a long file listing (``ls -l``)
-
+----------
  
 Digression: Shell globs
 -----------------------
@@ -385,7 +385,7 @@ Examples:
 Organize Files and Folders
 ==========================
 
-:index:`cp` – Copy files and folders
+cp – Copy files and folders
 ---------------------------
 
 **Usage**:  ``cp [options] sourcefile destinationfile``
@@ -421,11 +421,11 @@ We copy a set of exercise files from the network share into our home directory:
   ...
   $
 
-``rsync`` allows you to copy files or folders locally or to wherever you have ``ssh`` access.  You can have ``rsync`` have copying only newer files or only older files.  If copy operation is interrupted, you can rerun ``rsync`` and it will only copy the missing files (in contrast to ``cp`` which will just copy everything again).
+``rsync`` allows to copy files or folders locally or to wherever you have ``ssh`` access.  You can have ``rsync`` have copying only newer files or only older files.  If copy operation is interrupted, you can rerun ``rsync`` and it will only copy the missing files (in contrast to ``cp`` which will just copy everything again).
 
-``source`` and ``target`` can be local directories or have the form ``user@remotehost:directory``, in which case you'll have to give your password for the remote host.  This latter version will copy over the network.
+``source`` and ``target`` can be local directories or have the form user@remotehost:directory, in which case you'll have to give your password for the remote host.  This latter version will copy over the network.
 
-.. note:: ``rsync`` is one of the few cases, where it effectively matters if a directory is written with an ending slash ("/") or nor: If the source is a directory and ends with a slash, then the *content* of this directory will be copied into the target directory.  If the source doesn't have an ending slash, then *a directory with the same name* will be created *within the target directory*
+.. note:: ``rsync`` is one of the few cases, where it effectively matters if a directory is written with an ending slash ("/") or nor: If the source is a directory and ends with a slash, then the *content* of this directory will be copied.  If the source doesn't have an ending slash, then *a directory with the same name* will be created *within the target directory*
 
 
 **Useful option combinations**:
@@ -617,7 +617,7 @@ The ``tail`` utility displays the contents of file or, by default, its standard 
   ...
   $
 
-.. note:: This is the default "pager" (a program for viewing files page by page, not an old-fashioned telecommunications device) for manpages under Linux unless you redefine your ``$PAGER`` :ref:`environment variable <environment_variables>` 
+.. note:: This is the default "pager" for manpages under Linux unless you redefine your ``$PAGER`` :ref:`environment variable <environment_variables>` 
 
 
 **Navigation within less**:
@@ -675,7 +675,7 @@ By default, ``cut`` assumes the columns are TAB-separated.
 
 **Useful options**:
 
--d *DELIM*   use DELIM instead of TAB for field delimiter. Make sure to use quotes here!
+-d DELIM   use DELIM instead of TAB for field delimiter. Make sure to use quotes here!
 -f         select only these fields; this can either be a single field, 
            multiple individual fields separated by comma or a range of startfield and endfield separated by dash '-'
 
@@ -822,9 +822,6 @@ using ``ls -l`` to view entries of current directory:
 
 .. figure:: _static/LinuxPermissions.png
 
-  Linux file permissions
-
-
 Changing Permissions
 --------------------
 
@@ -928,13 +925,12 @@ Type *yes* here.
 If this message appears a second time, you should contact your IT specialist...
 
 To :index:`disconnect <exit, disconnect>` from the remote machine, type: 
-
  :: 
 
   $ exit
 
 
-If setup correctly, you can even use *graphical tools* from the remote server on the local machine. 
+If setup correctly, you can even use **graphical tools** from the remote server on the local machine. 
 For this to work, you need to start the ssh session with the ``-X`` parameter:
 
  :: 
@@ -966,7 +962,7 @@ IO and Redirections
 Redirect
 --------
 
-:index:`Redirect <redirect, \>>` the output of one program into e.g. a file: 
+:index:`Redirect <redirect>` the output of one program into e.g. a file: 
 
 
 Inserting the current date into a new file: 
@@ -976,7 +972,7 @@ Inserting the current date into a new file:
   $ date > file_containing_date
   $
 
-.. Warning:: You can easily :index:`overwrite files <file; overwrite>` by this! 
+.. Warning:: You can easily overwrite files by this! 
 
 :index:`Filtering <grep>` lines containing the term "src" from FASTA files and inserting them into the file lines_with_src.txt: 
 
@@ -986,7 +982,7 @@ Inserting the current date into a new file:
   $ grep -i "src" *.fasta > lines_with_src.txt
   $
 
-:index:`Append <append, File; append, \>\>>`
+:index:`Append <append, File; append>`
 ------
 
 Append something to a file (rather than overwriting it): 
