@@ -301,16 +301,16 @@ Moving Around
   /usr/bin
   $
 
+.. note:: Using ``cd`` without a directory is equivalent to "``cd ~``" and changes into the users's homedirectory
+.. note:: Please note the difference between absolute pathes (starting with "``/``") and relative pathes (starting with a directory name)
+
 Special directories:
 
 - "``.``":  The current working directory
 - "``..``": The parent directory of the current working directory
 - "``~``":  Your homedirectory
 
-.. note:: Using ``cd`` without a directory is equivalent to "``cd ~``" and changes into the users's homedirectory
-.. note:: Please note the difference between absolute pathes (starting with "``/``") and relative pathes (starting with a directory name)
-
-::
+ ::
 
   $ pwd
   /usr
@@ -318,14 +318,13 @@ Special directories:
   $ pwd
   /bin
 
-::
+ ::
 
   $ pwd
   /usr
-  $ cd bin
+  $ cd 
   $ pwd
-  /usr/bin
-  $
+  /home/fthommen
 
 
 See What's Around
