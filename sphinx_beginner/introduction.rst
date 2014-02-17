@@ -674,9 +674,8 @@ By default, ``cut`` assumes the columns are TAB-separated.
 
 **Useful options**:
 
--d *DELIM*   use DELIM instead of TAB for field delimiter. Make sure to use quotes here!
--f         select only these fields; this can either be a single field, 
-           multiple individual fields separated by comma or a range of startfield and endfield separated by dash '-'
+-d DELIM   use DELIM instead of TAB for field delimiter. Make sure to use quotes here!
+-f         select only these fields; this can either be a single field, multiple individual fields separated by comma or a range of startfield and endfield separated by dash '-'
 
 **Examples**:
 
