@@ -984,7 +984,7 @@ Inserting the current date into a new file:
   $ grep -i "src" *.fasta > lines_with_src.txt
   $
 
-:index:`Append <append, File; append, \>\>>`
+:index:`Append <append, file; append, \>\>>`
 --------------------------------------------
 
 Append something to a file (rather than overwriting it): 
