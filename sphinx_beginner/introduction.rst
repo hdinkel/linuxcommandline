@@ -61,16 +61,16 @@ General Remarks Regarding Using UNIX/Linux Systems
 General Structure of Linux Commands
 ***********************************
 
-Many linux commands have options and accept arguments. Options are a set of switch-like parameters
+:index:`Many <command; general structure>` linux commands have options and accept arguments. Options are a set of switch-like parameters
 while arguments are usually free text input (such as a filename).
 
 .. figure:: _static/LinuxCommandStructure.png
 
-   General structure of Linux commands.
+  General structure of Linux commands.
 
 For example, in the commandline ``ls -l /usr/bin``, ``ls`` is the command, ``-l`` is an option and ``/usr/bin`` qualifies as an argument.
 
-Commandline options (sometimes called comandline switches) commonly have one of the two following
+:index:`Commandline options <command, options, command; switches>` (sometimes called comandline switches) commonly have one of the two following
 forms: The short form ``-s`` (just a single character) or the long form ``--string.`` E.g.
 
  :: 
@@ -143,14 +143,14 @@ To simply print some text in the console, :index:`use <echo>` ``echo``:
 It can also be used to print the content of a variable, see section :ref:`environment_variables`...
 
 
-Interrupting commands
-----------------------
+:index:`Interrupting commands <command; interrupt>`
+---------------------------------------------------
 
 Whenever a program gets stuck or takes too long to finish, you can *interrupt* it with the shortcut
 :kbd:`CONTROL-C`.
 
-clear – Clear the “screen”
---------------------------
+:index:`clear` – Clear the “screen”
+-----------------------------------
 
 **Usage**:  ``clear``
 
@@ -159,12 +159,12 @@ clear – Clear the “screen”
   $ clear
   $
 
-In case the output of the terminal/screen gets cluttered, you can use ``clear`` to :index:`redraw <clear>` the screen... 
+In case the output of the terminal/screen gets cluttered, you can use ``clear`` to redraw the screen... 
 
 If this doesn't work, you can use ``reset`` to perform a re-initialization of the terminal:
 
-reset – Reset your terminal
----------------------------
+:index:`reset` – Reset your terminal
+------------------------------------
 
 **Usage**:  ``reset [options]``
 
@@ -176,7 +176,7 @@ reset – Reset your terminal
 Leave the shell
 -----------------
 
-To exit the shell/terminal, just type ``exit`` or press :kbd:`CONTROL-D`.
+To :index:`exit` the shell/terminal, just type ``exit`` or press :kbd:`CONTROL-D`.
 
 
 .. _help:
@@ -190,8 +190,8 @@ Getting Help
 Many commands support a "help" option, either through ``-h`` or through ``--help``. 
 Other commands will show a help page or at least a short usage overview if you provide incorrect commandline options
 
-man - show the manual page of a command
----------------------------------------
+:index:`man` - show the manual page of a command
+------------------------------------------------
 
 **Usage**: 
 ``man command or file``
@@ -209,12 +209,12 @@ man - show the manual page of a command
   ...
   $
 
-For the navigation within a :index:`manpage <man>` see the :ref:`paragraph regarding less <less>`.
+For the navigation within a manpage see the :ref:`paragraph regarding less <less>`.
 
 .. note:: The behaviour of ``man`` is dependent of the ``$PAGER`` environment variable
 
-apropos - list manpages containing a keyword in their description
------------------------------------------------------------------
+:index:`apropos` - list manpages containing a keyword in their description
+--------------------------------------------------------------------------
 
 **Usage**: ``apropos keyword``
 
@@ -227,7 +227,7 @@ apropos - list manpages containing a keyword in their description
   whoami               (1)  - print effective userid
   $
 
-:index:`Use <apropos>` ``apropos`` to find candidates for specific tasks
+Use ``apropos`` to find candidates for specific tasks
 
 
 /usr/share/doc/
@@ -238,8 +238,8 @@ The ``/usr/share/doc/`` directory in some Linux distributions contains additiona
 Who am I, where am I
 ====================
 
-whoami - Print your username
-----------------------------
+:index:`whoami` - Print your username
+-------------------------------------
 
 **Usage**: ``whoami``
 
@@ -249,8 +249,8 @@ whoami - Print your username
   fthommen
   $
 
-hostname - Print the name of the computer
------------------------------------------
+:index:`hostname` - Print the name of the computer
+--------------------------------------------------
 
 **Usage**: ``hostname``
 
@@ -260,8 +260,8 @@ hostname - Print the name of the computer
   pc-teach01
   $
 
-pwd - Print the current working directory
------------------------------------------
+:index:`pwd` - Print the current working directory
+--------------------------------------------------
 
 **Usage**: ``pwd`` 
 
@@ -271,8 +271,8 @@ pwd - Print the current working directory
   /home/fthommen
   $
 
-date - Print current date and time
-----------------------------------
+:index:`date` - Print current date and time
+-------------------------------------------
 
 **Usage**: ``date``
 
@@ -282,13 +282,13 @@ date - Print current date and time
   Tue Sep 25 19:57:50 CEST 2012
   $
 
-.. note:: The :index:`command <time>` ``time`` does something completely different :index:`from <date>` ``date`` and is *not* used to show the current time.
+.. note:: The :index:`command <time>` ``time`` does something completely different from ``date`` and is *not* used to show the current time.
 
 Moving Around
 =============
 
-cd - Change the working directory
----------------------------------
+:index:`cd` - Change the working directory
+------------------------------------------
 
 **Usage**: ``cd [new_directory]``
 
@@ -301,16 +301,16 @@ cd - Change the working directory
   /usr/bin
   $
 
+.. note:: Using ``cd`` without a directory is equivalent to "``cd ~``" and changes into the users's homedirectory
+.. note:: Please note the difference between absolute pathes (starting with "``/``") and relative pathes (starting with a directory name)
+
 Special directories:
 
 - "``.``":  The current working directory
 - "``..``": The parent directory of the current working directory
 - "``~``":  Your homedirectory
 
-.. note:: :index:`Using <cd>` ``cd`` without a directory is equivalent to "``cd ~``" and changes into the users's homedirectory
-.. note:: Please note the difference between absolute pathes (starting with "``/``") and relative pathes (starting with a directory name)
-
-::
+ ::
 
   $ pwd
   /usr
@@ -318,21 +318,20 @@ Special directories:
   $ pwd
   /bin
 
-::
+ ::
 
   $ pwd
   /usr
-  $ cd bin
+  $ cd 
   $ pwd
-  /usr/bin
-  $
+  /home/fthommen
 
 
 See What's Around
 =================
 
-ls - List directory contents
-----------------------------
+:index:`ls` - List directory contents
+-------------------------------------
 
 **Usage**:  
   ``ls [options] [file(s) or directory/ies]``
@@ -356,11 +355,11 @@ Useful options:
 -d      Show directory information instead of  directory content
 -t      Sort listing by modification time (most recent on top)
 
-----------
 
-.. image:: _static/LongListingDeconstructed.png
+.. figure:: _static/LongListingDeconstructed.png
 
-----------
+  Elements of a long file listing (``ls -l``)
+
  
 Digression: Shell globs
 -----------------------
@@ -385,8 +384,8 @@ Examples:
 Organize Files and Folders
 ==========================
 
-cp – Copy files and folders
----------------------------
+:index:`cp` – Copy files and folders
+------------------------------------
 
 **Usage**:  ``cp [options] sourcefile destinationfile``
 
@@ -411,7 +410,7 @@ We copy a set of exercise files from the network share into our home directory:
   $
 
 :index:`rsync` - intelligently copying files and folders
------------------------------------------------
+--------------------------------------------------------
 
 **Usage**: ``rsync [options] source target``
 
@@ -421,11 +420,11 @@ We copy a set of exercise files from the network share into our home directory:
   ...
   $
 
-``rsync`` allows to copy files or folders locally or to wherever you have ``ssh`` access.  You can have ``rsync`` have copying only newer files or only older files.  If copy operation is interrupted, you can rerun ``rsync`` and it will only copy the missing files (in contrast to ``cp`` which will just copy everything again).
+``rsync`` allows you to copy files or folders locally or to wherever you have ``ssh`` access.  You can have ``rsync`` have copying only newer files or only older files.  If copy operation is interrupted, you can rerun ``rsync`` and it will only copy the missing files (in contrast to ``cp`` which will just copy everything again).
 
-``source`` and ``target`` can be local directories or have the form user@remotehost:directory, in which case you'll have to give your password for the remote host.  This latter version will copy over the network.
+``source`` and ``target`` can be local directories or have the form ``user@remotehost:directory``, in which case you'll have to give your password for the remote host.  This latter version will copy over the network.
 
-.. note:: ``rsync`` is one of the few cases, where it effectively matters if a directory is written with an ending slash ("/") or nor: If the source is a directory and ends with a slash, then the *content* of this directory will be copied.  If the source doesn't have an ending slash, then *a directory with the same name* will be created *within the target directory*
+.. note:: ``rsync`` is one of the few cases, where it effectively matters if a directory is written with an ending slash ("/") or nor: If the source is a directory and ends with a slash, then the *content* of this directory will be copied into the target directory.  If the source doesn't have an ending slash, then *a directory with the same name* will be created *within the target directory*
 
 
 **Useful option combinations**:
@@ -434,7 +433,7 @@ We copy a set of exercise files from the network share into our home directory:
 -au  Silently copies all source files wich are different (different size, different age) or missing from the source.  This combination will *not* overwrite newer files by older ones
 
 :index:`touch` – Create a file or change last modification date of an existing file
---------------------------------------------------------------------------
+-----------------------------------------------------------------------------------
 
 **Usage**:  ``touch file(s) or directory/ies``
 
@@ -457,7 +456,7 @@ We copy a set of exercise files from the network share into our home directory:
   $
 
 :index:`rm` - Remove files and directories
----------------------------------
+------------------------------------------
 
 **Usage**:  ``rm [options] file(s)``
         ``rm -r [options] directory/ies``
@@ -480,7 +479,7 @@ We copy a set of exercise files from the network share into our home directory:
 .. note:: rm without the -i option will usually not ask you if you really want to remove the file or directory
 
 :index:`mv` - Move and rename files and folders
---------------------------------------
+-----------------------------------------------
 
 **Usage**:  ``mv [options] sourcefile destinationfile``
             ``mv [options] sourcefile(s) destinationdirectory``
@@ -503,7 +502,7 @@ We copy a set of exercise files from the network share into our home directory:
 .. _mkdir:
 
 :index:`mkdir` - Create a new directory
-------------------------------
+---------------------------------------
 
 **Usage**:  ``mkdir [options] directory``
 
@@ -527,7 +526,7 @@ We copy a set of exercise files from the network share into our home directory:
   $
 
 :index:`rmdir` - Remove an empty directory
----------------------------------
+------------------------------------------
 
 **Usage**:  ``rmdir directory``
 
@@ -543,7 +542,7 @@ View Files
 ==========
 
 :index:`cat` - Print files on terminal (concatenate)
--------------------------------------------
+----------------------------------------------------
 
 **Usage**:  ``cat [options] file(s)``
 
@@ -558,7 +557,7 @@ View Files
 
 
 :index:`head` - Print first lines of a textfile
---------------------------------------
+-----------------------------------------------
 
 ``head`` is a program on Unix and Unix-like systems used to display the beginning of a text file or piped data.
 
@@ -585,7 +584,7 @@ View Files
 
 
 :index:`tail` - Print last lines of a textfile
--------------------------------------
+----------------------------------------------
 
 The ``tail`` utility displays the contents of file or, by default, its standard input, to the standard output.
 
@@ -607,7 +606,7 @@ The ``tail`` utility displays the contents of file or, by default, its standard 
 .. _less:
 
 :index:`less` - View and navigate files
-------------------------------
+---------------------------------------
 
 **Usage**:  ``less [options] file(s)``
 
@@ -617,7 +616,7 @@ The ``tail`` utility displays the contents of file or, by default, its standard 
   ...
   $
 
-.. note:: This is the default "pager" for manpages under Linux unless you redefine your ``$PAGER`` :ref:`environment variable <environment_variables>` 
+.. note:: This is the default "pager" (a program for viewing files page by page, not an old-fashioned telecommunications device) for manpages under Linux unless you redefine your ``$PAGER`` :ref:`environment variable <environment_variables>` 
 
 
 **Navigation within less**:
@@ -639,7 +638,7 @@ Extracting Informations from Files
 ==================================
 
 :index:`grep` - Find lines matching a pattern in textfiles
--------------------------------------------------
+----------------------------------------------------------
 
 ``grep`` is a command-line utility for searching plain-text data sets for lines matching a regular expression. 
 
@@ -665,7 +664,7 @@ Extracting Informations from Files
 -c      Print count of matching lines for each file
 
 :index:`cut` - extracting columns from textfiles
----------------------------------------
+------------------------------------------------
 
 ``cut`` allows to get at individual columns in structured textfiles (for instance CSV files).
 By default, ``cut`` assumes the columns are TAB-separated.
@@ -675,7 +674,7 @@ By default, ``cut`` assumes the columns are TAB-separated.
 
 **Useful options**:
 
--d DELIM   use DELIM instead of TAB for field delimiter. Make sure to use quotes here!
+-d *DELIM*   use DELIM instead of TAB for field delimiter. Make sure to use quotes here!
 -f         select only these fields; this can either be a single field, 
            multiple individual fields separated by comma or a range of startfield and endfield separated by dash '-'
 
@@ -702,7 +701,7 @@ By default, ``cut`` assumes the columns are TAB-separated.
 
 
 :index:`sort` - sort a textfile
-----------------------
+-------------------------------
 
 The ``sort`` utility is used to sort a textfile (alphabetically or numerically).
 
@@ -727,7 +726,7 @@ Useful Filetools
 ================
 
 :index:`file` - determine the filetype
------------------------------
+--------------------------------------
 
 **Usage**:  ``file [options] file(s)``
 
@@ -744,7 +743,7 @@ Useful Filetools
 .. note:: The command ``file`` uses certain tests and some magic to determine the type of a file
 
 :index:`which` - find a (executable) command
------------------------------------
+--------------------------------------------
 
 **Usage**:  ``which [options] command(s)``
 
@@ -757,7 +756,7 @@ Useful Filetools
   $
 
 :index:`find` - search/find files in any given directory
------------------------------------------------
+--------------------------------------------------------
 
 **Usage**:  ``find [starting path(s)] [search filter]``
 
@@ -808,7 +807,7 @@ Useful Filetools
 
 
 :index:`Permissions`
-===========
+====================
 
 using ``ls -l`` to view entries of current directory: 
 
@@ -821,6 +820,9 @@ using ``ls -l`` to view entries of current directory:
   $
 
 .. figure:: _static/LinuxPermissions.png
+
+  Linux file permissions
+
 
 Changing Permissions
 --------------------
@@ -875,7 +877,7 @@ Allow all to read a directory:
   $
 
 :index:`Remote access`
-=============
+======================
 
 To execute commands at a remote machine/server, you need to log in to this machine. This is done
 using the ``ssh`` :index:`command <ssh>` (:index:`secure shell`). In its simplest form, it takes just the machinename as
@@ -925,12 +927,13 @@ Type *yes* here.
 If this message appears a second time, you should contact your IT specialist...
 
 To :index:`disconnect <exit, disconnect>` from the remote machine, type: 
+
  :: 
 
   $ exit
 
 
-If setup correctly, you can even use **graphical tools** from the remote server on the local machine. 
+If setup correctly, you can even use *graphical tools* from the remote server on the local machine. 
 For this to work, you need to start the ssh session with the ``-X`` parameter:
 
  :: 
@@ -962,7 +965,7 @@ IO and Redirections
 Redirect
 --------
 
-:index:`Redirect <redirect>` the output of one program into e.g. a file: 
+:index:`Redirect <redirect, \>>` the output of one program into e.g. a file: 
 
 
 Inserting the current date into a new file: 
@@ -972,7 +975,7 @@ Inserting the current date into a new file:
   $ date > file_containing_date
   $
 
-.. Warning:: You can easily overwrite files by this! 
+.. Warning:: You can easily :index:`overwrite files <file; overwrite>` by this! 
 
 :index:`Filtering <grep>` lines containing the term "src" from FASTA files and inserting them into the file lines_with_src.txt: 
 
@@ -982,8 +985,8 @@ Inserting the current date into a new file:
   $ grep -i "src" *.fasta > lines_with_src.txt
   $
 
-:index:`Append <append, File; append>`
-------
+:index:`Append <append, File; append, \>\>>`
+--------------------------------------------
 
 Append something to a file (rather than overwriting it): 
 
@@ -1019,7 +1022,7 @@ Environment Variables
 :index:`Environment variables <environment variables>` are a set of dynamic named values that can affect the way running processes will behave on a computer.
 
 :index:`$HOME`
------
+--------------
 
 Contains the location of the user's home directory. Although the current user's home directory can also be found out through the 
 C functions ``getpwuid`` and ``getuid,`` ``$HOME`` is often used for convenience in various shell scripts (and other contexts).
@@ -1029,7 +1032,7 @@ C functions ``getpwuid`` and ``getuid,`` ``$HOME`` is often used for convenience
 .. _path:
 
 :index:`$PATH`
------
+--------------
 
 ``$PATH`` contains a colon-separated (':') list of directories that the shell searches for commands that do not contain a slash in their name 
 (commands with slashes are interpreted as file names to execute, and the shell attempts to execute the files directly).
@@ -1044,12 +1047,12 @@ So if the directory ``/usr/bin`` is in ``$PATH`` (which it should), then the com
    Appending (good): ``export PATH=$PATH:/my/new/path``
 
 :index:`$PAGER`
-------
+---------------
 
 The ``$PAGER`` variable contains the path to the program used to list the contents of files through (such :index:`as <less>` ``less`` :index:`or <more>` ``more``).
 
 :index:`$PWD`
-----
+-------------
 
 The ``$PWD`` variable points to the current directory. Equivalent to the output of the command ``pwd`` when called without arguments.
 
