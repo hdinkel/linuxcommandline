@@ -17,6 +17,11 @@ Verbesserungen:
  - {DONE} siehe 'apropos' - die naechste Zeile wird immer mit in die Ueberschrift gezogen!
  - mehr Uebungen! z.B. Verzeichniss erstellen, Dateien kopieren etc.
  - environment variables ueberarbeiten; PAGER herausnehmen?
+ - Certificate, Feedback mit layout von Handout vereinheitlichen
 
 Content:
  - add 'column'? Example `mount | column -t`
+
+Sonstige Probleme:
+ - @ATC-Teachinglab:
+   - Teacher-Monitor zeigt keine Konsole an, nur X11 Anwendungen
