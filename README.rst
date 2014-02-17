@@ -101,3 +101,12 @@ This is the content of the file lsi.py:
 
 For details, see the `Pygments Docu <http://pygments.org/docs/styles/>`_
 
+
+Option lists
+^^^^^^^^^^^^
+For formatting Option Lists see the following docu:
+http://docutils.sourceforge.net/docs/ref/rst/restructuredtext.html#option-lists
+-a         Output all.
+-b         Output both (this description is quite long).
+-c arg     Output just arg.
+--long     Output all day long.
