@@ -17,3 +17,6 @@ Verbesserungen:
  - {DONE} siehe 'apropos' - die naechste Zeile wird immer mit in die Ueberschrift gezogen!
  - mehr Uebungen! z.B. Verzeichniss erstellen, Dateien kopieren etc.
  - environment variables ueberarbeiten; PAGER herausnehmen?
+
+Content:
+ - add 'column'? Example `mount | column -t`
