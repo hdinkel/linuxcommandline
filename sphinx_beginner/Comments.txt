@@ -1,10 +1,11 @@
 
 
 Verbesserungen:
+ - use latex package 'dateiliste' (or \RequirePackage[log]{snapshot} before the \documentclass) to list all external dependancies (solve compile problem @Frank)
  - Codebloecke: Zeilenweise Formattierung, grauer Hintergrund  [ft]
  - subsectiontitle prominenter / farbig
  - Titlepage: Datum ganz unten, font wie titel
  - Usage: mv [options] haengender Einzug
- - siehe 'apropos' - die naechste Zeile wird immer mit in die Ueberschrift gezogen!
+ - {DONE} siehe 'apropos' - die naechste Zeile wird immer mit in die Ueberschrift gezogen!
  - mehr Uebungen! z.B. Verzeichniss erstellen, Dateien kopieren etc.
  - environment variables ueberarbeiten; PAGER herausnehmen?

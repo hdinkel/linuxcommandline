@@ -61,7 +61,7 @@ General Remarks Regarding Using UNIX/Linux Systems
 General Structure of Linux Commands
 ***********************************
 
-:index:`Many<command; general structure>` linux commands have options and accept arguments. Options are a set of switch-like parameters
+:index:`Many <command; general structure>` linux commands have options and accept arguments. Options are a set of switch-like parameters
 while arguments are usually free text input (such as a filename).
 
 .. figure:: _static/LinuxCommandStructure.png
@@ -70,7 +70,7 @@ while arguments are usually free text input (such as a filename).
 
 For example, in the commandline ``ls -l /usr/bin``, ``ls`` is the command, ``-l`` is an option and ``/usr/bin`` qualifies as an argument.
 
-:index;`Commandline options <command; options, command; switches>` (sometimes called comandline switches) commonly have one of the two following
+:index:`Commandline options <command, options, command; switches>` (sometimes called comandline switches) commonly have one of the two following
 forms: The short form ``-s`` (just a single character) or the long form ``--string.`` E.g.
 
  :: 
@@ -144,13 +144,13 @@ It can also be used to print the content of a variable, see section :ref:`enviro
 
 
 :index:`Interrupting commands <command; interrupt>`
-----------------------
+---------------------------------------------------
 
 Whenever a program gets stuck or takes too long to finish, you can *interrupt* it with the shortcut
 :kbd:`CONTROL-C`.
 
 :index:`clear` – Clear the “screen”
---------------------------
+-----------------------------------
 
 **Usage**:  ``clear``
 
@@ -164,7 +164,7 @@ In case the output of the terminal/screen gets cluttered, you can use ``clear`` 
 If this doesn't work, you can use ``reset`` to perform a re-initialization of the terminal:
 
 :index:`reset` – Reset your terminal
----------------------------
+------------------------------------
 
 **Usage**:  ``reset [options]``
 
@@ -191,7 +191,7 @@ Many commands support a "help" option, either through ``-h`` or through ``--help
 Other commands will show a help page or at least a short usage overview if you provide incorrect commandline options
 
 :index:`man` - show the manual page of a command
----------------------------------------
+------------------------------------------------
 
 **Usage**: 
 ``man command or file``
@@ -214,7 +214,7 @@ For the navigation within a manpage see the :ref:`paragraph regarding less <less
 .. note:: The behaviour of ``man`` is dependent of the ``$PAGER`` environment variable
 
 :index:`apropos` - list manpages containing a keyword in their description
------------------------------------------------------------------
+--------------------------------------------------------------------------
 
 **Usage**: ``apropos keyword``
 
@@ -239,7 +239,7 @@ Who am I, where am I
 ====================
 
 :index:`whoami` - Print your username
-----------------------------
+-------------------------------------
 
 **Usage**: ``whoami``
 
@@ -250,7 +250,7 @@ Who am I, where am I
   $
 
 :index:`hostname` - Print the name of the computer
------------------------------------------
+--------------------------------------------------
 
 **Usage**: ``hostname``
 
@@ -261,7 +261,7 @@ Who am I, where am I
   $
 
 :index:`pwd` - Print the current working directory
------------------------------------------
+--------------------------------------------------
 
 **Usage**: ``pwd`` 
 
@@ -272,7 +272,7 @@ Who am I, where am I
   $
 
 :index:`date` - Print current date and time
-----------------------------------
+-------------------------------------------
 
 **Usage**: ``date``
 
@@ -288,7 +288,7 @@ Moving Around
 =============
 
 :index:`cd` - Change the working directory
----------------------------------
+------------------------------------------
 
 **Usage**: ``cd [new_directory]``
 
@@ -332,7 +332,7 @@ See What's Around
 =================
 
 :index:`ls` - List directory contents
-----------------------------
+-------------------------------------
 
 **Usage**:  
   ``ls [options] [file(s) or directory/ies]``
@@ -386,7 +386,7 @@ Organize Files and Folders
 ==========================
 
 :index:`cp` – Copy files and folders
----------------------------
+------------------------------------
 
 **Usage**:  ``cp [options] sourcefile destinationfile``
 
@@ -411,7 +411,7 @@ We copy a set of exercise files from the network share into our home directory:
   $
 
 :index:`rsync` - intelligently copying files and folders
------------------------------------------------
+--------------------------------------------------------
 
 **Usage**: ``rsync [options] source target``
 
@@ -434,7 +434,7 @@ We copy a set of exercise files from the network share into our home directory:
 -au  Silently copies all source files wich are different (different size, different age) or missing from the source.  This combination will *not* overwrite newer files by older ones
 
 :index:`touch` – Create a file or change last modification date of an existing file
---------------------------------------------------------------------------
+-----------------------------------------------------------------------------------
 
 **Usage**:  ``touch file(s) or directory/ies``
 
@@ -457,7 +457,7 @@ We copy a set of exercise files from the network share into our home directory:
   $
 
 :index:`rm` - Remove files and directories
----------------------------------
+------------------------------------------
 
 **Usage**:  ``rm [options] file(s)``
         ``rm -r [options] directory/ies``
@@ -480,7 +480,7 @@ We copy a set of exercise files from the network share into our home directory:
 .. note:: rm without the -i option will usually not ask you if you really want to remove the file or directory
 
 :index:`mv` - Move and rename files and folders
---------------------------------------
+-----------------------------------------------
 
 **Usage**:  ``mv [options] sourcefile destinationfile``
             ``mv [options] sourcefile(s) destinationdirectory``
@@ -503,7 +503,7 @@ We copy a set of exercise files from the network share into our home directory:
 .. _mkdir:
 
 :index:`mkdir` - Create a new directory
-------------------------------
+---------------------------------------
 
 **Usage**:  ``mkdir [options] directory``
 
@@ -527,7 +527,7 @@ We copy a set of exercise files from the network share into our home directory:
   $
 
 :index:`rmdir` - Remove an empty directory
----------------------------------
+------------------------------------------
 
 **Usage**:  ``rmdir directory``
 
@@ -543,7 +543,7 @@ View Files
 ==========
 
 :index:`cat` - Print files on terminal (concatenate)
--------------------------------------------
+----------------------------------------------------
 
 **Usage**:  ``cat [options] file(s)``
 
@@ -558,7 +558,7 @@ View Files
 
 
 :index:`head` - Print first lines of a textfile
---------------------------------------
+-----------------------------------------------
 
 ``head`` is a program on Unix and Unix-like systems used to display the beginning of a text file or piped data.
 
@@ -585,7 +585,7 @@ View Files
 
 
 :index:`tail` - Print last lines of a textfile
--------------------------------------
+----------------------------------------------
 
 The ``tail`` utility displays the contents of file or, by default, its standard input, to the standard output.
 
@@ -607,7 +607,7 @@ The ``tail`` utility displays the contents of file or, by default, its standard 
 .. _less:
 
 :index:`less` - View and navigate files
-------------------------------
+---------------------------------------
 
 **Usage**:  ``less [options] file(s)``
 
@@ -639,7 +639,7 @@ Extracting Informations from Files
 ==================================
 
 :index:`grep` - Find lines matching a pattern in textfiles
--------------------------------------------------
+----------------------------------------------------------
 
 ``grep`` is a command-line utility for searching plain-text data sets for lines matching a regular expression. 
 
@@ -665,7 +665,7 @@ Extracting Informations from Files
 -c      Print count of matching lines for each file
 
 :index:`cut` - extracting columns from textfiles
----------------------------------------
+------------------------------------------------
 
 ``cut`` allows to get at individual columns in structured textfiles (for instance CSV files).
 By default, ``cut`` assumes the columns are TAB-separated.
@@ -702,7 +702,7 @@ By default, ``cut`` assumes the columns are TAB-separated.
 
 
 :index:`sort` - sort a textfile
-----------------------
+-------------------------------
 
 The ``sort`` utility is used to sort a textfile (alphabetically or numerically).
 
@@ -727,7 +727,7 @@ Useful Filetools
 ================
 
 :index:`file` - determine the filetype
------------------------------
+--------------------------------------
 
 **Usage**:  ``file [options] file(s)``
 
@@ -744,7 +744,7 @@ Useful Filetools
 .. note:: The command ``file`` uses certain tests and some magic to determine the type of a file
 
 :index:`which` - find a (executable) command
------------------------------------
+--------------------------------------------
 
 **Usage**:  ``which [options] command(s)``
 
@@ -757,7 +757,7 @@ Useful Filetools
   $
 
 :index:`find` - search/find files in any given directory
------------------------------------------------
+--------------------------------------------------------
 
 **Usage**:  ``find [starting path(s)] [search filter]``
 
@@ -808,7 +808,7 @@ Useful Filetools
 
 
 :index:`Permissions`
-===========
+====================
 
 using ``ls -l`` to view entries of current directory: 
 
@@ -878,7 +878,7 @@ Allow all to read a directory:
   $
 
 :index:`Remote access`
-=============
+======================
 
 To execute commands at a remote machine/server, you need to log in to this machine. This is done
 using the ``ssh`` :index:`command <ssh>` (:index:`secure shell`). In its simplest form, it takes just the machinename as
@@ -987,7 +987,7 @@ Inserting the current date into a new file:
   $
 
 :index:`Append <append, File; append, \>\>>`
-------
+--------------------------------------------
 
 Append something to a file (rather than overwriting it): 
 
@@ -1023,7 +1023,7 @@ Environment Variables
 :index:`Environment variables <environment variables>` are a set of dynamic named values that can affect the way running processes will behave on a computer.
 
 :index:`$HOME`
------
+--------------
 
 Contains the location of the user's home directory. Although the current user's home directory can also be found out through the 
 C functions ``getpwuid`` and ``getuid,`` ``$HOME`` is often used for convenience in various shell scripts (and other contexts).
@@ -1033,7 +1033,7 @@ C functions ``getpwuid`` and ``getuid,`` ``$HOME`` is often used for convenience
 .. _path:
 
 :index:`$PATH`
------
+--------------
 
 ``$PATH`` contains a colon-separated (':') list of directories that the shell searches for commands that do not contain a slash in their name 
 (commands with slashes are interpreted as file names to execute, and the shell attempts to execute the files directly).
@@ -1048,12 +1048,12 @@ So if the directory ``/usr/bin`` is in ``$PATH`` (which it should), then the com
    Appending (good): ``export PATH=$PATH:/my/new/path``
 
 :index:`$PAGER`
-------
+---------------
 
 The ``$PAGER`` variable contains the path to the program used to list the contents of files through (such :index:`as <less>` ``less`` :index:`or <more>` ``more``).
 
 :index:`$PWD`
-----
+-------------
 
 The ``$PWD`` variable points to the current directory. Equivalent to the output of the command ``pwd`` when called without arguments.
 
