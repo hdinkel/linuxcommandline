@@ -1,8 +1,16 @@
 
 
 Verbesserungen:
- - use latex package 'dateiliste' (or \RequirePackage[log]{snapshot} before the \documentclass) to list all external dependancies (solve compile problem @Frank)
+ - Titelblatt: Die Titelschrift ist im Moment falsch (in die Breite gezerrt).
+ - Schrift/Titel-Kombinationen
+ - Formatierungen in den Codebloecken?
+ - Dass bold/italic/verbatim nicht geschachtelt werden koennen, ist ein Problem
+ - Konsistente Umgebungen (Tools, Schriften, Fonts) bei allen Autoren, so dass jeder die Dokumente jederzeit selber konsistent kompilieren kann
+   use latex package 'dateiliste' (or \RequirePackage[log]{snapshot} before the \documentclass) to list all external dependancies (solve compile problem @Frank)
  - Codebloecke: Zeilenweise Formattierung, grauer Hintergrund  [ft]
+ - Mindestens zwei Code-Bloecke sind nicht eingerueckt (pwd und ls).
+ - Wenn einfach umsetzbar koennte man vor den Hauptueberschriften noch etwas mehr Platz einfuegen um es deutlicher zu machen wo eine neue Section anfaengt.
+ - Die Abbildungen sind in der Tat pixelig. Aber bereits die raw-Bilder in _static scheinen eine sehr niedrige Aufloesung zu haben.
  - subsectiontitle prominenter / farbig
  - Titlepage: Datum ganz unten, font wie titel
  - Usage: mv [options] haengender Einzug
