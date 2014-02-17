@@ -149,7 +149,7 @@ It can also be used to print the content of a variable, see section :ref:`enviro
 Whenever a program gets stuck or takes too long to finish, you can *interrupt* it with the shortcut
 :kbd:`CONTROL-C`.
 
-:index:`clear` – Clear the “screen”
+:index:`clear` - Clear the "screen"
 -----------------------------------
 
 **Usage**:  ``clear``
@@ -163,7 +163,7 @@ In case the output of the terminal/screen gets cluttered, you can use ``clear`` 
 
 If this doesn't work, you can use ``reset`` to perform a re-initialization of the terminal:
 
-:index:`reset` – Reset your terminal
+:index:`reset` - Reset your terminal
 ------------------------------------
 
 **Usage**:  ``reset [options]``
@@ -174,7 +174,7 @@ If this doesn't work, you can use ``reset`` to perform a re-initialization of th
   $
 
 Leave the shell
------------------
+---------------
 
 To :index:`exit` the shell/terminal, just type ``exit`` or press :kbd:`CONTROL-D`.
 

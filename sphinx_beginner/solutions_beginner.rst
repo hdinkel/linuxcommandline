@@ -117,7 +117,7 @@ Permissions
 
 #. Change your working directory to testpermissions, and then try changing the permissions on the directory adir to non-executable. ::
 
-    $ # we don't need to change directory, because we still are in the directory testpermissions
+    $ # no need to change directory, as we still are in the directory testpermissions
     $ chmod a-x adir
 
 #. What are the minimum permissions (on the directory) necessary for you to be able to execute ``adir/date``? ::

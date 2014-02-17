@@ -18,6 +18,7 @@ Verbesserungen:
  - mehr Uebungen! z.B. Verzeichniss erstellen, Dateien kopieren etc.
  - environment variables ueberarbeiten; PAGER herausnehmen?
  - Certificate, Feedback mit layout von Handout vereinheitlichen
+ - change exercises directory (currently it's '/exercises')
 
 Content:
  - add 'column'? Example `mount | column -t`
