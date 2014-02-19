@@ -21,10 +21,10 @@ Misc. file tools
        $ file ~
        /home/dinkel: directory
 
-   c) ``/exercises/SRC_HUMAN.fasta`` ::
+   c) ``~/exercises/SRC_HUMAN.fasta`` ::
 
-       $ file /exercises/SRC_HUMAN.fasta
-       /exercises/SRC_HUMAN.fasta: ASCII text
+       $ file ~/exercises/SRC_HUMAN.fasta
+       ~/exercises/SRC_HUMAN.fasta: ASCII text
 
 
 
@@ -34,9 +34,9 @@ Searching
 
    $ find
 
-#. Use it to find all directories in the ``/exercises`` directory ::
+#. Use it to find all directories in the ``~/exercises`` directory ::
 
-   $ find /exercises -type d
+   $ find ~/exercises -type d
 
 #. Search for the file date in the ``/bin`` directory ::
 
@@ -74,44 +74,44 @@ Permissions
     $ which date
     /bin/date
 
-#. Copy this date program into the directory adir. ::
+#. Copy this date program into the directory adir and name it 'mydate'. ::
 
-    $ cp /bin/date adir/
+    $ cp /bin/date adir/mydate
 
-#. Check the permissions of the copied program date ::
+#. Check the permissions of the copied program 'mydate' ::
 
-    $ ls -lh adir/date
-    -r-xr-xr-x  1 dinkel  staff    79K  9 Dec 13:47 date*
+    $ ls -lh adir/mydate
+    -r-xr-xr-x  1 dinkel  staff    79K  9 Dec 13:47 mydate*
 
-#. Change the permissions on date to remove the executable permissions. ::
+#. Change the permissions on 'mydate' to remove the executable permissions. ::
 
-    $ chmod a-x adir/date
+    $ chmod a-x adir/mydate
 
-#. Check the permissions of the program date ::
+#. Check the permissions of the program 'mydate' ::
  
-    $ ls -lh adir/date
-    -r--r--r--  1 dinkel  staff    79K  9 Dec 13:47 date*
+    $ ls -lh adir/mydate
+    -r--r--r--  1 dinkel  staff    79K  9 Dec 13:47 mydate*
 
-#. Try running it as ``./date`` or ``adir/date`` (depending on your current working directory) ::
+#. Try running it as ``./mydate`` or ``adir/mydate`` (depending on your current working directory) ::
 
-    $ adir/date
+    $ adir/mydate
     permission denied
 
 #. Change the permissions back so that the file is executable. ::
 
-   $ chmod a+x adir/date
+   $ chmod a+x adir/mydate
 
-#. Try running it as ``./date`` or ``adir/date`` (depending on your current working directory) ::
+#. Try running it as ``./mydate`` or ``adir/mydate`` (depending on your current working directory) ::
 
-    $ adir/date
+    $ adir/mydate
     Mon Dec  9 13:50:12 CET 2013
 
-#. Copy a textfile from a previos exercise into adir, then change the permissions, so you are not allowed to write to it. ::
+#. Copy a textfile from a previos exercise into adir, then change the permissions, so you are not allowed to write to it. Test this by trying to read it via `cat`. ::
 
-    $ cp /exercises/SRC_HUMAN.fasta adir
+    $ cp ~/exercises/SRC_HUMAN.fasta adir
     $ chmod u-w adir/SRC_HUMAN.fasta
 
-#. Then change the permissions so you can't read/cat it either. ::
+#. Then change the permissions so you can't read/cat it either. Test this by trying to read it via `cat`. ::
 
    $ chmod u-r adir/SRC_HUMAN.fasta
 
@@ -120,7 +120,7 @@ Permissions
     $ # no need to change directory, as we still are in the directory testpermissions
     $ chmod a-x adir
 
-#. What are the minimum permissions (on the directory) necessary for you to be able to execute ``adir/date``? ::
+#. What are the minimum permissions (on the directory) necessary for you to be able to execute ``adir/mydate``? ::
 
    $ chmod u+rx adir
 
@@ -165,7 +165,7 @@ Remote access
 
 IO and Redirections
 -------------------
-#. Use date in conjuction with the redirection to insert the current date into the (new) file current_date (in your homedirectory). ::
+#. Use date in conjunction with the redirection to insert the current date into the (new) file current_date (in your homedirectory). ::
 
    $ date > ~/current_date
 
@@ -183,19 +183,19 @@ IO and Redirections
 
 #. Use ``grep`` to filter out lines containing the term "TITLE" from all PDB files in the exercises directory and use redirection to insert them into a new file pdb_titles.txt. ::
 
-   $ grep TITLE /exercises/*.pdb > pdb_titles.txt
+   $ grep TITLE ~/exercises/*.pdb > pdb_titles.txt
 
 #. (OPTIONAL) Upon inspection of the file pdb_titles.txt, you see that it also contains the names of the files in which the term was found. 
 
    A. Use either the grep manpage or ``grep --help`` to find out how you can suppress this behaviour.  ::
 
-      $ grep -h TITLE /exercises/*.pdb > pdb_titles.txt
+      $ grep -h TITLE ~/exercises/*.pdb > pdb_titles.txt
 
    B. Redo the previous exercise such that the output file pdb_titles.txt only contains lines starting with TITLE. ::
 
-      $ grep -h "^TITLE" /exercises/*.pdb > pdb_titles.txt
+      $ grep -h "^TITLE" ~/exercises/*.pdb > pdb_titles.txt
 
-#. The *third* column of the file /etc/passwd/ contains user IDs (numbers)
+#. The *third* column of the file /etc/passwd contains user IDs (numbers)
 
    A. Use `cut` to extract just the third column of this file (remember to specify the delimiter ':')::
 

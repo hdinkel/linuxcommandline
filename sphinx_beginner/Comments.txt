@@ -8,7 +8,6 @@ Verbesserungen:
  - Konsistente Umgebungen (Tools, Schriften, Fonts) bei allen Autoren, so dass jeder die Dokumente jederzeit selber konsistent kompilieren kann
    use latex package 'dateiliste' (or \RequirePackage[log]{snapshot} before the \documentclass) to list all external dependancies (solve compile problem @Frank)
  - Codebloecke: Zeilenweise Formattierung, grauer Hintergrund  [ft]
- - Mindestens zwei Code-Bloecke sind nicht eingerueckt (pwd und ls).
  - Wenn einfach umsetzbar koennte man vor den Hauptueberschriften noch etwas mehr Platz einfuegen um es deutlicher zu machen wo eine neue Section anfaengt.
  - Die Abbildungen sind in der Tat pixelig. Aber bereits die raw-Bilder in _static scheinen eine sehr niedrige Aufloesung zu haben.
  - subsectiontitle prominenter / farbig
@@ -19,9 +18,19 @@ Verbesserungen:
  - environment variables ueberarbeiten; PAGER herausnehmen?
  - Certificate, Feedback mit layout von Handout vereinheitlichen
  - change exercises directory (currently it's '/exercises')
+ - 'release 1.4' aus seitenkopf nehmen
+ - sektion ueber Bio-IT ueberarbeiten, 
+   - evtl. Centers dazunehmen?
+   - Clemens Lakner fragen, ob er nicht einen text schreiben moechte
 
 Content:
  - add 'column'? Example `mount | column -t`
+ - use 'cat /bin/echo' to show how a garbled screen looks like?
+ - use 'tar -czf BACKUP.tgz /folder2backup' as backup before doing something dangerous? (Student asked about 'undo' function)
+ - change order of exercises to rather match the order of the handout?
+ - add a exercise file to demonstrate 'sort -n'
+ - absolute/relative paths seem to be a problem; also mention that '/' exists on every machine (but different), while /home might be the same on each
+ - add du/df?
 
 Sonstige Probleme:
  - @ATC-Teachinglab:
