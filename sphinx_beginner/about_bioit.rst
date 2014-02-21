@@ -44,3 +44,52 @@ If you've not yet got a page up on the portal describing your own expertise,
 please do so. If you need any help doing this, you can read about this in the
 portal's FAQ section, or get in touch with one of the site administrators.
 
+
+Centers
+^^^^^^^
+`EMBL Centres <http://www.embl.de/research/interdisciplinary_research/centres/index.html>`_ are 'horizontal', 
+cross-departmental structures that promote innovative research projects across disciplines. All the EMBL Centres listed below
+have a strong computational component.
+
+.. |cbna| image:: _static/img-cbna.jpg
+   :width: 20%
+   :alt: CBNA
+   :target: http://bio-it.embl.de/cbna
+
+.. |csda| image:: _static/img-csda.jpg
+   :width: 20%
+   :alt: CSDA
+   :target: http://bio-it.embl.de/statistical-data-analysis
+
+.. |cmci| image:: _static/img-cmci.jpg
+   :width: 20%
+   :alt: CMCI
+   :target: http://bio-it.embl.de/molecular-and-cellular-imaging
+
+.. |cbm| image:: _static/img-cbm.jpg
+   :width: 20%
+   :alt: CBM
+   :target: http://bio-it.embl.de/biological-modeling
+
+|cbna| |csda| |cmci| |cbm|
+
+Biomolecular Network Analysis
+"""""""""""""""""""""""""""""
+
+The `CBNA <http://bio-it.embl.de/cbna>`_ disseminates expertise, know-how and guidance in network integration and analysis throughout EMBL.
+
+Statistical Data Analysis
+"""""""""""""""""""""""""
+
+The `CSDA <http://bio-it.embl.de/statistical-data-analysis>`_ helps EMBL scientists to use adequate statistical methods for their specific technological or biological applications.
+
+Molecular and Cellular Imaging
+""""""""""""""""""""""""""""""
+
+The `CMCI <http://bio-it.embl.de/molecular-and-cellular-imaging>`_ makes your life in image processing/analysis easier and more fun.
+
+Modeling
+""""""""
+
+The `Centre for Biological Modeling (CBM) <http://bio-it.embl.de/biological-modeling>`_ aims to support people to adopt mathematical modeling techniques into their everyday research.
+
