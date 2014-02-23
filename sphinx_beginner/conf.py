@@ -39,7 +39,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'Introduction to the Linux Commandline'
-copyright = u'2012,2013, Holger Dinkel, Frank Thommen & Thomas Zichner'
+copyright = u'2012,2013,2014, Holger Dinkel, Frank Thommen & Thomas Zichner'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
