@@ -68,3 +68,7 @@ sphinx_combined/_build/latex/sphinxmanual.cls
 sphinx_combined/_build/latex/tabulary.sty
 sphinx_combined/_build/latex/*.png
 Intermediate/sphinx_intermediate/_build
+sphinx_beginner/exercises_all
+sphinx_combined/_build/latex
+sphinx_beginner/_build/latex
+sphinx_beginner/clmystery-master
