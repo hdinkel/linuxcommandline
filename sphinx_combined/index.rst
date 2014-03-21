@@ -16,9 +16,10 @@ EMBL Linux Course
    Solutions Beginner <solutions_beginner>
    Commandline Tools <commandlinetools>
    I/O Redirection <redirection>
-   Variables <variables>  
+   Variables <variables>
    Basic Scripting <basic_scripting>
    Solutions <solutions>
+   Git Intro <git_beginner>
 
    Appendix <appendix>
 
