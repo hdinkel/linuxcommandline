@@ -161,7 +161,14 @@ Whenever a program gets stuck or takes too long to finish, you can *interrupt* i
 
 In case the output of the terminal/screen gets cluttered, you can use ``clear`` to redraw the screen... 
 
-If this doesn't work, you can use ``reset`` to perform a re-initialization of the terminal:
+ :: 
+
+  $ cat /bin/echo
+  $ ...(garbled output here)
+  $ clear
+  $
+
+.. note:: If this doesn't work, you can use ``reset`` to perform a re-initialization of the terminal:
 
 :index:`reset` - Reset your terminal
 ------------------------------------
@@ -679,9 +686,9 @@ By default, ``cut`` assumes the columns are TAB-separated.
 
 **Examples**:
 
- extract column six from the file */exercises/P12931.csv* (which is separated by semicolon ';'):: 
+ extract column six from the file *~/exercises/P12931.csv* (which is separated by semicolon ';'):: 
 
-  $ cut -d';' -f6 /exercises/P12931.csv
+  $ cut -d';' -f6 ~/exercises/P12931.csv
   PMID 
   2136766 
   11804588 
@@ -690,7 +697,7 @@ By default, ``cut`` assumes the columns are TAB-separated.
 
  extract columns two, three, eight, nine and ten from the same file::
 
-  $ cut -d';' -f2,3,8-10 /exercises/P12931.csv
+  $ cut -d';' -f2,3,8-10 ~/exercises/P12931.csv
   S; 12; 0.21; ; - 
   S; 17; 0.24; MOD_PKA_1; - 
   S; 17; 0.24; MOD_PKA_1; - 
@@ -980,7 +987,7 @@ Inserting the current date into a new file:
 
  :: 
 
-  $ cd /exercises/
+  $ cd ~/exercises/
   $ grep -i "src" *.fasta > lines_with_src.txt
   $
 
@@ -1004,7 +1011,7 @@ Here: use ``ls`` to show the directory contents and then :index:`use <grep>` ``g
 
  :: 
 
-  $ cd /exercises
+  $ cd ~/exercises
   $ ls | grep fasta
   EPSINS.fasta
   FYN_HUMAN.fasta
