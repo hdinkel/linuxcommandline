@@ -1,0 +1,4 @@
+
+
+- add 'git init --bare'
+- use two folders to clone, push pull
