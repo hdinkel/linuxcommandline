@@ -14,23 +14,20 @@ Verbesserungen:
  - Titlepage: Datum ganz unten, font wie titel
  - Usage: mv [options] haengender Einzug
  - {DONE} siehe 'apropos' - die naechste Zeile wird immer mit in die Ueberschrift gezogen!
- - mehr Uebungen! z.B. Verzeichniss erstellen, Dateien kopieren etc.
  - environment variables ueberarbeiten; PAGER herausnehmen?
- - Certificate, Feedback mit layout von Handout vereinheitlichen
- - change exercises directory (currently it's '/exercises')
+ - Certificate, Feedback mit Layout von Handout vereinheitlichen
  - 'release 1.4' aus seitenkopf nehmen
  - sektion ueber Bio-IT ueberarbeiten, 
-   - evtl. Centers dazunehmen?
    - Clemens Lakner fragen, ob er nicht einen text schreiben moechte
 
 Content:
+ - mehr Uebungen! z.B. Verzeichniss erstellen, Dateien kopieren etc.
  - add 'column'? Example `mount | column -t`
- - use 'cat /bin/echo' to show how a garbled screen looks like?
  - use 'tar -czf BACKUP.tgz /folder2backup' as backup before doing something dangerous? (Student asked about 'undo' function)
  - change order of exercises to rather match the order of the handout?
- - add a exercise file to demonstrate 'sort -n'
  - absolute/relative paths seem to be a problem; also mention that '/' exists on every machine (but different), while /home might be the same on each
  - add du/df?
+ - add exercises to environment variables like PATH?
 
 Sonstige Probleme:
  - @ATC-Teachinglab:
