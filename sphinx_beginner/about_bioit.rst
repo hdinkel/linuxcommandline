@@ -23,7 +23,7 @@ information.
 Training and Outreach 
 ^^^^^^^^^^^^^^^^^^^^^^
 
-The "Training and Outreach" menu, bottom left, provides information on events
+The "Training and Outreach" menu provides information on events
 (courses and conferences), both internal to EMBL and organised elsewhere by
 other organisations, that are related to biocomputing and bioinformatics
 

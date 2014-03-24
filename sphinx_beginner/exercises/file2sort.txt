@@ -1,0 +1,4 @@
+5   apples
+3   bananas
+12  peaches
+1   melon
