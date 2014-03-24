@@ -20,17 +20,15 @@ Verbesserungen:
  - change exercises directory (currently it's '/exercises')
  - 'release 1.4' aus seitenkopf nehmen
  - sektion ueber Bio-IT ueberarbeiten, 
-   - evtl. Centers dazunehmen?
    - Clemens Lakner fragen, ob er nicht einen text schreiben moechte
 
 Content:
  - add 'column'? Example `mount | column -t`
- - use 'cat /bin/echo' to show how a garbled screen looks like?
  - use 'tar -czf BACKUP.tgz /folder2backup' as backup before doing something dangerous? (Student asked about 'undo' function)
  - change order of exercises to rather match the order of the handout?
- - add a exercise file to demonstrate 'sort -n'
  - absolute/relative paths seem to be a problem; also mention that '/' exists on every machine (but different), while /home might be the same on each
  - add du/df?
+ - add exercises to environment variables like PATH?
 
 Sonstige Probleme:
  - @ATC-Teachinglab:
