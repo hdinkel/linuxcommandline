@@ -346,17 +346,17 @@ preceding blank here)
 +-----------+-----------------------------------+----------+
 |  sh/bash  | Integer Comparison                | csh/tcsh |
 +===========+===================================+==========+
-| n1 –eq n2 | n1 equals n2                      | n1 == n2 |
+| n1 -eq n2 | n1 equals n2                      | n1 == n2 |
 +-----------+-----------------------------------+----------+
-| n1 –ge n2 | n1 is greater than or equal to n2 | n1 >= n2 |
+| n1 -eq n2 | n1 is greater than or equal to n2 | n1 >= n2 |
 +-----------+-----------------------------------+----------+
-| n1 –gt n2 | n1 is greater than n2             | n1 > n2  |
+| n1 -eq n2 | n1 is greater than n2             | n1 > n2  |
 +-----------+-----------------------------------+----------+
-| n1 –le n2 | n1 is less than or equal to n2    | n1 <= n2 |
+| n1 -eq n2 | n1 is less than or equal to n2    | n1 <= n2 |
 +-----------+-----------------------------------+----------+
-| n1 –lt n2 | n1 is less than n2                | n1 < n2  |
+| n1 -eq n2 | n1 is less than n2                | n1 < n2  |
 +-----------+-----------------------------------+----------+
-| n1 –ne n2 | n1 it not equal to n2             | n1 != n2 |
+| n1 -eq n2 | n1 it not equal to n2             | n1 != n2 |
 +-----------+-----------------------------------+----------+
 
 
@@ -365,9 +365,9 @@ preceding blank here)
 +====================+======================================================+====================+
 | ! *cond*           | True if condition *cond* is not true                 | ! *cond*           |
 +--------------------+------------------------------------------------------+--------------------+
-| *cond1* –a *cond2* | True if conditions *cond1* and *cond2* are both true | *cond1* && *cond2* |
+| *cond1* -a *cond2* | True if conditions *cond1* and *cond2* are both true | *cond1* && *cond2* |
 +--------------------+------------------------------------------------------+--------------------+
-| *cond1* –o *cond2* | True if conditions *cond1* or *cond2* is true        | *cond1* || *cond2* |
+| *cond1* -o *cond2* | True if conditions *cond1* or *cond2* is true        | *cond1* || *cond2* |
 +--------------------+------------------------------------------------------+--------------------+
 
 
