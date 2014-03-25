@@ -8,17 +8,17 @@ Verbesserungen:
  - Konsistente Umgebungen (Tools, Schriften, Fonts) bei allen Autoren, so dass jeder die Dokumente jederzeit selber konsistent kompilieren kann
    use latex package 'dateiliste' (or \RequirePackage[log]{snapshot} before the \documentclass) to list all external dependancies (solve compile problem @Frank)
  - Codebloecke: Zeilenweise Formattierung, grauer Hintergrund  [ft]
- - Wenn einfach umsetzbar koennte man vor den Hauptueberschriften noch etwas mehr Platz einfuegen um es deutlicher zu machen wo eine neue Section anfaengt.
+ - Codebloecke: zwei nebeneinander (intermediate bash/csh)
  - Die Abbildungen sind in der Tat pixelig. Aber bereits die raw-Bilder in _static scheinen eine sehr niedrige Aufloesung zu haben.
  - subsectiontitle prominenter / farbig
+ - Wenn einfach umsetzbar koennte man vor den Hauptueberschriften noch etwas mehr Platz einfuegen um es deutlicher zu machen wo eine neue Section anfaengt.
  - Titlepage: Datum ganz unten, font wie titel
  - Usage: mv [options] haengender Einzug
- - {DONE} siehe 'apropos' - die naechste Zeile wird immer mit in die Ueberschrift gezogen!
- - environment variables ueberarbeiten; PAGER herausnehmen?
  - Certificate, Feedback mit Layout von Handout vereinheitlichen
- - 'release 1.4' aus seitenkopf nehmen
- - sektion ueber Bio-IT ueberarbeiten, 
+ - sektion ueber Bio-IT ueberarbeiten: Kuerzer, max 1 Paragraph
    - Clemens Lakner fragen, ob er nicht einen text schreiben moechte
+ - {DONE} siehe 'apropos' - die naechste Zeile wird immer mit in die Ueberschrift gezogen!
+ - {DONE} 'release 1.4' aus Seitenkopf nehmen
 
 Content:
  - mehr Uebungen! z.B. Verzeichniss erstellen, Dateien kopieren etc.
@@ -27,8 +27,14 @@ Content:
  - change order of exercises to rather match the order of the handout?
  - absolute/relative paths seem to be a problem; also mention that '/' exists on every machine (but different), while /home might be the same on each
  - add du/df?
+ - environment variables ueberarbeiten; PAGER herausnehmen?
  - add exercises to environment variables like PATH?
 
 Sonstige Probleme:
  - @ATC-Teachinglab:
    - Teacher-Monitor zeigt keine Konsole an, nur X11 Anwendungen
+ - printout b/w draws grey boxes around code. Only frank's printer?
+ - table "tests/conditions" has to be _one_
+      try .. tabularcolumns::
+      try using hack latex columns around two code blocks (-> Makefile)
+  compile@Frank: references not set (example 4.6 Ensuring...)
