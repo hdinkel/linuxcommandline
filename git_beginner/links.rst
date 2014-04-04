@@ -5,7 +5,7 @@ Links/References
 
 the git program itself:
 
-- `git for Windows <http://www.git-scm.com/download/wi>`_
+- `git for Windows <http://www.git-scm.com/download/win>`_
 - `git for Mac <http://www.git-scm.com/download/mac>`_
 
 Tools:
