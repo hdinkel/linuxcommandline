@@ -25,9 +25,10 @@ Content:
  - add 'column'? Example `mount | column -t`
  - {DONE} use 'tar -czf BACKUP.tgz /folder2backup' as backup before doing something dangerous? (Student asked about 'undo' function)
  - change order of exercises to rather match the order of the handout? (it kinda is for, at least for the beginner course)
- - absolute/relative paths seem to be a problem; also mention that '/' exists on every machine (but different), while /home might be the same on each
+ - {DONE} absolute/relative paths seem to be a problem; also mention that '/' exists on every machine (but different), while /home might be the same on each
+ - {MAYBE} add general information about linux (such as absolute/relative pathnames) also to beginning of commandlinetools.rst?
  - add du/df?
- - environment variables ueberarbeiten; PAGER herausnehmen?
+ - environment variables ueberarbeiten; PAGER herausnehmen? Ersetzen durch 'nuetzlichere' Environment variable? Evtl. Bioinfo Beispiel
  - add exercises to environment variables like PATH?
 
 Sonstige Probleme:

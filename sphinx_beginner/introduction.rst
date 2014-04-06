@@ -57,6 +57,18 @@ General Remarks Regarding Using UNIX/Linux Systems
 
 .. note:: The terms "directory" and "folder" are used interchangeably in this document.
 
+Absolute Paths / Relative Paths
+===============================
+
+A path describes the the location of a file/folder in the filesystem: 
+It is important to understand that there are basically two ways to describe such a path: Either by using an *absolute* pathname, or by using a
+*relative* pathname. The difference is that *absolute* paths always start with a "slash ``/``". This "slash" denotes the so called "root" of the
+filesystem (see below). *Relative* paths in contrast always starting with a directory name and denote the location of a file/folder *relative* to
+the current directory.
+
+.. note:: When in doubt, it's best to use *absolute* filenames. Commands given with absolute pathname are more easily repeated later, as they can
+   be run independent of the current working directory (unlike relative paths).
+
 ***********************************
 General Structure of Linux Commands
 ***********************************
@@ -309,7 +321,7 @@ Moving Around
   $
 
 .. note:: Using ``cd`` without a directory is equivalent to "``cd ~``" and changes into the users's homedirectory
-.. note:: Please note the difference between absolute pathes (starting with "``/``") and relative pathes (starting with a directory name)
+.. note:: Please note the difference between absolute paths (starting with "``/``") and relative paths (starting with a directory name)
 
 Special directories:
 
