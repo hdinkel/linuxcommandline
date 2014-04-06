@@ -13,7 +13,7 @@ Verbesserungen:
  - subsectiontitle prominenter / farbig
  - Wenn einfach umsetzbar koennte man vor den Hauptueberschriften noch etwas mehr Platz einfuegen um es deutlicher zu machen wo eine neue Section anfaengt.
  - Titlepage: Datum ganz unten, font wie titel
- - Usage: mv [options] haengender Einzug
+ - {DONE} Usage: mv [options] haengender Einzug
  - Certificate, Feedback mit Layout von Handout vereinheitlichen
  - sektion ueber Bio-IT ueberarbeiten: Kuerzer, max 1 Paragraph
    - Clemens Lakner fragen, ob er nicht einen text schreiben moechte
@@ -23,8 +23,8 @@ Verbesserungen:
 Content:
  - mehr Uebungen! z.B. Verzeichniss erstellen, Dateien kopieren etc.
  - add 'column'? Example `mount | column -t`
- - use 'tar -czf BACKUP.tgz /folder2backup' as backup before doing something dangerous? (Student asked about 'undo' function)
- - change order of exercises to rather match the order of the handout?
+ - {DONE} use 'tar -czf BACKUP.tgz /folder2backup' as backup before doing something dangerous? (Student asked about 'undo' function)
+ - change order of exercises to rather match the order of the handout? (it kinda is for, at least for the beginner course)
  - absolute/relative paths seem to be a problem; also mention that '/' exists on every machine (but different), while /home might be the same on each
  - add du/df?
  - environment variables ueberarbeiten; PAGER herausnehmen?

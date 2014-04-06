@@ -465,8 +465,11 @@ We copy a set of exercise files from the network share into our home directory:
 :index:`rm` - Remove files and directories
 ------------------------------------------
 
-**Usage**:  ``rm [options] file(s)``
-        ``rm -r [options] directory/ies``
+**Usage**:  
+
+  ``rm [options] file(s)``
+
+  ``rm -r [options] directory/ies``
 
  :: 
 
@@ -488,8 +491,11 @@ We copy a set of exercise files from the network share into our home directory:
 :index:`mv` - Move and rename files and folders
 -----------------------------------------------
 
-**Usage**:  ``mv [options] sourcefile destinationfile``
-            ``mv [options] sourcefile(s) destinationdirectory``
+**Usage**:  
+
+  ``mv [options] sourcefile destinationfile``
+
+  ``mv [options] sourcefile(s) destinationdirectory``
 
  :: 
 
