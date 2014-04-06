@@ -5,7 +5,7 @@ Solutions to the Exercises
 Misc. file tools
 ----------------
 
-#. Which tool can be used to determine the type of a file? ::
+#. Which tool can be used to determine the type of a index:`file`? ::
 
     $ file
 
@@ -30,7 +30,7 @@ Misc. file tools
 
 Searching
 ---------
-#. Which tool can be used to search for files or directories? ::
+#. :index:`Which <find>` tool can be used to search for files or directories? ::
 
    $ find
 
@@ -49,19 +49,21 @@ Searching
 
 Misc. terminal
 --------------
-#. Which two tools can be used to redraw/empty the screen? ::
+#. :index:`Which <clear>` :index:`two <reset>` tools can be used to redraw/empty the screen? ::
 
    $  clear
+
+   $  reset
 
 
 Permissions
 -----------
 
-#. Create a directory called testpermissions ::
+#. :index:`Create <mkdir>` a directory called testpermissions ::
 
    $ mkdir testpermissions
 
-#. Change your working directory to testpermissions ::
+#. :index:`Change <cd>` your working directory to testpermissions::
 
    $ cd testpermissions
 
@@ -69,21 +71,21 @@ Permissions
 
    $ mkdir adir
 
-#. Use the command ``which date`` to find out where the date program is located. ::
+#. Use the  :index:`command <which>` ``which date`` to find out where the date program is located.::
 
     $ which date
     /bin/date
 
-#. Copy this date program into the directory adir and name it 'mydate'. ::
+#.  :index:`Copy <cp>` this date program into the directory adir and name it 'mydate'.::
 
     $ cp /bin/date adir/mydate
 
-#. Check the permissions of the copied program 'mydate' ::
+#.  :index:`Check <ls>` the permissions of the copied program 'mydate'::
 
     $ ls -lh adir/mydate
     -r-xr-xr-x  1 dinkel  staff    79K  9 Dec 13:47 mydate*
 
-#. Change the permissions on 'mydate' to remove the executable permissions. ::
+#.  :index:`Change <chmod>` the permissions on 'mydate' to remove the executable permissions.::
 
     $ chmod a-x adir/mydate
 
@@ -127,19 +129,20 @@ Permissions
 
 Remote access
 -------------
-#. Login to machine "sub-master.embl.de" (using your own username) ::
+#. :index:`Login <ssh>` to machine "sub-master.embl.de" (using your own username) ::
 
    $ ssh sub-master.embl.de -l username
 
-#. Use exit to quit the remote shell (Beware to not exit your local shell) ::
+#. Use :index:`exit` to quit the remote shell (Beware to not exit your local shell) ::
 
    $ exit
 
-#. Use clear to empty the screen after logout from the remote server ::
+#. Use :index:`clear` to empty the screen after logout from the remote server::
 
    $ clear
 
-#. Use the following commands locally as well as on the remote machine to get a feeling for the different machines: ::
+#. Use the following :index:`commands <hostname,whoami,ls>` locally as well as on the remote machine to get a feeling for the different machines: ::
+   
 
     A) ``hostname``
  
@@ -147,29 +150,29 @@ Remote access
  
     C) ``ls -la ~/``
 
-#. Copy the file ``/etc/motd`` from machine sub-master.embl.de into your local home directory (using scp) ::
+#.  :index:`Copy <scp>` the file ``/etc/motd`` from machine sub-master.embl.de into your local home directory (using scp)::
 
     $ scp sub-master.embl.de:/etc/motd ~/
 
-#. Determine the filetype and the permissions of the file that you just copied ::
+#. Determine the  :index:`filetype <file>` and the permissions of the file that you just copied::
 
     $ file ~/motd
     ~/motd: ASCII text
 
    $ ls -l ~/motd
 
-#. Login to your neighbor's machine (ask him for the hostname) using your own username ::
+#.  :index:`Login <ssh>` to your neighbor's machine (ask him for the hostname) using your own username::
 
     $ ssh hostname
 
 
 IO and Redirections
 -------------------
-#. Use date in conjunction with the redirection to insert the current date into the (new) file current_date (in your homedirectory). ::
+#. Use :index:`date` in conjunction with the redirection to insert the current date into the (new) file current_date (in your homedirectory).::
 
    $ date > ~/current_date
 
-#. Inspect the file to make sure it contains (only a single line with) the date. ::
+#.  :index:`Inspect <cat>` the file to make sure it contains (only a single line with) the date.::
 
    $ cat ~/current_date
 
@@ -181,7 +184,7 @@ IO and Redirections
 
    $ cat ~/current_date
 
-#. Use ``grep`` to filter out lines containing the term "TITLE" from all PDB files in the exercises directory and use redirection to insert them into a new file pdb_titles.txt. ::
+#. :index:`Use <grep>` ``grep`` to filter out lines containing the term "TITLE" from all PDB files in the exercises directory and use redirection to insert them into a new file pdb_titles.txt.::
 
    $ grep TITLE ~/exercises/*.pdb > pdb_titles.txt
 
@@ -197,12 +200,11 @@ IO and Redirections
 
 #. The *third* column of the file /etc/passwd contains user IDs (numbers)
 
-   A. Use `cut` to extract just the third column of this file (remember to specify the delimiter ':')::
+   A. :index:`Use <cut>` ``cut`` to extract just the third column of this file (remember to specify the delimiter ':')::
 
       $ cut -f3 -d':' /etc/passwd 
 
    B. Next, use the :ref:`pipe <pipe>` symbol (`|`) and `sort` to sort this output *numerically*::
 
       $ cut -f3 -d':' /etc/passwd | sort -n
-
 
