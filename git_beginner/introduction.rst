@@ -77,13 +77,13 @@ setting your identity
 
 Before we start, we should set the user name and e-mail address.
 This is important because every git commit uses this information 
-and it's also increadibly useful when looking at the history and commit log: ::
+and it's also incredibly useful when looking at the history and commit log: ::
 
  git config --global user.name "John Doe"
  git config --global user.email johndoe@embl.de
 
 
-Other useful settings include your favorite editor as well as difftool:::
+Other useful settings include your favorite editor as well as difftool: ::
 
  git config --global core.editor vim
  git config --global merge.tool meld
@@ -93,7 +93,7 @@ Other useful settings include your favorite editor as well as difftool:::
 Checking Your Settings
 ----------------------
 
-You can use the `git config --list` command to list all your settings:::
+You can use the `git config --list` command to list all your settings: ::
 
  git config --list
  user.name="John Doe"
@@ -114,30 +114,30 @@ A Typical git Workflow
 Creating a git Repository
 =========================
 
-Turning an existing directory into a git repository is as simple as changing into that directory and invoking `git init`. 
-Here we first create an empty directory called `new_repository` and create a repository in there:::
+Turning an existing directory into a git repository is as simple as changing into that directory and :index:`invoking <init>`  `git init`. 
+Here we first create an empty directory called `new_repository` and create a repository in there: ::
 
  mkdir new_repository
  cd new_repository
  git init
 
-.. note:: As a result, there should be a directory called `.git` be in this directory...
+.. note:: As a result, there should be a directory called `.git` in this directory...
 
 
 Cloning a git Repository
 ========================
-Instead of creating a new directory, we can `index:clone` a repository. That `origin` repository can reside in a different folder on our computer, on a
+Instead of creating a new directory, we can :index:`clone` a repository. That `origin` repository can reside in a different folder on our computer, on a
 remote machine, or on a dedicated git server:
 
-Local directory:::
+Local directory: ::
 
  git clone ../other_directory
 
-Remote directory:::
+Remote directory: ::
 
  git clone ssh://user@server/project.git
 
-Remote git server:::
+Remote git server: ::
 
  git clone git@server:user/project
  git clone git@git.embl.de:dinkel/linuxcommandline
@@ -268,6 +268,17 @@ If you want to undo all changes in a local file, you simply checkout the latest 
  git checkout -- <filename>
 
 .. warning:: You will loose all changes you made since the last commit!
+
+
+
+Using centralized workflow
+==========================
+
+When you want to use one central repository, to which everybody can push/pull, 
+you should initialize this repo like so: `git init --bare`. 
+Basically what this does is create a repository which all the files from the `.git` directory in the working directory.
+This also means that you should never add/edit/delete files in this directory. Rather clone this directory in another folder/computer,
+edit files there and commit/push (see below)...
 
 EMBL git server
 ***************

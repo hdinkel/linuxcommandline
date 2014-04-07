@@ -1,4 +1,5 @@
 
 
-- add 'git init --bare'
+- {DONE} add 'git init --bare'
 - use two folders to clone, push pull
+- {DONE} add links to "Links"
