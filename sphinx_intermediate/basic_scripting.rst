@@ -195,12 +195,12 @@ Execute cmd3 only if cmd1 was not successful:
 
       cmd1 || cmd2
 
-Example:
-    Warn if a directory doesn't exist: ::
+    Example:
+        Warn if a directory doesn't exist: ::
 
-        > cd /etc || echo "/etc is missing!"
-        > cd /nowhere >&/dev/null || echo "/nowhere does not exist"
-        /nowhere does not exist
+            > cd /etc || echo "/etc is missing!"
+            > cd /nowhere >&/dev/null || echo "/nowhere does not exist"
+            /nowhere does not exist
 
 Group commands to create one single output stream:
     The commands are run in a subshell (i.e. a new shell is opened to run them) ::
@@ -250,30 +250,19 @@ Conditional Statements
 if - then - else:
 ^^^^^^^^^^^^^^^^^
 
-This is the most basic conditional statement: Do something depending on certain conditions. The basic syntax is:
+This is the most basic conditional statement: Do something depending on certain conditions. The basic syntax is: ::
 
-  sh/bash: ::
-
-   if condition1
-   then
-     commands
-   elif condition2
-     more commands
-   [...]
-   else
-     even more commands
-   fi
-
-  csh/tcsh: ::
-
-    if (condition) then
-      commands
-    else if (condition2) then
-      more commands
-    [...]
-    else
-      even more commands
-    endif
+   sh/bash:                            | tcsh:
+                                       |
+   if condition1                       | if (condition) then
+   then                                |   commands
+     commands                          | else if (condition2) then
+   elif condition2                     |   more commands
+     more commands                     | [...]
+   [...]                               | else
+   else                                |   even more commands
+     even more commands                | endif
+   fi                                  |
 
 
 Conditions can be 
@@ -396,36 +385,23 @@ The :index:`case <case>`  statement implements a more compact and better readabl
 variables with case) can have a distinct number of valid values. A typical
 usage of case will follow later.
 
-The basic syntax is:
+The basic syntax :index:`is <breaksw>`: ::
 
-sh/bash: ::
+   sh/bash:                              | csh/tcsh:
+                                         |
+   case variable in                      | switch (variable)
+     pattern1)                           |   case pattern1:
+       commands                          |     commands
+       ;;                                |     breaksw
+     pattern2)                           |   case pattern2:
+       commands                          |     commands
+       ;;                                |     breaksw
+     [...]                               |   default:
+     *)                                  |     commands
+       commands                          | endsw
+       ;;                                |
+   esac                                  |
 
-   case variable in
-     pattern1)
-       commands
-       ;;
-     pattern2)
-       commands
-       ;;
-     [...]
-     *)
-       commands
-       ;;
-   esac
-
-
-:index:`csh/tcsh <breaksw>`: ::
-
-   switch (variable)
-     case pattern1:
-       commands
-       breaksw
-     case pattern2:
-       commands
-       breaksw
-     default:
-       commands
-   endsw
 
 .. Note:: "``*``", "``?``" and "``[...]``" can be used for the :index:`patterns <pattern>`
 
@@ -455,21 +431,14 @@ for / foreach
 ^^^^^^^^^^^^^
 
 The :index:`for <for>`  and :index:`foreach <foreach>`  statements respectively will loop through a
-list of given values and run the given statements for reach run:
+list of given values and run the given statements for reach run: ::
 
- sh/bash: ::
-
-     for variable in list
-     do
-       commands
-     done
-
-
- csh/tcsh: ::
-
-     foreach variable (list)
-       commands
-     end
+ sh/bash:                              |  csh/tcsh:
+                                       | 
+     for variable in list              |      foreach variable (list)
+     do                                |        commands
+       commands                        |      end
+     done                              |
 
 *list* is a list of strings, separated by whitespaces
 
@@ -489,28 +458,20 @@ Examples:
 while / until
 ^^^^^^^^^^^^^
 
-The :index:`while <while>` and :index:`until <until>` loops execute your commands while (or :index:`until <until>` respectively) a certain condition is met
+The :index:`while <while>` and :index:`until <until>` loops execute your commands while (or :index:`until <until>` respectively) a certain condition is met ::
 
-
- sh/bash: ::
-
-   while condition
-   do
-     commands
-   done
-
-
-   until condition
-   do
-     commands
-   done
-
-
- csh/tcsh: ::
-
-   while (condition)
-     commands
-   end
+ sh/bash:                              |  csh/tcsh: 
+                                       | 
+   while condition                     |    while (condition)
+   do                                  |      commands
+     commands                          |    end
+   done                                |
+                                       |
+                                       |
+   until condition                     |
+   do                                  |
+     commands                          |
+   done                                |
 
 
 The conditions are constructed the same way as those used in if statements.
