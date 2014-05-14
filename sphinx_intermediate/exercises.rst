@@ -1,6 +1,6 @@
 
-Exercises
-=========
+Command Line Exercises
+======================
 
 TAR & GZIP
 ^^^^^^^^^^

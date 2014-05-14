@@ -15,7 +15,6 @@ Intermediate Linux Course: Commandline and Basic Scripting
    I/O Redirection <redirection>
    Variables <variables>
    Basic Scripting <basic_scripting>
-   Exercises <exercises>
    Solutions <solutions>
    appendix
 

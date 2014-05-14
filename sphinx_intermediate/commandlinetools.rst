@@ -414,3 +414,4 @@ You already learned how to expand a variable such that its value is used instead
 
 .. note:: The "escape character" is usually the backslash "``\``".
 
+.. include:: exercises.rst
