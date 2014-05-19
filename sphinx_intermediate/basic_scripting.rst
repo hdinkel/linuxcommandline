@@ -253,8 +253,8 @@ A) Evaluating the exit status of a command: Simply use the command as condition.
 B) Evaluating of conditions or comparisons:
 
   Conditions and comparisons are evaluated using a special :index:`command <test>` ``test`` which is
-  usually written as :index:`"<[>«` ``[``" (no joke!). As "[" is a command, it must be followed by
-  a blank. As a speciality the "[" command must be ended with " ]" (note the
+  usually written :index:`as<[>` "``[``" (no joke!). As "``[``" is a command, it must be followed by
+  a blank. As a speciality the "``[``" command must be ended with "`` ]``" (note the
   preceding blank here)
 
   .. Note:: In csh/tcsh the ``test`` (or ``[``) command is not needed. Conditions and comparisons are directly placed within the round braces.
@@ -464,11 +464,24 @@ The conditions are constructed the same way as those used in if statements.
 ^^^^^^^^^^^^^^^^^^^^^
 
 Instead of (or additionally to) the built-in loop control in for/foreach, :index:`while <while>` and
-:index:`until <until>`  loops, you can control exiting and continuing them with "``break``" and
-"``continue``": break "``breaks out``" of the innermost loop (loops can be nested!) and continues
+:index:`until <until>`  loops, you can control exiting and continuing them :index:`with <break>` ``break`` :index:`and <continue>`
+``continue``: ``break`` "breaks out" of the innermost loop (loops can be nested!) and continues
 after the end of the loop. ``continue`` skips the rest of the current (innermost) loop and starts
 the next iteration
 
+.. figure:: _static/loop_control.png
+
+   Loop control
+   
+   +-------------------------------------+-----------------------------------+
+   | Symbol                              |                                   |
+   +=====================================+===================================+
+   | .. image:: _static/line_steel.png   | Regular loop cycle                |
+   +-------------------------------------+-----------------------------------+
+   | .. image:: _static/line_red.png     | ``break`` due to *condition_2*    |
+   +-------------------------------------+-----------------------------------+
+   | .. image:: _static/line_blue.png    | ``continue`` due *to condition_3* |
+   +-------------------------------------+-----------------------------------+
 
 
 
@@ -546,7 +559,7 @@ Defining your own Commandline Options and Arguments
 
 The best way to configure a script is to allow for your own commandline options
 and arguments. Commandline arguments are available the script as so-called
-positional parameters ``$1``, ``$2``, ``$3``: etc. ``$0``: contains the name of the script. The
+:index:`positional parameters` ``$1``, ``$2``, ``$3``: etc. ``$0``: contains the name of the script. The
 variables important when dealing with commandline parameters are:
 
 $0:
@@ -619,11 +632,11 @@ all the commandline parameters: ::
 Ensuring a Sensible Exit Status
 ===============================
 
-If you don't provide your own exit status, then the script will return the exit
+If you don't provide your own :index:`exit status`, then the script will return the exit
 status of the last executed command (See :ref:`Reporting Success or Failure - The Exit Status<reporting_success_or_failure>`).
 In many cases this might be what you want, but very
 often it isn't. Consider the following script which is a real example from real
-life and happened to me personally: ::
+life and happened to me personally::
 
     #!/bin/sh
 
@@ -631,13 +644,13 @@ life and happened to me personally: ::
 
     echo "End of the script"
 
-This script will *always* succeed, as the echo command hardly ever fails. You
+This script will *always* succeed, as the ``echo`` command hardly ever fails. You
 will - from the exit status of the script - never be able to detect that
 something went wrong. Instead in such cases you should manually handle the exit
 codes of the commands that are run within the script.
 
 With it's help we can keep track of the exit stati of all our important
-processing steps and finally return a sensible value: ::
+processing steps and finally return a sensible value::
 
     #!/bin/sh
     mystatus=0;
@@ -709,10 +722,10 @@ followed by a newline (no intermediate blanks or other is allowed): ::
 
 becomes: ::
 
-    $ bsub -o output.log \
-           -e error.log \
-           -q clngnew \
-           -M 150000 \
+    $ bsub -o output.log              \
+           -e error.log               \
+           -q clngnew                 \
+           -M 150000                  \
            -R "select[(mem > 15000)]" \
         /g/software/bin/pymol-1.4 -r -p < pymol.pml
 
@@ -721,17 +734,17 @@ Which is way better to read and to maintain
 Script Debugging
 ----------------
 
-sh/bash and csh/tcsh have both an option "-x" which helps debugging a script by
-echoing each command before executing it.  This option can be set and unset
-during runtime with set -x / set +x (sh/bash) and set echo / unset echo
+sh/bash and csh/tcsh have both an option "``-x``" which helps debugging a script by
+echoing each command before executing it.  This option can be :index:`set` and :index:`unset`
+during runtime with ``set -x`` / ``set +x`` (sh/bash) and ``set echo`` / ``unset echo``
 (csh/tcsh).
 
 Command Substitution
 --------------------
 
 You can use the output of a command and assign it to a variable or use it right
-away as text string, by using the :index:`command substitution` operators "`"
-(backticks, backquotes) or "$(...)". The backtick operator works in all shells,
+away as text string, by using the :index:`command substitution` operator "`"
+(:index:`backticks <backtick>`, :index:`backquotes <backquote>`) or "``$(...)``". The backtick operator works in all shells,
 while $(...) only works in bash.
 
 Three variants for the same (print out who you are in English text): ::
