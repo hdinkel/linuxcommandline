@@ -90,7 +90,6 @@ a) Set the variables and run the script i.e. in a new shell:
 
   I am global 
   -----
-  $
 
 b) “source” the script, i.e. run it within your current shell:
 
@@ -100,7 +99,6 @@ b) “source” the script, i.e. run it within your current shell:
   I am local 
   I am global 
   -----
-  $
 
 c) Access the variables in a subshell:
 
@@ -109,5 +107,3 @@ c) Access the variables in a subshell:
   $ (echo $MYGLOBALVAR; echo $MYLOCALVAR) 
   I am global 
   I am local 
-  $
-
