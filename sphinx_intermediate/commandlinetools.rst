@@ -113,7 +113,7 @@ Creating a backup (eg. before doing something dangerous?):
 GREP
 ----
 
-index:`grep` finds lines matching a pattern in textfiles.
+:index:`grep` finds lines matching a pattern in textfiles.
 
 **Usage**: grep [options] pattern file(s)
 
@@ -159,7 +159,7 @@ List all files containing the term "Ensembl":
 SED
 ---
 
-index:`sed` is a Stream EDitor, it modifies text (text can be a file or a pipe) on the fly.
+:index:`sed` is a Stream EDitor, it modifies text (text can be a file or a pipe) on the fly.
 
 *Usage*: '``sed command file``',
 
