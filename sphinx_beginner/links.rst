@@ -2,8 +2,8 @@
 Links and Further Information
 ------------------------------
 
-Links 
-^^^^^^
+Links
+^^^^^
 
 - A full 500 page book about the Linux commandline for free(!): `LinuxCommand.org <http://linuxcommand.org/>`_ [#l1]_
 - Another nice introduction: `"A beginner's guide to UNIX/Linux" <http://www.mn.uio.no/astro/english/services/it/help/basic-services/linux/guide.html>`_ [#l2]_

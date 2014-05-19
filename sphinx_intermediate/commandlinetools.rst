@@ -314,30 +314,47 @@ by a comma or they will be catenated together...
   # echo "field1,field2,field2" | awk -F',' '{print $1 $2 $3}'
    field1field2field3
 
-You can also combine the pattern matching and the column selection techniques:
+You can also combine the pattern matching and the column selection techniques,
+in this example we'll print only the third column of the lines matching the
+pattern 'PDBsum' (case sensitive): 
 
  ::
 
-  # awk '/more/ {print $3}' textfile
-   even
+  $ awk '/PDBsum/ {print $3}' P12931.txt
+  1A07;
+  1A08;
+  1A09;
+  1A1A;
+  ...  
+
 
 awk really is powerful in filtering out columns, you can for instance print only
 certain columns of certain lines. Here we print the third column of those lines
-where the fourth column is 'more':
+where the second column is 'PDBsum':
 
  ::
 
-  # awk '$4=="more" {print $3}' textfile
-   even
+  # awk '$2=="PDBsum;" {print $3}' P12931.txt
+  1A07;
+  1A08;
+  1A09;
+  1A1A;
+  ...  
+
 
 Note the double equal signs "==" to check for equality and note the quotes around
-"more".
+"PDBsum;".
 If you want to match a field, but not exactly, you can use '~' instead of '==':
 
  ::
 
-  # awk '$4~"ore" {print $3}' textfile
-   even
+  # awk '$4~"sum" {print $3}' P12931.txt
+  1A07;
+  1A08;
+  1A09;
+  1A1A;
+  ...  
+
 
 ..
 .. Sum column 1 of file.txt:
