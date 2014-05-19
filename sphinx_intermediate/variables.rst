@@ -1,48 +1,56 @@
 Variables 
 =========
 
-The shell knows two types of variables: “Local” shell variables and “global”
-exported :index:`environment variables`. By convention, environment variables are
-written in uppercase letters.
+The shell knows two types of variables: “Local” `shell` :index:`variables <variables; shell
+variables>` and “global” exported `environment` :index:`variables <variables; environment
+variables>`. By convention, environment variables are written in uppercase
+letters.
 
-Shell variables are only available to the current shell and not inherited when
+**Shell variables** are **only available to the current shell** and not inherited when
 you start an other shell or script from the commandline. Consequently, these
 variables will not be available for your shellscripts.
 
-Environment variables are inherited to shells and scripts started from your
-current. 
+**Environment variables** are **passed on** to shells and scripts started from your
+current shell.
+
 
 Setting, Exporting and Removing Variables 
 ------------------------------------------
 
-Variables are set (created) by assigning them a value
+Variables are set (created) by simply assigning them a value
 
 ::
 
-  # MYVAR=something
+  $ MYVAR=something
 
-There must be no whitespace around the equal sign. To create an environment
-variable, export is used. You can either export while assigning a value or in a
+There must be no whitespace around the equal sign.
+
+To create an environment
+variable, ``export`` is used. You can either export while assigning a value or in a
 separate step. Both of the following procedures are equivalent:
 
+a)
+
+ ::
+
+  $ export MYGLOBALVAR=”something else”
+
+b)
+
+ ::
+
+  $ MYGLOBALVAR=”something else” 
+  $ export MYGLOBALVAR
+
+.. note:: There is no ``$`` in front of the variable: To reference the variable itself (not its content) the name is used without ``$``
+
+Variables are removed with ``unset``:
+
 ::
 
-  # export MYGLOBALVAR=”something else”
+  $ unset MYVAR
 
-::
-
-  # MYGLOBALVAR=”something else” 
-  # export MYGLOBALVAR
-
-.. note:: There is no ``$`` in front of the variable!
-
-Variables are removed with unset:
-
-::
-
-  # unset MYVAR
-
-.. note:: Assigning a variable an empty value (``MYVAR=``) will *not* remove it but simply set
+.. note:: Assigning a variable an empty value (i.e. ``MYVAR=``) will *not* remove it but simply set
           its value to the empty string! 
 
 Listing Variables 
@@ -63,7 +71,7 @@ current shell are available.
 Examples 
 ---------
 
-Consider the following small shellscript `vartest.sh`: ::
+Consider the following small shellscript `vartest.sh`::
 
   #!/bin/sh 
   echo $MYLOCALVAR
@@ -72,26 +80,34 @@ Consider the following small shellscript `vartest.sh`: ::
 
 We will use it in the following examples to illustrate the various variable inheritances:
 
-Set the variables and run the script i.e. in a new shell ::
+a) Set the variables and run the script i.e. in a new shell:
 
-  # export MYGLOBALVAR=”I am global” 
-  # MYLOCALVAR=”I am local” 
-  # ./vartest.sh
+ ::
+
+  $ export MYGLOBALVAR=”I am global” 
+  $ MYLOCALVAR=”I am local” 
+  $ ./vartest.sh
 
   I am global 
-  ----- 
+  -----
+  $
 
-“source” the script, i.e. run it within your current shell ::
+b) “source” the script, i.e. run it within your current shell:
 
-  # ./vartest.sh 
+ ::
+ 
+  $ ./vartest.sh 
   I am local 
   I am global 
-  ----- 
+  -----
+  $
 
-# Access the variables in a subshell::
+c) Access the variables in a subshell:
 
-    # (echo $MYGLOBALVAR; echo $MYLOCALVAR) 
-    I am global 
-    I am local 
-
+ ::
+ 
+  $ (echo $MYGLOBALVAR; echo $MYLOCALVAR) 
+  I am global 
+  I am local 
+  $
 
