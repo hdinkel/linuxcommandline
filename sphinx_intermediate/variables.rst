@@ -22,8 +22,9 @@ Variables are set (created) by simply assigning them a value
 ::
 
   $ MYVAR=something
+  $
 
-There must be no whitespace around the equal sign.
+.. note:: There must be no whitespace surrounding the equal sign!
 
 To create an environment
 variable, ``export`` is used. You can either export while assigning a value or in a
@@ -34,6 +35,7 @@ a)
  ::
 
   $ export MYGLOBALVAR=”something else”
+  $
 
 b)
 
@@ -41,6 +43,7 @@ b)
 
   $ MYGLOBALVAR=”something else” 
   $ export MYGLOBALVAR
+  $
 
 .. note:: There is no ``$`` in front of the variable: To reference the variable itself (not its content) the name is used without ``$``
 
@@ -49,6 +52,7 @@ Variables are removed with ``unset``:
 ::
 
   $ unset MYVAR
+  $
 
 .. note:: Assigning a variable an empty value (i.e. ``MYVAR=``) will *not* remove it but simply set
           its value to the empty string! 
@@ -61,16 +65,14 @@ environment variables :index:`with <env>` ``env`` and all shell variables :index
 shell variables will also contain all environment variables  ::
 
   $ set | more
-
   BASH=/bin/bash
-  BASHOPTS=cdspell:checkwinsize:cmdhist:expand_aliases...
-  BASH_ALIASES=()
   BASH_ARGC=()
-  BASH_ARGV=()
-  BASH_CMDS=()
+  BASH_VERSION='4.1.2(1)-release'
+  COLORS=/etc/DIR_COLORS.256color
+  COLUMNS=181
   ...
+  $
 
-  
 
 Variable Inheritance 
 ---------------------
@@ -99,9 +101,9 @@ a) Set the variables and run the script i.e. in a new shell:
   $ export MYGLOBALVAR=”I am global” 
   $ MYLOCALVAR=”I am local” 
   $ ./vartest.sh
-
   I am global 
   -----
+  $
 
 b) “source” the script, i.e. run it within your current shell:
 
@@ -111,6 +113,7 @@ b) “source” the script, i.e. run it within your current shell:
   I am local 
   I am global 
   -----
+  $
 
 c) Access the variables in a subshell:
 
@@ -119,3 +122,4 @@ c) Access the variables in a subshell:
   $ (echo $MYGLOBALVAR; echo $MYLOCALVAR) 
   I am global 
   I am local 
+  $

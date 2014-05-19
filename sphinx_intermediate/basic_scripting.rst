@@ -44,7 +44,7 @@ b) the location to the script is in the ``$PATH`` variable, then you can simply 
 
    $ script.sh
    [...]
-   $    man
+   $ 
 
   In both situations, the script will need to have execute permissions to be run. If for some
   reason you can only read but not execute the script, then it can still be run in the following way:
