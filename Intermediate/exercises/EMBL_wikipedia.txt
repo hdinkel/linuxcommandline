@@ -1,0 +1,28 @@
+EMBL
+
+The European Molecular Biology Laboratory (EMBL) is a molecular biology research institution
+supported by 20 European countries and Australia as associate member state. EMBL was created in 1974
+and is an intergovernmental organisation funded by public research money from its member states.
+Research at EMBL is conducted by approximately 85 independent groups covering the spectrum of
+molecular biology. The Laboratory operates from five sites: the main Laboratory in Heidelberg, and
+Outstations in Hinxton (the European Bioinformatics Institute (EBI)), Grenoble, Hamburg, and
+Monterotondo near Rome.
+
+Research at EMBL
+
+Each of the sites has a specific research field. The EBI is a hub for bioinformatic research and
+services, developing and maintaining a large number of databases which are free of charge for the
+scientific community. At Grenoble and Hamburg, research is focused on structural biology. EMBL's
+dedicated Mouse Biology Unit is located in Monterotondo. At the headquarters in Heidelberg, there
+are units in Cell Biology and Biophysics, Developmental Biology, Genome Biology and Structural and
+Computational Biology as well as service groups complementing the aforementioned research fields.
+
+Many scientific breakthroughs have been made at EMBL, most notably the first systematic genetic
+analysis of embryonic development in the fruit fly by Christiane Nüsslein-Volhard and Eric
+Wieschaus, for which they were awarded the Nobel Prize for Medicine in 1995.
+Mission
+
+The cornerstones of EMBL's mission are manifold. Basic research in molecular biology and molecular
+medicine is performed; scientists, students and visitors at all levels are trained; vital services
+to scientists in the member states are offered; new instruments and methods in the life sciences are
+developed; and there is an active engagement in technology transfer.
