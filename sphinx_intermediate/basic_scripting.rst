@@ -206,8 +206,8 @@ or based on the success of the respective previous command:
 *{ cmds; }* --
   Group commands to create one single output stream:  The commands are run in the current (!) shell.
   
-.. note:: The opening "``{``" must be followed by a blank and the last command must be succeeded by a `semicolon (``;``)
-..
+  .. note:: The opening "``{``" must be followed by a blank and the last command must be succeeded by a `semicolon (``;``)
+  ..
 
   Example: Change into ``/etc`` and list its content. You are still in ``/etc`` after the bracketed expression (compare to the example above)::
 
