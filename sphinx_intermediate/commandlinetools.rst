@@ -3,8 +3,14 @@
 More Commandline Tools
 **********************
 
+Here is a quick list of useful commandline tools which will be used throughout the rest of the document.
+Many of these tools have quite extensive funcionality and only a very limited part can be discussed here, 
+so the reader is encouraged to read more about these using the links given in the in the :ref:`Links <Links>` 
+section...
+
 Command-line Tools
 ==================
+
 
 
 GZIP
@@ -95,6 +101,13 @@ Creating and extracting a compressed archive containing two files:
 
   # tar -czf archive.tar.gz textfile1 textfile2
   # tar -xzf archive.tar.gz
+
+
+Creating a backup (eg. before doing something dangerous?): 
+
+ ::
+
+  # tar -czf /folder/containing/the/BACKUP.tgz /folder/you/want/to/backup
 
 
 GREP
