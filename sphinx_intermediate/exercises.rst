@@ -3,7 +3,7 @@ Command Line Exercises
 ======================
 
 TAR & GZIP
-^^^^^^^^^^
+----------
 
 1. Use :index:`gzip <gzip>` to compress the file P12931.txt
 
@@ -21,7 +21,7 @@ TAR & GZIP
 
  
 GREP
-^^^^
+----
 
 1. Which of the DNA files ENST0* contains "TATATCTAA" as part of the sequence? 
 
@@ -35,7 +35,7 @@ GREP
 
 
 SED
-^^^
+---
 
 1. Use sed to print only those lines that contain "version" in the files P05480.txt and P04062.txt
 
@@ -47,7 +47,7 @@ SED
 
 
 AWK
-^^^
+---
 
 1. Use awk to print only those lines that contain "version" in the files P12931.txt and P05480.txt and think about how this procedure is different to sed. 
 
@@ -55,16 +55,17 @@ AWK
 
 3. The file "P12931.csv" contains phosphorylation sites in the protein P12931. (If the file "P12931.csv" does not exist, use ``wget http://phospho.elm.eu.org/byAccession/P12931.csv`` to download it ). 
 
- a. Column three of this file lists the amino acid position of the phosphorylation site. You are only interested in position 17 of the protein. Try to use "grep" to filter out all these lines containing "17". 
+   a. Column three of this file lists the amino acid position of the phosphorylation site. You are only interested in position 17 of the protein. Try to use "grep" to filter out all these lines containing "17". 
+  
+   b. Now use awk to show all lines containing "17".
+  
+   c. Next try show only those lines where column three equals 17 (Hint: The file is semicolon-separated...).
+  
+   d. Finally print the PMIDs (column 6) of all lines that contain "17" in column 3. 
 
- b. Now use awk to show all lines containing "17".
-
- c. Next try show only those lines where column three equals 17 (Hint: The file is semicolon-separated...).
-
- d. Finally print the PMIDs (column 6) of all lines that contain "17" in column 3. 
 
 Quoting and Escaping
-^^^^^^^^^^^^^^^^^^^^
+--------------------
 
 1. Familiarize yourself with quoting and escaping.
 
@@ -73,3 +74,5 @@ Quoting and Escaping
  b. Next, use ssh to login to a different machine to run the same command there, again using both quoting methods:
 
 2. Closely inspect the results; is that what you were expecting? Discuss this with your neighbour.
+
+
