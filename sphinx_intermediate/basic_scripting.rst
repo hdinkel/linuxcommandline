@@ -146,6 +146,16 @@ or based on the success of the respective previous command:
 *cmd1 && cmd2* --
   Execute cmd2 only if cmd1 was successful:
 
+  Example: Create a directory and, if successful, change into it::
+    
+    $ pwd
+    /home/fthommen
+    $ mkdir a && cd a
+    $ pwd
+    /home/fthommen/a
+    $
+
+
   Example: Confirm that ``/etc`` exists::
 
     $ cd /etc && echo "/etc exists"
@@ -153,13 +163,31 @@ or based on the success of the respective previous command:
     $
 
 *cmd1 || cmd2* --
-  Execute cmd2 only if cmd1 was not successful::
+  Execute cmd2 only if cmd1 was not successful:
+
+  Example: Create a directory and, if not successful, print an error message::
+    
+    $ mkdir /bin/a || echo "Could not create directory a"
+    mkdir: cannot create directory `/bin/a': Permission denied
+    Could not create directory a
+    $
 
   Example: Warn if a directory doesn't exist: ::
 
     $ cd /etc || echo "/etc is missing!"
     $ cd /nowhere >&/dev/null || echo "/nowhere does not exist"
     /nowhere does not exist
+    $
+
+  Example: Create a directory and, if successful, change into it, if not successful, print an error message::
+    
+    $ mkdir /bin/a && cd a || echo "Could not create directory a"
+    mkdir: cannot create directory `/bin/a': Permission denied
+    Could not create directory a
+    $
+    $ mkdir ~/bin/a && cd a || echo "Could not create directory a"
+    $ pwd
+    /home/fthommen/a
     $
 
 *( cmds )* --
@@ -383,7 +411,7 @@ The basic syntax :index:`is <breaksw>`:
 
 
 Example:
-  Check if /opt/ or /usr/ paths are contained in ``$PATH``:::
+  Check if /opt/ or /usr/ paths are contained in ``$PATH``: ::
 
      case $PATH in
       */opt/* | */usr/* )

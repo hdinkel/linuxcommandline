@@ -9,7 +9,6 @@ Outstations in Hinxton (the European Bioinformatics Institute (EBI)), Grenoble, 
 Monterotondo near Rome.
 
 Research at EMBL
-
 Each of the sites has a specific research field. The EBI is a hub for bioinformatic research and
 services, developing and maintaining a large number of databases which are free of charge for the
 scientific community. At Grenoble and Hamburg, research is focused on structural biology. EMBL's
@@ -20,8 +19,8 @@ Computational Biology as well as service groups complementing the aforementioned
 Many scientific breakthroughs have been made at EMBL, most notably the first systematic genetic
 analysis of embryonic development in the fruit fly by Christiane Nüsslein-Volhard and Eric
 Wieschaus, for which they were awarded the Nobel Prize for Medicine in 1995.
-Mission
 
+Mission
 The cornerstones of EMBL's mission are manifold. Basic research in molecular biology and molecular
 medicine is performed; scientists, students and visitors at all levels are trained; vital services
 to scientists in the member states are offered; new instruments and methods in the life sciences are

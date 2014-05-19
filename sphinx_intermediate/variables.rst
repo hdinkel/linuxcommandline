@@ -58,7 +58,19 @@ Listing Variables
 
 You can list all your current
 environment variables :index:`with <env>` ``env`` and all shell variables :index:`with <set>` ``set``. The list of
-shell variables will also contain all environment variables 
+shell variables will also contain all environment variables  ::
+
+  $ set | more
+
+  BASH=/bin/bash
+  BASHOPTS=cdspell:checkwinsize:cmdhist:expand_aliases...
+  BASH_ALIASES=()
+  BASH_ARGC=()
+  BASH_ARGV=()
+  BASH_CMDS=()
+  ...
+
+  
 
 Variable Inheritance 
 ---------------------
@@ -69,7 +81,7 @@ started from your current shell. However in shell commands run in subshells
 current shell are available. 
 
 Examples 
----------
+^^^^^^^^
 
 Consider the following small shellscript `vartest.sh`::
 
