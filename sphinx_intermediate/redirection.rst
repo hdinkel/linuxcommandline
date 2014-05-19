@@ -10,43 +10,43 @@ Three IO "channels" are available by default:
 Input, output and error messages can be redirected from their default "targets" to others.  If using the file descriptor numbers (0, 1, 2) in redirections, then
 there must be no whitespace between the numbers and the redirection operators.
 
-.. note:: Redirect to ``/dev/null`` to discard the output of any command
+.. hint:: Redirect to ``/dev/null`` to discard the output of any command
 
-Write the output of *cmd* into *afile*.  This will **overwrite** *afile*. ::
+Write the output of *cmd* into *afile*.  This will **overwrite** *afile*::
 
   $ cmd > afile
 
-Write the output of *cmd* into *afile*.  This will **append** to afile ::
+Write the output of *cmd* into *afile*.  This will **append** to *afile*::
 
-  $ cmd >> *afile*
+  $ cmd >> afile
 
 Discard the output of *cmd* ::
 
   $ cmd > /dev/null
 
-Write the output of *cmd* into *afile* (overwriting the file!) and write STDERR to the same place ::
+Write the output of *cmd* into *afile* (overwriting *afile*!) and write STDERR to the same place::
 
   $ cmd > afile 2>&1
 
-Append the output and error messages of *cmd* to *afile* ::
+Append the output and error messages of *cmd* to *afile*::
 
   $ cmd >> afile 2>&1
 
-Same as above ::
+Same as above::
 
   $ cmd > afile 2> afile
 
-Append the output of *cmd* to *afile* and discard error messages ::
+Append the output of *cmd* to *afile* and discard error messages::
 
   $ cmd >> afile 2>/dev/null
 
-Three times the same: Discard output and error messages completely ::
+Three times the same: Discard output and error messages completely::
 
   $ cmd > /dev/null 2>&1
   $ cmd > /dev/null 2>/dev/null
   $ cmd >& /dev/null
 
-Use output of *cmd2* as standard input for *cmd1* ::
+Use output of *cmd2* as standard input for *cmd1*::
 
   $ cmd1 < cmd2
 

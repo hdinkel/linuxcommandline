@@ -9,7 +9,7 @@ Intermediate Linux Course: Commandline and Basic Scripting
 
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 4
 
    Commandline Tools <commandlinetools>
    I/O Redirection <redirection>

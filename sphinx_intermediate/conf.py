@@ -82,10 +82,11 @@ exclude_patterns = ['_build']
 #show_authors = False
 
 # The name of the Pygments (syntax highlighting) style to use.
-pygments_style = 'sphinx'
+# pygments_style = 'sphinx'
+pygments_style = 'none'
 #pygments_style = 'murphy'
 #pygments_style = 'vim'
-#pygments_style = 'lsi.lsiClass'
+# pygments_style = 'lsi.lsiClassStyle'
 #pygments_style = 'colorful'
 
 
@@ -206,10 +207,11 @@ latex_elements = {
 'pointsize': '11pt',
 
 'fontpkg': '\\usepackage{tgbonum}',
+# 'fontpkg': '\\usepackage{cabin}',
 
 # Fancy chapter Headers:
 'fncychap': '\\usepackage[Sonny]{fncychap}',
-#'fncychap': '\\usepackage[Glenn]{fncychap}',
+# 'fncychap': '\\usepackage[Glenn]{fncychap}',
 # Additional stuff for the LaTeX preamble.
 #'preamble': ' \\usepackage{fancyvrb}',
 }
