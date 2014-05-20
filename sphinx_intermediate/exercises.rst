@@ -29,7 +29,7 @@ GREP
 
 3. Considering the previous example, would you consider grep a suitable tool to perform motif searches? Why not? Try to find the pattern "CAACAAA" by manual inspection of the first two lines of each sequence.
 
-4. Count the number of ATOMs (lines starting with "ATOM") in the file 1Y57.pdb. 
+4. Count the number of ATOMs in the file 1Y57.pdb. 
 
 5. Does this number agree with the annotated number of atoms (Search the REMARKs for "protein atoms") 
 

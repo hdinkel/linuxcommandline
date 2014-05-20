@@ -88,7 +88,7 @@ GREP
 .. note:: Answer: When using grep as a motif searching tool, you need to keep in mind that grep (like sed and awk) is line-oriented, meaning that by default it only searches for a given motif in a single line. In the given example, upon manual inspection you will find the given motif also in the file ENST00000530893.fasta, which grep missed. 
    You would need to think about how to do multi-line searches (eg. Removing line-breaks etc.)
 
-4. Count the number of ATOMs (lines starting with "ATOM") in the file 1Y57.pdb. 
+4. Count the number of ATOMs in the file 1Y57.pdb. 
 
 5. Does this number agree with the annotated number of atoms (Search the REMARKs for "protein atoms") 
 
