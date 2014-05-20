@@ -12,12 +12,13 @@ Intermediate Linux Course: Commandline and Basic Scripting
    :maxdepth: 4
 
    Commandline Tools <commandlinetools>
-   I/O Redirection <redirection>
-   Variables <variables>
+   Commandline Exercises <exercises>
    Basic Scripting <basic_scripting>
    Solutions <solutions>
    appendix
 
+..   I/O Redirection <redirection>
+..   Variables <variables>
 
 .. Indices and tables
 .. ==================

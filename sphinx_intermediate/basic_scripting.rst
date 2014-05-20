@@ -78,7 +78,7 @@ Readability and Documentation
 -----------------------------
 
 Make your script easily readable. Use comments and whitespace and avoid super compact
-but hard to understand command lines. Always take into account that not only the shell,
+but hard to understand commandlines. Always take into account that not only the shell,
 but also human beings will probably have to read and understand your script.
 (see :ref:`Breaking up long lines<breaking_up_long_lines>`)
 Even if your script is very simple - document it! This helps others understand what you did,

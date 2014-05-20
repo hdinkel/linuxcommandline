@@ -2,9 +2,6 @@
 Solutions to the Exercises
 ==========================
 
-.. Command Line Tools
-.. ------------------
-
 TAR & GZIP
 ----------
 
