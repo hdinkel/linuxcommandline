@@ -26,7 +26,7 @@
 	<key>MasterSheets</key>
 	<array/>
 	<key>ModificationDate</key>
-	<string>2014-05-19 12:08:52 +0000</string>
+	<string>2014-05-20 14:23:01 +0000</string>
 	<key>Modifier</key>
 	<string>Frank Thommen</string>
 	<key>NotesVisible</key>
@@ -5466,8 +5466,8 @@ myscript.sh "my title" -h 2WEr4.pdb}</string>
 					<integer>245</integer>
 					<key>Points</key>
 					<array>
-						<string>{311, 439}</string>
-						<string>{346, 439}</string>
+						<string>{86, 495}</string>
+						<string>{121, 495}</string>
 					</array>
 					<key>Style</key>
 					<dict>
@@ -5500,8 +5500,8 @@ myscript.sh "my title" -h 2WEr4.pdb}</string>
 					<integer>244</integer>
 					<key>Points</key>
 					<array>
-						<string>{173, 446}</string>
-						<string>{208, 446}</string>
+						<string>{86, 466}</string>
+						<string>{121, 466}</string>
 					</array>
 					<key>Style</key>
 					<dict>
