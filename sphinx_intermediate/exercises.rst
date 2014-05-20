@@ -70,8 +70,19 @@ Quoting and Escaping
 1. Familiarize yourself with quoting and escaping.
 
  a. Run the following commands to see the difference between single and double quotes when expanding variables:
+  ::
+
+    $ echo "$HOSTNAME"
+    ...
+    $ echo '$HOSTNAME'
 
  b. Next, use ssh to login to a different machine to run the same command there, again using both quoting methods:
+
+  ::
+
+    $ ssh pc-atcteach01 'echo $HOSTNAME'
+    ...
+    $ ssh pc-atcteach01 "echo $HOSTNAME"
 
 2. Closely inspect the results; is that what you were expecting? Discuss this with your neighbour.
 
