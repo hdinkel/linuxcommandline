@@ -4,8 +4,27 @@ ToDo:
 
 - Make sure Dan adds /g/software/bin to $PATH
 - Make sure Dan adds an editor (gedit)
-- Use more "interesting" examples for trivial things such as "sed 's/text/stuff/'"
+- Make sure Dan adds an PDF viewer (evince)
+
 - as scripting example: Write a script which can extract multiple archive formats, depending on the file ending
+- as scripting example: Write a script which creates simple backups (always to same folder, adding datestamp)
 - exercises for IO/Redirection/Variables
 - add 'pdftotext' to do some text mining?
 - Add a file (news? article?) with simple text to show each command (sed, awk, grep)
+
+- Add CTRL-Z / fg / bg ?
+
+
+Notes:
+------
+
+Things to remember for the first part:
+- Login, start bash
+- Introduce teachers
+- Introduce Bio-IT & Centers
+- Copy exercise files
+- Recap commandline tools 
+  + cat, head, tail -> use on exercise files to give an idea of content)
+  + absolute / relative paths
+  + CTRL-C
+  + Pipes
