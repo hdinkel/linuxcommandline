@@ -108,3 +108,21 @@ IO and Redirections
 
    B. Next, use the :ref:`pipe <pipe>` symbol (`|`) and `sort` to sort this output *numerically*
 
+
+Bioinformatics
+--------------
+
+Let's do some bioinformatics analyis!
+You can find the famous BLAST tool installed at `/g/software/bin/blastp`.
+
+#. Typing the full path is too cumbersome, so let's append `/g/software/bin` to your $PATH variable and ensure that it works by calling `blastp`.
+
+#. When you run `blastp  -help`, you notice that it has a lot of options! 
+   Use redirections in conjunction with grep to find out which options you need to specify a *input_file* and *database_name*.
+
+#. Now run blastp using the following values as options: 
+
+   *database_name* = `/g/data/ncbi-blast/db/swissprot` 
+
+   *input_file* = `suspect1.fasta` 
+   

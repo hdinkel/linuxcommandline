@@ -208,3 +208,33 @@ IO and Redirections
 
       $ cut -f3 -d':' /etc/passwd | sort -n
 
+
+Bioinformatics
+--------------
+
+Let's do some bioinformatics analyis!
+You can find the famous BLAST tool installed at `/g/software/bin/blastp`.
+
+#. Typing the full path is too cumbersome, so let's append `/g/software/bin` to your $PATH variable and ensure that it works by calling `blastp`. ::
+
+   $ export PATH=$PATH:/g/software/bin
+   $ blastp
+
+#. When you run `blastp  -help`, you notice that it has a lot of options! 
+   Use redirections in conjunction with grep to find out which options you need to specify a *input_file* and *database_name*. ::
+
+    $ blastp -help | grep input_file
+    [-subject subject_input_file] [-subject_loc range] [-query input_file]
+
+    $ blastp -help | grep database_name
+    search_strategy filename] [-task task_name] [-db database_name]
+
+#. Now run blastp using the following values as options: 
+
+   *database_name* = `/g/data/ncbi-blast/db/swissprot` 
+
+   *input_file* = `suspect1.fasta` 
+   
+   ::
+
+    $ blastp -db /g/data/ncbi-blast/db/swissprot -query suspect1 fasta

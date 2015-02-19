@@ -161,6 +161,11 @@ It can also be used to print the content of a variable, see section :ref:`enviro
 Whenever a program gets stuck or takes too long to finish, you can *interrupt* it with the shortcut
 :kbd:`CONTROL-C`.
 
+Leave the shell
+---------------
+
+To :index:`exit` the shell/terminal, just type ``exit`` or press :kbd:`CONTROL-D`.
+
 :index:`clear` - Clear the "screen"
 -----------------------------------
 
@@ -192,10 +197,6 @@ In case the output of the terminal/screen gets cluttered, you can use ``clear`` 
   $ reset
   $
 
-Leave the shell
----------------
-
-To :index:`exit` the shell/terminal, just type ``exit`` or press :kbd:`CONTROL-D`.
 
 
 .. _help:
@@ -260,6 +261,8 @@ Who am I, where am I
 :index:`whoami` - Print your username
 -------------------------------------
 
+Linux is a multi-User Operating System supporting thousands of users on the same machine. As usernames can differ between machines, it's important to know your username on any particular machine.
+
 **Usage**: ``whoami``
 
  :: 
@@ -271,6 +274,8 @@ Who am I, where am I
 :index:`hostname` - Print the name of the computer
 --------------------------------------------------
 
+Each machine on the network has a unique name which is used to distinguish one from another.
+
 **Usage**: ``hostname``
 
  :: 
@@ -281,6 +286,9 @@ Who am I, where am I
 
 :index:`pwd` - Print the current working directory
 --------------------------------------------------
+
+A Linux Filesystem contains countless directories with many subdirectories which makes it easy to get lost. It is good practice to check your position within
+the filesystem regularly.
 
 **Usage**: ``pwd`` 
 
@@ -326,6 +334,7 @@ Moving Around
 Special directories:
 
 - "``.``":  The current working directory
+- "``/``":  The root directory of this computer
 - "``..``": The parent directory of the current working directory
 - "``~``":  Your homedirectory
 
@@ -386,7 +395,7 @@ Digression: Shell globs
 Files and folders can't only be referred to with their full name, but also with so-called "Shell Globs", which are a kind of simple pattern to address groups of files and folders. Instead of explicit names you can use the following placeholders:
 
 - ``?:``  Any single character
-- ``*:``  Any number of any character (including no character at all, but **not** matching a starting "."))
+- ``*:``  Any number of any character (including no character at all, but **not** matching a starting ".")
 - ``[...]:``    One of the characters included in the brackets.  Use "-" to define ranges  of characters
 - ``{word1,word2}:``    Each individual word is expanded
 
@@ -403,7 +412,7 @@ Examples:
 Organize Files and Folders
 ==========================
 
-:index:`cp` – Copy files and folders
+:index:`cp` - Copy files and folders
 ------------------------------------
 
 **Usage**:  ``cp [options] sourcefile destinationfile``
@@ -451,7 +460,13 @@ We copy a set of exercise files from the network share into our home directory:
 -av  Verbosely copies all source files wich are different (different size, different age) or missing from the source.  **Beware**: This will also copy files which are older on the source side
 -au  Silently copies all source files wich are different (different size, different age) or missing from the source.  This combination will *not* overwrite newer files by older ones
 
-:index:`touch` – Create a file or change last modification date of an existing file
+This should not copy any new files, as we previously copied these already:
+ :: 
+
+  $ rsync -av /g/bio-it/courses/LSB/exercises/  ~/exercises/
+  $
+
+:index:`touch` - Create a file or change last modification date of an existing file
 -----------------------------------------------------------------------------------
 
 **Usage**:  ``touch file(s) or directory/ies``
@@ -611,7 +626,7 @@ View Files
 :index:`tail` - Print last lines of a textfile
 ----------------------------------------------
 
-The ``tail`` utility displays the contents of file or, by default, its standard input, to the standard output.
+The ``tail`` utility displays the last few lines of a file or, by default, its standard input, to the standard output.
 
 **Usage**:  ``tail [options] file(s)``
 
