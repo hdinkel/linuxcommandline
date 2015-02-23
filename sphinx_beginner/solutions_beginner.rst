@@ -5,7 +5,7 @@ Solutions to the Exercises
 Misc. file tools
 ----------------
 
-#. Which tool can be used to determine the type of a index:`file`? ::
+#. Which tool can be used to determine the type of a :index:`file`? ::
 
     $ file
 
@@ -53,6 +53,8 @@ Misc. terminal
 
    $  clear
 
+ or::
+
    $  reset
 
 
@@ -80,8 +82,8 @@ Permissions
 
     $ cp /bin/date adir/mydate
 
-#.  :index:`Check <ls>` the permissions of the copied program 'mydate'::
-
+#. :index:`Check <ls>` the permissions of the copied program 'mydate' ::
+ 
     $ ls -lh adir/mydate
     -r-xr-xr-x  1 dinkel  staff    79K  9 Dec 13:47 mydate*
 
@@ -119,7 +121,8 @@ Permissions
 
 #. Change your working directory to testpermissions, and then try changing the permissions on the directory adir to non-executable. ::
 
-    $ # no need to change directory, as we still are in the directory testpermissions
+    $ # no need to change directory, 
+    $ # as we still are in the directory testpermissions
     $ chmod a-x adir
 
 #. What are the minimum permissions (on the directory) necessary for you to be able to execute ``adir/mydate``? ::
@@ -172,7 +175,7 @@ IO and Redirections
 
    $ date > ~/current_date
 
-#.  :index:`Inspect <cat>` the file to make sure it contains (only a single line with) the date.::
+#.  :index:`Inspect <cat>` the file to make sure it contains (only a single line with) the date. ::
 
    $ cat ~/current_date
 
