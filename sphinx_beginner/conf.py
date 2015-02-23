@@ -39,7 +39,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'Introduction to the Linux Commandline'
-copyright = u'2012,2013,2014, Holger Dinkel, Frank Thommen & Thomas Zichner'
+copyright = u'2012,2013,2014, Holger Dinkel & Frank Thommen'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -192,7 +192,7 @@ latex_elements = {
 # (source start file, target name, title, author, documentclass [howto/manual]).
 latex_documents = [
   ('index', 'IntroductiontotheLinuxCommandline.tex', u'Introduction to the Linux Commandline',
-   u'Holger Dinkel, Frank Thommen \\& Thomas Zichner', 'manual'),
+   u'Holger Dinkel \\& Frank Thommen', 'manual'),
 ]
 
 # The name of an image file (relative to this directory) to place at the top of
@@ -222,7 +222,7 @@ latex_show_urls = False
 # (source start file, name, description, authors, manual section).
 man_pages = [
     ('index', 'introductiontothelinuxcommandline', u'Introduction to the Linux Commandline',
-     [u'Holger Dinkel, Frank Thommen & Thomas Zichner'], 1)
+     [u'Holger Dinkel & Frank Thommen'], 1)
 ]
 
 # If true, show URL addresses after external links.
@@ -236,7 +236,7 @@ man_pages = [
 #  dir menu entry, description, category)
 texinfo_documents = [
   ('index', 'IntroductiontotheLinuxCommandline', u'Introduction to the Linux Commandline',
-   u'Holger Dinkel, Frank Thommen & Thomas Zichner', 'IntroductiontotheLinuxCommandline', 'One line description of project.',
+   u'Holger Dinkel & Frank Thommen', 'IntroductiontotheLinuxCommandline', 'One line description of project.',
    'Miscellaneous'),
 ]
 
