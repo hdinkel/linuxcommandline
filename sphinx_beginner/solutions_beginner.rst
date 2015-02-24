@@ -273,6 +273,37 @@ IO and Redirections
       $ cut -f3 -d':' /etc/passwd | sort -n
 
 
+Putting it all together
+-----------------------
+
+#. Create a new directory named ``myscripts`` in your homedirectory::
+
+   $ mkdir ~/myscripts
+
+#. Create an empty file named ``mydate`` in the newly created directory::
+
+   $ touch ~/myscripts/mydate
+
+#. Add the directory ``~/myscripts`` to your ``PATH`` environment variable::
+
+   $ export PATH=$PATH:~/myscripts
+
+#. Use ``echo`` in combination with Redirection/Append to write ''date'' into the file ``~/myscripts/mydate``::
+
+   $ echo "date" >> ~/myscripts/mydate
+
+#. Change the permissions of the file ``mydate`` to be executable by you (and you only)::
+
+   $ chmod u+x ~/myscripts/mydate
+   $ chmod go-x ~/myscripts/mydate
+
+#. Run the file ``mydate`` (it should print the current date & time). Make sure you can run it from any directory (change to your homedirectory and just type ``mydate``).::
+
+   $ mydate
+
+  Congratulation, you've just created and run your first shell script!
+
+
 Bioinformatics
 --------------
 

@@ -135,6 +135,21 @@ IO and Redirections
    B. Next, use the :ref:`pipe <pipe>` symbol (`|`) and `sort` to sort this output *numerically*
 
 
+Putting it all together
+-----------------------
+
+#. Create a new directory named ``myscripts`` in your homedirectory
+
+#. Create an empty file named ``mydate`` in the newly created directory
+
+#. Add the directory ``~/myscripts`` to your ``PATH`` environment variable
+
+#. Use ``echo`` in combination with Redirection/Append to write ''date'' into the file ``~/myscripts/mydate``
+
+#. Change the permissions of the file ``mydate`` to be executable by you (and you only)
+
+#. Run the file ``mydate`` (it should print the current date & time). Make sure you can run it from any directory (change to your homedirectory and just type ``mydate``).
+
 Bioinformatics
 --------------
 
