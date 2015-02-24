@@ -11,10 +11,10 @@ Misc. file tools
 
 #. Use it on the following files/directories and compare the results:
 
-   a) ``/usr/bin/tail`` ::
+   a) ``/usr/bin/grep`` ::
 
-       $ file /usr/bin/tail
-       /usr/bin/tail: binary executable
+       $ file /usr/bin/grep
+       /usr/bin/grep: binary executable
 
    b) ``~`` ::
 
@@ -26,6 +26,67 @@ Misc. file tools
        $ file ~/exercises/SRC_HUMAN.fasta
        ~/exercises/SRC_HUMAN.fasta: ASCII text
 
+
+Copying / Deleting Files & Folders
+----------------------------------
+
+#. Navigate to your home directory ::
+
+    $ cd ~
+
+   or just ::
+
+    $ cd
+
+#. In your homedirectory, create a new directory named ``new_dir`` ::
+
+    $  mkdir ~/new_dir
+
+#. Change into this directory, create a new empty file in there named ``new_file``, 
+   and make sure that the file was created::
+
+    $ cd ~/new_dir
+    $ touch new_file
+    $ ls new_file
+
+#. Duplicate this file by copying it as a new file named ``another_file``::
+
+    $ cp new_file another_file 
+
+#. Delete the first file ``new_file``::
+
+    $ rm new_file 
+
+#. Also delete the directory (you are currently in) ``~/new_dir``. ::
+
+    $ rmdir ~/new_dir
+
+#. Did the deletion work? If not, try to remove all files from the directory first...::
+
+    $ rm ~/new_dir/*
+    $ rmdir ~/new_dir
+
+
+View Files
+----------
+
+#. Which tools can you use to see the first/last lines of the file ``~/exercises/P12931.txt``?::
+
+   $ head ~/exercises/P12931.txt
+   $ tail ~/exercises/P12931.txt
+
+#. How to only show the first/last three lines (of the same file)?::
+
+   $ head -n 3 ~/exercises/P12931.txt
+   $ tail -n 3 ~/exercises/P12931.txt
+
+#. How do you print the whole file on the screen?::
+
+   $ cat ~/exercises/P12931.txt
+
+  or ::
+
+   $ less ~/exercises/P12931.txt
 
 
 Searching

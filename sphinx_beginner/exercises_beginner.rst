@@ -19,6 +19,32 @@ Misc. file tools
    C. ``~/exercises/SRC_HUMAN.fasta`` 
 
 
+Copying / Deleting Files & Folders
+----------------------------------
+
+#. Navigate to your home directory 
+
+#. In your homedirectory, create a new directory named ``new_dir`` 
+
+#. Change into this directory, create a new empty file in there named ``new_file``, 
+   and make sure that the file was created
+
+#. Duplicate this file by copying it as a new file named ``another_file``
+
+#. Delete the first file ``new_file``
+
+#. Also delete the directory (you are currently in) ``~/new_dir``. Does it work?
+
+
+View Files
+----------
+
+#. Which tools can you use to see the first/last lines of the file ``~/exercises/P12931.txt``?
+
+#. How to only show the first/last three lines (of the same file)?
+
+#. How do you print the whole file on the screen?
+
 Searching
 ---------
 #. Which tool can be used to search for files or directories? 
