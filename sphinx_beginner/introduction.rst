@@ -412,6 +412,30 @@ Examples:
 Organize Files and Folders
 ==========================
 
+:index:`touch` - Create a file or change last modification date of an existing file
+-----------------------------------------------------------------------------------
+
+**Usage**:  ``touch file(s) or directory/ies``
+
+ :: 
+
+  $ ls afile
+  ls: afile: No such file or directory
+  $ touch afile
+  $ ls afile
+  afile
+  $
+
+ :: 
+
+  $ ls -l aa.pdf
+  -rw-r--r-- 1 fthommen cmueller 0 Sep 24 10:59 aa.pdf
+  $ touch aa.pdf
+  $ ls -l aa.pdf
+  -rw-r--r-- 1 fthommen cmueller 0 Sep 25 22:01 aa.pdf
+  $
+
+
 :index:`cp` - Copy files and folders
 ------------------------------------
 
@@ -466,28 +490,6 @@ This should not copy any new files, as we previously copied these already:
   $ rsync -av /g/bio-it/courses/LSB/exercises/  ~/exercises/
   $
 
-:index:`touch` - Create a file or change last modification date of an existing file
------------------------------------------------------------------------------------
-
-**Usage**:  ``touch file(s) or directory/ies``
-
- :: 
-
-  $ ls afile
-  ls: afile: No such file or directory
-  $ touch afile
-  $ ls afile
-  afile
-  $
-
- :: 
-
-  $ ls -l aa.pdf
-  -rw-r--r-- 1 fthommen cmueller 0 Sep 24 10:59 aa.pdf
-  $ touch aa.pdf
-  $ ls -l aa.pdf
-  -rw-r--r-- 1 fthommen cmueller 0 Sep 25 22:01 aa.pdf
-  $
 
 :index:`rm` - Remove files and directories
 ------------------------------------------
