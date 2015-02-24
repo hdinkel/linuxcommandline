@@ -21,10 +21,11 @@ Verbesserungen:
  - {DONE} 'release 1.4' aus Seitenkopf nehmen
 
 Content:
- - mehr Uebungen! z.B. Verzeichniss erstellen, Dateien kopieren etc.
+ - {DONE} mehr Uebungen! z.B. Verzeichniss erstellen, Dateien kopieren etc.
+ - Mehr konkrete Beispiele zu cp/rm etc (wie kopiert man eine Datei, zwei Dateien, globs)
  - add 'column'? Example `mount | column -t`
  - {DONE} use 'tar -czf BACKUP.tgz /folder2backup' as backup before doing something dangerous? (Student asked about 'undo' function)
- - change order of exercises to rather match the order of the handout? (it kinda is for, at least for the beginner course)
+ - change order of exercises to rather match the order of the handout? 
  - {DONE} absolute/relative paths seem to be a problem; also mention that '/' exists on every machine (but different), while /home might be the same on each
  - {MAYBE} add general information about linux (such as absolute/relative pathnames) also to beginning of commandlinetools.rst?
  - add du/df?

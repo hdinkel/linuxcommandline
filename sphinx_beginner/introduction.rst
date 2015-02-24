@@ -229,7 +229,7 @@ Other commands will show a help page or at least a short usage overview if you p
   ...
   $
 
-For the navigation within a manpage see the :ref:`paragraph regarding less <less>`.
+For the navigation within a manpage and how to exit the manpage, see the :ref:`paragraph regarding less <less>`.
 
 .. note:: The behaviour of ``man`` is dependent of the ``$PAGER`` environment variable
 
@@ -455,11 +455,28 @@ Organize Files and Folders
 -p      Preserve owner, permissions and timestamp 
 
 
-We copy a set of exercise files from the network share into our home directory:
- :: 
+**Examples**:
 
-  $ cp -r /g/bio-it/courses/LSB/exercises  ~/exercises
+If the last filename given is nonexisting then the first file is copied as this new filename:: 
+
+  $ cp /usr/bin/less /tmp/
   $
+
+If, however, the last filename given is an (existing!) directory, then the file is copied into this directory: :: 
+
+  $ cp /usr/bin/less /tmp/
+  $
+
+This allows us to copy multiple files into the same directory at the same time: :: 
+
+  $ cp /usr/bin/less /usr/bin/grep /usr/bin/tail /tmp/
+  $
+
+To recursively copy files, we need to specify the ``-r`` option. Here, we copy a set of exercise files from the network share into our home directory: :: 
+
+  $ cp -r /g/bio-it/courses/LSB  ~/exercises
+  $
+
 
 :index:`rsync` - intelligently copying files and folders
 --------------------------------------------------------
@@ -704,6 +721,31 @@ Extracting Informations from Files
 -l      List files with matching lines, not the lines itself
 -L      List files without matches
 -c      Print count of matching lines for each file
+
+
+**Examples**:
+
+- List all files in the current directory which contain the searchterm ``Ensembl``: :: 
+
+   $ grep -l Ensembl ./*
+   P04637.txt
+   P12931.txt
+
+.. note:: You cannot combine the option ``-v`` and ``-l`` to find files which do not contain a
+   certain searchterm. The reason is that grep works line-based and not really file-based...
+   Therefore you should rather use the uppercase ``-L`` option!
+
+- List all files in the current directory which **do not** contain the searchterm ``Ensembl``: ::
+
+   $ grep -L Ensembl ./*
+   1FMK.pdb
+   3A4O.pdb
+   ...
+
+- Count the number of occurrences (case insensitive!) of the term ``atom`` in all pdb files: ::
+
+   $ grep -ic atom ./*.pdb
+
 
 :index:`cut` - extracting columns from textfiles
 ------------------------------------------------
