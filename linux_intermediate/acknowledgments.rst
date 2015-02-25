@@ -1,1 +1,1 @@
-../sphinx_beginner/acknowledgments.rst
+../linux_beginner/acknowledgments.rst
