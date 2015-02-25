@@ -99,7 +99,7 @@ Searching
 
    $ find ~/exercises -type d
 
-#. Search for the file date in the ``/bin`` directory ::
+#. Search for the file named ``date`` in the ``/bin`` directory ::
 
    $ find /bin -name date
 

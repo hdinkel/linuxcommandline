@@ -27,7 +27,7 @@ Copying / Deleting Files & Folders
 #. In your homedirectory, create a new directory named ``new_dir`` 
 
 #. Change into this directory, create a new empty file in there named ``new_file``, 
-   and make sure that the file was created
+   and make sure that the file was created.
 
 #. Duplicate this file by copying it as a new file named ``another_file``
 
@@ -51,7 +51,7 @@ Searching
 
 #. Use it to find all directories in the ``~/exercises`` directory 
 
-#. Search for the file date in the ``/bin`` directory 
+#. Search for the file named ``date`` in the ``/bin`` directory 
 
 #. List those entries in the directory ``/bin`` that are bigger than 400kBytes 
 
