@@ -40,7 +40,7 @@ To play the game, get the files from github and read the instructions:
 Real printed paper books
 ^^^^^^^^^^^^^^^^^^^^^^^^
 
-- Dietz, M., "*Praxiskurs Unix-Shell*", O'Reilly (highly recommended!, german language only)
+- Dietz, M., "*Praxiskurs Unix-Shell*", O'Reilly (highly recommended!, German language only)
 - Herold, H., "*awk & sed*", Addison-Wesley
 - Robbins, A., "*sed & awk Pocket Reference*", O'Reilly
 - Robbins, A. and Beebe, N., "*Classic Shell Scripting*", O'Reilly

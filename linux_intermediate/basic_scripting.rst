@@ -88,7 +88,7 @@ script in the future.
 Documentation is done either by writing comments into the script or by creating a special documentation file (``README.txt`` or similar). Documenting in the script can be done in several ways:
 
 * A preamble in the script, outlining the purpose, parameters and variables of the script as well
-  as some information about authorship and and perhaps changes.
+  as some information about authorship and perhaps changes.
 
 * Within the script as blocks of text or "End of line" comments.
 
@@ -743,7 +743,7 @@ Breaking up Long Code Lines
 
 Code lines can become pretty long and unreadable, wrapping onto the next line
 etc.  You can use the :index:`escape character` (backslash, "``\``") to break them up and
-enhance readability of your script.  The excape character must immediately be
+enhance readability of your script.  The escape character must immediately be
 followed by a newline (no intermediate blanks or other is allowed): ::
 
     $ bsub -o output.log -e error.log -q clngnew -M 150000 -R "select[(mem > 15000)]" /g/software/bin/pymol-1.4 -r -p < pymol.pml

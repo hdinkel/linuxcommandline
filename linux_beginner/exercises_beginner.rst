@@ -24,7 +24,7 @@ Copying / Deleting Files & Folders
 
 #. Navigate to your home directory 
 
-#. In your homedirectory, create a new directory named ``new_dir`` 
+#. In your home directory, create a new directory named ``new_dir`` 
 
 #. Change into this directory, create a new empty file in there named ``new_file``, 
    and make sure that the file was created.
@@ -53,7 +53,7 @@ Searching
 
 #. Search for the file named ``date`` in the ``/bin`` directory 
 
-#. List those entries in the directory ``/bin`` that are bigger than 400kBytes 
+#. List those entries in the directory ``/bin`` that are bigger than 400 kBytes 
 
 
 Misc. terminal
@@ -64,15 +64,15 @@ Misc. terminal
 Permissions
 -----------
 
-#. Create a directory called testpermissions 
+#. Create a directory called ``testpermissions`` 
 
-#. Change your working directory to testpermissions 
+#. Change your working directory to ``testpermissions`` 
 
-#. Create a directory called adir. 
+#. Create a directory called ``adir``. 
 
 #. Use the command ``which date`` to find out where the date program is located. 
 
-#. Copy this date program into the directory adir and name it 'mydate'. 
+#. Copy this date program into the directory ``adir`` and name it 'mydate'. 
 
 #. Check the permissions of the copied program 'mydate' 
 
@@ -84,11 +84,12 @@ Permissions
 
 #. Try running it as ``./mydate`` or ``adir/mydate`` (depending on your current working directory) 
 
-#. Copy a textfile from a previos exercise into adir, then change the permissions, so you are not allowed to write to it. Test this by trying to read it via `cat`. 
+#. Copy a textfile from a previous exercise into ``adir``, then change the permissions, so you are not allowed to write to it. 
+   Test that you are still able to read the file via `cat`. 
 
 #. Then change the permissions so you can't read/cat it either. Test this by trying to read it via `cat`. 
 
-#. Change your working directory to testpermissions, and then try changing the permissions on the directory adir to non-executable. 
+#. Change your working directory to ``testpermissions``, and then try changing the permissions on the directory ``adir`` to non-executable. 
 
 #. What are the minimum permissions (on the directory) necessary for you to be able to execute ``adir/mydate``? 
 
@@ -153,7 +154,7 @@ Putting it all together
 Bioinformatics
 --------------
 
-Let's do some bioinformatics analyis!
+Let's do some bioinformatics analysis!
 You can find the famous BLAST tool installed at `/g/software/bin/blastp`.
 
 #. Typing the full path is too cumbersome, so let's append `/g/software/bin` to your $PATH variable and ensure that it works by calling `blastp`.
@@ -167,3 +168,4 @@ You can find the famous BLAST tool installed at `/g/software/bin/blastp`.
 
    *input_file* = `suspect1.fasta` 
    
+#. Use either ``less`` or redirection to a file to manage the amount of information that ``blastp`` prints on your screen.

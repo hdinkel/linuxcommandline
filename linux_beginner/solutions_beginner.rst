@@ -103,7 +103,7 @@ Searching
 
    $ find /bin -name date
 
-#. List those entries in the directory ``/bin`` that are bigger than 400kBytes ::
+#. List those entries in the directory ``/bin`` that are bigger than 400 kBytes ::
 
    $ find /bin -size +400k
 
@@ -122,15 +122,15 @@ Misc. terminal
 Permissions
 -----------
 
-#. :index:`Create <mkdir>` a directory called testpermissions ::
+#. :index:`Create <mkdir>` a directory called ``testpermissions`` ::
 
    $ mkdir testpermissions
 
-#. :index:`Change <cd>` your working directory to testpermissions::
+#. :index:`Change <cd>` your working directory to ``testpermissions``::
 
    $ cd testpermissions
 
-#. Create a directory called adir. ::
+#. Create a directory called ``adir``. ::
 
    $ mkdir adir
 
@@ -139,7 +139,7 @@ Permissions
     $ which date
     /bin/date
 
-#.  :index:`Copy <cp>` this date program into the directory adir and name it 'mydate'.::
+#.  :index:`Copy <cp>` this date program into the directory ``adir`` and name it 'mydate'.::
 
     $ cp /bin/date adir/mydate
 
@@ -171,7 +171,8 @@ Permissions
     $ adir/mydate
     Mon Dec  9 13:50:12 CET 2013
 
-#. Copy a textfile from a previos exercise into adir, then change the permissions, so you are not allowed to write to it. Test this by trying to read it via `cat`. ::
+#. Copy a textfile from a previous exercise into ``adir``, then change the permissions, so you are not allowed to write to it. 
+   Test that you are still able to read the file via `cat` ::
 
     $ cp ~/exercises/SRC_HUMAN.fasta adir
     $ chmod u-w adir/SRC_HUMAN.fasta
@@ -180,7 +181,7 @@ Permissions
 
    $ chmod u-r adir/SRC_HUMAN.fasta
 
-#. Change your working directory to testpermissions, and then try changing the permissions on the directory adir to non-executable. ::
+#. Change your working directory to ``testpermissions``, and then try changing the permissions on the directory ``adir`` to non-executable. ::
 
     $ # no need to change directory, 
     $ # as we still are in the directory testpermissions
@@ -223,7 +224,7 @@ Remote access
     $ file ~/motd
     ~/motd: ASCII text
 
-   $ ls -l ~/motd
+    $ ls -l ~/motd
 
 #.  :index:`Login <ssh>` to your neighbor's machine (ask him for the hostname) using your own username::
 
@@ -307,7 +308,7 @@ Putting it all together
 Bioinformatics
 --------------
 
-Let's do some bioinformatics analyis!
+Let's do some bioinformatics analysis!
 You can find the famous BLAST tool installed at `/g/software/bin/blastp`.
 
 #. Typing the full path is too cumbersome, so let's append `/g/software/bin` to your $PATH variable and ensure that it works by calling `blastp`. ::
@@ -333,3 +334,11 @@ You can find the famous BLAST tool installed at `/g/software/bin/blastp`.
    ::
 
     $ blastp -db /g/data/ncbi-blast/db/swissprot -query suspect1 fasta
+
+#. Use either ``less`` or a redirection into a file to manage the amount of information that ``blastp`` prints on your screen.::
+
+    $ blastp -db /g/data/ncbi-blast/db/swissprot -query suspect1 fasta | less
+
+   or::
+
+    $ blastp -db /g/data/ncbi-blast/db/swissprot -query suspect1 fasta > blast_output

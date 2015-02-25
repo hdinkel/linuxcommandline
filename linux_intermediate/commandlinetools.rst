@@ -4,7 +4,7 @@ More Commandline Tools
 **********************
 
 Here is a quick list of useful commandline tools which will be used throughout the rest of the document.
-Many of these tools have quite extensive funcionality and only a very limited part can be discussed here, 
+Many of these tools have quite extensive functionality and only a very limited part can be discussed here, 
 so the reader is encouraged to read more about these using the links given in the in the :ref:`Links <Links>` 
 section...
 
@@ -307,7 +307,7 @@ field separator (FS), use option '-F' (remember to quote the field separator):
 
 Note two things here: First, the field separator is not printed, and second, if you
 want to have space between the output fields, you actually need to separate them
-by a comma or they will be catenated together...
+by a comma or they will be concatenated together...
 
  ::
 

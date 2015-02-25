@@ -19,6 +19,7 @@ Verbesserungen:
    - Clemens Lakner fragen, ob er nicht einen text schreiben moechte
  - {DONE} siehe 'apropos' - die naechste Zeile wird immer mit in die Ueberschrift gezogen!
  - {DONE} 'release 1.4' aus Seitenkopf nehmen
+ - use SVG for certificate and script to add names
 
 Content:
  - {DONE} mehr Uebungen! z.B. Verzeichniss erstellen, Dateien kopieren etc.

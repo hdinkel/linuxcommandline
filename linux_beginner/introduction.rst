@@ -15,7 +15,7 @@ Why Use the Commandline
   commands. Anyone who has spent hours listening to someone from tech support say something like, "OK, now click this,
   then this, then select this menu command" knows how frustrating the GUI alternative can be. 
 
-- It's nearly **universal**. There are hundreds of Linux distros out there, each with a slightly different graphical
+- It's nearly **universal**. There are hundreds of Linux distributions out there, each with a slightly different graphical
   environment. Thankfully, the various distros do have one common element: the command line. There are distro-specific
   commands, but the bulk of commands will work on any Linux system.
 
@@ -32,7 +32,7 @@ General Remarks Regarding Using UNIX/Linux Systems
 
 - **Test before run**. Anything written here has to be taken with a grain of salt. On another system - be it a different
   Linux distribution or another UNIXoid operating system - you might find the same command but without the support of
-  some of the options tought here. It is even possible, that the same option has a different meaning on another system.
+  some of the options taught here. It is even possible, that the same option has a different meaning on another system.
   With this in mind always make sure to test your commands (specially the "dangerous" ones which remove or modify files)
   when switching from one system to the other.
 
@@ -60,7 +60,7 @@ General Remarks Regarding Using UNIX/Linux Systems
 Absolute Paths / Relative Paths
 ===============================
 
-A path describes the the location of a file/folder in the filesystem: 
+A path describes the location of a file/folder in the filesystem: 
 It is important to understand that there are basically two ways to describe such a path: Either by using an *absolute* pathname, or by using a
 *relative* pathname. The difference is that *absolute* paths always start with a "slash ``/``". This "slash" denotes the so called "root" of the
 filesystem (see below). *Relative* paths in contrast always starting with a directory name and denote the location of a file/folder *relative* to
@@ -82,7 +82,7 @@ while arguments are usually free text input (such as a filename).
 
 For example, in the commandline ``ls -l /usr/bin``, ``ls`` is the command, ``-l`` is an option and ``/usr/bin`` qualifies as an argument.
 
-:index:`Commandline options <command, options, command; switches>` (sometimes called comandline switches) commonly have one of the two following
+:index:`Commandline options <command, options, command; switches>` (sometimes called commandline switches) commonly have one of the two following
 forms: The short form ``-s`` (just a single character) or the long form ``--string.`` E.g.
 
  :: 
@@ -90,7 +90,7 @@ forms: The short form ``-s`` (just a single character) or the long form ``--stri
   $ man -h
   $ man --help
 
-Short options are usually - though not always - concatenable:
+Short options are usually - though not always - concatenatable:
 
  ::
 
@@ -287,7 +287,7 @@ Each machine on the network has a unique name which is used to distinguish one f
 :index:`pwd` - Print the current working directory
 --------------------------------------------------
 
-A Linux Filesystem contains countless directories with many subdirectories which makes it easy to get lost. It is good practice to check your position within
+A Linux filesystem contains countless directories with many subdirectories which makes it easy to get lost. It is good practice to check your position within
 the filesystem regularly.
 
 **Usage**: ``pwd`` 
@@ -498,8 +498,8 @@ To recursively copy files, we need to specify the ``-r`` option. Here, we copy a
 
 **Useful option combinations**:
 
--av  Verbosely copies all source files wich are different (different size, different age) or missing from the source.  **Beware**: This will also copy files which are older on the source side
--au  Silently copies all source files wich are different (different size, different age) or missing from the source.  This combination will *not* overwrite newer files by older ones
+-av  Verbosely copies all source files which are different (different size, different age) or missing from the source.  **Beware**: This will also copy files which are older on the source side
+-au  Silently copies all source files which are different (different size, different age) or missing from the source.  This combination will *not* overwrite newer files by older ones
 
 This should not copy any new files, as we previously copied these already:
  :: 
@@ -639,7 +639,7 @@ View Files
 
 **Useful options**:
 
--n num  Print num lines (default is 10)
+-n NUM  Print NUM lines (default is 10)
 
 
 :index:`tail` - Print last lines of a textfile
@@ -659,7 +659,7 @@ The ``tail`` utility displays the last few lines of a file or, by default, its s
 
 **Useful options**:
 
--n num  Print num lines (default is 10)
+-n NUM  Print NUM lines (default is 10)
 -f      "Follow" a file (print new lines as they are written to the file)
 
 .. _less:
@@ -721,9 +721,9 @@ Extracting Informations from Files
 -l      List files with matching lines, not the lines itself
 -L      List files without matches
 -c      Print count of matching lines for each file
--A      print NUM lines of trailing context (After)
--B      print NUM lines of leading context (Before)
--C      print NUM lines of output context (Context)
+-A NUM  print NUM lines of trailing context (After)
+-B NUM  print NUM lines of leading context (Before)
+-C NUM  print NUM lines of output context (Context)
 
 
 **Examples**:
@@ -882,7 +882,7 @@ Useful Filetools
   $
 
 
-- Find by size: (List those entries in the directory ``/usr/bin`` that are bigger than 500kBytes)
+- Find by size: (List those entries in the directory ``/usr/bin`` that are bigger than 500 kBytes)
 
  :: 
 
