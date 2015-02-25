@@ -1,1 +1,1 @@
-../sphinx_beginner/solutions_beginner.rst
+../linux_beginner/solutions_beginner.rst

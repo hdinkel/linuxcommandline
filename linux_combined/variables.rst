@@ -1,1 +1,1 @@
-../sphinx_intermediate/variables.rst
+../linux_intermediate/variables.rst

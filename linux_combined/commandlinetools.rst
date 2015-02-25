@@ -1,1 +1,1 @@
-../sphinx_intermediate/commandlinetools.rst
+../linux_intermediate/commandlinetools.rst

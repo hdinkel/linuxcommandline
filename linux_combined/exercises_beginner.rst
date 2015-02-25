@@ -1,1 +1,1 @@
-../sphinx_beginner/exercises_beginner.rst
+../linux_beginner/exercises_beginner.rst

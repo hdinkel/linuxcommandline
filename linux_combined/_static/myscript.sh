@@ -1,1 +1,1 @@
-../../sphinx_intermediate/_static/myscript.sh
+../../linux_intermediate/_static/myscript.sh

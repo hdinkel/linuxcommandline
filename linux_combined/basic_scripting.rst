@@ -1,1 +1,1 @@
-../sphinx_intermediate/basic_scripting.rst
+../linux_intermediate/basic_scripting.rst

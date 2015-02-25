@@ -1,1 +1,1 @@
-../sphinx_beginner/links.rst
+../linux_beginner/links.rst

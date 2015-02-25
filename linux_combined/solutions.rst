@@ -1,1 +1,1 @@
-../sphinx_intermediate/solutions.rst
+../linux_intermediate/solutions.rst

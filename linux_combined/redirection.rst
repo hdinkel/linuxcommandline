@@ -1,1 +1,1 @@
-../sphinx_intermediate/redirection.rst
+../linux_intermediate/redirection.rst
