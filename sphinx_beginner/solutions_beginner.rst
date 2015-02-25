@@ -193,9 +193,9 @@ Permissions
 
 Remote access
 -------------
-#. :index:`Login <ssh>` to machine "sub-master.embl.de" (using your own username) ::
+#. :index:`Login <ssh>` to machine "submaster.embl.de" (using your own username) ::
 
-   $ ssh sub-master.embl.de -l username
+   $ ssh submaster.embl.de -l username
 
 #. Use :index:`exit` to quit the remote shell (Beware to not exit your local shell) ::
 
@@ -214,9 +214,9 @@ Remote access
  
     C) ``ls -la ~/``
 
-#.  :index:`Copy <scp>` the file ``/etc/motd`` from machine sub-master.embl.de into your local home directory (using scp)::
+#.  :index:`Copy <scp>` the file ``/etc/motd`` from machine submaster.embl.de into your local home directory (using scp)::
 
-    $ scp sub-master.embl.de:/etc/motd ~/
+    $ scp submaster.embl.de:/etc/motd ~/
 
 #. Determine the  :index:`filetype <file>` and the permissions of the file that you just copied::
 
