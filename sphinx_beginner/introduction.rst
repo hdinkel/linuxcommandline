@@ -721,6 +721,9 @@ Extracting Informations from Files
 -l      List files with matching lines, not the lines itself
 -L      List files without matches
 -c      Print count of matching lines for each file
+-A      print NUM lines of trailing context (After)
+-B      print NUM lines of leading context (Before)
+-C      print NUM lines of output context (Context)
 
 
 **Examples**:
@@ -745,6 +748,18 @@ Extracting Informations from Files
 - Count the number of occurrences (case insensitive!) of the term ``atom`` in all pdb files: ::
 
    $ grep -ic atom ./*.pdb
+
+- Find the term 'Homo sapiens' in the file P04637.txt, but also print two lines before the match: ::
+
+   $ grep -A2 'Homo sapiens' P04637.txt
+
+- Find the term 'Homo sapiens' in the file P04637.txt, but also print the three lines following the match: ::
+
+   $ grep -B3 'Homo sapiens' P04637.txt
+
+- Find the term 'Homo sapiens' in the file P04637.txt, but also print the surrounding five lines: ::
+
+   $ grep -C5 'Homo sapiens' P04637.txt
 
 
 :index:`cut` - extracting columns from textfiles
