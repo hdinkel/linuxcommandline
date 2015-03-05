@@ -10,6 +10,7 @@ linux_intermediate/_build/html/
 linux_intermediate/_build/latex/
 linux_intermediate/_build/singlehtml/
 linux_intermediate/_build/linkcheck/
+linux_intermediate/attendees/*.csv
 linux_combined/_build/doctrees/
 linux_combined/_build/html/
 linux_combined/_build/latex/
