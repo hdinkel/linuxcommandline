@@ -14,7 +14,7 @@ ALLSPHINXOPTS   = -d $(BUILDDIR)/doctrees $(PAPEROPT_$(PAPER)) $(SPHINXOPTS) .
 # the i18n builder cannot share the environment and doctrees with the others
 I18NSPHINXOPTS  = $(PAPEROPT_$(PAPER)) $(SPHINXOPTS) .
 
-.PHONY: help clean html dirhtml singlehtml pickle json htmlhelp qthelp devhelp epub latex latexpdf text man changes linkcheck doctest gettext
+.PHONY: help clean html dirhtml singlehtml pickle json htmlhelp qthelp devhelp epub latex latexpdf text man changes linkcheck doctest gettext certificates
 
 help:
 	@echo "Please use \`make <target>' where <target> is one of"
@@ -94,6 +94,12 @@ epub:
 	$(SPHINXBUILD) -b epub $(ALLSPHINXOPTS) $(BUILDDIR)/epub
 	@echo
 	@echo "Build finished. The epub file is in $(BUILDDIR)/epub."
+
+certificates:
+	mkdir -p $(BUILDDIR)/certificates
+	pdflatex -interaction=nonstopmode  -output-directory=$(BUILDDIR)/certificates "\def\coursetitle{Intermediate Linux Course:\\\\Commandline and Basic Scripting} \input{CertificateOfParticipation.tex}"
+	@echo
+	@echo "Build finished. The epub file is in $(BUILDDIR)/certificates."
 
 latex:
 	$(SPHINXBUILD) -b latex $(ALLSPHINXOPTS) $(BUILDDIR)/latex

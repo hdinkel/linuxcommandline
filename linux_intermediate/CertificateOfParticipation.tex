@@ -1,0 +1,54 @@
+\documentclass[16pt]{scrartcl}
+\usepackage[margin=1cm]{geometry}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{mdframed}
+\usepackage{tgschola}
+\usepackage{datetime}
+\usepackage{currfile}
+\usepackage{graphicx}
+\usepackage[dvipsnames]{xcolor}
+
+
+\usepackage{datatool}
+\DTLloaddb{names}{names.csv}
+
+\newdateformat{mydate}{\monthname, \THEYEAR}
+
+\begin{document}
+\pagestyle{empty}
+
+\DTLforeach{names}{\Firstname=Firstname,\Lastname=Lastname}{
+    \centering
+    {
+    \Large
+    \vspace*{20px}
+
+    {\color{RoyalBlue}\huge\bfseries Certificate of Participation}\par	
+        %{\LARGE\color{Dandelion}\decofourleft\quad{\color{BrickRed}\decoone}\quad\decofourright}\par
+	\vskip2em
+	
+    \linespread{2}\selectfont
+	Awarded to\\\par 	
+        {\Huge\bfseries{\underline{\Firstname{ }\Lastname}}}\par
+	\vskip2em
+	For the successful completion of the\par
+	\vskip2em
+	}
+        \begin{mdframed}[userdefinedwidth=.9\textwidth, align=center, linecolor=RoyalBlue,linewidth=4pt,frametitlealignment=\center]
+            \linespread{2}\selectfont
+            \centering{\color{RoyalBlue}\LARGE\bfseries \coursetitle }
+        \end{mdframed}\par	
+
+    \vskip2em
+    \includegraphics[width=.9\textwidth]{_static/bio-it_logo.pdf}
+
+    \vfill
+    {\small \mydate\today \hfill { } \\
+    Advanced Training Centre \hfill Holger Dinkel \& Frank Thommen\\
+    EMBL Heidelberg \hfill Structural \& Computational Biology Unit}
+
+    \pagebreak
+    }
+\end{document}
