@@ -67,7 +67,6 @@ GREP
    ::
 
     $ grep "TATATCTAA" ENST0*
-
     ENST00000380152.fasta:ACGGAAGAATGTGAGAAAAATAAGCAGGACACAATTACAACTAAAAAATATATCTAA
     ENST00000544455.fasta:ACGGAAGAATGTGAGAAAAATAAGCAGGACACAATTACAACTAAAAAATATATCTAA
 
@@ -75,39 +74,41 @@ GREP
 
    ::
 
-    $ grep "CAACAAA" ENST0*
-
+    $ grep -l "CAACAAA" ENST0*
     ENST00000380152.fasta
     ENST00000544455.fasta
 
-3. Considering the previous example, would you consider grep a suitable tool to perform motif searches? Why not? Try to find the pattern "CAACAAA" by manual inspection of the first two lines of each sequence.
+3. Considering the previous example, would you consider grep a suitable tool to perform motif searches? Why not? Try to find the pattern "CAACAAA" by manual inspection of the first three lines of each sequence.
 
-.. note:: Answer: When using grep as a motif searching tool, you need to keep in mind that grep (like sed and awk) is line-oriented, meaning that by default it only searches for a given motif in a single line. In the given example, upon manual inspection you will find the given motif also in the file ENST00000530893.fasta, which grep missed. 
+.. note:: Answer: When using grep as a motif searching tool, you need to keep in mind that grep (like sed and awk) is line-oriented, meaning that by default it only searches for a given motif in a single line. In the given example, upon manual inspection you will find the given motif also in the file ENST00000530893.fasta (spanning multiple lines), which grep missed. 
    You would need to think about how to do multi-line searches (eg. Removing line-breaks etc.)
 
-4. Count the number of ATOMs in the file 1Y57.pdb. 
+4. Count the number of ATOMs in the file 1Y57.pdb
+   
+   ::
 
-5. Does this number agree with the annotated number of atoms (Search the REMARKs for "protein atoms") 
+    $ grep -c atom 1Y57.pdb
+    3632
+
+5. Does this number agree with the annotated number of atoms? The PDB file has a comment which tells you how many atoms there are annotated in this file. This comment can be found by searching for the term "protein atoms" (use quotes and case insensitive search here!).
 
    ::
 
-    $ grep -c "ATOM" 1Y57.pdb
-    3632
     $ grep -i "protein atoms" 1Y57.pdb
     REMARK   3   PROTEIN ATOMS            : 3600
 
-This means there are 3600 atoms annotated in this PDB file, however we counted 3632. This is because grep also counted any occurrence of "ATOM" within REMARKS. We can avoid this by either filtering out the remarks:
+   This tells us that there are 3600 atoms annotated in this PDB file, however we initially counted 3632. This is because grep also counted any occurrence of "ATOM" within REMARKS. We can avoid this by either filtering out the remarks:
 
    ::
 
     $ grep -v REMARK 1Y57.pdb | grep -c ATOM
     3600
 
-...or by telling grep to only count those lines that start with "ATOM":
+   ...or by telling grep to only count those lines that start with "ATOM":
 
    ::
 
-    $ grep -c ATOM 1Y57.pdb 
+    $ grep -c ^ATOM 1Y57.pdb 
     3600
 
 
@@ -118,25 +119,25 @@ SED
 
    ::
 
-    $ sed '/version/p'  P05480.txt P04062.txt 
+    $ sed "/version/p"  P05480.txt P04062.txt 
 
 2. Use sed to change the text "sequence version 3" to "sequence version 4" in the files P05480.txt and P04062.txt (without actually changing the files, just printing) 
 
    ::
 
-    $ sed 's/sequence version 3/sequence version 4/' P05480.txt P04062.txt 
+    $ sed "s/sequence version 3/sequence version 4/" P05480.txt P04062.txt 
 
 3. Use sed to update the text "sequence version 3" to "sequence version 4" in the files P05480.txt and P04062.txt (this time, make the changes directly in the files) 
 
    ::
 
-    $ sed -i.bak 's/sequence version 3/sequence version 4/' P05480.txt P04062.txt 
+    $ sed -i.bak "s/sequence version 3/sequence version 4/" P05480.txt P04062.txt 
 
 4. Replace (transliterate) all occurrences of "r" by "l" and "l" by "r" (at the same time) in the file PROTEINS.txt (so that "structural" becomes "stluctular") 
 
    ::
 
-    $ sed 'y/rRlL/lLrR/' PROTEINS.txt
+    $ sed "y/rRlL/lLrR/" PROTEINS.txt
 
 
 AWK
@@ -146,7 +147,7 @@ AWK
 
    ::
 
-    $ awk '/version/ {print}' P12931.txt P05480.txt
+    $ awk "/version/ {print}" P12931.txt P05480.txt
 
 This is very similar to sed, you also have to use the slashes "/" to define the search pattern. However the sed notation is a little more concise...
 
@@ -154,7 +155,7 @@ This is very similar to sed, you also have to use the slashes "/" to define the 
 
    ::
 
-    $ awk -F'|' '/>/ {print $2}' P*.fasta
+    $ awk -F"|" '/>/ {print $2}' P*.fasta
 
 3. The file "P12931.csv" contains phosphorylation sites in the protein P12931. (If the file "P12931.csv" does not exist, use ``wget http://phospho.elm.eu.org/byAccession/P12931.csv`` to download it ). 
 
@@ -164,11 +165,11 @@ This is very similar to sed, you also have to use the slashes "/" to define the 
 
    b. Now use awk to show all lines containing "17". ::
  
-      $ awk '/17/ {print}' P12931.csv 
+      $ awk "/17/ {print}" P12931.csv 
 
    c. Next try show only those lines where column three equals 17 (Hint: The file is semicolon-separated...). ::
  
-      $ awk -F';' '$3==17 {print}' P12931.csv 
+      $ awk -F";" '$3==17 {print}' P12931.csv 
 
    d. Finally print the PMIDs (column 6) of all lines that contain "17" in column 3. ::
  

@@ -27,11 +27,11 @@ GREP
 
 2. List only the names of the DNA files ENST0* that contain "CAACAAA" as part of the sequence.
 
-3. Considering the previous example, would you consider grep a suitable tool to perform motif searches? Why not? Try to find the pattern "CAACAAA" by manual inspection of the first two lines of each sequence.
+3. Considering the previous example, would you consider grep a suitable tool to perform motif searches? Why not? Try to find the pattern "CAACAAA" by manual inspection of the first three lines of each sequence.
 
 4. Count the number of ATOMs in the file 1Y57.pdb. 
 
-5. Does this number agree with the annotated number of atoms (Search the REMARKs for "protein atoms") 
+5. Does this number agree with the annotated number of atoms? The PDB file has a comment which tells you how many atoms there are annotated in this file. This comment can be found by searching for the term "protein atoms" (use quotes and case insensitive search here!).
 
 
 SED
