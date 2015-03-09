@@ -20,7 +20,7 @@ which specifies their type. I.e. "`.sh`" for Bourne Shell and Bourne Again Shell
 for C-Shell scripts. Sometimes "`.bash`" for Bourne Again Shell scripts is used.
 
 We recommend to either store all scripts in one location (e.g. ``~/bin``) and add this location to
-your ``$PATH`` variable or to store the scripts together with the files that are processed by the
+your ``$PATH`` variable (see :ref:`environment_variables`) or to store the scripts together with the files that are processed by the
 script.
 
 .. hint:: If you use scripts to process data, then the scripts should probably be archived together with the data files!
@@ -82,7 +82,7 @@ but hard to understand commandlines. Always take into account that not only the 
 but also human beings will probably have to read and understand your script.
 (see :ref:`Breaking up long lines<breaking_up_long_lines>`)
 Even if your script is very simple - document it! This helps others understand what you did,
-but - most important - it helps you remember what you did, when you have to reuse the
+but - most importantly - it helps you remember what you did, when you have to reuse the
 script in the future.
 
 Documentation is done either by writing comments into the script or by creating a special documentation file (``README.txt`` or similar). Documenting in the script can be done in several ways:
@@ -92,7 +92,7 @@ Documentation is done either by writing comments into the script or by creating 
 
 * Within the script as blocks of text or "End of line" comments.
 
-To write a :index:`comments <comment>` use the :index:`hash sign` (:index:`"<#>` `#`"). Everything after a "`#`" is ignored when executing a script.
+To write :index:`comments <comment>`, use the :index:`hash sign` (:index:`"<#>` `#`"). Everything after a "`#`" is ignored when executing a script.
 
 
 Anatomy of a Shellscript
@@ -118,9 +118,21 @@ respective manpages to see the meanings of the different exit stati. The exit
 status of a script is usually the exit status of the last executed command,
 which is reported by the :index:`environment <$?>` :index:`variable <special variables: $?>` ``$?``:
 
+Example: Displaying the exit status of the (successfully run) pwd command::
+  
+  $ pwd
+  /home/fthommen
+  $ echo $?
+  0
+  $
 
-`$?`:
-    The exit status of the last run command
+Example: Displaying the exit status of the (unsuccessfully run) touch command::
+  
+  $ touch /afile
+  touch: cannot touch ‘/afile’: Permission denied
+  $ echo $?
+  1
+  $
 
 See :ref:`Ensuring a Sensible Exit Status<ensuring_sensible_exit_status>` about 
 how to control the exit status of your script.
@@ -191,7 +203,7 @@ or based on the success of the respective previous command:
     $
 
 *( cmds )* --
-  Group commands to create one single output stream: The commands are run in a subshell (i.e. a new shell is opened to run them) ::
+  Group commands to create one single output stream: The commands are run in a subshell (i.e. a new shell is opened to run them):
 
   Example: Change into ``/etc`` and list content. You are still in the same directory as you were before::
 
@@ -498,6 +510,7 @@ after the end of the loop. ``continue`` skips the rest of the current (innermost
 the next iteration
 
 .. figure:: _static/loop_control.png
+   :width: 200pt
 
    Loop control
    
