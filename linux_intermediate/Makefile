@@ -37,6 +37,7 @@ help:
 	@echo "  changes    to make an overview of all changed/added/deprecated items"
 	@echo "  linkcheck  to check all external links for integrity"
 	@echo "  doctest    to run all doctests embedded in the documentation (if enabled)"
+	@echo "  certificates    to create certificates of participation (fill in list of names first)"
 
 clean:
 	-rm -rf $(BUILDDIR)/*
@@ -97,7 +98,7 @@ epub:
 
 certificates:
 	mkdir -p $(BUILDDIR)/certificates
-	pdflatex -interaction=nonstopmode  -output-directory=$(BUILDDIR)/certificates "\def\coursetitle{Intermediate Linux Course:\\\\Commandline and Basic Scripting} \input{CertificateOfParticipation.tex}"
+	pdflatex -interaction=nonstopmode  -output-directory=$(BUILDDIR)/certificates "\def\coursetitle{Intermediate Linux Course:\\\\Commandline and Basic Scripting} \input{../general/CertificateOfParticipation.tex}"
 	@echo
 	@echo "Build finished. The epub file is in $(BUILDDIR)/certificates."
 

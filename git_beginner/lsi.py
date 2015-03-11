@@ -1,1 +1,1 @@
-../sphinx_beginner/lsi.py
+../linux_beginner/lsi.py
