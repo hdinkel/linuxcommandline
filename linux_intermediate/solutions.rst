@@ -83,11 +83,11 @@ GREP
 .. note:: Answer: When using grep as a motif searching tool, you need to keep in mind that grep (like sed and awk) is line-oriented, meaning that by default it only searches for a given motif in a single line. In the given example, upon manual inspection you will find the given motif also in the file ENST00000530893.fasta (spanning multiple lines), which grep missed. 
    You would need to think about how to do multi-line searches (eg. Removing line-breaks etc.)
 
-4. Count the number of ATOMs in the file 1Y57.pdb
+4. Count the number of 'ATOM's in the file 1Y57.pdb
    
    ::
 
-    $ grep -c atom 1Y57.pdb
+    $ grep -c ATOM 1Y57.pdb
     3632
 
 5. Does this number agree with the annotated number of atoms? The PDB file has a comment which tells you how many atoms there are annotated in this file. This comment can be found by searching for the term "protein atoms" (use quotes and case insensitive search here!).

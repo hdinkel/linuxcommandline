@@ -540,7 +540,7 @@ b) “source” the script, i.e. run it within your current shell:
 
  ::
  
-  $ ./vartest.sh 
+  $ source ./vartest.sh 
   I am local 
   I am global 
   -----
@@ -560,7 +560,7 @@ Hints
 =====
 
 Quoting
-^^^^^^^
+-------
 
 In Programming it is often necessary to "glue together" certain words. Usually, a program or
 the shell splits sentences by whitespace (space or tabulators) and treats each word
