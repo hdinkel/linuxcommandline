@@ -26,3 +26,4 @@ linux_intermediate/_build/linkcheck/
 linux_intermediate/_build/singlehtml/
 linux_intermediate/attendees/*.csv
 linux_intermediate/attendees/*.pdf
+git_beginner/_build/certificates

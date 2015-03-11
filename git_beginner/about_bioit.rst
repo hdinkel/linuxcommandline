@@ -1,1 +1,1 @@
-../sphinx_beginner/about_bioit.rst
+../linux_beginner/about_bioit.rst
