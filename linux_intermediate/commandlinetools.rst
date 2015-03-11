@@ -5,7 +5,7 @@ More Commandline Tools
 
 Here is a quick list of useful commandline tools which will be used throughout the rest of the document.
 Many of these tools have quite extensive functionality and only a very limited part can be discussed here, 
-so the reader is encouraged to read more about these using the links given in the in the :ref:`Links <Links>` 
+so the reader is encouraged to read more about these using the links given in the in the :doc:`links <links>` 
 section...
 
 Commandline Tools
@@ -17,7 +17,8 @@ GZIP
 ----
 :index:`gzip <gzip>` is a compression/decompression tool.
 When used on a file (without any parameters) it will compress it and replace the
-file by a compressed version with the extension '.gz' attached:
+:index:`file <ls>` by a compressed version with the extension '.gz' attached:
+
 
  ::
 
@@ -565,7 +566,7 @@ Quoting
 In Programming it is often necessary to "glue together" certain words. Usually, a program or
 the shell splits sentences by whitespace (space or tabulators) and treats each word
 individually. In order to tell the computer that certain words belong together, you need to
-"quote" them, using either single (') or double (") quotes. The difference between these two is
+":index:`quote <quoting>`" them, using either single (') or double (") quotes. The difference between these two is
 generally that within double quotes, variables will be expanded, while everything within
 single quotes is treated as string literal.
 When setting a variable, it doesn't matter which quotes you use:
@@ -626,7 +627,7 @@ You already learned how to expand a variable such that its value is used instead
   # echo "the variable is $MYVAR"
    the variable is 123
 
-"Escaping" a variable is the opposite, ensuring that the literal variable name is used instead of its value:
+":index:`Escaping <escape>`" a variable is the opposite, ensuring that the literal variable name is used instead of its value:
 
  ::
 

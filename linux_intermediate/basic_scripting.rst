@@ -293,8 +293,8 @@ A) Evaluating the exit status of a command: Simply use the command as condition.
 B) Evaluating of conditions or comparisons:
 
   Conditions and comparisons are evaluated using a special :index:`command <test>` ``test`` which is
-  usually written :index:`as<[>` "``[``" (no joke!). As "``[``" is a command, it must be followed by
-  a blank. As a speciality the "``[``" command must be ended with "`` ]``" (note the
+  usually written :index:`as <[>` "``[``" (no joke!). As "``[``" is a command, it must be followed by
+  a blank. As a speciality the "``[``" command must be :index:`ended <]>` with "``]``" (note the
   preceding blank here)
 
   .. Note:: In csh/tcsh the ``test`` (or ``[``) command is not needed. Conditions and comparisons are directly placed within the round braces.
