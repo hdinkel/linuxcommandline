@@ -15,6 +15,8 @@ Intermediate Linux Course: Commandline and Basic Scripting
    Commandline Exercises <exercises>
    Basic Scripting <basic_scripting>
    Solutions <solutions>
+   Scripting Exercises <scripting_exercises>
+
    appendix
 
 ..   I/O Redirection <redirection>
