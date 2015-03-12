@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink">
+    <rect x="10" y="10" height="80" width="200" style="fill: #00EE00"/>
+    <text x="40" y="40">Hello, my name is:</text>
+    <text x="40" y="60">FIRSTNAME LASTNAME</text>
+</svg>
