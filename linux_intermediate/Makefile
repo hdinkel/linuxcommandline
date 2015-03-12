@@ -112,10 +112,11 @@ latex:
 latexpdf:
 	$(SPHINXBUILD) -b latex $(ALLSPHINXOPTS) $(BUILDDIR)/latex
 	@echo "Hacking TeXfile..."
-	sed -i -e 's/\\usepackage\[utf8\]{inputenc}/\\usepackage[utf8]{inputenc}\\usepackage[usenames,dvipsnames,svgnames,table]{xcolor}/g' $(BUILDDIR)/latex/*.tex
+	sed -i -e 's/\\usepackage\[utf8\]{inputenc}/\\usepackage[utf8]{inputenc}\\usepackage[usenames,dvipsnames,svgnames,table]{xcolor}\\usepackage{pdfpages}/g' $(BUILDDIR)/latex/*.tex
 	sed -i -e 's|begin{Verbatim}\[|begin{Verbatim}\[frame=single, rulecolor=\\color{lightgray}, fontfamily=courier, |' $(BUILDDIR)/latex/*.tex
 	sed -i -e 's|\\fancyhead\[LE,RO\]{{\\py@HeaderFamily \\@title, \\py@release}}|\\fancyhead\[LE,RO\]{{\\py@HeaderFamily \\@title}}|' $(BUILDDIR)/latex/sphinx.sty
 	sed -i -e 's|^\\release.*||' $(BUILDDIR)/latex/*.tex
+	sed -i -e 's|\\end{document}|\\ifthenelse{\\isodd{\\pageref{LastPage}}}{\\null\\clearpage\\thispagestyle{empty}}{}\\includepdf[pages=1]{../../_static/fwunixref.pdf}\\end{document}	|' $(BUILDDIR)/latex/*.tex
 	echo 'delim_0 "\\\dotfill"' >> $(BUILDDIR)/latex/python.ist
 	echo 'delim_1 "\\\dotfill"' >> $(BUILDDIR)/latex/python.ist
 	echo 'delim_2 "\\\dotfill"' >> $(BUILDDIR)/latex/python.ist

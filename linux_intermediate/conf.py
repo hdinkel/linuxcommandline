@@ -199,7 +199,7 @@ latex_custom += '''
 
 latex_elements = {
 # The paper size ('letterpaper' or 'a4paper').
-'papersize': 'a4paper',
+'papersize': 'a4paper,pdftex',
 
 'preamble': latex_custom,
 
