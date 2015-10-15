@@ -41,3 +41,8 @@ Sonstige Probleme:
       try .. tabularcolumns::
       try using hack latex columns around two code blocks (-> Makefile)
   compile@Frank: references not set (example 4.6 Ensuring...)
+
+Added by Toby H, October 2015:
+- Rewritten & reduced the length of the section about the Bio-IT Project.
+- Removed the CMCI from the section about the EMBL Centres - it doesn't exist any longer.
+- Didn't have time to properly format (in bold, italic etc) the example commands, so have removed the mention of typographical conventions in the introduction. It is a good idea to have this formatting in place, though - I intend to go through and properly format eveything after the course this month.  

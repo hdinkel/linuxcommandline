@@ -7,7 +7,7 @@ Why Use the Commandline
 ***********************
 
 - It's **fast**. Productivity is a word that gets tossed around a lot by so-called power users, but the command line can
-  really streamline your computer use, assuming you learn to use it right.
+  really streamline your computer use, assuming you learn to use it correctly.
 
 - It's **easier to get help**. The command line may not be the easiest thing to use, but it makes life a whole lot
   easier for people trying to help you and for yourself when looking for help, especially over the internet. Many times
@@ -49,7 +49,7 @@ General Remarks Regarding Using UNIX/Linux Systems
 .. _figure-filesystem:
 .. figure:: _static/filesystem.png
 
-  Depending on the Linux distribution you might or might not find all of above
+  Depending on the Linux distribution you might or might not find all of the above
   directories. Most important directories for you are ``/bin`` and ``/usr/bin``
   (sometimes also ``/usr/local/bin``) which contain the user software, ``/home`` which
   usually contains the users' homedirectories and ``/tmp`` which can be used to store
@@ -63,17 +63,17 @@ Absolute Paths / Relative Paths
 A path describes the location of a file/folder in the filesystem: 
 It is important to understand that there are basically two ways to describe such a path: Either by using an *absolute* pathname, or by using a
 *relative* pathname. The difference is that *absolute* paths always start with a "slash ``/``". This "slash" denotes the so called "root" of the
-filesystem (see below). *Relative* paths in contrast always starting with a directory name and denote the location of a file/folder *relative* to
+filesystem (see below). *Relative* paths in contrast always start with a directory name and denote the location of a file/folder *relative* to
 the current directory.
 
 .. note:: When in doubt, it's best to use *absolute* filenames. Commands given with absolute pathname are more easily repeated later, as they can
-   be run independent of the current working directory (unlike relative paths).
+   be run regardless of the current working directory (unlike relative paths).
 
 ***********************************
 General Structure of Linux Commands
 ***********************************
 
-:index:`Many <command; general structure>` linux commands have options and accept arguments. Options are a set of switch-like parameters
+:index:`Many <command; general structure>` Linux commands have options and accept arguments. Options are a set of switch-like parameters
 while arguments are usually free text input (such as a filename).
 
 .. figure:: _static/LinuxCommandStructure.png
@@ -97,7 +97,7 @@ Short options are usually - though not always - concatenatable:
   $ ls -l -A -h
   $ ls -lAh
 
-Some options require an additional argument, which is added with a blank to the short form and with an equal sign to the long form:
+Some options require an additional argument, which is added after a blank to the short form and an equal sign to the long form:
 
  :: 
 
@@ -121,7 +121,6 @@ A Journey Through the Commands
 
 Please note that all examples and usage instructions below are just a glimpse of what you can do and reflect our opinion on what's important and what's not. Most of these commands support many more options and different usages. Consult the manpages to find them.
 
-Typographical conventions: Commands and examples are written in Courier.  User Input is written in Courier bold and placeholders are generally written in italic.
 
 Useful Terminal Tools & Keyboard Shortcuts
 ==========================================
@@ -137,6 +136,11 @@ Copying / Pasting using the mouse
 On most Linux systems you can use the mouse to select text and then press the middle mouse button to
 paste that text at the position where your cursor is. This is especially useful for long directory
 or filenames.
+
+Saving time/avoiding typos with autocompletion
+----------------------------------------------
+
+On most Linux systems you can autocomplete command names and filepaths by pressing :kbd:`TAB`. This looks at the characters that you have entered so far and tries to predict what the rest of the command/path will be. This can save you from having to type out long command and file/directory names, and also reduces the likelihood of you accidentally spelling something incorrectly.
 
 
 Printing some text
@@ -208,7 +212,7 @@ Getting Help
 -----------------------------------
 
 Many commands support a "help" option, either through ``-h`` or through ``--help``. 
-Other commands will show a help page or at least a short usage overview if you provide incorrect commandline options
+Other commands will show a help page or at least a short usage overview if you provide incorrect commandline options.
 
 :index:`man` - show the manual page of a command
 ------------------------------------------------
@@ -218,20 +222,21 @@ Other commands will show a help page or at least a short usage overview if you p
 
  :: 
 
-  $ man man
-  man(1)
+  $ man echo
+  echo(1)
   
   NAME
-   man - format and display the on-line manual pages
+         echo - display a line of text
   
   SYNOPSIS
-   man [-acdfFhkKtwW] [--path] [-m system] [-p string] [-C config_file]
-  ...
+         echo [SHORT-OPTION]... [STRING]...
+         echo LONG-OPTION
+    ...
   $
 
 For the navigation within a manpage and how to exit the manpage, see the :ref:`paragraph regarding less <less>`.
 
-.. note:: The behaviour of ``man`` is dependent of the ``$PAGER`` environment variable
+.. note:: The behaviour of ``man`` is dependent of the ``$PAGER`` environment variable.
 
 :index:`apropos` - list manpages containing a keyword in their description
 --------------------------------------------------------------------------
@@ -247,13 +252,13 @@ For the navigation within a manpage and how to exit the manpage, see the :ref:`p
   whoami               (1)  - print effective userid
   $
 
-Use ``apropos`` to find candidates for specific tasks
+Use ``apropos`` to find candidates for specific tasks.
 
 
 /usr/share/doc/
 ---------------
 
-The ``/usr/share/doc/`` directory in some Linux distributions contains additional documentation of installed software packages 
+The ``/usr/share/doc/`` directory in some Linux distributions contains additional documentation of installed software packages. 
 
 Who am I, where am I
 ====================
@@ -329,7 +334,7 @@ Moving Around
   $
 
 .. note:: Using ``cd`` without a directory is equivalent to "``cd ~``" and changes into the users's homedirectory
-.. note:: Please note the difference between absolute paths (starting with "``/``") and relative paths (starting with a directory name)
+.. note:: Please note the difference between absolute paths (starting with "``/``") and relative paths (starting with a directory name).
 
 Special directories:
 
@@ -462,7 +467,9 @@ If the last filename given is nonexisting then the first file is copied as this 
   $ cp /usr/bin/less /tmp/
   $
 
-If, however, the last filename given is an (existing!) directory, then the file is copied into this directory: :: 
+Be careful! If the last filename given does exist, this file will be overwritten and replaced with a copy of the first file.
+
+If the last filename given is an (existing!) directory, then the file is copied into this directory: :: 
 
   $ cp /usr/bin/less /tmp/
   $
@@ -489,7 +496,7 @@ To recursively copy files, we need to specify the ``-r`` option. Here, we copy a
   ...
   $
 
-``rsync`` allows you to copy files or folders locally or to wherever you have ``ssh`` access.  You can have ``rsync`` have copying only newer files or only older files.  If copy operation is interrupted, you can rerun ``rsync`` and it will only copy the missing files (in contrast to ``cp`` which will just copy everything again).
+``rsync`` allows you to copy files or folders locally or to wherever you have ``ssh`` access.  You can have ``rsync`` copy only newer files or only older files.  If copy operation is interrupted, you can rerun ``rsync`` and it will only copy the missing files (in contrast to ``cp`` which will just copy everything again).
 
 ``source`` and ``target`` can be local directories or have the form ``user@remotehost:directory``, in which case you'll have to give your password for the remote host.  This latter version will copy over the network.
 
