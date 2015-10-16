@@ -3,11 +3,16 @@ About Bio-IT
 -------------
 
 The Bio-IT Project aims to develop and strengthen the bioinformatics community at EMBL Heidelberg. It is made up of members across a range of disciplines in computational biology, in different Units and Core Facilities. The project aims to improve the standard of computational biology practised at EMBL Heidelberg, to encourage collaborations, and to provide a forum for discussion of issues and ideas relevant to bioinformatics here. 
-The activities of the project include::
+The activities of the project include:
+
 - the organisation and delivery of training courses such as this one
+
 - the provision of one-to-one training and consultancy
+
 - the organisation of social and networking events for the computational biology community
+
 - regular meetings to discuss issues and ideas
+
 - the development and maintenance of the Bio-IT Portal <http://bio-it.embl.de>
 
 The Portal hosts information regarding upcoming courses and conferences/other events relevant to computational biology, resources to help with your work, and profiles of people involved in bioinformatics at EMBL. It is accessible from within the EMBL network (you must connect via VPN for off-site access).
@@ -34,7 +39,7 @@ have a strong computational component.
    :alt: CBM
    :target: http://bio-it.embl.de/biological-modeling
 
-|cbna| |csda| |cmci| |cbm|
+|cbna| |csda| |cbm|
 
 Biomolecular Network Analysis
 """""""""""""""""""""""""""""
