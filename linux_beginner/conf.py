@@ -192,7 +192,7 @@ latex_elements = {
 # (source start file, target name, title, author, documentclass [howto/manual]).
 latex_documents = [
   ('index', 'IntroductiontotheLinuxCommandline.tex', u'Introduction to the Linux Commandline',
-   u'Holger Dinkel \\& Frank Thommen', 'manual'),
+      u'Holger Dinkel, Frank Thommen \\& Toby Hodges', 'manual'),
 ]
 
 # The name of an image file (relative to this directory) to place at the top of
@@ -222,7 +222,7 @@ latex_show_urls = False
 # (source start file, name, description, authors, manual section).
 man_pages = [
     ('index', 'introductiontothelinuxcommandline', u'Introduction to the Linux Commandline',
-     [u'Holger Dinkel & Frank Thommen'], 1)
+     [u'Holger Dinkel & Frank Thommen & Toby Hodges'], 1)
 ]
 
 # If true, show URL addresses after external links.
@@ -236,7 +236,7 @@ man_pages = [
 #  dir menu entry, description, category)
 texinfo_documents = [
   ('index', 'IntroductiontotheLinuxCommandline', u'Introduction to the Linux Commandline',
-   u'Holger Dinkel & Frank Thommen', 'IntroductiontotheLinuxCommandline', 'One line description of project.',
+   u'Holger Dinkel & Frank Thommen & Toby Hodges', 'IntroductiontotheLinuxCommandline', 'One line description of project.',
    'Miscellaneous'),
 ]
 
