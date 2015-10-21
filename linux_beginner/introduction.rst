@@ -115,9 +115,9 @@ Since Linux incorporates commands from different sources, options can be availab
 
 
 
-******************************
-A Journey Through the Commands
-******************************
+*****************************
+A Journey through Commandland
+*****************************
 
 Please note that all examples and usage instructions below are just a glimpse of what you can do and reflect our opinion on what's important and what's not. Most of these commands support many more options and different usages. Consult the manpages to find them.
 
@@ -505,8 +505,8 @@ To recursively copy files, we need to specify the ``-r`` option. Here, we copy a
 
 **Useful option combinations**:
 
--av  Verbosely copies all source files which are different (different size, different age) or missing from the source.  **Beware**: This will also copy files which are older on the source side
--au  Silently copies all source files which are different (different size, different age) or missing from the source.  This combination will *not* overwrite newer files by older ones
+-av  Verbosely copies all source files which are different (different size, different age) or missing from the destination  **Beware**: This will also copy files which are older on the destination side
+-au  Silently copies all source files which are different (different size, different age) or missing from the destination  This combination will *not* overwrite newer files by older ones
 
 This should not copy any new files, as we previously copied these already:
  :: 
@@ -758,11 +758,11 @@ Extracting Informations from Files
 
 - Find the term 'Homo sapiens' in the file P04637.txt, but also print two lines before the match: ::
 
-   $ grep -A2 'Homo sapiens' P04637.txt
+   $ grep -B2 'Homo sapiens' P04637.txt
 
 - Find the term 'Homo sapiens' in the file P04637.txt, but also print the three lines following the match: ::
 
-   $ grep -B3 'Homo sapiens' P04637.txt
+   $ grep -A3 'Homo sapiens' P04637.txt
 
 - Find the term 'Homo sapiens' in the file P04637.txt, but also print the surrounding five lines: ::
 
