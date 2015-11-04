@@ -41,8 +41,8 @@ source_encoding = 'utf-8'
 master_doc = 'index'
 
 # General information about the project.
-project = u'git4beginners'
-copyright = u'2013-2014, Holger Dinkel'
+project = u'git basics'
+copyright = u'2013-2015, Holger Dinkel'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -82,9 +82,9 @@ exclude_patterns = ['_build']
 #show_authors = False
 
 # The name of the Pygments (syntax highlighting) style to use.
-#pygments_style = 'sphinx'
+pygments_style = 'sphinx'
 #pygments_style = 'colorful'
-pygments_style = 'lsi.lsiClassStyle'
+#pygments_style = 'lsi.lsiClassStyle'
 
 # The default language to highlight source code in. The default is 'python'. The value should be a valid Pygments lexer name, see Showing code examples for more details.
 highlight_language = 'console'
@@ -110,7 +110,7 @@ html_theme = 'nature'
 
 # The name for this set of Sphinx documents.  If None, it defaults to
 # "<project> v<release> documentation".
-html_title = "git4beginners"
+html_title = "git basics"
 
 # A shorter title for the navigation bar.  Default is the same as html_title.
 #html_short_title = None
@@ -194,7 +194,7 @@ latex_elements = {
 # Grouping the document tree into LaTeX files. List of tuples
 # (source start file, target name, title, author, documentclass [howto/manual]).
 latex_documents = [
-  ('index', 'gitintro.tex', u'GIT For Beginners',
+  ('index', 'gitintro.tex', u'GIT Basics',
    u'Holger Dinkel', 'manual'),
 ]
 
@@ -224,7 +224,7 @@ latex_show_urls = False
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    ('index', 'gitintro', u'GIT For Beginners',
+    ('index', 'gitintro', u'GIT Basics',
      [u'Holger Dinkel'], 1)
 ]
 
@@ -238,8 +238,8 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-  ('index', 'gitintro', u'GIT For Beginners',
-   u'Holger Dinkel', 'gitintro', 'GIT For Beginners',
+  ('index', 'gitintro', u'GIT Basics',
+   u'Holger Dinkel', 'gitintro', 'GIT Basics',
    'Miscellaneous'),
 ]
 
