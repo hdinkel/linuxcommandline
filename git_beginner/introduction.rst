@@ -22,22 +22,11 @@ The benefits are at hand:
       Good VCS systems tag changes with authors who make them.
 
 
-.. figure:: _static/repo_single.png
-    :scale: 50 %
-
-    Files are `added` from the `working directory`, which always holds the
-    current version of your files, to the `staging area`. `Staged` files will be stored into the repository in the next `commit`. 
-    The repository itself contains all previous versions of all files ever committed.
-
-.. figure:: _static/repo_distributed.png
-
-    Distributed Workflow using a centralized repository. Here, three local copies of one central repository allow you, 
-    Jon and Matt to work on the same files and sync files between each other using the central server.
-
-
 git at a Glance
-***************
+===============
 
+git commands
+------------
 
 The git tool has many subcommands that can be invoked like `git <subcommand>` for instance `git status` to get the status of a repository.
 
@@ -68,12 +57,25 @@ you can read more about each command by invoking the help: ::
  git help commit
 
 
+git concepts
+------------
+
+commit
+^^^^^^
+
+A commit is a recorded set of changes in your project's file(s).
+Try to group *logical* sets of changes together into one commit -- don't mix changes which are unrelated.
+
+repository
+^^^^^^^^^^
+
+A repository is the history of all your project's commits.
 
 git Settings
-************
+============
 
 setting your identity
-=====================
+---------------------
 
 Before we start, we should set the user name and e-mail address.
 This is important because every git commit uses this information 
@@ -110,6 +112,19 @@ You can use the `git config --list` command to list all your settings: ::
 
 A Typical git Workflow
 **********************
+
+.. figure:: _static/repo_single.png
+    :scale: 50 %
+
+    Files are `added` from the `working directory`, which always holds the
+    current version of your files, to the `staging area`. `Staged` files will be stored into the repository in the next `commit`. 
+    The repository itself contains all previous versions of all files ever committed.
+
+.. figure:: _static/repo_distributed.png
+
+    Distributed Workflow using a centralized repository. Here, three local copies of one central repository allow you, 
+    Jon and Matt to work on the same files and sync files between each other using the central server.
+
 
 Creating a git Repository
 =========================
@@ -280,47 +295,13 @@ Basically what this does is create a repository which all the files from the `.g
 This also means that you should never add/edit/delete files in this directory. Rather clone this directory in another folder/computer,
 edit files there and commit/push (see below)...
 
-EMBL git server
-***************
+github
+******
 
-As part of the Bio-IT initiative, EMBL provides a central git server which can be used as a centralized resource to share and exchange data/code with collaborators:
+http://www.github.com
 
-http://git.embl.de/
+To clone a repository::
 
-The following rules apply:
-
-- Repositories on the EMBL Git server are only granted to EMBL staff members.
-- External users can be added as cooperators on a project, but the projects themselves have to be lead by someone with an active EMBL contract.
-- Should the project leader leave EMBL, then the project has to be transferred to someone else or the complete repository will be removed.
-- Repositories are always installed as sub-repositories of the project leader/repository responsible.
-- By default, repositories are installed with only basic access permissions for the repository owner. He/she is then in charge of setting appropriate access permissions as 
-  described on the `Howto <http://git.embl.de/howto.html>`_ page.
-
-Basically, to use this server, you need to provide your full name, your EMBL
-email address and username, the name and a short description of the
-repository/project, along with your SSH public key to the admin and he will set
-things up so you are able to access your repository: ::
-
- git clone git@git.embl.de:your_username/your_repository
-
-.. note:: It's important to mention that the username for accessing the git.embl.de server is always **git**, not **your** username!
-
-An SSH key can be generated using the command `ssh-keygen` (Windows users might want to use `putty <http://the.earth.li/~sgtatham/putty/latest/x86/putty.exe>`_) like so: ::
-
- ssh-keygen 
-
- Generating public/private rsa key pair. 
- Enter file in which to save the key (/home/username/.ssh/id_rsa): 
- Created directory '/home/username/.ssh'. 
- Enter passphrase (empty for no passphrase): 
- Enter same passphrase again: 
- Your identification has been saved in /home/username/.ssh/id_rsa. 
- Your public key has been saved in /home/username/.ssh/id_rsa.pub. 
- The key fingerprint is: 2d:14:f5:d8:... username@hostname 
- 
-This creates two files, in this case `/home/username/.ssh/id_rsa` and
-`/home/username/.ssh/id_rsa.pub`. The former is your **private** key and should
-**never** be handed out to anybody, while the latter one (ending in `.pub`)
-should be distributed to any server on which you intend to use it...
+ git clone username@github.com:username/repository
 
 
