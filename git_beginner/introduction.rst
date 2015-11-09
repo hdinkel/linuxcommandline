@@ -83,10 +83,12 @@ and it's also incredibly useful when looking at the history and commit log: ::
  git config --global user.email johndoe@embl.de
 
 
-Other useful settings include your favorite editor as well as difftool: ::
+Other useful settings include your favorite editor, enabling color output as
+well as difftool: ::
 
  git config --global core.editor nano
- git config --global merge.tool meld
+ git config --global color.ui auto
+ git config --global merge.tool kdiff3
 
 
 
@@ -352,9 +354,10 @@ status) try to get the changes we've done in the `mythesis-work` directory::
   git status
 
   git pull
-
-.. TODO: add output of git pull here
-
+  ...
+  Auto-merging paper.txt
+  CONFLICT (content): Merge conflict in paper.txt
+  Automatic merge failed; fix conflicts and then commit the result.
 
 
 Solving conflicts
