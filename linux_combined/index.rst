@@ -19,6 +19,8 @@ EMBL Linux Course
    Variables <variables>
    Basic Scripting <basic_scripting>
    Solutions <solutions>
+   Scripting Exercises <scripting_exercises>
+
    Git Intro <git_beginner>
 
    Appendix <appendix>
