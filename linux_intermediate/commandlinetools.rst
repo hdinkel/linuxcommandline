@@ -639,3 +639,85 @@ You already learned how to expand a variable such that its value is used instead
 .. note:: The "escape character" is usually the backslash "``\``".
 
 .. .. include:: exercises.rst
+
+Keyboard Shortcuts
+------------------
+
+When getting comfortable with working on the command line, it can be helpful to learn 
+some tricks that can save you time, better manage your session, and help you to avoid 
+annoying errors due to typos.
+
+Tab-Completion: A Reminder
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+You're probably already aware of tab-completion, where you push the ``tab`` key to 
+complete the name of a command, file, directory, etc. This is a huge time-saver and great 
+tool for preventing the accidental inclusion of errors. 
+
+Move Quickly Through the Command Line
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+As well as tab-completion, you might be aware of ``CTRL-A`` to jump the cursor to the 
+beginning of a line, and ``CTRL+E`` to jump to the end. On most systems, using the arrow 
+keys while holding down the ``alt`` key will jump left or right by one word (or word-like 
+string) at a time.
+
+When editing a line, ``CTRL-W`` can be used to delete left from the current cursor 
+position to the next beginning of a word. ``CTRL+U`` will delete left from the current 
+cursor position to the beginning of the line.
+
+Searchable Command History
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+You're probably aware of the command history, and that you can use the up and down arrow 
+keys to scroll back and forth throughout that history. You can also use ``CTRL+R`` to 
+search that command history. If you type ``CTRL+R`` and then the beginning of a command, 
+you will see the most recent command in the history that matches that pattern (anywhere 
+in the command). You can hit ``CTRL+R`` again to scroll backwards through the matches.
+
+Job Management
+^^^^^^^^^^^^^^
+
+Use ``CTRL+C`` to abort the current process, and ``CTRL+D`` to close the current shell.
+
+If you don't want to abort, you might instead want to use ``CTRL+Z`` to suspend the 
+current process. You can resume the most recently-suspended job with ``fg``, to run it in 
+the 'foreground' of the shell, or ``bg`` to run it in the 'background'. In the shell, a 
+command running in the foreground is a job that will prevent the user from executing 
+further commands until the job has finished. A job running in the background will 
+continue to run while the user can carry on using the shell prompt to execute other 
+commands. On a related note: to put a job in the background when you execute it, just add 
+``&`` to the end of the command.
+
+If you have multiple jobs running/suspended at one time, you can view a list of these 
+processes and their current status with ``jobs``:
+
+ ::
+  # sleep 250 &
+  [1] 19697
+  # sleep 100
+  ^Z
+  [1]+  Stopped                 sleep 100
+  # jobs
+  [1]+  Stopped                 sleep 100
+  [2]-  Running                 sleep 250 &
+
+As mentioned before, you can restart the most recently-suspended job with ``fg`` or 
+``bg``. To restart another job in the list, you can refer to it with ``%1`` for job 
+number ``1`` in the list (``sleep 100`` in the example above), ``%2`` for job ``2``, and 
+so on. If, instead of restarting a job, you want to kill a suspended process, you can 
+use the ``kill`` command and specify the job afterwards:
+
+ ::
+  # jobs
+  [1]+  Stopped                 sleep 100
+  [2]-  Running                 sleep 250 &
+  # kill %2
+  [2]-  Terminated: 15          sleep 250
+
+The ``jobs`` list contains details of all running or stopped tasks that were initiated 
+within the current session. If you try to leave a session with ``exit`` while you still 
+have a job running or suspended, you will receive a warning message. (Note that this is 
+one of the rare occasions where the command line interface will ask you if you're sure 
+before doing something that could be potentially bad for you.) Use ``exit`` a second time 
+and the session will end, killing any remaining jobs as it does so.
