@@ -17,6 +17,7 @@ EMBL Linux Course
    Commandline Tools <commandlinetools>
    I/O Redirection <redirection>
    Variables <variables>
+   Exercises Intermediate <exercises_intermediate>
    Basic Scripting <basic_scripting>
    Solutions <solutions>
    Scripting Exercises <scripting_exercises>
