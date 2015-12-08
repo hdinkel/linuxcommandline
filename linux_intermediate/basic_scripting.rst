@@ -179,17 +179,17 @@ or based on the success of the respective previous command:
 
   Example: Create a directory and, if not successful, print an error message::
     
-    $ mkdir /bin/a || echo "Could not create directory a"
+    $ mkdir /bin/a || echo "mkdir didn't work!"
     mkdir: cannot create directory `/bin/a': Permission denied
-    Could not create directory a
+    mkdir didn't work!
     $
 
-  Example: Warn if a directory doesn't exist: ::
+  Example: Decompress a gzipped file if it exists, or download it if not: ::
 
-    $ cd /etc || echo "/etc is missing!"
-    $ cd /nowhere >&/dev/null || echo "/nowhere does not exist"
-    /nowhere does not exist
+    $ gzip -d 2W73.pdb || wget "http://www.rcsb.org/pdb/files/2W73.pdb.gz"
     $
+
+You can mix multiple ``&&`` and ``||`` controls into a single line.
 
   Example: Create a directory and, if successful, change into it, if not successful, print an error message::
     
@@ -197,9 +197,15 @@ or based on the success of the respective previous command:
     mkdir: cannot create directory `/bin/a': Permission denied
     Could not create directory a
     $
-    $ mkdir ~/bin/a && cd a || echo "Could not create directory a"
+    $ mkdir ~/a && cd ~/a || echo "Could not create directory a"
     $ pwd
     /home/fthommen/a
+    $
+
+  Example: Count the heterogens described in a gzipped PDB file or, if it doesn't exist, 
+  download the file::
+    
+    $ gzip -c 4ZZN.pdb.gz && sed -n '/^HET /p' || wget "http://www.rcsb.org/pdb/files/4ZZN.pdb.gz"
     $
 
 *( cmds )* --
@@ -210,7 +216,7 @@ or based on the success of the respective previous command:
     $ pwd
     /home/fthommen
     $ (cd /etc; ls)
-    [... directory listing here ...]
+    [... etc directory listing here ...]
     $ pwd
     /home/fthommen
     $
@@ -362,20 +368,20 @@ B) Evaluating of conditions or comparisons:
 
   Examples: Test for the existence of /etc/passwd::
 
-    if [ -e /etc/passwd ]
+    if [ -e ./sequence_files ]
     then
-      echo /etc/passwd exists
+      ls -1 ./sequence_files/*.fasta
     else
-      echo /etc/passwd does NOT exist
+      echo no sequence_files directory here
     fi
 
   or::
 
-    if test -e /etc/passwd
+    if test -e ./sequence_files
     then
-      echo /etc/passwd exists
+      ls -1 ./sequence_files/*.fasta
     else
-      echo /etc/passwd does NOT exist
+      echo no sequence_files directory here
     fi
 
 
@@ -403,13 +409,13 @@ The basic syntax :index:`is <breaksw>`:
 |   case variable in                    |   switch (variable)                   |
 |     pattern1)                         |     case pattern1:                    |
 |       commands                        |       commands                        |
-|       ;;                              |       breasksw                        |
+|       ;;                              |       breaksw                         |
 |     pattern2)                         |     case pattern2:                    |
-|       commands                        |        commands                       |
-|       ;;                              |        breaksw                        |
+|       commands                        |       commands                        |
+|       ;;                              |       breaksw                         |
 |     *)                                |     default:                          |
-|        commands                       |        commands                       |
-|        ;;                             |   endsw                               |
+|       commands                        |       commands                        |
+|       ;;                              |   endsw                               |
 |   esac                                |                                       |
 +---------------------------------------+---------------------------------------+
 
@@ -426,14 +432,27 @@ Example:
   Check if /opt/ or /usr/ paths are contained in ``$PATH``: ::
 
      case $PATH in
-      */opt/* | */usr/* )
-         echo /opt/ or /usr/ paths found in \$PATH
+      */opt/* )
+         echo /opt/ paths found in \$PATH
+         ;;
+      */etc/* )
+         echo /etc/ paths found in \$PATH
          ;;
       *)
          echo '/opt and /usr are not contained in $PATH'
          ;;
      esac
 
+  or
+
+     case $PATH in
+      */opt/* | */etc/* )
+         echo /opt/ or /etc/ paths found in \$PATH
+         ;;
+      *)
+         echo '/opt and /usr are not contained in $PATH'
+         ;;
+     esac
 
 Loops
 -----
@@ -460,16 +479,18 @@ list of given values and run the given statements for reach run:
 *list* is a list of strings, separated by whitespaces
 
 Examples:
- List all files in /tmp in a bulleted list: ::
+ List filenames and count number of sequences in every FASTA file in ./sequence_files: ::
 
-     for FILE in /tmp/*
+     for FILE in ./sequence_files/*.fasta
      do
        echo " * $FILE"
+       grep -c '\>' $FILE
      done
      or
-     for FILE in `ls /tmp`
+     for FILE in `ls ./sequence_files/*.fasta`
      do
        echo " * $FILE"
+       grep -c '\>' $FILE
      done
 
 
@@ -541,10 +562,6 @@ options and arguments.
 Configurable Scripts
 --------------------
 
-Any value - be it paths, commands or options - that is specific to individual
-applications or your script, should not be "hardcoded" (i.e. used literally
-within the script) but assigned to variables:
-
 Using Variables
 ^^^^^^^^^^^^^^^
 
@@ -553,7 +570,7 @@ applications or your script, should not be hardcoded (i.e. used literally
 within the script).  Instead you should use variables to refer to them:
 
 Bad example:
-  You have to change two instances of the path each time you want to list an other directory::
+  You have to change two instances of the path each time you want to list another directory::
 
     #!/bin/sh
 
@@ -561,7 +578,7 @@ Bad example:
     ls /etc
 
 Good example:
-  The path is now in a variable and only one instance has to be changed each time (less work, less errors)::
+  The path is now in a variable and only one instance has to be changed each time (less work, fewer errors)::
 
     #!/bin/sh
 
@@ -570,7 +587,7 @@ Good example:
     echo "The directory $MYDIR contains the following files:"
     ls $MYDIR
 
-Of course, you'll still have to modify the script each time you want to list the content of an other directory. A more flexible way of customization would be to use a settings file.
+Of course, you'll still have to modify the script each time you want to list the content of another directory. A more flexible way of customization would be to use a settings file.
 
 Using a Settings File
 ^^^^^^^^^^^^^^^^^^^^^
@@ -599,7 +616,7 @@ Defining your own Commandline Options and Arguments
 ---------------------------------------------------
 
 The best way to configure a script is to allow for your own commandline options
-and arguments. Commandline arguments are available the script as so-called
+and arguments. Commandline arguments are available within the script as so-called
 :index:`positional parameters` ``$1``, ``$2``, ``$3``: etc. ``$0``: contains the name of the script. The
 variables important when dealing with commandline parameters are:
 
@@ -743,7 +760,7 @@ Filenames and Paths
 -------------------
 
 If possible, try to avoid any special characters (blanks, semicolons (";"),
-colons (":"), backslashes ("\") etc.) in file and directory names.  All these
+colons (":"), backslashes ("\\") etc.) in file and directory names.  All these
 special characters can lead to problems in scripted processing.  Instead, stick
 to alphanumeric characters (a-z, 0-9), dots ("."), dashes ("-") and underscores
 ("_").  Additionally sticking to lowercase characters helps avoiding mistypes
@@ -813,6 +830,9 @@ file in /tmp and print its name: ::
     $ mktemp
     /tmp/tmp.Yaafh19370
     $
+
+You can take advantage of the fact that mktemp returns the name of the created file, 
+to capture this file name and use it in your script.
 
 Cleaning up Temporary Files
 ---------------------------
