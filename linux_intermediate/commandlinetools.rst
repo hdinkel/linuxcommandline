@@ -681,20 +681,21 @@ Job Management
 
 Use ``CTRL+C`` to abort the current process, and ``CTRL+D`` to close the current shell.
 
-If you don't want to abort, you might instead want to use ``CTRL+Z`` to suspend the 
-current process. You can resume the most recently-suspended job with 
-:index:```fg`` <``fg``>`, to run it in the 'foreground' of the shell, or 
-:index:```bg`` <``bg``>` to run it in the 'background'. In the shell, a command running 
-in the foreground is a job that will prevent the user from executing further commands 
-until the job has finished. A job running in the background will continue to run while 
-the user can carry on using the shell prompt to execute other commands. On a related 
-note: to put a job in the background when you execute it, just add :index:```&`` <``&``>` 
+If you don't want to abort, you might instead want to use ``CTRL+Z`` to suspend the
+current process. You can resume the most recently-suspended job with
+:index:`fg <fg>`, to run it in the 'foreground' of the shell, or
+:index:`bg <bg>` to run it in the 'background'. In the shell, a command running
+in the foreground is a job that will prevent the user from executing further commands
+until the job has finished. A job running in the background will continue to run while
+the user can carry on using the shell prompt to execute other commands. On a related
+note: to put a job in the background when you execute it, just add :index:`"&" <&>`
 to the end of the command.
 
-If you have multiple jobs running/suspended at one time, you can view a list of these 
-processes and their current status with :index:```jobs`` <``jobs``>`:
+If you have multiple jobs running/suspended at one time, you can view a list of these
+processes and their current status with :index:`jobs <jobs>`:
 
  ::
+
   # sleep 250 &
   [1] 19697
   # sleep 100
@@ -704,22 +705,23 @@ processes and their current status with :index:```jobs`` <``jobs``>`:
   [1]+  Stopped                 sleep 100
   [2]-  Running                 sleep 250 &
 
-As mentioned before, you can restart the most recently-suspended job with ``fg`` or 
-``bg``. To restart another job in the list, you can refer to it with ``%1`` for job 
-number ``1`` in the list (``sleep 100`` in the example above), ``%2`` for job ``2``, and 
-so on. If, instead of restarting a job, you want to kill a suspended process, you can 
-use the :index:```kill`` <``kill``>` command and specify the job afterwards:
+As mentioned before, you can restart the most recently-suspended job with ``fg`` or
+``bg``. To restart another job in the list, you can refer to it with ``%1`` for job
+number ``1`` in the list (``sleep 100`` in the example above), ``%2`` for job ``2``, and
+so on. If, instead of restarting a job, you want to kill a suspended process, you can
+use the :index:`kill <kill>` command and specify the job afterwards:
 
  ::
+
   # jobs
   [1]+  Stopped                 sleep 100
   [2]-  Running                 sleep 250 &
   # kill %2
   [2]-  Terminated: 15          sleep 250
 
-The ``jobs`` list contains details of all running or stopped tasks that were initiated 
-within the current session. If you try to leave a session with ``exit`` while you still 
-have a job running or suspended, you will receive a warning message. (Note that this is 
-one of the rare occasions where the command line interface will ask you if you're sure 
-before doing something that could be potentially bad for you.) Use ``exit`` a second time 
+The ``jobs`` list contains details of all running or stopped tasks that were initiated
+within the current session. If you try to leave a session with ``exit`` while you still
+have a job running or suspended, you will receive a warning message. (Note that this is
+one of the rare occasions where the command line interface will ask you if you're sure
+before doing something that could be potentially bad for you.) Use ``exit`` a second time
 and the session will end, killing any remaining jobs as it does so.
