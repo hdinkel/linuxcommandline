@@ -640,6 +640,7 @@ You already learned how to expand a variable such that its value is used instead
 
 .. .. include:: exercises.rst
 
+
 Keyboard Shortcuts
 ------------------
 
@@ -681,16 +682,17 @@ Job Management
 Use ``CTRL+C`` to abort the current process, and ``CTRL+D`` to close the current shell.
 
 If you don't want to abort, you might instead want to use ``CTRL+Z`` to suspend the 
-current process. You can resume the most recently-suspended job with ``fg``, to run it in 
-the 'foreground' of the shell, or ``bg`` to run it in the 'background'. In the shell, a 
-command running in the foreground is a job that will prevent the user from executing 
-further commands until the job has finished. A job running in the background will 
-continue to run while the user can carry on using the shell prompt to execute other 
-commands. On a related note: to put a job in the background when you execute it, just add 
-``&`` to the end of the command.
+current process. You can resume the most recently-suspended job with 
+:index:```fg`` <``fg``>`, to run it in the 'foreground' of the shell, or 
+:index:```bg`` <``bg``>` to run it in the 'background'. In the shell, a command running 
+in the foreground is a job that will prevent the user from executing further commands 
+until the job has finished. A job running in the background will continue to run while 
+the user can carry on using the shell prompt to execute other commands. On a related 
+note: to put a job in the background when you execute it, just add :index:```&`` <``&``>` 
+to the end of the command.
 
 If you have multiple jobs running/suspended at one time, you can view a list of these 
-processes and their current status with ``jobs``:
+processes and their current status with :index:```jobs`` <``jobs``>`:
 
  ::
   # sleep 250 &
@@ -706,7 +708,7 @@ As mentioned before, you can restart the most recently-suspended job with ``fg``
 ``bg``. To restart another job in the list, you can refer to it with ``%1`` for job 
 number ``1`` in the list (``sleep 100`` in the example above), ``%2`` for job ``2``, and 
 so on. If, instead of restarting a job, you want to kill a suspended process, you can 
-use the ``kill`` command and specify the job afterwards:
+use the :index:```kill`` <``kill``>` command and specify the job afterwards:
 
  ::
   # jobs
