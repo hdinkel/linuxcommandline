@@ -220,7 +220,7 @@ latex_elements = {
 # (source start file, target name, title, author, documentclass [howto/manual]).
 latex_documents = [
   ('index', 'IntermediateLinuxCourse.tex', u'Intermediate Linux Course',
-   u'Holger Dinkel \\& Frank Thommen', 'manual'),
+   u'Holger Dinkel, Frank Thommen \\& Toby Hodges', 'manual'),
 ]
 
 # The name of an image file (relative to this directory) to place at the top of
@@ -264,7 +264,7 @@ man_pages = [
 #  dir menu entry, description, category)
 texinfo_documents = [
   ('index', 'IntermediateLinuxCourse', u'Intermediate Linux Course Documentation',
-   u'Holger Dinkel & Frank Thommen', 'Intermediate Linux Course', 'Skript:Intermediate Linux Course.',
+   u'Holger Dinkel, Frank Thommen & Toby Hodges', 'Intermediate Linux Course', 'Skript:Intermediate Linux Course.',
    'Miscellaneous'),
 ]
 
