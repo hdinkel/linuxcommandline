@@ -78,17 +78,13 @@ qthelp:
 	@echo
 	@echo "Build finished; now you can run "qcollectiongenerator" with the" \
 	      ".qhcp project file in $(BUILDDIR)/qthelp, like this:"
-	@echo "# qcollectiongenerator $(BUILDDIR)/qthelp/IntroductiontotheLinuxCommandline.qhcp"
 	@echo "To view the help file:"
-	@echo "# assistant -collectionFile $(BUILDDIR)/qthelp/IntroductiontotheLinuxCommandline.qhc"
 
 devhelp:
 	$(SPHINXBUILD) -b devhelp $(ALLSPHINXOPTS) $(BUILDDIR)/devhelp
 	@echo
 	@echo "Build finished."
 	@echo "To view the help file:"
-	@echo "# mkdir -p $$HOME/.local/share/devhelp/IntroductiontotheLinuxCommandline"
-	@echo "# ln -s $(BUILDDIR)/devhelp $$HOME/.local/share/devhelp/IntroductiontotheLinuxCommandline"
 	@echo "# devhelp"
 
 epub:
@@ -114,6 +110,7 @@ latexpdf:
 	sed -i -e 's/\\usepackage\[utf8\]{inputenc}/\\usepackage[utf8]{inputenc}\\usepackage[usenames,dvipsnames,svgnames,table]{xcolor}/g' $(BUILDDIR)/latex/*.tex
 	sed -i -e 's|begin{Verbatim}\[|begin{Verbatim}\[frame=single, rulecolor=\\color{lightgray}, fontfamily=courier, |' $(BUILDDIR)/latex/*.tex
 	sed -i -e 's|\\fancyhead\[LE,RO\]{{\\py@HeaderFamily \\@title, \\py@release}}|\\fancyhead\[LE,RO\]{{\\py@HeaderFamily \\@title}}|' $(BUILDDIR)/latex/sphinx.sty
+	sed -i -e 's|\\definecolor{VerbatimBorderColor}{rgb}{0,0,0}|\\definecolor{VerbatimBorderColor}{rgb}{1,1,1}|' $(BUILDDIR)/latex/sphinx.sty
 	sed -i -e 's|^\\release.*||' $(BUILDDIR)/latex/*.tex
 	echo 'delim_0 "\\\dotfill"' >> $(BUILDDIR)/latex/python.ist
 	echo 'delim_1 "\\\dotfill"' >> $(BUILDDIR)/latex/python.ist
