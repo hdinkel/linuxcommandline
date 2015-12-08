@@ -49,6 +49,27 @@ Recommended Reading: Real printed paper books
 - Siever, E. et al., "*Linux in a Nutshell*", O'Reilly
 
 
+Running Linux Commands in Mac
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+You can find the "Terminal" program in the "Utilities" folder of "Applications".
+
+Running Linux Commands in Windows
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Babun
+""""""
+The easiest way t oget a linux-like console on a Windows host is probably `babun <http://babun.github.io/>`!
+
+Babun features the following:
+- Pre-configured Cygwin with a lot of addons
+- Command-line installer, no admin rights required
+- advanced package manager (like apt-get or yum)
+- color console
+- Auto update feature
+- "Open Babun Here" Explorer context menu entry
+
+
 Live - CDs
 ^^^^^^^^^^
 

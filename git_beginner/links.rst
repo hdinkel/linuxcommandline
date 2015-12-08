@@ -3,19 +3,16 @@
 Links/References
 ---------------- 
 
-the git program itself:
+the **git** program itself:
 
-- `git for Windows <http://www.git-scm.com/download/win>`_ [#l1]_ 
-- `git for Mac <http://www.git-scm.com/download/mac>`_  [#l2]_
+git for `Windows <http://www.git-scm.com/download/win>`_ [#l1]_, or for `Mac <http://www.git-scm.com/download/mac>`_  [#l2]_
 
 
 Tools:
 
 - `SourceTree (a graphical user interface for git) <http://www.sourcetreeapp.com/download/>`_ [#l3]_
-
 - `DiffMerge (a graphical merge tool) <http://www.sourcegear.com/diffmerge/>`_ [#l4]_
 - `Kdiff3 (another graphical merge tool) <http://kdiff3.sourceforge.net/>`_ [#l5]_
-
 - `githug - a game to learn git <https://github.com/gazler/githug>`_ [#l6]_
 
 References:
@@ -30,7 +27,7 @@ References:
 
 Scientific Articles About Git:
 
-- `Git can facilitate greater reproducibility and increased transparency in science <http://www.ncbi.nlm.nih.gov/pubmed/23448176>`_ [#l12]_
+- `Git can facilitate greater reproducibility & increased transparency in science <http://www.ncbi.nlm.nih.gov/pubmed/23448176>`_ [#l12]_
 - `Improving the reuse of computational models through version control <http://www.ncbi.nlm.nih.gov/pubmed/23335018>`_ [#l13]_
 
  .. [#l1] `http://www.git-scm.com/download/wi <http://www.git-scm.com/download/wi>`_
@@ -38,7 +35,7 @@ Scientific Articles About Git:
  .. [#l3] `http://www.sourcetreeapp.com/download/ <http://www.sourcetreeapp.com/download/>`_
  .. [#l4] `http://www.sourcegear.com/diffmerge/ <http://www.sourcegear.com/diffmerge/>`_
  .. [#l5] `http://kdiff3.sourceforge.net/ <http://kdiff3.sourceforge.net/>`_
- .. [#l5] `https://github.com/gazler/githug <https://github.com/gazler/githug>`_
+ .. [#l6] `https://github.com/gazler/githug <https://github.com/gazler/githug>`_
  .. [#l7] `http://try.github.io/levels/1/challenges/1 <http://try.github.io/levels/1/challenges/1>`_
  .. [#l8] `http://marklodato.github.io/visual-git-guide/index-en.html <http://marklodato.github.io/visual-git-guide/index-en.html>`_
  .. [#l9] `http://betterexplained.com/articles/a-visual-guide-to-version-control <http://betterexplained.com/articles/a-visual-guide-to-version-control>`_
@@ -48,4 +45,4 @@ Scientific Articles About Git:
  .. [#l13] `http://www.ncbi.nlm.nih.gov/pubmed/23335018 <http://www.ncbi.nlm.nih.gov/pubmed/23335018>`_
 
 .. figure:: _static/phd101212s.png
-    :scale: 55 %
+    :scale: 65 %

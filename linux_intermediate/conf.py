@@ -42,7 +42,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'Intermediate Linux Course'
-copyright = u'2012,2013, Holger Dinkel, Frank Thommen & Thomas Zichner'
+copyright = u'2012,2013, Holger Dinkel, Frank Thommen & Toby Hodges'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -220,7 +220,7 @@ latex_elements = {
 # (source start file, target name, title, author, documentclass [howto/manual]).
 latex_documents = [
   ('index', 'IntermediateLinuxCourse.tex', u'Intermediate Linux Course',
-   u'Holger Dinkel \\& Frank Thommen', 'manual'),
+   u'Holger Dinkel, Frank Thommen \\& Toby Hodges', 'manual'),
 ]
 
 # The name of an image file (relative to this directory) to place at the top of
@@ -250,7 +250,7 @@ latex_show_pagerefs = True
 # (source start file, name, description, authors, manual section).
 man_pages = [
     ('index', 'intermediatelinuxcourse', u'Intermediate Linux Course Documentation',
-     [u'Holger Dinkel, Frank Thommen, and Thomas Zichner'], 1)
+     [u'Holger Dinkel, Frank Thommen, and Toby Hodges'], 1)
 ]
 
 # If true, show URL addresses after external links.
@@ -264,7 +264,7 @@ man_pages = [
 #  dir menu entry, description, category)
 texinfo_documents = [
   ('index', 'IntermediateLinuxCourse', u'Intermediate Linux Course Documentation',
-   u'Holger Dinkel & Frank Thommen', 'Intermediate Linux Course', 'Skript:Intermediate Linux Course.',
+   u'Holger Dinkel, Frank Thommen & Toby Hodges', 'Intermediate Linux Course', 'Skript:Intermediate Linux Course.',
    'Miscellaneous'),
 ]
 

@@ -1,6 +1,4 @@
 
-
-
 The Benefits of Version Control
 *******************************
 
@@ -22,22 +20,11 @@ The benefits are at hand:
       Good VCS systems tag changes with authors who make them.
 
 
-.. figure:: _static/repo_single.png
-    :scale: 50 %
-
-    Files are `added` from the `working directory`, which always holds the
-    current version of your files, to the `staging area`. `Staged` files will be stored into the repository in the next `commit`. 
-    The repository itself contains all previous versions of all files ever committed.
-
-.. figure:: _static/repo_distributed.png
-
-    Distributed Workflow using a centralized repository. Here, three local copies of one central repository allow you, 
-    Jon and Matt to work on the same files and sync files between each other using the central server.
-
-
 git at a Glance
-***************
+===============
 
+git commands
+------------
 
 The git tool has many subcommands that can be invoked like `git <subcommand>` for instance `git status` to get the status of a repository.
 
@@ -68,12 +55,25 @@ you can read more about each command by invoking the help: ::
  git help commit
 
 
+git concepts
+------------
 
-git Settings
-************
+commit
+^^^^^^
 
-setting your identity
-=====================
+A commit is a recorded set of changes in your project's file(s).
+Try to group *logical* sets of changes together into one commit -- don't mix changes which are unrelated.
+
+repository
+^^^^^^^^^^
+
+A repository is the history of all your project's commits.
+
+git settings
+============
+
+Setting your identity
+---------------------
 
 Before we start, we should set the user name and e-mail address.
 This is important because every git commit uses this information 
@@ -83,10 +83,12 @@ and it's also incredibly useful when looking at the history and commit log: ::
  git config --global user.email johndoe@embl.de
 
 
-Other useful settings include your favorite editor as well as difftool: ::
+Other useful settings include your favorite editor, enabling color output as
+well as difftool: ::
 
- git config --global core.editor vim
- git config --global merge.tool meld
+ git config --global core.editor nano
+ git config --global color.ui auto
+ git config --global merge.tool kdiff3
 
 
 
@@ -111,43 +113,88 @@ You can use the `git config --list` command to list all your settings: ::
 A Typical git Workflow
 **********************
 
+.. figure:: _static/git-local.png
+    :scale: 85 %
+
+    Files are `added` from the `workspace`, which always holds the current
+    version of your files, to the `staging area`. `Staged` files will be stored
+    into the local repository in the next `commit`. The repository itself
+    contains all previous versions of all files ever committed.
+    (image courtesy of 'research bazaar' https://raw.githubusercontent.com/resbaz/lessons/master/git/git-local.png)
+
+.. figure:: _static/git-remote.png
+
+    Distributed workflow using a centralized repository. Here, you use `push`
+    and `pull` to synchronize your local repository with a remote repository.
+    (image courtesy of 'research bazaar' https://raw.githubusercontent.com/resbaz/lessons/master/git/git-remote.png)
+
+
 Creating a git Repository
 =========================
 
-Turning an existing directory into a git repository is as simple as changing into that directory and :index:`invoking <init>`  `git init`. 
-Here we first create an empty directory called `new_repository` and create a repository in there: ::
+Turning an existing directory into a local git repository is as simple as changing
+into that directory and invoking `git init`. However, here we
+want to create one repository which we can use from multiple other folders to
+sync to/from, therefore in this case, we need to initialize it as a `bare`
+repository. 
 
- mkdir new_repository
- cd new_repository
- git init
+.. note:: Normally you do not need the `--bare`, but it's essential for this
+          exercise...
 
-.. note:: As a result, there should be a directory called `.git` in this directory...
+So, here we first create an empty directory in our homedirectory called `repos`
+(this is meant to hold and serve all our repositories), and create a repository
+in there called `mythesis`: ::
+
+ mkdir ~/repos
+ cd ~/repos
+ mkdir mythesis
+ cd mythesis
+ git init --bare
+
+.. note:: As a result, you should have the directory `~/repos/mythesis` and there
+          should be a directory called `.git` in this directory...
 
 
 Cloning a git Repository
 ========================
-Instead of creating a new directory, we can :index:`clone` a repository. That `origin` repository can reside in a different folder on our computer, on a
-remote machine, or on a dedicated git server:
 
-Local directory: ::
+Next, we can `clone` this repository into the `~/Documents/mythesis` folder.::
 
- git clone ../other_directory
+  cd ~/Documents
 
-Remote directory: ::
+  git clone ~/repos/mythesis
 
- git clone ssh://user@server/project.git
+  Initialized empty Git repository in /localhome/training/Desktop/mythesis/.git/
+  warning: You appear to have cloned an empty repository.
 
-Remote git server: ::
+  cd mythesis
 
- git clone git@server:user/project
- git clone git@git.embl.de:dinkel/linuxcommandline
+By `cloning`, we not only get the exact copy as the remote side, but we
+automatically tell git where we had got the data from, which allows us later to
+sync our changes back...
 
+
+.. note:: You can clone from either a different folder on our computer, a remote machine (via ssh), or a dedicated git server::
+
+ Local directory: ::
+ 
+  git clone ~/repos/mythesis
+ 
+ Remote directory: ::
+ 
+  git clone ssh://remote_user@remote_server/mythesis.git
+ 
+ Remote git server: ::
+ 
+  git clone git@server:user/project
+ 
 
 
 Checking the Status
 ===================
 
-If you don't know in which state the current repository is in, it's always a good idea to check: ::
+If you don't know in which state the current repository is in, it's always a
+good idea to check: ::
 
  git status
 
@@ -157,13 +204,18 @@ If you don't know in which state the current repository is in, it's always a goo
  #
  nothing to commit (create/copy files and use "git add" to track)
 
+Here, everything is clear, not much going on (no news is good news).
+
+.. note:: In fact, it's good practice, to use `git status` as often as
+          possible!
+
 
 Adding files
 =============
 
 First, we'll create a new file: ::
 
- echo "First entry in first file!" > file1.txt
+ echo "My first line towards a great paper!" > paper.txt
 
  git status
 
@@ -174,12 +226,14 @@ First, we'll create a new file: ::
  # Untracked files:
  #   (use "git add <file>..." to include in what will be committed)
  #
- #       file1.txt
+ #       paper.txt
  nothing added to commit but untracked files present (use "git add" to track)
 
-Now we'll add this file to the so called `staging area`: ::
+Here, git tells us that there is a file, however it's `untracked`, meaning git
+does not know/care about it. We need to tell git first that it should keep track
+of it. So we'll add this file to the so called `staging area`: ::
 
- git add file1.txt
+ git add paper.txt
 
  git status
 
@@ -190,10 +244,11 @@ Now we'll add this file to the so called `staging area`: ::
  # Changes to be committed:
  #   (use "git rm --cached <file>..." to unstage)
  #
- #       new file:   file1.txt
+ #       new file:   paper.txt
  #
 
-This tells us that the `file1.txt` has been added and can be committed to the repository.
+This tells us that the `paper.txt` has been added and can be committed to the
+repository.
 
 
 Committing changes
@@ -231,10 +286,21 @@ Name & Email-address of the committer, Date & Time of the commit as well as the 
  message describing the changes you made
 
 
+Exercise
+--------
+
+Repeat the add/commit procedures you just learned. Add more files, use an editor
+to add more content to the `paper.txt` file, commit your changes providing a
+meaningful commit message.
+
+
 Pushing changes
 ===============
 
-If we had cloned this repository from a remote location, we probably want our changes to be propagated to that repository as well.
+In order to exchange/synchronize your changes with a remote repository, you use `git push`/`git pull`:
+
+.. figure:: _static/git-remote.png
+
 To push all committed changes, simply type: ::
 
  git push
@@ -242,7 +308,31 @@ To push all committed changes, simply type: ::
 .. note:: git "knows" from which location you had cloned this repository and will try to 
  push to exactly that location (using the protocol you used to clone: ssh, git, etc)...
 
-.. warning:: If you get a warning message, you probably 'just' need to pull others changes before you are allowed to push your own...
+.. warning:: If you get a warning message, read it carefully! The most common
+    error you get when trying to push are changes on the remote end which you first
+    need to merge into your local repository before you are allowed to push your own...
+
+
+Creating a second clone
+-----------------------
+
+In order to simulate contrubting to our repository from another computer, we will again
+checkout the repository, but this time in a different folder named `mythesis-work`::
+
+  cd ~/Documents
+
+  git clone ~/repos/mythesis mythesis-work
+
+  cd ~/Documents/mythesis-work
+
+This repository should contain all the changes you've pushed so far.
+Now we want to improve our `paper.txt` document. Use an editor to add more lines
+to this file::
+
+  echo "This line was contributed from work..." >> paper.txt
+
+Again, `add`, `commit`, and `push` your changes.
+
 
 Pulling changes
 ===============
@@ -255,8 +345,77 @@ In a centralized workflow you actually **must** pull changes that other people h
 .. warning:: Ideally, changes from others don't conflict with yours, but whenever someone else has edited the same lines in the same files as you, 
  you will receive an error message about a **merge conflict**. You will need to resolve this conflict manually, then add each resolved file (`git add`) and commit.
 
-.. echo "And another entry in a second file." > file2.txt
-.. git add file2.txt
+
+So we go back to the directory `~/Documents/mythesis` and (after checking the
+status) try to get the changes we've done in the `mythesis-work` directory::
+
+  cd ~/Documents/mythesis
+
+  git status
+
+  git pull
+  ...
+  Auto-merging paper.txt
+  CONFLICT (content): Merge conflict in paper.txt
+  Automatic merge failed; fix conflicts and then commit the result.
+
+
+Solving conflicts
+=================
+
+When working collaboratively on a project, it is unavoidable that the same
+file gets changed by different contributors. This causes a conflict and needs to
+be dealt with.
+
+.. hint:: It helps minimizing conflicts if you push/pull often!
+
+To solve a merge conflict, you can either:
+
+- manually merge the two files (see below)
+- discard the remote file: `git checkout --ours conflicted_file.txt`
+- discard the local file: `git checkout --theirs conflicted_file.txt`
+
+
+Manually merging a conflict
+---------------------------
+
+To create a conflict, we change the same line in the file `paper.txt` in both
+directories (`mythesis` and `mythesis-work`) without pulling each others changes
+in between.
+Once we pull, git will tell us that a conflict has occurred.::
+
+  Automatic merge failed; fix conflicts and then commit the result.
+
+When git encounters conflicts in files, it adds special markers `<<<<<<<`,
+`=======`, `>>>>>>>` into this file wrapping both conflicting changes. It is up
+to you to decide which of these changes to keep.::
+
+  ...
+  content of the file
+  ...
+  <<<<<<< HEAD:paper.txt
+  your home changes
+  =======
+  your changes introduced at work
+  >>>>>>> 000000000000000000000000000000000000:paper.txt
+  ...
+  rest of the file
+  ...
+
+Make sure to delete the lines that where introduced by git (otherwise you won't
+be able to commit changes. If you only wanted to keep your changes than you
+would delete everything except your changes::
+
+  ...
+  content of the file
+  ...
+  your home changes
+  ...
+  rest of the file
+  ...
+
+Now, you need to add this file again to the staging area and commit to finish
+this conflicting merge. Use `git status` to see the status of the repository.
 
 
 Undo local changes
@@ -269,58 +428,33 @@ If you want to undo all changes in a local file, you simply checkout the latest 
 
 .. warning:: You will loose all changes you made since the last commit!
 
+If you want to checkout a specific version (revision) of a file, you need to
+specify the hash or name of the revision::
+
+ git checkout revision_name <filename>
 
 
-Using centralized workflow
-==========================
 
-When you want to use one central repository, to which everybody can push/pull, 
-you should initialize this repo like so: `git init --bare`. 
-Basically what this does is create a repository which all the files from the `.git` directory in the working directory.
-This also means that you should never add/edit/delete files in this directory. Rather clone this directory in another folder/computer,
-edit files there and commit/push (see below)...
+.. Using centralized workflow
+.. ==========================
+.. 
+.. When you want to use one central repository, to which everybody can push/pull,
+.. you should initialize this repo as *bare* like so: `git init --bare`. Basically
+.. what this does is create a repository which all the files from the `.git`
+.. directory in the working directory. This also means that you should never
+.. add/edit/delete files in this directory. Rather clone this directory in another
+.. folder/computer, edit files there and commit/push (see below)...
+.. 
 
-EMBL git server
-***************
 
-As part of the Bio-IT initiative, EMBL provides a central git server which can be used as a centralized resource to share and exchange data/code with collaborators:
-
-http://git.embl.de/
-
-The following rules apply:
-
-- Repositories on the EMBL Git server are only granted to EMBL staff members.
-- External users can be added as cooperators on a project, but the projects themselves have to be lead by someone with an active EMBL contract.
-- Should the project leader leave EMBL, then the project has to be transferred to someone else or the complete repository will be removed.
-- Repositories are always installed as sub-repositories of the project leader/repository responsible.
-- By default, repositories are installed with only basic access permissions for the repository owner. He/she is then in charge of setting appropriate access permissions as 
-  described on the `Howto <http://git.embl.de/howto.html>`_ page.
-
-Basically, to use this server, you need to provide your full name, your EMBL
-email address and username, the name and a short description of the
-repository/project, along with your SSH public key to the admin and he will set
-things up so you are able to access your repository: ::
-
- git clone git@git.embl.de:your_username/your_repository
-
-.. note:: It's important to mention that the username for accessing the git.embl.de server is always **git**, not **your** username!
-
-An SSH key can be generated using the command `ssh-keygen` (Windows users might want to use `putty <http://the.earth.li/~sgtatham/putty/latest/x86/putty.exe>`_) like so: ::
-
- ssh-keygen 
-
- Generating public/private rsa key pair. 
- Enter file in which to save the key (/home/username/.ssh/id_rsa): 
- Created directory '/home/username/.ssh'. 
- Enter passphrase (empty for no passphrase): 
- Enter same passphrase again: 
- Your identification has been saved in /home/username/.ssh/id_rsa. 
- Your public key has been saved in /home/username/.ssh/id_rsa.pub. 
- The key fingerprint is: 2d:14:f5:d8:... username@hostname 
- 
-This creates two files, in this case `/home/username/.ssh/id_rsa` and
-`/home/username/.ssh/id_rsa.pub`. The former is your **private** key and should
-**never** be handed out to anybody, while the latter one (ending in `.pub`)
-should be distributed to any server on which you intend to use it...
+.. github
+.. ******
+.. 
+.. Github 
+.. http://www.github.com
+.. 
+.. To clone a repository::
+.. 
+..  git clone username@github.com:username/repository
 
 
