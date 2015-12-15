@@ -94,7 +94,7 @@ epub:
 
 certificates:
 	mkdir -p $(BUILDDIR)/certificates
-	pdflatex -interaction=nonstopmode  -output-directory=$(BUILDDIR)/certificates "\def\coursetitle{Introductory Course:\\\\GIT for Beginners} \input{../general/CertificateOfParticipation.tex}"
+	pdflatex -interaction=nonstopmode  -output-directory=$(BUILDDIR)/certificates "\def\coursetitle{Introductory Course:\\\\GIT Fundamentals} \input{../general/CertificateOfParticipation.tex}"
 	@echo
 	@echo "Build finished. The epub file is in $(BUILDDIR)/certificates."
 
