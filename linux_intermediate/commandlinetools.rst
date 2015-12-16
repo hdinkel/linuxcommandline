@@ -157,6 +157,14 @@ List all files containing the term "Ensembl":
    P04062.txt
    P12931.txt
 
+Search a file compressed with ``gzip`` using ``zgrep``:
+
+ ::
+
+  # zgrep -c '@M34567' IlluminaReads.fastq.gz
+   34956188
+
+
 SED
 ---
 
