@@ -202,11 +202,12 @@ You can mix multiple ``&&`` and ``||`` controls into a single line.
     /home/fthommen/a
     $
 
-  Example: Count the heterogens described in a gzipped PDB file or, if it doesn't exist, 
-  download the file::
-    
-    $ gzip -c 4ZZN.pdb.gz && sed -n '/^HET /p' || wget "http://www.rcsb.org/pdb/files/4ZZN.pdb.gz"
-    $
+.. not working:
+.. Example: Count the heterogens described in a gzipped PDB file or, if it doesn't exist,
+..   download the file::
+..     
+..     $ { gunzip -c 4ZZN.pdb.gz | sed -n '/^HET /p' } || wget "http://www.rcsb.org/pdb/files/4ZZN.pdb.gz"
+..     $
 
 *( cmds )* --
   Group commands to create one single output stream: The commands are run in a subshell (i.e. a new shell is opened to run them):
@@ -367,7 +368,7 @@ B) Evaluating of conditions or comparisons:
 
 
 
-  Examples: Test for the existence of /etc/passwd::
+  Examples: Test for the existence of the directory `sequence_files`::
 
     if [ -e ./sequence_files ]
     then
@@ -640,7 +641,7 @@ $@:
 .. image:: _static/arguments.png
 
 
-If you run the script ::
+If you run the following script ::
 
     #!/bin/sh
     echo The script is $0
@@ -809,9 +810,9 @@ becomes: ::
            -q clngnew                 \
            -M 150000                  \
            -R "select[(mem > 15000)]" \
-        /g/software/bin/pymol-1.4 -r -p < pymol.pml
+        /g/software/bin/pymol -c -r pymol.pml
 
-Which is way better to read and to maintain
+Which is way better to read and to maintain...
 
 Script Debugging
 ----------------
