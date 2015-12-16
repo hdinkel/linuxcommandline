@@ -557,8 +557,8 @@ c) Access the variables in a subshell:
   $
 
 
-Hints
-=====
+Tips and Tricks
+===============
 
 Quoting
 -------
