@@ -387,11 +387,10 @@ B) Evaluating of conditions or comparisons:
     fi
 
 
-  .. Note:: Bash supports an additional way of evaluating conditional expressions
+  .. Note:: Bash supports another way of evaluating conditional expressions
           with ``[[ expression ]]``. This syntax element allows for more readable expression
           combination and handles empty variables better. However it is not backwards
-          compatible with the original Bourne Shell. See the bash manpage for more
-          information
+          compatible with the original Bourne Shell. See the bash manpage for more information
 
 case
 ^^^^
@@ -437,19 +436,19 @@ Example:
       */opt/* )
          echo /opt/ paths found in \$PATH
          ;;
-      */etc/* )
-         echo /etc/ paths found in \$PATH
+      */usr/* )
+         echo /usr/ paths found in \$PATH
          ;;
       *)
          echo '/opt and /usr are not contained in $PATH'
          ;;
      esac
 
-  or
+  or: ::
 
      case $PATH in
-      */opt/* | */etc/* )
-         echo /opt/ or /etc/ paths found in \$PATH
+      */opt/* | */usr/* )
+         echo /opt/ or /usr/ paths found in \$PATH
          ;;
       *)
          echo '/opt and /usr are not contained in $PATH'
