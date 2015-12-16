@@ -267,10 +267,11 @@ if - then - else
 |   then                                |     commands                          |
 |     commands                          |   else if (condition2) then           |
 |   elif condition2                     |     more commands                     |
-|     more commands                     |   [...]                               |
-|   [...]                               |   else                                |
-|   else                                |     even more commands                |
-|     even more commands                |   endif                               |
+|   then                                |   [...]                               |
+|     more commands                     |   else                                |
+|   [...]                               |     even more commands                |
+|   else                                |   endif                               |
+|     even more commands                |                                       |
 |   fi                                  |                                       |
 +---------------------------------------+---------------------------------------+
 
