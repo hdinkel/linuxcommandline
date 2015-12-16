@@ -757,6 +757,29 @@ variable name must be placed in curly brackets ("``{}``"): ::
     Heidelberg
     $
 
+If you only want to work with part of the variable in the string, you can
+control this by operating on the value of the variable within the curly
+brackets. Use ``%`` to specify what you want to remove from the end of a
+string variable, and ``#`` to remove something from the beginning.  ::
+
+    $ QUERYFILE=hg19_seqs.fasta
+    $ RESULTSFILE={$QUERYFILE}.blastn
+    $ echo $RESULTSFILE
+    hg19_seqs.fasta.blastn
+    $ echo ${QUERYFILE%.fasta}
+    hg19_seqs
+    $ RESULTSFILE=${QUERYFILE%.fasta}.blastn
+    $ echo $RESULTSFILE
+    hg19_seqs.blastn
+    $ echo ${QUERYFILE#hg19_}
+    seqs.fasta
+    $ echo ${QUERYFILE#*_}
+    seqs.fasta
+
+Note from the above, that you specify what should be removed from the string
+with a pattern - meaning that you can use wildcards like ``*`` and ``?`` to
+make the operations flexible and perhaps to save you some typing.
+
 Filenames and Paths
 -------------------
 
