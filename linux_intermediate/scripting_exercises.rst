@@ -42,7 +42,7 @@ Purpose:
 
     $ replace_names.sh badge.svg names.csv
 
-Required tools and commands:
+Suggested tools and commands:
     :index:`sed`, :index:`for`/:index:`while`, etc.
 
 Things to consider: 
@@ -78,7 +78,7 @@ Purpose:
     zuppfile is a zip compressed archive ... uncompressed and unpacked
     $
 
-Required tools and commands:
+Suggested tools and commands:
     :index:`file`, :index:`tar`, :index:`gzip`/:index:`gunzip`, :index:`zip`/:index:`unzip`, :index:`bzip2`/:index:`bunzip2`, :index:`xz`, etc.
 
 Things to consider: 
@@ -118,7 +118,7 @@ Purpose:
      Sorry, /home/fthommen/safety_backups/datadir2_20-MAY-2014 already exists ... aborting
      $
 
-Required tools and commands:
+Suggested tools and commands:
     :index:`cp`, :index:`rsync`, :index:`du`, :index:`ls`, :index:`date`
 
 Things to consider:
@@ -155,8 +155,8 @@ Purpose:
     Sorry, no column “CITY” found
     $
 
-Required tools and commands:
-    :index:`awk`, :index:`eval`
+Suggested tools and commands:
+    :index:`awk`, :index:`cut`, :index:`eval`
 
 Extendibility:
   * Add options to define alternate column separators (awk -F).
