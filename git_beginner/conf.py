@@ -41,7 +41,7 @@ source_encoding = 'utf-8'
 master_doc = 'index'
 
 # General information about the project.
-project = u'git basics'
+project = u'git fundamentals'
 copyright = u'2013-2015, Holger Dinkel & Grischa Toedt'
 
 # The version info for the project you're documenting, acts as replacement for
@@ -110,7 +110,7 @@ html_theme = 'nature'
 
 # The name for this set of Sphinx documents.  If None, it defaults to
 # "<project> v<release> documentation".
-html_title = "git basics"
+html_title = "git fundamentals"
 
 # A shorter title for the navigation bar.  Default is the same as html_title.
 #html_short_title = None
@@ -194,7 +194,7 @@ latex_elements = {
 # Grouping the document tree into LaTeX files. List of tuples
 # (source start file, target name, title, author, documentclass [howto/manual]).
 latex_documents = [
-  ('index', 'gitintro.tex', u'GIT Basics',
+  ('index', 'gitintro.tex', u'GIT Fundamentals',
    u'Holger Dinkel \& Grischa Toedt', 'manual'),
 ]
 
@@ -224,7 +224,7 @@ latex_show_urls = False
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    ('index', 'gitintro', u'GIT Basics',
+    ('index', 'gitintro', u'GIT Fundamentals',
      [u'Holger Dinkel & Grischa Toedt'], 1)
 ]
 
@@ -238,8 +238,8 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-  ('index', 'gitintro', u'GIT Basics',
-   u'Holger Dinkel & Grischa Toedt', 'gitintro', 'GIT Basics',
+  ('index', 'gitintro', u'GIT Fundamentals',
+   u'Holger Dinkel & Grischa Toedt', 'gitintro', 'GIT Fundamentals',
    'Miscellaneous'),
 ]
 

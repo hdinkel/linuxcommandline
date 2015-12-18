@@ -157,6 +157,14 @@ List all files containing the term "Ensembl":
    P04062.txt
    P12931.txt
 
+Search a file compressed with ``gzip`` using ``zgrep``:
+
+ ::
+
+  # zgrep -c '@M34567' IlluminaReads.fastq.gz
+   34956188
+
+
 SED
 ---
 
@@ -195,6 +203,31 @@ Note the difference:
   # echo "ACCAAGCATTGGAGGAATATCGTAGGTAAA" | sed 's/A/_/g'
    _CC__GC_TTGG_GG__T_TCGT_GGT___
  
+You can use transliteration to replace all instances of a character with another character.
+For example, to switch Thymines to Uridines in a sequence:
+
+ ::
+
+  # echo "AGTGGCTAAGTCCCTTTAATCAGG" | sed 'y/T/U/'
+   AGUGGCUAAGTCCCUUUAAUCAGG
+
+In the pattern specified in the ``sed`` command, each character in the first set is replaced 
+with the character in the equivalent position in the second set. For example,  to get the 
+reverse transcript of a DNA sequence:
+
+ ::
+
+  # echo "AGTGGCTAAGTCCCTTTAATCAGG" | sed 'y/ACGT/UGCA/'
+   UCACCGAUUCAGGGAAAUUAGUCC
+
+This is the complementary sequence, but we wanted the reverse complement, so we need to use
+the Linux command ``rev`` to reverse the output of the ``sed`` command:
+
+ ::
+
+  # echo "AGTGGCTAAGTCCCTTTAATCAGG" | sed 'y/ACGT/UGCA/' | rev
+   CCUGAUUAAAGGGACUUAGCCACU
+
 When used on a file, sed prints the file to standard output, replacing text as it goes
 along:
 
@@ -557,8 +590,8 @@ c) Access the variables in a subshell:
   $
 
 
-Hints
-=====
+Tips and Tricks
+===============
 
 Quoting
 -------

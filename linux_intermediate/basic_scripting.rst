@@ -202,11 +202,12 @@ You can mix multiple ``&&`` and ``||`` controls into a single line.
     /home/fthommen/a
     $
 
-  Example: Count the heterogens described in a gzipped PDB file or, if it doesn't exist, 
-  download the file::
-    
-    $ gzip -c 4ZZN.pdb.gz && sed -n '/^HET /p' || wget "http://www.rcsb.org/pdb/files/4ZZN.pdb.gz"
-    $
+.. not working:
+.. Example: Count the heterogens described in a gzipped PDB file or, if it doesn't exist,
+..   download the file::
+..     
+..     $ { gunzip -c 4ZZN.pdb.gz | sed -n '/^HET /p' } || wget "http://www.rcsb.org/pdb/files/4ZZN.pdb.gz"
+..     $
 
 *( cmds )* --
   Group commands to create one single output stream: The commands are run in a subshell (i.e. a new shell is opened to run them):
@@ -267,10 +268,11 @@ if - then - else
 |   then                                |     commands                          |
 |     commands                          |   else if (condition2) then           |
 |   elif condition2                     |     more commands                     |
-|     more commands                     |   [...]                               |
-|   [...]                               |   else                                |
-|   else                                |     even more commands                |
-|     even more commands                |   endif                               |
+|   then                                |   [...]                               |
+|     more commands                     |   else                                |
+|   [...]                               |     even more commands                |
+|   else                                |   endif                               |
+|     even more commands                |                                       |
 |   fi                                  |                                       |
 +---------------------------------------+---------------------------------------+
 
@@ -366,7 +368,7 @@ B) Evaluating of conditions or comparisons:
 
 
 
-  Examples: Test for the existence of /etc/passwd::
+  Examples: Test for the existence of the directory `sequence_files`::
 
     if [ -e ./sequence_files ]
     then
@@ -385,11 +387,10 @@ B) Evaluating of conditions or comparisons:
     fi
 
 
-  .. Note:: Bash supports an additional way of evaluating conditional expressions
+  .. Note:: Bash supports another way of evaluating conditional expressions
           with ``[[ expression ]]``. This syntax element allows for more readable expression
           combination and handles empty variables better. However it is not backwards
-          compatible with the original Bourne Shell. See the bash manpage for more
-          information
+          compatible with the original Bourne Shell. See the bash manpage for more information
 
 case
 ^^^^
@@ -435,19 +436,19 @@ Example:
       */opt/* )
          echo /opt/ paths found in \$PATH
          ;;
-      */etc/* )
-         echo /etc/ paths found in \$PATH
+      */usr/* )
+         echo /usr/ paths found in \$PATH
          ;;
       *)
          echo '/opt and /usr are not contained in $PATH'
          ;;
      esac
 
-  or
+  or: ::
 
      case $PATH in
-      */opt/* | */etc/* )
-         echo /opt/ or /etc/ paths found in \$PATH
+      */opt/* | */usr/* )
+         echo /opt/ or /usr/ paths found in \$PATH
          ;;
       *)
          echo '/opt and /usr are not contained in $PATH'
@@ -639,7 +640,7 @@ $@:
 .. image:: _static/arguments.png
 
 
-If you run the script ::
+If you run the following script ::
 
     #!/bin/sh
     echo The script is $0
@@ -756,6 +757,29 @@ variable name must be placed in curly brackets ("``{}``"): ::
     Heidelberg
     $
 
+If you only want to work with part of the variable in the string, you can
+control this by operating on the value of the variable within the curly
+brackets. Use ``%`` to specify what you want to remove from the end of a
+string variable, and ``#`` to remove something from the beginning.  ::
+
+    $ QUERYFILE=hg19_seqs.fasta
+    $ RESULTSFILE={$QUERYFILE}.blastn
+    $ echo $RESULTSFILE
+    hg19_seqs.fasta.blastn
+    $ echo ${QUERYFILE%.fasta}
+    hg19_seqs
+    $ RESULTSFILE=${QUERYFILE%.fasta}.blastn
+    $ echo $RESULTSFILE
+    hg19_seqs.blastn
+    $ echo ${QUERYFILE#hg19_}
+    seqs.fasta
+    $ echo ${QUERYFILE#*_}
+    seqs.fasta
+
+Note from the above, that you specify what should be removed from the string
+with a pattern - meaning that you can use wildcards like ``*`` and ``?`` to
+make the operations flexible and perhaps to save you some typing.
+
 Filenames and Paths
 -------------------
 
@@ -785,9 +809,9 @@ becomes: ::
            -q clngnew                 \
            -M 150000                  \
            -R "select[(mem > 15000)]" \
-        /g/software/bin/pymol-1.4 -r -p < pymol.pml
+        /g/software/bin/pymol -c -r pymol.pml
 
-Which is way better to read and to maintain
+Which is way better to read and to maintain...
 
 Script Debugging
 ----------------

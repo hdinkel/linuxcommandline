@@ -30,7 +30,7 @@ Scientific Articles About Git:
 - `Git can facilitate greater reproducibility & increased transparency in science <http://www.ncbi.nlm.nih.gov/pubmed/23448176>`_ [#l12]_
 - `Improving the reuse of computational models through version control <http://www.ncbi.nlm.nih.gov/pubmed/23335018>`_ [#l13]_
 
- .. [#l1] `http://www.git-scm.com/download/wi <http://www.git-scm.com/download/wi>`_
+ .. [#l1] `http://www.git-scm.com/download/win <http://www.git-scm.com/download/win>`_
  .. [#l2] `http://www.git-scm.com/download/mac <http://www.git-scm.com/download/mac>`_
  .. [#l3] `http://www.sourcetreeapp.com/download/ <http://www.sourcetreeapp.com/download/>`_
  .. [#l4] `http://www.sourcegear.com/diffmerge/ <http://www.sourcegear.com/diffmerge/>`_
