@@ -1,0 +1,1514 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Introduction to the Linux Commandline &mdash; Introduction to the Linux Commandline</title>
+    
+    <link rel="stylesheet" href="_static/nature.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.4',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="Introduction to the Linux Commandline" href="index.html" />
+    <link rel="next" title="Exercises" href="exercises_beginner.html" />
+    <link rel="prev" title="Welcome to Introduction to the Linux Commandline’s documentation!" href="index.html" /> 
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="exercises_beginner.html" title="Exercises"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="index.html" title="Welcome to Introduction to the Linux Commandline’s documentation!"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Introduction to the Linux Commandline</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="introduction-to-the-linux-commandline">
+<h1>Introduction to the Linux Commandline<a class="headerlink" href="#introduction-to-the-linux-commandline" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="why-use-the-commandline">
+<h2>Why Use the Commandline<a class="headerlink" href="#why-use-the-commandline" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>It&#8217;s <strong>fast</strong>. Productivity is a word that gets tossed around a lot by so-called power users, but the command line can
+really streamline your computer use, assuming you learn to use it correctly.</li>
+<li>It&#8217;s <strong>easier to get help</strong>. The command line may not be the easiest thing to use, but it makes life a whole lot
+easier for people trying to help you and for yourself when looking for help, especially over the internet. Many times
+it&#8217;s as simple as the helper posting a few commands and some instructions and the recipient copying and pasting those
+commands. Anyone who has spent hours listening to someone from tech support say something like, &#8220;OK, now click this,
+then this, then select this menu command&#8221; knows how frustrating the GUI alternative can be.</li>
+<li>It&#8217;s nearly <strong>universal</strong>. There are hundreds of Linux distributions out there, each with a slightly different graphical
+environment. Thankfully, the various distros do have one common element: the command line. There are distro-specific
+commands, but the bulk of commands will work on any Linux system.</li>
+<li>It&#8217;s <strong>powerful</strong>. The companies behind those other operating systems try their best to stop a user from accidentally
+screwing up their computer. Doing this involves hiding a lot of the components and tools that could harm a computer
+away from novices. Linux is more of an open book, which is due in part to its prominent use of the command line.</li>
+<li>Many &#8216;modern&#8217; bioinformatics tools (samtools, bamtools, ...) are written for the commandline in order to be run on
+clusters and to be incorporated in scripts.</li>
+</ul>
+</div>
+<div class="section" id="general-remarks-regarding-using-unix-linux-systems">
+<h2>General Remarks Regarding Using UNIX/Linux Systems<a class="headerlink" href="#general-remarks-regarding-using-unix-linux-systems" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><strong>Test before run</strong>. Anything written here has to be taken with a grain of salt. On another system - be it a different
+Linux distribution or another UNIXoid operating system - you might find the same command but without the support of
+some of the options taught here. It is even possible, that the same option has a different meaning on another system.
+With this in mind always make sure to test your commands (specially the &#8220;dangerous&#8221; ones which remove or modify files)
+when switching from one system to the other.</li>
+<li><strong>The Linux/UNIX environment</strong>. The behaviour of many commands is influenced or controlled by the so-called
+&#8220;environment&#8221;. This environment is the sum of all your environment variables. Some of these environment variables will
+be shown towards the end of this course.</li>
+<li><strong>UPPERCASE, lowercase</strong>. Don&#8217;t forget that everything is case-sensitive.</li>
+<li><strong>The Filesystem</strong>. Linux filesystems start on top at the root directory (sic!) &#8220;/&#8221; which hierarchically broadens
+towards the ground.  The separator between directories or directories and files in Linux is the slash (&#8220;/&#8221;).</li>
+</ul>
+<div class="figure" id="id4">
+<span id="figure-filesystem"></span><img alt="_images/filesystem.png" src="_images/filesystem.png" />
+<p class="caption"><span class="caption-text">Depending on the Linux distribution you might or might not find all of the above
+directories. Most important directories for you are <code class="docutils literal"><span class="pre">/bin</span></code> and <code class="docutils literal"><span class="pre">/usr/bin</span></code>
+(sometimes also <code class="docutils literal"><span class="pre">/usr/local/bin</span></code>) which contain the user software, <code class="docutils literal"><span class="pre">/home</span></code> which
+usually contains the users&#8217; homedirectories and <code class="docutils literal"><span class="pre">/tmp</span></code> which can be used to store
+temporary data (beware: Its content is regularly removed!).</span></p>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The terms &#8220;directory&#8221; and &#8220;folder&#8221; are used interchangeably in this document.</p>
+</div>
+<div class="section" id="absolute-paths-relative-paths">
+<h3>Absolute Paths / Relative Paths<a class="headerlink" href="#absolute-paths-relative-paths" title="Permalink to this headline">¶</a></h3>
+<p>A path describes the location of a file/folder in the filesystem:
+It is important to understand that there are basically two ways to describe such a path: Either by using an <em>absolute</em> pathname, or by using a
+<em>relative</em> pathname. The difference is that <em>absolute</em> paths always start with a &#8220;slash <code class="docutils literal"><span class="pre">/</span></code>&#8221;. This &#8220;slash&#8221; denotes the so called &#8220;root&#8221; of the
+filesystem (see below). <em>Relative</em> paths in contrast always start with a directory name and denote the location of a file/folder <em>relative</em> to
+the current directory.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">When in doubt, it&#8217;s best to use <em>absolute</em> filenames. Commands given with absolute pathname are more easily repeated later, as they can
+be run regardless of the current working directory (unlike relative paths).</p>
+</div>
+</div>
+</div>
+<div class="section" id="general-structure-of-linux-commands">
+<h2>General Structure of Linux Commands<a class="headerlink" href="#general-structure-of-linux-commands" title="Permalink to this headline">¶</a></h2>
+<p><span class="target" id="index-0"></span>Many Linux commands have options and accept arguments. Options are a set of switch-like parameters
+while arguments are usually free text input (such as a filename).</p>
+<div class="figure" id="id5">
+<img alt="_images/LinuxCommandStructure.png" src="_images/LinuxCommandStructure.png" />
+<p class="caption"><span class="caption-text">General structure of Linux commands.</span></p>
+</div>
+<p>For example, in the commandline <code class="docutils literal"><span class="pre">ls</span> <span class="pre">-l</span> <span class="pre">/usr/bin</span></code>, <code class="docutils literal"><span class="pre">ls</span></code> is the command, <code class="docutils literal"><span class="pre">-l</span></code> is an option and <code class="docutils literal"><span class="pre">/usr/bin</span></code> qualifies as an argument.</p>
+<p><span class="target" id="index-1"></span>Commandline options (sometimes called commandline switches) commonly have one of the two following
+forms: The short form <code class="docutils literal"><span class="pre">-s</span></code> (just a single character) or the long form <code class="docutils literal"><span class="pre">--string.</span></code> E.g.</p>
+<blockquote>
+<div><div class="highlight-console"><div class="highlight"><pre><span class="gp">$</span> man -h
+<span class="gp">$</span> man --help
+</pre></div>
+</div>
+</div></blockquote>
+<p>Short options are usually - though not always - concatenatable:</p>
+<blockquote>
+<div><div class="highlight-console"><div class="highlight"><pre><span class="gp">$</span> ls -l -A -h
+<span class="gp">$</span> ls -lAh
+</pre></div>
+</div>
+</div></blockquote>
+<p>Some options require an additional argument, which is added after a blank to the short form and an equal sign to the long form:</p>
+<blockquote>
+<div><div class="highlight-console"><div class="highlight"><pre><span class="gp">$</span> ls -I <span class="s2">&quot;*.pdf&quot;</span>
+<span class="gp">$</span> ls --ignore<span class="o">=</span><span class="s2">&quot;*.pdf&quot;</span>
+</pre></div>
+</div>
+</div></blockquote>
+<p>Since Linux incorporates commands from different sources, options can be available in one or both forms and you&#8217;ll also encounter options with no dash at all and all kinds of mixtures:</p>
+<blockquote>
+<div><div class="highlight-console"><div class="highlight"><pre><span class="gp">$</span> tar cf file.tar -C .. file/
+<span class="gp">$</span> ps auxgww
+</pre></div>
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="a-journey-through-commandland">
+<h2>A Journey through Commandland<a class="headerlink" href="#a-journey-through-commandland" title="Permalink to this headline">¶</a></h2>
+<p>Please note that all examples and usage instructions below are just a glimpse of what you can do and reflect our opinion on what&#8217;s important and what&#8217;s not. Most of these commands support many more options and different usages. Consult the manpages to find them.</p>
+<div class="section" id="useful-terminal-tools-keyboard-shortcuts">
+<h3>Useful Terminal Tools &amp; Keyboard Shortcuts<a class="headerlink" href="#useful-terminal-tools-keyboard-shortcuts" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="navigating-previous-commands">
+<h4>Navigating previous commands<a class="headerlink" href="#navigating-previous-commands" title="Permalink to this headline">¶</a></h4>
+<p>You can use the ↑/↓ (up/down) arrow keys to navigate previously entered command and the ←/→ (left/right) keys to modify it before re-executing it.</p>
+</div>
+<div class="section" id="copying-pasting-using-the-mouse">
+<h4>Copying / Pasting using the mouse<a class="headerlink" href="#copying-pasting-using-the-mouse" title="Permalink to this headline">¶</a></h4>
+<p>On most Linux systems you can use the mouse to select text and then press the middle mouse button to
+paste that text at the position where your cursor is. This is especially useful for long directory
+or filenames.</p>
+</div>
+<div class="section" id="saving-time-avoiding-typos-with-autocompletion">
+<h4>Saving time/avoiding typos with autocompletion<a class="headerlink" href="#saving-time-avoiding-typos-with-autocompletion" title="Permalink to this headline">¶</a></h4>
+<p>On most Linux systems you can autocomplete command names and filepaths by pressing <code class="kbd docutils literal"><span class="pre">TAB</span></code>. This looks at the characters that you have entered so far and tries to predict what the rest of the command/path will be. This can save you from having to type out long command and file/directory names, and also reduces the likelihood of you accidentally spelling something incorrectly.</p>
+</div>
+<div class="section" id="printing-some-text">
+<h4>Printing some text<a class="headerlink" href="#printing-some-text" title="Permalink to this headline">¶</a></h4>
+<p>To simply print some text in the console, <span class="target" id="index-2"></span>use <code class="docutils literal"><span class="pre">echo</span></code>:</p>
+<p><strong>Usage</strong>:  <code class="docutils literal"><span class="pre">echo</span></code></p>
+<blockquote>
+<div><div class="highlight-console"><div class="highlight"><pre><span class="gp">$</span> <span class="nb">echo</span> <span class="s2">&quot;this is some text&quot;</span>
+<span class="go">this is some text</span>
+<span class="gp">$</span>
+</pre></div>
+</div>
+</div></blockquote>
+<p>It can also be used to print the content of a variable, see section <a class="reference internal" href="#environment-variables"><span>Environment Variables</span></a>...</p>
+</div>
+<div class="section" id="interrupting-commands">
+<h4><span class="target" id="index-3"></span>Interrupting commands<a class="headerlink" href="#interrupting-commands" title="Permalink to this headline">¶</a></h4>
+<p>Whenever a program gets stuck or takes too long to finish, you can <em>interrupt</em> it with the shortcut
+<code class="kbd docutils literal"><span class="pre">CONTROL-C</span></code>.</p>
+</div>
+<div class="section" id="leave-the-shell">
+<h4>Leave the shell<a class="headerlink" href="#leave-the-shell" title="Permalink to this headline">¶</a></h4>
+<p>To <span class="target" id="index-4"></span>exit the shell/terminal, just type <code class="docutils literal"><span class="pre">exit</span></code> or press <code class="kbd docutils literal"><span class="pre">CONTROL-D</span></code>.</p>
+</div>
+<div class="section" id="clear-clear-the-screen">
+<h4><span class="target" id="index-5"></span>clear - Clear the &#8220;screen&#8221;<a class="headerlink" href="#clear-clear-the-screen" title="Permalink to this headline">¶</a></h4>
+<p><strong>Usage</strong>:  <code class="docutils literal"><span class="pre">clear</span></code></p>
+<blockquote>
+<div><div class="highlight-console"><div class="highlight"><pre><span class="gp">$</span> clear
+<span class="gp">$</span>
+</pre></div>
+</div>
+</div></blockquote>
+<p>In case the output of the terminal/screen gets cluttered, you can use <code class="docutils literal"><span class="pre">clear</span></code> to redraw the screen...</p>
+<blockquote>
+<div><div class="highlight-console"><div class="highlight"><pre><span class="gp">$</span> cat /bin/echo
+<span class="gp">$</span> ...<span class="o">(</span>garbled output here<span class="o">)</span>
+<span class="gp">$</span> clear
+<span class="gp">$</span>
+</pre></div>
+</div>
+</div></blockquote>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">If this doesn&#8217;t work, you can use <code class="docutils literal"><span class="pre">reset</span></code> to perform a re-initialization of the terminal:</p>
+</div>
+</div>
+<div class="section" id="reset-reset-your-terminal">
+<h4><span class="target" id="index-6"></span>reset - Reset your terminal<a class="headerlink" href="#reset-reset-your-terminal" title="Permalink to this headline">¶</a></h4>
+<p><strong>Usage</strong>:  <code class="docutils literal"><span class="pre">reset</span> <span class="pre">[options]</span></code></p>
+<blockquote>
+<div><div class="highlight-console"><div class="highlight"><pre><span class="gp">$</span> reset
+<span class="gp">$</span>
+</pre></div>
+</div>
+</div></blockquote>
+</div>
+</div>
+<div class="section" id="getting-help">
+<span id="help"></span><h3>Getting Help<a class="headerlink" href="#getting-help" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="h-help-option-no-parameters">
+<h4><code class="docutils literal"><span class="pre">-h/--help</span></code> option, no parameters<a class="headerlink" href="#h-help-option-no-parameters" title="Permalink to this headline">¶</a></h4>
+<p>Many commands support a &#8220;help&#8221; option, either through <code class="docutils literal"><span class="pre">-h</span></code> or through <code class="docutils literal"><span class="pre">--help</span></code>.
+Other commands will show a help page or at least a short usage overview if you provide incorrect commandline options.</p>
+</div>
+<div class="section" id="man-show-the-manual-page-of-a-command">
+<h4><span class="target" id="index-7"></span>man - show the manual page of a command<a class="headerlink" href="#man-show-the-manual-page-of-a-command" title="Permalink to this headline">¶</a></h4>
+<p><strong>Usage</strong>:
+<code class="docutils literal"><span class="pre">man</span> <span class="pre">command</span> <span class="pre">or</span> <span class="pre">file</span></code></p>
+<blockquote>
+<div><div class="highlight-console"><div class="highlight"><pre><span class="gp">$</span> man <span class="nb">echo</span>
+<span class="go">echo(1)</span>
+
+<span class="go">NAME</span>
+<span class="go">       echo - display a line of text</span>
+
+<span class="go">SYNOPSIS</span>
+<span class="go">       echo [SHORT-OPTION]... [STRING]...</span>
+<span class="go">       echo LONG-OPTION</span>
+<span class="go">  ...</span>
+<span class="gp">$</span>
+</pre></div>
+</div>
+</div></blockquote>
+<p>For the navigation within a manpage and how to exit the manpage, see the <a class="reference internal" href="#less"><span>paragraph regarding less</span></a>.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The behaviour of <code class="docutils literal"><span class="pre">man</span></code> is dependent of the <code class="docutils literal"><span class="pre">$PAGER</span></code> environment variable.</p>
+</div>
+</div>
+<div class="section" id="apropos-list-manpages-containing-a-keyword-in-their-description">
+<h4><span class="target" id="index-8"></span>apropos - list manpages containing a keyword in their description<a class="headerlink" href="#apropos-list-manpages-containing-a-keyword-in-their-description" title="Permalink to this headline">¶</a></h4>
+<p><strong>Usage</strong>: <code class="docutils literal"><span class="pre">apropos</span> <span class="pre">keyword</span></code></p>
+<blockquote>
+<div><div class="highlight-console"><div class="highlight"><pre><span class="gp">$</span> apropos who
+<span class="go">...</span>
+<span class="go">who                  (1)  - show who is logged on</span>
+<span class="go">who                  (1)  - display who is on the system</span>
+<span class="go">whoami               (1)  - print effective userid</span>
+<span class="gp">$</span>
+</pre></div>
+</div>
+</div></blockquote>
+<p>Use <code class="docutils literal"><span class="pre">apropos</span></code> to find candidates for specific tasks.</p>
+</div>
+<div class="section" id="usr-share-doc">
+<h4>/usr/share/doc/<a class="headerlink" href="#usr-share-doc" title="Permalink to this headline">¶</a></h4>
+<p>The <code class="docutils literal"><span class="pre">/usr/share/doc/</span></code> directory in some Linux distributions contains additional documentation of installed software packages.</p>
+</div>
+</div>
+<div class="section" id="who-am-i-where-am-i">
+<h3>Who am I, where am I<a class="headerlink" href="#who-am-i-where-am-i" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="whoami-print-your-username">
+<h4><span class="target" id="index-9"></span>whoami - Print your username<a class="headerlink" href="#whoami-print-your-username" title="Permalink to this headline">¶</a></h4>
+<p>Linux is a multi-User Operating System supporting thousands of users on the same machine. As usernames can differ between machines, it&#8217;s important to know your username on any particular machine.</p>
+<p><strong>Usage</strong>: <code class="docutils literal"><span class="pre">whoami</span></code></p>
+<blockquote>
+<div><div class="highlight-console"><div class="highlight"><pre><span class="gp">$</span> whoami
+<span class="go">fthommen</span>
+<span class="gp">$</span>
+</pre></div>
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="hostname-print-the-name-of-the-computer">
+<h4><span class="target" id="index-10"></span>hostname - Print the name of the computer<a class="headerlink" href="#hostname-print-the-name-of-the-computer" title="Permalink to this headline">¶</a></h4>
+<p>Each machine on the network has a unique name which is used to distinguish one from another.</p>
+<p><strong>Usage</strong>: <code class="docutils literal"><span class="pre">hostname</span></code></p>
+<blockquote>
+<div><div class="highlight-console"><div class="highlight"><pre><span class="gp">$</span> hostname
+<span class="go">pc-teach01</span>
+<span class="gp">$</span>
+</pre></div>
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="pwd-print-the-current-working-directory">
+<h4><span class="target" id="index-11"></span>pwd - Print the current working directory<a class="headerlink" href="#pwd-print-the-current-working-directory" title="Permalink to this headline">¶</a></h4>
+<p>A Linux filesystem contains countless directories with many subdirectories which makes it easy to get lost. It is good practice to check your position within
+the filesystem regularly.</p>
+<p><strong>Usage</strong>: <code class="docutils literal"><span class="pre">pwd</span></code></p>
+<blockquote>
+<div><div class="highlight-console"><div class="highlight"><pre><span class="gp">$</span> <span class="nb">pwd</span>
+<span class="go">/home/fthommen</span>
+<span class="gp">$</span>
+</pre></div>
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="date-print-current-date-and-time">
+<h4><span class="target" id="index-12"></span>date - Print current date and time<a class="headerlink" href="#date-print-current-date-and-time" title="Permalink to this headline">¶</a></h4>
+<p><strong>Usage</strong>: <code class="docutils literal"><span class="pre">date</span></code></p>
+<blockquote>
+<div><div class="highlight-console"><div class="highlight"><pre><span class="gp">$</span> date
+<span class="go">Tue Sep 25 19:57:50 CEST 2012</span>
+<span class="gp">$</span>
+</pre></div>
+</div>
+</div></blockquote>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The <span class="target" id="index-13"></span>command <code class="docutils literal"><span class="pre">time</span></code> does something completely different from <code class="docutils literal"><span class="pre">date</span></code> and is <em>not</em> used to show the current time.</p>
+</div>
+</div>
+</div>
+<div class="section" id="moving-around">
+<h3>Moving Around<a class="headerlink" href="#moving-around" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="cd-change-the-working-directory">
+<h4><span class="target" id="index-14"></span>cd - Change the working directory<a class="headerlink" href="#cd-change-the-working-directory" title="Permalink to this headline">¶</a></h4>
+<p><strong>Usage</strong>: <code class="docutils literal"><span class="pre">cd</span> <span class="pre">[new_directory]</span></code></p>
+<blockquote>
+<div><div class="highlight-console"><div class="highlight"><pre><span class="gp">$</span> <span class="nb">pwd</span>
+<span class="go">/home/fthommen</span>
+<span class="gp">$</span> <span class="nb">cd</span> /usr/bin
+<span class="gp">$</span> <span class="nb">pwd</span>
+<span class="go">/usr/bin</span>
+<span class="gp">$</span>
+</pre></div>
+</div>
+</div></blockquote>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Using <code class="docutils literal"><span class="pre">cd</span></code> without a directory is equivalent to &#8220;<code class="docutils literal"><span class="pre">cd</span> <span class="pre">~</span></code>&#8221; and changes into the users&#8217;s homedirectory</p>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Please note the difference between absolute paths (starting with &#8220;<code class="docutils literal"><span class="pre">/</span></code>&#8221;) and relative paths (starting with a directory name).</p>
+</div>
+<p>Special directories:</p>
+<ul class="simple">
+<li>&#8220;<code class="docutils literal"><span class="pre">.</span></code>&#8221;:  The current working directory</li>
+<li>&#8220;<code class="docutils literal"><span class="pre">/</span></code>&#8221;:  The root directory of this computer</li>
+<li>&#8220;<code class="docutils literal"><span class="pre">..</span></code>&#8221;: The parent directory of the current working directory</li>
+<li>&#8220;<code class="docutils literal"><span class="pre">~</span></code>&#8221;:  Your homedirectory</li>
+</ul>
+<blockquote>
+<div><div class="highlight-console"><div class="highlight"><pre><span class="gp">$</span> <span class="nb">pwd</span>
+<span class="go">/usr</span>
+<span class="gp">$</span> <span class="nb">cd</span> /bin
+<span class="gp">$</span> <span class="nb">pwd</span>
+<span class="go">/bin</span>
+</pre></div>
+</div>
+<div class="highlight-console"><div class="highlight"><pre><span class="gp">$</span> <span class="nb">pwd</span>
+<span class="go">/usr</span>
+<span class="gp">$</span> <span class="nb">cd</span>
+<span class="gp">$</span><span class="nb"> pwd</span>
+<span class="go">/home/fthommen</span>
+</pre></div>
+</div>
+</div></blockquote>
+</div>
+</div>
+<div class="section" id="see-what-s-around">
+<h3>See What&#8217;s Around<a class="headerlink" href="#see-what-s-around" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="ls-list-directory-contents">
+<h4><span class="target" id="index-15"></span>ls - List directory contents<a class="headerlink" href="#ls-list-directory-contents" title="Permalink to this headline">¶</a></h4>
+<dl class="docutils">
+<dt><strong>Usage</strong>:</dt>
+<dd><code class="docutils literal"><span class="pre">ls</span> <span class="pre">[options]</span> <span class="pre">[file(s)</span> <span class="pre">or</span> <span class="pre">directory/ies]</span></code></dd>
+</dl>
+<div class="highlight-console"><div class="highlight"><pre><span class="gp">$</span> ls
+<span class="go">/home/fthommen</span>
+<span class="gp">$</span> ls -l aa.pdf
+<span class="go">-rw-r--r-- 1 fthommen cmueller 0 Sep 24 10:59 aa.pdf</span>
+<span class="gp">$</span>
+</pre></div>
+</div>
+<p>Useful options:</p>
+<table class="docutils option-list" frame="void" rules="none">
+<col class="option" />
+<col class="description" />
+<tbody valign="top">
+<tr><td class="option-group">
+<kbd><span class="option">-l</span></kbd></td>
+<td>Long listing with permissions, user, group and last modification date</td></tr>
+<tr><td class="option-group">
+<kbd><span class="option">-1</span></kbd></td>
+<td>Print listing in one column only</td></tr>
+<tr><td class="option-group">
+<kbd><span class="option">-a</span></kbd></td>
+<td>Show all files (hidden, &#8221;.&#8221; and &#8221;..&#8221;)</td></tr>
+<tr><td class="option-group">
+<kbd><span class="option">-A</span></kbd></td>
+<td>Show almost all files (hidden, but not &#8221;.&#8221; and &#8221;..&#8221;)</td></tr>
+<tr><td class="option-group">
+<kbd><span class="option">-F</span></kbd></td>
+<td>Show filetypes (nothing = regular file, &#8220;/&#8221; = directory, &#8220;*&#8221; = executable file, &#8220;&#64;&#8221; = symbolic link)</td></tr>
+<tr><td class="option-group">
+<kbd><span class="option">-d</span></kbd></td>
+<td>Show directory information instead of  directory content</td></tr>
+<tr><td class="option-group">
+<kbd><span class="option">-t</span></kbd></td>
+<td>Sort listing by modification time (most recent on top)</td></tr>
+</tbody>
+</table>
+<div class="figure" id="id6">
+<img alt="_images/LongListingDeconstructed.png" src="_images/LongListingDeconstructed.png" />
+<p class="caption"><span class="caption-text">Elements of a long file listing (<code class="docutils literal"><span class="pre">ls</span> <span class="pre">-l</span></code>)</span></p>
+</div>
+</div>
+<div class="section" id="digression-shell-globs">
+<h4>Digression: Shell globs<a class="headerlink" href="#digression-shell-globs" title="Permalink to this headline">¶</a></h4>
+<p>Files and folders can&#8217;t only be referred to with their full name, but also with so-called &#8220;Shell Globs&#8221;, which are a kind of simple pattern to address groups of files and folders. Instead of explicit names you can use the following placeholders:</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">?:</span></code>  Any single character</li>
+<li><code class="docutils literal"><span class="pre">*:</span></code>  Any number of any character (including no character at all, but <strong>not</strong> matching a starting &#8221;.&#8221;)</li>
+<li><code class="docutils literal"><span class="pre">[...]:</span></code>    One of the characters included in the brackets.  Use &#8220;-&#8221; to define ranges  of characters</li>
+<li><code class="docutils literal"><span class="pre">{word1,word2}:</span></code>    Each individual word is expanded</li>
+</ul>
+<p>Examples:</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">*.pdf:</span></code>  All files having the extension &#8221;.pdf&#8221;</li>
+<li><code class="docutils literal"><span class="pre">?.jpg:</span></code>  Jpeg file consisting of only one character</li>
+<li><code class="docutils literal"><span class="pre">[0-9]*.txt:</span></code> All files starting with a number and having the extension &#8221;.txt&#8221;</li>
+<li><code class="docutils literal"><span class="pre">*.???:</span></code>  All files having a three-character extension</li>
+<li><code class="docutils literal"><span class="pre">photo.{jpg,png}:</span></code>  &#8220;photo.jpg&#8221; and &#8220;photo.png&#8221;</li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The special directory &#8220;<code class="docutils literal"><span class="pre">~</span></code>&#8221; mentioned above is a shell glob, too.</p>
+</div>
+</div>
+</div>
+<div class="section" id="organize-files-and-folders">
+<h3>Organize Files and Folders<a class="headerlink" href="#organize-files-and-folders" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="touch-create-a-file-or-change-last-modification-date-of-an-existing-file">
+<h4><span class="target" id="index-16"></span>touch - Create a file or change last modification date of an existing file<a class="headerlink" href="#touch-create-a-file-or-change-last-modification-date-of-an-existing-file" title="Permalink to this headline">¶</a></h4>
+<p><strong>Usage</strong>:  <code class="docutils literal"><span class="pre">touch</span> <span class="pre">file(s)</span> <span class="pre">or</span> <span class="pre">directory/ies</span></code></p>
+<blockquote>
+<div><div class="highlight-console"><div class="highlight"><pre><span class="gp">$</span> ls afile
+<span class="go">ls: afile: No such file or directory</span>
+<span class="gp">$</span> touch afile
+<span class="gp">$</span> ls afile
+<span class="go">afile</span>
+<span class="gp">$</span>
+</pre></div>
+</div>
+<div class="highlight-console"><div class="highlight"><pre><span class="gp">$</span> ls -l aa.pdf
+<span class="go">-rw-r--r-- 1 fthommen cmueller 0 Sep 24 10:59 aa.pdf</span>
+<span class="gp">$</span> touch aa.pdf
+<span class="gp">$</span> ls -l aa.pdf
+<span class="go">-rw-r--r-- 1 fthommen cmueller 0 Sep 25 22:01 aa.pdf</span>
+<span class="gp">$</span>
+</pre></div>
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="cp-copy-files-and-folders">
+<h4><span class="target" id="index-17"></span>cp - Copy files and folders<a class="headerlink" href="#cp-copy-files-and-folders" title="Permalink to this headline">¶</a></h4>
+<p><strong>Usage</strong>:  <code class="docutils literal"><span class="pre">cp</span> <span class="pre">[options]</span> <span class="pre">sourcefile</span> <span class="pre">destinationfile</span></code></p>
+<blockquote>
+<div><div class="highlight-console"><div class="highlight"><pre><span class="gp">$</span> cp /usr/bin/less /tmp/backup_of_less
+<span class="gp">$</span>
+</pre></div>
+</div>
+</div></blockquote>
+<p><strong>Useful options</strong>:</p>
+<table class="docutils option-list" frame="void" rules="none">
+<col class="option" />
+<col class="description" />
+<tbody valign="top">
+<tr><td class="option-group">
+<kbd><span class="option">-r</span></kbd></td>
+<td>Copy recursively</td></tr>
+<tr><td class="option-group">
+<kbd><span class="option">-i</span></kbd></td>
+<td>Interactive operation, ask before overwriting an existing file</td></tr>
+<tr><td class="option-group">
+<kbd><span class="option">-p</span></kbd></td>
+<td>Preserve owner, permissions and timestamp</td></tr>
+</tbody>
+</table>
+<p><strong>Examples</strong>:</p>
+<p>If the last filename given is nonexisting then the first file is copied as this new filename:</p>
+<div class="highlight-console"><div class="highlight"><pre><span class="gp">$</span> cp /usr/bin/less /tmp/
+<span class="gp">$</span>
+</pre></div>
+</div>
+<p>Be careful! If the last filename given does exist, this file will be overwritten and replaced with a copy of the first file.</p>
+<p>If the last filename given is an (existing!) directory, then the file is copied into this directory:</p>
+<div class="highlight-console"><div class="highlight"><pre><span class="gp">$</span> cp /usr/bin/less /tmp/
+<span class="gp">$</span>
+</pre></div>
+</div>
+<p>This allows us to copy multiple files into the same directory at the same time:</p>
+<div class="highlight-console"><div class="highlight"><pre><span class="gp">$</span> cp /usr/bin/less /usr/bin/grep /usr/bin/tail /tmp/
+<span class="gp">$</span>
+</pre></div>
+</div>
+<p>To recursively copy files, we need to specify the <code class="docutils literal"><span class="pre">-r</span></code> option. Here, we copy a set of exercise files from the network share into our home directory:</p>
+<div class="highlight-console"><div class="highlight"><pre><span class="gp">$</span> cp -r /g/bio-it/courses/LSB  ~/exercises
+<span class="gp">$</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="rsync-intelligently-copying-files-and-folders">
+<h4><span class="target" id="index-18"></span>rsync - intelligently copying files and folders<a class="headerlink" href="#rsync-intelligently-copying-files-and-folders" title="Permalink to this headline">¶</a></h4>
+<p><strong>Usage</strong>: <code class="docutils literal"><span class="pre">rsync</span> <span class="pre">[options]</span> <span class="pre">source</span> <span class="pre">target</span></code></p>
+<blockquote>
+<div><div class="highlight-console"><div class="highlight"><pre><span class="gp">$</span> rsync -av /etc/ root@taperobot:/etc-backup
+<span class="go">...</span>
+<span class="gp">$</span>
+</pre></div>
+</div>
+</div></blockquote>
+<p><code class="docutils literal"><span class="pre">rsync</span></code> allows you to copy files or folders locally or to wherever you have <code class="docutils literal"><span class="pre">ssh</span></code> access.  You can have <code class="docutils literal"><span class="pre">rsync</span></code> copy only newer files or only older files.  If copy operation is interrupted, you can rerun <code class="docutils literal"><span class="pre">rsync</span></code> and it will only copy the missing files (in contrast to <code class="docutils literal"><span class="pre">cp</span></code> which will just copy everything again).</p>
+<p><code class="docutils literal"><span class="pre">source</span></code> and <code class="docutils literal"><span class="pre">target</span></code> can be local directories or have the form <code class="docutils literal"><span class="pre">user&#64;remotehost:directory</span></code>, in which case you&#8217;ll have to give your password for the remote host.  This latter version will copy over the network.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last"><code class="docutils literal"><span class="pre">rsync</span></code> is one of the few cases, where it effectively matters if a directory is written with an ending slash (&#8220;/&#8221;) or nor: If the source is a directory and ends with a slash, then the <em>content</em> of this directory will be copied into the target directory.  If the source doesn&#8217;t have an ending slash, then <em>a directory with the same name</em> will be created <em>within the target directory</em></p>
+</div>
+<p><strong>Useful option combinations</strong>:</p>
+<table class="docutils option-list" frame="void" rules="none">
+<col class="option" />
+<col class="description" />
+<tbody valign="top">
+<tr><td class="option-group">
+<kbd><span class="option">-a<var>v</var></span></kbd></td>
+<td>Verbosely copies all source files which are different (different size, different age) or missing from the destination  <strong>Beware</strong>: This will also copy files which are older on the destination side</td></tr>
+<tr><td class="option-group">
+<kbd><span class="option">-a<var>u</var></span></kbd></td>
+<td>Silently copies all source files which are different (different size, different age) or missing from the destination  This combination will <em>not</em> overwrite newer files by older ones</td></tr>
+</tbody>
+</table>
+<dl class="docutils">
+<dt>This should not copy any new files, as we previously copied these already:</dt>
+<dd><div class="first last highlight-console"><div class="highlight"><pre><span class="gp">$</span> rsync -av /g/bio-it/courses/LSB/exercises/  ~/exercises/
+<span class="gp">$</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+</div>
+<div class="section" id="rm-remove-files-and-directories">
+<h4><span class="target" id="index-19"></span>rm - Remove files and directories<a class="headerlink" href="#rm-remove-files-and-directories" title="Permalink to this headline">¶</a></h4>
+<p><strong>Usage</strong>:</p>
+<blockquote>
+<div><blockquote>
+<div><p><code class="docutils literal"><span class="pre">rm</span> <span class="pre">[options]</span> <span class="pre">file(s)</span></code></p>
+<p><code class="docutils literal"><span class="pre">rm</span> <span class="pre">-r</span> <span class="pre">[options]</span> <span class="pre">directory/ies</span></code></p>
+</div></blockquote>
+<div class="highlight-console"><div class="highlight"><pre><span class="gp">$</span> ls afile
+<span class="go">afile</span>
+<span class="gp">$</span> rm afile
+<span class="gp">$</span> ls afile
+<span class="go">ls: afile: No such file or directory</span>
+<span class="gp">$</span>
+</pre></div>
+</div>
+</div></blockquote>
+<p><strong>Useful options</strong>:</p>
+<table class="docutils option-list" frame="void" rules="none">
+<col class="option" />
+<col class="description" />
+<tbody valign="top">
+<tr><td class="option-group">
+<kbd><span class="option">-i</span></kbd></td>
+<td>Ask for confirmation of each removal</td></tr>
+<tr><td class="option-group">
+<kbd><span class="option">-r</span></kbd></td>
+<td>Remove recursively</td></tr>
+<tr><td class="option-group">
+<kbd><span class="option">-f</span></kbd></td>
+<td>Force the removal (no questions, no errors if a file doesn&#8217;t exist)</td></tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">rm without the -i option will usually not ask you if you really want to remove the file or directory</p>
+</div>
+</div>
+<div class="section" id="mv-move-and-rename-files-and-folders">
+<h4><span class="target" id="index-20"></span>mv - Move and rename files and folders<a class="headerlink" href="#mv-move-and-rename-files-and-folders" title="Permalink to this headline">¶</a></h4>
+<p><strong>Usage</strong>:</p>
+<blockquote>
+<div><blockquote>
+<div><p><code class="docutils literal"><span class="pre">mv</span> <span class="pre">[options]</span> <span class="pre">sourcefile</span> <span class="pre">destinationfile</span></code></p>
+<p><code class="docutils literal"><span class="pre">mv</span> <span class="pre">[options]</span> <span class="pre">sourcefile(s)</span> <span class="pre">destinationdirectory</span></code></p>
+</div></blockquote>
+<div class="highlight-console"><div class="highlight"><pre><span class="gp">$</span> ls *.txt
+<span class="go">a.txt</span>
+<span class="gp">$</span> mv a.txt b.txt
+<span class="gp">$</span> ls *.txt
+<span class="go">b.txt</span>
+<span class="gp">$</span>
+</pre></div>
+</div>
+</div></blockquote>
+<p><strong>Useful options</strong>:</p>
+<table class="docutils option-list" frame="void" rules="none">
+<col class="option" />
+<col class="description" />
+<tbody valign="top">
+<tr><td class="option-group">
+<kbd><span class="option">-i</span></kbd></td>
+<td>Ask for confirmation of each removal</td></tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">You cannot overwrite an existing directory by another one with mv</p>
+</div>
+</div>
+<div class="section" id="mkdir-create-a-new-directory">
+<span id="mkdir"></span><h4><span class="target" id="index-21"></span>mkdir - Create a new directory<a class="headerlink" href="#mkdir-create-a-new-directory" title="Permalink to this headline">¶</a></h4>
+<p><strong>Usage</strong>:  <code class="docutils literal"><span class="pre">mkdir</span> <span class="pre">[options]</span> <span class="pre">directory</span></code></p>
+<blockquote>
+<div><div class="highlight-console"><div class="highlight"><pre><span class="gp">$</span> ls adir/
+<span class="go">ls: adir/: No such file or directory</span>
+<span class="gp">$</span> mkdir adir
+<span class="gp">$</span> ls adir
+<span class="gp">$</span>
+</pre></div>
+</div>
+</div></blockquote>
+<p><strong>Useful options</strong>:</p>
+<table class="docutils option-list" frame="void" rules="none">
+<col class="option" />
+<col class="description" />
+<tbody valign="top">
+<tr><td class="option-group">
+<kbd><span class="option">-p</span></kbd></td>
+<td>Create parent directories (when creating nested directories)</td></tr>
+</tbody>
+</table>
+<div class="highlight-console"><div class="highlight"><pre><span class="gp">$</span> mkdir adir/bdir
+<span class="go">mkdir: cannot create directory &#39;adir/bdir&#39;: No such file or directory</span>
+<span class="gp">$</span> mkdir –p adir/bdir
+<span class="gp">$</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="rmdir-remove-an-empty-directory">
+<h4><span class="target" id="index-22"></span>rmdir - Remove an empty directory<a class="headerlink" href="#rmdir-remove-an-empty-directory" title="Permalink to this headline">¶</a></h4>
+<p><strong>Usage</strong>:  <code class="docutils literal"><span class="pre">rmdir</span> <span class="pre">directory</span></code></p>
+<blockquote>
+<div><div class="highlight-console"><div class="highlight"><pre><span class="gp">$</span> rmdir adir/
+<span class="gp">$</span>
+</pre></div>
+</div>
+</div></blockquote>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">If the directory is not empty, <code class="docutils literal"><span class="pre">rmdir</span></code> will complain and not remove it.</p>
+</div>
+</div>
+</div>
+<div class="section" id="view-files">
+<h3>View Files<a class="headerlink" href="#view-files" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="cat-print-files-on-terminal-concatenate">
+<h4><span class="target" id="index-23"></span>cat - Print files on terminal (concatenate)<a class="headerlink" href="#cat-print-files-on-terminal-concatenate" title="Permalink to this headline">¶</a></h4>
+<p><strong>Usage</strong>:  <code class="docutils literal"><span class="pre">cat</span> <span class="pre">[options]</span> <span class="pre">file(s)</span></code></p>
+<blockquote>
+<div><div class="highlight-console"><div class="highlight"><pre><span class="gp">$</span> cat  P12931.fasta backup_of_P12931.fasta
+<span class="go">...</span>
+<span class="gp">$</span>
+</pre></div>
+</div>
+</div></blockquote>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The <span class="target" id="index-24"></span>command <code class="docutils literal"><span class="pre">cat</span></code> only makes sense for short files or for e.g. combining several files into one.  See the redirection examples later.</p>
+</div>
+</div>
+<div class="section" id="head-print-first-lines-of-a-textfile">
+<h4><span class="target" id="index-25"></span>head - Print first lines of a textfile<a class="headerlink" href="#head-print-first-lines-of-a-textfile" title="Permalink to this headline">¶</a></h4>
+<p><code class="docutils literal"><span class="pre">head</span></code> is a program on Unix and Unix-like systems used to display the beginning of a text file or piped data.</p>
+<p><strong>Usage</strong>:  <code class="docutils literal"><span class="pre">head</span> <span class="pre">[options]</span> <span class="pre">file(s)</span></code></p>
+<blockquote>
+<div><div class="highlight-console"><div class="highlight"><pre><span class="gp">$</span> head /etc/passwd
+<span class="go">root:x:0:0:root:/root:/bin/bash</span>
+<span class="go">bin:x:1:1:bin:/bin:/sbin/nologin</span>
+<span class="go">daemon:x:2:2:daemon:/sbin:/sbin/nologin</span>
+<span class="go">adm:x:3:4:adm:/var/adm:/sbin/nologin</span>
+<span class="go">lp:x:4:7:lp:/var/spool/lpd:/sbin/nologin</span>
+<span class="go">sync:x:5:0:sync:/sbin:/bin/sync</span>
+<span class="go">shutdown:x:6:0:shutdown:/sbin:/sbin/shutdown</span>
+<span class="go">halt:x:7:0:halt:/sbin:/sbin/halt</span>
+<span class="go">mail:x:8:12:mail:/var/spool/mail:/sbin/nologin</span>
+<span class="go">news:x:9:13:news:/etc/news:</span>
+<span class="gp">$</span>
+</pre></div>
+</div>
+</div></blockquote>
+<p><strong>Useful options</strong>:</p>
+<table class="docutils option-list" frame="void" rules="none">
+<col class="option" />
+<col class="description" />
+<tbody valign="top">
+<tr><td class="option-group">
+<kbd><span class="option">-n <var>NUM</var></span></kbd></td>
+<td>Print NUM lines (default is 10)</td></tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="tail-print-last-lines-of-a-textfile">
+<h4><span class="target" id="index-26"></span>tail - Print last lines of a textfile<a class="headerlink" href="#tail-print-last-lines-of-a-textfile" title="Permalink to this headline">¶</a></h4>
+<p>The <code class="docutils literal"><span class="pre">tail</span></code> utility displays the last few lines of a file or, by default, its standard input, to the standard output.</p>
+<p><strong>Usage</strong>:  <code class="docutils literal"><span class="pre">tail</span> <span class="pre">[options]</span> <span class="pre">file(s)</span></code></p>
+<blockquote>
+<div><div class="highlight-console"><div class="highlight"><pre><span class="gp">$</span> tail -n <span class="m">3</span> /etc/passwd
+<span class="go">xfs:x:43:43:X Font Server:/etc/X11/fs:/sbin/nologin</span>
+<span class="go">gdm:x:42:42::/var/gdm:/sbin/nologin</span>
+<span class="go">sabayon:x:86:86:Sabayon user:/home/sabayon:/sbin/nologin</span>
+<span class="gp">$</span>
+</pre></div>
+</div>
+</div></blockquote>
+<p><strong>Useful options</strong>:</p>
+<table class="docutils option-list" frame="void" rules="none">
+<col class="option" />
+<col class="description" />
+<tbody valign="top">
+<tr><td class="option-group">
+<kbd><span class="option">-n <var>NUM</var></span></kbd></td>
+<td>Print NUM lines (default is 10)</td></tr>
+<tr><td class="option-group">
+<kbd><span class="option">-f</span></kbd></td>
+<td>&#8220;Follow&#8221; a file (print new lines as they are written to the file)</td></tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="less-view-and-navigate-files">
+<span id="less"></span><h4><span class="target" id="index-27"></span>less - View and navigate files<a class="headerlink" href="#less-view-and-navigate-files" title="Permalink to this headline">¶</a></h4>
+<p><strong>Usage</strong>:  <code class="docutils literal"><span class="pre">less</span> <span class="pre">[options]</span> <span class="pre">file(s)</span></code></p>
+<blockquote>
+<div><div class="highlight-console"><div class="highlight"><pre><span class="gp">$</span> less  P12931.fasta backup_of_P12931.fasta
+<span class="go">...</span>
+<span class="gp">$</span>
+</pre></div>
+</div>
+</div></blockquote>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This is the default &#8220;pager&#8221; (a program for viewing files page by page, not an old-fashioned telecommunications device) for manpages under Linux unless you redefine your <code class="docutils literal"><span class="pre">$PAGER</span></code> <a class="reference internal" href="#environment-variables"><span>environment variable</span></a></p>
+</div>
+<p><strong>Navigation within less</strong>:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="66%" />
+<col width="34%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Key(s):</th>
+<th class="head">Effect:</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>up, down, right, left:</td>
+<td>use cursor keys</td>
+</tr>
+<tr class="row-odd"><td>top of document:</td>
+<td>g</td>
+</tr>
+<tr class="row-even"><td>bottom of document:</td>
+<td>G</td>
+</tr>
+<tr class="row-odd"><td>search:</td>
+<td>&#8220;/&#8221; + search-term</td>
+</tr>
+<tr class="row-even"><td>find next match:</td>
+<td>n</td>
+</tr>
+<tr class="row-odd"><td>find previous match:</td>
+<td>N</td>
+</tr>
+<tr class="row-even"><td>quit:</td>
+<td>q</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section" id="extracting-informations-from-files">
+<h3>Extracting Informations from Files<a class="headerlink" href="#extracting-informations-from-files" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="grep-find-lines-matching-a-pattern-in-textfiles">
+<h4><span class="target" id="index-28"></span>grep - Find lines matching a pattern in textfiles<a class="headerlink" href="#grep-find-lines-matching-a-pattern-in-textfiles" title="Permalink to this headline">¶</a></h4>
+<p><code class="docutils literal"><span class="pre">grep</span></code> is a command-line utility for searching plain-text data sets for lines matching a regular expression.</p>
+<p><strong>Usage</strong>:  <code class="docutils literal"><span class="pre">grep</span> <span class="pre">[options]</span> <span class="pre">pattern</span> <span class="pre">file(s)</span></code></p>
+<blockquote>
+<div><div class="highlight-console"><div class="highlight"><pre><span class="gp">$</span> grep -i ensembl P04637.txt
+<span class="go">DR   Ensembl; ENST00000269305; ENSP00000269305; ENSG00000141510.</span>
+<span class="go">DR   Ensembl; ENST00000359597; ENSP00000352610; ENSG00000141510.</span>
+<span class="go">DR   Ensembl; ENST00000419024; ENSP00000402130; ENSG00000141510.</span>
+<span class="go">DR   Ensembl; ENST00000420246; ENSP00000391127; ENSG00000141510.</span>
+<span class="go">DR   Ensembl; ENST00000445888; ENSP00000391478; ENSG00000141510.</span>
+<span class="go">DR   Ensembl; ENST00000455263; ENSP00000398846; ENSG00000141510.</span>
+<span class="gp">$</span>
+</pre></div>
+</div>
+</div></blockquote>
+<p><strong>Useful options</strong>:</p>
+<table class="docutils option-list" frame="void" rules="none">
+<col class="option" />
+<col class="description" />
+<tbody valign="top">
+<tr><td class="option-group">
+<kbd><span class="option">-v</span></kbd></td>
+<td>Print lines that do not match</td></tr>
+<tr><td class="option-group">
+<kbd><span class="option">-i</span></kbd></td>
+<td>Search case-insensitive</td></tr>
+<tr><td class="option-group">
+<kbd><span class="option">-l</span></kbd></td>
+<td>List files with matching lines, not the lines itself</td></tr>
+<tr><td class="option-group">
+<kbd><span class="option">-L</span></kbd></td>
+<td>List files without matches</td></tr>
+<tr><td class="option-group">
+<kbd><span class="option">-c</span></kbd></td>
+<td>Print count of matching lines for each file</td></tr>
+<tr><td class="option-group">
+<kbd><span class="option">-A <var>NUM</var></span></kbd></td>
+<td>print NUM lines of trailing context (After)</td></tr>
+<tr><td class="option-group">
+<kbd><span class="option">-B <var>NUM</var></span></kbd></td>
+<td>print NUM lines of leading context (Before)</td></tr>
+<tr><td class="option-group">
+<kbd><span class="option">-C <var>NUM</var></span></kbd></td>
+<td>print NUM lines of output context (Context)</td></tr>
+</tbody>
+</table>
+<p><strong>Examples</strong>:</p>
+<ul>
+<li><p class="first">List all files in the current directory which contain the searchterm <code class="docutils literal"><span class="pre">Ensembl</span></code>:</p>
+<div class="highlight-console"><div class="highlight"><pre><span class="gp">$</span> grep -l Ensembl ./*
+<span class="go">P04637.txt</span>
+<span class="go">P12931.txt</span>
+</pre></div>
+</div>
+</li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">You cannot combine the option <code class="docutils literal"><span class="pre">-v</span></code> and <code class="docutils literal"><span class="pre">-l</span></code> to find files which do not contain a
+certain searchterm. The reason is that grep works line-based and not really file-based...
+Therefore you should rather use the uppercase <code class="docutils literal"><span class="pre">-L</span></code> option!</p>
+</div>
+<ul>
+<li><p class="first">List all files in the current directory which <strong>do not</strong> contain the searchterm <code class="docutils literal"><span class="pre">Ensembl</span></code>:</p>
+<div class="highlight-console"><div class="highlight"><pre><span class="gp">$</span> grep -L Ensembl ./*
+<span class="go">1FMK.pdb</span>
+<span class="go">3A4O.pdb</span>
+<span class="go">...</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">Count the number of occurrences (case insensitive!) of the term <code class="docutils literal"><span class="pre">atom</span></code> in all pdb files:</p>
+<div class="highlight-console"><div class="highlight"><pre><span class="gp">$</span> grep -ic atom ./*.pdb
+</pre></div>
+</div>
+</li>
+<li><p class="first">Find the term &#8216;Homo sapiens&#8217; in the file P04637.txt, but also print two lines before the match:</p>
+<div class="highlight-console"><div class="highlight"><pre><span class="gp">$</span> grep -B2 <span class="s1">&#39;Homo sapiens&#39;</span> P04637.txt
+</pre></div>
+</div>
+</li>
+<li><p class="first">Find the term &#8216;Homo sapiens&#8217; in the file P04637.txt, but also print the three lines following the match:</p>
+<div class="highlight-console"><div class="highlight"><pre><span class="gp">$</span> grep -A3 <span class="s1">&#39;Homo sapiens&#39;</span> P04637.txt
+</pre></div>
+</div>
+</li>
+<li><p class="first">Find the term &#8216;Homo sapiens&#8217; in the file P04637.txt, but also print the surrounding five lines:</p>
+<div class="highlight-console"><div class="highlight"><pre><span class="gp">$</span> grep -C5 <span class="s1">&#39;Homo sapiens&#39;</span> P04637.txt
+</pre></div>
+</div>
+</li>
+</ul>
+</div>
+<div class="section" id="cut-extracting-columns-from-textfiles">
+<h4><span class="target" id="index-29"></span>cut - extracting columns from textfiles<a class="headerlink" href="#cut-extracting-columns-from-textfiles" title="Permalink to this headline">¶</a></h4>
+<p><code class="docutils literal"><span class="pre">cut</span></code> allows to get at individual columns in structured textfiles (for instance CSV files).
+By default, <code class="docutils literal"><span class="pre">cut</span></code> assumes the columns are TAB-separated.</p>
+<p><strong>Usage</strong>:  <code class="docutils literal"><span class="pre">cut</span> <span class="pre">[options]</span> <span class="pre">file(s)</span></code></p>
+<p><strong>Useful options</strong>:</p>
+<table class="docutils option-list" frame="void" rules="none">
+<col class="option" />
+<col class="description" />
+<tbody valign="top">
+<tr><td class="option-group">
+<kbd><span class="option">-d <var>DELIM</var></span></kbd></td>
+<td>use DELIM instead of TAB for field delimiter. Make sure to use quotes here!</td></tr>
+<tr><td class="option-group">
+<kbd><span class="option">-f</span></kbd></td>
+<td>select only these fields; this can either be a single field, multiple individual fields separated by comma or a range of startfield and endfield separated by dash &#8216;-&#8216;</td></tr>
+</tbody>
+</table>
+<p><strong>Examples</strong>:</p>
+<blockquote>
+<div><p>extract column six from the file <em>~/exercises/P12931.csv</em> (which is separated by semicolon &#8216;;&#8217;):</p>
+<div class="highlight-console"><div class="highlight"><pre><span class="gp">$</span> cut -d<span class="s1">&#39;;&#39;</span> -f6 ~/exercises/P12931.csv
+<span class="go">PMID</span>
+<span class="go">2136766</span>
+<span class="go">11804588</span>
+<span class="go">...</span>
+<span class="gp">$</span>
+</pre></div>
+</div>
+<p>extract columns two, three, eight, nine and ten from the same file:</p>
+<div class="highlight-console"><div class="highlight"><pre><span class="gp">$</span> cut -d<span class="s1">&#39;;&#39;</span> -f2,3,8-10 ~/exercises/P12931.csv
+<span class="go">S; 12; 0.21; ; -</span>
+<span class="go">S; 17; 0.24; MOD_PKA_1; -</span>
+<span class="go">S; 17; 0.24; MOD_PKA_1; -</span>
+<span class="go">S; 17; 0.24; MOD_PKA_1; -</span>
+<span class="go">...</span>
+<span class="gp">$</span>
+</pre></div>
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="sort-sort-a-textfile">
+<h4><span class="target" id="index-30"></span>sort - sort a textfile<a class="headerlink" href="#sort-sort-a-textfile" title="Permalink to this headline">¶</a></h4>
+<p>The <code class="docutils literal"><span class="pre">sort</span></code> utility is used to sort a textfile (alphabetically or numerically).</p>
+<p><strong>Usage</strong>:  <code class="docutils literal"><span class="pre">sort</span> <span class="pre">[options]</span> <span class="pre">file(s)</span></code></p>
+<blockquote>
+<div><div class="highlight-console"><div class="highlight"><pre><span class="gp">$</span> sort /etc/passwd
+<span class="go">...</span>
+<span class="gp">$</span>
+</pre></div>
+</div>
+</div></blockquote>
+<p><strong>Useful options</strong>:</p>
+<table class="docutils option-list" frame="void" rules="none">
+<col class="option" />
+<col class="description" />
+<tbody valign="top">
+<tr><td class="option-group">
+<kbd><span class="option">-f</span></kbd></td>
+<td>fold lower case to upper case characters</td></tr>
+<tr><td class="option-group">
+<kbd><span class="option">-n</span></kbd></td>
+<td>compare according to string numerical value</td></tr>
+<tr><td class="option-group">
+<kbd><span class="option">-b</span></kbd></td>
+<td>ignore leading blanks</td></tr>
+<tr><td class="option-group">
+<kbd><span class="option">-r</span></kbd></td>
+<td>reverse the result of comparisons</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section" id="useful-filetools">
+<h3>Useful Filetools<a class="headerlink" href="#useful-filetools" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="file-determine-the-filetype">
+<h4><span class="target" id="index-31"></span>file - determine the filetype<a class="headerlink" href="#file-determine-the-filetype" title="Permalink to this headline">¶</a></h4>
+<p><strong>Usage</strong>:  <code class="docutils literal"><span class="pre">file</span> <span class="pre">[options]</span> <span class="pre">file(s)</span></code></p>
+<blockquote>
+<div><div class="highlight-console"><div class="highlight"><pre><span class="gp">$</span> file /bin/date
+<span class="go">/bin/date: ELF 32-bit LSB executable</span>
+<span class="gp">$</span> file /bin
+<span class="go">/bin: directory</span>
+<span class="gp">$</span> file SRC_HUMAN.fasta
+<span class="go">SRC_HUMAN.fasta: ASCII text</span>
+<span class="gp">$</span>
+</pre></div>
+</div>
+</div></blockquote>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The command <code class="docutils literal"><span class="pre">file</span></code> uses certain tests and some magic to determine the type of a file</p>
+</div>
+</div>
+<div class="section" id="which-find-a-executable-command">
+<h4><span class="target" id="index-32"></span>which - find a (executable) command<a class="headerlink" href="#which-find-a-executable-command" title="Permalink to this headline">¶</a></h4>
+<p><strong>Usage</strong>:  <code class="docutils literal"><span class="pre">which</span> <span class="pre">[options]</span> <span class="pre">command(s)</span></code></p>
+<blockquote>
+<div><div class="highlight-console"><div class="highlight"><pre><span class="gp">$</span> which date
+<span class="go">/bin/date</span>
+<span class="gp">$</span> which eclipse
+<span class="go">/usr/bin/eclipse</span>
+<span class="gp">$</span>
+</pre></div>
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="find-search-find-files-in-any-given-directory">
+<h4><span class="target" id="index-33"></span>find - search/find files in any given directory<a class="headerlink" href="#find-search-find-files-in-any-given-directory" title="Permalink to this headline">¶</a></h4>
+<p><strong>Usage</strong>:  <code class="docutils literal"><span class="pre">find</span> <span class="pre">[starting</span> <span class="pre">path(s)]</span> <span class="pre">[search</span> <span class="pre">filter]</span></code></p>
+<blockquote>
+<div><div class="highlight-console"><div class="highlight"><pre><span class="gp">$</span> find /etc
+<span class="go">/etc</span>
+<span class="go">/etc/printcap</span>
+<span class="go">/etc/protocols</span>
+<span class="go">/etc/xinetd.d</span>
+<span class="go">/etc/xinetd.d/ktalk</span>
+<span class="go">...</span>
+<span class="gp">$</span>
+</pre></div>
+</div>
+</div></blockquote>
+<p><code class="docutils literal"><span class="pre">find</span></code> is a powerful command with lots of possible search filters.  Refer to the manpage for a complete list.</p>
+<p><strong>Examples</strong>:</p>
+<ul class="simple">
+<li>Find by name:</li>
+</ul>
+<blockquote>
+<div><div class="highlight-console"><div class="highlight"><pre><span class="gp">$</span> find . -name SRC_HUMAN.fasta
+<span class="go">./SRC_HUMAN.fasta</span>
+<span class="gp">$</span>
+</pre></div>
+</div>
+</div></blockquote>
+<ul class="simple">
+<li>Find by size: (List those entries in the directory <code class="docutils literal"><span class="pre">/usr/bin</span></code> that are bigger than 500 kBytes)</li>
+</ul>
+<blockquote>
+<div><div class="highlight-console"><div class="highlight"><pre><span class="gp">$</span> find /usr/bin -size +500k
+<span class="go">/usr/bin/oparchive</span>
+<span class="go">/usr/bin/kiconedit</span>
+<span class="go">/usr/bin/opjitconv</span>
+<span class="go">...</span>
+<span class="gp">$</span>
+</pre></div>
+</div>
+</div></blockquote>
+<ul class="simple">
+<li>Find by type (d=directory, f=file, l=link)</li>
+</ul>
+<blockquote>
+<div><div class="highlight-console"><div class="highlight"><pre><span class="gp">$</span> find . -type d
+<span class="go">.</span>
+<span class="go">./adir</span>
+<span class="gp">$</span>
+</pre></div>
+</div>
+</div></blockquote>
+</div>
+</div>
+<div class="section" id="permissions">
+<h3><span class="target" id="index-34"></span>Permissions<a class="headerlink" href="#permissions" title="Permalink to this headline">¶</a></h3>
+<p>using <code class="docutils literal"><span class="pre">ls</span> <span class="pre">-l</span></code> to view entries of current directory:</p>
+<blockquote>
+<div><div class="highlight-console"><div class="highlight"><pre><span class="gp">$</span> ls -l
+<span class="go">drwxr-xr-x 2 dinkel gibson 4096 Sep 17 10:46 adir</span>
+<span class="go">lrwxrwxrwx 1 dinkel gibson   15 Sep 17 10:45 H1.fasta -&gt; H2.fasta</span>
+<span class="go">-rw-r--r-- 1 dinkel gibson  643 Sep 17 10:45 H2.fasta</span>
+<span class="gp">$</span>
+</pre></div>
+</div>
+</div></blockquote>
+<div class="figure" id="id7">
+<img alt="_images/LinuxPermissions.png" src="_images/LinuxPermissions.png" />
+<p class="caption"><span class="caption-text">Linux file permissions</span></p>
+</div>
+<div class="section" id="changing-permissions">
+<h4>Changing Permissions<a class="headerlink" href="#changing-permissions" title="Permalink to this headline">¶</a></h4>
+<p>Permissions are set using the <code class="docutils literal"><span class="pre">chmod</span></code> (<span class="target" id="index-35"></span>change mode ) command.</p>
+<p><strong>Usage</strong>:  <code class="docutils literal"><span class="pre">chmod</span> <span class="pre">[options]</span> <span class="pre">mode(s)</span> <span class="pre">files(s)</span></code></p>
+<blockquote>
+<div><div class="highlight-console"><div class="highlight"><pre><span class="gp">$</span> ls -l adir
+<span class="go">drwxr-xr-x 2 dinkel gibson 4096 Sep 17 10:46 adir</span>
+<span class="gp">$</span> chmod u-w,o<span class="o">=</span>w adir
+<span class="gp">$</span> ls -l adir
+<span class="go">dr-xr-x-w- 2 dinkel gibson 4096 Sep 17 10:46 adir</span>
+<span class="gp">$</span>
+</pre></div>
+</div>
+</div></blockquote>
+<p>The mode is composed of</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="7%" />
+<col width="20%" />
+<col width="8%" />
+<col width="40%" />
+<col width="7%" />
+<col width="19%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head" colspan="2">Who</th>
+<th class="head" colspan="2">What</th>
+<th class="head" colspan="2">Which permission</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>u:</td>
+<td>user/owner</td>
+<td>+:</td>
+<td>add this permission</td>
+<td>r:</td>
+<td>read</td>
+</tr>
+<tr class="row-odd"><td>g:</td>
+<td>group</td>
+<td>-:</td>
+<td>remove this permission</td>
+<td>w:</td>
+<td>write</td>
+</tr>
+<tr class="row-even"><td>o:</td>
+<td>other</td>
+<td>=:</td>
+<td>set exactly this permission</td>
+<td>x:</td>
+<td>execute</td>
+</tr>
+<tr class="row-odd"><td>a:</td>
+<td>all</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+<p>Add executable permission to the group:</p>
+<blockquote>
+<div><div class="highlight-console"><div class="highlight"><pre><span class="gp">$</span> chmod g+x file
+<span class="gp">$</span>
+</pre></div>
+</div>
+</div></blockquote>
+<p>Revoke this permission:</p>
+<blockquote>
+<div><div class="highlight-console"><div class="highlight"><pre><span class="gp">$</span> chmod g-x file
+<span class="gp">$</span>
+</pre></div>
+</div>
+</div></blockquote>
+<p>Allow all to read a directory:</p>
+<blockquote>
+<div><div class="highlight-console"><div class="highlight"><pre><span class="gp">$</span> chmod a+rx adir/
+<span class="gp">$</span>
+</pre></div>
+</div>
+</div></blockquote>
+</div>
+</div>
+<div class="section" id="remote-access">
+<h3><span class="target" id="index-36"></span>Remote access<a class="headerlink" href="#remote-access" title="Permalink to this headline">¶</a></h3>
+<p>To execute commands at a remote machine/server, you need to log in to this machine. This is done
+using the <code class="docutils literal"><span class="pre">ssh</span></code> <span class="target" id="index-37"></span>command (<span class="target" id="index-38"></span>secure shell). In its simplest form, it takes just the machinename as
+parameter (assuming the username on the local machine and remote machine are identical):</p>
+<blockquote>
+<div><div class="highlight-console"><div class="highlight"><pre><span class="gp">$</span> ssh remote_server
+<span class="go">...</span>
+<span class="gp">$</span>
+</pre></div>
+</div>
+</div></blockquote>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Once logged in, <span class="target" id="index-39"></span>use <code class="docutils literal"><span class="pre">hostname,</span></code> <code class="docutils literal"><span class="pre">whoami,</span></code> etc. to
+determine on which machine you are currently working and to get a feeling for your
+environment!</p>
+</div>
+<p>To use a different username, you can use either:</p>
+<blockquote>
+<div><div class="highlight-console"><div class="highlight"><pre><span class="gp">$</span> ssh -l username remote_server
+<span class="go">...</span>
+<span class="gp">$</span>
+</pre></div>
+</div>
+</div></blockquote>
+<p>or</p>
+<blockquote>
+<div><div class="highlight-console"><div class="highlight"><pre><span class="gp">$</span> ssh username@remote_server
+<span class="go">...</span>
+<span class="gp">$</span>
+</pre></div>
+</div>
+</div></blockquote>
+<p>When connecting to a machine for the first time, it might display a warning:</p>
+<blockquote>
+<div><div class="highlight-console"><div class="highlight"><pre><span class="gp">$</span> ssh submaster
+<span class="go">The authenticity of host &#39;submaster (10.11.4.219)&#39; can&#39;t be established.</span>
+<span class="go">RSA key fingerprint is a4:2c:c1:a6:34:49:a3:a9:b2:c3:52:f5:37:94:69:f5.</span>
+<span class="go">Are you sure you want to continue connecting (yes/no)?</span>
+
+<span class="go">...</span>
+<span class="gp">$</span>
+</pre></div>
+</div>
+</div></blockquote>
+<p>Type <em>yes</em> here.
+If this message appears a second time, you should contact your IT specialist...</p>
+<p>To <span class="target" id="index-40"></span>disconnect from the remote machine, type:</p>
+<blockquote>
+<div><div class="highlight-console"><div class="highlight"><pre><span class="gp">$</span> <span class="nb">exit</span>
+</pre></div>
+</div>
+</div></blockquote>
+<p>If setup correctly, you can even use <em>graphical tools</em> from the remote server on the local machine.
+For this to work, you need to start the ssh session with the <code class="docutils literal"><span class="pre">-X</span></code> parameter:</p>
+<blockquote>
+<div><div class="highlight-console"><div class="highlight"><pre><span class="gp">$</span> ssh -X remote_server
+<span class="go">...</span>
+<span class="gp">$</span>
+</pre></div>
+</div>
+</div></blockquote>
+<p>Copying files to and from remote computers can be done using <code class="docutils literal"><span class="pre">scp</span></code>  (<span class="target" id="index-41"></span>secure copy).
+The order of parameters is the same as in <code class="docutils literal"><span class="pre">cp</span></code>: first the name of the source, then the name of the destination. Either one can be the remote part.</p>
+<blockquote>
+<div><div class="highlight-console"><div class="highlight"><pre><span class="gp">$</span> scp localfile server:/remotefile
+
+<span class="gp">$</span> scp server:/remotefile localfile
+</pre></div>
+</div>
+</div></blockquote>
+<p>An alternative username can be provided just as in ssh:</p>
+<blockquote>
+<div><div class="highlight-console"><div class="highlight"><pre><span class="gp">$</span> scp username@server:/remotefile localfile
+</pre></div>
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="io-and-redirections">
+<h3>IO and Redirections<a class="headerlink" href="#io-and-redirections" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="redirect">
+<h4>Redirect<a class="headerlink" href="#redirect" title="Permalink to this headline">¶</a></h4>
+<p><span class="target" id="index-42"></span>Redirect the output of one program into e.g. a file:</p>
+<p>Inserting the current date into a new file:</p>
+<blockquote>
+<div><div class="highlight-console"><div class="highlight"><pre><span class="gp">$</span> date &gt; file_containing_date
+<span class="gp">$</span>
+</pre></div>
+</div>
+</div></blockquote>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">You can easily <span class="target" id="index-43"></span>overwrite files by this!</p>
+</div>
+<p><span class="target" id="index-44"></span>Filtering lines containing the term &#8220;src&#8221; from FASTA files and inserting them into the file lines_with_src.txt:</p>
+<blockquote>
+<div><div class="highlight-console"><div class="highlight"><pre><span class="gp">$</span> <span class="nb">cd</span> ~/exercises/
+<span class="gp">$</span> grep -i <span class="s2">&quot;src&quot;</span> *.fasta &gt; lines_with_src.txt
+<span class="gp">$</span>
+</pre></div>
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="append">
+<h4><span class="target" id="index-45"></span>Append<a class="headerlink" href="#append" title="Permalink to this headline">¶</a></h4>
+<p>Append something to a file (rather than overwriting it):</p>
+<blockquote>
+<div><div class="highlight-console"><div class="highlight"><pre><span class="gp">$</span> date &gt;&gt; file_containing_date
+<span class="gp">$</span>
+</pre></div>
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="pipe">
+<span id="id1"></span><h4>Pipe<a class="headerlink" href="#pipe" title="Permalink to this headline">¶</a></h4>
+<p>Use the <span class="target" id="index-46"></span>pipe symbol (<code class="docutils literal"><span class="pre">|</span></code>) to feed the output of one program into the next program.
+Here: use <code class="docutils literal"><span class="pre">ls</span></code> to show the directory contents and then <span class="target" id="index-47"></span>use <code class="docutils literal"><span class="pre">grep</span></code> to only show those that contain fasta in their name:</p>
+<blockquote>
+<div><div class="highlight-console"><div class="highlight"><pre><span class="gp">$</span> <span class="nb">cd</span> ~/exercises
+<span class="gp">$</span> ls <span class="p">|</span> grep fasta
+<span class="go">EPSINS.fasta</span>
+<span class="go">FYN_HUMAN.fasta</span>
+<span class="go">P12931.fasta</span>
+<span class="go">SRC_HUMAN.fasta</span>
+<span class="gp">$</span>
+</pre></div>
+</div>
+</div></blockquote>
+</div>
+</div>
+<div class="section" id="environment-variables">
+<span id="id2"></span><h3>Environment Variables<a class="headerlink" href="#environment-variables" title="Permalink to this headline">¶</a></h3>
+<p><span class="target" id="index-48"></span>Environment variables are a set of dynamic named values that can affect the way running processes will behave on a computer.</p>
+<div class="section" id="home">
+<h4><span class="target" id="index-49"></span>$HOME<a class="headerlink" href="#home" title="Permalink to this headline">¶</a></h4>
+<p>Contains the location of the user&#8217;s home directory. Although the current user&#8217;s home directory can also be found out through the
+C functions <code class="docutils literal"><span class="pre">getpwuid</span></code> and <code class="docutils literal"><span class="pre">getuid,</span></code> <code class="docutils literal"><span class="pre">$HOME</span></code> is often used for convenience in various shell scripts (and other contexts).</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Do not change this variable unless you have a good reason and you know what you are doing!</p>
+</div>
+</div>
+<div class="section" id="path">
+<span id="id3"></span><h4><span class="target" id="index-50"></span>$PATH<a class="headerlink" href="#path" title="Permalink to this headline">¶</a></h4>
+<p><code class="docutils literal"><span class="pre">$PATH</span></code> contains a colon-separated (&#8216;:&#8217;) list of directories that the shell searches for commands that do not contain a slash in their name
+(commands with slashes are interpreted as file names to execute, and the shell attempts to execute the files directly).
+So if the directory <code class="docutils literal"><span class="pre">/usr/bin</span></code> is in <code class="docutils literal"><span class="pre">$PATH</span></code> (which it should), then the command <code class="docutils literal"><span class="pre">/usr/bin/less</span></code> can be accessed by simply typing <code class="docutils literal"><span class="pre">less</span></code> instead of
+<code class="docutils literal"><span class="pre">/usr/bin/less</span></code>. How convenient!</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p>If you ever need to change this variable, you should always <em>append</em> to it, rather
+than overwriting it:</p>
+<p>Overwriting (bad): <code class="docutils literal"><span class="pre">export</span> <span class="pre">PATH=/my/new/path</span></code>;</p>
+<p class="last">Appending (good): <code class="docutils literal"><span class="pre">export</span> <span class="pre">PATH=$PATH:/my/new/path</span></code></p>
+</div>
+</div>
+<div class="section" id="pager">
+<h4><span class="target" id="index-51"></span>$PAGER<a class="headerlink" href="#pager" title="Permalink to this headline">¶</a></h4>
+<p>The <code class="docutils literal"><span class="pre">$PAGER</span></code> variable contains the path to the program used to list the contents of files through (such <span class="target" id="index-52"></span>as <code class="docutils literal"><span class="pre">less</span></code> <span class="target" id="index-53"></span>or <code class="docutils literal"><span class="pre">more</span></code>).</p>
+</div>
+<div class="section" id="pwd">
+<h4><span class="target" id="index-54"></span>$PWD<a class="headerlink" href="#pwd" title="Permalink to this headline">¶</a></h4>
+<p>The <code class="docutils literal"><span class="pre">$PWD</span></code> variable points to the current directory. Equivalent to the output of the command <code class="docutils literal"><span class="pre">pwd</span></code> when called without arguments.</p>
+</div>
+<div class="section" id="displaying-environment-variables">
+<h4>Displaying environment variables<a class="headerlink" href="#displaying-environment-variables" title="Permalink to this headline">¶</a></h4>
+<p><span class="target" id="index-55"></span>Use <code class="docutils literal"><span class="pre">echo</span></code> to <span class="target" id="index-56"></span>display individual variables <cite>set`</cite> <span class="target" id="index-57"></span>or <code class="docutils literal"><span class="pre">env</span></code> to view all at once:</p>
+<blockquote>
+<div><div class="highlight-console"><div class="highlight"><pre><span class="gp">$</span> <span class="nb">echo</span> <span class="nv">$HOME</span>
+<span class="go">/localhome/teach01</span>
+<span class="gp">$</span> <span class="nb">set</span>
+<span class="go">...</span>
+<span class="gp">$</span> env
+<span class="go">...</span>
+<span class="gp">$</span>
+</pre></div>
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="setting-an-environment-variable">
+<h4>Setting an environment variable<a class="headerlink" href="#setting-an-environment-variable" title="Permalink to this headline">¶</a></h4>
+<p>Use <code class="docutils literal"><span class="pre">export</span></code> followed by the variable name and the value of the variable (separated by the equal sign) to <span class="target" id="index-58"></span>set an environment variable:</p>
+<blockquote>
+<div><div class="highlight-console"><div class="highlight"><pre><span class="gp">$</span> <span class="nb">export </span><span class="nv">PAGER</span><span class="o">=</span>/usr/bin/less
+<span class="gp">$</span>
+</pre></div>
+</div>
+</div></blockquote>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">An environment variable is only valid for your current session. Once you logout of your current session, it is lost or reset.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Introduction to the Linux Commandline</a><ul>
+<li><a class="reference internal" href="#why-use-the-commandline">Why Use the Commandline</a></li>
+<li><a class="reference internal" href="#general-remarks-regarding-using-unix-linux-systems">General Remarks Regarding Using UNIX/Linux Systems</a><ul>
+<li><a class="reference internal" href="#absolute-paths-relative-paths">Absolute Paths / Relative Paths</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#general-structure-of-linux-commands">General Structure of Linux Commands</a></li>
+<li><a class="reference internal" href="#a-journey-through-commandland">A Journey through Commandland</a><ul>
+<li><a class="reference internal" href="#useful-terminal-tools-keyboard-shortcuts">Useful Terminal Tools &amp; Keyboard Shortcuts</a><ul>
+<li><a class="reference internal" href="#navigating-previous-commands">Navigating previous commands</a></li>
+<li><a class="reference internal" href="#copying-pasting-using-the-mouse">Copying / Pasting using the mouse</a></li>
+<li><a class="reference internal" href="#saving-time-avoiding-typos-with-autocompletion">Saving time/avoiding typos with autocompletion</a></li>
+<li><a class="reference internal" href="#printing-some-text">Printing some text</a></li>
+<li><a class="reference internal" href="#interrupting-commands">Interrupting commands</a></li>
+<li><a class="reference internal" href="#leave-the-shell">Leave the shell</a></li>
+<li><a class="reference internal" href="#clear-clear-the-screen">clear - Clear the &#8220;screen&#8221;</a></li>
+<li><a class="reference internal" href="#reset-reset-your-terminal">reset - Reset your terminal</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#getting-help">Getting Help</a><ul>
+<li><a class="reference internal" href="#h-help-option-no-parameters"><code class="docutils literal"><span class="pre">-h/--help</span></code> option, no parameters</a></li>
+<li><a class="reference internal" href="#man-show-the-manual-page-of-a-command">man - show the manual page of a command</a></li>
+<li><a class="reference internal" href="#apropos-list-manpages-containing-a-keyword-in-their-description">apropos - list manpages containing a keyword in their description</a></li>
+<li><a class="reference internal" href="#usr-share-doc">/usr/share/doc/</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#who-am-i-where-am-i">Who am I, where am I</a><ul>
+<li><a class="reference internal" href="#whoami-print-your-username">whoami - Print your username</a></li>
+<li><a class="reference internal" href="#hostname-print-the-name-of-the-computer">hostname - Print the name of the computer</a></li>
+<li><a class="reference internal" href="#pwd-print-the-current-working-directory">pwd - Print the current working directory</a></li>
+<li><a class="reference internal" href="#date-print-current-date-and-time">date - Print current date and time</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#moving-around">Moving Around</a><ul>
+<li><a class="reference internal" href="#cd-change-the-working-directory">cd - Change the working directory</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#see-what-s-around">See What&#8217;s Around</a><ul>
+<li><a class="reference internal" href="#ls-list-directory-contents">ls - List directory contents</a></li>
+<li><a class="reference internal" href="#digression-shell-globs">Digression: Shell globs</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#organize-files-and-folders">Organize Files and Folders</a><ul>
+<li><a class="reference internal" href="#touch-create-a-file-or-change-last-modification-date-of-an-existing-file">touch - Create a file or change last modification date of an existing file</a></li>
+<li><a class="reference internal" href="#cp-copy-files-and-folders">cp - Copy files and folders</a></li>
+<li><a class="reference internal" href="#rsync-intelligently-copying-files-and-folders">rsync - intelligently copying files and folders</a></li>
+<li><a class="reference internal" href="#rm-remove-files-and-directories">rm - Remove files and directories</a></li>
+<li><a class="reference internal" href="#mv-move-and-rename-files-and-folders">mv - Move and rename files and folders</a></li>
+<li><a class="reference internal" href="#mkdir-create-a-new-directory">mkdir - Create a new directory</a></li>
+<li><a class="reference internal" href="#rmdir-remove-an-empty-directory">rmdir - Remove an empty directory</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#view-files">View Files</a><ul>
+<li><a class="reference internal" href="#cat-print-files-on-terminal-concatenate">cat - Print files on terminal (concatenate)</a></li>
+<li><a class="reference internal" href="#head-print-first-lines-of-a-textfile">head - Print first lines of a textfile</a></li>
+<li><a class="reference internal" href="#tail-print-last-lines-of-a-textfile">tail - Print last lines of a textfile</a></li>
+<li><a class="reference internal" href="#less-view-and-navigate-files">less - View and navigate files</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#extracting-informations-from-files">Extracting Informations from Files</a><ul>
+<li><a class="reference internal" href="#grep-find-lines-matching-a-pattern-in-textfiles">grep - Find lines matching a pattern in textfiles</a></li>
+<li><a class="reference internal" href="#cut-extracting-columns-from-textfiles">cut - extracting columns from textfiles</a></li>
+<li><a class="reference internal" href="#sort-sort-a-textfile">sort - sort a textfile</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#useful-filetools">Useful Filetools</a><ul>
+<li><a class="reference internal" href="#file-determine-the-filetype">file - determine the filetype</a></li>
+<li><a class="reference internal" href="#which-find-a-executable-command">which - find a (executable) command</a></li>
+<li><a class="reference internal" href="#find-search-find-files-in-any-given-directory">find - search/find files in any given directory</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#permissions">Permissions</a><ul>
+<li><a class="reference internal" href="#changing-permissions">Changing Permissions</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#remote-access">Remote access</a></li>
+<li><a class="reference internal" href="#io-and-redirections">IO and Redirections</a><ul>
+<li><a class="reference internal" href="#redirect">Redirect</a></li>
+<li><a class="reference internal" href="#append">Append</a></li>
+<li><a class="reference internal" href="#pipe">Pipe</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#environment-variables">Environment Variables</a><ul>
+<li><a class="reference internal" href="#home">$HOME</a></li>
+<li><a class="reference internal" href="#path">$PATH</a></li>
+<li><a class="reference internal" href="#pager">$PAGER</a></li>
+<li><a class="reference internal" href="#pwd">$PWD</a></li>
+<li><a class="reference internal" href="#displaying-environment-variables">Displaying environment variables</a></li>
+<li><a class="reference internal" href="#setting-an-environment-variable">Setting an environment variable</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="index.html"
+                        title="previous chapter">Welcome to Introduction to the Linux Commandline&#8217;s documentation!</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="exercises_beginner.html"
+                        title="next chapter">Exercises</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/introduction.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="exercises_beginner.html" title="Exercises"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="index.html" title="Welcome to Introduction to the Linux Commandline’s documentation!"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Introduction to the Linux Commandline</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2012,2013,2014,2015 Holger Dinkel, Frank Thommen &amp; Toby Hodges.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
+    </div>
+  </body>
+</html>

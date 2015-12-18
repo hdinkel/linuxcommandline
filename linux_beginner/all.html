@@ -1,0 +1,941 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <title>Introduction to the Linux Commandline</title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <link rel="stylesheet" type="text/css" media="screen, projection, print"
+    href="http://www.w3.org/Talks/Tools/Slidy2/styles/slidy.css" />
+  <script src="http://www.w3.org/Talks/Tools/Slidy2/scripts/slidy.js"
+    charset="utf-8" type="text/javascript"></script>
+</head>
+<body>
+<div class="slide titlepage">
+  <h1 class="title">Introduction to the Linux Commandline</h1>
+  <p class="author">
+
+  </p>
+</div>
+<div id="why-use-the-commandline" class="titleslide slide section level1"><h1>Why Use the Commandline</h1></div>
+<div id="general-remarks-regarding-using-unixlinux-systems" class="titleslide slide section level1"><h1>General Remarks Regarding Using UNIX/Linux Systems</h1></div><div id="absolute-paths-relative-paths" class="slide section level2">
+<h1>Absolute Paths / Relative Paths</h1>
+<p>A path describes the location of a file/folder in the filesystem: It is important to understand that there are basically two ways to describe such a path: Either by using an <em>absolute</em> pathname, or by using a <em>relative</em> pathname. The difference is that <em>absolute</em> paths always start with a &quot;slash <code>/</code>&quot;. This &quot;slash&quot; denotes the so called &quot;root&quot; of the filesystem (see below). <em>Relative</em> paths in contrast always start with a directory name and denote the location of a file/folder <em>relative</em> to the current directory.</p>
+<blockquote>
+<p><strong>note</strong></p>
+<p>When in doubt, it's best to use <em>absolute</em> filenames. Commands given with absolute pathname are more easily repeated later, as they can be run regardless of the current working directory (unlike relative paths).</p>
+</blockquote>
+</div>
+<div id="general-structure-of-linux-commands" class="titleslide slide section level1"><h1>General Structure of Linux Commands</h1></div>
+<div id="a-journey-through-commandland" class="titleslide slide section level1"><h1>A Journey through Commandland</h1></div><div id="useful-terminal-tools-keyboard-shortcuts" class="slide section level2">
+<h1>Useful Terminal Tools &amp; Keyboard Shortcuts</h1>
+<h3 id="navigating-previous-commands">Navigating previous commands</h3>
+<p>You can use the ↑/↓ (up/down) arrow keys to navigate previously entered command and the ←/→ (left/right) keys to modify it before re-executing it.</p>
+<h3 id="copying-pasting-using-the-mouse">Copying / Pasting using the mouse</h3>
+<p>On most Linux systems you can use the mouse to select text and then press the middle mouse button to paste that text at the position where your cursor is. This is especially useful for long directory or filenames.</p>
+<h3 id="saving-timeavoiding-typos-with-autocompletion">Saving time/avoiding typos with autocompletion</h3>
+<p>On most Linux systems you can autocomplete command names and filepaths by pressing TAB. This looks at the characters that you have entered so far and tries to predict what the rest of the command/path will be. This can save you from having to type out long command and file/directory names, and also reduces the likelihood of you accidentally spelling something incorrectly.</p>
+<h3 id="printing-some-text">Printing some text</h3>
+<p>To simply print some text in the console, use &lt;echo&gt; <code>echo</code>:</p>
+<p><strong>Usage</strong>: <code>echo</code></p>
+<blockquote>
+<pre><code>$ echo &quot;this is some text&quot;
+this is some text
+$</code></pre>
+</blockquote>
+<p>It can also be used to print the content of a variable, see section environment_variables...</p>
+<h3 id="interrupting-commands-command-interrupt">Interrupting commands &lt;command; interrupt&gt;</h3>
+<p>Whenever a program gets stuck or takes too long to finish, you can <em>interrupt</em> it with the shortcut CONTROL-C.</p>
+<h3 id="leave-the-shell">Leave the shell</h3>
+<p>To exit the shell/terminal, just type <code>exit</code> or press CONTROL-D.</p>
+<h3 id="clear---clear-the-screen">clear - Clear the &quot;screen&quot;</h3>
+<p><strong>Usage</strong>: <code>clear</code></p>
+<blockquote>
+<pre><code>$ clear
+$</code></pre>
+</blockquote>
+<p>In case the output of the terminal/screen gets cluttered, you can use <code>clear</code> to redraw the screen...</p>
+<blockquote>
+<pre><code>$ cat /bin/echo
+$ ...(garbled output here)
+$ clear
+$</code></pre>
+</blockquote>
+<blockquote>
+<p><strong>note</strong></p>
+<p>If this doesn't work, you can use <code>reset</code> to perform a re-initialization of the terminal:</p>
+</blockquote>
+<h3 id="reset---reset-your-terminal">reset - Reset your terminal</h3>
+<p><strong>Usage</strong>: <code>reset [options]</code></p>
+<blockquote>
+<pre><code>$ reset
+$</code></pre>
+</blockquote>
+</div><div id="getting-help" class="slide section level2">
+<h1>Getting Help</h1>
+<h3 id="h--help-option-no-parameters"><code>-h/--help</code> option, no parameters</h3>
+<p>Many commands support a &quot;help&quot; option, either through <code>-h</code> or through <code>--help</code>. Other commands will show a help page or at least a short usage overview if you provide incorrect commandline options.</p>
+<h3 id="man---show-the-manual-page-of-a-command">man - show the manual page of a command</h3>
+<p><strong>Usage</strong>: <code>man command or file</code></p>
+<blockquote>
+<pre><code>$ man echo
+echo(1)
+
+NAME
+       echo - display a line of text
+
+SYNOPSIS
+       echo [SHORT-OPTION]... [STRING]...
+       echo LONG-OPTION
+  ...
+$</code></pre>
+</blockquote>
+<p>For the navigation within a manpage and how to exit the manpage, see the paragraph regarding less &lt;less&gt;.</p>
+<blockquote>
+<p><strong>note</strong></p>
+<p>The behaviour of <code>man</code> is dependent of the <code>$PAGER</code> environment variable.</p>
+</blockquote>
+<h3 id="apropos---list-manpages-containing-a-keyword-in-their-description">apropos - list manpages containing a keyword in their description</h3>
+<p><strong>Usage</strong>: <code>apropos keyword</code></p>
+<blockquote>
+<pre><code>$ apropos who
+...
+who                  (1)  - show who is logged on
+who                  (1)  - display who is on the system
+whoami               (1)  - print effective userid
+$</code></pre>
+</blockquote>
+<p>Use <code>apropos</code> to find candidates for specific tasks.</p>
+<h3 id="usrsharedoc">/usr/share/doc/</h3>
+<p>The <code>/usr/share/doc/</code> directory in some Linux distributions contains additional documentation of installed software packages.</p>
+</div><div id="who-am-i-where-am-i" class="slide section level2">
+<h1>Who am I, where am I</h1>
+<h3 id="whoami---print-your-username">whoami - Print your username</h3>
+<p>Linux is a multi-User Operating System supporting thousands of users on the same machine. As usernames can differ between machines, it's important to know your username on any particular machine.</p>
+<p><strong>Usage</strong>: <code>whoami</code></p>
+<blockquote>
+<pre><code>$ whoami
+fthommen
+$</code></pre>
+</blockquote>
+<h3 id="hostname---print-the-name-of-the-computer">hostname - Print the name of the computer</h3>
+<p>Each machine on the network has a unique name which is used to distinguish one from another.</p>
+<p><strong>Usage</strong>: <code>hostname</code></p>
+<blockquote>
+<pre><code>$ hostname
+pc-teach01
+$</code></pre>
+</blockquote>
+<h3 id="pwd---print-the-current-working-directory">pwd - Print the current working directory</h3>
+<p>A Linux filesystem contains countless directories with many subdirectories which makes it easy to get lost. It is good practice to check your position within the filesystem regularly.</p>
+<p><strong>Usage</strong>: <code>pwd</code></p>
+<blockquote>
+<pre><code>$ pwd
+/home/fthommen
+$</code></pre>
+</blockquote>
+<h3 id="date---print-current-date-and-time">date - Print current date and time</h3>
+<p><strong>Usage</strong>: <code>date</code></p>
+<blockquote>
+<pre><code>$ date
+Tue Sep 25 19:57:50 CEST 2012
+$</code></pre>
+</blockquote>
+<blockquote>
+<p><strong>note</strong></p>
+<p>The command &lt;time&gt; <code>time</code> does something completely different from <code>date</code> and is <em>not</em> used to show the current time.</p>
+</blockquote>
+</div><div id="moving-around" class="slide section level2">
+<h1>Moving Around</h1>
+<h3 id="cd---change-the-working-directory">cd - Change the working directory</h3>
+<p><strong>Usage</strong>: <code>cd [new_directory]</code></p>
+<blockquote>
+<pre><code>$ pwd
+/home/fthommen
+$ cd /usr/bin
+$ pwd
+/usr/bin
+$</code></pre>
+</blockquote>
+<blockquote>
+<p><strong>note</strong></p>
+<p>Using <code>cd</code> without a directory is equivalent to &quot;<code>cd ~</code>&quot; and changes into the users's homedirectory</p>
+</blockquote>
+<blockquote>
+<p><strong>note</strong></p>
+<p>Please note the difference between absolute paths (starting with &quot;<code>/</code>&quot;) and relative paths (starting with a directory name).</p>
+</blockquote>
+<p>Special directories:</p>
+<ul>
+<li>&quot;<code>.</code>&quot;: The current working directory</li>
+<li>&quot;<code>/</code>&quot;: The root directory of this computer</li>
+<li>&quot;<code>..</code>&quot;: The parent directory of the current working directory</li>
+<li>&quot;<code>~</code>&quot;: Your homedirectory</li>
+</ul>
+<blockquote>
+<pre><code>$ pwd
+/usr
+$ cd /bin
+$ pwd
+/bin</code></pre>
+<pre><code>$ pwd
+/usr
+$ cd 
+$ pwd
+/home/fthommen</code></pre>
+</blockquote>
+</div><div id="see-whats-around" class="slide section level2">
+<h1>See What's Around</h1>
+<h3 id="ls---list-directory-contents">ls - List directory contents</h3>
+<dl>
+<dt><strong>Usage</strong>:</dt>
+<dd><p><code>ls [options] [file(s) or directory/ies]</code></p>
+</dd>
+</dl>
+<pre><code>$ ls
+/home/fthommen
+$ ls -l aa.pdf
+-rw-r--r-- 1 fthommen cmueller 0 Sep 24 10:59 aa.pdf
+$</code></pre>
+<p>Useful options:</p>
+<p>-l Long listing with permissions, user, group and last modification date -1 Print listing in one column only -a Show all files (hidden, &quot;.&quot; and &quot;..&quot;) -A Show almost all files (hidden, but not &quot;.&quot; and &quot;..&quot;) -F Show filetypes (nothing = regular file, &quot;/&quot; = directory, &quot;*&quot; = executable file, &quot;@&quot; = symbolic link) -d Show directory information instead of directory content -t Sort listing by modification time (most recent on top)</p>
+<p><img src="_static/LongListingDeconstructed.png" alt="Elements of a long file listing (ls -l)" /></p>
+<h3 id="digression-shell-globs">Digression: Shell globs</h3>
+<p>Files and folders can't only be referred to with their full name, but also with so-called &quot;Shell Globs&quot;, which are a kind of simple pattern to address groups of files and folders. Instead of explicit names you can use the following placeholders:</p>
+<ul>
+<li><code>?:</code> Any single character</li>
+<li><code>*:</code> Any number of any character (including no character at all, but <strong>not</strong> matching a starting &quot;.&quot;)</li>
+<li><code>[...]:</code> One of the characters included in the brackets. Use &quot;-&quot; to define ranges of characters</li>
+<li><code>{word1,word2}:</code> Each individual word is expanded</li>
+</ul>
+<p>Examples:</p>
+<ul>
+<li><code>*.pdf:</code> All files having the extension &quot;.pdf&quot;</li>
+<li><code>?.jpg:</code> Jpeg file consisting of only one character</li>
+<li><code>[0-9]*.txt:</code> All files starting with a number and having the extension &quot;.txt&quot;</li>
+<li><code>*.???:</code> All files having a three-character extension</li>
+<li><code>photo.{jpg,png}:</code> &quot;photo.jpg&quot; and &quot;photo.png&quot;</li>
+</ul>
+<blockquote>
+<p><strong>note</strong></p>
+<p>The special directory &quot;<code>~</code>&quot; mentioned above is a shell glob, too.</p>
+</blockquote>
+</div><div id="organize-files-and-folders" class="slide section level2">
+<h1>Organize Files and Folders</h1>
+<h3 id="touch---create-a-file-or-change-last-modification-date-of-an-existing-file">touch - Create a file or change last modification date of an existing file</h3>
+<p><strong>Usage</strong>: <code>touch file(s) or directory/ies</code></p>
+<blockquote>
+<pre><code>$ ls afile
+ls: afile: No such file or directory
+$ touch afile
+$ ls afile
+afile
+$</code></pre>
+<pre><code>$ ls -l aa.pdf
+-rw-r--r-- 1 fthommen cmueller 0 Sep 24 10:59 aa.pdf
+$ touch aa.pdf
+$ ls -l aa.pdf
+-rw-r--r-- 1 fthommen cmueller 0 Sep 25 22:01 aa.pdf
+$</code></pre>
+</blockquote>
+<h3 id="cp---copy-files-and-folders">cp - Copy files and folders</h3>
+<p><strong>Usage</strong>: <code>cp [options] sourcefile destinationfile</code></p>
+<blockquote>
+<pre><code>$ cp /usr/bin/less /tmp/backup_of_less
+$</code></pre>
+</blockquote>
+<p><strong>Useful options</strong>:</p>
+<p>-r Copy recursively -i Interactive operation, ask before overwriting an existing file -p Preserve owner, permissions and timestamp</p>
+<p><strong>Examples</strong>:</p>
+<p>If the last filename given is nonexisting then the first file is copied as this new filename:</p>
+<pre><code>$ cp /usr/bin/less /tmp/
+$</code></pre>
+<p>Be careful! If the last filename given does exist, this file will be overwritten and replaced with a copy of the first file.</p>
+<p>If the last filename given is an (existing!) directory, then the file is copied into this directory: :</p>
+<pre><code>$ cp /usr/bin/less /tmp/
+$</code></pre>
+<p>This allows us to copy multiple files into the same directory at the same time: :</p>
+<pre><code>$ cp /usr/bin/less /usr/bin/grep /usr/bin/tail /tmp/
+$</code></pre>
+<p>To recursively copy files, we need to specify the <code>-r</code> option. Here, we copy a set of exercise files from the network share into our home directory: :</p>
+<pre><code>$ cp -r /g/bio-it/courses/LSB  ~/exercises
+$</code></pre>
+<h3 id="rsync---intelligently-copying-files-and-folders">rsync - intelligently copying files and folders</h3>
+<p><strong>Usage</strong>: <code>rsync [options] source target</code></p>
+<blockquote>
+<pre><code>$ rsync -av /etc/ root@taperobot:/etc-backup
+...
+$</code></pre>
+</blockquote>
+<p><code>rsync</code> allows you to copy files or folders locally or to wherever you have <code>ssh</code> access. You can have <code>rsync</code> copy only newer files or only older files. If copy operation is interrupted, you can rerun <code>rsync</code> and it will only copy the missing files (in contrast to <code>cp</code> which will just copy everything again).</p>
+<p><code>source</code> and <code>target</code> can be local directories or have the form <code>user@remotehost:directory</code>, in which case you'll have to give your password for the remote host. This latter version will copy over the network.</p>
+<blockquote>
+<p><strong>note</strong></p>
+<p><code>rsync</code> is one of the few cases, where it effectively matters if a directory is written with an ending slash (&quot;/&quot;) or nor: If the source is a directory and ends with a slash, then the <em>content</em> of this directory will be copied into the target directory. If the source doesn't have an ending slash, then <em>a directory with the same name</em> will be created <em>within the target directory</em></p>
+</blockquote>
+<p><strong>Useful option combinations</strong>:</p>
+<p>-av Verbosely copies all source files which are different (different size, different age) or missing from the source. <strong>Beware</strong>: This will also copy files which are older on the source side -au Silently copies all source files which are different (different size, different age) or missing from the source. This combination will <em>not</em> overwrite newer files by older ones</p>
+<dl>
+<dt>This should not copy any new files, as we previously copied these already:</dt>
+<dd><pre><code>$ rsync -av /g/bio-it/courses/LSB/exercises/  ~/exercises/
+$</code></pre>
+</dd>
+</dl>
+<h3 id="rm---remove-files-and-directories">rm - Remove files and directories</h3>
+<p><strong>Usage</strong>:</p>
+<blockquote>
+<p><code>rm [options] file(s)</code></p>
+<p><code>rm -r [options] directory/ies</code></p>
+</blockquote>
+<blockquote>
+<pre><code>$ ls afile
+afile
+$ rm afile
+$ ls afile
+ls: afile: No such file or directory
+$</code></pre>
+</blockquote>
+<p><strong>Useful options</strong>:</p>
+<p>-i Ask for confirmation of each removal -r Remove recursively -f Force the removal (no questions, no errors if a file doesn't exist)</p>
+<blockquote>
+<p><strong>note</strong></p>
+<p>rm without the -i option will usually not ask you if you really want to remove the file or directory</p>
+</blockquote>
+<h3 id="mv---move-and-rename-files-and-folders">mv - Move and rename files and folders</h3>
+<p><strong>Usage</strong>:</p>
+<blockquote>
+<p><code>mv [options] sourcefile destinationfile</code></p>
+<p><code>mv [options] sourcefile(s) destinationdirectory</code></p>
+</blockquote>
+<blockquote>
+<pre><code>$ ls *.txt
+a.txt
+$ mv a.txt b.txt
+$ ls *.txt
+b.txt
+$</code></pre>
+</blockquote>
+<p><strong>Useful options</strong>:</p>
+<p>-i Ask for confirmation of each removal</p>
+<blockquote>
+<p><strong>note</strong></p>
+<p>You cannot overwrite an existing directory by another one with mv</p>
+</blockquote>
+<h3 id="mkdir---create-a-new-directory">mkdir - Create a new directory</h3>
+<p><strong>Usage</strong>: <code>mkdir [options] directory</code></p>
+<blockquote>
+<pre><code>$ ls adir/
+ls: adir/: No such file or directory
+$ mkdir adir
+$ ls adir
+$</code></pre>
+</blockquote>
+<p><strong>Useful options</strong>:</p>
+<p>-p Create parent directories (when creating nested directories)</p>
+<pre><code>$ mkdir adir/bdir
+mkdir: cannot create directory &#39;adir/bdir&#39;: No such file or directory
+$ mkdir –p adir/bdir
+$</code></pre>
+<h3 id="rmdir---remove-an-empty-directory">rmdir - Remove an empty directory</h3>
+<p><strong>Usage</strong>: <code>rmdir directory</code></p>
+<blockquote>
+<pre><code>$ rmdir adir/
+$</code></pre>
+</blockquote>
+<blockquote>
+<p><strong>note</strong></p>
+<p>If the directory is not empty, <code>rmdir</code> will complain and not remove it.</p>
+</blockquote>
+</div><div id="view-files" class="slide section level2">
+<h1>View Files</h1>
+<h3 id="cat---print-files-on-terminal-concatenate">cat - Print files on terminal (concatenate)</h3>
+<p><strong>Usage</strong>: <code>cat [options] file(s)</code></p>
+<blockquote>
+<pre><code>$ cat  P12931.fasta backup_of_P12931.fasta
+...
+$</code></pre>
+</blockquote>
+<blockquote>
+<p><strong>note</strong></p>
+<p>The command &lt;cat&gt; <code>cat</code> only makes sense for short files or for e.g. combining several files into one. See the redirection examples later.</p>
+</blockquote>
+<h3 id="head---print-first-lines-of-a-textfile">head - Print first lines of a textfile</h3>
+<p><code>head</code> is a program on Unix and Unix-like systems used to display the beginning of a text file or piped data.</p>
+<p><strong>Usage</strong>: <code>head [options] file(s)</code></p>
+<blockquote>
+<pre><code>$ head /etc/passwd
+root:x:0:0:root:/root:/bin/bash
+bin:x:1:1:bin:/bin:/sbin/nologin
+daemon:x:2:2:daemon:/sbin:/sbin/nologin
+adm:x:3:4:adm:/var/adm:/sbin/nologin
+lp:x:4:7:lp:/var/spool/lpd:/sbin/nologin
+sync:x:5:0:sync:/sbin:/bin/sync
+shutdown:x:6:0:shutdown:/sbin:/sbin/shutdown
+halt:x:7:0:halt:/sbin:/sbin/halt
+mail:x:8:12:mail:/var/spool/mail:/sbin/nologin
+news:x:9:13:news:/etc/news:
+$</code></pre>
+</blockquote>
+<p><strong>Useful options</strong>:</p>
+<p>-n NUM Print NUM lines (default is 10)</p>
+<h3 id="tail---print-last-lines-of-a-textfile">tail - Print last lines of a textfile</h3>
+<p>The <code>tail</code> utility displays the last few lines of a file or, by default, its standard input, to the standard output.</p>
+<p><strong>Usage</strong>: <code>tail [options] file(s)</code></p>
+<blockquote>
+<pre><code>$ tail -n 3 /etc/passwd
+xfs:x:43:43:X Font Server:/etc/X11/fs:/sbin/nologin
+gdm:x:42:42::/var/gdm:/sbin/nologin
+sabayon:x:86:86:Sabayon user:/home/sabayon:/sbin/nologin
+$</code></pre>
+</blockquote>
+<p><strong>Useful options</strong>:</p>
+<p>-n NUM Print NUM lines (default is 10) -f &quot;Follow&quot; a file (print new lines as they are written to the file)</p>
+<h3 id="less---view-and-navigate-files">less - View and navigate files</h3>
+<p><strong>Usage</strong>: <code>less [options] file(s)</code></p>
+<blockquote>
+<pre><code>$ less  P12931.fasta backup_of_P12931.fasta
+...
+$</code></pre>
+</blockquote>
+<blockquote>
+<p><strong>note</strong></p>
+<p>This is the default &quot;pager&quot; (a program for viewing files page by page, not an old-fashioned telecommunications device) for manpages under Linux unless you redefine your <code>$PAGER</code> environment variable &lt;environment_variables&gt;</p>
+</blockquote>
+<p><strong>Navigation within less</strong>:</p>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Key(s):</th>
+<th align="left">Effect:</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">up, down, right, left:</td>
+<td align="left">use cursor keys</td>
+</tr>
+<tr class="even">
+<td align="left">top of document:</td>
+<td align="left">g</td>
+</tr>
+<tr class="odd">
+<td align="left">bottom of document:</td>
+<td align="left">G</td>
+</tr>
+<tr class="even">
+<td align="left">search:</td>
+<td align="left">&quot;/&quot; + search-term</td>
+</tr>
+<tr class="odd">
+<td align="left">find next match:</td>
+<td align="left">n</td>
+</tr>
+<tr class="even">
+<td align="left">find previous match:</td>
+<td align="left">N</td>
+</tr>
+<tr class="odd">
+<td align="left">quit:</td>
+<td align="left">q</td>
+</tr>
+</tbody>
+</table>
+</div><div id="extracting-informations-from-files" class="slide section level2">
+<h1>Extracting Informations from Files</h1>
+<h3 id="grep---find-lines-matching-a-pattern-in-textfiles">grep - Find lines matching a pattern in textfiles</h3>
+<p><code>grep</code> is a command-line utility for searching plain-text data sets for lines matching a regular expression.</p>
+<p><strong>Usage</strong>: <code>grep [options] pattern file(s)</code></p>
+<blockquote>
+<pre><code>$ grep -i ensembl P04637.txt
+DR   Ensembl; ENST00000269305; ENSP00000269305; ENSG00000141510. 
+DR   Ensembl; ENST00000359597; ENSP00000352610; ENSG00000141510. 
+DR   Ensembl; ENST00000419024; ENSP00000402130; ENSG00000141510. 
+DR   Ensembl; ENST00000420246; ENSP00000391127; ENSG00000141510. 
+DR   Ensembl; ENST00000445888; ENSP00000391478; ENSG00000141510. 
+DR   Ensembl; ENST00000455263; ENSP00000398846; ENSG00000141510. 
+$</code></pre>
+</blockquote>
+<p><strong>Useful options</strong>:</p>
+<p>-v Print lines that do not match -i Search case-insensitive -l List files with matching lines, not the lines itself -L List files without matches -c Print count of matching lines for each file -A NUM print NUM lines of trailing context (After) -B NUM print NUM lines of leading context (Before) -C NUM print NUM lines of output context (Context)</p>
+<p><strong>Examples</strong>:</p>
+<ul>
+<li><p>List all files in the current directory which contain the searchterm <code>Ensembl</code>: :</p>
+<pre><code>$ grep -l Ensembl ./*
+P04637.txt
+P12931.txt</code></pre></li>
+</ul>
+<blockquote>
+<p><strong>note</strong></p>
+<p>You cannot combine the option <code>-v</code> and <code>-l</code> to find files which do not contain a certain searchterm. The reason is that grep works line-based and not really file-based... Therefore you should rather use the uppercase <code>-L</code> option!</p>
+</blockquote>
+<ul>
+<li><p>List all files in the current directory which <strong>do not</strong> contain the searchterm <code>Ensembl</code>: :</p>
+<pre><code>$ grep -L Ensembl ./*
+1FMK.pdb
+3A4O.pdb
+...</code></pre></li>
+<li><p>Count the number of occurrences (case insensitive!) of the term <code>atom</code> in all pdb files: :</p>
+<pre><code>$ grep -ic atom ./*.pdb</code></pre></li>
+<li><p>Find the term 'Homo sapiens' in the file P04637.txt, but also print two lines before the match: :</p>
+<pre><code>$ grep -A2 &#39;Homo sapiens&#39; P04637.txt</code></pre></li>
+<li><p>Find the term 'Homo sapiens' in the file P04637.txt, but also print the three lines following the match: :</p>
+<pre><code>$ grep -B3 &#39;Homo sapiens&#39; P04637.txt</code></pre></li>
+<li><p>Find the term 'Homo sapiens' in the file P04637.txt, but also print the surrounding five lines: :</p>
+<pre><code>$ grep -C5 &#39;Homo sapiens&#39; P04637.txt</code></pre></li>
+</ul>
+<h3 id="cut---extracting-columns-from-textfiles">cut - extracting columns from textfiles</h3>
+<p><code>cut</code> allows to get at individual columns in structured textfiles (for instance CSV files). By default, <code>cut</code> assumes the columns are TAB-separated.</p>
+<p><strong>Usage</strong>: <code>cut [options] file(s)</code></p>
+<p><strong>Useful options</strong>:</p>
+<p>-d DELIM use DELIM instead of TAB for field delimiter. Make sure to use quotes here! -f select only these fields; this can either be a single field, multiple individual fields separated by comma or a range of startfield and endfield separated by dash '-'</p>
+<p><strong>Examples</strong>:</p>
+<blockquote>
+<p>extract column six from the file <em>~/exercises/P12931.csv</em> (which is separated by semicolon ';'):</p>
+<pre><code>$ cut -d&#39;;&#39; -f6 ~/exercises/P12931.csv
+PMID 
+2136766 
+11804588 
+...
+$</code></pre>
+<p>extract columns two, three, eight, nine and ten from the same file:</p>
+<pre><code>$ cut -d&#39;;&#39; -f2,3,8-10 ~/exercises/P12931.csv
+S; 12; 0.21; ; - 
+S; 17; 0.24; MOD_PKA_1; - 
+S; 17; 0.24; MOD_PKA_1; - 
+S; 17; 0.24; MOD_PKA_1; -
+...
+$</code></pre>
+</blockquote>
+<h3 id="sort---sort-a-textfile">sort - sort a textfile</h3>
+<p>The <code>sort</code> utility is used to sort a textfile (alphabetically or numerically).</p>
+<p><strong>Usage</strong>: <code>sort [options] file(s)</code></p>
+<blockquote>
+<pre><code>$ sort /etc/passwd
+...
+$</code></pre>
+</blockquote>
+<p><strong>Useful options</strong>:</p>
+<p>-f fold lower case to upper case characters -n compare according to string numerical value -b ignore leading blanks -r reverse the result of comparisons</p>
+</div><div id="useful-filetools" class="slide section level2">
+<h1>Useful Filetools</h1>
+<h3 id="file---determine-the-filetype">file - determine the filetype</h3>
+<p><strong>Usage</strong>: <code>file [options] file(s)</code></p>
+<blockquote>
+<pre><code>$ file /bin/date
+/bin/date: ELF 32-bit LSB executable
+$ file /bin
+/bin: directory
+$ file SRC_HUMAN.fasta
+SRC_HUMAN.fasta: ASCII text
+$</code></pre>
+</blockquote>
+<blockquote>
+<p><strong>note</strong></p>
+<p>The command <code>file</code> uses certain tests and some magic to determine the type of a file</p>
+</blockquote>
+<h3 id="which---find-a-executable-command">which - find a (executable) command</h3>
+<p><strong>Usage</strong>: <code>which [options] command(s)</code></p>
+<blockquote>
+<pre><code>$ which date
+/bin/date
+$ which eclipse
+/usr/bin/eclipse
+$</code></pre>
+</blockquote>
+<h3 id="find---searchfind-files-in-any-given-directory">find - search/find files in any given directory</h3>
+<p><strong>Usage</strong>: <code>find [starting path(s)] [search filter]</code></p>
+<blockquote>
+<pre><code>$ find /etc
+/etc
+/etc/printcap
+/etc/protocols
+/etc/xinetd.d
+/etc/xinetd.d/ktalk
+...
+$</code></pre>
+</blockquote>
+<p><code>find</code> is a powerful command with lots of possible search filters. Refer to the manpage for a complete list.</p>
+<p><strong>Examples</strong>:</p>
+<ul>
+<li>Find by name:</li>
+</ul>
+<blockquote>
+<pre><code>$ find . -name SRC_HUMAN.fasta
+./SRC_HUMAN.fasta
+$</code></pre>
+</blockquote>
+<ul>
+<li>Find by size: (List those entries in the directory <code>/usr/bin</code> that are bigger than 500 kBytes)</li>
+</ul>
+<blockquote>
+<pre><code>$ find /usr/bin -size +500k
+/usr/bin/oparchive
+/usr/bin/kiconedit
+/usr/bin/opjitconv
+...
+$</code></pre>
+</blockquote>
+<ul>
+<li>Find by type (d=directory, f=file, l=link)</li>
+</ul>
+<blockquote>
+<pre><code>$ find . -type d
+.
+./adir
+$</code></pre>
+</blockquote>
+</div><div id="permissions" class="slide section level2">
+<h1>Permissions</h1>
+<p>using <code>ls -l</code> to view entries of current directory:</p>
+<blockquote>
+<pre><code>$ ls -l
+drwxr-xr-x 2 dinkel gibson 4096 Sep 17 10:46 adir
+lrwxrwxrwx 1 dinkel gibson   15 Sep 17 10:45 H1.fasta -&gt; H2.fasta
+-rw-r--r-- 1 dinkel gibson  643 Sep 17 10:45 H2.fasta
+$</code></pre>
+</blockquote>
+<p><img src="_static/LinuxPermissions.png" alt="Linux file permissions" /></p>
+<h3 id="changing-permissions">Changing Permissions</h3>
+<p>Permissions are set using the <code>chmod</code> (change mode &lt;chmod&gt; ) command.</p>
+<p><strong>Usage</strong>: <code>chmod [options] mode(s) files(s)</code></p>
+<blockquote>
+<pre><code>$ ls -l adir
+drwxr-xr-x 2 dinkel gibson 4096 Sep 17 10:46 adir
+$ chmod u-w,o=w adir
+$ ls -l adir
+dr-xr-x-w- 2 dinkel gibson 4096 Sep 17 10:46 adir
+$</code></pre>
+</blockquote>
+<p>The mode is composed of</p>
+<table>
+<col width="7%" />
+<col width="19%" />
+<col width="8%" />
+<col width="38%" />
+<col width="7%" />
+<col width="18%" />
+<thead>
+<tr class="header">
+<th align="left">Who</th>
+<th align="left"></th>
+<th align="left">What</th>
+<th align="left"></th>
+<th align="left">Whic</th>
+<th align="left">h permission</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">u:</td>
+<td align="left"><blockquote>
+<p>user/owner</p>
+</blockquote></td>
+<td align="left"><blockquote>
+<p>+:</p>
+</blockquote></td>
+<td align="left">add this permission</td>
+<td align="left"><blockquote>
+<p>r:</p>
+</blockquote></td>
+<td align="left">read</td>
+</tr>
+<tr class="even">
+<td align="left">g:</td>
+<td align="left"><blockquote>
+<p>group</p>
+</blockquote></td>
+<td align="left"><blockquote>
+<p>-:</p>
+</blockquote></td>
+<td align="left">remove this permission</td>
+<td align="left"><blockquote>
+<p>w:</p>
+</blockquote></td>
+<td align="left">write</td>
+</tr>
+<tr class="odd">
+<td align="left">o:</td>
+<td align="left"><blockquote>
+<p>other</p>
+</blockquote></td>
+<td align="left"><blockquote>
+<p>=:</p>
+</blockquote></td>
+<td align="left">set exactly this permission</td>
+<td align="left"><blockquote>
+<p>x:</p>
+</blockquote></td>
+<td align="left">execute</td>
+</tr>
+<tr class="even">
+<td align="left">a:</td>
+<td align="left"><blockquote>
+<p>all</p>
+</blockquote></td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+</tbody>
+</table>
+<p>Add executable permission to the group:</p>
+<blockquote>
+<pre><code>$ chmod g+x file
+$</code></pre>
+</blockquote>
+<p>Revoke this permission:</p>
+<blockquote>
+<pre><code>$ chmod g-x file
+$</code></pre>
+</blockquote>
+<p>Allow all to read a directory:</p>
+<blockquote>
+<pre><code>$ chmod a+rx adir/
+$</code></pre>
+</blockquote>
+</div><div id="remote-access" class="slide section level2">
+<h1>Remote access</h1>
+<p>To execute commands at a remote machine/server, you need to log in to this machine. This is done using the <code>ssh</code> command &lt;ssh&gt; (secure shell). In its simplest form, it takes just the machinename as parameter (assuming the username on the local machine and remote machine are identical):</p>
+<blockquote>
+<pre><code>$ ssh remote_server
+...
+$</code></pre>
+</blockquote>
+<blockquote>
+<p><strong>note</strong></p>
+<dl>
+<dt>Once logged in, use &lt;hostname, whoami&gt; <code>hostname,</code> <code>whoami,</code> etc. to</dt>
+<dd><p>determine on which machine you are currently working and to get a feeling for your environment!</p>
+</dd>
+</dl>
+</blockquote>
+<p>To use a different username, you can use either:</p>
+<blockquote>
+<pre><code>$ ssh -l username remote_server
+...
+$</code></pre>
+</blockquote>
+<p>or</p>
+<blockquote>
+<pre><code>$ ssh username@remote_server
+...
+$</code></pre>
+</blockquote>
+<p>When connecting to a machine for the first time, it might display a warning:</p>
+<blockquote>
+<pre><code>$ ssh submaster
+The authenticity of host &#39;submaster (10.11.4.219)&#39; can&#39;t be established.
+RSA key fingerprint is a4:2c:c1:a6:34:49:a3:a9:b2:c3:52:f5:37:94:69:f5.
+Are you sure you want to continue connecting (yes/no)? 
+
+...
+$</code></pre>
+</blockquote>
+<p>Type <em>yes</em> here. If this message appears a second time, you should contact your IT specialist...</p>
+<p>To disconnect &lt;exit, disconnect&gt; from the remote machine, type:</p>
+<blockquote>
+<pre><code>$ exit</code></pre>
+</blockquote>
+<p>If setup correctly, you can even use <em>graphical tools</em> from the remote server on the local machine. For this to work, you need to start the ssh session with the <code>-X</code> parameter:</p>
+<blockquote>
+<pre><code>$ ssh -X remote_server
+...
+$</code></pre>
+</blockquote>
+<p>Copying files to and from remote computers can be done using <code>scp</code> (secure copy &lt;scp, secure copy&gt;). The order of parameters is the same as in <code>cp</code>: first the name of the source, then the name of the destination. Either one can be the remote part.</p>
+<blockquote>
+<pre><code>$ scp localfile server:/remotefile
+
+$ scp server:/remotefile localfile</code></pre>
+</blockquote>
+<p>An alternative username can be provided just as in ssh:</p>
+<blockquote>
+<pre><code>$ scp username@server:/remotefile localfile</code></pre>
+</blockquote>
+</div><div id="io-and-redirections" class="slide section level2">
+<h1>IO and Redirections</h1>
+<h3 id="redirect">Redirect</h3>
+<p>Redirect &lt;redirect, \&gt;&gt; the output of one program into e.g. a file:</p>
+<p>Inserting the current date into a new file:</p>
+<blockquote>
+<pre><code>$ date &gt; file_containing_date
+$</code></pre>
+</blockquote>
+<blockquote>
+<p><strong>warning</strong></p>
+<p>You can easily overwrite files &lt;file; overwrite&gt; by this!</p>
+</blockquote>
+<p>Filtering &lt;grep&gt; lines containing the term &quot;src&quot; from FASTA files and inserting them into the file lines_with_src.txt:</p>
+<blockquote>
+<pre><code>$ cd ~/exercises/
+$ grep -i &quot;src&quot; *.fasta &gt; lines_with_src.txt
+$</code></pre>
+</blockquote>
+<h3 id="append-append-file-append">Append &lt;append, file; append, \&gt;\&gt;&gt;</h3>
+<p>Append something to a file (rather than overwriting it):</p>
+<blockquote>
+<pre><code>$ date &gt;&gt; file_containing_date
+$</code></pre>
+</blockquote>
+<h3 id="pipe">Pipe</h3>
+<p>Use the pipe &lt;|, pipe&gt; symbol (<code>|</code>) to feed the output of one program into the next program. Here: use <code>ls</code> to show the directory contents and then use &lt;grep&gt; <code>grep</code> to only show those that contain fasta in their name:</p>
+<blockquote>
+<pre><code>$ cd ~/exercises
+$ ls | grep fasta
+EPSINS.fasta
+FYN_HUMAN.fasta
+P12931.fasta
+SRC_HUMAN.fasta
+$</code></pre>
+</blockquote>
+</div><div id="environment-variables" class="slide section level2">
+<h1>Environment Variables</h1>
+<p>Environment variables &lt;environment variables&gt; are a set of dynamic named values that can affect the way running processes will behave on a computer.</p>
+<h3 id="home">$HOME</h3>
+<p>Contains the location of the user's home directory. Although the current user's home directory can also be found out through the C functions <code>getpwuid</code> and <code>getuid,</code> <code>$HOME</code> is often used for convenience in various shell scripts (and other contexts).</p>
+<blockquote>
+<p><strong>note</strong></p>
+<p>Do not change this variable unless you have a good reason and you know what you are doing!</p>
+</blockquote>
+<h3 id="path">$PATH</h3>
+<p><code>$PATH</code> contains a colon-separated (':') list of directories that the shell searches for commands that do not contain a slash in their name (commands with slashes are interpreted as file names to execute, and the shell attempts to execute the files directly). So if the directory <code>/usr/bin</code> is in <code>$PATH</code> (which it should), then the command <code>/usr/bin/less</code> can be accessed by simply typing <code>less</code> instead of <code>/usr/bin/less</code>. How convenient!</p>
+<blockquote>
+<p><strong>warning</strong></p>
+<p>If you ever need to change this variable, you should always <em>append</em> to it, rather than overwriting it:</p>
+<p>Overwriting (bad): <code>export PATH=/my/new/path</code>;</p>
+<p>Appending (good): <code>export PATH=$PATH:/my/new/path</code></p>
+</blockquote>
+<h3 id="pager">$PAGER</h3>
+<p>The <code>$PAGER</code> variable contains the path to the program used to list the contents of files through (such as &lt;less&gt; <code>less</code> or &lt;more&gt; <code>more</code>).</p>
+<h3 id="pwd">$PWD</h3>
+<p>The <code>$PWD</code> variable points to the current directory. Equivalent to the output of the command <code>pwd</code> when called without arguments.</p>
+<h3 id="displaying-environment-variables">Displaying environment variables</h3>
+<p>Use &lt;environment variables; display&gt; <code>echo</code> to display &lt;echo&gt; individual variables set` or &lt;env&gt; <code>env</code> to view all at once:</p>
+<blockquote>
+<pre><code>$ echo $HOME
+/localhome/teach01
+$ set
+...
+$ env
+...
+$</code></pre>
+</blockquote>
+<h3 id="setting-an-environment-variable">Setting an environment variable</h3>
+<p>Use <code>export</code> followed by the variable name and the value of the variable (separated by the equal sign) to set &lt;environment variables; set, set, export&gt; an environment variable:</p>
+<blockquote>
+<pre><code>$ export PAGER=/usr/bin/less
+$</code></pre>
+</blockquote>
+<blockquote>
+<p><strong>note</strong></p>
+<p>An environment variable is only valid for your current session. Once you logout of your current session, it is lost or reset.</p>
+</blockquote>
+</div><div id="exercises" class="slide section level2">
+<h1>Exercises</h1>
+<h3 id="misc.-file-tools">Misc. file tools</h3>
+<ol>
+<li>Which tool can be used to determine the type of a file?</li>
+<li>Use it on the following files/directories and compare the results:
+<ol style="list-style-type: upper-alpha">
+<li><code>/usr/bin/tail</code></li>
+<li><code>~</code></li>
+<li><code>~/exercises/SRC_HUMAN.fasta</code></li>
+</ol></li>
+</ol>
+<h3 id="copying-deleting-files-folders">Copying / Deleting Files &amp; Folders</h3>
+<ol>
+<li>Navigate to your home directory</li>
+<li>In your home directory, create a new directory named <code>new_dir</code></li>
+<li>Change into this directory, create a new empty file in there named <code>new_file</code>, and make sure that the file was created.</li>
+<li>Duplicate this file by copying it as a new file named <code>another_file</code></li>
+<li>Delete the first file <code>new_file</code></li>
+<li>Also delete the directory (you are currently in) <code>~/new_dir</code>. Does it work?</li>
+</ol>
+<h3 id="view-files-1">View Files</h3>
+<ol>
+<li>Which tools can you use to see the first/last lines of the file <code>~/exercises/P12931.txt</code>?</li>
+<li>How to only show the first/last three lines (of the same file)?</li>
+<li>How do you print the whole file on the screen?</li>
+</ol>
+<h3 id="searching">Searching</h3>
+<ol>
+<li>Which tool can be used to search for files or directories?</li>
+<li>Use it to find all directories in the <code>~/exercises</code> directory</li>
+<li>Search for the file named <code>date</code> in the <code>/bin</code> directory</li>
+<li>List those entries in the directory <code>/bin</code> that are bigger than 400 kBytes</li>
+</ol>
+<h3 id="misc.-terminal">Misc. terminal</h3>
+<ol>
+<li>Which two tools can be used to redraw/empty the screen?</li>
+</ol>
+<h3 id="permissions-1">Permissions</h3>
+<ol>
+<li>Create a directory called <code>testpermissions</code></li>
+<li>Change your working directory to <code>testpermissions</code></li>
+<li>Create a directory called <code>adir</code>.</li>
+<li>Use the command <code>which date</code> to find out where the date program is located.</li>
+<li>Copy this date program into the directory <code>adir</code> and name it 'mydate'.</li>
+<li>Check the permissions of the copied program 'mydate'</li>
+<li>Change the permissions on 'mydate' to remove the executable permissions.</li>
+<li>Check the permissions of the program 'mydate'</li>
+<li>Change the permissions back so that the file is executable.</li>
+<li>Try running it as <code>./mydate</code> or <code>adir/mydate</code> (depending on your current working directory)</li>
+<li>Copy a textfile from a previous exercise into <code>adir</code>, then change the permissions, so you are not allowed to write to it. Test that you are still able to read the file via cat.</li>
+<li>Then change the permissions so you can't read/cat it either. Test this by trying to read it via cat.</li>
+<li>Change your working directory to <code>testpermissions</code>, and then try changing the permissions on the directory <code>adir</code> to non-executable.</li>
+<li>What are the minimum permissions (on the directory) necessary for you to be able to execute <code>adir/mydate</code>?</li>
+</ol>
+<h3 id="remote-access-1">Remote access</h3>
+<ol>
+<li>Login to machine &quot;submaster.embl.de&quot; (using your own username)</li>
+<li>Use exit to quit the remote shell (Beware to not exit your local shell)</li>
+<li>Use clear to empty the screen after logout from the remote server</li>
+<li>Use the following commands locally as well as on the remote machine to get a feeling for the different machines:</li>
+<li>Copy the file <code>/etc/motd</code> from machine submaster.embl.de into your local home directory (using scp)</li>
+<li>Determine the filetype and the permissions of the file that you just copied</li>
+<li>Login to your neighbor's machine (ask him for the hostname) using your own username</li>
+</ol>
+<h3 id="io-and-redirections-1">IO and Redirections</h3>
+<ol>
+<li>Use date in conjunction with the redirection to insert the current date into the (new) file current_date (in your homedirectory).</li>
+<li>Inspect the file to make sure it contains (only a single line with) the date.</li>
+<li>Use <code>date</code> again to append the current date into the same file.</li>
+<li>Again, check that this file now contains two lines with dates.</li>
+<li>Use <code>grep</code> to filter out lines containing the term &quot;TITLE&quot; from all PDB files in the exercises directory and use redirection to insert them into a new file pdb_titles.txt.</li>
+<li>(OPTIONAL) Upon inspection of the file pdb_titles.txt, you see that it also contains the names of the files in which the term was found.
+<ol style="list-style-type: upper-alpha">
+<li>Use either the grep manpage or <code>grep --help</code> to find out how you can suppress this behaviour.</li>
+<li>Redo the previous exercise such that the output file pdb_titles.txt only contains lines starting with TITLE.</li>
+</ol></li>
+<li>The <em>third</em> column of the file /etc/passwd contains user IDs (numbers)
+<ol style="list-style-type: upper-alpha">
+<li>Use cut to extract just the third column of this file (remember to specify the delimiter ':')</li>
+<li>Next, use the pipe &lt;pipe&gt; symbol (|) and sort to sort this output <em>numerically</em></li>
+</ol></li>
+</ol>
+<h3 id="putting-it-all-together">Putting it all together</h3>
+<ol>
+<li>Create a new directory named <code>myscripts</code> in your homedirectory</li>
+<li>Create an empty file named <code>mydate</code> in the newly created directory</li>
+<li>Add the directory <code>~/myscripts</code> to your <code>PATH</code> environment variable</li>
+<li>Use <code>echo</code> in combination with Redirection/Append to write ''date'' into the file <code>~/myscripts/mydate</code></li>
+<li>Change the permissions of the file <code>mydate</code> to be executable by you (and you only)</li>
+<li>Run the file <code>mydate</code> (it should print the current date &amp; time). Make sure you can run it from any directory (change to your homedirectory and just type <code>mydate</code>).</li>
+</ol>
+<h3 id="bioinformatics">Bioinformatics</h3>
+<p>Let's do some bioinformatics analysis! You can find the famous BLAST tool installed at /g/software/bin/blastp.</p>
+<ol>
+<li>Typing the full path is too cumbersome, so let's append /g/software/bin to your $PATH variable and ensure that it works by calling blastp.</li>
+<li>When you run blastp  -help, you notice that it has a lot of options! Use redirections in conjunction with grep to find out which options you need to specify a <em>input_file</em> and <em>database_name</em>.</li>
+<li><p>Now run blastp using the following values as options:</p>
+<p><em>database_name</em> = /g/data/ncbi-blast/db/swissprot</p>
+<p><em>input_file</em> = suspect1.fasta</p></li>
+<li>Use either <code>less</code> or redirection to a file to manage the amount of information that <code>blastp</code> prints on your screen.</li>
+</ol>
+</div>
+</body>
+</html>

@@ -1,0 +1,257 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Exercises &mdash; Introduction to the Linux Commandline</title>
+    
+    <link rel="stylesheet" href="_static/nature.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.4',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="Introduction to the Linux Commandline" href="index.html" />
+    <link rel="next" title="Links and Further Information" href="links.html" />
+    <link rel="prev" title="Introduction to the Linux Commandline" href="introduction.html" /> 
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="links.html" title="Links and Further Information"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="introduction.html" title="Introduction to the Linux Commandline"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Introduction to the Linux Commandline</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="exercises">
+<h1>Exercises<a class="headerlink" href="#exercises" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="misc-file-tools">
+<h2>Misc. file tools<a class="headerlink" href="#misc-file-tools" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic simple">
+<li>Which tool can be used to determine the type of a file?</li>
+<li>Use it on the following files/directories and compare the results:<ol class="upperalpha">
+<li><code class="docutils literal"><span class="pre">/usr/bin/tail</span></code></li>
+<li><code class="docutils literal"><span class="pre">~</span></code></li>
+<li><code class="docutils literal"><span class="pre">~/exercises/SRC_HUMAN.fasta</span></code></li>
+</ol>
+</li>
+</ol>
+</div>
+<div class="section" id="copying-deleting-files-folders">
+<h2>Copying / Deleting Files &amp; Folders<a class="headerlink" href="#copying-deleting-files-folders" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic simple">
+<li>Navigate to your home directory</li>
+<li>In your home directory, create a new directory named <code class="docutils literal"><span class="pre">new_dir</span></code></li>
+<li>Change into this directory, create a new empty file in there named <code class="docutils literal"><span class="pre">new_file</span></code>,
+and make sure that the file was created.</li>
+<li>Duplicate this file by copying it as a new file named <code class="docutils literal"><span class="pre">another_file</span></code></li>
+<li>Delete the first file <code class="docutils literal"><span class="pre">new_file</span></code></li>
+<li>Also delete the directory (you are currently in) <code class="docutils literal"><span class="pre">~/new_dir</span></code>. Does it work?</li>
+</ol>
+</div>
+<div class="section" id="view-files">
+<h2>View Files<a class="headerlink" href="#view-files" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic simple">
+<li>Which tools can you use to see the first/last lines of the file <code class="docutils literal"><span class="pre">~/exercises/P12931.txt</span></code>?</li>
+<li>How to only show the first/last three lines (of the same file)?</li>
+<li>How do you print the whole file on the screen?</li>
+</ol>
+</div>
+<div class="section" id="searching">
+<h2>Searching<a class="headerlink" href="#searching" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic simple">
+<li>Which tool can be used to search for files or directories?</li>
+<li>Use it to find all directories in the <code class="docutils literal"><span class="pre">~/exercises</span></code> directory</li>
+<li>Search for the file named <code class="docutils literal"><span class="pre">date</span></code> in the <code class="docutils literal"><span class="pre">/bin</span></code> directory</li>
+<li>List those entries in the directory <code class="docutils literal"><span class="pre">/bin</span></code> that are bigger than 400 kBytes</li>
+</ol>
+</div>
+<div class="section" id="misc-terminal">
+<h2>Misc. terminal<a class="headerlink" href="#misc-terminal" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic simple">
+<li>Which two tools can be used to redraw/empty the screen?</li>
+</ol>
+</div>
+<div class="section" id="permissions">
+<h2>Permissions<a class="headerlink" href="#permissions" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic simple">
+<li>Create a directory called <code class="docutils literal"><span class="pre">testpermissions</span></code></li>
+<li>Change your working directory to <code class="docutils literal"><span class="pre">testpermissions</span></code></li>
+<li>Create a directory called <code class="docutils literal"><span class="pre">adir</span></code>.</li>
+<li>Use the command <code class="docutils literal"><span class="pre">which</span> <span class="pre">date</span></code> to find out where the date program is located.</li>
+<li>Copy this date program into the directory <code class="docutils literal"><span class="pre">adir</span></code> and name it &#8216;mydate&#8217;.</li>
+<li>Check the permissions of the copied program &#8216;mydate&#8217;</li>
+<li>Change the permissions on &#8216;mydate&#8217; to remove the executable permissions.</li>
+<li>Check the permissions of the program &#8216;mydate&#8217;</li>
+<li>Change the permissions back so that the file is executable.</li>
+<li>Try running it as <code class="docutils literal"><span class="pre">./mydate</span></code> or <code class="docutils literal"><span class="pre">adir/mydate</span></code> (depending on your current working directory)</li>
+<li>Copy a textfile from a previous exercise into <code class="docutils literal"><span class="pre">adir</span></code>, then change the permissions, so you are not allowed to write to it.
+Test that you are still able to read the file via <cite>cat</cite>.</li>
+<li>Then change the permissions so you can&#8217;t read/cat it either. Test this by trying to read it via <cite>cat</cite>.</li>
+<li>Change your working directory to <code class="docutils literal"><span class="pre">testpermissions</span></code>, and then try changing the permissions on the directory <code class="docutils literal"><span class="pre">adir</span></code> to non-executable.</li>
+<li>What are the minimum permissions (on the directory) necessary for you to be able to execute <code class="docutils literal"><span class="pre">adir/mydate</span></code>?</li>
+</ol>
+</div>
+<div class="section" id="remote-access">
+<h2>Remote access<a class="headerlink" href="#remote-access" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic simple">
+<li>Login to machine &#8220;submaster.embl.de&#8221; (using your own username)</li>
+<li>Use exit to quit the remote shell (Beware to not exit your local shell)</li>
+<li>Use clear to empty the screen after logout from the remote server</li>
+<li>Use the following commands locally as well as on the remote machine to get a feeling for the different machines:</li>
+<li>Copy the file <code class="docutils literal"><span class="pre">/etc/motd</span></code> from machine submaster.embl.de into your local home directory (using scp)</li>
+<li>Determine the filetype and the permissions of the file that you just copied</li>
+<li>Login to your neighbor&#8217;s machine (ask him for the hostname) using your own username</li>
+</ol>
+</div>
+<div class="section" id="io-and-redirections">
+<h2>IO and Redirections<a class="headerlink" href="#io-and-redirections" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic simple">
+<li>Use date in conjunction with the redirection to insert the current date into the (new) file current_date (in your homedirectory).</li>
+<li>Inspect the file to make sure it contains (only a single line with) the date.</li>
+<li>Use <code class="docutils literal"><span class="pre">date</span></code> again to append the current date into the same file.</li>
+<li>Again, check that this file now contains two lines with dates.</li>
+<li>Use <code class="docutils literal"><span class="pre">grep</span></code> to filter out lines containing the term &#8220;TITLE&#8221; from all PDB files in the exercises directory and use redirection to insert them into a new file pdb_titles.txt.</li>
+<li>(OPTIONAL) Upon inspection of the file pdb_titles.txt, you see that it also contains the names of the files in which the term was found.<ol class="upperalpha">
+<li>Use either the grep manpage or <code class="docutils literal"><span class="pre">grep</span> <span class="pre">--help</span></code> to find out how you can suppress this behaviour.</li>
+<li>Redo the previous exercise such that the output file pdb_titles.txt only contains lines starting with TITLE.</li>
+</ol>
+</li>
+<li>The <em>third</em> column of the file /etc/passwd contains user IDs (numbers)<ol class="upperalpha">
+<li>Use <cite>cut</cite> to extract just the third column of this file (remember to specify the delimiter &#8216;:&#8217;)</li>
+<li>Next, use the <a class="reference internal" href="introduction.html#pipe"><span>pipe</span></a> symbol (<cite>|</cite>) and <cite>sort</cite> to sort this output <em>numerically</em></li>
+</ol>
+</li>
+</ol>
+</div>
+<div class="section" id="putting-it-all-together">
+<h2>Putting it all together<a class="headerlink" href="#putting-it-all-together" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic simple">
+<li>Create a new directory named <code class="docutils literal"><span class="pre">myscripts</span></code> in your homedirectory</li>
+<li>Create an empty file named <code class="docutils literal"><span class="pre">mydate</span></code> in the newly created directory</li>
+<li>Add the directory <code class="docutils literal"><span class="pre">~/myscripts</span></code> to your <code class="docutils literal"><span class="pre">PATH</span></code> environment variable</li>
+<li>Use <code class="docutils literal"><span class="pre">echo</span></code> in combination with Redirection/Append to write &#8216;&#8217;date&#8217;&#8217; into the file <code class="docutils literal"><span class="pre">~/myscripts/mydate</span></code></li>
+<li>Change the permissions of the file <code class="docutils literal"><span class="pre">mydate</span></code> to be executable by you (and you only)</li>
+<li>Run the file <code class="docutils literal"><span class="pre">mydate</span></code> (it should print the current date &amp; time). Make sure you can run it from any directory (change to your homedirectory and just type <code class="docutils literal"><span class="pre">mydate</span></code>).</li>
+</ol>
+</div>
+<div class="section" id="bioinformatics">
+<h2>Bioinformatics<a class="headerlink" href="#bioinformatics" title="Permalink to this headline">¶</a></h2>
+<p>Let&#8217;s do some bioinformatics analysis!
+You can find the famous BLAST tool installed at <cite>/g/software/bin/blastp</cite>.</p>
+<ol class="arabic">
+<li><p class="first">Typing the full path is too cumbersome, so let&#8217;s append <cite>/g/software/bin</cite> to your $PATH variable and ensure that it works by calling <cite>blastp</cite>.</p>
+</li>
+<li><p class="first">When you run <cite>blastp  -help</cite>, you notice that it has a lot of options!
+Use redirections in conjunction with grep to find out which options you need to specify a <em>input_file</em> and <em>database_name</em>.</p>
+</li>
+<li><p class="first">Now run blastp using the following values as options:</p>
+<p><em>database_name</em> = <cite>/g/data/ncbi-blast/db/swissprot</cite></p>
+<p><em>input_file</em> = <cite>suspect1.fasta</cite></p>
+</li>
+<li><p class="first">Use either <code class="docutils literal"><span class="pre">less</span></code> or redirection to a file to manage the amount of information that <code class="docutils literal"><span class="pre">blastp</span></code> prints on your screen.</p>
+</li>
+</ol>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Exercises</a><ul>
+<li><a class="reference internal" href="#misc-file-tools">Misc. file tools</a></li>
+<li><a class="reference internal" href="#copying-deleting-files-folders">Copying / Deleting Files &amp; Folders</a></li>
+<li><a class="reference internal" href="#view-files">View Files</a></li>
+<li><a class="reference internal" href="#searching">Searching</a></li>
+<li><a class="reference internal" href="#misc-terminal">Misc. terminal</a></li>
+<li><a class="reference internal" href="#permissions">Permissions</a></li>
+<li><a class="reference internal" href="#remote-access">Remote access</a></li>
+<li><a class="reference internal" href="#io-and-redirections">IO and Redirections</a></li>
+<li><a class="reference internal" href="#putting-it-all-together">Putting it all together</a></li>
+<li><a class="reference internal" href="#bioinformatics">Bioinformatics</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="introduction.html"
+                        title="previous chapter">Introduction to the Linux Commandline</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="links.html"
+                        title="next chapter">Links and Further Information</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/exercises_beginner.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="links.html" title="Links and Further Information"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="introduction.html" title="Introduction to the Linux Commandline"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Introduction to the Linux Commandline</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2012,2013,2014,2015 Holger Dinkel, Frank Thommen &amp; Toby Hodges.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
+    </div>
+  </body>
+</html>
