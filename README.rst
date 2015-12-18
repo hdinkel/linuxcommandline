@@ -4,7 +4,7 @@ Linux Commandline Course
 This repository contains material for teaching linux commandline.
 See file acknowledgements.rst for contributors
 
-The folders ''sphinx_beginner'' and ''sphinx_intermediate'' are Re-Writes of the documentation 
+The folders ''linux_beginner'' and ''linux_intermediate'' are Re-Writes of the documentation 
 which was originally done in Word, converted to ReStructuredText.
 
 Here, we're using `ReStructuredText <http://docutils.sourceforge.net/rst.html>`_ for writing, and `Sphinx <http://sphinx-doc.org/>`_
