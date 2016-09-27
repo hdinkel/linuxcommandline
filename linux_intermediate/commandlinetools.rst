@@ -204,7 +204,7 @@ Note the difference:
    _CC__GC_TTGG_GG__T_TCGT_GGT___
  
 You can use transliteration to replace all instances of a character with another character.
-For example, to switch Thymines to Uridines in a sequence:
+For example, to switch Thymidines to Uridines in a sequence:
 
  ::
 
