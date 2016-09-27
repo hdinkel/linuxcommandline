@@ -435,6 +435,44 @@ specify the hash or name of the revision::
 
 
 
+Branching
+=========
+
+Branches are deliberately lightweight in git, meaning you can very easily create (and delete) branches. 
+So it's generally a good idea to use different branches...
+
+To list all existing branches, you type:::
+
+  git branch -a
+
+To create a new branch you can type either:::
+
+  git branch NewBranch
+  git checkout NewBranch
+
+or, simpler:::
+
+  git checkout -b NewBranch
+
+.. note:: Remember you need to switch to new branches, by using ``git checkout branchname``!
+          Any new commit will now go into this branch, not affecting any other branch.
+
+In order to take your changes from one branch into another, you need to merge the branches:::
+
+  git merge master
+
+You always merge **into** the currently checked out branch. In this example we merge the branch `master` into `NewBranch`.
+This will update `NewBranch` with all changes that have been committed to `master`.
+Since `NewBranch` is now up to date, we can also merge back it's changes into `master`:::
+
+  git checkout master
+  git merge NewBranch
+
+Finally, we can delete this branch:::
+
+  git branch -d NewBranch
+
+
 .. Using centralized workflow
 .. ==========================
 .. 

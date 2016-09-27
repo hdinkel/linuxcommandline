@@ -207,6 +207,7 @@ You can use transliteration to replace all instances of a character with another
 For example, to switch Thymidines to Uridines in a sequence:
 
  ::
+
   # echo "AGTGGCTAAGTCCCTTTAATCAGG" | sed 'y/T/U/'
    AGUGGCUAAGTCCCUUUAAUCAGG
 
@@ -215,6 +216,7 @@ with the character in the equivalent position in the second set. For example,  t
 reverse transcript of a DNA sequence:
 
  ::
+
   # echo "AGTGGCTAAGTCCCTTTAATCAGG" | sed 'y/ACGT/UGCA/'
    UCACCGAUUCAGGGAAAUUAGUCC
 
@@ -222,6 +224,7 @@ This is the complementary sequence, but we wanted the reverse complement, so we 
 the Linux command ``rev`` to reverse the output of the ``sed`` command:
 
  ::
+
   # echo "AGTGGCTAAGTCCCTTTAATCAGG" | sed 'y/ACGT/UGCA/' | rev
    CCUGAUUAAAGGGACUUAGCCACU
 

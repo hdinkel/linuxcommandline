@@ -8,6 +8,7 @@
 \usepackage{datetime}
 \usepackage{currfile}
 \usepackage{graphicx}
+\usepackage{multicol}
 \usepackage[dvipsnames]{xcolor}
 
 
@@ -16,11 +17,16 @@
 
 \newdateformat{mydate}{\monthname, \THEYEAR}
 
+\newcommand\IG[2][]{\IfFileExists{#2}
+{\includegraphics[#1]{#2}}
+  {\message{WARNING: Signaturefile #2 doesn't exist^^J}}}% write a message into the log file
+
+
 \begin{document}
 \pagestyle{empty}
 
 \DTLforeach{names}{\Firstname=Firstname,\Lastname=Lastname}{
-    \centering
+\centering
     {
     \Large
     \vspace*{20px}
@@ -43,6 +49,11 @@
 
     \vskip2em
     \includegraphics[width=.9\textwidth]{_static/bio-it_logo.pdf}
+    \begin{multicols}{2}
+        \IG[width=.3\textwidth]{../general/Signature_Hodges.png}\hfill
+       \columnbreak
+        \IG[width=.3\textwidth]{../general/Signature_Dinkel.png}
+    \end{multicols}
 
     \vfill
     {\small \mydate\today \hfill { } \\
