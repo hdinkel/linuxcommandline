@@ -96,7 +96,7 @@ Permissions
 
 Remote access
 -------------
-#. Login to machine "submaster.embl.de" (using your own username) 
+#. Login to machine "submaster1.embl.de" (using your own username) 
 
 #. Use exit to quit the remote shell (Beware to not exit your local shell) 
 
@@ -104,7 +104,7 @@ Remote access
 
 #. Use the following commands locally as well as on the remote machine to get a feeling for the different machines: 
 
-#. Copy the file ``/etc/motd`` from machine submaster.embl.de into your local home directory (using scp) 
+#. Copy the file ``/etc/motd`` from machine submaster1.embl.de into your local home directory (using scp) 
 
 #. Determine the filetype and the permissions of the file that you just copied 
 

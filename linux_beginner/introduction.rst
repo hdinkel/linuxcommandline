@@ -1020,8 +1020,8 @@ When connecting to a machine for the first time, it might display a warning:
 
  :: 
 
-  $ ssh submaster
-  The authenticity of host 'submaster (10.11.4.219)' can't be established.
+  $ ssh submaster1
+  The authenticity of host 'submaster1 (10.11.4.219)' can't be established.
   RSA key fingerprint is a4:2c:c1:a6:34:49:a3:a9:b2:c3:52:f5:37:94:69:f5.
   Are you sure you want to continue connecting (yes/no)? 
 
