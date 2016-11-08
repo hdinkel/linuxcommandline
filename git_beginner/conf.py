@@ -42,7 +42,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'git fundamentals'
-copyright = u'2013-2015, Holger Dinkel & Grischa Toedt'
+copyright = u'2013-2016, Holger Dinkel & Grischa Toedt'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -195,12 +195,12 @@ latex_elements = {
 # (source start file, target name, title, author, documentclass [howto/manual]).
 latex_documents = [
   ('index', 'gitintro.tex', u'GIT Fundamentals',
-   u'Holger Dinkel \& Grischa Toedt', 'manual'),
+   u'Holger Dinkel', 'manual'),
 ]
 
 # The name of an image file (relative to this directory) to place at the top of
 # the title page.
-latex_logo = '_static/bio-it_logo.pdf'
+latex_logo = '_static/fli-bio-it_logo.pdf'
 
 # For "manual" documents, if this is true, then toplevel headings are parts,
 # not chapters.
@@ -225,7 +225,7 @@ latex_show_urls = False
 # (source start file, name, description, authors, manual section).
 man_pages = [
     ('index', 'gitintro', u'GIT Fundamentals',
-     [u'Holger Dinkel & Grischa Toedt'], 1)
+     [u'Holger Dinkel'], 1)
 ]
 
 # If true, show URL addresses after external links.
@@ -239,7 +239,7 @@ man_pages = [
 #  dir menu entry, description, category)
 texinfo_documents = [
   ('index', 'gitintro', u'GIT Fundamentals',
-   u'Holger Dinkel & Grischa Toedt', 'gitintro', 'GIT Fundamentals',
+   u'Holger Dinkel', 'gitintro', 'GIT Fundamentals',
    'Miscellaneous'),
 ]
 
