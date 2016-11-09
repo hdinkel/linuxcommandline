@@ -115,6 +115,7 @@ latexpdf:
 	sed -i -e 's|\\definecolor{VerbatimBorderColor}{rgb}{0,0,0}|\\definecolor{VerbatimBorderColor}{rgb}{1,1,1}|' $(BUILDDIR)/latex/sphinx.sty
 	sed -i -e 's|^\\release.*||' $(BUILDDIR)/latex/*.tex
 	sed -i -e 's|\\end{document}|\\ifthenelse{\\isodd{\\pageref{LastPage}}}{\\null\\clearpage\\thispagestyle{empty}}{}\\includepdf[pages=-]{../../_static/github-git-cheat-sheet.pdf}\\end{document}	|' $(BUILDDIR)/latex/*.tex
+	cp _static/flititle.sty _build/latex
 	echo 'delim_0 "\\\dotfill"' >> $(BUILDDIR)/latex/python.ist
 	echo 'delim_1 "\\\dotfill"' >> $(BUILDDIR)/latex/python.ist
 	echo 'delim_2 "\\\dotfill"' >> $(BUILDDIR)/latex/python.ist

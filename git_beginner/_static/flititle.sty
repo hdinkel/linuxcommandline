@@ -1,0 +1,46 @@
+
+\makeatletter
+\renewcommand{\maketitle}{%
+  \begin{titlepage}%
+    \let\footnotesize\small
+    \let\footnoterule\relax
+    \noindent\rule{\textwidth}{1pt}\ifsphinxpdfoutput\newline\null\fi\par
+    \ifsphinxpdfoutput
+      \begingroup
+      \def\\{, }%
+      \def\and{and }%
+      \pdfinfo{
+        /Author (\@author)
+        /Title (\@title)
+      }%
+      \endgroup
+    \fi
+      \includegraphics[height=2.5cm]{../../_static/FLI_Logo_engl_HZ_4c.png}%
+      \hfill%
+      \includegraphics[height=1.5cm]{../../_static/embl_logo.png}%
+      \vfill
+    \begin{center}%
+      \py@HeaderFamily
+      {\Huge \@title \par}
+      {\itshape\LARGE \py@release\releaseinfo \par}
+      \vfill\vfill
+    \end{center}%
+    \begin{flushright}%
+      {\LARGE
+        \begin{tabular}[t]{c}
+          \@author
+        \end{tabular}
+        \par}
+      {\large
+       \@date \par
+       \vfill
+       \py@authoraddress \par
+      }%
+    \end{flushright}%\par
+    \@thanks
+  \end{titlepage}%
+  \setcounter{footnote}{0}%
+  \let\thanks\relax\let\maketitle\relax
+  %\gdef\@thanks{}\gdef\@author{}\gdef\@title{}
+}
+\makeatother

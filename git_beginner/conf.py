@@ -11,7 +11,8 @@
 # All configuration values have a default; values that are commented out
 # serve to show the default.
 
-import sys, os
+# import sys
+# import os
 
 # If extensions (or modules to document with autodoc) are in another directory,
 # add these directories to sys.path here. If the directory is relative to the
@@ -187,7 +188,9 @@ latex_elements = {
 
 # Additional stuff for the LaTeX preamble.
 'preamble': """\setcounter{tocdepth}{2}\usepackage{fancyvrb}
+      \usepackage[default]{sourcesanspro}
       \usepackage{sectsty}\sectionfont{\LARGE}\subsectionfont{\Large}\subsubsectionfont{\large\underline}\paragraphfont{\large}
+      \usepackage{flititle}
 """,
 }
 
@@ -200,7 +203,7 @@ latex_documents = [
 
 # The name of an image file (relative to this directory) to place at the top of
 # the title page.
-latex_logo = '_static/fli-bio-it_logo.pdf'
+latex_logo = '_static/FLI_Logo_engl_HZ_4c.eps'
 
 # For "manual" documents, if this is true, then toplevel headings are parts,
 # not chapters.
