@@ -5,7 +5,7 @@ Acknowledgements
 Contributors
 ============
 
-We are very grateful to the contributors who helped create, shape and improve this document:
+We are very grateful to the contributors who helped create and improve this document:
 
 - Holger Dinkel
 - Grischa Toedt
@@ -24,6 +24,10 @@ Copyright Material
 
 - FLI Logo © `FLI <http://leibniz-fli.de>`_
 - EMBL Logo © `EMBL Heidelberg <http://www.embl.de>`_
+- "A story told in filenames": `PhD Comics <http://www.phdcomics.com>`_
+- "Git local workflow": `Software Carpentry/Research Bazaar <https://raw.githubusercontent.com/resbaz/lessons/master/git/git-local.png>`_
+- "Git remote workflow": `Software Carpentry/Research Bazaar <https://raw.githubusercontent.com/resbaz/lessons/master/git/git-remote.png>`_
+- "FINAL.DOC": `PhD Comics <http://www.phdcomics.com>`_
 
 License
 =======

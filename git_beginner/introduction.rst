@@ -69,6 +69,14 @@ repository
 
 A repository is the history of all your project's commits.
 
+
+working copy
+^^^^^^^^^^^^
+
+A working copy is a *local* version of the files of a repository.
+It is the set of files you are *working* on; 
+they become part of a repository by `commiting` them.
+
 git settings
 ============
 
@@ -120,13 +128,11 @@ A Typical git Workflow
     version of your files, to the `staging area`. `Staged` files will be stored
     into the local repository in the next `commit`. The repository itself
     contains all previous versions of all files ever committed.
-    (image courtesy of 'research bazaar' https://raw.githubusercontent.com/resbaz/lessons/master/git/git-local.png)
 
 .. figure:: _static/git-remote.png
 
     Distributed workflow using a centralized repository. Here, you use `push`
     and `pull` to synchronize your local repository with a remote repository.
-    (image courtesy of 'research bazaar' https://raw.githubusercontent.com/resbaz/lessons/master/git/git-remote.png)
 
 
 Creating a git Repository
