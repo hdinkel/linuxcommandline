@@ -168,9 +168,9 @@ Search a file compressed with ``gzip`` using ``zgrep``:
 REV
 ---
 
-:index: `rev` is a tool that reverses lines of input.
+:index:`rev` is a tool that reverses lines of input.
 
-*Usage*: '``rev file``',
+*Usage*: `rev file`
 
 `rev` can take input from STDIN as well as from a file, which can be useful if you need 
 to reverse the output of a process.
@@ -196,9 +196,9 @@ be reversed to restore the original orientation of the input file.
 FMT
 ---
 
-:index: `fmt` is used to control the format of text input.
+:index:`fmt` is used to control the format of text input.
 
-*Usage*: '``fmt [options] file(s)``'
+*Usage*: `fmt [options] file(s)`
 
 By using `fmt` you can control the width and alignment of lines of text, while maintaining
 the larger structural elements such as paragraph breaks and indentation.
@@ -219,10 +219,10 @@ of values into a single column:
 XARGS
 -----
 
-:index: `xargs` can be used to provide file contents or output of one command as arguments
+:index:`xargs` can be used to provide file contents or output of one command as arguments
 to the next.
 
-*Usage*: xargs [options] [ tool [options] [arguments] ]
+*Usage*: `xargs [options] [ tool [options] [arguments] ]`
 
 By default, `xargs` passes the strings given to it onto the `echo` command.
 
@@ -270,11 +270,11 @@ could use the approach below:
 ::
 
   # find ~/Documents -name '*.txt' | xargs grep 'protein'
-   DNA.txt:living organisms and many viruses. Along with RNA and proteins, DNA is one of
-   DNA.txt:within proteins. The code is read by copying stretches of DNA into the related
-   DNA.txt:chromatin proteins such as histones compact and organize DNA. These compact
-   DNA.txt:structures guide the interactions between DNA and other proteins, helping
-   P04062.txt:RT   "Identification and quantification of N-linked glycoproteins using
+   DNA.txt:living organisms and many viruses. Along with RNA ...
+   DNA.txt:within proteins. The code is read by copying stret...
+   DNA.txt:chromatin proteins such as histones compact and or...
+   DNA.txt:structures guide the interactions between DNA and ...
+   P04062.txt:RT   "Identification and quantification of N-li...
    ...
 
 Similarly, we can use `xargs` and `find` to quickly delete multiple files spread
