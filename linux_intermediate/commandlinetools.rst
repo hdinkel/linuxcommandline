@@ -16,6 +16,9 @@ Commandline Tools
 GZIP
 ----
 :index:`gzip <gzip>` is a compression/decompression tool.
+
+**Usage**: ``gzip [options] file(s)``
+
 When used on a file (without any parameters) it will compress it and replace the
 :index:`file <ls>` by a compressed version with the extension '.gz' attached:
 
@@ -63,11 +66,11 @@ The most common commandline switches are:
 =======  ===================================
 Option:  Effect: 
 =======  ===================================
--c       create an archive
--t       test an archive
--x       extract an archive
--z       use gzip compression
--f       filename filename of the archive
+``-c``   create an archive
+``-t``   test an archive
+``-x``   extract an archive
+``-z``   use gzip compression
+``-f``   filename filename of the archive
 =======  ===================================
 
 .. note:: Don't forget to specify the target filename. 
@@ -114,9 +117,9 @@ Creating a backup (eg. before doing something dangerous?):
 GREP
 ----
 
-:index:`grep` finds lines matching a pattern in textfiles.
+:index:`grep <grep>` finds lines matching a pattern in textfiles.
 
-**Usage**: `grep [options] pattern file(s)`
+**Usage**: ``grep [options] pattern file(s)``
 
  ::
 
@@ -170,13 +173,13 @@ REV
 
 :index:`rev` is a tool that reverses lines of input.
 
-**Usage**: `rev file`
+**Usage**: ``rev file``
 
-`rev` can take input from STDIN as well as from a file, which can be useful if you need 
+``rev`` can take input from STDIN as well as from a file, which can be useful if you need 
 to reverse the output of a process.
 
-You can combine `rev` with the `cut` tool, to capture the last columns in a file, without
-first needing to know the total number of columns.
+You can combine ``rev`` with the ``cut`` tool, to capture the last columns in a file,
+without first needing to know the total number of columns.
 
 ::
 
@@ -189,7 +192,7 @@ first needing to know the total number of columns.
    0.75
    0.82
 
-Note the double use of `rev` in the example above - the output of the `cut` command must
+Note the double use of ``rev`` in the example above - the output of the ``cut`` command must
 be reversed to restore the original orientation of the input file.
 
 
@@ -198,9 +201,9 @@ FMT
 
 :index:`fmt` is used to control the format of text input.
 
-**Usage**: `fmt [options] file(s)`
+**Usage**: ``fmt [options] file(s)``
 
-By using `fmt` you can control the width and alignment of lines of text, while maintaining
+By using ``fmt`` you can control the width and alignment of lines of text, while maintaining
 the larger structural elements such as paragraph breaks and indentation.
 
 The most powerful use case when working with files containing data, is to convert a vector
@@ -222,9 +225,9 @@ XARGS
 :index:`xargs` can be used to provide file contents or output of one command as arguments
 to the next.
 
-**Usage**: `xargs [options] [ tool [options] [arguments] ]`
+**Usage**: ``xargs [options] [ tool [options] [arguments] ]``
 
-By default, `xargs` passes the strings given to it onto the `echo` command.
+By default, ``xargs`` passes the strings given to it onto the ``echo`` command.
 
 ::
 
@@ -238,9 +241,9 @@ By default, `xargs` passes the strings given to it onto the `echo` command.
    KPLGVALTNRFGEDADERID RPIGPEIQNRFGENAEERIP RSVATQVFNRFGDDTESKLP RAIGAELQNRFSNDAEQRIP
 
 In this way we can achieve the reverse of the row vector -> column operation performed in
-the `fmt` example above. But `xargs` can be used for much more powerful things than only
-`echo`ing command output. By providing an argument to `xargs` we can specify the 
-tool/command that we want `xargs` to pass the strings to as arguments.
+the ``fmt`` example above. But ``xargs`` can be used for much more powerful things than
+only echoing command output. By providing an argument to ``xargs`` we can specify the 
+tool/command that we want ``xargs`` to pass the strings to as arguments.
 
 ::
 
@@ -262,9 +265,9 @@ tool/command that we want `xargs` to pass the strings to as arguments.
    EMBL
    
 
-One of the most common uses of `xargs` is in combination with the `find` command, allowing
+One of the most common uses of ``xargs`` is in combination with the ``find`` command, allowing
 the user to operate on multiple files across multiple locations at once. For example, to
-search for the word 'protein' in all `.txt` files underneath the 'Documents' directory, we
+search for the word 'protein' in all ``.txt`` files underneath the 'Documents' directory, we
 could use the approach below:
 
 ::
@@ -277,7 +280,7 @@ could use the approach below:
    P04062.txt:RT   "Identification and quantification of N-li...
    ...
 
-Similarly, we can use `xargs` and `find` to quickly delete multiple files spread
+Similarly, we can use ``xargs`` and ``find`` to quickly delete multiple files spread
 throughout the filesystem.
 
 
@@ -285,11 +288,11 @@ throughout the filesystem.
 
   # find /tmp -name '*.tmp' | xargs rm
 
-The command above will find any files with '.tmp' extension and pass them to `rm` for
+The command above will find any files with '.tmp' extension and pass them to ``rm`` for
 deletion. Of course, care should always be taken when using commands that alter the
-filesystem, such as `rm` and `mv`, so you need to be sure that you know what's going to
-happen before you execute a command like the one above. Helpfully, `xargs` provides an
-option `-p` that will prompt the user before executing commands.
+filesystem, such as ``rm`` and ``mv``, so you need to be sure that you know what's going to
+happen before you execute a command like the one above. Helpfully, ``xargs`` provides an
+option ``-p`` that will prompt the user before executing commands.
 
 
 ::
@@ -298,11 +301,11 @@ option `-p` that will prompt the user before executing commands.
    rm /home/toby/alignments/giant_alignment.bam? y
 
 This is a good way of sweeping your filesystem to find the largest files and then choosing
-whether to remove them. You could employ a similar approach with `xargs` to compress
+whether to remove them. You could employ a similar approach with ``xargs`` to compress
 these large files. 
 
-If you need to control where exactly the strings passed to `xargs` are placed in the 
-command that it subsequently calls, use the -I option:
+If you need to control where exactly the strings passed to ``xargs`` are placed in the 
+command that it subsequently calls, use the ``-I`` option:
 
 ::
 
@@ -310,30 +313,30 @@ command that it subsequently calls, use the -I option:
 
 Useful options:
 
-=======  ===================================
-Option:  Effect: 
-=======  ===================================
--n INT   pass INT strings as arguments to each invocation of tool
--0       use NULL as separator (good for handling strings/filenames containing spaces)
--t       echo commands to STDERR as they are executed
-=======  ===================================
+==========  ===================================
+Option:     Effect: 
+==========  ===================================
+``-n INT``   pass INT strings as arguments to each invocation of tool
+``-0``       use NULL as separator (good for handling strings/filenames containing spaces)
+``-t``       echo commands to STDERR as they are executed
+==========  ===================================
 
 SED
 ---
 
 :index:`sed` is a Stream EDitor, it modifies text (text can be a file or a pipe) on the fly.
 
-**Usage**: '``sed command file``',
+**Usage**: ``sed command file``,
 
 The most common usecases are:
 
 ===========================================  =====================
 Usecase                                      Command:
 ===========================================  =====================
-Substitute TEXT by REPLACEMENT:              's/TEXT/REPLACEMENT/'
-Transliterate the characters x a, and y b:   'y/xy/ab/'
-Print lines containing PATTERN:              '/PATTERN/p'
-Delete lines containing PATTERN:             '/PATTERN/d'
+Substitute TEXT by REPLACEMENT:              ``s/TEXT/REPLACEMENT/``
+Transliterate the characters x a, and y b:   ``y/xy/ab/``
+Print lines containing PATTERN:              ``/PATTERN/p``
+Delete lines containing PATTERN:             ``/PATTERN/d``
 ===========================================  =====================
 
 
@@ -703,7 +706,7 @@ current shell are available.
 Examples 
 ^^^^^^^^
 
-Consider the following small shellscript `vartest.sh`::
+Consider the following small shellscript ``vartest.sh`::
 
   #!/bin/sh 
   echo $MYLOCALVAR
