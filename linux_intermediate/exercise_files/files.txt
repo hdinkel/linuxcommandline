@@ -1,0 +1,6 @@
+DNA.fasta
+DNA.txt
+EMBL_wikipedia.txt
+ENST00000380152.fasta
+ENST00000530893.fasta
+ENST00000544455.fasta
