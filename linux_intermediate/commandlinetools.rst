@@ -116,7 +116,7 @@ GREP
 
 :index:`grep` finds lines matching a pattern in textfiles.
 
-**Usage**: grep [options] pattern file(s)
+**Usage**: `grep [options] pattern file(s)`
 
  ::
 
@@ -170,7 +170,7 @@ REV
 
 :index:`rev` is a tool that reverses lines of input.
 
-*Usage*: `rev file`
+**Usage**: `rev file`
 
 `rev` can take input from STDIN as well as from a file, which can be useful if you need 
 to reverse the output of a process.
@@ -198,7 +198,7 @@ FMT
 
 :index:`fmt` is used to control the format of text input.
 
-*Usage*: `fmt [options] file(s)`
+**Usage**: `fmt [options] file(s)`
 
 By using `fmt` you can control the width and alignment of lines of text, while maintaining
 the larger structural elements such as paragraph breaks and indentation.
@@ -222,7 +222,7 @@ XARGS
 :index:`xargs` can be used to provide file contents or output of one command as arguments
 to the next.
 
-*Usage*: `xargs [options] [ tool [options] [arguments] ]`
+**Usage**: `xargs [options] [ tool [options] [arguments] ]`
 
 By default, `xargs` passes the strings given to it onto the `echo` command.
 
@@ -323,7 +323,7 @@ SED
 
 :index:`sed` is a Stream EDitor, it modifies text (text can be a file or a pipe) on the fly.
 
-*Usage*: '``sed command file``',
+**Usage**: '``sed command file``',
 
 The most common usecases are:
 
