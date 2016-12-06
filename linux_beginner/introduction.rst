@@ -359,11 +359,9 @@ Special directories:
   $ pwd
   /home/fthommen
 
-A useful shortcut:
+A useful shortcut: 
 
-- ``cd -`` takes you to the last directory that you were working in before 
-your current location. This is very helpful when you need to switch often 
-between two different locations on the filesystem.
+- ``cd -`` takes you to the last directory that you were working in before your current location. This is very helpful when you need to switch often between two different locations on the filesystem.
 
  ::
 
