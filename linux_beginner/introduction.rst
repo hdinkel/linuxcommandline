@@ -128,7 +128,7 @@ Useful Terminal Tools & Keyboard Shortcuts
 Navigating previous commands
 -----------------------------
 
-You can use the ↑/↓ (up/down) arrow keys to navigate previously entered command and the ←/→ (left/right) keys to modify it before re-executing it.
+You can use the ↑/↓ (up/down) arrow keys to navigate previously entered command and the ←/→ (left/right) keys to modify it before re-executing it. (Hold down the ALT key with ←/→ to jump whole words.)
 
 Copying / Pasting using the mouse
 ---------------------------------
@@ -358,6 +358,26 @@ Special directories:
   $ cd 
   $ pwd
   /home/fthommen
+
+A useful shortcut:
+
+- ``cd -`` takes you to the last directory that you were working in before 
+your current location. This is very helpful when you need to switch often 
+between two different locations on the filesystem.
+
+ ::
+
+  $ pwd
+  /etc
+  $ cd /bin
+  $ pwd
+  /bin
+  $ cd -
+  $ pwd
+  /etc
+  $ cd -
+  $ pwd
+  /bin
 
 
 See What's Around
@@ -697,6 +717,8 @@ search:                                 "/" + search-term
 find next match:                        n
 find previous match:                    N 
 quit:                                   q
+switch to next file:                    :n
+switch to previous file:                :p
 ===================================    =======
 
 
