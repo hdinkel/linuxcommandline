@@ -59,9 +59,10 @@ Running Linux Commands in Windows
 
 Babun
 """"""
-The easiest way t oget a linux-like console on a Windows host is probably `babun <http://babun.github.io/>`!
+The easiest way to get a linux-like console on a Windows host is probably `babun <http://babun.github.io/>`!
 
 Babun features the following:
+
 - Pre-configured Cygwin with a lot of addons
 - Command-line installer, no admin rights required
 - advanced package manager (like apt-get or yum)

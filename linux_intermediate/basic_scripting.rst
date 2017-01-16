@@ -28,9 +28,10 @@ script.
 Running a Script
 ================
 
-There are basically three ways to run a script:
+There are basically three ways to run a script, regardless of the language in which the
+script is written:
 
-a) the location to your script is not in your ``$PATH`` variable, then you have to specify the full path to the script:
+a) where the location to your script is not in your ``$PATH`` variable, then you have to specify the full path to the script:
 
  ::
 
@@ -38,7 +39,7 @@ a) the location to your script is not in your ``$PATH`` variable, then you have 
   [...]
   $
 
-b) the location to the script is in the ``$PATH`` variable, then you can simply type its name:
+b) where the location to the script is in the ``$PATH`` variable, then you can simply type its name:
 
   ::
 
@@ -49,7 +50,7 @@ b) the location to the script is in the ``$PATH`` variable, then you can simply 
   In both situations, the script will need to have execute permissions to be run. If for some
   reason you can only read but not execute the script, then it can still be run in the following way:
 
-c) specifying the :index:`interpreter` (i.e. the program required to run the script).  For shellscripts this is the appropriate shell). The full path (relative or absolute) to the script has to be provided in this case, no matter whether the script location is already contained in ``$PATH`` or not:
+c) by specifying the :index:`interpreter` (i.e. the program required to run the script).  For shellscripts this is the appropriate shell). The full path (relative or absolute) to the script has to be provided in this case, no matter whether the script location is already contained in ``$PATH`` or not:
 
  ::
 
@@ -290,7 +291,7 @@ A) Evaluating the exit status of a command: Simply use the command as condition.
 
   .. Note:: In `csh/tcsh`
   
-            a) To evaluate the exit status of a command in it must be
+            a) To evaluate the exit status of a command it must be
                placed within curly brackets with blanks separating the brackets from the
                command: ``if ({ grep -q root /etc/passwd }) then [...]``
             b) Redirection of commands in conditions does not work 
@@ -302,10 +303,32 @@ B) Evaluating of conditions or comparisons:
 
   Conditions and comparisons are evaluated using a special :index:`command <test>` ``test`` which is
   usually written :index:`as <[>` "``[``" (no joke!). As "``[``" is a command, it must be followed by
-  a blank. As a speciality the "``[``" command must be :index:`ended <]>` with "``]``" (note the
+  a blank. As a speciality the "``[``" command must be :index:`ended <]>` with "`` ]``" (note the
   preceding blank here)
 
   .. Note:: In csh/tcsh the ``test`` (or ``[``) command is not needed. Conditions and comparisons are directly placed within the round braces.
+
+
+Watch Out For The Exit Code!
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+It's important to consider the exit status of conditional blocks. An ``if-then-else``
+block will return exit code 0, indicating success, as long as no errors were
+encountered during execution. This means that, if you use an ``if-then-elif``
+block (i.e. without an ``else`` statement), your script will run successfully
+regardless of whether any of the conditions were actually met. 
+
+This might be what you want to happen, but in most circumstances it is good practise
+to include an ``else`` statement, to specify the desired behaviour when none of the
+expected conditions have been met. You coud use this ``else`` block to exit the script
+with a non-zero code, print an error message, or anything else that could be useful
+for debugging in future. 
+
+Remember that it is often difficult to foresee every possible input/use case when
+you first write a script, and being diligent now will probably save you a lot of
+time and head-scratching in the future!
+
+
 
   +--------------------+------------------------------------------------------+--------------------+
   |  **sh/bash**       |                                                      | **csh/tcsh**       |
@@ -454,6 +477,7 @@ Example:
          echo '/opt and /usr are not contained in $PATH'
          ;;
      esac
+.. Note:: Just like ``if-then-else`` blocks (see "Watch Out For The Exit Code!" in the previous section), a ``case`` block will return exit code 0 regardless of whether any of its options were matched during execution. Always try to design a "in all other circumstances" option, that is guaranteed to be met, so that your script will sensibly handle situations where the value(s) passed to ``case`` don't fall into any of your expected categories. Remember that cases are given priority by the order that they appear in the block, so make your "catch-all" case non-specific and place it last in the block to match anything that wasn't picked up by the other options.
 
 Loops
 -----
@@ -848,8 +872,8 @@ Three variants for the same (print out who you are in English text): ::
 Create Temporary Files
 ----------------------
 
-You can create temporary files with mktemp. By default it will create a new
-file in /tmp and print its name: ::
+You can create :index:`temporary files <temporary files>` with ``mktemp``.
+By default it will create a new file in /tmp and print its name: ::
 
     $ mktemp
     /tmp/tmp.Yaafh19370

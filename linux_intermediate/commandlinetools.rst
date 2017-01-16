@@ -149,7 +149,7 @@ Count the number of fasta sequences (they start with a ">") in a file:
 
  ::
 
-  # grep -c '>' twofiles.fasta
+  # grep -c '>' twoseqs.fasta
    2
 
 List all files containing the term "Ensembl":
@@ -171,7 +171,7 @@ Search a file compressed with ``gzip`` using ``zgrep``:
 REV
 ---
 
-:index:`rev` is a tool that reverses lines of input.
+:index:`rev <rev>` is a tool that reverses lines of input.
 
 **Usage**: ``rev file``
 
@@ -199,7 +199,7 @@ be reversed to restore the original orientation of the input file.
 FMT
 ---
 
-:index:`fmt` is used to control the format of text input.
+:index:`fmt <fmt>` is used to control the format of text input.
 
 **Usage**: ``fmt [options] file(s)``
 
@@ -222,7 +222,7 @@ of values into a single column:
 XARGS
 -----
 
-:index:`xargs` can be used to provide file contents or output of one command as arguments
+:index:`xargs <xargs>` can be used to provide file contents or output of one command as arguments
 to the next.
 
 **Usage**: ``xargs [options] [ tool [options] [arguments] ]``
@@ -235,10 +235,9 @@ By default, ``xargs`` passes the strings given to it onto the ``echo`` command.
    KPLGVALTNRFGEDADERID
    RPIGPEIQNRFGENAEERIP
    RSVATQVFNRFGDDTESKLP
-   RAIGAELQNRFSNDAEQRIP
 
   # cat motifs.txt | xargs
-   KPLGVALTNRFGEDADERID RPIGPEIQNRFGENAEERIP RSVATQVFNRFGDDTESKLP RAIGAELQNRFSNDAEQRIP
+   KPLGVALTNRFGEDADERID RPIGPEIQNRFGENAEERIP RSVATQVFNRFGDDTESKLP
 
 In this way we can achieve the reverse of the row vector -> column operation performed in
 the ``fmt`` example above. But ``xargs`` can be used for much more powerful things than
@@ -265,10 +264,9 @@ tool/command that we want ``xargs`` to pass the strings to as arguments.
    EMBL
    
 
-One of the most common uses of ``xargs`` is in combination with the ``find`` command, allowing
-the user to operate on multiple files across multiple locations at once. For example, to
-search for the word 'protein' in all ``.txt`` files underneath the 'Documents' directory, we
-could use the approach below:
+Use ``xargs`` in combination with the ``find`` command, allowing you to operate on multiple
+files across multiple locations at once. For example, to search for the word 'protein' in 
+all ``.txt`` files underneath the 'Documents' directory, we could use the approach below:
 
 ::
 
@@ -288,11 +286,9 @@ throughout the filesystem.
 
   # find /tmp -name '*.tmp' | xargs rm
 
-The command above will find any files with '.tmp' extension and pass them to ``rm`` for
-deletion. Of course, care should always be taken when using commands that alter the
-filesystem, such as ``rm`` and ``mv``, so you need to be sure that you know what's going to
-happen before you execute a command like the one above. Helpfully, ``xargs`` provides an
-option ``-p`` that will prompt the user before executing commands.
+Take care whenever you use commands like ``rm`` and ``mv`` that overwrite/remove files 
+permamently. Helpfully, ``xargs`` provides an option ``-p`` that will prompt the user 
+before executing commands.
 
 
 ::
@@ -307,24 +303,27 @@ these large files.
 If you need to control where exactly the strings passed to ``xargs`` are placed in the 
 command that it subsequently calls, use the ``-I`` option:
 
+
 ::
 
-  # find /home/toby/alignments -name "*.fasta" | xargs -I OLDFASTA mv OLDFASTA OLDAFASTA.old
+  # find /home/toby/alignments -name "*.fasta" | xargs -I OLDFASTA mv OLDFASTA OLDFASTA.old
 
 Useful options:
 
-==========  ===================================
-Option:     Effect: 
-==========  ===================================
-``-n INT``   pass INT strings as arguments to each invocation of tool
-``-0``       use NULL as separator (good for handling strings/filenames containing spaces)
-``-t``       echo commands to STDERR as they are executed
-==========  ===================================
+=============  ===================================
+Option:         Effect: 
+=============  ===================================
+``-n INT``      pass INT strings as arguments to each invocation of tool
+``-0``          use NULL as separator (good for handling strings/filenames containing spaces)
+``-t``          echo commands to STDERR as they are executed
+``-p``          prompt with command before execution
+``-I STRING``   specify placeholder name for arg
+=============  ===================================
 
 SED
 ---
 
-:index:`sed` is a Stream EDitor, it modifies text (text can be a file or a pipe) on the fly.
+:index:`sed <sed>` is a Stream EDitor, it modifies text (text can be a file or a pipe) on the fly.
 
 **Usage**: ``sed command file``,
 
@@ -384,7 +383,7 @@ the Linux command ``rev`` to reverse the output of the ``sed`` command:
   # echo "AGTGGCTAAGTCCCTTTAATCAGG" | sed 'y/ACGT/UGCA/' | rev
    CCUGAUUAAAGGGACUUAGCCACU
 
-When used on a file, sed prints the file to standard output, replacing text as it goes
+When used on a file, ``sed`` prints the file to standard output, replacing text as it goes
 along:
 
  ::
@@ -395,7 +394,7 @@ along:
    This is stuff
    This is even more stuff
 
-sed can also be used to print certain lines (not replacing text) that match a pattern.
+``sed`` can also be used to print certain lines (not replacing text) that match a pattern.
 For this you leave out the leading 's' and just provide a pattern: '/PATTERN/p'. The
 trailing letter determines, what sed should do with the text that matches the pattern
 ('p': print, 'd': delete)
@@ -407,7 +406,7 @@ trailing letter determines, what sed should do with the text that matches the pa
    This is even more text
    This is even more text
 
-As sed by default prints each line, you see the line that matched the pattern,
+As ``sed`` by default prints each line, you see the line that matched the pattern,
 printed twice. Use option '-n' to suppress default printing of lines.
 
  ::
@@ -422,7 +421,7 @@ Delete lines matching the pattern:
   # sed '/more/d' textfile
    This is text
 
-Multiple sed statements can be applied to the same input stream by prepending
+Multiple ``sed`` statements can be applied to the same input stream by prepending
 each by option '-e' (edit):
 
  ::
@@ -431,7 +430,7 @@ each by option '-e' (edit):
    That is good stuff
    That is even more good stuff
 
-Normally, sed prints the text from a file to standard output. But you can also edit
+Normally, ``sed`` prints the text from a file to standard output. But you can also edit
 files in place. Be careful - this will change the file! The '-i' (in-place editing) won't
 print the output. As a safety measure, this option will ask for an extension that will
 be used to rename the original file to. For instance, the following option '-i.bak'
@@ -452,9 +451,9 @@ AWK
 ---
 
 :index:`awk` is more than just a command, it is a complete text processing language (the
-name is an abbreviation of the author's names).
+name is an acronym of the author's names).
 Each line of the input (file or pipe) is treated as a record and is broken into fields.
-Generally, awk commands are of the form: ::
+Generally, ``awk`` commands are of the form: ::
 
     awk condition { action }
 
@@ -475,7 +474,7 @@ lines that match the condition.
   # awk '/more/ {print}' textfile
    This is even more text
 
-awk reads each line of input and automatically splits the line into columns. These
+``awk`` reads each line of input and automatically splits the line into columns. These
 columns can be addressed via $1, $2 and so on ($0 represents the whole line).
 So an easy way to print or rearrange columns of text is:
 
@@ -487,7 +486,7 @@ So an easy way to print or rearrange columns of text is:
   # echo "Master Obi-Wan has lost a planet" | awk '{print $4,$5,$6,$1,$2,$3}'
    lost a planet Master Obi-Wan has
 
-awk splits text by default on whitespace (spaces or tabs), which might not be ideal in all situations. To change the
+``awk`` splits text by default on whitespace (spaces or tabs), which might not be ideal in all situations. To change the
 field separator (FS), use option '-F' (remember to quote the field separator):
 
  ::
@@ -518,7 +517,7 @@ pattern 'PDBsum' (case sensitive):
   ...  
 
 
-awk really is powerful in filtering out columns, you can for instance print only
+``awk`` really is powerful in filtering out columns, you can for instance print only
 certain columns of certain lines. Here we print the third column of those lines
 where the second column is 'PDBsum':
 
@@ -628,8 +627,8 @@ variables>`. By convention, environment variables are written in uppercase
 letters.
 
 **Shell variables** are **only available to the current shell** and not inherited when
-you start an other shell or script from the commandline. Consequently, these
-variables will not be available for your shellscripts.
+you start another shell or script from the commandline. Consequently, these variables
+will not be available for your shellscripts.
 
 **Environment variables** are **passed on** to shells and scripts started from your
 current shell.
@@ -752,7 +751,7 @@ Tips and Tricks
 Quoting
 -------
 
-In Programming it is often necessary to "glue together" certain words. Usually, a program or
+In programming it is often necessary to "glue together" certain words. Usually, a program or
 the shell splits sentences by whitespace (space or tabulators) and treats each word
 individually. In order to tell the computer that certain words belong together, you need to
 ":index:`quote <quoting>`" them, using either single (') or double (") quotes. The difference between these two is
@@ -840,7 +839,7 @@ annoying errors due to typos.
 Tab-Completion: A Reminder
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-You're probably already aware of tab-completion, where you push the ``tab`` key to 
+You're probably already aware of tab-completion, where you push the ``TAB`` key to 
 complete the name of a command, file, directory, etc. This is a huge time-saver and great 
 tool for preventing the accidental inclusion of errors. 
 
