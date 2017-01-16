@@ -18,6 +18,7 @@ Special thanks go to contributors / helping hands (alphabetical order):
 
 * Christian Arnold
 * Jean-Karim Hériché
+* Nicolai Karcher
 * Yan Ping Yuan
 * Bora Uyar
 * Thomas Zichner
