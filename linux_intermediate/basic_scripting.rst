@@ -291,7 +291,7 @@ A) Evaluating the exit status of a command: Simply use the command as condition.
 
   .. Note:: In `csh/tcsh`
   
-            a) To evaluate the exit status of a command in it must be
+            a) To evaluate the exit status of a command it must be
                placed within curly brackets with blanks separating the brackets from the
                command: ``if ({ grep -q root /etc/passwd }) then [...]``
             b) Redirection of commands in conditions does not work 
