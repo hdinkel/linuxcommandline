@@ -28,9 +28,10 @@ script.
 Running a Script
 ================
 
-There are basically three ways to run a script:
+There are basically three ways to run a script, regardless of the language in which the
+script is written:
 
-a) the location to your script is not in your ``$PATH`` variable, then you have to specify the full path to the script:
+a) where the location to your script is not in your ``$PATH`` variable, then you have to specify the full path to the script:
 
  ::
 
@@ -38,7 +39,7 @@ a) the location to your script is not in your ``$PATH`` variable, then you have 
   [...]
   $
 
-b) the location to the script is in the ``$PATH`` variable, then you can simply type its name:
+b) where the location to the script is in the ``$PATH`` variable, then you can simply type its name:
 
   ::
 
@@ -49,7 +50,7 @@ b) the location to the script is in the ``$PATH`` variable, then you can simply 
   In both situations, the script will need to have execute permissions to be run. If for some
   reason you can only read but not execute the script, then it can still be run in the following way:
 
-c) specifying the :index:`interpreter` (i.e. the program required to run the script).  For shellscripts this is the appropriate shell). The full path (relative or absolute) to the script has to be provided in this case, no matter whether the script location is already contained in ``$PATH`` or not:
+c) by specifying the :index:`interpreter` (i.e. the program required to run the script).  For shellscripts this is the appropriate shell). The full path (relative or absolute) to the script has to be provided in this case, no matter whether the script location is already contained in ``$PATH`` or not:
 
  ::
 
@@ -302,7 +303,7 @@ B) Evaluating of conditions or comparisons:
 
   Conditions and comparisons are evaluated using a special :index:`command <test>` ``test`` which is
   usually written :index:`as <[>` "``[``" (no joke!). As "``[``" is a command, it must be followed by
-  a blank. As a speciality the "``[``" command must be :index:`ended <]>` with "``]``" (note the
+  a blank. As a speciality the "``[``" command must be :index:`ended <]>` with "`` ]``" (note the
   preceding blank here)
 
   .. Note:: In csh/tcsh the ``test`` (or ``[``) command is not needed. Conditions and comparisons are directly placed within the round braces.
@@ -848,8 +849,8 @@ Three variants for the same (print out who you are in English text): ::
 Create Temporary Files
 ----------------------
 
-You can create temporary files with mktemp. By default it will create a new
-file in /tmp and print its name: ::
+You can create :index:`temporary files <temporary files>` with ``mktemp``.
+By default it will create a new file in /tmp and print its name: ::
 
     $ mktemp
     /tmp/tmp.Yaafh19370
