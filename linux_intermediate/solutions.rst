@@ -112,6 +112,92 @@ GREP
     3600
 
 
+REV
+---
+
+1. By combining ``rev`` with the ``cut`` tool, print the last word of each line in DNA.txt. Make sure that the words are readable when they are printed out.
+
+   ::
+
+    $ rev DNA.txt | cut -d' ' -f1 | rev
+    the
+    known
+    of
+    life.
+    adenine,
+    DNA
+    [...]
+
+
+XARGS
+-----
+
+1. Use ``xargs`` to print the first line of the files listed in to_be_previewed.txt
+
+   ::
+
+    $ cat to_be_previewed.txt | xargs head -n1
+    ==> 3UA7.pdb <==
+    HEADER    TRANSFERASE/VIRAL PROTEIN               21-OCT-11   3UA7              
+    
+    ==> ENST00000380152.fasta <==
+    >ENSG00000139618:ENST00000380152 cds:KNOWN_protein_coding
+    
+    ==> ENST00000530893.fasta <==
+    >ENSG00000139618:ENST00000530893 cds:KNOWN_protein_coding
+    [...]
+
+2. Create a copy of each of these files by passing the lines in to_be_copied.txt two-at-a-time to ``cp``
+
+   ::
+
+    $ ls -1t *.{pdb,txt,fasta}
+    to_be_copied.txt
+    to_be_previewed.txt
+    tabular_data.txt
+    twoseqs.fasta
+    files.txt
+    motifs.txt
+    1Y57.pdb
+    3UA7.pdb
+    DNA.fasta
+    [...]
+    $ cat to_be_copied.txt | xargs -n2 cp
+    $ ls -1t *.{pdb,txt,fasta}
+    sequenceA.fasta
+    sequenceB.fasta
+    sequenceC.fasta
+    sequenceD.fasta
+    sequenceE.fasta
+    structure.pdb
+    text.txt
+    to_be_copied.txt
+    to_be_previewed.txt
+    [...]
+
+3. A better way to back up these files might be to keep the original names while copying them. Make another copy of each file listed in to_be_previewed.txt, adding ".backup" onto the end of each filename. (Hint: remember the "-I" option!)
+
+   ::
+
+    $ cat to_be_previewed.txt | xargs -I FILENAME cp FILENAME FILENAME.backup
+    $ ls -1 *.backup
+    3UA7.pdb.backup
+    ENST00000380152.fasta.backup
+    ENST00000530893.fasta.backup
+    ENST00000544455.fasta.backup
+    P04062.fasta.backup
+    P05480.fasta.backup
+    P12931.fasta.backup
+    PROTEINS.txt.backup
+
+
+4. ADVANCED: clean up all these new files by combining the ``find`` tool with ``xargs`` and ``rm`` to search for and delete all files in the current directory that were last modified less than ten minutes ago. BE CAREFUL! (Hint: you'll need to check out the options available for ``find``, and you might consider using the "-p" option with ``xargs`` to help avoid accidentally deleting something that you might regret!)
+
+   ::
+
+    $ find . -type f -mtime -10m | xargs -p rm
+    
+
 SED
 ---
 
