@@ -191,7 +191,8 @@ XARGS
     PROTEINS.txt.backup
 
 
-4. ADVANCED: we've made a bit of a mess now, and it's time to clean up. Make a new directory called 'garbage' and move all these new files into it by combining the ``find`` tool with ``xargs`` and ``mv`` to search for and delete all files in the current directory that were last modified less than ten minutes ago. BE CAREFUL! (Hint: you'll need to check out the options available for ``find``, and you might consider using the "-p" option with ``xargs`` to help avoid accidentally deleting something that you might regret!) Once you've moved the files, check the contents of the 'garbage' directory and, if you're sure that you don't want any of those files anymore, delete them and the directory.
+4. ADVANCED: we've made a bit of a mess now, and it's time to clean up. Make a new directory called 'garbage', which you will move all these new files into it by combining the ``find`` tool with ``xargs`` and ``mv``. Use ``find`` to find all files in the current directory that were last modified less than ten minutes ago, and ``xargs`` with ``mv`` to change their location. BE CAREFUL!
+..Hint:: you'll need to check out the options available for ``find``, and you might consider using the "-p" option with ``xargs`` to help avoid accidentally deleting something that you might regret!) Once you've moved the files, check the contents of the 'garbage' directory and, if you're sure that you don't want any of those files anymore, delete them and the directory.
 
    ::
 
