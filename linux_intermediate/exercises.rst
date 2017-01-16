@@ -33,6 +33,23 @@ GREP
 
 5. Does this number agree with the annotated number of atoms? The PDB file has a comment which tells you how many atoms there are annotated in this file. This comment can be found by searching for the term "protein atoms" (use quotes and case insensitive search here!).
 
+REV
+---
+
+1. By combining ``rev`` with the ``cut`` tool, print the last word of each line in DNA.txt. Make sure that the words are readable when they are printed out.
+
+
+XARGS
+-----
+
+1. Use ``xargs`` to print the first line of the files listed in to_be_previewed.txt
+
+2. Create a copy of each of these files by passing the lines in to_be_copied.txt two-at-a-time to ``cp``
+
+3. A better way to back up these files might be to keep the original names while copying them. Make another copy of each file listed in to_be_previewed.txt, adding ".backup" onto the end of each filename. (Hint: remember the "-I" option!)
+
+4. ADVANCED: clean up all these new files by combining the ``find`` tool with ``xargs`` and ``rm`` to search for and delete all files in the current directory that were last modified less than ten minutes ago. (Hint: you'll need to check out the options available for ``find``, and you might consider using the "-p" option with ``xargs`` to help avoid accidentally deleting something that you might regret!). Did you spot any alternatives to the ``find | xargs`` approach for deleting files as you find them?
+
 
 SED
 ---
@@ -59,7 +76,7 @@ AWK
   
    b. Now use awk to show all lines containing "17".
   
-   c. Next try show only those lines where column three equals 17 (Hint: The file is semicolon-separated...).
+   c. Next try to show only those lines where column three equals 17 (Hint: The file is semicolon-separated...).
   
    d. Finally print the PMIDs (column 6) of all lines that contain "17" in column 3. 
 
