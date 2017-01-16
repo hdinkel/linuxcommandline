@@ -308,6 +308,25 @@ B) Evaluating of conditions or comparisons:
 
   .. Note:: In csh/tcsh the ``test`` (or ``[``) command is not needed. Conditions and comparisons are directly placed within the round braces.
 
+
+It's important to consider the exit status of conditional blocks. An ``if-then-else``
+block will return exit code 0, indicating success, as long as no errors were
+encountered during execution. This means that, if you use an ``if-then-elif``
+block (i.e. without an ``else`` statement), your script will run successfully
+regardless of whether any of the conditions were actually met. 
+
+This might be what you want to happen, but in most circumstances it is good practise
+to include an ``else`` statement, to specify the desired behaviour when none of the
+expected conditions has been met. You coud use this to exit the script with non-zero
+code, print an error message, or anything else that could be useful for debugging in
+future. 
+
+Remember that it is often difficult to foresee every possible input/use case when
+you first write a script, and being diligent when you first write a program will
+probably save you a lot of time and head-scratching in the future!
+
+
+
   +--------------------+------------------------------------------------------+--------------------+
   |  **sh/bash**       |                                                      | **csh/tcsh**       |
   +--------------------+------------------------------------------------------+--------------------+
@@ -455,6 +474,8 @@ Example:
          echo '/opt and /usr are not contained in $PATH'
          ;;
      esac
+
+  Note:: As with ``if-then-else`` blocks (see section 3.4.1), a ``case`` block returns exit code 0 regardless of whether any of its options were matched during execution. Try always to design a "in all other circumstances" option, that is guaranteed to be met, so that your script will sensibly handle situations where the value(s) passed to ``case`` don't fall into any of your expected categories. Remember that cases are given priority by the order that they appear in the block, so make your "catch-all" case non-specific and place it last in the block to match anything that wasn't picked up by the other options.
 
 Loops
 -----
