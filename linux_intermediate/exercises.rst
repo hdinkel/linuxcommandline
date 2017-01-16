@@ -48,7 +48,7 @@ XARGS
 
 3. A better way to back up these files might be to keep the original names while copying them. Make another copy of each file listed in to_be_previewed.txt, adding ".backup" onto the end of each filename. (Hint: remember the "-I" option!)
 
-4. ADVANCED: clean up all these new files by combining the ``find`` tool with ``xargs`` and ``rm`` to search for and delete all files in the current directory that were last modified less than ten minutes ago. (Hint: you'll need to check out the options available for ``find``, and you might consider using the "-p" option with ``xargs`` to help avoid accidentally deleting something that you might regret!). Did you spot any alternatives to the ``find | xargs`` approach for deleting files as you find them?
+4. ADVANCED: clean up all these new files by combining the ``find`` tool with ``xargs`` and ``rm`` to search for and delete all files in the current directory that were last modified less than ten minutes ago. BE CAREFUL! (Hint: you'll need to check out the options available for ``find``, and you might consider using the "-p" option with ``xargs`` to help avoid accidentally deleting something that you might regret!)
 
 
 SED
