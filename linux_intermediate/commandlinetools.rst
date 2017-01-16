@@ -264,7 +264,7 @@ tool/command that we want ``xargs`` to pass the strings to as arguments.
    EMBL
    
 
-Use ``xargs`` is in combination with the ``find`` command, allowing you to operate on multiple
+Use ``xargs`` in combination with the ``find`` command, allowing you to operate on multiple
 files across multiple locations at once. For example, to search for the word 'protein' in 
 all ``.txt`` files underneath the 'Documents' directory, we could use the approach below:
 
