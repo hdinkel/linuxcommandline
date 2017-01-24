@@ -67,10 +67,10 @@ The most common commandline switches are:
 Option:  Effect: 
 =======  ===================================
 ``-c``   create an archive
-``-t``   test an archive
+``-t``   list contents of an archive
 ``-x``   extract an archive
 ``-z``   use gzip compression
-``-f``   filename filename of the archive
+``-f``   filename of the archive
 =======  ===================================
 
 .. note:: Don't forget to specify the target filename. 
@@ -211,7 +211,7 @@ of values into a single column:
 
 ::
 
-  # echo "sample1 sample2 sample3 sample4 sample5" | fmt 1
+  # echo "sample1 sample2 sample3 sample4 sample5" | fmt -w 7
    sample1
    sample2
    sample3
@@ -293,7 +293,7 @@ before executing commands.
 
 ::
 
-  # find / -size +5GB | xargs -p rm
+  # find / -size +5G | xargs -p rm
    rm /home/toby/alignments/giant_alignment.bam? y
 
 This is a good way of sweeping your filesystem to find the largest files and then choosing
@@ -705,7 +705,7 @@ current shell are available.
 Examples 
 ^^^^^^^^
 
-Consider the following small shellscript ``vartest.sh`::
+Consider the following small shellscript `vartest.sh`::
 
   #!/bin/sh 
   echo $MYLOCALVAR
@@ -718,8 +718,8 @@ a) Set the variables and run the script i.e. in a new shell:
 
  ::
 
-  $ export MYGLOBALVAR=”I am global” 
-  $ MYLOCALVAR=”I am local” 
+  $ export MYGLOBALVAR="I am global"
+  $ MYLOCALVAR="I am loca"
   $ ./vartest.sh
   I am global 
   -----
