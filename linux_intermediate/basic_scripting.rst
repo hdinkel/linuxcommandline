@@ -845,6 +845,12 @@ echoing each command before executing it.  This option can be :index:`set` and :
 during runtime with ``set -x`` / ``set +x`` (sh/bash) and ``set echo`` / ``unset echo``
 (csh/tcsh).
 
+It can also be helpful to ``set -e`` / ``set +e``, which will cause the script to exit
+immediately, if any of the commands within it fails (returns non-zero exit status)
+during execution. This can save you waiting to the end of execution when some
+intermediate step has failed, and also help to identify at exactly which step your
+workflow is breaking.
+
 Command Substitution
 --------------------
 
