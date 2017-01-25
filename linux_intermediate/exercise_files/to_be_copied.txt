@@ -1,0 +1,16 @@
+3UA7.pdb
+structure.pdb
+ENST00000380152.fasta
+sequenceA.fasta
+ENST00000530893.fasta
+sequenceB.fasta
+ENST00000544455.fasta
+sequenceC.fasta
+P04062.fasta
+sequenceD.fasta
+P05480.fasta
+sequenceE.fasta
+P12931.fasta
+sequenceF
+PROTEINS.txt
+text.txt
