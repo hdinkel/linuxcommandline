@@ -4,8 +4,8 @@ More Commandline Tools
 **********************
 
 Here is a quick list of useful commandline tools which will be used throughout the rest of the document.
-Many of these tools have quite extensive functionality and only a very limited part can be discussed here, 
-so the reader is encouraged to read more about these using the links given in the in the :doc:`links <links>` 
+Many of these tools have quite extensive functionality and only a very limited part can be discussed here,
+so the reader is encouraged to read more about these using the links given in the in the :doc:`links <links>`
 section...
 
 Commandline Tools
@@ -30,7 +30,7 @@ When used on a file (without any parameters) it will compress it and replace the
   # gzip textfile
   # ls textfile*
    textfile.gz
- 
+
 To revert this / to uncompress, use the parameter ``-d``:
 
  ::
@@ -40,7 +40,7 @@ To revert this / to uncompress, use the parameter ``-d``:
   # gzip -d textfile
   # ls textfile*
    textfile
- 
+
 .. note:: As a convenience, on most Linux systems, a shellscript named ``gunzip`` exists which simply calls ``gzip -d``
 
 
@@ -64,7 +64,7 @@ compressed archive:
 The most common commandline switches are:
 
 =======  ===================================
-Option:  Effect: 
+Option:  Effect:
 =======  ===================================
 ``-c``   create an archive
 ``-t``   list contents of an archive
@@ -73,8 +73,8 @@ Option:  Effect:
 ``-f``   filename of the archive
 =======  ===================================
 
-.. note:: Don't forget to specify the target filename. 
-          It needs to follow the ``-f`` parameter. Although you can combine options like such: ``tar -czf archive.tar`` 
+.. note:: Don't forget to specify the target filename.
+          It needs to follow the ``-f`` parameter. Although you can combine options like such: ``tar -czf archive.tar``
           the order matters, so ``tar -cfz archive.tar`` will *not* do what you want...
 
 
@@ -107,7 +107,7 @@ Creating and extracting a compressed archive containing two files:
   # tar -xzf archive.tar.gz
 
 
-Creating a backup (eg. before doing something dangerous?): 
+Creating a backup (eg. before doing something dangerous?):
 
  ::
 
@@ -136,7 +136,7 @@ GREP
 Useful options:
 
 =======  ===================================
-Option:  Effect: 
+Option:  Effect:
 =======  ===================================
 -v       Print lines that do not match
 -i       Search case-insensitive
@@ -175,7 +175,7 @@ REV
 
 **Usage**: ``rev file``
 
-``rev`` can take input from STDIN as well as from a file, which can be useful if you need 
+``rev`` can take input from STDIN as well as from a file, which can be useful if you need
 to reverse the output of a process.
 
 You can combine ``rev`` with the ``cut`` tool, to capture the last columns in a file,
@@ -241,7 +241,7 @@ By default, ``xargs`` passes the strings given to it onto the ``echo`` command.
 
 In this way we can achieve the reverse of the row vector -> column operation performed in
 the ``fmt`` example above. But ``xargs`` can be used for much more powerful things than
-only echoing command output. By providing an argument to ``xargs`` we can specify the 
+only echoing command output. By providing an argument to ``xargs`` we can specify the
 tool/command that we want ``xargs`` to pass the strings to as arguments.
 
 ::
@@ -255,17 +255,17 @@ tool/command that we want ``xargs`` to pass the strings to as arguments.
    ==> DNA.fasta <==
    GGGCTTGTGGCGCGAGCTTCTGAAACTAGGCGGCAGAGGCGGAGCCGCTGTGGCACTGCT
    GCGCCTCTGCTGCGCCTCGGGTGTCTTTTGCGGCGGTGGGTCGCCGCCGGGAGAAGCGTG
-   
+
    ==> DNA.txt <==
    Deoxyribonucleic acid (DNA) molecules are informational molecules encoding the
    genetic instructions used in the development and functioning of all known
-   
+
    ==> EMBL_wikipedia.txt <==
    EMBL
-   
+
 
 Use ``xargs`` in combination with the ``find`` command, allowing you to operate on multiple
-files across multiple locations at once. For example, to search for the word 'protein' in 
+files across multiple locations at once. For example, to search for the word 'protein' in
 all ``.txt`` files underneath the 'Documents' directory, we could use the approach below:
 
 ::
@@ -286,8 +286,8 @@ throughout the filesystem.
 
   # find /tmp -name '*.tmp' | xargs rm
 
-Take care whenever you use commands like ``rm`` and ``mv`` that overwrite/remove files 
-permamently. Helpfully, ``xargs`` provides an option ``-p`` that will prompt the user 
+Take care whenever you use commands like ``rm`` and ``mv`` that overwrite/remove files
+permamently. Helpfully, ``xargs`` provides an option ``-p`` that will prompt the user
 before executing commands.
 
 
@@ -298,9 +298,9 @@ before executing commands.
 
 This is a good way of sweeping your filesystem to find the largest files and then choosing
 whether to remove them. You could employ a similar approach with ``xargs`` to compress
-these large files. 
+these large files.
 
-If you need to control where exactly the strings passed to ``xargs`` are placed in the 
+If you need to control where exactly the strings passed to ``xargs`` are placed in the
 command that it subsequently calls, use the ``-I`` option:
 
 
@@ -311,7 +311,7 @@ command that it subsequently calls, use the ``-I`` option:
 Useful options:
 
 =============  ===================================
-Option:         Effect: 
+Option:         Effect:
 =============  ===================================
 ``-n INT``      pass INT strings as arguments to each invocation of tool
 ``-0``          use NULL as separator (good for handling strings/filenames containing spaces)
@@ -357,7 +357,7 @@ Note the difference:
 
   # echo "ACCAAGCATTGGAGGAATATCGTAGGTAAA" | sed 's/A/_/g'
    _CC__GC_TTGG_GG__T_TCGT_GGT___
- 
+
 You can use transliteration to replace all instances of a character with another character.
 For example, to switch Thymidines to Uridines in a sequence:
 
@@ -366,8 +366,8 @@ For example, to switch Thymidines to Uridines in a sequence:
   # echo "AGTGGCTAAGTCCCTTTAATCAGG" | sed 'y/T/U/'
    AGUGGCUAAGTCCCUUUAAUCAGG
 
-In the pattern specified in the ``sed`` command, each character in the first set is replaced 
-with the character in the equivalent position in the second set. For example,  to get the 
+In the pattern specified in the ``sed`` command, each character in the first set is replaced
+with the character in the equivalent position in the second set. For example,  to get the
 reverse transcript of a DNA sequence:
 
  ::
@@ -505,7 +505,7 @@ by a comma or they will be concatenated together...
 
 You can also combine the pattern matching and the column selection techniques,
 in this example we'll print only the third column of the lines matching the
-pattern 'PDBsum' (case sensitive): 
+pattern 'PDBsum' (case sensitive):
 
  ::
 
@@ -514,7 +514,7 @@ pattern 'PDBsum' (case sensitive):
   1A08;
   1A09;
   1A1A;
-  ...  
+  ...
 
 
 ``awk`` really is powerful in filtering out columns, you can for instance print only
@@ -528,7 +528,26 @@ where the second column is 'PDBsum':
   1A08;
   1A09;
   1A1A;
-  ...  
+  ...
+
+Moreover, ``awk`` allows us to write a very simple one-liner for printing only the x-th, (2*x)-th, (3*x)-th ... line of a file.
+To give an example, the following line prints every third line of the file 'manylines.txt'.
+::
+  # cat manylines.txt
+  line1
+  line2
+  line3
+  line4
+  line5
+  line6
+  line7
+  line8
+  line9
+  line10
+  # awk 'NR % 3 == 0' manylines.txt
+  line3
+  line6
+  line9
 
 
 Note the double equal signs "==" to check for equality and note the quotes around
@@ -542,13 +561,15 @@ If you want to match a field, but not exactly, you can use '~' instead of '==':
   1A08;
   1A09;
   1A1A;
-  ...  
+  ...
 
 
 ..
 .. Sum column 1 of file.txt:
-.. 
+..
 .. awk '{sum+=$1} END {print sum}' file.txt
+
+
 
 
 I/O Redirection
@@ -604,16 +625,16 @@ Use output of *cmd2* as standard input for *cmd1*::
   $ cmd1 < cmd2
 
 
-See also 
+See also
 
 - `Bash One-Liners Explained, Part III: All about redirections <http://www.catonmat.net/blog/bash-one-liners-explained-part-three>`_ [#L1]_
 - `Bash Redirections Cheat Sheet <http://www.catonmat.net/blog/bash-redirections-cheat-sheet>`_ [#L2]_
 - `Redirection Tutorial <http://wiki.bash-hackers.org/howto/redirection_tutorial>`_ [#L3]_
 
 
-  .. [#L1] `http://www.catonmat.net/blog/bash-one-liners-explained-part-three <http://www.catonmat.net/blog/bash-one-liners-explained-part-three>`_ 
-  .. [#L2] `http://www.catonmat.net/blog/bash-redirections-cheat-sheet <http://www.catonmat.net/blog/bash-redirections-cheat-sheet>`_ 
-  .. [#L3] `http://wiki.bash-hackers.org/howto/redirection_tutorial <http://wiki.bash-hackers.org/howto/redirection_tutorial>`_ 
+  .. [#L1] `http://www.catonmat.net/blog/bash-one-liners-explained-part-three <http://www.catonmat.net/blog/bash-one-liners-explained-part-three>`_
+  .. [#L2] `http://www.catonmat.net/blog/bash-redirections-cheat-sheet <http://www.catonmat.net/blog/bash-redirections-cheat-sheet>`_
+  .. [#L3] `http://wiki.bash-hackers.org/howto/redirection_tutorial <http://wiki.bash-hackers.org/howto/redirection_tutorial>`_
 
 
 .. _environment_variables:
@@ -634,7 +655,7 @@ will not be available for your shellscripts.
 current shell.
 
 
-Setting, Exporting and Removing Variables 
+Setting, Exporting and Removing Variables
 ------------------------------------------
 
 Variables are set (created) by simply assigning them a value
@@ -661,7 +682,7 @@ b)
 
  ::
 
-  $ MYGLOBALVAR=”something else” 
+  $ MYGLOBALVAR=”something else”
   $ export MYGLOBALVAR
   $
 
@@ -675,9 +696,9 @@ Variables are removed with ``unset``:
   $
 
 .. note:: Assigning a variable an empty value (i.e. ``MYVAR=``) will *not* remove it but simply set
-          its value to the empty string! 
+          its value to the empty string!
 
-Listing Variables 
+Listing Variables
 ------------------
 
 You can list all your current
@@ -694,20 +715,20 @@ shell variables will also contain all environment variables  ::
   $
 
 
-Variable Inheritance 
+Variable Inheritance
 ---------------------
 
 Only environment variables will be available in shells and scripts
 started from your current shell. However in shell commands run in subshells
 (i.e. commands run within round brackets) also local (shell) variables of your
-current shell are available. 
+current shell are available.
 
-Examples 
+Examples
 ^^^^^^^^
 
 Consider the following small shellscript `vartest.sh`::
 
-  #!/bin/sh 
+  #!/bin/sh
   echo $MYLOCALVAR
   echo $MYGLOBALVAR
   echo -----
@@ -721,27 +742,27 @@ a) Set the variables and run the script i.e. in a new shell:
   $ export MYGLOBALVAR="I am global"
   $ MYLOCALVAR="I am loca"
   $ ./vartest.sh
-  I am global 
+  I am global
   -----
   $
 
 b) “source” the script, i.e. run it within your current shell:
 
  ::
- 
-  $ source ./vartest.sh 
-  I am local 
-  I am global 
+
+  $ source ./vartest.sh
+  I am local
+  I am global
   -----
   $
 
 c) Access the variables in a subshell:
 
  ::
- 
-  $ (echo $MYGLOBALVAR; echo $MYLOCALVAR) 
-  I am global 
-  I am local 
+
+  $ (echo $MYGLOBALVAR; echo $MYLOCALVAR)
+  I am global
+  I am local
   $
 
 
@@ -832,36 +853,36 @@ You already learned how to expand a variable such that its value is used instead
 Keyboard Shortcuts
 ------------------
 
-When getting comfortable with working on the command line, it can be helpful to learn 
-some tricks that can save you time, better manage your session, and help you to avoid 
+When getting comfortable with working on the command line, it can be helpful to learn
+some tricks that can save you time, better manage your session, and help you to avoid
 annoying errors due to typos.
 
 Tab-Completion: A Reminder
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-You're probably already aware of tab-completion, where you push the ``TAB`` key to 
-complete the name of a command, file, directory, etc. This is a huge time-saver and great 
-tool for preventing the accidental inclusion of errors. 
+You're probably already aware of tab-completion, where you push the ``TAB`` key to
+complete the name of a command, file, directory, etc. This is a huge time-saver and great
+tool for preventing the accidental inclusion of errors.
 
 Move Quickly Through the Command Line
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-As well as tab-completion, you might be aware of ``CTRL-A`` to jump the cursor to the 
-beginning of a line, and ``CTRL+E`` to jump to the end. On most systems, using the arrow 
-keys while holding down the ``alt`` key will jump left or right by one word (or word-like 
+As well as tab-completion, you might be aware of ``CTRL-A`` to jump the cursor to the
+beginning of a line, and ``CTRL+E`` to jump to the end. On most systems, using the arrow
+keys while holding down the ``alt`` key will jump left or right by one word (or word-like
 string) at a time.
 
-When editing a line, ``CTRL-W`` can be used to delete left from the current cursor 
-position to the next beginning of a word. ``CTRL+U`` will delete left from the current 
+When editing a line, ``CTRL-W`` can be used to delete left from the current cursor
+position to the next beginning of a word. ``CTRL+U`` will delete left from the current
 cursor position to the beginning of the line.
 
 Searchable Command History
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-You're probably aware of the command history, and that you can use the up and down arrow 
-keys to scroll back and forth throughout that history. You can also use ``CTRL+R`` to 
-search that command history. If you type ``CTRL+R`` and then the beginning of a command, 
-you will see the most recent command in the history that matches that pattern (anywhere 
+You're probably aware of the command history, and that you can use the up and down arrow
+keys to scroll back and forth throughout that history. You can also use ``CTRL+R`` to
+search that command history. If you type ``CTRL+R`` and then the beginning of a command,
+you will see the most recent command in the history that matches that pattern (anywhere
 in the command). You can hit ``CTRL+R`` again to scroll backwards through the matches.
 
 Job Management
