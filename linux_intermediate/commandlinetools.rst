@@ -5,7 +5,7 @@ More Commandline Tools
 
 Here is a quick list of useful commandline tools which will be used throughout the rest of the document.
 Many of these tools have quite extensive functionality and only a very limited part can be discussed here,
-so the reader is encouraged to read more about these using the links given in the in the :doc:`links <links>`
+so the reader is encouraged to read more about these using the links given in the :doc:`links <links>`
 section...
 
 Commandline Tools
@@ -548,7 +548,6 @@ To give an example, the following line prints every third line of the file 'many
   line3
   line6
   line9
-
 
 Note the double equal signs "==" to check for equality and note the quotes around
 "PDBsum;".
