@@ -530,25 +530,6 @@ where the second column is 'PDBsum':
   1A1A;
   ...
 
-Moreover, ``awk`` allows us to write a very simple one-liner for printing only the x-th, (2*x)-th, (3*x)-th ... line of a file.
-To give an example, the following line prints every third line of the file 'manylines.txt'.
-::
-  # cat manylines.txt
-  line1
-  line2
-  line3
-  line4
-  line5
-  line6
-  line7
-  line8
-  line9
-  line10
-  # awk 'NR % 3 == 0' manylines.txt
-  line3
-  line6
-  line9
-
 Note the double equal signs "==" to check for equality and note the quotes around
 "PDBsum;".
 If you want to match a field, but not exactly, you can use '~' instead of '==':
@@ -568,6 +549,26 @@ If you want to match a field, but not exactly, you can use '~' instead of '==':
 ..
 .. awk '{sum+=$1} END {print sum}' file.txt
 
+Moreover, ``awk`` allows us to write a very simple one-liner for printing only the x-th, (2*x)-th, (3*x)-th ... line of a file.
+To give an example, the following line prints every third line of the file 'manylines.txt'.
+
+ ::
+
+  # cat manylines.txt
+  line1
+  line2
+  line3
+  line4
+  line5
+  line6
+  line7
+  line8
+  line9
+  line10
+  # awk 'NR % 3 == 0' manylines.txt
+  line3
+  line6
+  line9
 
 
 
