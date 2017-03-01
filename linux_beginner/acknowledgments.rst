@@ -16,8 +16,10 @@ All other graphics © Frank Thommen, EMBL Heidelberg, 2012
 
 Special thanks go to contributors / helping hands (alphabetical order):
 
+* Renato Alves
 * Christian Arnold
 * Jean-Karim Hériché
+* Nicolai Karcher
 * Yan Ping Yuan
 * Bora Uyar
 * Thomas Zichner
